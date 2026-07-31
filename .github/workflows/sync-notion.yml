@@ -1,0 +1,80 @@
+name: Синхронизация с Notion
+
+# Раз в час забирает данные из Notion. Если что-то изменилось — проверяет,
+# что сайт с новыми данными собирается, и коммитит. Пуш подхватывает Vercel
+# и пересобирает сайт.
+
+on:
+  schedule:
+    # время UTC; GitHub нередко запускает с задержкой в несколько минут
+    - cron: '17 * * * *'
+  workflow_dispatch:        # кнопка «запустить сейчас» на вкладке Actions
+
+permissions:
+  contents: write
+
+# два прогона одновременно устроили бы гонку при пуше
+concurrency:
+  group: sync-notion
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # У скрипта выгрузки нет зависимостей, поэтому npm ci здесь не нужен.
+      # Прогоны без изменений так укладываются в полминуты.
+      - name: Забрать данные из Notion
+        run: node scripts/fetch-notion.mjs
+
+      - name: Проверить, изменилось ли что-нибудь
+        id: check
+        run: |
+          if git diff --quiet -- data/albums.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Новых данных нет, дальше идти незачем."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Данные изменились:"
+            git diff --stat -- data/albums.json
+          fi
+
+      - name: Установить зависимости
+        if: steps.check.outputs.changed == 'true'
+        run: npm ci
+
+      # Собираем до коммита: если новая запись ломает сборку, пусть падает
+      # здесь, а не в продакшене.
+      - name: Проверить, что сайт собирается
+        if: steps.check.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Закоммитить и запушить
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          COUNT=$(node -p "require('./data/albums.json').counts.albums")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/albums.json
+          git commit -m "Данные из Notion: ${COUNT} релизов"
+          git push
+
+      # Подстраховка на случай, если Vercel не отреагирует на пуш от бота.
+      # Работает, только если задан секрет VERCEL_DEPLOY_HOOK.
+      - name: Разбудить Vercel
+        if: steps.check.outputs.changed == 'true'
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$HOOK" ]; then
+            curl -fsS -X POST "$HOOK" > /dev/null && echo "Vercel уведомлён напрямую."
+          else
+            echo "Секрет VERCEL_DEPLOY_HOOK не задан — полагаемся на реакцию Vercel на пуш."
+          fi

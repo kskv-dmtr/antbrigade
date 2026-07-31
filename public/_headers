@@ -1,0 +1,11 @@
+# Заголовки для Cloudflare Pages. Файл копируется в dist как есть.
+
+# Иконки не меняются — пусть браузер их не перепроверяет.
+/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Тип отдаётся явно: без него часть браузеров игнорирует манифест.
+# Кэш короткий, чтобы правки манифеста доезжали быстро.
+/manifest.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=3600

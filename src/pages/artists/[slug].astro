@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+import AlbumCard from '../../components/AlbumCard.astro';
+import { artists, albumsOf, labelsOf, videosOf, flag, plural } from '../../lib/db.js';
+
+export function getStaticPaths() {
+  return artists.map((artist) => ({ params: { slug: artist.slug }, props: { artist } }));
+}
+
+const { artist } = Astro.props;
+const discography = albumsOf(artist.albumIds);
+const labels = labelsOf(artist.labelIds);
+const clips  = videosOf(artist.videoIds);
+
+// официальные клипы вперёд, живые записи следом
+const clipsSorted = clips.slice().sort((a, b) => {
+  const rank = (v) => (v.kind === 'Official Video' ? 0 : 1);
+  return rank(a) - rank(b) || (b.released || '').localeCompare(a.released || '');
+});
+---
+<Base
+  title={`${artist.name} · music`}
+  description={`${artist.name}: ${plural(discography.length, 'релиз', 'релиза', 'релизов')} в коллекции${
+    artist.genres.length ? `, ${artist.genres.slice(0, 4).join(', ')}` : ''
+  }.`}
+  activeSection="artists"
+>
+  <div class="page-head">
+    <h1>
+      {artist.name}
+      {artist.country && <span class="flag" title={artist.country}>{flag(artist.country)}</span>}
+    </h1>
+    <p class="counter">{plural(discography.length, 'релиз', 'релиза', 'релизов')}</p>
+  </div>
+
+  <dl class="facts facts--wide">
+    {artist.genres.length > 0 && (
+      <>
+        <dt>Жанры</dt>
+        <dd class="chips">{artist.genres.map((g) => <span class="chip">{g}</span>)}</dd>
+      </>
+    )}
+
+    {labels.length > 0 && (
+      <>
+        <dt>{labels.length > 1 ? 'Лейблы' : 'Лейбл'}</dt>
+        <dd>
+          {labels.map((l, i) => (
+            <>
+              {i > 0 && ', '}
+              <a href={`/labels/${l.slug}/`}>{l.name}</a>
+            </>
+          ))}
+        </dd>
+      </>
+    )}
+  </dl>
+
+  {clipsSorted.length > 0 && (
+    <section class="section">
+      <h2>Клипы</h2>
+      <ul class="links">
+        {clipsSorted.map((v) => (
+          <li>
+            <a href={v.url} target="_blank" rel="noopener noreferrer">
+              {v.title.includes(' | ') ? v.title.split(' | ').slice(1).join(' | ') : v.title}
+            </a>
+            {v.kind && <span class="tag">{v.kind === 'Official Video' ? 'клип' : 'live'}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section class="section">
+    <h2>Дискография</h2>
+    {discography.length > 0 ? (
+      <ul class="grid">
+        {discography.map((a) => <AlbumCard album={a} showArtist={false} />)}
+      </ul>
+    ) : (
+      <p class="empty">В коллекции пока нет релизов этого артиста.</p>
+    )}
+  </section>
+</Base>

@@ -1,0 +1,19 @@
+{
+  "name": "antbrigade",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "node scripts/make-static-config.mjs",
+    "preview": "astro preview",
+    "sync": "node scripts/fetch-notion.mjs",
+    "deploy": "npx --yes vercel@latest --prod",
+    "deploy:cloudflare": "npx --yes wrangler pages deploy dist --project-name=antbrigade",
+    "zip": "powershell -ExecutionPolicy Bypass -File scripts/make-zip.ps1"
+  },
+  "devDependencies": {
+    "astro": "^5.14.1"
+  }
+}

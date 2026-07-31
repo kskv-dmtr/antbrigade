@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+import AlbumCard from '../components/AlbumCard.astro';
+import { albums, plural } from '../lib/db.js';
+
+// Карточки рендерятся на сервере все сразу: так страница работает без JS
+// и её видят поисковики. Фильтры лишь прячут лишнее.
+const types = [...new Set(albums.flatMap((a) => a.types))].sort();
+
+const genreCounts = new Map();
+for (const a of albums) {
+  for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
+}
+const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
+---
+<Base
+  title="music — коллекция альбомов"
+  description={`Коллекция из ${albums.length} релизов: обложки, жанры, лейблы и ссылки на прослушивание.`}
+  activeSection="albums"
+>
+  <div class="page-head">
+    <h1>Альбомы</h1>
+    <p class="counter" id="counter" aria-live="polite">{plural(albums.length, 'релиз', 'релиза', 'релизов')}</p>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <input type="search" id="search" placeholder="Артист или альбом" autocomplete="off"
+             spellcheck="false" aria-label="Поиск по артисту или альбому" />
+    </div>
+
+    <div class="filters">
+      <div class="seg" id="types" role="group" aria-label="Тип релиза">
+        <button type="button" data-type="" aria-pressed="true">Всё</button>
+        {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+      </div>
+
+      <select id="genre" aria-label="Жанр">
+        <option value="">Все жанры</option>
+        {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
+      </select>
+
+      <select id="year" aria-label="Год">
+        <option value="">Все годы</option>
+        {years.map((y) => <option value={y}>{y}</option>)}
+      </select>
+
+      <select id="sort" aria-label="Сортировка">
+        <option value="new">Сначала новые</option>
+        <option value="old">Сначала старые</option>
+        <option value="artist">По артисту</option>
+        <option value="album">По альбому</option>
+      </select>
+
+      <button type="button" id="reset" class="reset" hidden>Сбросить</button>
+    </div>
+  </div>
+
+  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+
+  <ul class="grid" id="grid">
+    {albums.map((a) => (
+      <AlbumCard
+        album={a}
+        data-search={`${a.artist} ${a.album}`.toLowerCase()}
+        data-genres={a.genres.join('|')}
+        data-types={a.types.join('|')}
+        data-year={a.year ?? ''}
+        data-released={a.released ?? ''}
+        data-artist={a.artist.toLowerCase()}
+        data-album={(a.album || '').toLowerCase()}
+      />
+    ))}
+  </ul>
+</Base>
+
+<script>
+  const grid    = document.getElementById('grid');
+  const cards   = Array.from(grid.children);
+  const counter = document.getElementById('counter');
+  const empty   = document.getElementById('empty');
+  const reset   = document.getElementById('reset');
+  const search  = document.getElementById('search');
+  const typesEl = document.getElementById('types');
+  const genreEl = document.getElementById('genre');
+  const yearEl  = document.getElementById('year');
+  const sortEl  = document.getElementById('sort');
+
+  const total = cards.length;
+  const state = { q: '', type: '', genre: '', year: '', sort: 'new' };
+
+  // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
+  const initialOrder = cards.slice();
+
+  function plural(n) {
+    const m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return n + ' релиз';
+    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' релиза';
+    return n + ' релизов';
+  }
+
+  function matches(el) {
+    const d = el.dataset;
+    if (state.q && !d.search.includes(state.q)) return false;
+    if (state.type && !d.types.split('|').includes(state.type)) return false;
+    if (state.genre && !d.genres.split('|').includes(state.genre)) return false;
+    if (state.year && d.year !== state.year) return false;
+    return true;
+  }
+
+  function apply() {
+    let shown = 0;
+    for (const el of cards) {
+      const ok = matches(el);
+      el.hidden = !ok;
+      if (ok) shown++;
+    }
+
+    empty.hidden = shown > 0;
+    counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+
+    const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
+    reset.hidden = !dirty;
+  }
+
+  function sort() {
+    const by = state.sort;
+    let order;
+    if (by === 'new') {
+      order = initialOrder;
+    } else {
+      order = cards.slice().sort((a, b) => {
+        if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
+        if (by === 'album')  return a.dataset.album.localeCompare(b.dataset.album);
+        const da = a.dataset.released, db = b.dataset.released;
+        // релизы без даты всегда в конце
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da.localeCompare(db);
+      });
+    }
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    grid.appendChild(frag);
+  }
+
+  let timer;
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      state.q = search.value.trim().toLowerCase();
+      apply();
+    }, 120);
+  });
+
+  typesEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    state.type = btn.dataset.type;
+    for (const b of typesEl.children) b.setAttribute('aria-pressed', String(b === btn));
+    apply();
+  });
+
+  genreEl.addEventListener('change', () => { state.genre = genreEl.value; apply(); });
+  yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  apply(); });
+  sortEl.addEventListener('change',  () => { state.sort  = sortEl.value;  sort(); apply(); });
+
+  reset.addEventListener('click', () => {
+    Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });
+    search.value = '';
+    genreEl.value = '';
+    yearEl.value = '';
+    sortEl.value = 'new';
+    for (const [i, b] of [...typesEl.children].entries()) {
+      b.setAttribute('aria-pressed', String(i === 0));
+    }
+    sort();
+    apply();
+    window.scrollTo({ top: 0 });
+  });
+</script>

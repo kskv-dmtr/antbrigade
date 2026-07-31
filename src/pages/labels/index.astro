@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import { labels, flag, plural } from '../../lib/db.js';
+
+// По убыванию числа релизов: так сразу видно основные лейблы коллекции.
+const sorted = labels.slice().sort(
+  (a, b) => b.albumIds.length - a.albumIds.length || a.name.localeCompare(b.name)
+);
+---
+<Base
+  title="Лейблы · music"
+  description={`${labels.length} лейблов в коллекции.`}
+  activeSection="labels"
+>
+  <div class="page-head">
+    <h1>Лейблы</h1>
+    <p class="counter" id="counter" aria-live="polite">
+      {plural(labels.length, 'лейбл', 'лейбла', 'лейблов')}
+    </p>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <input type="search" id="search" placeholder="Название лейбла" autocomplete="off"
+             spellcheck="false" aria-label="Поиск по названию лейбла" />
+    </div>
+  </div>
+
+  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+
+  <ul class="names names--cols" id="list">
+    {sorted.map((l) => (
+      <li data-search={l.name.toLowerCase()}>
+        <a href={`/labels/${l.slug}/`}>
+          {l.country && <span class="flag" title={l.country}>{flag(l.country)}</span>}
+          <span class="names__name">{l.name}</span>
+          <span class="names__count">{l.albumIds.length || ''}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<script>
+  const search  = document.getElementById('search');
+  const empty   = document.getElementById('empty');
+  const counter = document.getElementById('counter');
+  const items   = Array.from(document.querySelectorAll('#list li'));
+  const total   = items.length;
+
+  function plural(n) {
+    const m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return n + ' лейбл';
+    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' лейбла';
+    return n + ' лейблов';
+  }
+
+  let timer;
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const li of items) {
+        const ok = !q || li.dataset.search.includes(q);
+        li.hidden = !ok;
+        if (ok) shown++;
+      }
+      empty.hidden = shown > 0;
+      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+    }, 120);
+  });
+</script>

@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import { artists, flag, plural } from '../../lib/db.js';
+
+// Группировка по первой букве, чтобы 931 имя можно было просматривать глазами.
+function bucket(name) {
+  const ch = name.trim()[0]?.toUpperCase() ?? '#';
+  return /[A-Z]/.test(ch) ? ch : '#';
+}
+
+const groups = new Map();
+for (const a of artists) {
+  const key = bucket(a.name);
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key).push(a);
+}
+// «#» — цифры и символы — в конец списка
+const ordered = [...groups.entries()].sort(([a], [b]) => {
+  if (a === '#') return 1;
+  if (b === '#') return -1;
+  return a.localeCompare(b);
+});
+---
+<Base
+  title="Артисты · music"
+  description={`${artists.length} артистов в коллекции.`}
+  activeSection="artists"
+>
+  <div class="page-head">
+    <h1>Артисты</h1>
+    <p class="counter" id="counter" aria-live="polite">
+      {plural(artists.length, 'артист', 'артиста', 'артистов')}
+    </p>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <input type="search" id="search" placeholder="Имя артиста" autocomplete="off"
+             spellcheck="false" aria-label="Поиск по имени артиста" />
+    </div>
+    <nav class="alphabet">
+      {ordered.map(([letter]) => <a href={`#letter-${letter === '#' ? 'other' : letter}`}>{letter}</a>)}
+    </nav>
+  </div>
+
+  <p class="empty" id="empty" hidden>Никого не нашлось.</p>
+
+  <div id="list">
+    {ordered.map(([letter, items]) => (
+      <section class="letter" data-letter={letter} id={`letter-${letter === '#' ? 'other' : letter}`}>
+        <h2 class="letter__head">{letter}</h2>
+        <ul class="names">
+          {items.map((a) => (
+            <li data-search={a.name.toLowerCase()}>
+              <a href={`/artists/${a.slug}/`}>
+                {a.country && <span class="flag" title={a.country}>{flag(a.country)}</span>}
+                <span class="names__name">{a.name}</span>
+                <span class="names__count">{a.albumIds.length || ''}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<script>
+  const search   = document.getElementById('search');
+  const empty    = document.getElementById('empty');
+  const counter  = document.getElementById('counter');
+  const sections = Array.from(document.querySelectorAll('.letter'));
+  const items    = Array.from(document.querySelectorAll('.names li'));
+  const total    = items.length;
+
+  function plural(n) {
+    const m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return n + ' артист';
+    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' артиста';
+    return n + ' артистов';
+  }
+
+  let timer;
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const li of items) {
+        const ok = !q || li.dataset.search.includes(q);
+        li.hidden = !ok;
+        if (ok) shown++;
+      }
+      // прячем буквы, внутри которых ничего не осталось
+      for (const s of sections) {
+        s.hidden = !s.querySelector('.names li:not([hidden])');
+      }
+      empty.hidden = shown > 0;
+      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+    }, 120);
+  });
+</script>

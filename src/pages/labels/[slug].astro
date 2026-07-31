@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import AlbumCard from '../../components/AlbumCard.astro';
+import { labels, albumsOf, artistsOf, flag, plural } from '../../lib/db.js';
+
+export function getStaticPaths() {
+  return labels.map((label) => ({ params: { slug: label.slug }, props: { label } }));
+}
+
+const { label } = Astro.props;
+const releases = albumsOf(label.albumIds);
+const roster   = artistsOf(label.artistIds);
+---
+<Base
+  title={`${label.name} · music`}
+  description={`${label.name}: ${plural(releases.length, 'релиз', 'релиза', 'релизов')} в коллекции.`}
+  activeSection="labels"
+>
+  <div class="page-head">
+    <h1>
+      {label.name}
+      {label.country && <span class="flag" title={label.country}>{flag(label.country)}</span>}
+    </h1>
+    <p class="counter">{plural(releases.length, 'релиз', 'релиза', 'релизов')}</p>
+  </div>
+
+  {roster.length > 0 && (
+    <dl class="facts facts--wide">
+      <dt>{plural(roster.length, 'Артист', 'Артиста', 'Артистов')}</dt>
+      <dd class="chips">
+        {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}/`}>{a.name}</a>)}
+      </dd>
+    </dl>
+  )}
+
+  <section class="section">
+    <h2>Релизы</h2>
+    <ul class="grid">
+      {releases.map((a) => <AlbumCard album={a} />)}
+    </ul>
+  </section>
+</Base>

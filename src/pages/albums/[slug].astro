@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import {
+  albums, artistsOf, labelsOf, cover, coverSrcSet, formatDate, flag
+} from '../../lib/db.js';
+
+export function getStaticPaths() {
+  return albums.map((album) => ({ params: { slug: album.slug }, props: { album } }));
+}
+
+const { album } = Astro.props;
+const artists = artistsOf(album.artistIds);
+const labels  = labelsOf(album.labelIds);
+const title   = `${album.artist} — ${album.album}`;
+---
+<Base
+  title={`${title} · music`}
+  description={`${title}${album.year ? `, ${album.year}` : ''}. ${album.genres.join(', ')}.`}
+  activeSection="albums"
+>
+  <article class="detail">
+    <div class="detail__art">
+      {album.cover && (
+        <img
+          src={cover(album.cover, 640)}
+          srcset={coverSrcSet(album.cover, 640)}
+          sizes="(max-width: 860px) 100vw, 420px"
+          width="640" height="640"
+          alt={`Обложка альбома ${album.album}`}
+        />
+      )}
+    </div>
+
+    <div class="detail__body">
+      <p class="detail__kicker">
+        {album.types.join(' · ')}
+      </p>
+
+      <h1 class="detail__title">{album.album}</h1>
+
+      <p class="detail__artist">
+        {artists.length > 0
+          ? artists.map((a, i) => (
+              <>
+                {i > 0 && <span class="sep"> / </span>}
+                <a href={`/artists/${a.slug}/`}>{a.name}</a>
+              </>
+            ))
+          : album.artist}
+      </p>
+
+      {album.url && (
+        <p class="detail__cta">
+          <a class="button" href={album.url} target="_blank" rel="noopener noreferrer">
+            Слушать
+          </a>
+          <span class="hint">Откроется album.link со всеми площадками</span>
+        </p>
+      )}
+
+      <dl class="facts">
+        {album.released && (
+          <>
+            <dt>Дата релиза</dt>
+            <dd>{formatDate(album.released)}</dd>
+          </>
+        )}
+
+        {labels.length > 0 && (
+          <>
+            <dt>{labels.length > 1 ? 'Лейблы' : 'Лейбл'}</dt>
+            <dd>
+              {labels.map((l, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={`/labels/${l.slug}/`}>{l.name}</a>
+                  {l.country && <span class="flag" title={l.country}> {flag(l.country)}</span>}
+                </>
+              ))}
+            </dd>
+          </>
+        )}
+
+        {album.genres.length > 0 && (
+          <>
+            <dt>Жанры</dt>
+            <dd class="chips">
+              {album.genres.map((g) => <span class="chip">{g}</span>)}
+            </dd>
+          </>
+        )}
+      </dl>
+    </div>
+  </article>
+</Base>

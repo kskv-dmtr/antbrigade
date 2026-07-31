@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-07-31T09:25:40Z",
+  "generatedAt": "2026-07-31T21:32:31Z",
   "counts": {
-    "albums": 1032,
-    "artists": 932,
+    "albums": 1033,
+    "artists": 933,
     "labels": 581,
     "videos": 45
   },
@@ -366,6 +366,36 @@
       ],
       "labels": [
         "Suicide Squeeze Records"
+      ]
+    },
+    {
+      "id": "3ae4129a-8c52-8061-a18f-d976199c95dd",
+      "slug": "kelela-new-avatar-3ae412",
+      "artist": "Kelela",
+      "album": "new avatar",
+      "url": "https://album.link/pwrnkkmsbcqhg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A608e1d25-5ad2-4a42-9bc4-50bf79f8ec5a%3Aa1820018607_10.jpg?table=block&id=3ae4129a-8c52-8061-a18f-d976199c95dd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Alternative R'n'B",
+        "Dream Pop",
+        "Neo-Psychedelia"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-10",
+      "year": 2026,
+      "artistIds": [
+        "3ae4129a-8c52-808c-9c06-d2927dc7bae0"
+      ],
+      "artists": [
+        "Kelela"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "labels": [
+        "Warp Records"
       ]
     },
     {
@@ -37640,6 +37670,24 @@
       "videoIds": []
     },
     {
+      "id": "3ae4129a-8c52-808c-9c06-d2927dc7bae0",
+      "slug": "kelela-3ae412",
+      "name": "Kelela",
+      "country": "US",
+      "albumIds": [
+        "3ae4129a-8c52-8061-a18f-d976199c95dd"
+      ],
+      "genres": [
+        "Alternative R'n'B",
+        "Dream Pop",
+        "Neo-Psychedelia"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2a64129a-8c52-804e-b6b5-f05c8fdca18a",
       "slug": "kelly-moran-2a6412",
       "name": "Kelly Moran",
@@ -54392,6 +54440,7 @@
       "name": "Warp Records",
       "country": "GB",
       "albumIds": [
+        "3ae4129a-8c52-8061-a18f-d976199c95dd",
         "36f4129a-8c52-8047-9cd8-c5a42d135115",
         "35b4129a-8c52-80dc-b612-c9fdd255d82c",
         "3424129a-8c52-807a-88d1-c7fb1df2df87",
@@ -54405,6 +54454,7 @@
         "e3823968-38cb-474f-b01f-ae7f222f4ae1"
       ],
       "artistIds": [
+        "3ae4129a-8c52-808c-9c06-d2927dc7bae0",
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e",
         "24a4129a-8c52-80f3-bcb1-e3a6f63ca82a",
         "3424129a-8c52-80f6-b89f-ea9abaef0612",

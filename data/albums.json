@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-07-31T21:32:31Z",
+  "generatedAt": "2026-08-01T13:57:49Z",
   "counts": {
     "albums": 1033,
     "artists": 933,
     "labels": 581,
-    "videos": 45
+    "videos": 46
   },
   "albums": [
     {
@@ -43528,7 +43528,9 @@
       "labelIds": [
         "2524129a-8c52-80ad-acea-ecabb5902656"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3af4129a-8c52-80b3-a172-df0f101152c4"
+      ]
     },
     {
       "id": "3424129a-8c52-80f6-b89f-ea9abaef0612",
@@ -54791,6 +54793,16 @@
       "released": "2025-09-04",
       "artistIds": [
         "2784129a-8c52-80bd-a66f-f6ecd160f2d0"
+      ]
+    },
+    {
+      "id": "3af4129a-8c52-80b3-a172-df0f101152c4",
+      "title": "Spøgelse | Speedfreaks",
+      "url": "https://youtu.be/cZAeYtDQwDc?si=vdTZJXkvZv_Plxsl",
+      "kind": "Official Video",
+      "released": "2025-08-22",
+      "artistIds": [
+        "2524129a-8c52-80ea-93f9-fe0796537a7f"
       ]
     },
     {

@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-01T13:57:49Z",
+  "generatedAt": "2026-08-01T23:14:03Z",
   "counts": {
-    "albums": 1033,
-    "artists": 933,
+    "albums": 1034,
+    "artists": 934,
     "labels": 581,
     "videos": 46
   },
   "albums": [
+    {
+      "id": "3af4129a-8c52-8054-bea4-c05c8252c5f8",
+      "slug": "reverend-baron-daniel-3af412",
+      "artist": "Reverend Baron",
+      "album": "Daniel",
+      "url": "https://album.link/rcq5sknvzc4dn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aad820fdd-845d-4fd9-8bc0-ae5cc329e28f%3Aa3925850341_10.jpg?table=block&id=3af4129a-8c52-8054-bea4-c05c8252c5f8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Folk",
+        "Instrumental"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-31",
+      "year": 2026,
+      "artistIds": [
+        "3af4129a-8c52-8021-81bc-e3a042ea7040"
+      ],
+      "artists": [
+        "Reverend Baron"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8043-bbf7-dccba6159cb1"
+      ],
+      "labels": [
+        "Karma Chief Records"
+      ]
+    },
     {
       "id": "3ac4129a-8c52-80ff-9696-de2d656317e5",
       "slug": "body-type-tally-3ac412",
@@ -42115,6 +42144,23 @@
       "videoIds": []
     },
     {
+      "id": "3af4129a-8c52-8021-81bc-e3a042ea7040",
+      "slug": "reverend-baron-3af412",
+      "name": "Reverend Baron",
+      "country": "US",
+      "albumIds": [
+        "3af4129a-8c52-8054-bea4-c05c8252c5f8"
+      ],
+      "genres": [
+        "Indie Folk",
+        "Instrumental"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8043-bbf7-dccba6159cb1"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "27b4129a-8c52-80af-93b6-dffae9b8b241",
       "slug": "revocation-27b412",
       "name": "Revocation",
@@ -50309,11 +50355,13 @@
       "name": "Karma Chief Records",
       "country": "US",
       "albumIds": [
+        "3af4129a-8c52-8054-bea4-c05c8252c5f8",
         "f7ba1aff-562d-45ab-83d2-0908b6ce57bb",
         "19174dc3-43de-4fd1-96f2-a69004ea22bc",
         "2524129a-8c52-8037-b2c4-f47fb3a2bc52"
       ],
       "artistIds": [
+        "3af4129a-8c52-8021-81bc-e3a042ea7040",
         "2524129a-8c52-80a2-a04a-eecaf9f47a55",
         "2504129a-8c52-8008-b7c1-f078333b98d2"
       ]

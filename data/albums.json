@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-02T11:11:42Z",
+  "generatedAt": "2026-08-02T11:35:49Z",
   "counts": {
     "albums": 1034,
     "artists": 934,
@@ -30921,7 +30921,7 @@
       "slug": "anamanaguchi-249412",
       "name": "Anamanaguchi",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://anamanaguchi.bandcamp.com/music",
       "albumIds": [
         "2494129a-8c52-8073-917b-f7f0ac1bda78"
       ],

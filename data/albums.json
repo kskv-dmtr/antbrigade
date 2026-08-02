@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-02T11:35:49Z",
+  "generatedAt": "2026-08-02T23:14:11Z",
   "counts": {
-    "albums": 1034,
-    "artists": 934,
-    "labels": 581,
+    "albums": 1035,
+    "artists": 935,
+    "labels": 582,
     "videos": 46
   },
   "albums": [
@@ -12065,6 +12065,36 @@
       ],
       "labels": [
         "Dirtnap Records"
+      ]
+    },
+    {
+      "id": "3b04129a-8c52-8064-b416-cceca538edd3",
+      "slug": "souleance-kebab-discotheque-3b0412",
+      "artist": "Souleance",
+      "album": "Kebab Discothèque",
+      "url": "https://album.link/psj2whtrmgksj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af130d8fc-fddd-446e-9480-bf1e49edd0d9%3Aa2543386371_10.jpg?table=block&id=3b04129a-8c52-8064-b416-cceca538edd3&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synth Funk",
+        "Turkish Pop",
+        "Arabic Pop"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-05-02",
+      "year": 2025,
+      "artistIds": [
+        "3b04129a-8c52-80f1-8763-f59fe2f9c51d"
+      ],
+      "artists": [
+        "Souleance"
+      ],
+      "labelIds": [
+        "3b04129a-8c52-8069-be64-e818af0bbf0a"
+      ],
+      "labels": [
+        "Heavenly Sweetness"
       ]
     },
     {
@@ -44084,6 +44114,25 @@
       "videoIds": []
     },
     {
+      "id": "3b04129a-8c52-80f1-8763-f59fe2f9c51d",
+      "slug": "souleance-3b0412",
+      "name": "Souleance",
+      "country": "FR",
+      "bandcamp": "https://souleance.bandcamp.com/music",
+      "albumIds": [
+        "3b04129a-8c52-8064-b416-cceca538edd3"
+      ],
+      "genres": [
+        "Synth Funk",
+        "Turkish Pop",
+        "Arabic Pop"
+      ],
+      "labelIds": [
+        "3b04129a-8c52-8069-be64-e818af0bbf0a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2e74129a-8c52-801f-aa73-e3372182a95c",
       "slug": "soulwax-2e7412",
       "name": "Soulwax",
@@ -50766,6 +50815,19 @@
       "artistIds": [
         "3474129a-8c52-800a-a4e4-fbf3d85c5c23",
         "2504129a-8c52-8079-85b0-fb97c7c6c0ee"
+      ]
+    },
+    {
+      "id": "3b04129a-8c52-8069-be64-e818af0bbf0a",
+      "slug": "heavenly-sweetness-3b0412",
+      "name": "Heavenly Sweetness",
+      "country": "FR",
+      "bandcamp": "https://heavenlysweetness.bandcamp.com/",
+      "albumIds": [
+        "3b04129a-8c52-8064-b416-cceca538edd3"
+      ],
+      "artistIds": [
+        "3b04129a-8c52-80f1-8763-f59fe2f9c51d"
       ]
     },
     {

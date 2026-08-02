@@ -1,7 +1,13 @@
 /* Единая точка доступа к выгрузке из Notion.
    Файл data/albums.json обновляется скриптом scripts/fetch-notion.ps1. */
 
+import fs from 'node:fs';
+import path from 'node:path';
+
 import data from '../../data/albums.json';
+import { coverId } from './cover-id.js';
+
+export { coverId };
 
 export const albums      = data.albums;
 export const artists     = data.artists;
@@ -15,17 +21,40 @@ export const artistById = new Map(artists.map((a) => [a.id, a]));
 export const labelById  = new Map(labels.map((l) => [l.id, l]));
 export const videoById  = new Map(videos.map((v) => [v.id, v]));
 
-/** Notion ресайзит обложку по параметру width — просим нужный размер. */
-export function cover(url, width = 400) {
-  if (!url) return null;
-  return url.replace(/([?&])width=\d+/, `$1width=${width}`);
+/* Обложки лежат в public/covers/ — их скачивает scripts/fetch-covers.mjs.
+   Пока файла нет, ссылка ведёт на Notion: так сайт собирается и работает
+   даже до первой загрузки обложек, просто с внешней зависимостью. */
+
+const coversDir = path.join(process.cwd(), 'public', 'covers');
+let localCovers = new Set();
+try {
+  localCovers = new Set(fs.readdirSync(coversDir));
+} catch {
+  // папки ещё нет — значит обложки не скачаны, работаем через Notion
 }
 
-/** srcset с удвоенной плотностью для ретины. */
-export function coverSrcSet(url, width = 400) {
-  if (!url) return null;
-  return `${cover(url, width)} 1x, ${cover(url, width * 2)} 2x`;
+/** Адрес обложки нужного размера: локальный, если скачан, иначе Notion. */
+export function coverSrc(album, size = 400) {
+  if (!album?.cover) return null;
+  const id = coverId(album.cover);
+  const file = id ? `${id}-${size}.webp` : null;
+  if (file && localCovers.has(file)) return `/covers/${file}`;
+  return album.cover.replace(/([?&])width=\d+/, `$1width=${size}`);
 }
+
+/** srcset для сетки: 400 как 1x, 800 как 2x. */
+export function coverSrcSet(album) {
+  const one = coverSrc(album, 400);
+  const two = coverSrc(album, 800);
+  return one && two ? `${one} 1x, ${two} 2x` : null;
+}
+
+// видно в логе сборки: если ноль, значит обложки не скачаны и всё идёт с Notion
+const localCount = albums.filter((a) => {
+  const id = coverId(a.cover);
+  return id && localCovers.has(`${id}-400.webp`);
+}).length;
+console.log(`[covers] локальных обложек: ${localCount} из ${albums.length}`);
 
 export function albumsOf(ids) {
   return (ids || []).map((id) => albumById.get(id)).filter(Boolean);

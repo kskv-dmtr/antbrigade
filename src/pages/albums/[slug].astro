@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import {
-  albums, artistsOf, labelsOf, cover, coverSrcSet, formatDate, flag
+  albums, artistsOf, labelsOf, coverSrc, formatDate, flag
 } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -22,10 +22,8 @@ const title   = `${album.artist} — ${album.album}`;
     <div class="detail__art">
       {album.cover && (
         <img
-          src={cover(album.cover, 640)}
-          srcset={coverSrcSet(album.cover, 640)}
-          sizes="(max-width: 860px) 100vw, 420px"
-          width="640" height="640"
+          src={coverSrc(album, 800)}
+          width="800" height="800"
           alt={`Обложка альбома ${album.album}`}
         />
       )}

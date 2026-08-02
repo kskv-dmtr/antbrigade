@@ -171,14 +171,16 @@ function makeSlug(text, id) {
   return `${s}-${String(id).replace(/-/g, '').slice(0, 6)}`;
 }
 
+/* Через прокси Notion идут все иконки, а не только вложения: у части записей
+   иконка задана прямой ссылкой на хранилище, и та отдаёт 403 — картинка
+   ломается. Прокси отдаёт и такие, заодно уменьшая до нужной ширины. */
 function coverUrl(v) {
   const icon = v.format?.page_icon;
   if (!icon) return null;
-  if (icon.startsWith('attachment:')) {
-    return `https://${HOST}/image/${encodeURIComponent(icon)}` +
-           `?table=block&id=${v.id}&spaceId=${SPACE_ID}&width=${COVER_W}&cache=v2`;
-  }
-  return icon.startsWith('http') ? icon : null;
+  // у артистов и лейблов иконка — эмодзи-флаг, картинки там нет
+  if (!icon.startsWith('attachment:') && !icon.startsWith('http')) return null;
+  return `https://${HOST}/image/${encodeURIComponent(icon)}` +
+         `?table=block&id=${v.id}&spaceId=${SPACE_ID}&width=${COVER_W}&cache=v2`;
 }
 
 const splitList = (raw) => (raw ? raw.split(',').map((s) => s.trim()).filter(Boolean) : []);

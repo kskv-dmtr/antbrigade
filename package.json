@@ -9,6 +9,7 @@
     "postbuild": "node scripts/make-static-config.mjs",
     "preview": "astro preview",
     "sync": "node scripts/fetch-notion.mjs",
+    "covers": "node scripts/fetch-covers.mjs",
     "deploy": "npx --yes vercel@latest --prod",
     "deploy:cloudflare": "npx --yes wrangler pages deploy dist --project-name=antbrigade",
     "zip": "powershell -ExecutionPolicy Bypass -File scripts/make-zip.ps1"

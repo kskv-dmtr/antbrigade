@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import BandcampLink from '../../components/BandcampLink.astro';
 import { artists, albumsOf, labelsOf, videosOf, flag, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -32,6 +33,8 @@ const clipsSorted = clips.slice().sort((a, b) => {
     </h1>
     <p class="counter">{plural(discography.length, 'релиз', 'релиза', 'релизов')}</p>
   </div>
+
+  <BandcampLink url={artist.bandcamp} />
 
   <dl class="facts facts--wide">
     {artist.genres.length > 0 && (

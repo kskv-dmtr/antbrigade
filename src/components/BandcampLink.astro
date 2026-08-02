@@ -1,0 +1,16 @@
+---
+/* Кнопка со ссылкой на Bandcamp.
+   Поле в Notion заполняется вручную и у большинства записей пустое, поэтому
+   проверка живёт здесь: страницы подключают компонент безусловно, а он сам
+   ничего не выводит, если ссылки нет. */
+
+const { url } = Astro.props;
+---
+{url && (
+  <a class="bandcamp" href={url} target="_blank" rel="noopener noreferrer">
+    <svg class="bandcamp__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z" />
+    </svg>
+    <span>Bandcamp</span>
+  </a>
+)}

@@ -326,6 +326,34 @@ select {
 }
 .hint { font-size: 12.5px; color: var(--fg-muted); }
 
+/* ------------------------------------------------------- bandcamp */
+
+/* Появляется только у тех артистов и лейблов, где ссылка заполнена в Notion.
+   Таких меньшинство, поэтому пустого места после блока оставаться не должно —
+   отступ живёт на самой кнопке. */
+.bandcamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.bandcamp:hover { border-color: var(--fg-muted); }
+
+.bandcamp__icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex: none;
+}
+
 /* ------------------------------------------------------------ факты */
 
 .facts {

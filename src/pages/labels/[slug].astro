@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import BandcampLink from '../../components/BandcampLink.astro';
 import { labels, albumsOf, artistsOf, flag, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -23,6 +24,8 @@ const roster   = artistsOf(label.artistIds);
     </h1>
     <p class="counter">{plural(releases.length, 'релиз', 'релиза', 'релизов')}</p>
   </div>
+
+  <BandcampLink url={label.bandcamp} />
 
   {roster.length > 0 && (
     <dl class="facts facts--wide">

@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-02T10:06:08Z",
+  "generatedAt": "2026-08-02T11:11:42Z",
   "counts": {
     "albums": 1034,
     "artists": 934,
@@ -30375,7 +30375,7 @@
       "artist": "Fishmans",
       "album": "宇宙 日本 世田谷",
       "url": "https://album.link/2msmjzfkfgnwd",
-      "cover": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/8c8e2fa2-d51e-4f1b-ba39-c8d86bce9159/ab67616d0000b273f0848eae2594bbab3c3d4363.jpg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af6ad8d76-3384-4e34-9287-321dac23090c%3Aab67616d0000b273f0848eae2594bbab3c3d4363.jpg?table=block&id=2414129a-8c52-8047-8c86-f8367c2b6f8a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Dream Pop",
         "Ambient Pop",
@@ -30454,7 +30454,7 @@
       "slug": "ahmed-2d8412",
       "name": "[Ahmed]",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ahmedquartet.bandcamp.com/music",
       "albumIds": [
         "2d84129a-8c52-804f-a744-f30c31066903"
       ],
@@ -30473,7 +30473,7 @@
       "slug": "1000mods-241412",
       "name": "1000mods",
       "country": "GR",
-      "bandcamp": null,
+      "bandcamp": "https://1000mods.bandcamp.com/music",
       "albumIds": [
         "85ac74c6-5f86-4668-8825-9a2b6df2e729"
       ],
@@ -30492,7 +30492,7 @@
       "slug": "9-lazy-9-241412",
       "name": "9 Lazy 9",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://9lazy9.bandcamp.com/music",
       "albumIds": [
         "77f637df-30dc-47aa-b4e9-f1e834fc9a32"
       ],
@@ -30549,7 +30549,7 @@
       "slug": "actress-241412",
       "name": "Actress",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://actress.bandcamp.com/music",
       "albumIds": [
         "9a2a34e4-ba78-467b-8745-eeb1f6861b8d"
       ],
@@ -30587,7 +30587,7 @@
       "slug": "adebisi-shank-250412",
       "name": "Adebisi Shank",
       "country": "IE",
-      "bandcamp": null,
+      "bandcamp": "https://adebisishank.bandcamp.com/music",
       "albumIds": [
         "2504129a-8c52-80d1-bdb7-eb944f8d376b"
       ],
@@ -30605,7 +30605,7 @@
       "slug": "agabas-241412",
       "name": "Agabas",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://agabas.bandcamp.com/music",
       "albumIds": [
         "2164129a-8c52-80f2-a948-dfe50918c2a6"
       ],
@@ -30903,7 +30903,7 @@
       "slug": "amyl-and-the-sniffers-24a412",
       "name": "Amyl and The Sniffers",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://amylandthesniffers.bandcamp.com/music",
       "albumIds": [
         "1294129a-8c52-8020-b718-cca58fa33aa4"
       ],
@@ -50090,7 +50090,7 @@
       "slug": "eskimo-recordings-24e412",
       "name": "Eskimo Recordings",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://eskimorecordings.bandcamp.com/",
       "albumIds": [
         "51babda1-f171-492d-9b84-f918ebd3e167"
       ],

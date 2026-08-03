@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import GenreChips from '../../components/GenreChips.astro';
+import ListenLinks from '../../components/ListenLinks.astro';
 import {
   albums, artistsOf, labelsOf, coverSrc, formatDate, flag
 } from '../../lib/db.js';
@@ -48,14 +49,7 @@ const title   = `${album.artist} — ${album.album}`;
           : album.artist}
       </p>
 
-      {album.url && (
-        <p class="detail__cta">
-          <a class="button" href={album.url} target="_blank" rel="noopener noreferrer">
-            Слушать
-          </a>
-          <span class="hint">Откроется album.link со всеми площадками</span>
-        </p>
-      )}
+      <ListenLinks album={album} />
 
       <dl class="facts">
         {album.released && (

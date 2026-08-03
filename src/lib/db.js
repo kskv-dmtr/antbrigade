@@ -9,6 +9,17 @@ import { coverId } from './cover-id.js';
 
 export { coverId };
 
+/* Ссылки на площадки лежат отдельно от данных Notion: их собирает
+   scripts/fetch-links.mjs со страниц album.link. Файла может не быть —
+   тогда на страницах просто останется одна кнопка на album.link. */
+let platformLinks = {};
+try {
+  const raw = fs.readFileSync(path.join(process.cwd(), 'data', 'links.json'), 'utf8');
+  platformLinks = JSON.parse(raw).links ?? {};
+} catch {
+  // ссылки ещё не собраны
+}
+
 export const albums      = data.albums;
 export const artists     = data.artists;
 export const labels      = data.labels;
@@ -131,6 +142,25 @@ export function relatedGenres(genre, limit = 8) {
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, limit)
     .map(([key]) => genreIndex.get(key));
+}
+
+/* ---------------------------------------------------------- площадки */
+
+// Показываем не всё, что отдаёт Odesli, а только то, чем реально пользуются.
+// Apple Music и YouTube в списке отсутствуют не по нашей воле: Odesli их для
+// этого каталога не отдаёт — проверено и через страницу, и через её API.
+const SHOWN_PLATFORMS = [
+  { key: 'spotify',  label: 'Spotify' },
+  { key: 'bandcamp', label: 'Bandcamp' },
+  { key: 'yandex',   label: 'Яндекс Музыка' }
+];
+
+/** Прямые ссылки на площадки для релиза, в заданном порядке. */
+export function listenLinks(album) {
+  const found = platformLinks[album.id]?.platforms ?? {};
+  return SHOWN_PLATFORMS
+    .filter(({ key }) => found[key])
+    .map(({ key, label }) => ({ key, label, url: found[key] }));
 }
 
 export function albumsOf(ids) {

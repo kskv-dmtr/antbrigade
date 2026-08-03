@@ -306,12 +306,38 @@ select {
 .detail__artist a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); }
 .detail__artist a:hover { border-bottom-color: currentColor; }
 
-.detail__cta {
+/* Где послушать: сверху прямые ссылки на площадки, ниже отдельным блоком
+   переход на album.link со всеми остальными. */
+.listen {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+}
+
+.listen__platform {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.listen__platform:hover { border-color: var(--fg-muted); }
+
+.listen-all {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   margin: 0 0 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
 }
 
 .button {

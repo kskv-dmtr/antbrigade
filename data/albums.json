@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-03T15:19:14Z",
+  "generatedAt": "2026-08-03T18:08:54Z",
   "counts": {
     "albums": 1035,
     "artists": 935,
@@ -30788,7 +30788,7 @@
       "slug": "alfa-mist-247412",
       "name": "Alfa Mist",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://alfamist.bandcamp.com/music",
       "albumIds": [
         "74c7049c-a7ad-4e4f-9249-42882e976288"
       ],

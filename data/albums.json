@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-03T18:08:54Z",
+  "generatedAt": "2026-08-03T20:00:39Z",
   "counts": {
     "albums": 1035,
     "artists": 935,
@@ -52914,7 +52914,7 @@
       "slug": "ninja-tune-243412",
       "name": "Ninja Tune",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ninjatune.bandcamp.com/",
       "albumIds": [
         "3984129a-8c52-8009-be26-dddfd396ee4b",
         "3314129a-8c52-8080-9b7b-c74fa39f1c06",

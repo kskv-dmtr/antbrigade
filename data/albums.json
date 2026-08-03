@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-03T20:00:39Z",
+  "generatedAt": "2026-08-03T21:31:37Z",
   "counts": {
-    "albums": 1035,
-    "artists": 935,
+    "albums": 1036,
+    "artists": 936,
     "labels": 582,
     "videos": 46
   },
@@ -67,6 +67,36 @@
       "labels": [
         "p(doom) records",
         "Poison City Records"
+      ]
+    },
+    {
+      "id": "3b14129a-8c52-804e-a43d-cd077303ef86",
+      "slug": "curio-curio-curio-curio-3b1412",
+      "artist": "Curió Curió",
+      "album": "Curió Curió",
+      "url": "https://album.link/gdd9thzgbwrvn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab143e1c5-a2a3-4258-a47a-fa5a377b993f%3Aa1860890549_10.jpg?table=block&id=3b14129a-8c52-804e-a43d-cd077303ef86&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "MPB",
+        "Samba",
+        "World Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-24",
+      "year": 2026,
+      "artistIds": [
+        "3b14129a-8c52-8080-8d31-f9dc6e5cc00c"
+      ],
+      "artists": [
+        "Curió Curió"
+      ],
+      "labelIds": [
+        "2494129a-8c52-800b-92dc-e0c48b04def1"
+      ],
+      "labels": [
+        "Mr Bongo"
       ]
     },
     {
@@ -33594,6 +33624,25 @@
       "videoIds": []
     },
     {
+      "id": "3b14129a-8c52-8080-8d31-f9dc6e5cc00c",
+      "slug": "curio-curio-3b1412",
+      "name": "Curió Curió",
+      "country": "DE",
+      "bandcamp": "https://curiocurio.bandcamp.com/music",
+      "albumIds": [
+        "3b14129a-8c52-804e-a43d-cd077303ef86"
+      ],
+      "genres": [
+        "MPB",
+        "Samba",
+        "World Music"
+      ],
+      "labelIds": [
+        "2494129a-8c52-800b-92dc-e0c48b04def1"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-8046-8240-c5902fe9e7e8",
       "slug": "curses-24a412",
       "name": "Curses",
@@ -52631,11 +52680,13 @@
       "country": "GB",
       "bandcamp": "https://mrbongo.bandcamp.com/",
       "albumIds": [
+        "3b14129a-8c52-804e-a43d-cd077303ef86",
         "1f74129a-8c52-80b2-894b-c6bf3ee75702",
         "8c9b1ce9-dd61-4ec5-94b8-115d77e5f360",
         "5e04c907-733a-43d6-a0fb-8e2b5944bc16"
       ],
       "artistIds": [
+        "3b14129a-8c52-8080-8d31-f9dc6e5cc00c",
         "2494129a-8c52-808a-b73c-e4d4aed979e2",
         "2504129a-8c52-80ed-b5ad-fe1f3b9d0fb7",
         "24a4129a-8c52-8054-baf2-c62b51135036"

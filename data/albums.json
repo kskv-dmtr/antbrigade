@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-02T23:14:11Z",
+  "generatedAt": "2026-08-03T11:29:32Z",
   "counts": {
     "albums": 1035,
     "artists": 935,
@@ -1741,7 +1741,7 @@
         "Soul Jazz",
         "Latin Jazz",
         "Afrobeat",
-        "jazz"
+        "Jazz"
       ],
       "types": [
         "Album"
@@ -45771,7 +45771,7 @@
         "Soul Jazz",
         "Latin Jazz",
         "Afrobeat",
-        "jazz"
+        "Jazz"
       ],
       "labelIds": [
         "3714129a-8c52-8097-98a5-e3249ab8b4ff"
@@ -51255,7 +51255,7 @@
       "slug": "international-anthem-249412",
       "name": "International Anthem",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://intlanthem.bandcamp.com/music",
       "albumIds": [
         "2b64129a-8c52-803d-b396-e995998badc2",
         "2a84129a-8c52-807f-a8e7-fd5f51a9b9ec",
@@ -51721,7 +51721,7 @@
       "slug": "l-univers-39c412",
       "name": "l'univers",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://luniversrecordings.bandcamp.com/",
       "albumIds": [
         "39c4129a-8c52-80e9-adcd-e1c2efc49c50"
       ],

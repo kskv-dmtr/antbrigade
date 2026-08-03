@@ -7,9 +7,9 @@
    Шрифты свои, лежат в проекте: никаких внешних CDN.
    ------------------------------------------------------------------ */
 
-@import '@fontsource/silkscreen/400.css';
-@import '@fontsource/silkscreen/700.css';
-@import '@fontsource-variable/inter';
+/* Один шрифт на всё, но с двумя оптическими размерами: у Inter есть ось
+   opsz 14–32, и «Inter Display» — это она же на 32. */
+@import '@fontsource-variable/inter/opsz.css';
 
 :root {
   --bg:            #fbfaf3;   /* тёплый небелёный */
@@ -33,10 +33,20 @@
   --measure:       1400px;
 
   --font:    'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  --display: 'Silkscreen', 'Courier New', monospace;
+  --display: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 
   /* подписи и заголовки: прописные с разрядкой, как в референсе */
   --label-spacing: 0.06em;
+}
+
+/* Всё, что набрано «дисплейным», отличается не гарнитурой, а оптическим
+   размером и насыщенностью. Одно правило вместо повторения в двух десятках. */
+.brand, .nav, .page-head h1, .counter, .section h2, .seg button, select,
+.reset, .card__meta, .detail__kicker, .detail__title, .listen__platform,
+.button, .bandcamp, .facts dt, .chip, .names__count, .genre-cloud a,
+.letter__head, .empty, .foot {
+  font-variation-settings: 'opsz' 32;
+  font-weight: 500;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -188,7 +198,16 @@ main {
 .search input::placeholder { color: var(--fg-muted); }
 .search input:focus-visible { border-color: var(--fg-muted); }
 
+/* Слева типы релиза, справа списки: две группы, разведённые по краям. */
 .filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.filters__group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -206,7 +225,7 @@ main {
 .seg button {
   padding: 7px 12px;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   /* не приглушённым: на тёплой плашке он не добирает контраст,
@@ -221,24 +240,58 @@ main {
   background: var(--ink);
 }
 
+/* Шеврон свой, а не системный: у системного не выровнять отступ справа
+   и не развернуть его при раскрытии. Ширина стрелки заложена в
+   padding-right, поэтому воздух слева и справа одинаковый. */
+.select {
+  position: relative;
+  display: inline-flex;
+  --select-pad: 12px;
+  --chevron: 10px;
+}
+
 select {
-  padding: 8px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px calc(var(--select-pad) * 2 + var(--chevron)) 8px var(--select-pad);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--fg);
   background: var(--bg-elevated);
   border: 1px solid var(--ink);
   border-radius: 0;
-  max-width: 220px;
+  max-width: 240px;
   cursor: pointer;
+}
+
+.select__chevron {
+  position: absolute;
+  top: 50%;
+  right: var(--select-pad);
+  width: var(--chevron);
+  height: var(--chevron);
+  margin-top: calc(var(--chevron) / -2);
+  pointer-events: none;
+  background: var(--fg);
+  /* остриём вниз */
+  clip-path: polygon(0 25%, 50% 75%, 100% 25%, 100% 45%, 50% 95%, 0 45%);
+  transition: transform .12s ease;
+}
+
+/* Раскрытый список: у select нет состояния «открыт» в CSS, поэтому его
+   отмечает скрипт. */
+.select[data-open] .select__chevron { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .select__chevron { transition: none; }
 }
 
 .reset {
   padding: 8px 12px;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--fg);
@@ -308,7 +361,7 @@ select {
 .card__meta {
   margin-top: 5px;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -335,7 +388,7 @@ select {
 .detail__kicker {
   margin: 0 0 14px;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--ink-fg);
@@ -457,7 +510,7 @@ select {
 .facts--wide { grid-template-columns: 130px minmax(0, 1fr); padding-top: 0; border-top: 0; }
 .facts dt {
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -468,9 +521,9 @@ select {
 
 .chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .chip {
-  padding: 4px 8px;
+  padding: 5px 9px;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   color: var(--fg);
@@ -520,7 +573,7 @@ select {
 .names__name { flex: 1; min-width: 0; }
 .names__count {
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 11px;
   color: var(--fg-muted);
 }
 
@@ -539,7 +592,7 @@ select {
   gap: 7px;
   padding: 7px 11px;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
   text-decoration: none;
@@ -550,7 +603,7 @@ select {
 .genre-cloud a:hover { background: var(--ink); color: var(--ink-fg); }
 .genre-cloud a:hover .genre-cloud__count { color: var(--ink-fg); }
 .genre-cloud__count {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--fg-muted);
 }
 
@@ -585,16 +638,18 @@ select {
   color: var(--fg-muted);
 }
 
-/* Подвал плашкой во всю ширину, как шапка. */
+/* Подвал не плашкой: шапка и так тёмная, второй чёрный блок внизу
+   перевешивает страницу. Здесь — сдержанная строка за отбивкой. */
 .foot {
-  margin-top: 60px;
-  padding: 22px var(--pad);
-  background: var(--ink);
-  color: var(--ink-fg);
+  max-width: var(--measure);
+  margin: 70px auto 0;
+  padding: 18px var(--pad) 46px;
+  border-top: 1px solid var(--line);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
+  color: var(--fg-muted);
 }
 
 /* Установленное приложение открывается во весь экран, поэтому по краям

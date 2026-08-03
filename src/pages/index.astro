@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
+import Select from '../components/Select.astro';
 import { albums, plural } from '../lib/db.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
@@ -31,29 +32,33 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
     </div>
 
     <div class="filters">
-      <div class="seg" id="types" role="group" aria-label="Release type">
-        <button type="button" data-type="" aria-pressed="true">All</button>
-        {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+      <div class="filters__group">
+        <div class="seg" id="types" role="group" aria-label="Release type">
+          <button type="button" data-type="" aria-pressed="true">All</button>
+          {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+        </div>
       </div>
 
-      <select id="genre" aria-label="Genre">
-        <option value="">All genres</option>
-        {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
-      </select>
+      <div class="filters__group">
+        <Select id="genre" label="Genre">
+          <option value="">All genres</option>
+          {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
+        </Select>
 
-      <select id="year" aria-label="Year">
-        <option value="">All years</option>
-        {years.map((y) => <option value={y}>{y}</option>)}
-      </select>
+        <Select id="year" label="Year">
+          <option value="">All years</option>
+          {years.map((y) => <option value={y}>{y}</option>)}
+        </Select>
 
-      <select id="sort" aria-label="Sorting">
-        <option value="new">Newest first</option>
-        <option value="old">Oldest first</option>
-        <option value="artist">By artist</option>
-        <option value="album">By album</option>
-      </select>
+        <Select id="sort" label="Sorting">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+          <option value="artist">By artist</option>
+          <option value="album">By album</option>
+        </Select>
 
-      <button type="button" id="reset" class="reset" hidden>Reset</button>
+        <button type="button" id="reset" class="reset" hidden>Reset</button>
+      </div>
     </div>
   </div>
 
@@ -161,6 +166,21 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
   genreEl.addEventListener('change', () => { state.genre = genreEl.value; apply(); });
   yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  apply(); });
   sortEl.addEventListener('change',  () => { state.sort  = sortEl.value;  sort(); apply(); });
+
+  /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами:
+     стрелка должна смотреть вверх, пока список открыт. */
+  for (const wrap of document.querySelectorAll('.select')) {
+    const field = wrap.querySelector('select');
+    const close = () => wrap.removeAttribute('data-open');
+    field.addEventListener('mousedown', () => {
+      wrap.toggleAttribute('data-open');
+    });
+    field.addEventListener('keydown', (e) => {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+    });
+    field.addEventListener('change', close);
+    field.addEventListener('blur', close);
+  }
 
   reset.addEventListener('click', () => {
     Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });

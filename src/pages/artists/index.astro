@@ -22,28 +22,28 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
 });
 ---
 <Base
-  title="Артисты · music"
-  description={`${artists.length} артистов в коллекции.`}
+  title="Artists · ant brigade"
+  description={`${artists.length} artists in the collection.`}
   activeSection="artists"
 >
   <div class="page-head">
-    <h1>Артисты</h1>
+    <h1>Artists</h1>
     <p class="counter" id="counter" aria-live="polite">
-      {plural(artists.length, 'артист', 'артиста', 'артистов')}
+      {plural(artists.length, 'artist', 'artists')}
     </p>
   </div>
 
   <div class="controls">
     <div class="search">
-      <input type="search" id="search" placeholder="Имя артиста" autocomplete="off"
-             spellcheck="false" aria-label="Поиск по имени артиста" />
+      <input type="search" id="search" placeholder="Artist name" autocomplete="off"
+             spellcheck="false" aria-label="Search by artist name" />
     </div>
     <nav class="alphabet">
       {ordered.map(([letter]) => <a href={`#letter-${letter === '#' ? 'other' : letter}`}>{letter}</a>)}
     </nav>
   </div>
 
-  <p class="empty" id="empty" hidden>Никого не нашлось.</p>
+  <p class="empty" id="empty" hidden>Nothing found.</p>
 
   <div id="list">
     {ordered.map(([letter, items]) => (
@@ -73,12 +73,7 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   const items    = Array.from(document.querySelectorAll('.names li'));
   const total    = items.length;
 
-  function plural(n) {
-    const m10 = n % 10, m100 = n % 100;
-    if (m10 === 1 && m100 !== 11) return n + ' артист';
-    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' артиста';
-    return n + ' артистов';
-  }
+  const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
 
   let timer;
   search.addEventListener('input', () => {
@@ -96,7 +91,7 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
         s.hidden = !s.querySelector('.names li:not([hidden])');
       }
       empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
     }, 120);
   });
 </script>

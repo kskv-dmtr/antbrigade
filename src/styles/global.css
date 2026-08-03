@@ -1,37 +1,54 @@
 /* ------------------------------------------------------------------
-   Оформление намеренно нейтральное — это каркас под будущий макет.
-   Всё, что задаёт вид, вынесено в переменные ниже.
+   Оформление по референсу nogood.studio: тёплый небелёный фон, кислотный
+   лаймовый акцент плашками во всю ширину, нулевые скругления, плотные
+   межстрочные и два шрифта — пиксельный на все подписи и заголовки
+   (всегда прописными, с разрядкой) и гротеск на читаемый текст.
+
+   Шрифты свои, лежат в проекте: никаких внешних CDN.
    ------------------------------------------------------------------ */
 
-:root {
-  --bg:            #0d0d0f;
-  --bg-elevated:   #17171b;
-  --fg:            #f2f2f4;
-  --fg-muted:      #8a8a95;
-  --line:          #26262c;
-  --accent:        #f2f2f4;
-  --accent-fg:     #0d0d0f;
+@import '@fontsource/silkscreen/400.css';
+@import '@fontsource/silkscreen/700.css';
+@import '@fontsource-variable/inter';
 
-  --radius:        10px;
-  --radius-sm:     7px;
+:root {
+  --bg:            #fbfaf3;   /* тёплый небелёный */
+  --bg-elevated:   #e9e5db;   /* тёплый серый */
+  --fg:            #1c1c1c;
+  --fg-muted:      #6f6b60;   /* темнее референса: на тёплом фоне иначе не добирает контраст */
+  --line:          #d5d0c2;
+
+  /* Цвет только чёрный и его оттенки. Роль акцента играет инверсия:
+     тёмная заливка со светлым текстом. */
+  --ink:           #1c1c1c;
+  --ink-fg:        #fbfaf3;
+  --ink-soft:      #3a3a36;   /* наведение на тёмных плашках */
+
+  --radius:        0;
+  --radius-sm:     0;
 
   --gap:           20px;
   --pad:           24px;
   --card-min:      170px;
   --measure:       1400px;
 
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font:    'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --display: 'Silkscreen', 'Courier New', monospace;
+
+  /* подписи и заголовки: прописные с разрядкой, как в референсе */
+  --label-spacing: 0.06em;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --bg:          #ffffff;
-    --bg-elevated: #f4f4f6;
-    --fg:          #101014;
-    --fg-muted:    #6b6b76;
-    --line:        #e2e2e8;
-    --accent:      #101014;
-    --accent-fg:   #ffffff;
+    --bg:          #1c1c1c;
+    --bg-elevated: #2a2a28;
+    --fg:          #fbfaf3;
+    --fg-muted:    #9a958a;
+    --line:        #3a3a36;
+    --ink:         #fbfaf3;
+    --ink-fg:      #1c1c1c;
+    --ink-soft:    #d5d0c2;
   }
 }
 
@@ -59,43 +76,52 @@ main {
 .skip:focus {
   left: 12px; top: 12px; z-index: 10;
   padding: 8px 14px;
-  background: var(--accent); color: var(--accent-fg);
-  border-radius: var(--radius-sm);
+  background: var(--ink); color: var(--ink-fg);
 }
 
-/* ------------------------------------------------------------- шапка */
+/* ------------------------------------------------------------- шапка
+
+   Тёмная плашка во всю ширину, без скруглений и без прилипания.
+   Три колонки: бренд слева, меню строго по центру, справа пусто —
+   иначе меню сместится на ширину бренда.                               */
 
 .masthead {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 22px;
-  padding: 13px var(--pad);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: saturate(140%) blur(14px);
-  border-bottom: 1px solid var(--line);
+  gap: 20px;
+  padding: 14px var(--pad);
+  background: var(--ink);
+  color: var(--ink-fg);
 }
 
 .brand {
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-family: var(--display);
+  font-size: 15px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   text-decoration: none;
+  color: var(--ink-fg);
+  justify-self: start;
 }
 
 .nav {
   display: flex;
-  gap: 16px;
-  font-size: 14px;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
 }
 .nav a {
-  color: var(--fg-muted);
+  color: var(--ink-fg);
   text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
 }
-.nav a:hover { color: var(--fg); }
-.nav a[aria-current="page"] { color: var(--fg); }
+.nav a:hover { border-bottom-color: var(--ink-fg); }
+.nav a[aria-current="page"] { border-bottom-color: var(--ink-fg); }
 
 /* ------------------------------------------------------- заголовки */
 
@@ -104,30 +130,40 @@ main {
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 26px 0 16px;
+  padding: 34px 0 20px;
 }
 
 .page-head h1 {
   margin: 0;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
 }
 
 .counter {
   margin: 0;
-  font-size: 13px;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg-muted);
-  font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
-.section { margin: 36px 0; }
+.section { margin: 44px 0; }
 .section h2 {
-  margin: 0 0 14px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--fg-muted);
+  margin: 0 0 16px;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: var(--fg);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ink);
 }
 
 /* -------------------------------------------------------- фильтры */
@@ -168,39 +204,49 @@ main {
   border-radius: var(--radius-sm);
 }
 .seg button {
-  padding: 6px 12px;
-  font: inherit; font-size: 13px;
-  color: var(--fg-muted);
-  background: none; border: 0; border-radius: 5px;
+  padding: 7px 12px;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  /* не приглушённым: на тёплой плашке он не добирает контраст,
+     а активное состояние и так отличается заливкой */
+  color: var(--fg);
+  background: none; border: 0;
   cursor: pointer; white-space: nowrap;
 }
-.seg button:hover { color: var(--fg); }
+.seg button:hover { background: var(--ink); color: var(--ink-fg); }
 .seg button[aria-pressed="true"] {
-  color: var(--accent-fg);
-  background: var(--accent);
+  color: var(--ink-fg);
+  background: var(--ink);
 }
 
 select {
-  padding: 7px 10px;
-  font: inherit; font-size: 13px;
+  padding: 8px 10px;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg);
   background: var(--bg-elevated);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  max-width: 200px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  max-width: 220px;
   cursor: pointer;
 }
 
 .reset {
-  padding: 7px 12px;
-  font: inherit; font-size: 13px;
-  color: var(--fg-muted);
+  padding: 8px 12px;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: var(--fg);
   background: none;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--ink);
   cursor: pointer;
 }
-.reset:hover { color: var(--fg); }
+.reset:hover { background: var(--ink); color: var(--ink-fg); }
 
 .alphabet {
   display: flex;
@@ -244,12 +290,14 @@ select {
 
 .card a:hover .card__art,
 .card a:focus-visible .card__art {
-  outline: 2px solid var(--fg);
-  outline-offset: 2px;
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
+.card a:hover .card__artist { background: var(--ink); color: var(--ink-fg); }
 
-.card__artist { font-size: 13.5px; font-weight: 600; letter-spacing: -0.005em; }
-.card__album  { font-size: 13.5px; color: var(--fg-muted); }
+/* Названия — гротеском: их читают, а не считывают как подпись. */
+.card__artist { font-size: 13.5px; font-weight: 600; line-height: 1.25; }
+.card__album  { font-size: 13.5px; line-height: 1.25; color: var(--fg-muted); }
 .card__artist, .card__album {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -258,10 +306,12 @@ select {
   -webkit-box-orient: vertical;
 }
 .card__meta {
-  margin-top: 3px;
-  font-size: 11.5px;
+  margin-top: 5px;
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg-muted);
-  font-variant-numeric: tabular-nums;
 }
 
 /* ------------------------------------------------- карточка релиза */
@@ -283,28 +333,34 @@ select {
 .detail__art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .detail__kicker {
-  margin: 0 0 10px;
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  margin: 0 0 14px;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
   text-transform: uppercase;
-  color: var(--fg-muted);
+  color: var(--ink-fg);
+  background: var(--ink);
+  display: inline-block;
+  padding: 4px 8px;
 }
 
 .detail__title {
-  margin: 0 0 6px;
+  margin: 0 0 10px;
+  font-family: var(--display);
   font-size: 30px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
 }
 
 .detail__artist {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   font-size: 17px;
   color: var(--fg-muted);
 }
-.detail__artist a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); }
-.detail__artist a:hover { border-bottom-color: currentColor; }
+.detail__artist a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+.detail__artist a:hover { background: var(--ink); color: var(--ink-fg); }
 
 /* Где послушать: сверху прямые ссылки на площадки, ниже отдельным блоком
    переход на album.link со всеми остальными. */
@@ -319,16 +375,17 @@ select {
 .listen__platform {
   display: inline-flex;
   align-items: center;
-  padding: 9px 14px;
-  font-size: 13px;
-  font-weight: 600;
+  padding: 10px 14px;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg);
   text-decoration: none;
-  background: var(--bg-elevated);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  background: none;
+  border: 1px solid var(--ink);
 }
-.listen__platform:hover { border-color: var(--fg-muted); }
+.listen__platform:hover { background: var(--ink); color: var(--ink-fg); }
 
 .listen-all {
   display: flex;
@@ -342,14 +399,19 @@ select {
 
 .button {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent-fg);
-  background: var(--accent);
-  border-radius: var(--radius-sm);
+  padding: 11px 20px;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: var(--ink-fg);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   text-decoration: none;
 }
+/* кнопка изначально тёмная, поэтому наведение её выворачивает */
+.button:hover { color: var(--fg); background: var(--bg); }
+
 .hint { font-size: 12.5px; color: var(--fg-muted); }
 
 /* ------------------------------------------------------- bandcamp */
@@ -361,17 +423,18 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 24px;
-  padding: 8px 14px;
-  font-size: 13px;
-  font-weight: 600;
+  margin-bottom: 26px;
+  padding: 9px 14px;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg);
   text-decoration: none;
-  background: var(--bg-elevated);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  background: none;
+  border: 1px solid var(--ink);
 }
-.bandcamp:hover { border-color: var(--fg-muted); }
+.bandcamp:hover { background: var(--ink); color: var(--ink-fg); }
 
 .bandcamp__icon {
   width: 15px;
@@ -392,21 +455,30 @@ select {
   font-size: 14px;
 }
 .facts--wide { grid-template-columns: 130px minmax(0, 1fr); padding-top: 0; border-top: 0; }
-.facts dt { color: var(--fg-muted); }
-.facts dd { margin: 0; }
-.facts a { text-decoration: none; border-bottom: 1px solid var(--line); }
-.facts a:hover { border-bottom-color: currentColor; }
-
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip {
-  padding: 3px 9px;
-  font-size: 12.5px;
+.facts dt {
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg-muted);
+}
+.facts dd { margin: 0; }
+.facts a { text-decoration: underline; text-underline-offset: 3px; }
+.facts a:hover { background: var(--ink); color: var(--ink-fg); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  padding: 4px 8px;
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: var(--fg);
   background: var(--bg-elevated);
-  border-radius: 999px;
+  border-radius: 0;
 }
 .chip--link { text-decoration: none; border: 0; }
-.chip--link:hover { color: var(--fg); }
+.chip--link:hover { background: var(--ink); color: var(--ink-fg); }
 
 .flag { font-size: 0.95em; }
 .sep { color: var(--fg-muted); }
@@ -444,12 +516,12 @@ select {
   text-decoration: none;
   font-size: 14px;
 }
-.names a:hover .names__name { text-decoration: underline; }
+.names a:hover .names__name { background: var(--ink); color: var(--ink-fg); }
 .names__name { flex: 1; min-width: 0; }
 .names__count {
-  font-size: 12px;
+  font-family: var(--display);
+  font-size: 9px;
   color: var(--fg-muted);
-  font-variant-numeric: tabular-nums;
 }
 
 /* Облако жанров: 284 названия разной длины, поэтому не колонки, а поток. */
@@ -465,18 +537,21 @@ select {
   display: inline-flex;
   align-items: baseline;
   gap: 7px;
-  padding: 6px 12px;
-  font-size: 13.5px;
+  padding: 7px 11px;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   text-decoration: none;
   background: var(--bg-elevated);
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 0;
 }
-.genre-cloud a:hover { border-color: var(--line); }
+.genre-cloud a:hover { background: var(--ink); color: var(--ink-fg); }
+.genre-cloud a:hover .genre-cloud__count { color: var(--ink-fg); }
 .genre-cloud__count {
-  font-size: 11.5px;
+  font-size: 9px;
   color: var(--fg-muted);
-  font-variant-numeric: tabular-nums;
 }
 
 .counter__span { color: var(--fg-muted); }
@@ -487,29 +562,39 @@ select {
   color: var(--fg-muted);
 }
 
-.letter { margin-bottom: 26px; }
+.letter { margin-bottom: 30px; }
 .letter__head {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   padding-bottom: 6px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--display);
   font-size: 13px;
-  font-weight: 600;
-  color: var(--fg-muted);
+  font-weight: 400;
+  letter-spacing: var(--label-spacing);
+  color: var(--fg);
 }
 .letter .names { columns: 3; column-gap: 30px; }
 
 .empty {
   padding: 50px var(--pad);
   text-align: center;
+  font-family: var(--display);
+  font-size: 12px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
   color: var(--fg-muted);
 }
 
+/* Подвал плашкой во всю ширину, как шапка. */
 .foot {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: 30px var(--pad) 50px;
-  font-size: 12px;
-  color: var(--fg-muted);
+  margin-top: 60px;
+  padding: 22px var(--pad);
+  background: var(--ink);
+  color: var(--ink-fg);
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
 }
 
 /* Установленное приложение открывается во весь экран, поэтому по краям

@@ -4,14 +4,14 @@ import { generatedAt } from '../lib/db.js';
 
 const { title, description, activeSection } = Astro.props;
 const nav = [
-  { href: '/',         label: 'Альбомы', key: 'albums' },
-  { href: '/artists/', label: 'Артисты', key: 'artists' },
-  { href: '/labels/',  label: 'Лейблы',  key: 'labels' },
-  { href: '/genres/',  label: 'Жанры',   key: 'genres' }
+  { href: '/',         label: 'Albums',  key: 'albums' },
+  { href: '/artists/', label: 'Artists', key: 'artists' },
+  { href: '/labels/',  label: 'Labels',  key: 'labels' },
+  { href: '/genres/',  label: 'Genres',  key: 'genres' }
 ];
 ---
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -21,7 +21,7 @@ const nav = [
   <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
   {/* Комментарии здесь только в фигурных скобках: HTML-комментарии Astro
-      отдаёт наружу, и на 2546 страницах это лишний мегабайт трафика.
+      отдаёт наружу, и на 2840 страницах это лишний мегабайт трафика.
 
       Установка на домашний экран. Service worker не нужен: Chrome убрал его
       из требований к установке, а кэширование добавим отдельно. */}
@@ -29,8 +29,8 @@ const nav = [
 
   {/* Цвет панели браузера подстраивается под тему страницы. В установленном
       приложении заголовок красит theme_color из манифеста. */}
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0f" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf3" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1c" />
 
   <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png" />
@@ -38,16 +38,16 @@ const nav = [
 
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="music" />
+  <meta name="apple-mobile-web-app-title" content="ant brigade" />
   {/* default вместо black-translucent: последний делает часы белыми всегда,
       и на светлой теме они пропадают. Пересмотреть, когда будет макет. */}
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 </head>
 <body>
-  <a class="skip" href="#main">К содержимому</a>
+  <a class="skip" href="#main">Skip to content</a>
 
   <header class="masthead">
-    <a class="brand" href="/">music</a>
+    <a class="brand" href="/">ant brigade</a>
     <nav class="nav">
       {nav.map((item) => (
         <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>
@@ -55,6 +55,7 @@ const nav = [
         </a>
       ))}
     </nav>
+    <div class="masthead__tail" aria-hidden="true"></div>
   </header>
 
   <main id="main">
@@ -62,7 +63,7 @@ const nav = [
   </main>
 
   <footer class="foot">
-    Источник — база в Notion. Обновлено {generatedAt ? generatedAt.slice(0, 10) : '—'}.
+    Source — a Notion database. Updated {generatedAt ? generatedAt.slice(0, 10) : '—'}.
   </footer>
 </body>
 </html>

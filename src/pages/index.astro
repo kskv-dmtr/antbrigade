@@ -15,49 +15,49 @@ const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].loc
 const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
 ---
 <Base
-  title="music — коллекция альбомов"
-  description={`Коллекция из ${albums.length} релизов: обложки, жанры, лейблы и ссылки на прослушивание.`}
+  title="ant brigade — album collection"
+  description={`A collection of ${albums.length} releases: covers, genres, labels and links to listen.`}
   activeSection="albums"
 >
   <div class="page-head">
-    <h1>Альбомы</h1>
-    <p class="counter" id="counter" aria-live="polite">{plural(albums.length, 'релиз', 'релиза', 'релизов')}</p>
+    <h1>Albums</h1>
+    <p class="counter" id="counter" aria-live="polite">{plural(albums.length, 'release', 'releases')}</p>
   </div>
 
   <div class="controls">
     <div class="search">
-      <input type="search" id="search" placeholder="Артист или альбом" autocomplete="off"
-             spellcheck="false" aria-label="Поиск по артисту или альбому" />
+      <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
+             spellcheck="false" aria-label="Search by artist or album" />
     </div>
 
     <div class="filters">
-      <div class="seg" id="types" role="group" aria-label="Тип релиза">
-        <button type="button" data-type="" aria-pressed="true">Всё</button>
+      <div class="seg" id="types" role="group" aria-label="Release type">
+        <button type="button" data-type="" aria-pressed="true">All</button>
         {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
       </div>
 
-      <select id="genre" aria-label="Жанр">
-        <option value="">Все жанры</option>
+      <select id="genre" aria-label="Genre">
+        <option value="">All genres</option>
         {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
       </select>
 
-      <select id="year" aria-label="Год">
-        <option value="">Все годы</option>
+      <select id="year" aria-label="Year">
+        <option value="">All years</option>
         {years.map((y) => <option value={y}>{y}</option>)}
       </select>
 
-      <select id="sort" aria-label="Сортировка">
-        <option value="new">Сначала новые</option>
-        <option value="old">Сначала старые</option>
-        <option value="artist">По артисту</option>
-        <option value="album">По альбому</option>
+      <select id="sort" aria-label="Sorting">
+        <option value="new">Newest first</option>
+        <option value="old">Oldest first</option>
+        <option value="artist">By artist</option>
+        <option value="album">By album</option>
       </select>
 
-      <button type="button" id="reset" class="reset" hidden>Сбросить</button>
+      <button type="button" id="reset" class="reset" hidden>Reset</button>
     </div>
   </div>
 
-  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+  <p class="empty" id="empty" hidden>Nothing found.</p>
 
   <ul class="grid" id="grid">
     {albums.map((a) => (
@@ -93,12 +93,7 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
-  function plural(n) {
-    const m10 = n % 10, m100 = n % 100;
-    if (m10 === 1 && m100 !== 11) return n + ' релиз';
-    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' релиза';
-    return n + ' релизов';
-  }
+  const plural = (n) => `${n} ${n === 1 ? 'release' : 'releases'}`;
 
   function matches(el) {
     const d = el.dataset;
@@ -118,7 +113,7 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
     }
 
     empty.hidden = shown > 0;
-    counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+    counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
 
     const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
     reset.hidden = !dirty;

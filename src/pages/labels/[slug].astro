@@ -13,8 +13,8 @@ const releases = albumsOf(label.albumIds);
 const roster   = artistsOf(label.artistIds);
 ---
 <Base
-  title={`${label.name} · music`}
-  description={`${label.name}: ${plural(releases.length, 'релиз', 'релиза', 'релизов')} в коллекции.`}
+  title={`${label.name} · ant brigade`}
+  description={`${label.name}: ${plural(releases.length, 'release', 'releases')} in the collection.`}
   activeSection="labels"
 >
   <div class="page-head">
@@ -22,14 +22,14 @@ const roster   = artistsOf(label.artistIds);
       {label.name}
       {label.country && <span class="flag" title={label.country}>{flag(label.country)}</span>}
     </h1>
-    <p class="counter">{plural(releases.length, 'релиз', 'релиза', 'релизов')}</p>
+    <p class="counter">{plural(releases.length, 'release', 'releases')}</p>
   </div>
 
   <BandcampLink url={label.bandcamp} />
 
   {roster.length > 0 && (
     <dl class="facts facts--wide">
-      <dt>{plural(roster.length, 'Артист', 'Артиста', 'Артистов')}</dt>
+      <dt>{plural(roster.length, 'Artist', 'Artists')}</dt>
       <dd class="chips">
         {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}/`}>{a.name}</a>)}
       </dd>
@@ -37,7 +37,7 @@ const roster   = artistsOf(label.artistIds);
   )}
 
   <section class="section">
-    <h2>Релизы</h2>
+    <h2>Releases</h2>
     <ul class="grid">
       {releases.map((a) => <AlbumCard album={a} />)}
     </ul>

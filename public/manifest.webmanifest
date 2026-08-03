@@ -1,16 +1,16 @@
 {
   "id": "/",
-  "name": "ant brigade — music",
-  "short_name": "music",
-  "description": "Коллекция альбомов: обложки, жанры, лейблы и ссылки на прослушивание.",
-  "lang": "ru",
+  "name": "ant brigade",
+  "short_name": "ant brigade",
+  "description": "Album collection: covers, genres, labels and links to listen.",
+  "lang": "en",
   "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#335c67",
-  "theme_color": "#335c67",
+  "background_color": "#1c1c1c",
+  "theme_color": "#1c1c1c",
   "categories": ["music", "entertainment"],
   "icons": [
     {
@@ -34,12 +34,12 @@
   ],
   "shortcuts": [
     {
-      "name": "Артисты",
+      "name": "Artists",
       "url": "/artists/",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Лейблы",
+      "name": "Labels",
       "url": "/labels/",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     }

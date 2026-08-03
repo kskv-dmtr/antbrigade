@@ -16,7 +16,7 @@ const labels  = labelsOf(album.labelIds);
 const title   = `${album.artist} — ${album.album}`;
 ---
 <Base
-  title={`${title} · music`}
+  title={`${title} · ant brigade`}
   description={`${title}${album.year ? `, ${album.year}` : ''}. ${album.genres.join(', ')}.`}
   activeSection="albums"
 >
@@ -26,7 +26,7 @@ const title   = `${album.artist} — ${album.album}`;
         <img
           src={coverSrc(album, 800)}
           width="800" height="800"
-          alt={`Обложка альбома ${album.album}`}
+          alt={`${album.album} cover`}
         />
       )}
     </div>
@@ -54,14 +54,14 @@ const title   = `${album.artist} — ${album.album}`;
       <dl class="facts">
         {album.released && (
           <>
-            <dt>Дата релиза</dt>
+            <dt>Release date</dt>
             <dd>{formatDate(album.released)}</dd>
           </>
         )}
 
         {labels.length > 0 && (
           <>
-            <dt>{labels.length > 1 ? 'Лейблы' : 'Лейбл'}</dt>
+            <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>
             <dd>
               {labels.map((l, i) => (
                 <>
@@ -76,7 +76,7 @@ const title   = `${album.artist} — ${album.album}`;
 
         {album.genres.length > 0 && (
           <>
-            <dt>Жанры</dt>
+            <dt>Genres</dt>
             <dd>
               <GenreChips names={album.genres} />
             </dd>

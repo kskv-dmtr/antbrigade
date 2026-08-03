@@ -6,25 +6,25 @@ import { genres, plural } from '../../lib/db.js';
 const solo = genres.filter((g) => g.count === 1).length;
 ---
 <Base
-  title="Жанры · music"
-  description={`${genres.length} жанров в коллекции.`}
+  title="Genres · ant brigade"
+  description={`${genres.length} genres in the collection.`}
   activeSection="genres"
 >
   <div class="page-head">
-    <h1>Жанры</h1>
+    <h1>Genres</h1>
     <p class="counter" id="counter" aria-live="polite">
-      {plural(genres.length, 'жанр', 'жанра', 'жанров')}
+      {plural(genres.length, 'genre', 'genres')}
     </p>
   </div>
 
   <div class="controls">
     <div class="search">
-      <input type="search" id="search" placeholder="Название жанра" autocomplete="off"
-             spellcheck="false" aria-label="Поиск по названию жанра" />
+      <input type="search" id="search" placeholder="Genre name" autocomplete="off"
+             spellcheck="false" aria-label="Search by genre name" />
     </div>
   </div>
 
-  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+  <p class="empty" id="empty" hidden>Nothing found.</p>
 
   <ul class="genre-cloud" id="list">
     {genres.map((genre) => (
@@ -38,7 +38,7 @@ const solo = genres.filter((g) => g.count === 1).length;
   </ul>
 
   <p class="foot-note">
-    Из них {plural(solo, 'жанр представлен', 'жанра представлены', 'жанров представлены')} одним релизом.
+    {solo} of them {solo === 1 ? 'has' : 'have'} a single release.
   </p>
 </Base>
 
@@ -49,12 +49,7 @@ const solo = genres.filter((g) => g.count === 1).length;
   const items   = Array.from(document.querySelectorAll('#list li'));
   const total   = items.length;
 
-  function plural(n) {
-    const m10 = n % 10, m100 = n % 100;
-    if (m10 === 1 && m100 !== 11) return n + ' жанр';
-    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' жанра';
-    return n + ' жанров';
-  }
+  const plural = (n) => `${n} ${n === 1 ? 'genre' : 'genres'}`;
 
   let timer;
   search.addEventListener('input', () => {
@@ -68,7 +63,7 @@ const solo = genres.filter((g) => g.count === 1).length;
         if (ok) shown++;
       }
       empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
     }, 120);
   });
 </script>

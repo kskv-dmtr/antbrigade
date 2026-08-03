@@ -15,14 +15,14 @@ const years = releases.map((a) => a.year).filter(Boolean);
 const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
 ---
 <Base
-  title={`${genre.name} · music`}
-  description={`${genre.name}: ${plural(releases.length, 'релиз', 'релиза', 'релизов')} в коллекции.`}
+  title={`${genre.name} · ant brigade`}
+  description={`${genre.name}: ${plural(releases.length, 'release', 'releases')} in the collection.`}
   activeSection="genres"
 >
   <div class="page-head">
     <h1>{genre.name}</h1>
     <p class="counter">
-      {plural(releases.length, 'релиз', 'релиза', 'релизов')}
+      {plural(releases.length, 'release', 'releases')}
       {span && span[0] !== span[1] && <span class="counter__span"> · {span[0]}–{span[1]}</span>}
       {span && span[0] === span[1] && <span class="counter__span"> · {span[0]}</span>}
     </p>
@@ -30,7 +30,7 @@ const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
 
   {related.length > 0 && (
     <dl class="facts facts--wide">
-      <dt>Рядом</dt>
+      <dt>Related</dt>
       <dd class="chips">
         {related.map((g) => (
           <a class="chip chip--link" href={`/genres/${g.slug}/`}>{g.name}</a>

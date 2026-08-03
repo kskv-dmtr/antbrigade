@@ -8,25 +8,25 @@ const sorted = labels.slice().sort(
 );
 ---
 <Base
-  title="Лейблы · music"
-  description={`${labels.length} лейблов в коллекции.`}
+  title="Labels · ant brigade"
+  description={`${labels.length} labels in the collection.`}
   activeSection="labels"
 >
   <div class="page-head">
-    <h1>Лейблы</h1>
+    <h1>Labels</h1>
     <p class="counter" id="counter" aria-live="polite">
-      {plural(labels.length, 'лейбл', 'лейбла', 'лейблов')}
+      {plural(labels.length, 'label', 'labels')}
     </p>
   </div>
 
   <div class="controls">
     <div class="search">
-      <input type="search" id="search" placeholder="Название лейбла" autocomplete="off"
-             spellcheck="false" aria-label="Поиск по названию лейбла" />
+      <input type="search" id="search" placeholder="Label name" autocomplete="off"
+             spellcheck="false" aria-label="Search by label name" />
     </div>
   </div>
 
-  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+  <p class="empty" id="empty" hidden>Nothing found.</p>
 
   <ul class="names names--cols" id="list">
     {sorted.map((l) => (
@@ -48,12 +48,7 @@ const sorted = labels.slice().sort(
   const items   = Array.from(document.querySelectorAll('#list li'));
   const total   = items.length;
 
-  function plural(n) {
-    const m10 = n % 10, m100 = n % 100;
-    if (m10 === 1 && m100 !== 11) return n + ' лейбл';
-    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' лейбла';
-    return n + ' лейблов';
-  }
+  const plural = (n) => `${n} ${n === 1 ? 'label' : 'labels'}`;
 
   let timer;
   search.addEventListener('input', () => {
@@ -67,7 +62,7 @@ const sorted = labels.slice().sort(
         if (ok) shown++;
       }
       empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
     }, 120);
   });
 </script>

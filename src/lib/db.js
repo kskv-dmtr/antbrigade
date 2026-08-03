@@ -3,6 +3,12 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+/* Корень проекта считаем от самого файла, а не от рабочего каталога:
+   при `astro dev --root antbrigade` cwd — родительская папка, и поиск
+   обложек со ссылками молча проваливался бы в запасной вариант. */
+const projectRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
 
 import data from '../../data/albums.json';
 import { coverId } from './cover-id.js';
@@ -14,7 +20,7 @@ export { coverId };
    тогда на страницах просто останется одна кнопка на album.link. */
 let platformLinks = {};
 try {
-  const raw = fs.readFileSync(path.join(process.cwd(), 'data', 'links.json'), 'utf8');
+  const raw = fs.readFileSync(path.join(projectRoot, 'data', 'links.json'), 'utf8');
   platformLinks = JSON.parse(raw).links ?? {};
 } catch {
   // ссылки ещё не собраны
@@ -36,7 +42,7 @@ export const videoById  = new Map(videos.map((v) => [v.id, v]));
    Пока файла нет, ссылка ведёт на Notion: так сайт собирается и работает
    даже до первой загрузки обложек, просто с внешней зависимостью. */
 
-const coversDir = path.join(process.cwd(), 'public', 'covers');
+const coversDir = path.join(projectRoot, 'public', 'covers');
 let localCovers = new Set();
 try {
   localCovers = new Set(fs.readdirSync(coversDir));
@@ -152,7 +158,7 @@ export function relatedGenres(genre, limit = 8) {
 const SHOWN_PLATFORMS = [
   { key: 'spotify',  label: 'Spotify' },
   { key: 'bandcamp', label: 'Bandcamp' },
-  { key: 'yandex',   label: 'Яндекс Музыка' }
+  { key: 'yandex',   label: 'Yandex Music' }
 ];
 
 /** Прямые ссылки на площадки для релиза, в заданном порядке. */
@@ -184,9 +190,9 @@ export function flag(code) {
   );
 }
 
-const RU_MONTHS = [
-  'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-  'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
 ];
 
 export function formatDate(iso) {
@@ -194,14 +200,10 @@ export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
   if (!y) return '';
   if (!m) return String(y);
-  return d ? `${d} ${RU_MONTHS[m - 1]} ${y}` : `${RU_MONTHS[m - 1]} ${y}`;
+  return d ? `${MONTHS[m - 1]} ${d}, ${y}` : `${MONTHS[m - 1]} ${y}`;
 }
 
-/** Склонение: 1 релиз, 2 релиза, 5 релизов */
-export function plural(n, one, few, many) {
-  const m10 = n % 10;
-  const m100 = n % 100;
-  if (m10 === 1 && m100 !== 11) return `${n} ${one}`;
-  if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return `${n} ${few}`;
-  return `${n} ${many}`;
+/** 1 release / 2 releases */
+export function plural(n, one, many) {
+  return `${n} ${n === 1 ? one : many}`;
 }

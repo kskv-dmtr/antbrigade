@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-03T11:29:32Z",
+  "generatedAt": "2026-08-03T15:19:14Z",
   "counts": {
     "albums": 1035,
     "artists": 935,
@@ -35874,7 +35874,7 @@
       "slug": "g-u-n-250412",
       "name": "G.U.N.",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://gunushc.bandcamp.com/music",
       "albumIds": [
         "3704129a-8c52-80c9-9152-f7bb42584267",
         "10b4129a-8c52-80a7-8df2-eed8aeb2fb47"
@@ -37608,7 +37608,7 @@
       "slug": "jembaa-groove-250412",
       "name": "Jembaa Groove",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://jembaagroove.bandcamp.com/music",
       "albumIds": [
         "006ebb50-16de-44be-b2da-55e90a3de9ae",
         "2524129a-8c52-8093-b859-fa1200612aef"
@@ -42146,7 +42146,7 @@
       "slug": "poison-ruin-35c412",
       "name": "Poison Ruïn",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://poisonruin.bandcamp.com/music",
       "albumIds": [
         "35c4129a-8c52-80a7-8384-fb2307a075de"
       ],
@@ -48090,7 +48090,7 @@
       "slug": "agogo-records-250412",
       "name": "Agogo Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://hiddenjazzquartett.bandcamp.com/",
       "albumIds": [
         "006ebb50-16de-44be-b2da-55e90a3de9ae",
         "2524129a-8c52-8093-b859-fa1200612aef"
@@ -53525,7 +53525,7 @@
       "slug": "poison-city-records-3ac412",
       "name": "Poison City Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://poisoncityrecords.bandcamp.com/",
       "albumIds": [
         "3ac4129a-8c52-80ff-9696-de2d656317e5"
       ],
@@ -53538,7 +53538,7 @@
       "slug": "poison-vision-records-370412",
       "name": "Poison Vision Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://poisonvisionrecords.bandcamp.com/music",
       "albumIds": [
         "3704129a-8c52-80c9-9152-f7bb42584267"
       ],
@@ -53928,7 +53928,7 @@
       "slug": "relapse-records-249412",
       "name": "Relapse Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://relapserecords.bandcamp.com/",
       "albumIds": [
         "3944129a-8c52-80e5-8a03-f8bdaf8b6f96",
         "35c4129a-8c52-80a7-8384-fb2307a075de",

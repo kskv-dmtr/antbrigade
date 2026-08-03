@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
+import GenreChips from '../../components/GenreChips.astro';
 import { artists, albumsOf, labelsOf, videosOf, flag, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -40,7 +41,7 @@ const clipsSorted = clips.slice().sort((a, b) => {
     {artist.genres.length > 0 && (
       <>
         <dt>Жанры</dt>
-        <dd class="chips">{artist.genres.map((g) => <span class="chip">{g}</span>)}</dd>
+        <dd><GenreChips names={artist.genres} /></dd>
       </>
     )}
 

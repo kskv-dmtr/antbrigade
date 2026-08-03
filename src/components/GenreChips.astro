@@ -1,0 +1,17 @@
+---
+/* Список жанров ссылками на их страницы.
+   Название берём каноническое, а не то, что записано у конкретного релиза:
+   в базе попадаются описки в регистре, и показывать их посетителю незачем. */
+
+import { genreFor } from '../lib/db.js';
+
+const { names = [] } = Astro.props;
+const items = names.map((name) => genreFor(name)).filter(Boolean);
+---
+{items.length > 0 && (
+  <div class="chips">
+    {items.map((genre) => (
+      <a class="chip chip--link" href={`/genres/${genre.slug}/`}>{genre.name}</a>
+    ))}
+  </div>
+)}

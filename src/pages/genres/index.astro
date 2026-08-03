@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { genres, plural } from '../../lib/db.js';
+
+// genres уже отсортированы по числу релизов — крупные жанры сверху
+const solo = genres.filter((g) => g.count === 1).length;
+---
+<Base
+  title="Жанры · music"
+  description={`${genres.length} жанров в коллекции.`}
+  activeSection="genres"
+>
+  <div class="page-head">
+    <h1>Жанры</h1>
+    <p class="counter" id="counter" aria-live="polite">
+      {plural(genres.length, 'жанр', 'жанра', 'жанров')}
+    </p>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <input type="search" id="search" placeholder="Название жанра" autocomplete="off"
+             spellcheck="false" aria-label="Поиск по названию жанра" />
+    </div>
+  </div>
+
+  <p class="empty" id="empty" hidden>Ничего не нашлось.</p>
+
+  <ul class="genre-cloud" id="list">
+    {genres.map((genre) => (
+      <li data-search={genre.name.toLowerCase()}>
+        <a href={`/genres/${genre.slug}/`}>
+          <span class="genre-cloud__name">{genre.name}</span>
+          <span class="genre-cloud__count">{genre.count}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <p class="foot-note">
+    Из них {plural(solo, 'жанр представлен', 'жанра представлены', 'жанров представлены')} одним релизом.
+  </p>
+</Base>
+
+<script>
+  const search  = document.getElementById('search');
+  const empty   = document.getElementById('empty');
+  const counter = document.getElementById('counter');
+  const items   = Array.from(document.querySelectorAll('#list li'));
+  const total   = items.length;
+
+  function plural(n) {
+    const m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return n + ' жанр';
+    if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return n + ' жанра';
+    return n + ' жанров';
+  }
+
+  let timer;
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const li of items) {
+        const ok = !q || li.dataset.search.includes(q);
+        li.hidden = !ok;
+        if (ok) shown++;
+      }
+      empty.hidden = shown > 0;
+      counter.textContent = shown === total ? plural(total) : shown + ' из ' + total;
+    }, 120);
+  });
+</script>

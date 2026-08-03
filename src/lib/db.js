@@ -56,6 +56,83 @@ const localCount = albums.filter((a) => {
 }).length;
 console.log(`[covers] локальных обложек: ${localCount} из ${albums.length}`);
 
+/* ------------------------------------------------------------- жанры
+
+   В Notion жанр — это multi-select, отдельной базы под него нет, поэтому ни
+   идентификаторов, ни готовых адресов у жанров не существует: собираем их
+   сами из альбомов.
+
+   Объединяем без учёта регистра. В базе уже встретилось "Jazz" и "jazz" —
+   от одной описки каталог не должен разъезжаться на две страницы. Показываем
+   при этом самое частое написание.                                          */
+
+function slugify(name) {
+  return name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+const genreIndex = new Map();
+for (const album of albums) {
+  for (const raw of album.genres) {
+    const key = raw.toLowerCase();
+    let genre = genreIndex.get(key);
+    if (!genre) {
+      genre = { key, variants: new Map(), albumIds: [] };
+      genreIndex.set(key, genre);
+    }
+    genre.variants.set(raw, (genre.variants.get(raw) ?? 0) + 1);
+    genre.albumIds.push(album.id);
+  }
+}
+
+const takenSlugs = new Set();
+for (const genre of [...genreIndex.values()].sort((a, b) => a.key.localeCompare(b.key))) {
+  genre.name = [...genre.variants.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
+
+  // на всякий случай: два разных названия могут дать одинаковый адрес
+  let slug = slugify(genre.name) || 'genre';
+  if (takenSlugs.has(slug)) {
+    let n = 2;
+    while (takenSlugs.has(`${slug}-${n}`)) n++;
+    slug = `${slug}-${n}`;
+  }
+  takenSlugs.add(slug);
+  genre.slug = slug;
+  genre.count = genre.albumIds.length;
+}
+
+export const genres = [...genreIndex.values()].sort(
+  (a, b) => b.count - a.count || a.name.localeCompare(b.name)
+);
+
+export const genreBySlug = new Map(genres.map((g) => [g.slug, g]));
+
+/** Жанр по любому написанию — чтобы ссылка с карточки вела куда надо. */
+export function genreFor(name) {
+  return genreIndex.get(String(name).toLowerCase()) ?? null;
+}
+
+/** Жанры, чаще всего встречающиеся вместе с этим. */
+export function relatedGenres(genre, limit = 8) {
+  const together = new Map();
+  for (const id of genre.albumIds) {
+    for (const raw of albumById.get(id).genres) {
+      const key = raw.toLowerCase();
+      if (key === genre.key) continue;
+      together.set(key, (together.get(key) ?? 0) + 1);
+    }
+  }
+  return [...together.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([key]) => genreIndex.get(key));
+}
+
 export function albumsOf(ids) {
   return (ids || []).map((id) => albumById.get(id)).filter(Boolean);
 }

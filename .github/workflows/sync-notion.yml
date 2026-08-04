@@ -87,10 +87,21 @@ jobs:
           git add data/albums.json data/links.json public/covers
           if git diff --cached --quiet; then
             echo "Коммитить нечего."
-          else
-            git commit -m "Данные из Notion: ${COUNT} релизов"
-            git push
+            exit 0
           fi
+          git commit -m "Данные из Notion: ${COUNT} релизов"
+
+          # Прогон длится минуты, и за это время в ветку могли залить правки
+          # вручную — тогда пуш отклоняется. Подтягиваем и пробуем снова.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Пуш отклонён, подтягиваю чужие изменения (попытка $attempt)"
+            git pull --rebase --autostash origin main || exit 1
+          done
+          echo "Не удалось запушить за три попытки"
+          exit 1
 
       # Подстраховка на случай, если Vercel не отреагирует на пуш от бота.
       # Работает, только если задан секрет VERCEL_DEPLOY_HOOK.

@@ -31,7 +31,7 @@ const sorted = labels.slice().sort(
   <ul class="names names--cols" id="list">
     {sorted.map((l) => (
       <li data-search={l.name.toLowerCase()}>
-        <a href={`/labels/${l.slug}/`}>
+        <a href={`/labels/${l.slug}`}>
           {l.country && <span class="flag" title={l.country}>{flag(l.country)}</span>}
           <span class="names__name">{l.name}</span>
           <span class="names__count">{l.albumIds.length || ''}</span>

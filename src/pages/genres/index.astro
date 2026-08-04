@@ -29,7 +29,7 @@ const solo = genres.filter((g) => g.count === 1).length;
   <ul class="genre-cloud" id="list">
     {genres.map((genre) => (
       <li data-search={genre.name.toLowerCase()}>
-        <a href={`/genres/${genre.slug}/`}>
+        <a href={`/genres/${genre.slug}`}>
           <span class="genre-cloud__name">{genre.name}</span>
           <span class="genre-cloud__count">{genre.count}</span>
         </a>

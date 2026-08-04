@@ -8,6 +8,8 @@ export default defineConfig({
   // Хостинг на Vercel, а не на Cloudflare Pages, по одной причине: домен
   // *.pages.dev недоступен из России, тогда как *.vercel.app открывается.
   site: 'https://antbrigade.vercel.app',
-  build: { format: 'directory' },
+  // адреса без слеша в конце: /albums/artist-title, а не /albums/artist-title/
+  build: { format: 'file' },
+  trailingSlash: 'never',
   devToolbar: { enabled: false }
 });

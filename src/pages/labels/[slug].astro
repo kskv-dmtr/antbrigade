@@ -31,7 +31,7 @@ const roster   = artistsOf(label.artistIds);
     <dl class="facts facts--wide">
       <dt>{plural(roster.length, 'Artist', 'Artists')}</dt>
       <dd class="chips">
-        {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}/`}>{a.name}</a>)}
+        {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}`}>{a.name}</a>)}
       </dd>
     </dl>
   )}

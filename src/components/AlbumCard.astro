@@ -3,10 +3,9 @@ import { coverSrc, coverSrcSet } from '../lib/db.js';
 
 // всё лишнее (data-* для фильтров) пробрасывается на <li> как есть
 const { album, showArtist = true, ...rest } = Astro.props;
-const meta = [album.year, (album.genres || [])[0]].filter(Boolean).join(' · ');
 ---
 <li class="card" {...rest}>
-  <a href={`/albums/${album.slug}/`}>
+  <a href={`/albums/${album.slug}`}>
     <div class="card__art">
       {album.cover && (
         <img
@@ -23,6 +22,6 @@ const meta = [album.year, (album.genres || [])[0]].filter(Boolean).join(' · ');
     </div>
     {showArtist && <div class="card__artist">{album.artist}</div>}
     <div class="card__album">{album.album}</div>
-    {meta && <div class="card__meta">{meta}</div>}
+    {album.year && <div class="card__meta">{album.year}</div>}
   </a>
 </li>

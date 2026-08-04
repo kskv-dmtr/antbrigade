@@ -52,7 +52,7 @@ const clipsSorted = clips.slice().sort((a, b) => {
           {labels.map((l, i) => (
             <>
               {i > 0 && ', '}
-              <a href={`/labels/${l.slug}/`}>{l.name}</a>
+              <a href={`/labels/${l.slug}`}>{l.name}</a>
             </>
           ))}
         </dd>

@@ -33,7 +33,7 @@ const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
       <dt>Related</dt>
       <dd class="chips">
         {related.map((g) => (
-          <a class="chip chip--link" href={`/genres/${g.slug}/`}>{g.name}</a>
+          <a class="chip chip--link" href={`/genres/${g.slug}`}>{g.name}</a>
         ))}
       </dd>
     </dl>

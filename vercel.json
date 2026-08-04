@@ -3,7 +3,7 @@
   "framework": "astro",
   "buildCommand": "astro build",
   "outputDirectory": "dist",
-  "trailingSlash": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/icons/(.*)",

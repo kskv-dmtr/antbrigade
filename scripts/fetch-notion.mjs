@@ -158,17 +158,47 @@ function countryCode(icon) {
   return code.length === 2 ? code : null;
 }
 
-/** Устойчивый адрес страницы: имя + хвост id, чтобы тёзки не схлопнулись. */
-function makeSlug(text, id) {
-  let s = text
+/* Названия, из которых адрес сам собой не получается: одни знаки препинания,
+   нелатинские алфавиты и тому подобное. Ключ — точное название из Notion.
+   Список пополняется вручную, случаев такого рода единицы. */
+const SLUG_OVERRIDES = {
+  '!!!': 'chk-chk-chk'
+};
+
+/** Чистая часть адреса — без хвоста, только из названия. */
+function baseSlug(text) {
+  let s = String(text)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
-  if (!s) s = 'x';
   if (s.length > 60) s = s.slice(0, 60).replace(/^-+|-+$/g, '');
-  return `${s}-${String(id).replace(/-/g, '').slice(0, 6)}`;
+  return s;
+}
+
+/* Раздаёт адреса всему списку сразу: иначе не узнать, что кто-то занял тот же.
+   Совпадения бывают редко и обычно означают дубликат записи в Notion —
+   тогда второму достаётся суффикс. Порядок задаём по id, чтобы адреса не
+   перетасовывались от выгрузки к выгрузке.
+   Названия без единой латинской буквы (например «!!!») своего адреса не дают,
+   для них берём хвост идентификатора. */
+function assignSlugs(items, textOf) {
+  const taken = new Set();
+  const ordered = [...items].sort((a, b) => String(a.id).localeCompare(String(b.id)));
+  const slugs = new Map();
+
+  for (const item of ordered) {
+    const raw = textOf(item);
+    const base = SLUG_OVERRIDES[raw]
+      ?? (baseSlug(raw) || String(item.id).replace(/-/g, '').slice(0, 8));
+    let slug = base;
+    let n = 2;
+    while (taken.has(slug)) slug = `${base}-${n++}`;
+    taken.add(slug);
+    slugs.set(item.id, slug);
+  }
+  return slugs;
 }
 
 /* Через прокси Notion идут все иконки, а не только вложения: у части записей
@@ -212,10 +242,13 @@ async function directory(source, label) {
       id: v.id,
       name,
       country: countryCode(v.format?.page_icon),
-      bandcamp: bandcamp || null,
-      slug: makeSlug(name, v.id)
+      bandcamp: bandcamp || null
     });
   }
+
+  const slugs = assignSlugs([...dir.values()], (x) => x.name);
+  for (const item of dir.values()) item.slug = slugs.get(item.id);
+
   console.log(`  ${label.padEnd(8)} -> ${dir.size} из ${res.ids.length}, с Bandcamp: ${withBandcamp}`);
   return dir;
 }
@@ -316,7 +349,7 @@ async function main() {
 
     albums.push({
       id: v.id,
-      slug: makeSlug(`${artist} ${album}`, v.id),
+      slug: null,          // раздадим ниже, когда будет виден весь список
       artist,
       album,
       url: plainText(prop(props, P.url)),
@@ -331,6 +364,11 @@ async function main() {
       labels: labelIds.map((id) => labelsDir.get(id)?.name).filter(Boolean)
     });
   }
+
+  // в адресе релиза имя артиста тоже берём с поправкой, иначе у «!!!»
+  // от названия останется один альбом без исполнителя
+  const albumSlugs = assignSlugs(albums, (a) => `${SLUG_OVERRIDES[a.artist] ?? a.artist} ${a.album}`);
+  for (const a of albums) a.slug = albumSlugs.get(a.id);
 
   // свежие релизы сверху, недатированные — в конец
   albums.sort((a, b) => {

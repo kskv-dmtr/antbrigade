@@ -5,9 +5,9 @@ import { generatedAt } from '../lib/db.js';
 const { title, description, activeSection } = Astro.props;
 const nav = [
   { href: '/',         label: 'Albums',  key: 'albums' },
-  { href: '/artists/', label: 'Artists', key: 'artists' },
-  { href: '/labels/',  label: 'Labels',  key: 'labels' },
-  { href: '/genres/',  label: 'Genres',  key: 'genres' }
+  { href: '/artists', label: 'Artists', key: 'artists' },
+  { href: '/labels',  label: 'Labels',  key: 'labels' },
+  { href: '/genres',  label: 'Genres',  key: 'genres' }
 ];
 ---
 <!doctype html>

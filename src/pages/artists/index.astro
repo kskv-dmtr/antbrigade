@@ -52,7 +52,7 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
         <ul class="names">
           {items.map((a) => (
             <li data-search={a.name.toLowerCase()}>
-              <a href={`/artists/${a.slug}/`}>
+              <a href={`/artists/${a.slug}`}>
                 {a.country && <span class="flag" title={a.country}>{flag(a.country)}</span>}
                 <span class="names__name">{a.name}</span>
                 <span class="names__count">{a.albumIds.length || ''}</span>

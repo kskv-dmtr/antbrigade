@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-03T21:31:37Z",
+  "generatedAt": "2026-08-04T03:40:27Z",
   "counts": {
-    "albums": 1036,
-    "artists": 936,
-    "labels": 582,
+    "albums": 1037,
+    "artists": 937,
+    "labels": 583,
     "videos": 46
   },
   "albums": [
@@ -30079,6 +30079,35 @@
       ]
     },
     {
+      "id": "3b14129a-8c52-8026-982c-fad5b42d3736",
+      "slug": "the-sewer-rats-magic-summer-3b1412",
+      "artist": "The Sewer Rats",
+      "album": "Magic Summer",
+      "url": "https://album.link/k2nmtbt9cp5dw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ade97444e-ef71-4a89-9623-911f30a0c02b%3Aa3455748770_10.jpg?table=block&id=3b14129a-8c52-8026-982c-fad5b42d3736&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-04-30",
+      "year": 2020,
+      "artistIds": [
+        "3b14129a-8c52-80e3-ba90-cf1bef23c1b2"
+      ],
+      "artists": [
+        "The Sewer Rats"
+      ],
+      "labelIds": [
+        "3b14129a-8c52-80c8-b326-ff74d76341eb"
+      ],
+      "labels": [
+        "Uncle M Music"
+      ]
+    },
+    {
       "id": "c70f158e-28b6-4339-af37-348710c79313",
       "slug": "traveler-termination-shock-c70f15",
       "artist": "Traveler",
@@ -45976,6 +46005,24 @@
       "videoIds": []
     },
     {
+      "id": "3b14129a-8c52-80e3-ba90-cf1bef23c1b2",
+      "slug": "the-sewer-rats-3b1412",
+      "name": "The Sewer Rats",
+      "country": "DE",
+      "bandcamp": "https://thesewerrats.bandcamp.com/music",
+      "albumIds": [
+        "3b14129a-8c52-8026-982c-fad5b42d3736"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "labelIds": [
+        "3b14129a-8c52-80c8-b326-ff74d76341eb"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-806a-9413-d19b23f3d0c6",
       "slug": "the-sleeveens-251412",
       "name": "The Sleeveens",
@@ -55882,6 +55929,19 @@
       ],
       "artistIds": [
         "2854129a-8c52-800d-8179-ebfe3052ea69"
+      ]
+    },
+    {
+      "id": "3b14129a-8c52-80c8-b326-ff74d76341eb",
+      "slug": "uncle-m-music-3b1412",
+      "name": "Uncle M Music",
+      "country": "DE",
+      "bandcamp": "https://unclem.bandcamp.com/",
+      "albumIds": [
+        "3b14129a-8c52-8026-982c-fad5b42d3736"
+      ],
+      "artistIds": [
+        "3b14129a-8c52-80e3-ba90-cf1bef23c1b2"
       ]
     },
     {

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-04T12:20:27Z",
+  "generatedAt": "2026-08-04T18:04:58Z",
   "counts": {
-    "albums": 1037,
-    "artists": 937,
-    "labels": 583,
+    "albums": 1039,
+    "artists": 935,
+    "labels": 580,
     "videos": 46
   },
   "albums": [
@@ -4776,7 +4776,8 @@
         "Craven Faults"
       ],
       "labelIds": [
-        "3024129a-8c52-8047-8e4d-e537b8b8b281"
+        "3024129a-8c52-8047-8e4d-e537b8b8b281",
+        "24a4129a-8c52-8068-a754-c4b6bf9eaa04"
       ],
       "labels": [
         "The Leaf Label"
@@ -7308,7 +7309,8 @@
         "dust"
       ],
       "labelIds": [
-        "28a4129a-8c52-8098-8f85-ccc168a6e7b3"
+        "28a4129a-8c52-8098-8f85-ccc168a6e7b3",
+        "30f4129a-8c52-8024-8307-e7738d50d657"
       ],
       "labels": [
         "Kanine Records"
@@ -7956,7 +7958,8 @@
         "M. Sage"
       ],
       "labelIds": [
-        "28b4129a-8c52-800f-a112-e28be0a4875f"
+        "28b4129a-8c52-800f-a112-e28be0a4875f",
+        "3874129a-8c52-800b-a9e0-de74b3ac45ba"
       ],
       "labels": [
         "RVNG Intl."
@@ -19315,7 +19318,8 @@
       "released": "2024-06-28",
       "year": 2024,
       "artistIds": [
-        "2524129a-8c52-80d7-89ff-faec7147a471"
+        "2524129a-8c52-80d7-89ff-faec7147a471",
+        "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
       ],
       "artists": [
         "SML"
@@ -22363,7 +22367,8 @@
         "Reyna Tropical"
       ],
       "labelIds": [
-        "2514129a-8c52-805d-bc0d-f6a0a9197269"
+        "2514129a-8c52-805d-bc0d-f6a0a9197269",
+        "2a24129a-8c52-8036-9855-e6e4fa70bb6b"
       ],
       "labels": [
         "Psychic Hotline"
@@ -28557,6 +28562,35 @@
       ]
     },
     {
+      "id": "3b24129a-8c52-8041-9955-e9fd60bc2b74",
+      "slug": "don-glori-welcome-3b2412",
+      "artist": "Don Glori",
+      "album": "Welcome",
+      "url": "https://album.link/p7jdqpbqsmc89",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afa276701-299e-4330-8043-c9ccd21108fc%3Aa3276895330_10.jpg?table=block&id=3b24129a-8c52-8041-9955-e9fd60bc2b74&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-10-14",
+      "year": 2022,
+      "artistIds": [
+        "2494129a-8c52-808a-b73c-e4d4aed979e2"
+      ],
+      "artists": [
+        "Don Glori"
+      ],
+      "labelIds": [
+        "3b24129a-8c52-809b-a09f-c5a43dfb575d"
+      ],
+      "labels": [
+        "bedroom suck records"
+      ]
+    },
+    {
       "id": "2524129a-8c52-80a1-9c3c-d10c118b50ad",
       "slug": "maajo-water-of-life-252412",
       "artist": "Maajo",
@@ -28696,6 +28730,36 @@
       ],
       "labels": [
         "la pochette surprise records"
+      ]
+    },
+    {
+      "id": "3b24129a-8c52-806f-a7df-cb62930091ce",
+      "slug": "marxist-love-disco-ensemble-mlde-3b2412",
+      "artist": "Marxist Love Disco Ensemble",
+      "album": "MLDE",
+      "url": "https://album.link/g2jkn755r8wst",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac08abfd0-6414-4ee3-af73-cffa173b317f%3Aa3893706735_10.jpg?table=block&id=3b24129a-8c52-806f-a7df-cb62930091ce&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Boogie",
+        "Italo Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-09-16",
+      "year": 2022,
+      "artistIds": [
+        "3b24129a-8c52-80ad-aef6-fc4b135332f3"
+      ],
+      "artists": [
+        "Marxist Love Disco Ensemble"
+      ],
+      "labelIds": [
+        "2494129a-8c52-800b-92dc-e0c48b04def1"
+      ],
+      "labels": [
+        "Mr Bongo"
       ]
     },
     {
@@ -33609,7 +33673,8 @@
         "Berlin School"
       ],
       "labelIds": [
-        "3024129a-8c52-8047-8e4d-e537b8b8b281"
+        "3024129a-8c52-8047-8e4d-e537b8b8b281",
+        "24a4129a-8c52-8068-a754-c4b6bf9eaa04"
       ],
       "videoIds": []
     },
@@ -34432,20 +34497,23 @@
       "slug": "don-glori-249412",
       "name": "Don Glori",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://donglori.bandcamp.com/music",
       "albumIds": [
         "1f74129a-8c52-80b2-894b-c6bf3ee75702",
-        "f0a2a751-3add-4232-88a5-db544484306a"
+        "f0a2a751-3add-4232-88a5-db544484306a",
+        "3b24129a-8c52-8041-9955-e9fd60bc2b74"
       ],
       "genres": [
         "Jazz",
         "Jazz Fusion",
         "Funk",
-        "Soul"
+        "Soul",
+        "Neo-Soul"
       ],
       "labelIds": [
         "2494129a-8c52-800b-92dc-e0c48b04def1",
-        "24f4129a-8c52-80c9-b27d-cd2357c4e1b7"
+        "24f4129a-8c52-80c9-b27d-cd2357c4e1b7",
+        "3b24129a-8c52-809b-a09f-c5a43dfb575d"
       ],
       "videoIds": []
     },
@@ -34692,7 +34760,8 @@
         "Post-Punk"
       ],
       "labelIds": [
-        "28a4129a-8c52-8098-8f85-ccc168a6e7b3"
+        "28a4129a-8c52-8098-8f85-ccc168a6e7b3",
+        "30f4129a-8c52-8024-8307-e7738d50d657"
       ],
       "videoIds": []
     },
@@ -39543,7 +39612,8 @@
         "Electroacoustic"
       ],
       "labelIds": [
-        "28b4129a-8c52-800f-a112-e28be0a4875f"
+        "28b4129a-8c52-800f-a112-e28be0a4875f",
+        "3874129a-8c52-800b-a9e0-de74b3ac45ba"
       ],
       "videoIds": []
     },
@@ -39947,6 +40017,25 @@
       ],
       "labelIds": [
         "2494129a-8c52-80a5-8c80-ebb8d408489c"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b24129a-8c52-80ad-aef6-fc4b135332f3",
+      "slug": "marxist-love-disco-ensemble-3b2412",
+      "name": "Marxist Love Disco Ensemble",
+      "country": "IT",
+      "bandcamp": "https://marxistlovediscoensemble.bandcamp.com/music",
+      "albumIds": [
+        "3b24129a-8c52-806f-a7df-cb62930091ce"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Boogie",
+        "Italo Disco"
+      ],
+      "labelIds": [
+        "2494129a-8c52-800b-92dc-e0c48b04def1"
       ],
       "videoIds": []
     },
@@ -40662,19 +40751,6 @@
       "videoIds": []
     },
     {
-      "id": "24f4129a-8c52-8098-9fbd-dd37b620291c",
-      "slug": "mount-kimbie-24f412",
-      "name": "Mount Kimbie",
-      "country": "GB",
-      "bandcamp": null,
-      "albumIds": [],
-      "genres": [],
-      "labelIds": [],
-      "videoIds": [
-        "1064129a-8c52-80bd-a54f-fbba51cdc4ed"
-      ]
-    },
-    {
       "id": "2504129a-8c52-804c-a693-dc85640a23de",
       "slug": "mount-kimbie-250412",
       "name": "Mount Kimbie",
@@ -40690,7 +40766,9 @@
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175"
       ],
-      "videoIds": []
+      "videoIds": [
+        "1064129a-8c52-80bd-a54f-fbba51cdc4ed"
+      ]
     },
     {
       "id": "24a4129a-8c52-8045-a9e6-fc4499117557",
@@ -42968,7 +43046,8 @@
         "Cumbia"
       ],
       "labelIds": [
-        "2514129a-8c52-805d-bc0d-f6a0a9197269"
+        "2514129a-8c52-805d-bc0d-f6a0a9197269",
+        "2a24129a-8c52-8036-9855-e6e4fa70bb6b"
       ],
       "videoIds": []
     },
@@ -43960,19 +44039,6 @@
       "videoIds": []
     },
     {
-      "id": "24f4129a-8c52-801b-b600-e0e7fd747383",
-      "slug": "slomosa-24f412",
-      "name": "Slomosa",
-      "country": "NO",
-      "bandcamp": null,
-      "albumIds": [],
-      "genres": [],
-      "labelIds": [],
-      "videoIds": [
-        "8a4709eb-d31e-4ac4-9a8b-075d38faf12a"
-      ]
-    },
-    {
       "id": "2524129a-8c52-801e-a64d-c337e942f8b1",
       "slug": "slomosa-252412",
       "name": "Slomosa",
@@ -43987,7 +44053,9 @@
       "labelIds": [
         "2524129a-8c52-8094-8594-f339a2a693fd"
       ],
-      "videoIds": []
+      "videoIds": [
+        "8a4709eb-d31e-4ac4-9a8b-075d38faf12a"
+      ]
     },
     {
       "id": "24f4129a-8c52-80c6-9c57-fff4c89e5c46",
@@ -43996,30 +44064,13 @@
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "2b64129a-8c52-803d-b396-e995998badc2"
+        "2b64129a-8c52-803d-b396-e995998badc2",
+        "8aa0dac0-483f-49c5-a2c5-dd2b9c46ff92"
       ],
       "genres": [
         "Nu Jazz",
         "Jazz Fusion",
-        "Avant-Garde Jazz"
-      ],
-      "labelIds": [
-        "2494129a-8c52-80a5-8c80-ebb8d408489c"
-      ],
-      "videoIds": [
-        "a375d4dc-94e7-4003-8185-7b37dc880e98"
-      ]
-    },
-    {
-      "id": "2524129a-8c52-80d7-89ff-faec7147a471",
-      "slug": "sml-252412",
-      "name": "SML",
-      "country": "US",
-      "bandcamp": null,
-      "albumIds": [
-        "8aa0dac0-483f-49c5-a2c5-dd2b9c46ff92"
-      ],
-      "genres": [
+        "Avant-Garde Jazz",
         "Electronic",
         "Jazz",
         "Experimental",
@@ -44028,7 +44079,9 @@
       "labelIds": [
         "2494129a-8c52-80a5-8c80-ebb8d408489c"
       ],
-      "videoIds": []
+      "videoIds": [
+        "a375d4dc-94e7-4003-8185-7b37dc880e98"
+      ]
     },
     {
       "id": "24a4129a-8c52-8015-bf91-e526112e844f",
@@ -48720,6 +48773,19 @@
       ]
     },
     {
+      "id": "3b24129a-8c52-809b-a09f-c5a43dfb575d",
+      "slug": "bedroom-suck-records-3b2412",
+      "name": "bedroom suck records",
+      "country": "AU",
+      "bandcamp": "https://bedroomsuckrecords.bandcamp.com/",
+      "albumIds": [
+        "3b24129a-8c52-8041-9955-e9fd60bc2b74"
+      ],
+      "artistIds": [
+        "2494129a-8c52-808a-b73c-e4d4aed979e2"
+      ]
+    },
+    {
       "id": "2a14129a-8c52-80f1-9717-f9723efd7e63",
       "slug": "bella-union-2a1412",
       "name": "Bella Union",
@@ -51678,29 +51744,18 @@
       ]
     },
     {
-      "id": "28a4129a-8c52-8098-8f85-ccc168a6e7b3",
-      "slug": "kanine-records-28a412",
-      "name": "Kanine Records",
-      "country": "US",
-      "bandcamp": null,
-      "albumIds": [
-        "28a4129a-8c52-8062-830c-d14be42f0054"
-      ],
-      "artistIds": [
-        "28a4129a-8c52-80b1-844d-c094893c789f"
-      ]
-    },
-    {
       "id": "30f4129a-8c52-8024-8307-e7738d50d657",
       "slug": "kanine-records-30f412",
       "name": "Kanine Records",
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "30f4129a-8c52-80a3-8cc7-e3dbc4c81192"
+        "30f4129a-8c52-80a3-8cc7-e3dbc4c81192",
+        "28a4129a-8c52-8062-830c-d14be42f0054"
       ],
       "artistIds": [
-        "30f4129a-8c52-808d-943d-cbf6ea4ad9ff"
+        "30f4129a-8c52-808d-943d-cbf6ea4ad9ff",
+        "28a4129a-8c52-80b1-844d-c094893c789f"
       ]
     },
     {
@@ -52730,12 +52785,14 @@
         "3b14129a-8c52-804e-a43d-cd077303ef86",
         "1f74129a-8c52-80b2-894b-c6bf3ee75702",
         "8c9b1ce9-dd61-4ec5-94b8-115d77e5f360",
+        "3b24129a-8c52-806f-a7df-cb62930091ce",
         "5e04c907-733a-43d6-a0fb-8e2b5944bc16"
       ],
       "artistIds": [
         "3b14129a-8c52-8080-8d31-f9dc6e5cc00c",
         "2494129a-8c52-808a-b73c-e4d4aed979e2",
         "2504129a-8c52-80ed-b5ad-fe1f3b9d0fb7",
+        "3b24129a-8c52-80ad-aef6-fc4b135332f3",
         "24a4129a-8c52-8054-baf2-c62b51135036"
       ]
     },
@@ -53781,29 +53838,18 @@
       ]
     },
     {
-      "id": "2514129a-8c52-805d-bc0d-f6a0a9197269",
-      "slug": "psychic-hotline-251412",
-      "name": "Psychic Hotline",
-      "country": "US",
-      "bandcamp": null,
-      "albumIds": [
-        "fa35dba8-30a0-44db-bb3c-137ac97f3e6b"
-      ],
-      "artistIds": [
-        "2514129a-8c52-80d1-a4c3-c946abc6f275"
-      ]
-    },
-    {
       "id": "2a24129a-8c52-8036-9855-e6e4fa70bb6b",
       "slug": "psychic-hotline-2a2412",
       "name": "Psychic Hotline",
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "2a24129a-8c52-80b5-a56c-eccf997be34f"
+        "2a24129a-8c52-80b5-a56c-eccf997be34f",
+        "fa35dba8-30a0-44db-bb3c-137ac97f3e6b"
       ],
       "artistIds": [
-        "2a24129a-8c52-80b9-8b74-e289a681bfb8"
+        "2a24129a-8c52-80b9-8b74-e289a681bfb8",
+        "2514129a-8c52-80d1-a4c3-c946abc6f275"
       ]
     },
     {
@@ -54383,29 +54429,18 @@
       ]
     },
     {
-      "id": "28b4129a-8c52-800f-a112-e28be0a4875f",
-      "slug": "rvng-intl-28b412",
-      "name": "RVNG Intl.",
-      "country": "US",
-      "bandcamp": null,
-      "albumIds": [
-        "28b4129a-8c52-80db-8a21-f5a495b58ff5"
-      ],
-      "artistIds": [
-        "28b4129a-8c52-80e7-a020-ee4b82f2097d"
-      ]
-    },
-    {
       "id": "3874129a-8c52-800b-a9e0-de74b3ac45ba",
       "slug": "rvng-intl-387412",
       "name": "RVNG Intl.",
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "3874129a-8c52-80ab-8fcc-f7c8ec1b7477"
+        "3874129a-8c52-80ab-8fcc-f7c8ec1b7477",
+        "28b4129a-8c52-80db-8a21-f5a495b58ff5"
       ],
       "artistIds": [
-        "3874129a-8c52-80d9-a9b8-c32c7e8831e4"
+        "3874129a-8c52-80d9-a9b8-c32c7e8831e4",
+        "28b4129a-8c52-80e7-a020-ee4b82f2097d"
       ]
     },
     {
@@ -55546,23 +55581,12 @@
       "country": "GB",
       "bandcamp": null,
       "albumIds": [
+        "3024129a-8c52-8097-9d23-c77eec4cac0b",
         "1c34129a-8c52-801e-9e31-c29f2ae8ec00"
       ],
       "artistIds": [
+        "3024129a-8c52-8044-85e7-f47b8d6ccba8",
         "24a4129a-8c52-8015-bf91-e526112e844f"
-      ]
-    },
-    {
-      "id": "3024129a-8c52-8047-8e4d-e537b8b8b281",
-      "slug": "the-leaf-label-302412",
-      "name": "The Leaf Label",
-      "country": "GB",
-      "bandcamp": null,
-      "albumIds": [
-        "3024129a-8c52-8097-9d23-c77eec4cac0b"
-      ],
-      "artistIds": [
-        "3024129a-8c52-8044-85e7-f47b8d6ccba8"
       ]
     },
     {
@@ -56712,7 +56736,8 @@
       "released": "2024-09-18",
       "artistIds": [
         "24f4129a-8c52-8098-9fbd-dd37b620291c",
-        "24f4129a-8c52-80aa-950d-c6b4128158db"
+        "24f4129a-8c52-80aa-950d-c6b4128158db",
+        "2504129a-8c52-804c-a693-dc85640a23de"
       ]
     },
     {
@@ -56773,7 +56798,8 @@
       "kind": "Official Video",
       "released": "2024-07-19",
       "artistIds": [
-        "24f4129a-8c52-801b-b600-e0e7fd747383"
+        "24f4129a-8c52-801b-b600-e0e7fd747383",
+        "2524129a-8c52-801e-a64d-c337e942f8b1"
       ]
     },
     {

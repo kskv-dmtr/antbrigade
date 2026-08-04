@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-04T19:59:09Z",
+  "generatedAt": "2026-08-04T21:38:22Z",
   "counts": {
-    "albums": 1040,
-    "artists": 935,
-    "labels": 580,
+    "albums": 1042,
+    "artists": 937,
+    "labels": 583,
     "videos": 46
   },
   "albums": [
@@ -2239,6 +2239,34 @@
       ],
       "labels": [
         "Space Grapes Records"
+      ]
+    },
+    {
+      "id": "3b24129a-8c52-80a3-ba82-c8536ccb829d",
+      "slug": "helllhound-here-in-the-valley",
+      "artist": "helllhound",
+      "album": "Here in the Valley",
+      "url": "https://album.link/tzwq8knjmfbrm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aeed26578-40a3-4bf4-892f-902197f859d3%3Aa3172623209_10.jpg?table=block&id=3b24129a-8c52-80a3-ba82-c8536ccb829d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-24",
+      "year": 2026,
+      "artistIds": [
+        "3b24129a-8c52-807d-b627-e2546bf07604"
+      ],
+      "artists": [
+        "helllhound"
+      ],
+      "labelIds": [
+        "3b24129a-8c52-8037-9e51-c010a80eb4c1"
+      ],
+      "labels": [
+        "Constellation Tatsu"
       ]
     },
     {
@@ -10658,6 +10686,36 @@
       ],
       "labels": [
         "Dandy Boy Records"
+      ]
+    },
+    {
+      "id": "3b24129a-8c52-801b-a1d6-fadbd181314e",
+      "slug": "iron-mind-test-of-the-iron-mind",
+      "artist": "Iron Mind",
+      "album": "Test of the Iron Mind",
+      "url": "https://album.link/nc7tjxvjpdzzb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0025e089-01db-4831-a314-5033c5917315%3Aa0684459857_10.jpg?table=block&id=3b24129a-8c52-801b-a1d6-fadbd181314e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Hardcore"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-06-13",
+      "year": 2025,
+      "artistIds": [
+        "3b24129a-8c52-80fe-a5a9-e064ee7ca385"
+      ],
+      "artists": [
+        "Iron Mind"
+      ],
+      "labelIds": [
+        "3b24129a-8c52-80ae-a67d-f4bc8964217f",
+        "3b24129a-8c52-80b5-b522-db7092229089"
+      ],
+      "labels": [
+        "Flatspot Records",
+        "Last Ride Records"
       ]
     },
     {
@@ -36900,6 +36958,23 @@
       "videoIds": []
     },
     {
+      "id": "3b24129a-8c52-807d-b627-e2546bf07604",
+      "slug": "helllhound",
+      "name": "helllhound",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3b24129a-8c52-80a3-ba82-c8536ccb829d"
+      ],
+      "genres": [
+        "Ambient"
+      ],
+      "labelIds": [
+        "3b24129a-8c52-8037-9e51-c010a80eb4c1"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2eb4129a-8c52-8012-8a93-fb743a5040e3",
       "slug": "herbert-momoko",
       "name": "Herbert & Momoko",
@@ -37458,6 +37533,24 @@
       ],
       "labelIds": [
         "2524129a-8c52-8015-8b2a-fec230af6ee7"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b24129a-8c52-80fe-a5a9-e064ee7ca385",
+      "slug": "iron-mind",
+      "name": "Iron Mind",
+      "country": "AU",
+      "bandcamp": null,
+      "albumIds": [
+        "3b24129a-8c52-801b-a1d6-fadbd181314e"
+      ],
+      "genres": [
+        "Hardcore"
+      ],
+      "labelIds": [
+        "3b24129a-8c52-80ae-a67d-f4bc8964217f",
+        "3b24129a-8c52-80b5-b522-db7092229089"
       ],
       "videoIds": []
     },
@@ -49616,6 +49709,19 @@
       ]
     },
     {
+      "id": "3b24129a-8c52-8037-9e51-c010a80eb4c1",
+      "slug": "constellation-tatsu",
+      "name": "Constellation Tatsu",
+      "country": "US",
+      "bandcamp": "https://ctatsu.bandcamp.com/music",
+      "albumIds": [
+        "3b24129a-8c52-80a3-ba82-c8536ccb829d"
+      ],
+      "artistIds": [
+        "3b24129a-8c52-807d-b627-e2546bf07604"
+      ]
+    },
+    {
       "id": "2524129a-8c52-806d-8120-e712150b2406",
       "slug": "coolin-by-sound",
       "name": "Coolin' By Sound",
@@ -50552,6 +50658,19 @@
       ],
       "artistIds": [
         "2de4129a-8c52-80ae-a5ed-d5379f9aa32a"
+      ]
+    },
+    {
+      "id": "3b24129a-8c52-80ae-a67d-f4bc8964217f",
+      "slug": "flatspot-records",
+      "name": "Flatspot Records",
+      "country": "US",
+      "bandcamp": "https://flatspotrecords.bandcamp.com/music",
+      "albumIds": [
+        "3b24129a-8c52-801b-a1d6-fadbd181314e"
+      ],
+      "artistIds": [
+        "3b24129a-8c52-80fe-a5a9-e064ee7ca385"
       ]
     },
     {
@@ -52028,6 +52147,19 @@
       ],
       "artistIds": [
         "3624129a-8c52-808f-8b68-ed9f867bdbfb"
+      ]
+    },
+    {
+      "id": "3b24129a-8c52-80b5-b522-db7092229089",
+      "slug": "last-ride-records",
+      "name": "Last Ride Records",
+      "country": "AU",
+      "bandcamp": "https://lastriderecords.bandcamp.com/music",
+      "albumIds": [
+        "3b24129a-8c52-801b-a1d6-fadbd181314e"
+      ],
+      "artistIds": [
+        "3b24129a-8c52-80fe-a5a9-e064ee7ca385"
       ]
     },
     {

@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-04T18:17:59Z",
+  "generatedAt": "2026-08-04T19:59:09Z",
   "counts": {
-    "albums": 1039,
+    "albums": 1040,
     "artists": 935,
     "labels": 580,
     "videos": 46
@@ -27222,6 +27222,36 @@
       ]
     },
     {
+      "id": "3b24129a-8c52-80c1-bac4-e2a631cab647",
+      "slug": "covet-catharsis",
+      "artist": "Covet",
+      "album": "catharsis",
+      "url": "https://album.link/gpmp0w4wjzx5n",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aca77b104-6af8-4c21-a940-a591dbd76177%3Aa3190395404_10.jpg?table=block&id=3b24129a-8c52-80c1-bac4-e2a631cab647&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock",
+        "Math Pop",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-04-07",
+      "year": 2023,
+      "artistIds": [
+        "2534129a-8c52-8093-bb2d-c472a7920e8a"
+      ],
+      "artists": [
+        "Covet"
+      ],
+      "labelIds": [
+        "2534129a-8c52-8034-812f-d710cc3457ef"
+      ],
+      "labels": [
+        "Triple Crown Records"
+      ]
+    },
+    {
       "id": "ac49f194-60ef-427c-902e-f96422aba961",
       "slug": "koffie-kokon",
       "artist": "KOFFIE",
@@ -33610,12 +33640,15 @@
       "slug": "covet",
       "name": "Covet",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://covetband.bandcamp.com/music",
       "albumIds": [
+        "3b24129a-8c52-80c1-bac4-e2a631cab647",
         "2534129a-8c52-8045-aea1-c2f18bec4f25"
       ],
       "genres": [
-        "Math Rock"
+        "Math Rock",
+        "Math Pop",
+        "Dream Pop"
       ],
       "labelIds": [
         "2534129a-8c52-8034-812f-d710cc3457ef"
@@ -55834,8 +55867,9 @@
       "slug": "triple-crown-records",
       "name": "Triple Crown Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://triplecrownrecords.bandcamp.com/",
       "albumIds": [
+        "3b24129a-8c52-80c1-bac4-e2a631cab647",
         "2534129a-8c52-8045-aea1-c2f18bec4f25"
       ],
       "artistIds": [

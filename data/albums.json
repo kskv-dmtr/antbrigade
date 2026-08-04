@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-04T03:40:27Z",
+  "generatedAt": "2026-08-04T12:20:27Z",
   "counts": {
     "albums": 1037,
     "artists": 937,
@@ -36932,7 +36932,7 @@
       "slug": "home-front-2ac412",
       "name": "Home Front",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://arewenothomefront.bandcamp.com/music",
       "albumIds": [
         "2ac4129a-8c52-806b-b5a2-c2f34e8481be"
       ],
@@ -51896,7 +51896,7 @@
       "slug": "la-vida-es-un-mus-discos-248412",
       "name": "La Vida Es Un Mus Discos",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://lavidaesunmus.bandcamp.com/music",
       "albumIds": [
         "2ac4129a-8c52-806b-b5a2-c2f34e8481be",
         "22c4129a-8c52-80a8-8a82-fcec336ccb20",

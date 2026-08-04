@@ -4,6 +4,7 @@
   "buildCommand": "astro build",
   "outputDirectory": "dist",
   "trailingSlash": false,
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/icons/(.*)",

@@ -24,17 +24,23 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 /* album.link при потоке запросов отвечает «пустышкой»: код 200, разметка на
-   месте, а ссылки на площадки не подставлены. Отличить это от честного «у
-   релиза нет площадок» по одному ответу нельзя, поэтому:
-     - идём медленно;
-     - пустой ответ не считаем результатом, а откладываем на следующий раз;
-     - если пусто подряд несколько раз — надолго замолкаем;
-     - за один прогон берём ограниченную порцию, остальное доберут следующие. */
+   месте, а данных нет. Отличить это от честного «у релиза нет площадок»
+   всё-таки можно: у придержанного ответа отсутствуют и сведения о релизе
+   (upc, число треков, дата), а у настоящего они есть. Проверено на выборке:
+   из 207 пустых записей ни одна не содержала сведений, и все проверенные
+   вручную релизы на самом деле имели по 4–7 площадок.
+
+   Отсюда правила:
+     - придержанный ответ не результат и даже не попытка: спросим снова;
+     - несколько подряд — пауза, если и после неё придерживают, прогон
+       заканчиваем: перемалывать паузы по часу незачем;
+     - у прогона есть бюджет времени, остальное доберут следующие. */
 const DELAY        = 2500;
 const MAX_PER_RUN  = 250;
-const EMPTY_STREAK = 5;      // столько пустых подряд — и делаем паузу
+const BUDGET_MS    = 12 * 60 * 1000;
+const EMPTY_STREAK = 5;
 const COOLDOWN     = 90_000;
-const GIVE_UP_AT   = 3;      // после стольких попыток считаем, что площадок правда нет
+const GIVE_UP_AT   = 3;      // столько раз спрашиваем то, что честно пусто
 const UA           = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)';
 
 const root     = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -86,12 +92,17 @@ async function main() {
 
   const cache = await readJson(outFile, { generatedAt: null, links: {} });
 
+  /** Есть ли в ответе сведения о релизе — признак, что нас не придержали. */
+  const hasEntity = (e) => Boolean(e && (e.upc || e.tracks || e.releaseDate));
+
   const needsWork = (album) => {
     if (!album.url) return false;
     const known = cache.links[album.id];
     if (!known || known.source !== album.url) return true;
-    // пусто — возможно, нас просто придержали; пробуем ещё, но не бесконечно
-    return Object.keys(known.platforms).length === 0 && (known.attempts ?? 0) < GIVE_UP_AT;
+    if (Object.keys(known.platforms).length > 0) return false;
+    // пусто и без сведений о релизе — это нас придержали, спрашиваем снова
+    if (!hasEntity(known)) return true;
+    return (known.attempts ?? 0) < GIVE_UP_AT;
   };
 
   const todo = data.albums.filter(needsWork);
@@ -121,28 +132,35 @@ async function main() {
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const started = Date.now();
-  let got = 0;
-  let blank = 0;
+  let got = 0;        // собрали площадки
+  let hollow = 0;     // честно пусто: сведения есть, площадок нет
+  let held = 0;       // придержали: ответ вообще без данных
   let failed = 0;
-  let streak = 0;
+  let streak = 0;     // сколько придержанных подряд
+  let cooldowns = 0;
+  let stopped = null;
 
   for (const [i, album] of batch.entries()) {
     try {
       const res = await fetch(album.url, { headers: { 'User-Agent': UA } });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const parsed = parsePage(await res.text());
-      const previous = cache.links[album.id];
 
       if (Object.keys(parsed.platforms).length > 0) {
         cache.links[album.id] = { source: album.url, ...parsed };
         got++;
         streak = 0;
+      } else if (hasEntity(parsed)) {
+        // сведения пришли, площадок нет — значит их и правда нет
+        const previous = cache.links[album.id];
+        cache.links[album.id] = {
+          source: album.url, ...parsed, attempts: (previous?.attempts ?? 0) + 1
+        };
+        hollow++;
+        streak = 0;
       } else {
-        // не перетираем то, что раньше удалось собрать
-        cache.links[album.id] = previous?.platforms && Object.keys(previous.platforms).length
-          ? previous
-          : { source: album.url, ...parsed, attempts: (previous?.attempts ?? 0) + 1 };
-        blank++;
+        // придержали: ничего не записываем, спросим в следующий раз
+        held++;
         streak++;
       }
     } catch (err) {
@@ -152,17 +170,28 @@ async function main() {
     }
 
     if ((i + 1) % 50 === 0) {
-      console.log(`  ...${i + 1} из ${batch.length}   собрано ${got}, пусто ${blank}`);
+      console.log(`  ...${i + 1} из ${batch.length}   собрано ${got}, придержано ${held}`);
+    }
+
+    if (Date.now() - started > BUDGET_MS) {
+      stopped = 'бюджет времени исчерпан';
+      break;
     }
 
     if (streak >= EMPTY_STREAK) {
-      console.log(`  ${streak} пустых подряд — пауза ${COOLDOWN / 1000} с`);
+      if (cooldowns >= 1) {
+        stopped = 'придерживают и после паузы — остальное в следующий прогон';
+        break;
+      }
+      cooldowns++;
+      console.log(`  ${streak} придержанных подряд — пауза ${COOLDOWN / 1000} с`);
       await sleep(COOLDOWN);
       streak = 0;
     } else {
       await sleep(DELAY);
     }
   }
+  if (stopped) console.log(`  остановились: ${stopped}`);
 
   // подчистим записи релизов, которых больше нет в базе
   const alive = new Set(data.albums.map((a) => a.id));
@@ -186,7 +215,7 @@ async function main() {
   const withLinks = Object.values(cache.links).filter((v) => Object.keys(v.platforms).length > 0).length;
 
   console.log('');
-  console.log(`собрано: ${got}, пусто: ${blank}, ошибок: ${failed}, за ${Math.round((Date.now() - started) / 60000)} мин`);
+  console.log(`собрано: ${got}, честно пусто: ${hollow}, придержано: ${held}, ошибок: ${failed}, за ${Math.round((Date.now() - started) / 60000)} мин`);
   if (dropped) console.log(`удалено записей исчезнувших релизов: ${dropped}`);
   console.log(`\nвсего со ссылками: ${withLinks} из ${total} (${Math.round((withLinks / total) * 100)}%)`);
   for (const [platform, count] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {

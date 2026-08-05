@@ -102,7 +102,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.display--lg { font-size: 40px; }
 .display--md { font-size: 34px; }
 
 .mono {
@@ -153,6 +152,10 @@ a { color: inherit; text-decoration: none; }
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0;
+  /* Строчными и с пробелом — «ant brigade». Регистр не трогаем ни здесь,
+     ни в разметке, а пробел не должен ронять второе слово на строку ниже. */
+  text-transform: none;
+  white-space: nowrap;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: unset;
 }
@@ -813,19 +816,54 @@ select option { background: #1a1a19; color: var(--fg); }
 
 /* ---------------------------------------------------------- подвал
 
-   Из макета один в один: крупное «Information» слева, копирайт
-   моноширинным справа, линейка сверху.                                */
+   Крупное «Information» из макета убрано: слева внешние ссылки, справа
+   подпись. Ничего нового по оформлению здесь не заводится — ссылки взяты
+   от меню в шапке, подпись от прочих служебных строк.                  */
 
 .foot { border-top: 1px solid var(--line); margin-top: 70px; }
 .foot__in {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 24px;
+  gap: 24px 32px;
   padding-top: 26px;
   padding-bottom: 34px;
 }
-.foot__note { color: var(--fg-dim); text-align: right; }
+
+/* Ровно как .nav: тот же моноширинный, тот же приглушённый, та же
+   линейка при наведении. */
+.foot__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--fg-muted);
+}
+.foot__links a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.foot__links a:hover,
+.foot__links a:focus-visible { color: var(--fg); border-bottom-color: var(--fg); }
+
+/* Регистр возвращён обычный: в подписи стоит имя собственное и название
+   строчными, а .mono поднял бы всё в прописные. Ссылки рядом остаются
+   прописными — они подписи, а не текст, как и везде на сайте.
+
+   Межстрочный увеличен: три строки моноширинным 11px на межстрочном из
+   body слипаются. */
+.foot__note {
+  color: var(--fg-dim);
+  text-align: right;
+  text-transform: none;
+  line-height: 1.7;
+}
+.foot__note a { color: var(--fg-muted); border-bottom: 1px solid var(--line); }
+.foot__note a:hover,
+.foot__note a:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-bottom-color: transparent;
+}
 
 /* Установленное приложение открывается во весь экран, поэтому по краям
    учитываем вырез и домашний индикатор. */
@@ -910,8 +948,12 @@ select option { background: #1a1a19; color: var(--fg); }
   }
   .nav { gap: 16px; font-size: 11px; }
 
-  .display--lg { font-size: 24px; }
   .display--md { font-size: 22px; }
+
+  /* Подвал в столбик: две колонки по краям на 375 px не расходятся. */
+  .foot__in { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .foot__note { text-align: left; }
+  .foot__links { gap: 14px 18px; }
   .page-head { padding: 26px 0 18px; }
   .names__letter { font-size: 20px; margin-top: 22px; }
 

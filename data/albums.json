@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-05T17:55:01Z",
+  "generatedAt": "2026-08-05T19:57:25Z",
   "counts": {
-    "albums": 1046,
-    "artists": 940,
-    "labels": 586,
+    "albums": 1047,
+    "artists": 941,
+    "labels": 587,
     "videos": 46
   },
   "albums": [
@@ -29860,6 +29860,36 @@
       ]
     },
     {
+      "id": "3b34129a-8c52-8077-989c-fc65f76bbc11",
+      "slug": "eleven-76-occhio-occhio",
+      "artist": "Eleven 76",
+      "album": "Occhio Occhio",
+      "url": "https://album.link/d3svbnhrkxd76",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6745cb72-d7b9-4dbe-892a-642df474632c%3Aa0149619765_10.jpg?table=block&id=3b34129a-8c52-8077-989c-fc65f76bbc11&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk",
+        "Psychedelic Soul",
+        "Library Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-16",
+      "year": 2021,
+      "artistIds": [
+        "3b34129a-8c52-8012-ae27-e7e9485aaf3e"
+      ],
+      "artists": [
+        "Eleven 76"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-806a-963f-ea4a83be5d9a"
+      ],
+      "labels": [
+        "Golden Rules"
+      ]
+    },
+    {
       "id": "2484129a-8c52-80bd-8a93-dd0d62dfee2f",
       "slug": "chain-whip-two-step-to-hell",
       "artist": "Chain Whip",
@@ -35213,6 +35243,25 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80be-a165-d669139458b6"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b34129a-8c52-8012-ae27-e7e9485aaf3e",
+      "slug": "eleven-76",
+      "name": "Eleven 76",
+      "country": "GB",
+      "bandcamp": "https://eleven76.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-8077-989c-fc65f76bbc11"
+      ],
+      "genres": [
+        "Funk",
+        "Psychedelic Soul",
+        "Library Music"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-806a-963f-ea4a83be5d9a"
       ],
       "videoIds": []
     },
@@ -51139,6 +51188,19 @@
         "2ae4129a-8c52-80b3-b558-e4a8b202763f",
         "24a4129a-8c52-8088-9708-c36b3aa141a7",
         "24a4129a-8c52-8087-8225-ce1a34d4fd21"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-806a-963f-ea4a83be5d9a",
+      "slug": "golden-rules",
+      "name": "Golden Rules",
+      "country": "DE",
+      "bandcamp": "https://goldenrulessoul.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-8077-989c-fc65f76bbc11"
+      ],
+      "artistIds": [
+        "3b34129a-8c52-8012-ae27-e7e9485aaf3e"
       ]
     },
     {

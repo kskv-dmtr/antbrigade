@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T17:55:28Z",
+  "generatedAt": "2026-08-05T19:57:36Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16650,6 +16650,23 @@
       "upc": "3615936816693",
       "tracks": 10,
       "releaseDate": "2019-03-05"
+    },
+    "3b34129a-8c52-8077-989c-fc65f76bbc11": {
+      "source": "https://album.link/d3svbnhrkxd76",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2we8h93HO49o3XGaJjbaGu",
+        "deezer": "https://www.deezer.com/album/231275182",
+        "amazonMusic": "https://music.amazon.com/albums/B095DZT22C",
+        "tidal": "https://listen.tidal.com/album/184706066",
+        "napster": "https://play.napster.com/album/alb.584189907",
+        "yandex": "https://music.yandex.ru/album/15716907",
+        "anghami": "https://play.anghami.com/album/1020657714?refer=linktree",
+        "bandcamp": "https://goldenrulessoul.bandcamp.com/album/eleven76-occhio-occhio",
+        "amazonStore": "https://amazon.com/dp/B095DZT22C"
+      },
+      "upc": "4064832579543",
+      "tracks": 11,
+      "releaseDate": "2021-06-16"
     }
   }
 }

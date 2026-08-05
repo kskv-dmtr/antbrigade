@@ -902,8 +902,12 @@ select option { background: #1a1a19; color: var(--fg); }
 [data-view='list'] .view-tile { display: none; }
 [data-view='grid'] .view-row  { display: none; }
 
+/* Селекторы «на самом элементе», а не на потомке: data-view висит на том же
+   узле, что и список — на <ul class="releases"> и на <ul class="names">.
+   Потомковый вариант `[data-view='grid'] .names` молча не совпадал, и в
+   плиточном виде плитки выстраивались в столбик. */
 .releases[data-view='grid'],
-[data-view='grid'] .names {
+.names[data-view='grid'] {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-min), 1fr));
   gap: 30px var(--gap);

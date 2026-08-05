@@ -14,5 +14,6 @@ const { album } = Astro.props;
   <span class="row__artist">{album.artist}</span>
   <span class="row__title">{album.album}</span>
   <span class="row__meta">{album.types.join(' / ')}</span>
-  <span class="row__num">{album.year ?? '—'}</span>
+  {/* Отдельно стоящие числа по всему сайту берём в квадратные скобки. */}
+  <span class="row__num">{album.year ? `[${album.year}]` : '—'}</span>
 </a>

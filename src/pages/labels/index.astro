@@ -54,7 +54,11 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
     </div>
 
     <div class="filters">
-      <div class="filters__group">
+      <nav class="alphabet" id="alphabet">
+        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+      </nav>
+
+      <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>
           <option value="za">Z → A</option>
@@ -62,10 +66,6 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
         </Select>
       </div>
     </div>
-
-    <nav class="alphabet" id="alphabet">
-      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-    </nav>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
@@ -75,7 +75,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <>
         <li class="names__letter" id={anchor(letter)} data-letter={letter}>
           <span>{letter}</span>
-          <span class="mono mono--sm">{items.length}</span>
+          <span class="mono mono--sm">[{items.length}]</span>
         </li>
         {items.map((l) => (
           <li
@@ -88,7 +88,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
             <a class="row row--name view-row" href={`/labels/${l.slug}`}>
               <span class="row__title">{l.name}</span>
               <span class="row__meta">{l.country ?? ''}</span>
-              <span class="row__num">{l.albumIds.length || ''}</span>
+              <span class="row__num">{l.albumIds.length ? `[${l.albumIds.length}]` : ''}</span>
             </a>
             <NameTile
               class="view-tile"

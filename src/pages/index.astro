@@ -16,7 +16,11 @@ for (const a of albums) {
 }
 const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
-const span = years.length ? `${years[0]} — ${years[years.length - 1]}` : '';
+
+/* Сколько строк показывать сразу и сколько добавлять по нажатию.
+   Всё равно рендерим все: так страница живёт без JS и её целиком видят
+   поисковики, а скрипт лишь прячет лишнее. */
+const PAGE = 50;
 
 /* Порядок с сервера — «сначала новые», поэтому свежая шестёрка это просто
    первые шесть записей.
@@ -32,13 +36,12 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
   description={`A collection of ${albums.length} releases: covers, genres, labels and links to listen.`}
   activeSection="albums"
 >
-  {/* Заголовок страницы вынесен наверх: как только над индексом появился
-      раздел со своим h2, порядок заголовков без h1 в начале ломается. Годы
-      живут здесь, а живой счётчик — над самим индексом, рядом с фильтрами,
-      которые его и меняют. */}
+  {/* Заголовок страницы вынесен наверх: как только над списком появился
+      раздел со своим h2, порядок заголовков без h1 в начале ломается.
+      Живой счётчик — над самим списком, рядом с фильтрами, которые его и
+      меняют. */}
   <div class="page-head">
     <h1>Releases</h1>
-    <p class="counter">{span}</p>
   </div>
 
   {latest.length > 0 && (
@@ -126,6 +129,10 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
         </li>
       ))}
     </ul>
+
+    {/* Кнопка появляется только со скриптом: без него показаны все записи,
+        и «показать ещё» было бы нечего делать. */}
+    <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
   </section>
 </Base>
 
@@ -142,14 +149,24 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
 
+  const more = document.getElementById('more');
+
   const total = cards.length;
+  const PAGE  = Number(more.dataset.page) || 50;
   const state = { q: '', type: '', genre: '', year: '', sort: 'new' };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
-  // Годы каталога живут в заголовке страницы и фильтрацию переживают: они
-  // про каталог, а не про выборку. Здесь — только счёт.
+  /* Порядок, в котором записи сейчас лежат в разметке. Именно по нему
+     отсчитываются первые 50: считать по исходному массиву нельзя — после
+     сортировки «первыми» станут не те. */
+  let current = initialOrder;
+
+  // Сколько записей показано. Сбрасывается при любой смене выборки: иначе
+  // после нового поиска остался бы разворот от предыдущего.
+  let limit = PAGE;
+
   const label = (n) =>
     n === total ? `${n} ${n === 1 ? 'release' : 'releases'}` : `${n} of ${total}`;
 
@@ -163,27 +180,35 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
   }
 
   function apply() {
-    let shown = 0;
-    for (const el of cards) {
+    // Видимость складывается из двух условий: запись подходит под фильтры
+    // и попадает в текущие первые limit подходящих.
+    let matched = 0;
+    for (const el of current) {
       const ok = matches(el);
-      el.hidden = !ok;
-      if (ok) shown++;
+      if (ok) matched++;
+      el.hidden = !ok || matched > limit;
     }
 
-    empty.hidden = shown > 0;
-    counter.textContent = label(shown);
+    empty.hidden = matched > 0;
+    counter.textContent = label(matched);
+
+    const rest = matched - limit;
+    more.hidden = rest <= 0;
+    if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
 
     const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
     reset.hidden = !dirty;
   }
 
+  // Любая смена выборки возвращает список к первой странице.
+  function rewind() { limit = PAGE; }
+
   function sort() {
     const by = state.sort;
-    let order;
     if (by === 'new') {
-      order = initialOrder;
+      current = initialOrder;
     } else {
-      order = cards.slice().sort((a, b) => {
+      current = cards.slice().sort((a, b) => {
         if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
         if (by === 'album')  return a.dataset.album.localeCompare(b.dataset.album);
         const da = a.dataset.released, db = b.dataset.released;
@@ -195,15 +220,21 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
       });
     }
     const frag = document.createDocumentFragment();
-    for (const el of order) frag.appendChild(el);
+    for (const el of current) frag.appendChild(el);
     grid.appendChild(frag);
   }
+
+  more.addEventListener('click', () => {
+    limit += PAGE;
+    apply();
+  });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       state.q = search.value.trim().toLowerCase();
+      rewind();
       apply();
     }, 120);
   });
@@ -213,6 +244,7 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
     if (!btn) return;
     state.type = btn.dataset.type;
     for (const b of typesEl.children) b.setAttribute('aria-pressed', String(b === btn));
+    rewind();
     apply();
   });
 
@@ -223,9 +255,12 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  genreEl.addEventListener('change', () => { state.genre = genreEl.value; apply(); });
-  yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  apply(); });
-  sortEl.addEventListener('change',  () => { state.sort  = sortEl.value;  sort(); apply(); });
+  genreEl.addEventListener('change', () => { state.genre = genreEl.value; rewind(); apply(); });
+  yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  rewind(); apply(); });
+  sortEl.addEventListener('change',  () => {
+    state.sort = sortEl.value;
+    sort(); rewind(); apply();
+  });
 
   /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами:
      стрелка должна смотреть вверх, пока список открыт. */
@@ -252,7 +287,12 @@ const latestDate = formatDate(latest.find((a) => a.released)?.released);
       b.setAttribute('aria-pressed', String(i === 0));
     }
     sort();
+    rewind();
     apply();
     window.scrollTo({ top: 0 });
   });
+
+  /* Первый расчёт: до него в разметке видны все записи — так страница
+     работает без скрипта и целиком достаётся поисковикам. */
+  apply();
 </script>

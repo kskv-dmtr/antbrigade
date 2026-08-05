@@ -47,8 +47,15 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <ViewSwitch />
     </div>
 
+    {/* Указатель по буквам слева, сортировка справа. Группа с сортировкой
+        прижата margin-left: auto, а не space-between: при неалфавитном
+        порядке указатель прячется, и без этого сортировка уехала бы влево. */}
     <div class="filters">
-      <div class="filters__group">
+      <nav class="alphabet" id="alphabet">
+        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+      </nav>
+
+      <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>
           <option value="za">Z → A</option>
@@ -56,10 +63,6 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
         </Select>
       </div>
     </div>
-
-    <nav class="alphabet" id="alphabet">
-      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-    </nav>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
@@ -72,7 +75,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <>
         <li class="names__letter" id={anchor(letter)} data-letter={letter}>
           <span>{letter}</span>
-          <span class="mono mono--sm">{items.length}</span>
+          <span class="mono mono--sm">[{items.length}]</span>
         </li>
         {items.map((a) => (
           <li
@@ -85,7 +88,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
             <a class="row row--name view-row" href={`/artists/${a.slug}`}>
               <span class="row__title">{a.name}</span>
               <span class="row__meta">{a.country ?? ''}</span>
-              <span class="row__num">{a.albumIds.length || ''}</span>
+              <span class="row__num">{a.albumIds.length ? `[${a.albumIds.length}]` : ''}</span>
             </a>
             <NameTile
               class="view-tile"

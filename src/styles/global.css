@@ -431,6 +431,10 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 8px;
 }
+/* Прижата вправо своим margin, а не space-between у родителя: соседний
+   указатель по буквам прячется при неалфавитной сортировке, и тогда
+   space-between уронил бы группу влево. */
+.filters__group--end { margin-left: auto; }
 
 .seg {
   display: flex;
@@ -510,6 +514,24 @@ select option { background: #1a1a19; color: var(--fg); }
   cursor: pointer;
 }
 .reset:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+
+/* Кнопка «показать ещё» под списком: во всю ширину, чтобы читалась как
+   продолжение списка, а не как отдельное действие в углу. */
+.more {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.more:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
 .alphabet {
   display: flex;

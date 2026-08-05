@@ -22,11 +22,9 @@ const cover   = coverSrc(album, 800);
   activeSection="albums"
 >
   <article class="detail">
-    {/* Та же полоса, что ведёт главную: обложка целиком на размытой копии
-        себя самой, заголовок рядом. Страница релиза и главная так читаются
-        как одно место, а не как две разные вёрстки. */}
+    {/* Обложка целиком на размытой копии себя самой, заголовок рядом. */}
     <div class="detail__banner bleed">
-      {cover && <img class="hero__backdrop" src={cover} alt="" aria-hidden="true" decoding="async" />}
+      {cover && <img class="detail__backdrop" src={cover} alt="" aria-hidden="true" decoding="async" />}
       {cover && (
         <img class="detail__art" src={cover} width="800" height="800"
              alt={`${album.album} cover`} fetchpriority="high" />

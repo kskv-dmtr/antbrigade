@@ -149,24 +149,17 @@ a { color: inherit; text-decoration: none; }
   border-bottom-color: var(--fg);
 }
 
-/* ------------------------------------------------- ведущая работа
+/* --------------------------------------------- размытая подложка
 
-   В макете это сплошная плашка 16:7 с подписью поверх. Обложки в базе
-   квадратные: если растянуть квадрат на 16:7 по `cover`, от картинки
-   останется середина, больше половины высоты уйдёт под обрез. Поэтому
-   полосу заполняет размытая копия обложки, а сама обложка лежит на ней
-   целиком, слева. Пропорция полосы и крупный заголовок из макета
-   сохранены, обложка не режется.                                      */
+   Полоса на странице релиза — 16:7, а обложки в базе квадратные: растянуть
+   квадрат по `cover` значит выбросить больше половины картинки. Поэтому
+   полосу заливает размытая копия той же обложки, а сама обложка лежит на
+   ней целиком и не режется.
 
-.hero {
-  position: relative;
-  display: block;
-  aspect-ratio: 16 / 7;
-  background: var(--art);
-  overflow: hidden;
-}
+   На главной такой полосы больше нет: ведущую работу заменила сетка из
+   шести плиток.                                                        */
 
-.hero__backdrop {
+.detail__backdrop {
   position: absolute;
   inset: -6%;               /* с запасом: размытие съедает края */
   width: 112%;
@@ -174,73 +167,6 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   filter: blur(46px) brightness(0.42) saturate(0.85);
 }
-
-.hero__in {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
-  gap: 32px;
-}
-
-/* width: auto обязателен: у картинки есть атрибут width=800, и для
-   flex: none он побеждает aspect-ratio — обложка выезжает на 800 px
-   вместо квадрата по высоте полосы. */
-.hero__art {
-  flex: none;
-  height: 100%;
-  width: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.hero__body {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 0 var(--pad) 26px 0;
-}
-
-.hero__text { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-
-.hero__kicker {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--fg-muted);
-}
-
-.hero__title {
-  margin: 0;
-  font-size: clamp(40px, 6.4vw, 88px);
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 0.92;
-  overflow-wrap: anywhere;
-}
-
-/* Кнопка появляется по наведению — в макете это состояние hero.hot. */
-.hero__cta {
-  flex: none;
-  padding: 12px 18px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  background: var(--ink);
-  color: var(--ink-fg);
-  opacity: 0;
-  transition: opacity 0.12s ease;
-}
-.hero:hover .hero__cta,
-.hero:focus-visible .hero__cta { opacity: 1; }
-.hero:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
 
 /* --------------------------------------------------------- плитки
 
@@ -892,24 +818,22 @@ select option { background: #1a1a19; color: var(--fg); }
    вертикальный кадр 4:5 с подписью под ним. Собираем то же самое — но
    высоту отдаём содержимому, иначе заголовок в три слова не помещается. */
 @media (max-width: 760px) {
-  .hero, .detail__banner {
+  .detail__banner {
     aspect-ratio: auto;
     flex-direction: column;
     gap: 0;
   }
-  .hero__in { flex-direction: column; height: auto; }
-  .hero__art, .detail__art {
+  .detail__art {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
   }
-  .hero__body, .detail__head {
+  .detail__head {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
     padding: 18px var(--pad) 22px;
   }
-  .hero__cta { opacity: 1; }
 
   /* Индекс складывается в две строки: слева артист и название, справа
      формат с годом — как в мобильном макете. */
@@ -955,7 +879,7 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .select__chevron, .tile__over, .hero__cta { transition: none; }
+  .select__chevron, .tile__over { transition: none; }
 }
 
 /* -------------------------------------------- переключение вида

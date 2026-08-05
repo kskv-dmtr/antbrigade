@@ -739,7 +739,6 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 .chip--link:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
-.flag { font-size: 0.95em; }
 .sep { color: var(--fg-dim); }
 
 /* ----------------------------------------------------------- списки
@@ -784,13 +783,19 @@ select option { background: #1a1a19; color: var(--fg); }
   font-size: 16px;
 }
 .names__link:hover { background: var(--ink); color: var(--ink-fg); }
+.names__link:hover .names__country,
 .names__link:hover .names__count { color: var(--ink-muted); }
 .names__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.names__count {
+.names__country, .names__count {
   font-family: var(--mono);
   font-size: 11px;
+  letter-spacing: 0.08em;
   color: var(--fg-dim);
 }
+/* Код страны всегда двухбуквенный, но у пары записей его нет — держим
+   ширину явно, иначе счётчики справа поедут в разнобой. */
+.names__country { min-width: 2ch; text-align: right; }
+.names__count { min-width: 3ch; text-align: right; }
 
 /* 284 жанра разной длины — не колонки, а поток. */
 .genre-cloud {

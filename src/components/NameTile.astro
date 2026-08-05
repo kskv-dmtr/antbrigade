@@ -6,11 +6,17 @@
    релиз с обложкой. У двенадцати артистов релизов нет вовсе — там остаётся
    штриховка, то самое пустое состояние из макета. */
 
-import { coverSrc, coverSrcSet, flag, plural } from '../lib/db.js';
+import { coverSrc, coverSrcSet, countryName, plural } from '../lib/db.js';
 
 const { href, name, releases = [], country, as: Wrapper = 'div', class: extra } = Astro.props;
 const cover = releases.find((a) => a?.cover) ?? null;
 const count = releases.length;
+
+/* Под обложкой — короткий код, он всегда на виду и не ломает плотную строку;
+   полное название уходит в подпись, которая появляется при наведении. */
+const meta = [country, count ? plural(count, 'release', 'releases') : 'no releases']
+  .filter(Boolean)
+  .join(' · ');
 ---
 <Wrapper class:list={['tile', extra]}>
   <a class="tile__link" href={href}>
@@ -28,13 +34,11 @@ const count = releases.length;
         />
       )}
       <div class="tile__over" aria-hidden="true">
-        <span class="tile__meta">{country ? `${flag(country)} ${country}` : ''}</span>
+        <span class="tile__meta">{countryName(country)}</span>
         <span class="tile__cta">Open →</span>
       </div>
     </div>
-    <span class="tile__artist">{count ? plural(count, 'release', 'releases') : 'no releases'}</span>
-    <span class="tile__title">
-      {country && <span class="flag">{flag(country)} </span>}{name}
-    </span>
+    <span class="tile__artist">{meta}</span>
+    <span class="tile__title">{name}</span>
   </a>
 </Wrapper>

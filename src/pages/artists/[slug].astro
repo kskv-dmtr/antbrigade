@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
 import GenreChips from '../../components/GenreChips.astro';
-import { artists, albumsOf, labelsOf, videosOf, flag, plural } from '../../lib/db.js';
+import { artists, albumsOf, labelsOf, videosOf, countryName, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return artists.map((artist) => ({ params: { slug: artist.slug }, props: { artist } }));
@@ -28,16 +28,20 @@ const clipsSorted = clips.slice().sort((a, b) => {
   activeSection="artists"
 >
   <div class="page-head">
-    <h1>
-      {artist.name}
-      {artist.country && <span class="flag" title={artist.country}>{flag(artist.country)}</span>}
-    </h1>
+    <h1>{artist.name}</h1>
     <p class="counter">{plural(discography.length, 'release', 'releases')}</p>
   </div>
 
   <BandcampLink url={artist.bandcamp} />
 
   <dl class="facts facts--wide">
+    {artist.country && (
+      <>
+        <dt>Country</dt>
+        <dd>{countryName(artist.country)}</dd>
+      </>
+    )}
+
     {artist.genres.length > 0 && (
       <>
         <dt>Genres</dt>

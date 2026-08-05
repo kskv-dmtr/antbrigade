@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
-import { labels, albumsOf, flag, plural } from '../../lib/db.js';
+import { labels, albumsOf, plural } from '../../lib/db.js';
 
 // По убыванию числа релизов: так сразу видно основные лейблы коллекции.
 const sorted = labels.slice().sort(
@@ -43,8 +43,8 @@ const sorted = labels.slice().sort(
       {sorted.map((l) => (
         <li data-search={l.name.toLowerCase()}>
           <a class="names__link view-row" href={`/labels/${l.slug}`}>
-            {l.country && <span class="flag" title={l.country}>{flag(l.country)}</span>}
             <span class="names__name">{l.name}</span>
+            <span class="names__country">{l.country ?? ''}</span>
             <span class="names__count">{l.albumIds.length || ''}</span>
           </a>
           <NameTile

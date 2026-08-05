@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import GenreChips from '../../components/GenreChips.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
-  albums, artistsOf, labelsOf, coverSrc, formatDate, flag
+  albums, artistsOf, labelsOf, coverSrc, formatDate
 } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -70,7 +70,6 @@ const cover   = coverSrc(album, 800);
                 <>
                   {i > 0 && ', '}
                   <a href={`/labels/${l.slug}`}>{l.name}</a>
-                  {l.country && <span class="flag" title={l.country}> {flag(l.country)}</span>}
                 </>
               ))}
             </dd>

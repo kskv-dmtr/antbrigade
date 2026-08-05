@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
-import { labels, albumsOf, artistsOf, flag, plural } from '../../lib/db.js';
+import { labels, albumsOf, artistsOf, countryName, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return labels.map((label) => ({ params: { slug: label.slug }, props: { label } }));
@@ -18,21 +18,31 @@ const roster   = artistsOf(label.artistIds);
   activeSection="labels"
 >
   <div class="page-head">
-    <h1>
-      {label.name}
-      {label.country && <span class="flag" title={label.country}>{flag(label.country)}</span>}
-    </h1>
+    <h1>{label.name}</h1>
     <p class="counter">{plural(releases.length, 'release', 'releases')}</p>
   </div>
 
   <BandcampLink url={label.bandcamp} />
 
-  {roster.length > 0 && (
+  {/* Список раньше показывался только при непустом составе — теперь в нём
+      живёт ещё и страна, поэтому условие переехало на сами строки. */}
+  {(label.country || roster.length > 0) && (
     <dl class="facts facts--wide">
-      <dt>{plural(roster.length, 'Artist', 'Artists')}</dt>
-      <dd class="chips">
-        {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}`}>{a.name}</a>)}
-      </dd>
+      {label.country && (
+        <>
+          <dt>Country</dt>
+          <dd>{countryName(label.country)}</dd>
+        </>
+      )}
+
+      {roster.length > 0 && (
+        <>
+          <dt>{plural(roster.length, 'Artist', 'Artists')}</dt>
+          <dd class="chips">
+            {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}`}>{a.name}</a>)}
+          </dd>
+        </>
+      )}
     </dl>
   )}
 

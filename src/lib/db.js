@@ -182,12 +182,26 @@ export function videosOf(ids) {
   return (ids || []).map((id) => videoById.get(id)).filter(Boolean);
 }
 
-/** Флаг-эмодзи из ISO-кода страны: US -> 🇺🇸 */
-export function flag(code) {
+/* Страна — текстом, а не флагом.
+
+   Эмодзи-флаги убраны намеренно. Это был единственный цвет на монохромной
+   странице; они не слушаются currentColor и оставались цветным пятном на
+   вывернутой при наведении строке; на Windows вместо них рисуются две буквы
+   в рамочках — глифов флагов в Segoe UI Emoji нет. Ширина у них вдобавок
+   плавает от страны к стране, и колонка с именем не выравнивалась.
+
+   Словарь названий не заводим: Intl.DisplayNames знает все 66 кодов из базы
+   и работает на сборке, в рантайме его нет.                                */
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+
+/** Название страны из ISO-кода: US -> United States. */
+export function countryName(code) {
   if (!code || code.length !== 2) return '';
-  return String.fromCodePoint(
-    ...[...code.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)
-  );
+  try {
+    return regionNames.of(code.toUpperCase()) ?? '';
+  } catch {
+    return '';   // код, которого нет в стандарте
+  }
 }
 
 const MONTHS = [

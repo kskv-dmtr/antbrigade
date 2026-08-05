@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
-import { artists, albumsOf, flag, plural } from '../../lib/db.js';
+import { artists, albumsOf, plural } from '../../lib/db.js';
 
 // Группировка по первой букве, чтобы 931 имя можно было просматривать глазами.
 function bucket(name) {
@@ -63,8 +63,8 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
           {items.map((a) => (
             <li data-search={a.name.toLowerCase()}>
               <a class="names__link view-row" href={`/artists/${a.slug}`}>
-                {a.country && <span class="flag" title={a.country}>{flag(a.country)}</span>}
                 <span class="names__name">{a.name}</span>
+                <span class="names__country">{a.country ?? ''}</span>
                 <span class="names__count">{a.albumIds.length || ''}</span>
               </a>
               <NameTile

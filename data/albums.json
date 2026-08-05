@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-04T21:38:22Z",
+  "generatedAt": "2026-08-05T09:39:55Z",
   "counts": {
     "albums": 1042,
     "artists": 937,
@@ -34670,7 +34670,7 @@
       "slug": "dorian-concept",
       "name": "Dorian Concept",
       "country": "AT",
-      "bandcamp": null,
+      "bandcamp": "https://dorianconcept.bandcamp.com/music",
       "albumIds": [
         "e7d1ce8c-7e04-4e85-b636-e8afe12ea28b"
       ],
@@ -36648,7 +36648,7 @@
       "slug": "grandbrothers",
       "name": "Grandbrothers",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://grandbrothers.bandcamp.com/music",
       "albumIds": [
         "27a4129a-8c52-80fa-8ddd-e326190e3e1e"
       ],
@@ -48190,7 +48190,7 @@
       "slug": "ous",
       "name": "-OUS",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://ousooo.bandcamp.com/",
       "albumIds": [
         "e7d1ce8c-7e04-4e85-b636-e8afe12ea28b"
       ],
@@ -56347,7 +56347,7 @@
       "slug": "warp-records",
       "name": "Warp Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://warprecords.bandcamp.com/",
       "albumIds": [
         "3ae4129a-8c52-8061-a18f-d976199c95dd",
         "36f4129a-8c52-8047-9cd8-c5a42d135115",

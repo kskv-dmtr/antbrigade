@@ -15,13 +15,6 @@ const nav = [
   { href: '/genres',  label: 'Genres',   key: 'genres' }
 ];
 
-/* Внешние ссылки в подвале. Подписи английские, как и весь интерфейс. */
-const links = [
-  { href: 'https://t.me/antbrigade',      label: 'Telegram' },
-  { href: 'https://t.me/kskv_dmtr',       label: 'Personal Telegram' },
-  { href: 'https://linktr.ee/kskv_dmtr',  label: 'Linktree' }
-];
-
 const year = new Date().getFullYear();
 
 /* Сборка идёт с format: 'file', поэтому внутри пути живут с расширением:
@@ -83,20 +76,19 @@ const canonical = new URL(
     <slot />
   </main>
 
+  {/* Зеркало шапки: подпись слева, ссылка справа. */}
   <footer class="foot">
     <div class="foot__in shell">
-      {/* Подписи по-английски, как и весь остальной интерфейс. */}
-      <nav class="foot__links mono">
-        {links.map((link) => (
-          <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
-        ))}
-      </nav>
-
       <span class="foot__note mono mono--sm">
-        Made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        Source — a Notion database · Updated {generatedAt ? generatedAt.slice(0, 10) : '—'}<br />
+        Made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a>
+        using Notion database &amp; Claude Code<br />
+        Updated {generatedAt ? generatedAt.slice(0, 10) : '—'}<br />
         © {year} ant brigade
       </span>
+
+      <nav class="foot__links mono">
+        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </nav>
     </div>
   </footer>
 

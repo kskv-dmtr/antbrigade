@@ -846,14 +846,13 @@ select option { background: #1a1a19; color: var(--fg); }
 .foot__links a:focus-visible { color: var(--fg); border-bottom-color: var(--fg); }
 
 /* Регистр возвращён обычный: в подписи стоит имя собственное и название
-   строчными, а .mono поднял бы всё в прописные. Ссылки рядом остаются
-   прописными — они подписи, а не текст, как и везде на сайте.
+   строчными, а .mono поднял бы всё в прописные. Ссылка рядом остаётся
+   прописной — она подпись, а не текст, как и везде на сайте.
 
    Межстрочный увеличен: три строки моноширинным 11px на межстрочном из
    body слипаются. */
 .foot__note {
   color: var(--fg-dim);
-  text-align: right;
   text-transform: none;
   line-height: 1.7;
 }
@@ -950,10 +949,9 @@ select option { background: #1a1a19; color: var(--fg); }
 
   .display--md { font-size: 22px; }
 
-  /* Подвал в столбик: две колонки по краям на 375 px не расходятся. */
-  .foot__in { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .foot__note { text-align: left; }
-  .foot__links { gap: 14px 18px; }
+  /* Подвал в столбик: две колонки по краям на 375 px не расходятся.
+     Ссылка идёт первой — как меню в шапке, оно тоже наверху. */
+  .foot__in { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
   .page-head { padding: 26px 0 18px; }
   .names__letter { font-size: 20px; margin-top: 22px; }
 

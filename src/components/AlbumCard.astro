@@ -1,17 +1,28 @@
 ---
+/* Плитка релиза из макета: обложка, под ней артист моноширинным и название.
+   По наведению обложка выворачивается в чёрное с форматом, годом и «Listen».
+
+   Обложки квадратные, поэтому плитка 1:1, а не 4:3 как в макете: 4:3 срезает
+   у квадрата четверть высоты, а обложка здесь — сам товар. */
+
 import { coverSrc, coverSrcSet } from '../lib/db.js';
 
-// всё лишнее (data-* для фильтров) пробрасывается на <li> как есть
-const { album, showArtist = true, ...rest } = Astro.props;
+/* Обёртка по умолчанию <li>: плитки почти везде лежат в списке. На главной
+   плитка соседствует со строкой индекса внутри общего <li>, и там нужен
+   <div> — второй <li> внутри первого разметку сломал бы. */
+
+// всё лишнее (data-* для фильтров) пробрасывается на обёртку как есть
+const { album, showArtist = true, as: Wrapper = 'li', class: extra, ...rest } = Astro.props;
+const meta = [album.types.join(' / '), album.year].filter(Boolean).join(' · ');
 ---
-<li class="card" {...rest}>
-  <a href={`/albums/${album.slug}`}>
-    <div class="card__art">
+<Wrapper class:list={['tile', extra]} {...rest}>
+  <a class="tile__link" href={`/albums/${album.slug}`}>
+    <div class="tile__art">
       {album.cover && (
         <img
           src={coverSrc(album, 400)}
           srcset={coverSrcSet(album)}
-          sizes="(max-width: 640px) 45vw, 200px"
+          sizes="(max-width: 640px) 45vw, 240px"
           width="400"
           height="400"
           loading="lazy"
@@ -19,9 +30,12 @@ const { album, showArtist = true, ...rest } = Astro.props;
           alt=""
         />
       )}
+      <div class="tile__over" aria-hidden="true">
+        <span class="tile__meta">{meta}</span>
+        <span class="tile__cta">Listen →</span>
+      </div>
     </div>
-    {showArtist && <div class="card__artist">{album.artist}</div>}
-    <div class="card__album">{album.album}</div>
-    {album.year && <div class="card__meta">{album.year}</div>}
+    {showArtist && <span class="tile__artist">{album.artist}</span>}
+    <span class="tile__title">{album.album}</span>
   </a>
-</li>
+</Wrapper>

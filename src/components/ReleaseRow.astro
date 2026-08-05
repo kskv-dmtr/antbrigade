@@ -1,0 +1,17 @@
+---
+/* Строка индекса из макета: номер, артист, название, формат, год.
+   Пять колонок на широком экране, две строки на узком — раскладку целиком
+   держит CSS, разметка одна.
+
+   Номер сквозной по всему индексу, а не по видимой выборке: пересчитывать
+   его при фильтрации значило бы трогать 1039 узлов на каждое нажатие. */
+
+const { album, n } = Astro.props;
+---
+<a class="row" href={`/albums/${album.slug}`}>
+  <span class="row__n">{String(n).padStart(2, '0')}</span>
+  <span class="row__artist">{album.artist}</span>
+  <span class="row__title">{album.album}</span>
+  <span class="row__format">{album.types.join(' / ')}</span>
+  <span class="row__year">{album.year ?? '—'}</span>
+</a>

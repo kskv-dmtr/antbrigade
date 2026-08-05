@@ -14,6 +14,7 @@ const { album } = Astro.props;
 const artists = artistsOf(album.artistIds);
 const labels  = labelsOf(album.labelIds);
 const title   = `${album.artist} — ${album.album}`;
+const cover   = coverSrc(album, 800);
 ---
 <Base
   title={`${title} · ant brigade`}
@@ -21,37 +22,39 @@ const title   = `${album.artist} — ${album.album}`;
   activeSection="albums"
 >
   <article class="detail">
-    <div class="detail__art">
-      {album.cover && (
-        <img
-          src={coverSrc(album, 800)}
-          width="800" height="800"
-          alt={`${album.album} cover`}
-        />
+    {/* Та же полоса, что ведёт главную: обложка целиком на размытой копии
+        себя самой, заголовок рядом. Страница релиза и главная так читаются
+        как одно место, а не как две разные вёрстки. */}
+    <div class="detail__banner bleed">
+      {cover && <img class="hero__backdrop" src={cover} alt="" aria-hidden="true" decoding="async" />}
+      {cover && (
+        <img class="detail__art" src={cover} width="800" height="800"
+             alt={`${album.album} cover`} fetchpriority="high" />
       )}
+      <div class="detail__head">
+        <p class="detail__kicker">
+          {[album.types.join(' / '), album.year].filter(Boolean).join(' · ')}
+        </p>
+        <h1 class="detail__title">{album.album}</h1>
+        <p class="detail__artist">
+          {artists.length > 0
+            ? artists.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> / </span>}
+                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                </>
+              ))
+            : album.artist}
+        </p>
+      </div>
     </div>
 
     <div class="detail__body">
-      <p class="detail__kicker">
-        {album.types.join(' · ')}
-      </p>
+      <div>
+        <ListenLinks album={album} />
+      </div>
 
-      <h1 class="detail__title">{album.album}</h1>
-
-      <p class="detail__artist">
-        {artists.length > 0
-          ? artists.map((a, i) => (
-              <>
-                {i > 0 && <span class="sep"> / </span>}
-                <a href={`/artists/${a.slug}`}>{a.name}</a>
-              </>
-            ))
-          : album.artist}
-      </p>
-
-      <ListenLinks album={album} />
-
-      <dl class="facts">
+      <dl class="facts facts--wide">
         {album.released && (
           <>
             <dt>Release date</dt>
@@ -77,9 +80,7 @@ const title   = `${album.artist} — ${album.album}`;
         {album.genres.length > 0 && (
           <>
             <dt>Genres</dt>
-            <dd>
-              <GenreChips names={album.genres} />
-            </dd>
+            <dd><GenreChips names={album.genres} /></dd>
           </>
         )}
       </dl>

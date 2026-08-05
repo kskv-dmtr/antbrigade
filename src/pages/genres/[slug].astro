@@ -40,7 +40,7 @@ const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
   )}
 
   <section class="section">
-    <ul class="grid">
+    <ul class="tiles tiles--auto">
       {releases.map((album) => <AlbumCard album={album} />)}
     </ul>
   </section>

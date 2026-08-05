@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
 import AlbumCard from '../components/AlbumCard.astro';
+import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import { albums, plural } from '../lib/db.js';
 
@@ -14,70 +16,108 @@ for (const a of albums) {
 }
 const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
+const span = years.length ? `${years[0]} — ${years[years.length - 1]}` : '';
+
+/* Порядок с сервера — «сначала новые», поэтому ведущая работа и три плитки
+   это просто первые четыре записи.
+
+   В макете индекс начинался с пятой: вынесенные наверх релизы в список не
+   попадали. Здесь они попадают — иначе поиск по самому свежему альбому
+   отвечал бы «ничего не найдено», а фильтры молча теряли бы четыре записи. */
+const [lead, ...rest] = albums;
+const featured = rest.slice(0, 3);
 ---
 <Base
   title="ant brigade — album collection"
   description={`A collection of ${albums.length} releases: covers, genres, labels and links to listen.`}
   activeSection="albums"
 >
-  <div class="page-head">
-    <h1>Albums</h1>
-    <p class="counter" id="counter" aria-live="polite">{plural(albums.length, 'release', 'releases')}</p>
-  </div>
+  {lead && <Hero album={lead} />}
 
-  <div class="controls">
-    <div class="search">
-      <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
-             spellcheck="false" aria-label="Search by artist or album" />
+  {featured.length > 0 && (
+    <section class="section">
+      <ul class="tiles">
+        {featured.map((a) => <AlbumCard album={a} />)}
+      </ul>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="head">
+      <h1 class="display display--md">Releases</h1>
+      <span class="mono" id="counter" aria-live="polite">
+        {plural(albums.length, 'release', 'releases')}{span && ` · ${span}`}
+      </span>
     </div>
 
-    <div class="filters">
-      <div class="filters__group">
-        <div class="seg" id="types" role="group" aria-label="Release type">
-          <button type="button" data-type="" aria-pressed="true">All</button>
-          {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+    <div class="controls">
+      <div class="search">
+        <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
+               spellcheck="false" aria-label="Search by artist or album" />
+      </div>
+
+      <div class="filters">
+        <div class="filters__group">
+          <div class="seg" id="types" role="group" aria-label="Release type">
+            <button type="button" data-type="" aria-pressed="true">All</button>
+            {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+          </div>
+
+          {/* Индекс строками — вид по умолчанию, как в макете. Стена обложек
+              осталась вторым видом: в каталоге пластинок обложка — это тоже
+              содержание, и терять её целиком было бы неправильно. */}
+          <div class="seg" id="views" role="group" aria-label="View">
+            <button type="button" data-view="index" aria-pressed="true">Index</button>
+            <button type="button" data-view="grid" aria-pressed="false">Grid</button>
+          </div>
+        </div>
+
+        <div class="filters__group">
+          <Select id="genre" label="Genre">
+            <option value="">All genres</option>
+            {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
+          </Select>
+
+          <Select id="year" label="Year">
+            <option value="">All years</option>
+            {years.map((y) => <option value={y}>{y}</option>)}
+          </Select>
+
+          <Select id="sort" label="Sorting">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="artist">By artist</option>
+            <option value="album">By album</option>
+          </Select>
+
+          <button type="button" id="reset" class="reset" hidden>Reset</button>
         </div>
       </div>
-
-      <div class="filters__group">
-        <Select id="genre" label="Genre">
-          <option value="">All genres</option>
-          {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
-        </Select>
-
-        <Select id="year" label="Year">
-          <option value="">All years</option>
-          {years.map((y) => <option value={y}>{y}</option>)}
-        </Select>
-
-        <Select id="sort" label="Sorting">
-          <option value="new">Newest first</option>
-          <option value="old">Oldest first</option>
-          <option value="artist">By artist</option>
-          <option value="album">By album</option>
-        </Select>
-
-        <button type="button" id="reset" class="reset" hidden>Reset</button>
-      </div>
     </div>
-  </div>
 
-  <p class="empty" id="empty" hidden>Nothing found.</p>
+    <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  <ul class="grid" id="grid">
-    {albums.map((a) => (
-      <AlbumCard
-        album={a}
-        data-search={`${a.artist} ${a.album}`.toLowerCase()}
-        data-genres={a.genres.join('|')}
-        data-types={a.types.join('|')}
-        data-year={a.year ?? ''}
-        data-released={a.released ?? ''}
-        data-artist={a.artist.toLowerCase()}
-        data-album={(a.album || '').toLowerCase()}
-      />
-    ))}
-  </ul>
+    {/* Один <li> на релиз, внутри обе разметки: строка и плитка. Видимую
+        выбирает data-view на списке, поэтому фильтру достаточно спрятать
+        сам <li> — переключение вида его не касается. */}
+    <ul class="releases" id="grid" data-view="index">
+      {albums.map((a, i) => (
+        <li
+          class="release"
+          data-search={`${a.artist} ${a.album}`.toLowerCase()}
+          data-genres={a.genres.join('|')}
+          data-types={a.types.join('|')}
+          data-year={a.year ?? ''}
+          data-released={a.released ?? ''}
+          data-artist={a.artist.toLowerCase()}
+          data-album={(a.album || '').toLowerCase()}
+        >
+          <div class="release__row"><ReleaseRow album={a} n={i + 1} /></div>
+          <AlbumCard album={a} as="div" class="release__tile" />
+        </li>
+      ))}
+    </ul>
+  </section>
 </Base>
 
 <script>
@@ -88,6 +128,7 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
   const reset   = document.getElementById('reset');
   const search  = document.getElementById('search');
   const typesEl = document.getElementById('types');
+  const viewsEl = document.getElementById('views');
   const genreEl = document.getElementById('genre');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
@@ -98,7 +139,13 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
-  const plural = (n) => `${n} ${n === 1 ? 'release' : 'releases'}`;
+  // Хвост подписи («· 2026 — 2019») переживает фильтрацию: он про каталог,
+  // а не про выборку.
+  const span = (counter.textContent.split('·')[1] || '').trim();
+  const label = (n) => {
+    const head = n === total ? `${n} ${n === 1 ? 'release' : 'releases'}` : `${n} of ${total}`;
+    return span ? `${head} · ${span}` : head;
+  };
 
   function matches(el) {
     const d = el.dataset;
@@ -118,7 +165,7 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
     }
 
     empty.hidden = shown > 0;
-    counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
+    counter.textContent = label(shown);
 
     const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
     reset.hidden = !dirty;
@@ -161,6 +208,13 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
     state.type = btn.dataset.type;
     for (const b of typesEl.children) b.setAttribute('aria-pressed', String(b === btn));
     apply();
+  });
+
+  viewsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    grid.dataset.view = btn.dataset.view;
+    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
   genreEl.addEventListener('change', () => { state.genre = genreEl.value; apply(); });

@@ -9,8 +9,8 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#1c1c1c",
-  "theme_color": "#1c1c1c",
+  "background_color": "#0c0c0b",
+  "theme_color": "#0c0c0b",
   "categories": ["music", "entertainment"],
   "icons": [
     {

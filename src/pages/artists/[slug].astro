@@ -62,7 +62,10 @@ const clipsSorted = clips.slice().sort((a, b) => {
 
   {clipsSorted.length > 0 && (
     <section class="section">
-      <h2>Videos</h2>
+      <div class="head">
+        <h2 class="display display--md">Videos</h2>
+        <span class="mono">{plural(clipsSorted.length, 'clip', 'clips')}</span>
+      </div>
       <ul class="links">
         {clipsSorted.map((v) => (
           <li>
@@ -77,9 +80,12 @@ const clipsSorted = clips.slice().sort((a, b) => {
   )}
 
   <section class="section">
-    <h2>Discography</h2>
+    <div class="head">
+      <h2 class="display display--md">Discography</h2>
+      <span class="mono">{plural(discography.length, 'release', 'releases')}</span>
+    </div>
     {discography.length > 0 ? (
-      <ul class="grid">
+      <ul class="tiles tiles--auto">
         {discography.map((a) => <AlbumCard album={a} showArtist={false} />)}
       </ul>
     ) : (

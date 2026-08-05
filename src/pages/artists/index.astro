@@ -48,7 +48,10 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   <div id="list">
     {ordered.map(([letter, items]) => (
       <section class="letter" data-letter={letter} id={`letter-${letter === '#' ? 'other' : letter}`}>
-        <h2 class="letter__head">{letter}</h2>
+        <h2 class="letter__head">
+          {letter}
+          <span class="mono mono--sm">{items.length}</span>
+        </h2>
         <ul class="names">
           {items.map((a) => (
             <li data-search={a.name.toLowerCase()}>

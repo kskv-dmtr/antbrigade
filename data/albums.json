@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-05T09:39:55Z",
+  "generatedAt": "2026-08-05T12:18:50Z",
   "counts": {
     "albums": 1042,
     "artists": 937,
@@ -34570,7 +34570,7 @@
       "slug": "dominik-eulberg",
       "name": "Dominik Eulberg",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://dominikeulberg.bandcamp.com/music",
       "albumIds": [
         "2a54129a-8c52-8040-9cc6-c81e3c830345"
       ],
@@ -34880,7 +34880,7 @@
       "slug": "eabs",
       "name": "EABS",
       "country": "PL",
-      "bandcamp": null,
+      "bandcamp": "https://eabs.bandcamp.com/music",
       "albumIds": [
         "d73f2bc3-1137-417d-a4f9-bd5df904aece"
       ],
@@ -36269,7 +36269,7 @@
       "slug": "geld",
       "name": "Geld",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://geld.bandcamp.com/music",
       "albumIds": [
         "45821483-e654-4b63-9283-6bf781ab3c32"
       ],
@@ -36363,7 +36363,7 @@
       "slug": "ginger-root",
       "name": "Ginger Root",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://gingerroot.bandcamp.com/music",
       "albumIds": [
         "1004129a-8c52-80e5-bea3-d120b24d4d37",
         "24b4129a-8c52-806e-8953-fe39869c70d7"
@@ -36888,7 +36888,7 @@
       "slug": "heaven-s-gate",
       "name": "Heaven’s Gate",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://heavensgatefl.bandcamp.com/music",
       "albumIds": [
         "1db4129a-8c52-8024-a9f7-f2300b267e71",
         "ee38f15f-a9db-4f49-bcb8-f235e139c7b7"
@@ -37805,7 +37805,7 @@
       "slug": "james-k",
       "name": "james K",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://jameskmusic.bandcamp.com/music",
       "albumIds": [
         "26b4129a-8c52-8015-a7b1-cd6af2593b7e"
       ],
@@ -39544,7 +39544,7 @@
       "slug": "little-north",
       "name": "Little North",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://littlenorth.bandcamp.com/music",
       "albumIds": [
         "2524129a-8c52-80ab-a7e5-fbbf9ba1bc75"
       ],
@@ -39949,7 +39949,7 @@
       "slug": "mammal-hands",
       "name": "Mammal Hands",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://mammalhands.bandcamp.com/music",
       "albumIds": [
         "3144129a-8c52-805d-bbe2-f542b00b133f"
       ],
@@ -41403,7 +41403,7 @@
       "slug": "o-the-mo",
       "name": "O & The Mo",
       "country": "NZ",
-      "bandcamp": null,
+      "bandcamp": "https://oandthemo.bandcamp.com/music",
       "albumIds": [
         "7ec9bf44-ad21-49d5-9a59-cae694ebfdbb"
       ],
@@ -41734,7 +41734,7 @@
       "slug": "otooto",
       "name": "OTOOTO",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://otooto.bandcamp.com/music",
       "albumIds": [
         "d4cc4a98-ef67-4960-b4d8-9caea62ccbfc",
         "fcb661a9-c7d5-4168-ab2e-960993c3bf4a"
@@ -44729,7 +44729,7 @@
       "slug": "station-model-violence",
       "name": "Station Model Violence",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://stationmodelviolence.bandcamp.com/music",
       "albumIds": [
         "32c4129a-8c52-8029-98e1-d12b16eef1cb"
       ],
@@ -44979,7 +44979,7 @@
       "slug": "surprise-chef",
       "name": "Surprise Chef",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://surprisechef.bandcamp.com/music",
       "albumIds": [
         "1f54129a-8c52-807a-8c58-d17af417f186",
         "46fffbcf-55b8-4c8f-becf-f15ca1ae1cff"
@@ -46298,7 +46298,7 @@
       "slug": "thee-marloes",
       "name": "Thee Marloes",
       "country": "ID",
-      "bandcamp": null,
+      "bandcamp": "https://theemarloes.bandcamp.com/music",
       "albumIds": [
         "3674129a-8c52-80cb-9e82-f71b209488d1",
         "24207217-8d2b-4768-9dc6-c724168deb23"
@@ -47886,7 +47886,7 @@
       "slug": "yhwh-nailgun",
       "name": "YHWH Nailgun",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://yhwhnailgun.bandcamp.com/music",
       "albumIds": [
         "37c4129a-8c52-8031-a05a-d37a87d2be82",
         "1df4129a-8c52-801e-a8ee-d3ffc1837b46"
@@ -48203,7 +48203,7 @@
       "slug": "k7-records",
       "name": "!K7 Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://k7records.bandcamp.com/",
       "albumIds": [
         "2a54129a-8c52-8040-9cc6-c81e3c830345"
       ],
@@ -48270,7 +48270,7 @@
       "slug": "4ad-records",
       "name": "4AD Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://4aduk.bandcamp.com/",
       "albumIds": [
         "37c4129a-8c52-8031-a05a-d37a87d2be82",
         "04d10031-7bcf-400e-9f91-e6b2ea6922ff"
@@ -48337,7 +48337,7 @@
       "slug": "act-music",
       "name": "ACT Music",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://actrecords.bandcamp.com/",
       "albumIds": [
         "3144129a-8c52-805d-bbe2-f542b00b133f"
       ],
@@ -48350,7 +48350,7 @@
       "slug": "ad-93",
       "name": "AD 93",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ad93.bandcamp.com/",
       "albumIds": [
         "26b4129a-8c52-8015-a7b1-cd6af2593b7e",
         "1df4129a-8c52-801e-a8ee-d3ffc1837b46"
@@ -48501,7 +48501,7 @@
       "slug": "anti-fade-records",
       "name": "Anti Fade Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://antifaderecords.bandcamp.com/",
       "albumIds": [
         "32c4129a-8c52-8029-98e1-d12b16eef1cb",
         "3014129a-8c52-80a1-8c76-f162ae7f0b99",
@@ -48567,7 +48567,7 @@
       "slug": "april-records",
       "name": "April Records",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://aprilrecords.bandcamp.com/",
       "albumIds": [
         "d4cc4a98-ef67-4960-b4d8-9caea62ccbfc",
         "2524129a-8c52-80ab-a7e5-fbbf9ba1bc75",
@@ -48610,7 +48610,7 @@
       "slug": "astigmatic-records",
       "name": "Astigmatic Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://astigmaticrec.bandcamp.com/",
       "albumIds": [
         "2cc4129a-8c52-80f9-8052-e155c6f07319",
         "2154129a-8c52-80de-872a-d777d46481c4",
@@ -48948,7 +48948,7 @@
       "slug": "big-crown-records",
       "name": "Big Crown Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bigcrownrecords.bandcamp.com/",
       "albumIds": [
         "3674129a-8c52-80cb-9e82-f71b209488d1",
         "3404129a-8c52-8087-bd3f-ef961e25f616",
@@ -50904,7 +50904,7 @@
       "slug": "ghostly-international",
       "name": "Ghostly International",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://ghostly.bandcamp.com/",
       "albumIds": [
         "1d54129a-8c52-80eb-beba-fb902a1ef9d4",
         "12a4129a-8c52-80c6-98bd-eb4f88841288",

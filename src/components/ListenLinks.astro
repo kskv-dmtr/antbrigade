@@ -1,6 +1,7 @@
 ---
-/* Где послушать: сверху прямые ссылки на площадки, отдельным блоком —
-   переход на album.link, где собраны все остальные.
+/* Где послушать: прямые ссылки на площадки и переход на album.link — одним
+   рядом. Раньше album.link стоял отдельным блоком с пояснением под ним;
+   пояснение убрано, кнопка встала в общий ряд последней.
 
    Логотипы площадок намеренно не рисую: выдуманный логотип хуже его
    отсутствия. Пока текстовые кнопки, иконки придут с макетом. */
@@ -10,21 +11,18 @@ import { listenLinks } from '../lib/db.js';
 const { album } = Astro.props;
 const links = listenLinks(album);
 ---
-{links.length > 0 && (
+{(links.length > 0 || album.url) && (
   <div class="listen">
     {links.map((link) => (
       <a class="listen__platform" href={link.url} target="_blank" rel="noopener noreferrer">
         {link.label}
       </a>
     ))}
-  </div>
-)}
 
-{album.url && (
-  <div class="listen-all">
-    <a class="button" href={album.url} target="_blank" rel="noopener noreferrer">
-      Open album.link
-    </a>
-    <span class="hint">Every platform the release is available on</span>
+    {album.url && (
+      <a class="listen__platform" href={album.url} target="_blank" rel="noopener noreferrer">
+        Open album.link
+      </a>
+    )}
   </div>
 )}

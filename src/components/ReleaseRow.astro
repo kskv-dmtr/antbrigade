@@ -13,7 +13,10 @@ const { album } = Astro.props;
 <a class="row" href={`/albums/${album.slug}`}>
   <span class="row__artist">{album.artist}</span>
   <span class="row__title">{album.album}</span>
-  <span class="row__meta">{album.types.join(' / ')}</span>
+  {/* Точка, а не косая: «Album / Collaboration» читалось как одно
+      составное слово. Колонка расширена под это сочетание — самое
+      длинное в базе, 21 знак. */}
+  <span class="row__meta">{album.types.join(' · ')}</span>
   {/* Отдельно стоящие числа по всему сайту берём в квадратные скобки. */}
   <span class="row__num">{album.year ? `[${album.year}]` : '—'}</span>
 </a>

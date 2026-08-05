@@ -62,7 +62,7 @@ const canonical = new URL(
   <header class="masthead">
     <div class="masthead__in shell">
       <a class="brand" href="/">ANTBRIGADE</a>
-      <nav class="nav mono">
+      <nav class="nav">
         {nav.map((item) => (
           <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>
             {item.label}
@@ -85,5 +85,28 @@ const canonical = new URL(
       </span>
     </div>
   </footer>
+
+  <script>
+    /* Шапка прячется при прокрутке вниз и возвращается при прокрутке вверх.
+
+       Порог в 6 пикселей нужен, чтобы шапка не дёргалась от инерционной
+       прокрутки и от подрагивания тачпада: без него любое колебание в один
+       пиксель считалось бы сменой направления. */
+    const head = document.querySelector('.masthead');
+    const STEP = 6;
+    let last = window.scrollY;
+
+    addEventListener('scroll', () => {
+      const y = window.scrollY;
+
+      // У самого верха шапка видна всегда, иначе она остаётся спрятанной
+      // после возврата к началу страницы.
+      if (y <= head.offsetHeight) head.removeAttribute('data-hidden');
+      else if (y > last + STEP) head.setAttribute('data-hidden', '');
+      else if (y < last - STEP) head.removeAttribute('data-hidden');
+
+      if (Math.abs(y - last) > STEP) last = y;
+    }, { passive: true });
+  </script>
 </body>
 </html>

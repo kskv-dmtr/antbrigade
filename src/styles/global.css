@@ -17,6 +17,9 @@
 
 @import '@fontsource-variable/geist/wght.css';
 @import '@fontsource-variable/geist-mono/wght.css';
+/* Только Regular: у пиксельного шрифта насыщенности отличаются толщиной
+   штриха в целых пикселях, и всё, кроме 400, на мелком кегле мажет. */
+@import '@fontsource/pixelify-sans/400.css';
 
 :root {
   --bg:          #0c0c0b;
@@ -49,6 +52,8 @@
 
   --font: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* Логотип в шапке набран отдельным пиксельным шрифтом. */
+  --font-head: 'Pixelify Sans', var(--mono);
 
   color-scheme: dark;
 }
@@ -115,27 +120,51 @@ a { color: inherit; text-decoration: none; }
    прилипания — на длинном индексе прилипшая шапка съедает первую строку
    при переходе по якорю.                                              */
 
+/* Прилипает и прячется при прокрутке вниз, возвращается при прокрутке
+   вверх. Фон обязателен: под шапкой едет содержимое. */
 .masthead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
+  transition: transform 0.22s ease;
 }
+.masthead[data-hidden] { transform: translateY(-100%); }
+
 .masthead__in {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
+/* Пиксельный шрифт только здесь, на логотипе.
+
+   Кегль кратен 4: на промежуточных размерах пиксельная сетка даёт неровный
+   штрих. Насыщенность только 400 — у пиксельных начертаний толщина растёт
+   целыми пикселями и на мелком кегле мажет. Отрицательный трекинг снят: он
+   слепляет пиксельные буквы. Сглаживание отключено — `antialiased` из body
+   такой шрифт размывает.                                                */
 .brand {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
 }
 
 .nav {
   display: flex;
   gap: 26px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--fg-muted);
 }
 .nav a {
@@ -277,9 +306,12 @@ a { color: inherit; text-decoration: none; }
 }
 .index__head .mono { color: var(--fg-dim); }
 
+/* Третья колонка шире остальных: в неё должно целиком помещаться
+   «Album · Collaboration» — самое длинное сочетание типов в базе.
+   Замер строки моноширинным 12px даёт 152 px, взято с запасом. */
 .row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 90px 70px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 160px 70px;
   align-items: center;
   gap: 16px;
   padding: 13px 8px;
@@ -324,11 +356,15 @@ a { color: inherit; text-decoration: none; }
   text-align: right;
   color: var(--fg-muted);
 }
-.row__artist, .row__title, .row__meta {
+/* Тип релиза из многоточия исключён намеренно: он должен читаться целиком,
+   под это и подобрана ширина колонки. Обрезаются только имена и названия —
+   они произвольной длины. */
+.row__artist, .row__title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.row__meta { white-space: nowrap; }
 
 /* Сам механизм переключения «строка / плитка» лежит в конце файла: там он
    общий для релизов, артистов и лейблов. */
@@ -622,10 +658,9 @@ select option { background: #1a1a19; color: var(--fg); }
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 0 0 16px;
+  margin: 0 0 30px;
 }
 .listen__platform,
-.button,
 .bandcamp {
   display: inline-flex;
   align-items: center;
@@ -639,24 +674,6 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 .listen__platform:hover,
 .bandcamp:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
-
-.button {
-  background: var(--ink);
-  color: var(--ink-fg);
-  border-color: var(--ink);
-}
-.button:hover { background: transparent; color: var(--fg); border-color: var(--line); }
-
-.listen-all {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin: 0 0 30px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line-soft);
-}
-.hint { font-size: 12.5px; color: var(--fg-dim); }
 
 .bandcamp { margin-bottom: 26px; }
 .bandcamp__icon { width: 14px; height: 14px; fill: currentColor; flex: none; }
@@ -749,6 +766,8 @@ select option { background: #1a1a19; color: var(--fg); }
   letter-spacing: -0.03em;
 }
 .names__letter:first-child { margin-top: 0; }
+/* Переход по букве не должен заводить заголовок под прилипшую шапку. */
+.names__letter { scroll-margin-top: 88px; }
 .names__letter .mono { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.08em; }
 
 /* 284 жанра разной длины — не колонки, а поток. */
@@ -879,11 +898,16 @@ select option { background: #1a1a19; color: var(--fg); }
 @media (max-width: 640px) {
   :root { --pad: 16px; --gap: 14px; --tile-min: 150px; }
 
-  .masthead__in { padding-top: 16px; padding-bottom: 16px; }
-  .brand { font-size: 17px; }
-  /* Пять пунктов меню в строку на 390 px не влезают — переносим их под
+  /* Кегль логотипа кратен 4: пиксельный шрифт на промежуточных мажет. */
+  .brand { font-size: 20px; }
+  /* Четыре пункта меню в строку на 375 px не влезают — переносим их под
      слово, а не прячем в кнопку: кнопка потребовала бы скрипта. */
-  .masthead__in { flex-wrap: wrap; gap: 10px 16px; }
+  .masthead__in {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
   .nav { gap: 16px; font-size: 11px; }
 
   .display--lg { font-size: 24px; }
@@ -903,7 +927,7 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .select__chevron, .tile__over { transition: none; }
+  .select__chevron, .tile__over, .masthead { transition: none; }
 }
 
 /* -------------------------------------------- переключение вида

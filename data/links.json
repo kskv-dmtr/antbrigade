@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:57:36Z",
+  "generatedAt": "2026-08-05T23:19:04Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16667,6 +16667,38 @@
       "upc": "4064832579543",
       "tracks": 11,
       "releaseDate": "2021-06-16"
+    },
+    "3b34129a-8c52-8039-93a2-ff5ce4e4c9c9": {
+      "source": "https://album.link/4vxscrqxb75th",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6Tzx3FfxinTEuNRlsjakdj",
+        "pandora": "https://www.pandora.com/AL:64945355",
+        "tidal": "https://listen.tidal.com/album/515229085",
+        "boomplay": "https://www.boomplay.com/albums/129415657",
+        "bandcamp": "https://los-pulpitos.bandcamp.com/album/tentacletek-album"
+      },
+      "upc": "5400863210335",
+      "tracks": 10,
+      "releaseDate": "2026-03-17"
+    },
+    "3b34129a-8c52-806c-990c-fb09b3b99b2e": {
+      "source": "https://album.link/h0jzmwvsqmpbg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6nKXwOa0hFG1i2om1nmywW",
+        "pandora": "https://www.pandora.com/AL:10432076",
+        "deezer": "https://www.deezer.com/album/252853212",
+        "amazonMusic": "https://music.amazon.com/albums/B09D3RZNCV",
+        "tidal": "https://listen.tidal.com/album/194711412",
+        "napster": "https://play.napster.com/album/alb.606189414",
+        "yandex": "https://music.yandex.ru/album/17575104",
+        "boomplay": "https://www.boomplay.com/albums/30324094",
+        "anghami": "https://play.anghami.com/album/1022011122?refer=linktree",
+        "bandcamp": "https://jollymare.bandcamp.com/album/epsilon",
+        "amazonStore": "https://amazon.com/dp/B09D3RZNCV"
+      },
+      "upc": "4251804118118",
+      "tracks": 7,
+      "releaseDate": "2021-08-10"
     }
   }
 }

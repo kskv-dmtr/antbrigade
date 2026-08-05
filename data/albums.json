@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-05T19:57:25Z",
+  "generatedAt": "2026-08-05T23:18:46Z",
   "counts": {
-    "albums": 1047,
-    "artists": 941,
-    "labels": 587,
+    "albums": 1049,
+    "artists": 943,
+    "labels": 589,
     "videos": 46
   },
   "albums": [
@@ -2563,6 +2563,36 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-8039-93a2-ff5ce4e4c9c9",
+      "slug": "los-pulpitos-tentacletek",
+      "artist": "Los Pulpitos",
+      "album": "Tentacletek",
+      "url": "https://album.link/4vxscrqxb75th",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af9512c42-9830-45e8-9a25-954980f63e69%3Aa3628784814_10.jpg?table=block&id=3b34129a-8c52-8039-93a2-ff5ce4e4c9c9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dub Techno",
+        "Broken Beat",
+        "Balearic Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-17",
+      "year": 2026,
+      "artistIds": [
+        "3b34129a-8c52-80d3-819b-cc2a1175dace"
+      ],
+      "artists": [
+        "Los Pulpitos"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-80a1-8209-dc2cc56c52d4"
+      ],
+      "labels": [
+        "Crammed Discs"
       ]
     },
     {
@@ -29774,6 +29804,36 @@
       ]
     },
     {
+      "id": "3b34129a-8c52-806c-990c-fb09b3b99b2e",
+      "slug": "jolly-mare-epsilon",
+      "artist": "Jolly Mare",
+      "album": "Epsilon",
+      "url": "https://album.link/h0jzmwvsqmpbg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A650e28dc-165a-4557-8501-702ec889da1b%3Aa0557530438_10.jpg?table=block&id=3b34129a-8c52-806c-990c-fb09b3b99b2e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Italo Disco",
+        "World Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-10",
+      "year": 2021,
+      "artistIds": [
+        "3b34129a-8c52-80a2-b762-f6488b084872"
+      ],
+      "artists": [
+        "Jolly Mare"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-8091-8bfb-c71db1a6f078"
+      ],
+      "labels": [
+        "International Feel"
+      ]
+    },
+    {
       "id": "2524129a-8c52-800d-801a-e396fe6bee19",
       "slug": "the-night-flight-orchestra-aeromantic-ii",
       "artist": "The Night Flight Orchestra",
@@ -38321,6 +38381,25 @@
       "videoIds": []
     },
     {
+      "id": "3b34129a-8c52-80a2-b762-f6488b084872",
+      "slug": "jolly-mare",
+      "name": "Jolly Mare",
+      "country": "IT",
+      "bandcamp": "https://jollymare.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-806c-990c-fb09b3b99b2e"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Italo Disco",
+        "World Music"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-8091-8bfb-c71db1a6f078"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2494129a-8c52-8010-a832-c7f01dd11463",
       "slug": "jonathan-personne",
       "name": "Jonathan Personne",
@@ -39833,6 +39912,25 @@
       ],
       "labelIds": [
         "36e4129a-8c52-80d0-8a19-da575b59653a"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b34129a-8c52-80d3-819b-cc2a1175dace",
+      "slug": "los-pulpitos",
+      "name": "Los Pulpitos",
+      "country": "DE",
+      "bandcamp": "https://los-pulpitos.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-8039-93a2-ff5ce4e4c9c9"
+      ],
+      "genres": [
+        "Dub Techno",
+        "Broken Beat",
+        "Balearic Beat"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-80a1-8209-dc2cc56c52d4"
       ],
       "videoIds": []
     },
@@ -49994,6 +50092,19 @@
       ]
     },
     {
+      "id": "3b34129a-8c52-80a1-8209-dc2cc56c52d4",
+      "slug": "crammed-discs",
+      "name": "Crammed Discs",
+      "country": "BE",
+      "bandcamp": "https://crammed-discs.bandcamp.com/",
+      "albumIds": [
+        "3b34129a-8c52-8039-93a2-ff5ce4e4c9c9"
+      ],
+      "artistIds": [
+        "3b34129a-8c52-80d3-819b-cc2a1175dace"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80c2-8212-edd1aa6720b0",
       "slug": "creator-destructor-records",
       "name": "Creator Destructor Records",
@@ -51838,6 +51949,19 @@
         "2494129a-8c52-806b-8e1b-ce690fd7abb9",
         "2494129a-8c52-8037-9eb0-ca85128b0fa8",
         "2524129a-8c52-80d7-89ff-faec7147a471"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-8091-8bfb-c71db1a6f078",
+      "slug": "international-feel",
+      "name": "International Feel",
+      "country": "IT",
+      "bandcamp": "https://internationalfeel.bandcamp.com/",
+      "albumIds": [
+        "3b34129a-8c52-806c-990c-fb09b3b99b2e"
+      ],
+      "artistIds": [
+        "3b34129a-8c52-80a2-b762-f6488b084872"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T06:45:24Z",
+  "generatedAt": "2026-08-05T17:55:28Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16579,6 +16579,77 @@
       "upc": "795154143207",
       "tracks": 12,
       "releaseDate": "1990-01"
+    },
+    "3b34129a-8c52-80bb-a119-e6705706332a": {
+      "source": "https://album.link/vk9bkqfmmxqz2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5w6iYBCbAgRq8RMuytCAka",
+        "pandora": "https://www.pandora.com/AL:9663916",
+        "deezer": "https://www.deezer.com/album/236951982",
+        "amazonMusic": "https://music.amazon.com/albums/B097F9PQR1",
+        "tidal": "https://listen.tidal.com/album/187504991",
+        "yandex": "https://music.yandex.ru/album/16210957",
+        "boomplay": "https://www.boomplay.com/albums/26890860",
+        "anghami": "https://play.anghami.com/album/1020560702?refer=linktree",
+        "bandcamp": "https://holyhivemusic.bandcamp.com/album/holy-hive",
+        "amazonStore": "https://amazon.com/dp/B097F9PQR1"
+      },
+      "upc": "349223011432",
+      "tracks": 15,
+      "releaseDate": "2021-08-24"
+    },
+    "3b34129a-8c52-8071-b584-ebe7447d495d": {
+      "source": "https://album.link/5kwjxn2nrkd4j",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/18R1s7IG4ISwo7kXEAkkQB",
+        "deezer": "https://www.deezer.com/album/218135042",
+        "amazonMusic": "https://music.amazon.com/albums/B0916NX4WJ",
+        "tidal": "https://listen.tidal.com/album/178628634",
+        "anghami": "https://play.anghami.com/album/1018941346?refer=linktree",
+        "bandcamp": "https://benbrowning.bandcamp.com/album/until-we-win",
+        "amazonStore": "https://amazon.com/dp/B0916NX4WJ"
+      },
+      "upc": "196052927881",
+      "tracks": 10,
+      "releaseDate": "2021-03-16"
+    },
+    "3b34129a-8c52-8013-8b34-e50ee5080289": {
+      "source": "https://album.link/gfpmt6ptkj2j2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3dMQYdTraNEoCBKUC34Uyt",
+        "pandora": "https://www.pandora.com/AL:27859117",
+        "deezer": "https://www.deezer.com/album/187321122",
+        "amazonMusic": "https://music.amazon.com/albums/B08NTT36DJ",
+        "tidal": "https://listen.tidal.com/album/162693972",
+        "napster": "https://play.napster.com/album/alb.593344563",
+        "yandex": "https://music.yandex.ru/album/12840946",
+        "boomplay": "https://www.boomplay.com/albums/18244216",
+        "anghami": "https://play.anghami.com/album/1016139272?refer=linktree",
+        "bandcamp": "https://parbleu.bandcamp.com/album/danse-cette-zik",
+        "amazonStore": "https://amazon.com/dp/B08NTT36DJ"
+      },
+      "upc": "3616407761139",
+      "tracks": 7,
+      "releaseDate": "2020-07-01"
+    },
+    "3b34129a-8c52-80b3-801d-fca6b44c57c7": {
+      "source": "https://album.link/qwvccp8h4n8qs",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0IOiwcIywlRenbyorrUzJO",
+        "pandora": "https://www.pandora.com/AL:5033295",
+        "deezer": "https://www.deezer.com/album/85428062",
+        "amazonMusic": "https://music.amazon.com/albums/B07N41PN1R",
+        "tidal": "https://listen.tidal.com/album/103023603",
+        "napster": "https://play.napster.com/album/alb.349150787",
+        "yandex": "https://music.yandex.ru/album/6726550",
+        "boomplay": "https://www.boomplay.com/albums/3349405",
+        "anghami": "https://play.anghami.com/album/6168588?refer=linktree",
+        "bandcamp": "https://miel2montagne.bandcamp.com/album/miel-de-montagne-lp",
+        "amazonStore": "https://amazon.com/dp/B07N41PN1R"
+      },
+      "upc": "3615936816693",
+      "tracks": 10,
+      "releaseDate": "2019-03-05"
     }
   }
 }

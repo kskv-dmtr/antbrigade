@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-05T12:18:50Z",
+  "generatedAt": "2026-08-05T17:55:01Z",
   "counts": {
-    "albums": 1042,
-    "artists": 937,
-    "labels": 583,
+    "albums": 1046,
+    "artists": 940,
+    "labels": 586,
     "videos": 46
   },
   "albums": [
@@ -29717,6 +29717,35 @@
       ]
     },
     {
+      "id": "3b34129a-8c52-80bb-a119-e6705706332a",
+      "slug": "holy-hive-holy-hive",
+      "artist": "Holy Hive",
+      "album": "Holy Hive",
+      "url": "https://album.link/vk9bkqfmmxqz2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab16ca5cd-0db0-4224-a191-38ee0f4cee19%3Aa2533362101_10.jpg?table=block&id=3b34129a-8c52-80bb-a119-e6705706332a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Blue-Eyed Soul",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-24",
+      "year": 2021,
+      "artistIds": [
+        "3b34129a-8c52-807e-8de9-f337f822119e"
+      ],
+      "artists": [
+        "Holy Hive"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80b5-a601-f724bcf55f84"
+      ],
+      "labels": [
+        "Big Crown Records"
+      ]
+    },
+    {
       "id": "2524129a-8c52-80ed-afc3-f411fbb7eefb",
       "slug": "okvsho-orange-wine",
       "artist": "Okvsho",
@@ -29975,6 +30004,35 @@
       ]
     },
     {
+      "id": "3b34129a-8c52-8071-b584-ebe7447d495d",
+      "slug": "ben-browning-until-we-win",
+      "artist": "Ben Browning",
+      "album": "Until We Win",
+      "url": "https://album.link/5kwjxn2nrkd4j",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac59566eb-b642-4976-9629-1a1f87ed984c%3Aa0950922116_10.jpg?table=block&id=3b34129a-8c52-8071-b584-ebe7447d495d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Indietronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-16",
+      "year": 2021,
+      "artistIds": [
+        "3b34129a-8c52-8008-95fd-d41fa64ae30f"
+      ],
+      "artists": [
+        "Ben Browning"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-8003-b4eb-f84cfc22bcf6"
+      ],
+      "labels": [
+        "Kardinian Records"
+      ]
+    },
+    {
       "id": "1ab4129a-8c52-80eb-9f7c-f05e7791975a",
       "slug": "slant-1",
       "artist": "Slant",
@@ -30118,6 +30176,36 @@
       ],
       "labels": [
         "Cascine"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-8013-8b34-e50ee5080289",
+      "slug": "parbleu-danse-cette-zik",
+      "artist": "Parbleu",
+      "album": "Danse Cette Zik",
+      "url": "https://album.link/gfpmt6ptkj2j2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5b74cd66-4bae-4529-926c-7b79c6366c20%3Aa3840979211_10.jpg?table=block&id=3b34129a-8c52-8013-8b34-e50ee5080289&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Balearic Beat",
+        "Italo Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-08-01",
+      "year": 2020,
+      "artistIds": [
+        "2514129a-8c52-8006-8752-f33cc4ec59c4"
+      ],
+      "artists": [
+        "Parbleu"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-807c-9966-d73cace97807"
+      ],
+      "labels": [
+        "Sonor Music Editions"
       ]
     },
     {
@@ -30405,6 +30493,36 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-80b3-801d-fca6b44c57c7",
+      "slug": "miel-de-montagne-miel-de-montagne",
+      "artist": "Miel de Montagne",
+      "album": "Miel de Montagne",
+      "url": "https://album.link/qwvccp8h4n8qs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af94ce313-4de3-444a-9a32-6c92d6fe4f6a%3Aa2772667925_10.jpg?table=block&id=3b34129a-8c52-80b3-801d-fca6b44c57c7&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "French Pop",
+        "Synthpop",
+        "Indie Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-04-05",
+      "year": 2019,
+      "artistIds": [
+        "3b34129a-8c52-80cc-98ff-d70f9dc3036a"
+      ],
+      "artists": [
+        "Miel de Montagne"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-80f7-b867-d724aaac8fa5"
+      ],
+      "labels": [
+        "Delicieuse Records"
       ]
     },
     {
@@ -31969,6 +32087,24 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b34129a-8c52-8008-95fd-d41fa64ae30f",
+      "slug": "ben-browning",
+      "name": "Ben Browning",
+      "country": "AU",
+      "bandcamp": "https://benbrowning.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-8071-b584-ebe7447d495d"
+      ],
+      "genres": [
+        "Indie Pop",
+        "Indietronica"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-8003-b4eb-f84cfc22bcf6"
       ],
       "videoIds": []
     },
@@ -37086,6 +37222,24 @@
       "videoIds": []
     },
     {
+      "id": "3b34129a-8c52-807e-8de9-f337f822119e",
+      "slug": "holy-hive",
+      "name": "Holy Hive",
+      "country": "US",
+      "bandcamp": "https://holyhivemusic.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-80bb-a119-e6705706332a"
+      ],
+      "genres": [
+        "Blue-Eyed Soul",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80b5-a601-f724bcf55f84"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3a94129a-8c52-8005-bc5e-f907ba6cd0d0",
       "slug": "holy-wave",
       "name": "Holy Wave",
@@ -40619,6 +40773,25 @@
       "videoIds": []
     },
     {
+      "id": "3b34129a-8c52-80cc-98ff-d70f9dc3036a",
+      "slug": "miel-de-montagne",
+      "name": "Miel de Montagne",
+      "country": "FR",
+      "bandcamp": "https://miel2montagne.bandcamp.com/music",
+      "albumIds": [
+        "3b34129a-8c52-80b3-801d-fca6b44c57c7"
+      ],
+      "genres": [
+        "French Pop",
+        "Synthpop",
+        "Indie Pop"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-80f7-b867-d724aaac8fa5"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-80b4-b677-dcacc7a32f48",
       "slug": "mild-universe",
       "name": "Mild Universe",
@@ -41945,14 +42118,19 @@
       "country": "IT",
       "bandcamp": null,
       "albumIds": [
-        "59388676-c2d0-456f-81af-84e6cb8c0ae7"
+        "59388676-c2d0-456f-81af-84e6cb8c0ae7",
+        "3b34129a-8c52-8013-8b34-e50ee5080289"
       ],
       "genres": [
         "Electronic",
-        "Disco"
+        "Disco",
+        "Nu-Disco",
+        "Balearic Beat",
+        "Italo Disco"
       ],
       "labelIds": [
-        "24a4129a-8c52-80df-8da6-d54309d919db"
+        "24a4129a-8c52-80df-8da6-d54309d919db",
+        "3b34129a-8c52-807c-9966-d73cace97807"
       ],
       "videoIds": []
     },
@@ -47342,7 +47520,7 @@
       "slug": "waan",
       "name": "WAAN",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://waanmusic.bandcamp.com/music",
       "albumIds": [
         "31f4129a-8c52-80b1-a940-c690d0a91cac"
       ],
@@ -48959,7 +49137,8 @@
         "6ab27855-1303-46f0-8629-28c5138847fe",
         "0e1f8737-6809-4e9c-bdbe-eba4e832342c",
         "46fffbcf-55b8-4c8f-becf-f15ca1ae1cff",
-        "2534129a-8c52-80f8-8577-f0c3643e8f78"
+        "2534129a-8c52-80f8-8577-f0c3643e8f78",
+        "3b34129a-8c52-80bb-a119-e6705706332a"
       ],
       "artistIds": [
         "2514129a-8c52-8025-9293-c077b77155f3",
@@ -48968,7 +49147,8 @@
         "2494129a-8c52-8085-a783-c1bc9ac15ac1",
         "24f4129a-8c52-80a9-800f-cbb93fe6e416",
         "24f4129a-8c52-80f5-bbfb-ea312113ce36",
-        "2534129a-8c52-8040-af45-f086301f5333"
+        "2534129a-8c52-8040-af45-f086301f5333",
+        "3b34129a-8c52-807e-8de9-f337f822119e"
       ]
     },
     {
@@ -50042,6 +50222,19 @@
         "2514129a-8c52-8035-b4a8-da1658729319",
         "24a4129a-8c52-80ea-8dd7-eed48f4fb7cc",
         "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-80f7-b867-d724aaac8fa5",
+      "slug": "delicieuse-records",
+      "name": "Delicieuse Records",
+      "country": "FR",
+      "bandcamp": "https://delicieuserecords.bandcamp.com/",
+      "albumIds": [
+        "3b34129a-8c52-80b3-801d-fca6b44c57c7"
+      ],
+      "artistIds": [
+        "3b34129a-8c52-80cc-98ff-d70f9dc3036a"
       ]
     },
     {
@@ -51908,6 +52101,19 @@
       "artistIds": [
         "30f4129a-8c52-808d-943d-cbf6ea4ad9ff",
         "28a4129a-8c52-80b1-844d-c094893c789f"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-8003-b4eb-f84cfc22bcf6",
+      "slug": "kardinian-records",
+      "name": "Kardinian Records",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3b34129a-8c52-8071-b584-ebe7447d495d"
+      ],
+      "artistIds": [
+        "3b34129a-8c52-8008-95fd-d41fa64ae30f"
       ]
     },
     {
@@ -55218,7 +55424,7 @@
       "slug": "sonar-kollektiv",
       "name": "Sonar Kollektiv",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://sonarkollektiv.bandcamp.com/",
       "albumIds": [
         "31f4129a-8c52-80b1-a940-c690d0a91cac"
       ],
@@ -55251,6 +55457,19 @@
       ],
       "artistIds": [
         "2424129a-8c52-8072-bc20-c5a3c1e61055"
+      ]
+    },
+    {
+      "id": "3b34129a-8c52-807c-9966-d73cace97807",
+      "slug": "sonor-music-editions",
+      "name": "Sonor Music Editions",
+      "country": "IT",
+      "bandcamp": "https://sonormusiceditions.bandcamp.com/",
+      "albumIds": [
+        "3b34129a-8c52-8013-8b34-e50ee5080289"
+      ],
+      "artistIds": [
+        "2514129a-8c52-8006-8752-f33cc4ec59c4"
       ]
     },
     {

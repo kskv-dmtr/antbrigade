@@ -2,9 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
+import Select from '../../components/Select.astro';
 import { artists, albumsOf, plural } from '../../lib/db.js';
 
-// Группировка по первой букве, чтобы 931 имя можно было просматривать глазами.
+// Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
   const ch = name.trim()[0]?.toUpperCase() ?? '#';
   return /[A-Z]/.test(ch) ? ch : '#';
@@ -22,6 +23,8 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   if (b === '#') return -1;
   return a.localeCompare(b);
 });
+
+const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 ---
 <Base
   title="Artists · ant brigade"
@@ -36,50 +39,66 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   </div>
 
   <div class="controls">
-    <div class="search">
-      <input type="search" id="search" placeholder="Artist name" autocomplete="off"
-             spellcheck="false" aria-label="Search by artist name" />
+    <div class="controls__top">
+      <div class="search">
+        <input type="search" id="search" placeholder="Artist name" autocomplete="off"
+               spellcheck="false" aria-label="Search by artist name" />
+      </div>
+      <ViewSwitch />
     </div>
+
     <div class="filters">
       <div class="filters__group">
-        <ViewSwitch />
+        <Select id="sort" label="Sorting">
+          <option value="az">A → Z</option>
+          <option value="za">Z → A</option>
+          <option value="releases">Most releases</option>
+        </Select>
       </div>
     </div>
-    <nav class="alphabet">
-      {ordered.map(([letter]) => <a href={`#letter-${letter === '#' ? 'other' : letter}`}>{letter}</a>)}
+
+    <nav class="alphabet" id="alphabet">
+      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
     </nav>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  <div id="list" data-view="index">
+  {/* Буквы лежат в том же списке отдельными <li>, а не оборачивают группы:
+      тогда сортировка переставляет только записи, а заголовки достаточно
+      спрятать, когда порядок перестаёт быть алфавитным. */}
+  <ul class="names" id="list" data-view="list">
     {ordered.map(([letter, items]) => (
-      <section class="letter" data-letter={letter} id={`letter-${letter === '#' ? 'other' : letter}`}>
-        <h2 class="letter__head">
-          {letter}
+      <>
+        <li class="names__letter" id={anchor(letter)} data-letter={letter}>
+          <span>{letter}</span>
           <span class="mono mono--sm">{items.length}</span>
-        </h2>
-        <ul class="names">
-          {items.map((a) => (
-            <li data-search={a.name.toLowerCase()}>
-              <a class="names__link view-row" href={`/artists/${a.slug}`}>
-                <span class="names__name">{a.name}</span>
-                <span class="names__country">{a.country ?? ''}</span>
-                <span class="names__count">{a.albumIds.length || ''}</span>
-              </a>
-              <NameTile
-                class="view-tile"
-                href={`/artists/${a.slug}`}
-                name={a.name}
-                country={a.country}
-                releases={albumsOf(a.albumIds)}
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
+        </li>
+        {items.map((a) => (
+          <li
+            class="names__item"
+            data-search={a.name.toLowerCase()}
+            data-name={a.name.toLowerCase()}
+            data-count={a.albumIds.length}
+            data-letter={letter}
+          >
+            <a class="row row--name view-row" href={`/artists/${a.slug}`}>
+              <span class="row__title">{a.name}</span>
+              <span class="row__meta">{a.country ?? ''}</span>
+              <span class="row__num">{a.albumIds.length || ''}</span>
+            </a>
+            <NameTile
+              class="view-tile"
+              href={`/artists/${a.slug}`}
+              name={a.name}
+              country={a.country}
+              releases={albumsOf(a.albumIds)}
+            />
+          </li>
+        ))}
+      </>
     ))}
-  </div>
+  </ul>
 </Base>
 
 <script>
@@ -88,9 +107,54 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   const counter  = document.getElementById('counter');
   const list     = document.getElementById('list');
   const viewsEl  = document.getElementById('views');
-  const sections = Array.from(document.querySelectorAll('.letter'));
-  const items    = Array.from(document.querySelectorAll('.names li'));
-  const total    = items.length;
+  const sortEl   = document.getElementById('sort');
+  const alphabet = document.getElementById('alphabet');
+
+  const heads = Array.from(list.querySelectorAll('.names__letter'));
+  const items = Array.from(list.querySelectorAll('.names__item'));
+  const total = items.length;
+
+  // Исходный порядок — это записи вперемешку с заголовками букв; храним его
+  // целиком, чтобы возврат к алфавиту не пришлось собирать заново.
+  const initialOrder = Array.from(list.children);
+
+  let query = '';
+
+  const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
+
+  function apply() {
+    const alphabetical = sortEl.value === 'az';
+    const shown = new Set();
+    let count = 0;
+
+    for (const li of items) {
+      const ok = !query || li.dataset.search.includes(query);
+      li.hidden = !ok;
+      if (ok) { count++; shown.add(li.dataset.letter); }
+    }
+
+    // Буква видна, только когда порядок алфавитный и под ней кто-то остался.
+    for (const h of heads) h.hidden = !alphabetical || !shown.has(h.dataset.letter);
+    alphabet.hidden = !alphabetical;
+
+    empty.hidden = count > 0;
+    counter.textContent = count === total ? plural(total) : count + ' of ' + total;
+  }
+
+  function sort() {
+    const by = sortEl.value;
+    let order;
+    if (by === 'az') order = initialOrder;
+    else if (by === 'za') order = items.slice().reverse();
+    else order = items.slice().sort(
+      (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
+             || a.dataset.name.localeCompare(b.dataset.name)
+    );
+
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    list.appendChild(frag);
+  }
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
@@ -99,25 +163,26 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
+  sortEl.addEventListener('change', () => { sort(); apply(); });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      const q = search.value.trim().toLowerCase();
-      let shown = 0;
-      for (const li of items) {
-        const ok = !q || li.dataset.search.includes(q);
-        li.hidden = !ok;
-        if (ok) shown++;
-      }
-      // прячем буквы, внутри которых ничего не осталось
-      for (const s of sections) {
-        s.hidden = !s.querySelector('.names li:not([hidden])');
-      }
-      empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
+      query = search.value.trim().toLowerCase();
+      apply();
     }, 120);
   });
+
+  /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами. */
+  for (const wrap of document.querySelectorAll('.select')) {
+    const field = wrap.querySelector('select');
+    const close = () => wrap.removeAttribute('data-open');
+    field.addEventListener('mousedown', () => wrap.toggleAttribute('data-open'));
+    field.addEventListener('keydown', (e) => {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+    });
+    field.addEventListener('change', close);
+    field.addEventListener('blur', close);
+  }
 </script>

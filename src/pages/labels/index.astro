@@ -2,12 +2,35 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
+import Select from '../../components/Select.astro';
 import { labels, albumsOf, plural } from '../../lib/db.js';
 
-// По убыванию числа релизов: так сразу видно основные лейблы коллекции.
-const sorted = labels.slice().sort(
-  (a, b) => b.albumIds.length - a.albumIds.length || a.name.localeCompare(b.name)
-);
+/* Раскладка та же, что у артистов: по первой букве.
+
+   Порядок по умолчанию поменялся — был «сначала крупные лейблы», стал
+   алфавитный. Иначе буквенная навигация не имеет смысла: указатель ведёт к
+   букве, а записи расставлены по числу релизов. Прежний порядок никуда не
+   делся, он в сортировке под именем «Most releases». */
+function bucket(name) {
+  const ch = name.trim()[0]?.toUpperCase() ?? '#';
+  return /[A-Z]/.test(ch) ? ch : '#';
+}
+
+const byName = labels.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+const groups = new Map();
+for (const l of byName) {
+  const key = bucket(l.name);
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key).push(l);
+}
+const ordered = [...groups.entries()].sort(([a], [b]) => {
+  if (a === '#') return 1;
+  if (b === '#') return -1;
+  return a.localeCompare(b);
+});
+
+const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 ---
 <Base
   title="Labels · ant brigade"
@@ -22,52 +45,118 @@ const sorted = labels.slice().sort(
   </div>
 
   <div class="controls">
-    <div class="search">
-      <input type="search" id="search" placeholder="Label name" autocomplete="off"
-             spellcheck="false" aria-label="Search by label name" />
+    <div class="controls__top">
+      <div class="search">
+        <input type="search" id="search" placeholder="Label name" autocomplete="off"
+               spellcheck="false" aria-label="Search by label name" />
+      </div>
+      <ViewSwitch />
     </div>
 
     <div class="filters">
       <div class="filters__group">
-        <ViewSwitch />
+        <Select id="sort" label="Sorting">
+          <option value="az">A → Z</option>
+          <option value="za">Z → A</option>
+          <option value="releases">Most releases</option>
+        </Select>
       </div>
     </div>
+
+    <nav class="alphabet" id="alphabet">
+      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+    </nav>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  {/* Обёртка ради data-view: атрибут должен висеть над списком, а не на нём —
-      селектор вида ищет .names внутри переключаемого блока. */}
-  <div id="list" data-view="index">
-    <ul class="names names--cols">
-      {sorted.map((l) => (
-        <li data-search={l.name.toLowerCase()}>
-          <a class="names__link view-row" href={`/labels/${l.slug}`}>
-            <span class="names__name">{l.name}</span>
-            <span class="names__country">{l.country ?? ''}</span>
-            <span class="names__count">{l.albumIds.length || ''}</span>
-          </a>
-          <NameTile
-            class="view-tile"
-            href={`/labels/${l.slug}`}
-            name={l.name}
-            country={l.country}
-            releases={albumsOf(l.albumIds)}
-          />
+  <ul class="names" id="list" data-view="list">
+    {ordered.map(([letter, items]) => (
+      <>
+        <li class="names__letter" id={anchor(letter)} data-letter={letter}>
+          <span>{letter}</span>
+          <span class="mono mono--sm">{items.length}</span>
         </li>
-      ))}
-    </ul>
-  </div>
+        {items.map((l) => (
+          <li
+            class="names__item"
+            data-search={l.name.toLowerCase()}
+            data-name={l.name.toLowerCase()}
+            data-count={l.albumIds.length}
+            data-letter={letter}
+          >
+            <a class="row row--name view-row" href={`/labels/${l.slug}`}>
+              <span class="row__title">{l.name}</span>
+              <span class="row__meta">{l.country ?? ''}</span>
+              <span class="row__num">{l.albumIds.length || ''}</span>
+            </a>
+            <NameTile
+              class="view-tile"
+              href={`/labels/${l.slug}`}
+              name={l.name}
+              country={l.country}
+              releases={albumsOf(l.albumIds)}
+            />
+          </li>
+        ))}
+      </>
+    ))}
+  </ul>
 </Base>
 
 <script>
-  const search  = document.getElementById('search');
-  const empty   = document.getElementById('empty');
-  const counter = document.getElementById('counter');
-  const list    = document.getElementById('list');
-  const viewsEl = document.getElementById('views');
-  const items   = Array.from(document.querySelectorAll('#list li'));
-  const total   = items.length;
+  const search   = document.getElementById('search');
+  const empty    = document.getElementById('empty');
+  const counter  = document.getElementById('counter');
+  const list     = document.getElementById('list');
+  const viewsEl  = document.getElementById('views');
+  const sortEl   = document.getElementById('sort');
+  const alphabet = document.getElementById('alphabet');
+
+  const heads = Array.from(list.querySelectorAll('.names__letter'));
+  const items = Array.from(list.querySelectorAll('.names__item'));
+  const total = items.length;
+
+  // Исходный порядок — записи вперемешку с заголовками букв; храним целиком,
+  // чтобы возврат к алфавиту не пришлось собирать заново.
+  const initialOrder = Array.from(list.children);
+
+  let query = '';
+
+  const plural = (n) => `${n} ${n === 1 ? 'label' : 'labels'}`;
+
+  function apply() {
+    const alphabetical = sortEl.value === 'az';
+    const shown = new Set();
+    let count = 0;
+
+    for (const li of items) {
+      const ok = !query || li.dataset.search.includes(query);
+      li.hidden = !ok;
+      if (ok) { count++; shown.add(li.dataset.letter); }
+    }
+
+    for (const h of heads) h.hidden = !alphabetical || !shown.has(h.dataset.letter);
+    alphabet.hidden = !alphabetical;
+
+    empty.hidden = count > 0;
+    counter.textContent = count === total ? plural(total) : count + ' of ' + total;
+  }
+
+  function sort() {
+    const by = sortEl.value;
+    let order;
+    if (by === 'az') order = initialOrder;
+    else if (by === 'za') order = items.slice().reverse();
+    else order = items.slice().sort(
+      (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
+             || a.dataset.name.localeCompare(b.dataset.name)
+    );
+
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    list.appendChild(frag);
+  }
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
@@ -76,21 +165,25 @@ const sorted = labels.slice().sort(
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  const plural = (n) => `${n} ${n === 1 ? 'label' : 'labels'}`;
+  sortEl.addEventListener('change', () => { sort(); apply(); });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      const q = search.value.trim().toLowerCase();
-      let shown = 0;
-      for (const li of items) {
-        const ok = !q || li.dataset.search.includes(q);
-        li.hidden = !ok;
-        if (ok) shown++;
-      }
-      empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
+      query = search.value.trim().toLowerCase();
+      apply();
     }, 120);
   });
+
+  for (const wrap of document.querySelectorAll('.select')) {
+    const field = wrap.querySelector('select');
+    const close = () => wrap.removeAttribute('data-open');
+    field.addEventListener('mousedown', () => wrap.toggleAttribute('data-open'));
+    field.addEventListener('keydown', (e) => {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+    });
+    field.addEventListener('change', close);
+    field.addEventListener('blur', close);
+  }
 </script>

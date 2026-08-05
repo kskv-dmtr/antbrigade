@@ -279,12 +279,15 @@ a { color: inherit; text-decoration: none; }
 
 .row {
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1fr) 90px 70px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 90px 70px;
   align-items: center;
   gap: 16px;
   padding: 13px 8px;
   border-bottom: 1px solid var(--line-soft);
 }
+/* Артисты и лейблы — та же строка, но колонок три: имя, страна, счётчик. */
+.row--name { grid-template-columns: minmax(0, 1fr) 90px 70px; }
+
 /* Наведение выворачивает строку целиком: приглушённые колонки в этот
    момент читаются уже на светлом, поэтому им нужен свой приглушённый. */
 .row:hover, .row:focus-visible {
@@ -292,18 +295,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-fg);
   outline: none;
 }
-.row:hover .row__n,
-.row:hover .row__format,
-.row:hover .row__year,
-.row:focus-visible .row__n,
-.row:focus-visible .row__format,
-.row:focus-visible .row__year { color: var(--ink-muted); }
+.row:hover .row__meta,
+.row:hover .row__num,
+.row:focus-visible .row__meta,
+.row:focus-visible .row__num { color: var(--ink-muted); }
 
-.row__n {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--fg-dim);
-}
 .row__artist {
   font-family: var(--mono);
   font-size: 12px;
@@ -315,18 +311,20 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-.row__format {
+/* Третья и четвёртая колонки: у релиза формат и год, у имени страна и
+   число релизов. Роль одна, поэтому и классы общие. */
+.row__meta {
   font-family: var(--mono);
   font-size: 12px;
   color: var(--fg-muted);
 }
-.row__year {
+.row__num {
   font-family: var(--mono);
   font-size: 12px;
   text-align: right;
   color: var(--fg-muted);
 }
-.row__artist, .row__title, .row__format {
+.row__artist, .row__title, .row__meta {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -393,6 +391,17 @@ a { color: inherit; text-decoration: none; }
   gap: 10px;
   margin-bottom: 26px;
 }
+
+/* Поиск и переключатель вида на одной строке: поле тянется, переключатель
+   прижат вправо. stretch, а не center, — иначе кнопки ниже поля и правый
+   край ряда получается рваным. */
+.controls__top {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+.controls__top .search { flex: 1; min-width: 0; }
+.seg--views { flex: none; }
 
 .search input {
   width: 100%;
@@ -695,33 +704,30 @@ select option { background: #1a1a19; color: var(--fg); }
   white-space: nowrap;
 }
 
+/* Списки артистов и лейблов — те же строки, что в списке релизов: один
+   столбец во всю ширину, а не три текстовые колонки. Три колонки не давали
+   ни сортировать (порядок читался бы сверху вниз в каждой колонке отдельно),
+   ни выворачивать строку целиком.
+
+   Буквы лежат в том же <ul> отдельными <li>, а не оборачивают группы: так
+   сортировка переставляет только записи, а заголовки просто прячутся, когда
+   порядок перестаёт быть алфавитным.                                      */
+
 .names { margin: 0; padding: 0; list-style: none; }
-.names--cols { columns: 3; column-gap: 30px; }
-.names li { break-inside: avoid; }
-/* Свой класс, а не `.names a`: в плиточном виде внутри того же <li> лежит
-   ссылка плитки, и общий селектор по тегу накрыл бы и её. */
-.names__link {
+
+.names__letter {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  padding: 9px 8px;
-  border-bottom: 1px solid var(--line-soft);
-  font-size: 16px;
+  justify-content: space-between;
+  margin: 30px 0 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
-.names__link:hover { background: var(--ink); color: var(--ink-fg); }
-.names__link:hover .names__country,
-.names__link:hover .names__count { color: var(--ink-muted); }
-.names__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.names__country, .names__count {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--fg-dim);
-}
-/* Код страны всегда двухбуквенный, но у пары записей его нет — держим
-   ширину явно, иначе счётчики справа поедут в разнобой. */
-.names__country { min-width: 2ch; text-align: right; }
-.names__count { min-width: 3ch; text-align: right; }
+.names__letter:first-child { margin-top: 0; }
+.names__letter .mono { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.08em; }
 
 /* 284 жанра разной длины — не колонки, а поток. */
 .genre-cloud {
@@ -747,21 +753,6 @@ select option { background: #1a1a19; color: var(--fg); }
 .genre-cloud a:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 .genre-cloud a:hover .genre-cloud__count { color: var(--ink-muted); }
 .genre-cloud__count { color: var(--fg-dim); }
-
-.letter { margin-bottom: 34px; }
-.letter__head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin: 0 0 6px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-.letter__head .mono { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.08em; }
-.letter .names { columns: 3; column-gap: 30px; }
 
 .empty {
   padding: 60px var(--pad);
@@ -811,7 +802,6 @@ select option { background: #1a1a19; color: var(--fg); }
   .tiles { grid-template-columns: repeat(2, 1fr); }
   .tiles > * { grid-column: auto; }
   .detail__body { grid-template-columns: minmax(0, 1fr); gap: 30px; }
-  .names--cols, .letter .names { columns: 2; }
 }
 
 /* Полоса 16:7 с обложкой сбоку на узком экране не живёт: в макете здесь
@@ -843,12 +833,25 @@ select option { background: #1a1a19; color: var(--fg); }
     gap: 4px 12px;
     padding: 12px 0;
   }
-  .row__n { display: none; }
   .row__artist { font-size: 10px; color: var(--fg-muted); }
   .row__title { grid-column: 1; font-size: 16px; letter-spacing: -0.01em; white-space: normal; }
-  .row__format { grid-row: 1; grid-column: 2; text-align: right; font-size: 10px; }
-  .row__year { grid-row: 2; grid-column: 2; font-size: 10px; }
+  .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: 10px; }
+  .row__num { grid-row: 2; grid-column: 2; font-size: 10px; }
   .row:hover, .row:focus-visible { padding-left: 8px; padding-right: 8px; }
+
+  /* У имени всего три ячейки, и вторая строка слева пустовала бы: страну и
+     счётчик ставим в один ряд справа от имени.
+
+     Все три ячейки размещаем явно. `auto` тут не годится: у .row__title
+     остаётся grid-column: 1 из правила выше, и авторазмещённые страна со
+     счётчиком занимают первый ряд сами, выталкивая имя во второй. */
+  .row--name { grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline; }
+  .row--name .row__title {
+    grid-row: 1; grid-column: 1;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .row--name .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: 10px; }
+  .row--name .row__num  { grid-row: 1; grid-column: 3; font-size: 10px; }
 }
 
 @media (max-width: 640px) {
@@ -864,8 +867,7 @@ select option { background: #1a1a19; color: var(--fg); }
   .display--lg { font-size: 24px; }
   .display--md { font-size: 22px; }
   .page-head { padding: 26px 0 18px; }
-  .letter__head { font-size: 20px; }
-  .names--cols, .letter .names { columns: 1; }
+  .names__letter { font-size: 20px; margin-top: 22px; }
 
   .filters {
     flex-wrap: nowrap;
@@ -897,13 +899,19 @@ select option { background: #1a1a19; color: var(--fg); }
    `[data-view='grid'] .names`; при равной специфичности побеждает то, что
    ниже по файлу. Перенесёте выше — в плиточном виде вернутся колонки.   */
 
-[data-view='index'] .view-tile { display: none; }
-[data-view='grid']  .view-row  { display: none; }
+[data-view='list'] .view-tile { display: none; }
+[data-view='grid'] .view-row  { display: none; }
 
 .releases[data-view='grid'],
 [data-view='grid'] .names {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-min), 1fr));
   gap: 30px var(--gap);
-  columns: auto;
+}
+
+/* Буква — не плитка: в сетке она растягивается на всю строку и остаётся
+   заголовком, а не превращается в ячейку рядом с обложками. */
+[data-view='grid'] .names__letter {
+  grid-column: 1 / -1;
+  margin-top: 16px;
 }

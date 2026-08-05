@@ -7,7 +7,7 @@
 
 const { id = 'views', label = 'View' } = Astro.props;
 ---
-<div class="seg" id={id} role="group" aria-label={label}>
-  <button type="button" data-view="index" aria-pressed="true">Index</button>
+<div class="seg seg--views" id={id} role="group" aria-label={label}>
+  <button type="button" data-view="list" aria-pressed="true">List</button>
   <button type="button" data-view="grid" aria-pressed="false">Grid</button>
 </div>

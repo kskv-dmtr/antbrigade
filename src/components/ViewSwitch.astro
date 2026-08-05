@@ -1,0 +1,13 @@
+---
+/* Переключатель «строка / плитка».
+
+   Разметка одна на все три списка — релизы, артисты, лейблы, — чтобы
+   переключатель нигде не разъехался. Обработчик остаётся на странице: он в
+   четыре строки и обращается к своему списку по id. */
+
+const { id = 'views', label = 'View' } = Astro.props;
+---
+<div class="seg" id={id} role="group" aria-label={label}>
+  <button type="button" data-view="index" aria-pressed="true">Index</button>
+  <button type="button" data-view="grid" aria-pressed="false">Grid</button>
+</div>

@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
+import ViewSwitch from '../components/ViewSwitch.astro';
 import { albums, plural } from '../lib/db.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
@@ -66,10 +67,7 @@ const featured = rest.slice(0, 3);
           {/* Индекс строками — вид по умолчанию, как в макете. Стена обложек
               осталась вторым видом: в каталоге пластинок обложка — это тоже
               содержание, и терять её целиком было бы неправильно. */}
-          <div class="seg" id="views" role="group" aria-label="View">
-            <button type="button" data-view="index" aria-pressed="true">Index</button>
-            <button type="button" data-view="grid" aria-pressed="false">Grid</button>
-          </div>
+          <ViewSwitch />
         </div>
 
         <div class="filters__group">
@@ -112,8 +110,8 @@ const featured = rest.slice(0, 3);
           data-artist={a.artist.toLowerCase()}
           data-album={(a.album || '').toLowerCase()}
         >
-          <div class="release__row"><ReleaseRow album={a} n={i + 1} /></div>
-          <AlbumCard album={a} as="div" class="release__tile" />
+          <div class="view-row"><ReleaseRow album={a} n={i + 1} /></div>
+          <AlbumCard album={a} as="div" class="view-tile" />
         </li>
       ))}
     </ul>

@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { artists, flag, plural } from '../../lib/db.js';
+import NameTile from '../../components/NameTile.astro';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import { artists, albumsOf, flag, plural } from '../../lib/db.js';
 
 // Группировка по первой букве, чтобы 931 имя можно было просматривать глазами.
 function bucket(name) {
@@ -38,6 +40,11 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
       <input type="search" id="search" placeholder="Artist name" autocomplete="off"
              spellcheck="false" aria-label="Search by artist name" />
     </div>
+    <div class="filters">
+      <div class="filters__group">
+        <ViewSwitch />
+      </div>
+    </div>
     <nav class="alphabet">
       {ordered.map(([letter]) => <a href={`#letter-${letter === '#' ? 'other' : letter}`}>{letter}</a>)}
     </nav>
@@ -45,7 +52,7 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  <div id="list">
+  <div id="list" data-view="index">
     {ordered.map(([letter, items]) => (
       <section class="letter" data-letter={letter} id={`letter-${letter === '#' ? 'other' : letter}`}>
         <h2 class="letter__head">
@@ -55,11 +62,18 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
         <ul class="names">
           {items.map((a) => (
             <li data-search={a.name.toLowerCase()}>
-              <a href={`/artists/${a.slug}`}>
+              <a class="names__link view-row" href={`/artists/${a.slug}`}>
                 {a.country && <span class="flag" title={a.country}>{flag(a.country)}</span>}
                 <span class="names__name">{a.name}</span>
                 <span class="names__count">{a.albumIds.length || ''}</span>
               </a>
+              <NameTile
+                class="view-tile"
+                href={`/artists/${a.slug}`}
+                name={a.name}
+                country={a.country}
+                releases={albumsOf(a.albumIds)}
+              />
             </li>
           ))}
         </ul>
@@ -72,9 +86,18 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   const search   = document.getElementById('search');
   const empty    = document.getElementById('empty');
   const counter  = document.getElementById('counter');
+  const list     = document.getElementById('list');
+  const viewsEl  = document.getElementById('views');
   const sections = Array.from(document.querySelectorAll('.letter'));
   const items    = Array.from(document.querySelectorAll('.names li'));
   const total    = items.length;
+
+  viewsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    list.dataset.view = btn.dataset.view;
+    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  });
 
   const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
 

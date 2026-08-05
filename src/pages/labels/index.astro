@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { labels, flag, plural } from '../../lib/db.js';
+import NameTile from '../../components/NameTile.astro';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import { labels, albumsOf, flag, plural } from '../../lib/db.js';
 
 // По убыванию числа релизов: так сразу видно основные лейблы коллекции.
 const sorted = labels.slice().sort(
@@ -24,29 +26,55 @@ const sorted = labels.slice().sort(
       <input type="search" id="search" placeholder="Label name" autocomplete="off"
              spellcheck="false" aria-label="Search by label name" />
     </div>
+
+    <div class="filters">
+      <div class="filters__group">
+        <ViewSwitch />
+      </div>
+    </div>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  <ul class="names names--cols" id="list">
-    {sorted.map((l) => (
-      <li data-search={l.name.toLowerCase()}>
-        <a href={`/labels/${l.slug}`}>
-          {l.country && <span class="flag" title={l.country}>{flag(l.country)}</span>}
-          <span class="names__name">{l.name}</span>
-          <span class="names__count">{l.albumIds.length || ''}</span>
-        </a>
-      </li>
-    ))}
-  </ul>
+  {/* Обёртка ради data-view: атрибут должен висеть над списком, а не на нём —
+      селектор вида ищет .names внутри переключаемого блока. */}
+  <div id="list" data-view="index">
+    <ul class="names names--cols">
+      {sorted.map((l) => (
+        <li data-search={l.name.toLowerCase()}>
+          <a class="names__link view-row" href={`/labels/${l.slug}`}>
+            {l.country && <span class="flag" title={l.country}>{flag(l.country)}</span>}
+            <span class="names__name">{l.name}</span>
+            <span class="names__count">{l.albumIds.length || ''}</span>
+          </a>
+          <NameTile
+            class="view-tile"
+            href={`/labels/${l.slug}`}
+            name={l.name}
+            country={l.country}
+            releases={albumsOf(l.albumIds)}
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
 </Base>
 
 <script>
   const search  = document.getElementById('search');
   const empty   = document.getElementById('empty');
   const counter = document.getElementById('counter');
+  const list    = document.getElementById('list');
+  const viewsEl = document.getElementById('views');
   const items   = Array.from(document.querySelectorAll('#list li'));
   const total   = items.length;
+
+  viewsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    list.dataset.view = btn.dataset.view;
+    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  });
 
   const plural = (n) => `${n} ${n === 1 ? 'label' : 'labels'}`;
 

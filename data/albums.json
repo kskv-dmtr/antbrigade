@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-05T23:18:46Z",
+  "generatedAt": "2026-08-06T22:28:20Z",
   "counts": {
     "albums": 1049,
-    "artists": 943,
+    "artists": 942,
     "labels": 589,
     "videos": 46
   },
@@ -10234,8 +10234,7 @@
         "2414129a-8c52-805f-b3ca-dc3408e30cf8"
       ],
       "artists": [
-        "Durand Jones & The Indications",
-        "Durand Jones"
+        "Durand Jones & The Indications"
       ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
@@ -35021,27 +35020,6 @@
         "24f4129a-8c52-807a-b8b1-de2073f73f13"
       ],
       "videoIds": []
-    },
-    {
-      "id": "2414129a-8c52-805f-b3ca-dc3408e30cf8",
-      "slug": "durand-jones",
-      "name": "Durand Jones",
-      "country": "US",
-      "bandcamp": null,
-      "albumIds": [
-        "21f4129a-8c52-806c-88c0-f1aa033f1df4"
-      ],
-      "genres": [
-        "Neo-Soul",
-        "R'n'B"
-      ],
-      "labelIds": [
-        "2434129a-8c52-8022-abd2-d0c412936e59"
-      ],
-      "videoIds": [
-        "2414129a-8c52-80f2-a7df-d32535a51e60",
-        "2424129a-8c52-805d-ad8f-d0a05684ad23"
-      ]
     },
     {
       "id": "2414129a-8c52-803f-84bf-e1d9f7fb7397",

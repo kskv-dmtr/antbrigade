@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
+import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import { genres, albumsOf } from '../../lib/db.js';
 
@@ -44,10 +45,7 @@ const solo = genres.filter((g) => g.count === 1).length;
 
   <div class="sticky-bar">
     <div class="controls__top">
-      <div class="search">
-        <input type="search" id="search" placeholder="Genre name" autocomplete="off"
-               spellcheck="false" aria-label="Search by genre name" />
-      </div>
+      <SearchField placeholder="Genre name" label="Search by genre name" />
       <ViewSwitch />
     </div>
 

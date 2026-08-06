@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
+import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import { labels, albumsOf } from '../../lib/db.js';
 
@@ -46,10 +47,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 
   <div class="sticky-bar">
     <div class="controls__top">
-      <div class="search">
-        <input type="search" id="search" placeholder="Label name" autocomplete="off"
-               spellcheck="false" aria-label="Search by label name" />
-      </div>
+      <SearchField placeholder="Label name" label="Search by label name" />
       <ViewSwitch />
     </div>
 

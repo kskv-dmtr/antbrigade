@@ -4,6 +4,7 @@ import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
+import SearchField from '../components/SearchField.astro';
 import { albums, plural } from '../lib/db.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
@@ -37,10 +38,7 @@ const PAGE = 50;
       содержание, и терять её целиком было бы неправильно. */}
   <div class="sticky-bar">
     <div class="controls__top">
-      <div class="search">
-        <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
-               spellcheck="false" aria-label="Search by artist or album" />
-      </div>
+      <SearchField placeholder="Artist or album" label="Search by artist or album" />
       <ViewSwitch />
     </div>
   </div>

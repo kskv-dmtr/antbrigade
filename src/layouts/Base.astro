@@ -128,6 +128,35 @@ const canonical = new URL(
         if (Math.abs(y - last) > STEP) last = y;
       }, { passive: true });
     }
+
+    /* Косая черта фокусирует поиск, Escape его отпускает — как на GitHub. */
+    const search = document.getElementById('search');
+
+    if (search) {
+      addEventListener('keydown', (e) => {
+        // Сочетания не трогаем: Ctrl+/ и подобные принадлежат браузеру.
+        if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+
+        /* Если пользователь уже что-то набирает, косая черта должна
+           набраться, а не увести фокус. */
+        const el = document.activeElement;
+        if (el && (el.isContentEditable ||
+                   ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
+
+        e.preventDefault();
+        // Полоса могла быть спрятана прокруткой — возвращаем, иначе фокус
+        // уйдёт на элемент за пределами экрана.
+        if (bar) bar.removeAttribute('data-hidden');
+        search.focus();
+        search.select();
+      });
+
+      search.addEventListener('keydown', (e) => {
+        // Только снимаем фокус: набранное не стираем, иначе Escape рушил бы
+        // выборку, которую человек собирал.
+        if (e.key === 'Escape') search.blur();
+      });
+    }
   </script>
 </body>
 </html>

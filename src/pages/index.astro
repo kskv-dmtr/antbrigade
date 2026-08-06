@@ -1,304 +1,87 @@
 ---
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
-import ReleaseRow from '../components/ReleaseRow.astro';
-import Select from '../components/Select.astro';
-import ViewSwitch from '../components/ViewSwitch.astro';
 import { albums, plural, formatDate } from '../lib/db.js';
 
-// Карточки рендерятся на сервере все сразу: так страница работает без JS
-// и её видят поисковики. Фильтры лишь прячут лишнее.
-const types = [...new Set(albums.flatMap((a) => a.types))].sort();
+/* Главная — витрина, а не каталог: весь список живёт на /releases.
 
-const genreCounts = new Map();
-for (const a of albums) {
-  for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
+   Сколько свежих показываем, какой глубины пул для случайного раздела и
+   сколько из него видно за раз. */
+const LATEST = 5;
+const POOL   = 60;
+const SHOW   = 10;
+
+/* Фишер — Йетс. Не `sort(() => Math.random() - 0.5)`: та перестановка
+   заметно смещённая, часть записей оседает у краёв. */
+function shuffle(list) {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
-const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
 
-/* Сколько строк показывать сразу и сколько добавлять по нажатию.
-   Всё равно рендерим все: так страница живёт без JS и её целиком видят
-   поисковики, а скрипт лишь прячет лишнее. */
-const PAGE = 50;
-
-/* Порядок с сервера — «сначала новые», поэтому свежая шестёрка это просто
-   первые шесть записей.
-
-   В макете индекс начинался с пятой: вынесенные наверх релизы в список не
-   попадали. Здесь они попадают — иначе поиск по самому свежему альбому
-   отвечал бы «ничего не найдено», а фильтры молча теряли бы эти записи. */
-const latest = albums.slice(0, 5);
+const latest = albums.slice(0, LATEST);
 const latestDate = formatDate(latest.find((a) => a.released)?.released);
+
+/* Пул выбирается на сборке и потому одинаков для всех, кто открыл сайт в
+   один час. Случайность на статике даёт браузер: он тасует пул при каждой
+   загрузке и показывает из него SHOW штук. Пул пересобирается вместе с
+   сайтом, а сайт пересобирается ежечасно из-за синхронизации с Notion —
+   так что и он не застаивается.
+
+   Свежие исключены: им уже отдан раздел выше. */
+const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
 ---
 <Base
   title="ant brigade — album collection"
   description={`A collection of ${albums.length} releases: covers, genres, labels and links to listen.`}
-  activeSection="albums"
 >
-  {/* Заголовок страницы вынесен наверх: как только над списком появился
-      раздел со своим h2, порядок заголовков без h1 в начале ломается.
-      Живой счётчик — над самим списком, рядом с фильтрами, которые его и
-      меняют. */}
-  <div class="page-head">
-    <h1>Releases</h1>
-  </div>
-
-  {latest.length > 0 && (
-    <section class="section">
-      <div class="head">
-        <h2 class="display display--md">Latest Releases</h2>
-        {latestDate && <span class="mono">{latestDate}</span>}
-      </div>
-      {/* Та же сетка, что и в каталоге ниже: пять плиток в ряд. */}
-      <ul class="tiles tiles--auto">
-        {latest.map((a) => <AlbumCard album={a} />)}
-      </ul>
-    </section>
-  )}
+  <section class="section">
+    <div class="head">
+      <h1 class="display display--md">Latest Releases</h1>
+      {latestDate && <span class="mono">{latestDate}</span>}
+    </div>
+    <ul class="tiles tiles--auto">
+      {latest.map((a) => <AlbumCard album={a} />)}
+    </ul>
+  </section>
 
   <section class="section">
     <div class="head">
-      <h2 class="display display--md">List</h2>
-      <span class="mono" id="counter" aria-live="polite">
-        {plural(albums.length, 'release', 'releases')}
-      </span>
+      <h2 class="display display--md">Dig In</h2>
+      <span class="mono">{plural(albums.length, 'release', 'releases')}</span>
     </div>
 
-    {/* Строка поиска липкая, поэтому лежит прямо в секции, а не внутри
-        .controls: липкий элемент ездит только в границах своего родителя, а
-        .controls кончается сразу под фильтрами — поиск уехал бы вместе с
-        ними. Родитель-секция тянется до конца списка.
-
-        Список строками — вид по умолчанию, как в макете. Стена обложек
-        осталась вторым видом: в каталоге пластинок обложка — это тоже
-        содержание, и терять её целиком было бы неправильно. */}
-    <div class="controls__top controls__top--sticky">
-      <div class="search">
-        <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
-               spellcheck="false" aria-label="Search by artist or album" />
-      </div>
-      <ViewSwitch />
-    </div>
-
-    <div class="controls">
-      <div class="filters">
-        <div class="filters__group">
-          <div class="seg" id="types" role="group" aria-label="Release type">
-            <button type="button" data-type="" aria-pressed="true">All</button>
-            {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
-          </div>
-        </div>
-
-        <div class="filters__group">
-          <Select id="genre" label="Genre">
-            <option value="">All genres</option>
-            {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
-          </Select>
-
-          <Select id="year" label="Year">
-            <option value="">All years</option>
-            {years.map((y) => <option value={y}>{y}</option>)}
-          </Select>
-
-          <Select id="sort" label="Sorting">
-            <option value="new">Newest first</option>
-            <option value="old">Oldest first</option>
-            <option value="artist">By artist</option>
-            <option value="album">By album</option>
-          </Select>
-
-          <button type="button" id="reset" class="reset" hidden>Reset</button>
-        </div>
-      </div>
-    </div>
-
-    <p class="empty" id="empty" hidden>Nothing found.</p>
-
-    {/* Один <li> на релиз, внутри обе разметки: строка и плитка. Видимую
-        выбирает data-view на списке, поэтому фильтру достаточно спрятать
-        сам <li> — переключение вида его не касается. */}
-    <ul class="releases" id="grid" data-view="list">
-      {albums.map((a) => (
-        <li
-          class="release"
-          data-search={`${a.artist} ${a.album}`.toLowerCase()}
-          data-genres={a.genres.join('|')}
-          data-types={a.types.join('|')}
-          data-year={a.year ?? ''}
-          data-released={a.released ?? ''}
-          data-artist={a.artist.toLowerCase()}
-          data-album={(a.album || '').toLowerCase()}
-        >
-          <div class="view-row"><ReleaseRow album={a} /></div>
-          <AlbumCard album={a} as="div" class="view-tile" />
-        </li>
-      ))}
+    {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
+        страница показывает осмысленную выборку и не мигает подменой
+        картинок сразу после загрузки. */}
+    <ul class="tiles tiles--auto" id="dig" data-show={SHOW}>
+      {pool.map((a, i) => <AlbumCard album={a} hidden={i >= SHOW} />)}
     </ul>
-
-    {/* Кнопка появляется только со скриптом: без него показаны все записи,
-        и «показать ещё» было бы нечего делать. */}
-    <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
   </section>
 </Base>
 
 <script>
-  const grid    = document.getElementById('grid');
-  const cards   = Array.from(grid.children);
-  const counter = document.getElementById('counter');
-  const empty   = document.getElementById('empty');
-  const reset   = document.getElementById('reset');
-  const search  = document.getElementById('search');
-  const typesEl = document.getElementById('types');
-  const viewsEl = document.getElementById('views');
-  const genreEl = document.getElementById('genre');
-  const yearEl  = document.getElementById('year');
-  const sortEl  = document.getElementById('sort');
+  /* Случайные релизы при каждой загрузке.
 
-  const more = document.getElementById('more');
+     Сайт статический: сервер отдаёт всем один и тот же HTML, поэтому
+     выбирает браузер. В разметке лежит пул, отсюда тасуем его и оставляем
+     видимыми первые data-show. */
+  const dig = document.getElementById('dig');
+  const items = Array.from(dig.children);
+  const show = Number(dig.dataset.show) || 10;
 
-  const total = cards.length;
-  const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', type: '', genre: '', year: '', sort: 'new' };
-
-  // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
-  const initialOrder = cards.slice();
-
-  /* Порядок, в котором записи сейчас лежат в разметке. Именно по нему
-     отсчитываются первые 50: считать по исходному массиву нельзя — после
-     сортировки «первыми» станут не те. */
-  let current = initialOrder;
-
-  // Сколько записей показано. Сбрасывается при любой смене выборки: иначе
-  // после нового поиска остался бы разворот от предыдущего.
-  let limit = PAGE;
-
-  const label = (n) =>
-    n === total ? `${n} ${n === 1 ? 'release' : 'releases'}` : `${n} of ${total}`;
-
-  function matches(el) {
-    const d = el.dataset;
-    if (state.q && !d.search.includes(state.q)) return false;
-    if (state.type && !d.types.split('|').includes(state.type)) return false;
-    if (state.genre && !d.genres.split('|').includes(state.genre)) return false;
-    if (state.year && d.year !== state.year) return false;
-    return true;
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
   }
 
-  function apply() {
-    // Видимость складывается из двух условий: запись подходит под фильтры
-    // и попадает в текущие первые limit подходящих.
-    let matched = 0;
-    for (const el of current) {
-      const ok = matches(el);
-      if (ok) matched++;
-      el.hidden = !ok || matched > limit;
-    }
+  for (const [i, el] of items.entries()) el.hidden = i >= show;
 
-    empty.hidden = matched > 0;
-    counter.textContent = label(matched);
-
-    const rest = matched - limit;
-    more.hidden = rest <= 0;
-    if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
-
-    const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
-    reset.hidden = !dirty;
-  }
-
-  // Любая смена выборки возвращает список к первой странице.
-  function rewind() { limit = PAGE; }
-
-  function sort() {
-    const by = state.sort;
-    if (by === 'new') {
-      current = initialOrder;
-    } else {
-      current = cards.slice().sort((a, b) => {
-        if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
-        if (by === 'album')  return a.dataset.album.localeCompare(b.dataset.album);
-        const da = a.dataset.released, db = b.dataset.released;
-        // релизы без даты всегда в конце
-        if (!da && !db) return 0;
-        if (!da) return 1;
-        if (!db) return -1;
-        return da.localeCompare(db);
-      });
-    }
-    const frag = document.createDocumentFragment();
-    for (const el of current) frag.appendChild(el);
-    grid.appendChild(frag);
-  }
-
-  more.addEventListener('click', () => {
-    limit += PAGE;
-    apply();
-  });
-
-  let timer;
-  search.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      state.q = search.value.trim().toLowerCase();
-      rewind();
-      apply();
-    }, 120);
-  });
-
-  typesEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    state.type = btn.dataset.type;
-    for (const b of typesEl.children) b.setAttribute('aria-pressed', String(b === btn));
-    rewind();
-    apply();
-  });
-
-  viewsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    grid.dataset.view = btn.dataset.view;
-    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
-  });
-
-  genreEl.addEventListener('change', () => { state.genre = genreEl.value; rewind(); apply(); });
-  yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  rewind(); apply(); });
-  sortEl.addEventListener('change',  () => {
-    state.sort = sortEl.value;
-    sort(); rewind(); apply();
-  });
-
-  /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами:
-     стрелка должна смотреть вверх, пока список открыт. */
-  for (const wrap of document.querySelectorAll('.select')) {
-    const field = wrap.querySelector('select');
-    const close = () => wrap.removeAttribute('data-open');
-    field.addEventListener('mousedown', () => {
-      wrap.toggleAttribute('data-open');
-    });
-    field.addEventListener('keydown', (e) => {
-      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
-    });
-    field.addEventListener('change', close);
-    field.addEventListener('blur', close);
-  }
-
-  reset.addEventListener('click', () => {
-    Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });
-    search.value = '';
-    genreEl.value = '';
-    yearEl.value = '';
-    sortEl.value = 'new';
-    for (const [i, b] of [...typesEl.children].entries()) {
-      b.setAttribute('aria-pressed', String(i === 0));
-    }
-    sort();
-    rewind();
-    apply();
-    window.scrollTo({ top: 0 });
-  });
-
-  /* Первый расчёт: до него в разметке видны все записи — так страница
-     работает без скрипта и целиком достаётся поисковикам. */
-  apply();
+  // Переставляем и в разметке, иначе выбранные шли бы вразнобой по сетке.
+  const frag = document.createDocumentFragment();
+  for (const el of items) frag.appendChild(el);
+  dig.appendChild(frag);
 </script>

@@ -4,12 +4,14 @@ import { generatedAt } from '../lib/db.js';
 
 const { title, description, activeSection } = Astro.props;
 
-/* Разделы сайта те же, что были: макет рисовал Video и Info, но страниц под
-   них нет, а ссылка в никуда хуже отсутствующего пункта. Переименован только
-   первый — «Releases» из макета, и по смыслу это точнее: в базе не одни
-   альбомы, там же синглы и EP. */
+/* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
+   ссылка в никуда хуже отсутствующего пункта.
+
+   Пункта «главная» в меню нет намеренно — на неё ведёт слово слева.
+   «Releases» указывает на /releases: каталог живёт там, а главная осталась
+   витриной со свежим и случайным. */
 const nav = [
-  { href: '/',        label: 'Releases', key: 'albums' },
+  { href: '/releases', label: 'Releases', key: 'albums' },
   { href: '/artists', label: 'Artists',  key: 'artists' },
   { href: '/labels',  label: 'Labels',   key: 'labels' },
   { href: '/genres',  label: 'Genres',   key: 'genres' }

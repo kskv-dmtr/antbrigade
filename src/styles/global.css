@@ -478,16 +478,28 @@ a { color: inherit; text-decoration: none; }
   gap: 8px;
 }
 
-/* Липкая строка поиска на главной: прилипает сразу под шапкой, поэтому
-   возвращается на экран при прокрутке вверх и не теряется в длинном
-   каталоге. Фон и поля свои — под ней едут строки списка. */
-.controls__top--sticky {
+/* Липкая полоса: поиск, переключатель вида и указатель по буквам. Одна и та
+   же на всех четырёх списках — релизы, артисты, лейблы, жанры.
+
+   Прячется при прокрутке вниз и возвращается при прокрутке вверх. Держать
+   её на экране постоянно нельзя: вместе с закреплённой шапкой она съедала
+   бы под двести пикселей, а на телефоне — четверть экрана.
+
+   Лежит прямо в main, а не внутри .controls: липкий элемент ездит только в
+   границах своего родителя, а .controls кончается сразу под фильтрами. */
+.sticky-bar {
   position: sticky;
   top: var(--head-h);
   z-index: 10;
-  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 10px 0;
+  background: var(--bg);
+  transition: transform 0.22s ease;
 }
+/* Ровно на свою высоту: низ уходит под шапку, а та выше по z-index. */
+.sticky-bar[data-hidden] { transform: translateY(-100%); }
 .controls__top .search { flex: 1; min-width: 0; }
 .seg--views { flex: none; }
 
@@ -1026,19 +1038,25 @@ select option { background: #1a1a19; color: var(--fg); }
   .page-head { padding: 26px 0 18px; }
   .names__letter { font-size: 20px; margin-top: 22px; }
 
-  .filters {
+  /* Ряды управления на узком экране прокручиваются вбок, а не переносятся:
+     алфавит из 27 букв переносом занял бы три строки, и липкая полоса
+     съела бы четверть экрана. */
+  .filters,
+  .sticky-bar .alphabet {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
     margin: 0 calc(var(--pad) * -1);
     padding: 2px var(--pad);
   }
-  .filters::-webkit-scrollbar { display: none; }
+  .filters::-webkit-scrollbar,
+  .sticky-bar .alphabet::-webkit-scrollbar { display: none; }
+  .sticky-bar .alphabet a { flex: none; }
   select { max-width: 44vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .select__chevron, .tile__over, .masthead { transition: none; }
+  .select__chevron, .tile__over, .sticky-bar { transition: none; }
 }
 
 /* -------------------------------------------- переключение вида

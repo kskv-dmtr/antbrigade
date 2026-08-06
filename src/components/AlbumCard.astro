@@ -6,7 +6,7 @@
    у квадрата четверть высоты, а обложка здесь — сам товар. */
 
 import ArrowElbow from './ArrowElbow.astro';
-import { coverSrc, coverSrcSet } from '../lib/db.js';
+import { coverSrc, coverSrcSet, artistLine } from '../lib/db.js';
 
 /* Обёртка по умолчанию <li>: плитки почти везде лежат в списке. На главной
    плитка соседствует со строкой индекса внутри общего <li>, и там нужен
@@ -36,7 +36,7 @@ const meta = [album.types.join(' / '), album.year].filter(Boolean).join(' · ');
         <span class="tile__cta">Open <ArrowElbow /></span>
       </div>
     </div>
-    {showArtist && <span class="tile__artist">{album.artist}</span>}
+    {showArtist && <span class="tile__artist">{artistLine(album)}</span>}
     <span class="tile__title">{album.album}</span>
   </a>
 </Wrapper>

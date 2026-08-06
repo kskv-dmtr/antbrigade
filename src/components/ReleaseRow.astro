@@ -8,10 +8,12 @@
    Четыре колонки на широком экране, две строки на узком — раскладку целиком
    держит CSS, разметка одна. */
 
+import { artistLine } from '../lib/db.js';
+
 const { album } = Astro.props;
 ---
 <a class="row" href={`/albums/${album.slug}`}>
-  <span class="row__artist">{album.artist}</span>
+  <span class="row__artist">{artistLine(album)}</span>
   <span class="row__title">{album.album}</span>
   {/* Точка, а не косая: «Album / Collaboration» читалось как одно
       составное слово. Колонка расширена под это сочетание — самое

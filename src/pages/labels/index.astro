@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import Select from '../../components/Select.astro';
-import { labels, albumsOf, plural } from '../../lib/db.js';
+import { labels, albumsOf } from '../../lib/db.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -44,7 +44,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
     <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
-  <div class="controls">
+  <div class="sticky-bar">
     <div class="controls__top">
       <div class="search">
         <input type="search" id="search" placeholder="Label name" autocomplete="off"
@@ -53,11 +53,13 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <ViewSwitch />
     </div>
 
-    <div class="filters">
-      <nav class="alphabet" id="alphabet">
-        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-      </nav>
+    <nav class="alphabet" id="alphabet">
+      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+    </nav>
+  </div>
 
+  <div class="controls">
+    <div class="filters">
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>

@@ -94,5 +94,40 @@ const canonical = new URL(
     </div>
   </footer>
 
+  <script>
+    /* Липкая полоса списков прячется при прокрутке вниз и возвращается при
+       прокрутке вверх. Шапка при этом закреплена и видна всегда.
+
+       Порог в 6 пикселей нужен, чтобы полоса не дёргалась от инерционной
+       прокрутки и подрагивания тачпада: без него колебание в один пиксель
+       считалось бы сменой направления. */
+    const bar = document.querySelector('.sticky-bar');
+
+    if (bar) {
+      const STEP = 6;
+      let last = window.scrollY;
+
+      /* Место полосы в документе, снятое один раз и при выключенной
+         липкости. Через offsetTop его не узнать: у sticky-элемента тот
+         растёт вместе с прокруткой, и проверка «ещё не долистали» была бы
+         верна всегда — полоса не пряталась бы никогда. */
+      const prev = bar.style.position;
+      bar.style.position = 'static';
+      const anchorY = bar.getBoundingClientRect().top + window.scrollY;
+      bar.style.position = prev;
+
+      addEventListener('scroll', () => {
+        const y = window.scrollY;
+
+        // Пока полоса не дошла до липкого положения, прятать нечего:
+        // иначе она дёргалась бы у начала страницы.
+        if (y <= anchorY) bar.removeAttribute('data-hidden');
+        else if (y > last + STEP) bar.setAttribute('data-hidden', '');
+        else if (y < last - STEP) bar.removeAttribute('data-hidden');
+
+        if (Math.abs(y - last) > STEP) last = y;
+      }, { passive: true });
+    }
+  </script>
 </body>
 </html>

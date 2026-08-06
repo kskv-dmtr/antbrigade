@@ -221,3 +221,20 @@ export function formatDate(iso) {
 export function plural(n, one, many) {
   return `${n} ${n === 1 ? one : many}`;
 }
+
+/* Исполнители релиза одной строкой, через точку.
+
+   Разбираем массив artists, а не строку artist: в ней Notion разделяет
+   соавторов то косой чертой, то амперсандом, и делить её самим нельзя —
+   «Bad//Dreems» это одно название группы, а не двое. У сольных релизов
+   массив из одного имени, поэтому берём исходную строку как есть. */
+export function artistLine(album) {
+  /* Отбрасываем имена, целиком входящие в другое имя из той же связки.
+     В Notion у «Durand Jones & The Indications» проставлены и группа, и сам
+     Durand Jones — без этого вышло бы «Durand Jones & The Indications ·
+     Durand Jones». */
+  const names = (album.artists ?? []).filter(
+    (name, _, all) => !all.some((other) => other !== name && other.includes(name))
+  );
+  return names.length > 1 ? names.join(' · ') : album.artist;
+}

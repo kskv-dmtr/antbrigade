@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import Select from '../../components/Select.astro';
-import { artists, albumsOf, plural } from '../../lib/db.js';
+import { artists, albumsOf } from '../../lib/db.js';
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
@@ -33,12 +33,15 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 >
   <div class="page-head">
     <h1>Artists</h1>
-    <p class="counter" id="counter" aria-live="polite">
-      {plural(artists.length, 'artist', 'artists')}
-    </p>
+    {/* Пусто, пока не фильтруют: общее число в шапке ни к чему, а обратная
+        связь по поиску нужна. */}
+    <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
-  <div class="controls">
+  {/* Поиск и указатель по буквам — в липкой полосе, одинаково на списках
+      релизов, артистов, лейблов и жанров. Сортировка остаётся ниже: её
+      выбирают один раз, держать её на экране незачем. */}
+  <div class="sticky-bar">
     <div class="controls__top">
       <div class="search">
         <input type="search" id="search" placeholder="Artist name" autocomplete="off"
@@ -47,14 +50,13 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <ViewSwitch />
     </div>
 
-    {/* Указатель по буквам слева, сортировка справа. Группа с сортировкой
-        прижата margin-left: auto, а не space-between: при неалфавитном
-        порядке указатель прячется, и без этого сортировка уехала бы влево. */}
-    <div class="filters">
-      <nav class="alphabet" id="alphabet">
-        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-      </nav>
+    <nav class="alphabet" id="alphabet">
+      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+    </nav>
+  </div>
 
+  <div class="controls">
+    <div class="filters">
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>
@@ -123,7 +125,6 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 
   let query = '';
 
-  const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
 
   function apply() {
     // Во время поиска буквы не нужны: результаты идут сплошным списком, и
@@ -143,7 +144,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
     alphabet.hidden = !alphabetical;
 
     empty.hidden = count > 0;
-    counter.textContent = count === total ? plural(total) : count + ' of ' + total;
+    counter.textContent = query ? count + ' of ' + total : '';
   }
 
   function sort() {

@@ -3,12 +3,31 @@ import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import Select from '../../components/Select.astro';
-import { genres, albumsOf, plural } from '../../lib/db.js';
+import { genres, albumsOf } from '../../lib/db.js';
 
-/* Порядок по умолчанию алфавитный — как на списках артистов и лейблов.
-   Прежний, «сначала крупные жанры», остался в сортировке под именем
-   Most releases. */
+/* Раскладка та же, что у артистов и лейблов: по первой букве, порядок
+   алфавитный. Прежний, «сначала крупные жанры», остался в сортировке под
+   именем Most releases. */
+function bucket(name) {
+  const ch = name.trim()[0]?.toUpperCase() ?? '#';
+  return /[A-Z]/.test(ch) ? ch : '#';
+}
+
 const byName = genres.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+const groups = new Map();
+for (const g of byName) {
+  const key = bucket(g.name);
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key).push(g);
+}
+const ordered = [...groups.entries()].sort(([a], [b]) => {
+  if (a === '#') return 1;
+  if (b === '#') return -1;
+  return a.localeCompare(b);
+});
+
+const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 const solo = genres.filter((g) => g.count === 1).length;
 ---
 <Base
@@ -23,7 +42,7 @@ const solo = genres.filter((g) => g.count === 1).length;
     <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
-  <div class="controls">
+  <div class="sticky-bar">
     <div class="controls__top">
       <div class="search">
         <input type="search" id="search" placeholder="Genre name" autocomplete="off"
@@ -32,6 +51,12 @@ const solo = genres.filter((g) => g.count === 1).length;
       <ViewSwitch />
     </div>
 
+    <nav class="alphabet" id="alphabet">
+      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+    </nav>
+  </div>
+
+  <div class="controls">
     <div class="filters">
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
@@ -46,25 +71,34 @@ const solo = genres.filter((g) => g.count === 1).length;
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
   <ul class="names" id="list" data-view="list">
-    {byName.map((genre) => (
-      <li
-        class="names__item"
-        data-search={genre.name.toLowerCase()}
-        data-name={genre.name.toLowerCase()}
-        data-count={genre.count}
-      >
-        <a class="row row--name view-row" href={`/genres/${genre.slug}`}>
-          <span class="row__title">{genre.name}</span>
-          <span class="row__meta"></span>
-          <span class="row__num">[{genre.count}]</span>
-        </a>
-        <NameTile
-          class="view-tile"
-          href={`/genres/${genre.slug}`}
-          name={genre.name}
-          releases={albumsOf(genre.albumIds)}
-        />
-      </li>
+    {ordered.map(([letter, items]) => (
+      <>
+        <li class="names__letter" id={anchor(letter)} data-letter={letter}>
+          <span>{letter}</span>
+          <span class="mono mono--sm">[{items.length}]</span>
+        </li>
+        {items.map((genre) => (
+          <li
+            class="names__item"
+            data-search={genre.name.toLowerCase()}
+            data-name={genre.name.toLowerCase()}
+            data-count={genre.count}
+            data-letter={letter}
+          >
+            <a class="row row--name view-row" href={`/genres/${genre.slug}`}>
+              <span class="row__title">{genre.name}</span>
+              <span class="row__meta"></span>
+              <span class="row__num">[{genre.count}]</span>
+            </a>
+            <NameTile
+              class="view-tile"
+              href={`/genres/${genre.slug}`}
+              name={genre.name}
+              releases={albumsOf(genre.albumIds)}
+            />
+          </li>
+        ))}
+      </>
     ))}
   </ul>
 
@@ -77,25 +111,36 @@ const solo = genres.filter((g) => g.count === 1).length;
   const search  = document.getElementById('search');
   const empty   = document.getElementById('empty');
   const counter = document.getElementById('counter');
-  const list    = document.getElementById('list');
-  const viewsEl = document.getElementById('views');
-  const sortEl  = document.getElementById('sort');
+  const list     = document.getElementById('list');
+  const viewsEl  = document.getElementById('views');
+  const sortEl   = document.getElementById('sort');
+  const alphabet = document.getElementById('alphabet');
 
+  const heads = Array.from(list.querySelectorAll('.names__letter'));
   const items = Array.from(list.querySelectorAll('.names__item'));
   const total = items.length;
-  const initialOrder = items.slice();
+
+  // Исходный порядок — записи вперемешку с заголовками букв; храним целиком,
+  // чтобы возврат к алфавиту не пришлось собирать заново.
+  const initialOrder = Array.from(list.children);
 
   let query = '';
 
-  const plural = (n) => `${n} ${n === 1 ? 'genre' : 'genres'}`;
-
   function apply() {
+    // Во время поиска буквы не нужны: результаты идут сплошным списком.
+    const alphabetical = sortEl.value === 'az' && !query;
+    const shown = new Set();
     let count = 0;
+
     for (const li of items) {
       const ok = !query || li.dataset.search.includes(query);
       li.hidden = !ok;
-      if (ok) count++;
+      if (ok) { count++; shown.add(li.dataset.letter); }
     }
+
+    for (const h of heads) h.hidden = !alphabetical || !shown.has(h.dataset.letter);
+    alphabet.hidden = !alphabetical;
+
     empty.hidden = count > 0;
     // Пусто, пока не фильтруют: общее число в шапке ни к чему.
     counter.textContent = query ? count + ' of ' + total : '';
@@ -105,7 +150,7 @@ const solo = genres.filter((g) => g.count === 1).length;
     const by = sortEl.value;
     let order;
     if (by === 'az') order = initialOrder;
-    else if (by === 'za') order = initialOrder.slice().reverse();
+    else if (by === 'za') order = items.slice().reverse();
     else order = items.slice().sort(
       (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
              || a.dataset.name.localeCompare(b.dataset.name)

@@ -32,19 +32,17 @@ const PAGE = 50;
     </p>
   </div>
 
-  {/* Строка поиска липкая, поэтому лежит прямо в main, а не внутри
-      .controls: липкий элемент ездит только в границах своего родителя, а
-      .controls кончается сразу под фильтрами — поиск уехал бы вместе с ними.
-
-      Список строками — вид по умолчанию, как в макете. Стена обложек
+  {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
       содержание, и терять её целиком было бы неправильно. */}
-  <div class="controls__top controls__top--sticky">
-    <div class="search">
-      <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
-             spellcheck="false" aria-label="Search by artist or album" />
+  <div class="sticky-bar">
+    <div class="controls__top">
+      <div class="search">
+        <input type="search" id="search" placeholder="Artist or album" autocomplete="off"
+               spellcheck="false" aria-label="Search by artist or album" />
+      </div>
+      <ViewSwitch />
     </div>
-    <ViewSwitch />
   </div>
 
   <div class="controls">

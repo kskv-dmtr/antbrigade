@@ -39,7 +39,9 @@ const meta = [country, count ? plural(count, 'release', 'releases') : 'no releas
         <span class="tile__cta">Open <ArrowElbow /></span>
       </div>
     </div>
-    <span class="tile__artist">{meta}</span>
+    {/* Не .tile__artist: там имя исполнителя обычным шрифтом, а здесь
+        служебная строка — страна и счёт релизов, ей нужен моноширинный. */}
+    <span class="tile__stat">{meta}</span>
     <span class="tile__title">{name}</span>
   </a>
 </Wrapper>

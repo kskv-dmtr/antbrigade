@@ -284,10 +284,21 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-muted);
 }
 .tile__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
+}
+/* Размер от кегля надписи, цвет от неё же — иконка выворачивается вместе
+   с плашкой. em, а не пиксели: подпись меняет кегль на узком экране. */
+.icon-arrow {
+  width: 0.72em;
+  height: 0.72em;
+  flex: none;
+  display: block;
 }
 
 .tile__artist {

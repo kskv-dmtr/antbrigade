@@ -5,6 +5,7 @@
    Обложки квадратные, поэтому плитка 1:1, а не 4:3 как в макете: 4:3 срезает
    у квадрата четверть высоты, а обложка здесь — сам товар. */
 
+import ArrowElbow from './ArrowElbow.astro';
 import { coverSrc, coverSrcSet } from '../lib/db.js';
 
 /* Обёртка по умолчанию <li>: плитки почти везде лежат в списке. На главной
@@ -32,7 +33,7 @@ const meta = [album.types.join(' / '), album.year].filter(Boolean).join(' · ');
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Info →</span>
+        <span class="tile__cta">Open <ArrowElbow /></span>
       </div>
     </div>
     {showArtist && <span class="tile__artist">{album.artist}</span>}

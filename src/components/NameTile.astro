@@ -6,6 +6,7 @@
    релиз с обложкой. У двенадцати артистов релизов нет вовсе — там остаётся
    штриховка, то самое пустое состояние из макета. */
 
+import ArrowElbow from './ArrowElbow.astro';
 import { coverSrc, coverSrcSet, countryName, plural } from '../lib/db.js';
 
 const { href, name, releases = [], country, as: Wrapper = 'div', class: extra } = Astro.props;
@@ -35,7 +36,7 @@ const meta = [country, count ? plural(count, 'release', 'releases') : 'no releas
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{countryName(country)}</span>
-        <span class="tile__cta">Open →</span>
+        <span class="tile__cta">Open <ArrowElbow /></span>
       </div>
     </div>
     <span class="tile__artist">{meta}</span>

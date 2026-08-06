@@ -47,6 +47,9 @@
 
   --measure:     1280px;    /* ширина кадра из макета, вместе с полями */
   --pad:         28px;
+  /* Высота закреплённой шапки: от неё отсчитываются липкая строка поиска
+     и отступы для якорей. Меняете отступы в шапке — поправьте и здесь. */
+  --head-h:      72px;
   --gap:         24px;
   --tile-min:    210px;
 
@@ -60,8 +63,23 @@
 
 * { box-sizing: border-box; }
 
+/* Атрибут hidden должен побеждать всегда.
+
+   Правило `[hidden] { display: none }` живёт в стиле браузера, а любое
+   авторское объявление display сильнее него — независимо от специфичности.
+   Поэтому у всего, чему мы задаём display (буквы в списках, алфавит,
+   кнопка «показать ещё»), атрибут молча переставал работать: скрипт считал
+   элемент скрытым, а на экране он оставался. Фильтрация здесь целиком
+   построена на el.hidden, так что страховка нужна общая. */
+[hidden] { display: none !important; }
+
+/* Колонка во всю высоту окна, чтобы на короткой странице — скажем, у лейбла
+   с одним релизом — подвал прижимался к низу, а не висел посреди экрана. */
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
@@ -69,6 +87,11 @@ body {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
+/* width: 100% обязателен: у .shell есть margin: 0 auto, а авто-поля по
+   поперечной оси отменяют растягивание флекс-элемента — без этого main
+   сжимается до содержимого и сетка теряет колонку. */
+main { flex: 1 0 auto; width: 100%; }
+.foot { flex: none; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -119,17 +142,15 @@ a { color: inherit; text-decoration: none; }
    прилипания — на длинном индексе прилипшая шапка съедает первую строку
    при переходе по якорю.                                              */
 
-/* Прилипает и прячется при прокрутке вниз, возвращается при прокрутке
-   вверх. Фон обязателен: под шапкой едет содержимое. */
+/* Закреплена намертво: видна всегда, при прокрутке не прячется. Фон
+   обязателен — под шапкой едет содержимое. */
 .masthead {
   position: sticky;
   top: 0;
   z-index: 20;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
-  transition: transform 0.22s ease;
 }
-.masthead[data-hidden] { transform: translateY(-100%); }
 
 .masthead__in {
   display: flex;
@@ -439,6 +460,17 @@ a { color: inherit; text-decoration: none; }
   align-items: stretch;
   gap: 8px;
 }
+
+/* Липкая строка поиска на главной: прилипает сразу под шапкой, поэтому
+   возвращается на экран при прокрутке вверх и не теряется в длинном
+   каталоге. Фон и поля свои — под ней едут строки списка. */
+.controls__top--sticky {
+  position: sticky;
+  top: var(--head-h);
+  z-index: 10;
+  background: var(--bg);
+  padding: 10px 0;
+}
 .controls__top .search { flex: 1; min-width: 0; }
 .seg--views { flex: none; }
 
@@ -591,7 +623,18 @@ select option { background: #1a1a19; color: var(--fg); }
    Та же полоса, что и на главной, только вместо ссылки — сама страница:
    обложка целиком слева, крупный заголовок справа.                      */
 
-.detail { padding-bottom: 10px; }
+/* Отступ сверху: обложка не должна упираться в закреплённую шапку. */
+.detail { padding: 28px 0 10px; }
+
+/* Related на странице жанра: подпись и жанры на одной горизонтали. */
+.related {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-bottom: 4px;
+}
+.related__label { color: var(--fg-dim); flex: none; }
 
 .detail__banner {
   position: relative;
@@ -700,7 +743,16 @@ select option { background: #1a1a19; color: var(--fg); }
   text-transform: uppercase;
   color: var(--fg-dim);
 }
-.facts dd { margin: 0; }
+/* Значения набраны тем же, чем жанры рядом: моноширинным прописными, как
+   в .chip. Иначе дата и лейбл выпадали из строки с чипсами. */
+.facts dd {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
 .facts a { border-bottom: 1px solid var(--line); }
 .facts a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
@@ -769,8 +821,8 @@ select option { background: #1a1a19; color: var(--fg); }
   letter-spacing: -0.03em;
 }
 .names__letter:first-child { margin-top: 0; }
-/* Переход по букве не должен заводить заголовок под прилипшую шапку. */
-.names__letter { scroll-margin-top: 88px; }
+/* Переход по букве не должен заводить заголовок под закреплённую шапку. */
+.names__letter { scroll-margin-top: calc(var(--head-h) + 16px); }
 .names__letter .mono { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.08em; }
 
 /* 284 жанра разной длины — не колонки, а поток. */
@@ -820,14 +872,16 @@ select option { background: #1a1a19; color: var(--fg); }
    подпись. Ничего нового по оформлению здесь не заводится — ссылки взяты
    от меню в шапке, подпись от прочих служебных строк.                  */
 
-.foot { border-top: 1px solid var(--line); margin-top: 70px; }
+.foot { border-top: 1px solid var(--line); margin-top: 60px; }
+/* По первой строке подписи, а не по нижнему краю: baseline ставит «Telegram»
+   ровно на ту же строку, что и «Made for fun by…». */
 .foot__in {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 24px 32px;
-  padding-top: 26px;
-  padding-bottom: 34px;
+  gap: 16px 32px;
+  padding-top: 20px;
+  padding-bottom: 24px;
 }
 
 /* Ровно как .nav: тот же моноширинный, тот же приглушённый, та же
@@ -871,7 +925,7 @@ select option { background: #1a1a19; color: var(--fg); }
     padding-left: max(var(--pad), env(safe-area-inset-left));
     padding-right: max(var(--pad), env(safe-area-inset-right));
   }
-  .foot__in { padding-bottom: max(34px, env(safe-area-inset-bottom)); }
+  .foot__in { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
 }
 
 /* ---------------------------------------------------------- мобилка */
@@ -933,7 +987,7 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 
 @media (max-width: 640px) {
-  :root { --pad: 16px; --gap: 14px; --tile-min: 150px; }
+  :root { --pad: 16px; --gap: 14px; --tile-min: 150px; --head-h: 84px; }
 
   /* Кегль логотипа кратен 4: пиксельный шрифт на промежуточных мажет. */
   .brand { font-size: 20px; }

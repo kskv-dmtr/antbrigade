@@ -18,8 +18,8 @@ const roster   = artistsOf(label.artistIds);
   activeSection="labels"
 >
   <div class="page-head">
+    {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
     <h1>{label.name}</h1>
-    <p class="counter">{plural(releases.length, 'release', 'releases')}</p>
   </div>
 
   <BandcampLink url={label.bandcamp} />

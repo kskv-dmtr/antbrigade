@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import { genres, albumsOf, relatedGenres, plural } from '../../lib/db.js';
 
+
 export function getStaticPaths() {
   return genres.map((genre) => ({ params: { slug: genre.slug }, props: { genre } }));
 }
@@ -10,9 +11,6 @@ export function getStaticPaths() {
 const { genre } = Astro.props;
 const releases = albumsOf(genre.albumIds);
 const related = relatedGenres(genre);
-
-const years = releases.map((a) => a.year).filter(Boolean);
-const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
 ---
 <Base
   title={`${genre.name} · ant brigade`}
@@ -21,22 +19,20 @@ const span = years.length ? [Math.min(...years), Math.max(...years)] : null;
 >
   <div class="page-head">
     <h1>{genre.name}</h1>
-    <p class="counter">
-      {plural(releases.length, 'release', 'releases')}
-      {span && span[0] !== span[1] && <span class="counter__span"> · {span[0]}–{span[1]}</span>}
-      {span && span[0] === span[1] && <span class="counter__span"> · {span[0]}</span>}
-    </p>
+    <p class="counter">[{releases.length}]</p>
   </div>
 
+  {/* Related в строку: подпись и сами жанры на одной горизонтали, а не
+      двумя колонками, как в остальных списках фактов. */}
   {related.length > 0 && (
-    <dl class="facts facts--wide">
-      <dt>Related</dt>
-      <dd class="chips">
+    <div class="related">
+      <span class="related__label mono mono--sm">Related</span>
+      <div class="chips">
         {related.map((g) => (
           <a class="chip chip--link" href={`/genres/${g.slug}`}>{g.name}</a>
         ))}
-      </dd>
-    </dl>
+      </div>
+    </div>
   )}
 
   <section class="section">

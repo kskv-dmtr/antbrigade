@@ -126,7 +126,9 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
   const plural = (n) => `${n} ${n === 1 ? 'artist' : 'artists'}`;
 
   function apply() {
-    const alphabetical = sortEl.value === 'az';
+    // Во время поиска буквы не нужны: результаты идут сплошным списком, и
+    // раскладка на плитки в сетке получается без разрывов на заголовки.
+    const alphabetical = sortEl.value === 'az' && !query;
     const shown = new Set();
     let count = 0;
 

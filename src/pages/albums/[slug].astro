@@ -30,15 +30,14 @@ const cover   = coverSrc(album, 800);
              alt={`${album.album} cover`} fetchpriority="high" />
       )}
       <div class="detail__head">
-        <p class="detail__kicker">
-          {[album.types.join(' / '), album.year].filter(Boolean).join(' · ')}
-        </p>
+        {/* Год отсюда убран: он и так стоит ниже, в Release date. */}
+        <p class="detail__kicker">{album.types.join(' · ')}</p>
         <h1 class="detail__title">{album.album}</h1>
         <p class="detail__artist">
           {artists.length > 0
             ? artists.map((a, i) => (
                 <>
-                  {i > 0 && <span class="sep"> / </span>}
+                  {i > 0 && <span class="sep"> · </span>}
                   <a href={`/artists/${a.slug}`}>{a.name}</a>
                 </>
               ))

@@ -1,8 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { genres, plural } from '../../lib/db.js';
+import NameTile from '../../components/NameTile.astro';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import Select from '../../components/Select.astro';
+import { genres, albumsOf, plural } from '../../lib/db.js';
 
-// genres уже отсортированы по числу релизов — крупные жанры сверху
+/* Порядок по умолчанию алфавитный — как на списках артистов и лейблов.
+   Прежний, «сначала крупные жанры», остался в сортировке под именем
+   Most releases. */
+const byName = genres.slice().sort((a, b) => a.name.localeCompare(b.name));
 const solo = genres.filter((g) => g.count === 1).length;
 ---
 <Base
@@ -12,27 +18,52 @@ const solo = genres.filter((g) => g.count === 1).length;
 >
   <div class="page-head">
     <h1>Genres</h1>
-    <p class="counter" id="counter" aria-live="polite">
-      {plural(genres.length, 'genre', 'genres')}
-    </p>
+    {/* Счётчик пуст, пока не фильтруют: общее число в шапке не нужно, а
+        обратная связь по поиску — нужна. */}
+    <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
   <div class="controls">
-    <div class="search">
-      <input type="search" id="search" placeholder="Genre name" autocomplete="off"
-             spellcheck="false" aria-label="Search by genre name" />
+    <div class="controls__top">
+      <div class="search">
+        <input type="search" id="search" placeholder="Genre name" autocomplete="off"
+               spellcheck="false" aria-label="Search by genre name" />
+      </div>
+      <ViewSwitch />
+    </div>
+
+    <div class="filters">
+      <div class="filters__group filters__group--end">
+        <Select id="sort" label="Sorting">
+          <option value="az">A → Z</option>
+          <option value="za">Z → A</option>
+          <option value="releases">Most releases</option>
+        </Select>
+      </div>
     </div>
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
-  <ul class="genre-cloud" id="list">
-    {genres.map((genre) => (
-      <li data-search={genre.name.toLowerCase()}>
-        <a href={`/genres/${genre.slug}`}>
-          <span class="genre-cloud__name">{genre.name}</span>
-          <span class="genre-cloud__count">[{genre.count}]</span>
+  <ul class="names" id="list" data-view="list">
+    {byName.map((genre) => (
+      <li
+        class="names__item"
+        data-search={genre.name.toLowerCase()}
+        data-name={genre.name.toLowerCase()}
+        data-count={genre.count}
+      >
+        <a class="row row--name view-row" href={`/genres/${genre.slug}`}>
+          <span class="row__title">{genre.name}</span>
+          <span class="row__meta"></span>
+          <span class="row__num">[{genre.count}]</span>
         </a>
+        <NameTile
+          class="view-tile"
+          href={`/genres/${genre.slug}`}
+          name={genre.name}
+          releases={albumsOf(genre.albumIds)}
+        />
       </li>
     ))}
   </ul>
@@ -46,24 +77,71 @@ const solo = genres.filter((g) => g.count === 1).length;
   const search  = document.getElementById('search');
   const empty   = document.getElementById('empty');
   const counter = document.getElementById('counter');
-  const items   = Array.from(document.querySelectorAll('#list li'));
-  const total   = items.length;
+  const list    = document.getElementById('list');
+  const viewsEl = document.getElementById('views');
+  const sortEl  = document.getElementById('sort');
+
+  const items = Array.from(list.querySelectorAll('.names__item'));
+  const total = items.length;
+  const initialOrder = items.slice();
+
+  let query = '';
 
   const plural = (n) => `${n} ${n === 1 ? 'genre' : 'genres'}`;
+
+  function apply() {
+    let count = 0;
+    for (const li of items) {
+      const ok = !query || li.dataset.search.includes(query);
+      li.hidden = !ok;
+      if (ok) count++;
+    }
+    empty.hidden = count > 0;
+    // Пусто, пока не фильтруют: общее число в шапке ни к чему.
+    counter.textContent = query ? count + ' of ' + total : '';
+  }
+
+  function sort() {
+    const by = sortEl.value;
+    let order;
+    if (by === 'az') order = initialOrder;
+    else if (by === 'za') order = initialOrder.slice().reverse();
+    else order = items.slice().sort(
+      (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
+             || a.dataset.name.localeCompare(b.dataset.name)
+    );
+
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    list.appendChild(frag);
+  }
+
+  viewsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    list.dataset.view = btn.dataset.view;
+    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  });
+
+  sortEl.addEventListener('change', () => { sort(); apply(); });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      const q = search.value.trim().toLowerCase();
-      let shown = 0;
-      for (const li of items) {
-        const ok = !q || li.dataset.search.includes(q);
-        li.hidden = !ok;
-        if (ok) shown++;
-      }
-      empty.hidden = shown > 0;
-      counter.textContent = shown === total ? plural(total) : shown + ' of ' + total;
+      query = search.value.trim().toLowerCase();
+      apply();
     }, 120);
   });
+
+  for (const wrap of document.querySelectorAll('.select')) {
+    const field = wrap.querySelector('select');
+    const close = () => wrap.removeAttribute('data-open');
+    field.addEventListener('mousedown', () => wrap.toggleAttribute('data-open'));
+    field.addEventListener('keydown', (e) => {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+    });
+    field.addEventListener('change', close);
+    field.addEventListener('blur', close);
+  }
 </script>

@@ -39,9 +39,9 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 >
   <div class="page-head">
     <h1>Labels</h1>
-    <p class="counter" id="counter" aria-live="polite">
-      {plural(labels.length, 'label', 'labels')}
-    </p>
+    {/* Пусто, пока не фильтруют: общее число в шапке ни к чему, а обратная
+        связь по поиску нужна. */}
+    <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
   <div class="controls">
@@ -123,10 +123,9 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 
   let query = '';
 
-  const plural = (n) => `${n} ${n === 1 ? 'label' : 'labels'}`;
-
   function apply() {
-    const alphabetical = sortEl.value === 'az';
+    // Во время поиска буквы не нужны: результаты идут сплошным списком.
+    const alphabetical = sortEl.value === 'az' && !query;
     const shown = new Set();
     let count = 0;
 
@@ -140,7 +139,7 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
     alphabet.hidden = !alphabetical;
 
     empty.hidden = count > 0;
-    counter.textContent = count === total ? plural(total) : count + ' of ' + total;
+    counter.textContent = query ? count + ' of ' + total : '';
   }
 
   function sort() {

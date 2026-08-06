@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
-import { albums, plural, formatDate } from '../lib/db.js';
+import { albums, formatDate } from '../lib/db.js';
 
 /* Главная — витрина, а не каталог: весь список живёт на /releases.
 
@@ -51,7 +51,6 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Dig In</h2>
-      <span class="mono">{plural(albums.length, 'release', 'releases')}</span>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта

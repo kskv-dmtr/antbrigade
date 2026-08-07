@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T17:10:27Z",
+  "generatedAt": "2026-08-07T18:04:38Z",
   "counts": {
     "albums": 1057,
     "artists": 948,
     "labels": 593,
-    "videos": 50
+    "videos": 51
   },
   "albums": [
     {
@@ -31216,7 +31216,9 @@
         "2434129a-8c52-8022-abd2-d0c412936e59",
         "2434129a-8c52-8078-b19c-db3c6316124d"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b54129a-8c52-8060-a912-cb42f34a69e9"
+      ]
     },
     {
       "id": "39b4129a-8c52-805a-a891-cb2844cc1afd",
@@ -57929,6 +57931,16 @@
       "released": "2007-04-16",
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-8060-a912-cb42f34a69e9",
+      "title": "Aaron Frazer | It’s a Shame",
+      "url": "https://youtu.be/kAlb5pd7sNU?si=qCDAn9xMviU4kfKl",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "2404129a-8c52-800a-826f-dd385decf385"
       ]
     },
     {

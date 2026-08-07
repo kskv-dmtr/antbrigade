@@ -12,6 +12,7 @@
     "covers": "node scripts/fetch-covers.mjs",
     "links": "node scripts/fetch-links.mjs",
     "thumbs": "node scripts/fetch-thumbs.mjs",
+    "icons": "node scripts/make-icons.mjs",
     "deploy": "npx --yes vercel@latest --prod",
     "deploy:cloudflare": "npx --yes wrangler pages deploy dist --project-name=antbrigade",
     "zip": "powershell -ExecutionPolicy Bypass -File scripts/make-zip.ps1"

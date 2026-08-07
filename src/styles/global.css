@@ -17,9 +17,9 @@
 
 @import '@fontsource-variable/geist/wght.css';
 @import '@fontsource-variable/geist-mono/wght.css';
-/* Только Regular: у пиксельного шрифта насыщенности отличаются толщиной
-   штриха в целых пикселях, и всё, кроме 400, на мелком кегле мажет. */
-@import '@fontsource/pixelify-sans/400.css';
+/* Логотип. Начертание одно, Bold, поэтому переменная ось берётся целиком —
+   отдельного файла под 700 у Fontsource для неё нет. */
+@import '@fontsource-variable/space-grotesk/wght.css';
 
 :root {
   --bg:          #0c0c0b;
@@ -55,8 +55,8 @@
 
   --font: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  /* Логотип в шапке набран отдельным пиксельным шрифтом. */
-  --font-head: 'Pixelify Sans', var(--mono);
+  /* Логотип в шапке набран отдельным шрифтом. */
+  --font-head: 'Space Grotesk Variable', var(--font);
 
   color-scheme: dark;
 }
@@ -161,24 +161,20 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 18px;
 }
 
-/* Пиксельный шрифт только здесь, на логотипе.
+/* Логотип — единственное место со своим шрифтом: Space Grotesk Bold.
 
-   Кегль кратен 4: на промежуточных размерах пиксельная сетка даёт неровный
-   штрих. Насыщенность только 400 — у пиксельных начертаний толщина растёт
-   целыми пикселями и на мелком кегле мажет. Отрицательный трекинг снят: он
-   слепляет пиксельные буквы. Сглаживание отключено — `antialiased` из body
-   такой шрифт размывает.                                                */
+   Ограничения пиксельного шрифта, который тут стоял раньше, сняты вместе с
+   ним: кегль больше не обязан быть кратен четырём, сглаживание вернулось к
+   общему, а трекинг — к тому, что задан макетом для слова в шапке. */
 .brand {
   font-family: var(--font-head);
   font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   /* Строчными и с пробелом — «ant brigade». Регистр не трогаем ни здесь,
      ни в разметке, а пробел не должен ронять второе слово на строку ниже. */
   text-transform: none;
   white-space: nowrap;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: unset;
 }
 
 .nav {
@@ -1056,7 +1052,6 @@ select option { background: #1a1a19; color: var(--fg); }
 @media (max-width: 640px) {
   :root { --pad: 16px; --gap: 14px; --tile-min: 150px; --head-h: 84px; }
 
-  /* Кегль логотипа кратен 4: пиксельный шрифт на промежуточных мажет. */
   .brand { font-size: 20px; }
   /* Четыре пункта меню в строку на 375 px не влезают — переносим их под
      слово, а не прячем в кнопку: кнопка потребовала бы скрипта. */

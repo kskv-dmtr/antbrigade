@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T13:41:21Z",
+  "generatedAt": "2026-08-07T15:10:46Z",
   "counts": {
-    "albums": 1052,
-    "artists": 944,
-    "labels": 589,
+    "albums": 1054,
+    "artists": 945,
+    "labels": 590,
     "videos": 49
   },
   "albums": [
@@ -28357,6 +28357,35 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-8023-9e6a-d4f1ad5ff441",
+      "slug": "waeys-repetition",
+      "artist": "Waeys",
+      "album": "Repetition",
+      "url": "https://album.link/cw32rcnqfxzmh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9ca2bd49-d3a1-4e52-893d-df9dda2839a1%3Aa2055496931_10.jpg?table=block&id=3b54129a-8c52-8023-9e6a-d4f1ad5ff441&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Drum and Bass",
+        "Liquid Drum and Bass"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-01-27",
+      "year": 2023,
+      "artistIds": [
+        "3b54129a-8c52-80de-94a9-e9c16d7e6ea5"
+      ],
+      "artists": [
+        "Waeys"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-809b-a267-cdeef0d6f043"
+      ],
+      "labels": [
+        "Critical Music"
+      ]
+    },
+    {
       "id": "ee38f15f-a9db-4f49-bcb8-f235e139c7b7",
       "slug": "heaven-s-gate-heaven-s-gate",
       "artist": "Heaven’s Gate",
@@ -29002,32 +29031,6 @@
       ]
     },
     {
-      "id": "3b54129a-8c52-809a-bdda-e20666bff91b",
-      "slug": "lady-wray-piece-of-me",
-      "artist": "Lady Wray",
-      "album": "Piece of Me",
-      "url": "https://album.link/vgvgkwwpdrv5t",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Af3eafa5c-ea51-4c09-87ae-dc7f6e5b8075%3Aa0434438569_10.jpg?table=block&id=3b54129a-8c52-809a-bdda-e20666bff91b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [
-        "Album"
-      ],
-      "released": "2022-08-07",
-      "year": 2022,
-      "artistIds": [
-        "2794129a-8c52-802a-9301-d1863da787fd"
-      ],
-      "artists": [
-        "Lady Wray"
-      ],
-      "labelIds": [
-        "2494129a-8c52-80b5-a601-f724bcf55f84"
-      ],
-      "labels": [
-        "Big Crown Records"
-      ]
-    },
-    {
       "id": "2484129a-8c52-8092-a9e7-c500923f6237",
       "slug": "brijean-angelo",
       "artist": "Brijean",
@@ -29318,6 +29321,36 @@
       ],
       "labels": [
         "Big Crown Records"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-8045-a94a-f60465140114",
+      "slug": "do-it-later-future-me",
+      "artist": "Do It Later",
+      "album": "Future Me",
+      "url": "https://album.link/mtxnh2ggfmp7m",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A856ab9d0-9c6f-4840-bbe5-d037ea36e7d5%3Aa2619717658_10.jpg?table=block&id=3b54129a-8c52-8045-a94a-f60465140114&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Emo",
+        "Math Rock",
+        "Post-Hardcore"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2022-06-08",
+      "year": 2022,
+      "artistIds": [
+        "2434129a-8c52-80fa-82f2-c84975174032"
+      ],
+      "artists": [
+        "Do It Later"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8044-b7c3-ea463332e3a6"
+      ],
+      "labels": [
+        "Parapente"
       ]
     },
     {
@@ -29691,6 +29724,35 @@
       ],
       "labels": [
         "Anti- Records"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-809a-bdda-e20666bff91b",
+      "slug": "lady-wray-piece-of-me",
+      "artist": "Lady Wray",
+      "album": "Piece of Me",
+      "url": "https://album.link/vgvgkwwpdrv5t",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af3eafa5c-ea51-4c09-87ae-dc7f6e5b8075%3Aa0434438569_10.jpg?table=block&id=3b54129a-8c52-809a-bdda-e20666bff91b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soul",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-01-28",
+      "year": 2022,
+      "artistIds": [
+        "2794129a-8c52-802a-9301-d1863da787fd"
+      ],
+      "artists": [
+        "Lady Wray"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80b5-a601-f724bcf55f84"
+      ],
+      "labels": [
+        "Big Crown Records"
       ]
     },
     {
@@ -34832,13 +34894,16 @@
       "slug": "do-it-later",
       "name": "Do It Later",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://doitlater.bandcamp.com/music",
       "albumIds": [
-        "1bc4129a-8c52-80c7-8145-dda6a9454519"
+        "1bc4129a-8c52-80c7-8145-dda6a9454519",
+        "3b54129a-8c52-8045-a94a-f60465140114"
       ],
       "genres": [
         "Punk Rock",
-        "Math Rock"
+        "Math Rock",
+        "Emo",
+        "Post-Hardcore"
       ],
       "labelIds": [
         "2494129a-8c52-8044-b7c3-ea463332e3a6"
@@ -39443,14 +39508,15 @@
       "slug": "lady-wray",
       "name": "Lady Wray",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://ladywray.bandcamp.com/music",
       "albumIds": [
         "2794129a-8c52-80a6-91a0-d04200066085",
         "3b54129a-8c52-809a-bdda-e20666bff91b"
       ],
       "genres": [
         "Soul",
-        "R'n'B"
+        "R'n'B",
+        "Smooth Soul"
       ],
       "labelIds": [
         "2494129a-8c52-80b5-a601-f724bcf55f84"
@@ -47786,6 +47852,24 @@
       "videoIds": []
     },
     {
+      "id": "3b54129a-8c52-80de-94a9-e9c16d7e6ea5",
+      "slug": "waeys",
+      "name": "Waeys",
+      "country": "NL",
+      "bandcamp": "https://waeys.bandcamp.com/music",
+      "albumIds": [
+        "3b54129a-8c52-8023-9e6a-d4f1ad5ff441"
+      ],
+      "genres": [
+        "Drum and Bass",
+        "Liquid Drum and Bass"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-809b-a267-cdeef0d6f043"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3454129a-8c52-808c-a823-c75492b83f4d",
       "slug": "warbaby",
       "name": "Warbaby",
@@ -49393,8 +49477,8 @@
         "6ab27855-1303-46f0-8629-28c5138847fe",
         "0e1f8737-6809-4e9c-bdbe-eba4e832342c",
         "46fffbcf-55b8-4c8f-becf-f15ca1ae1cff",
-        "3b54129a-8c52-809a-bdda-e20666bff91b",
         "2534129a-8c52-80f8-8577-f0c3643e8f78",
+        "3b54129a-8c52-809a-bdda-e20666bff91b",
         "3b34129a-8c52-80bb-a119-e6705706332a"
       ],
       "artistIds": [
@@ -50225,6 +50309,19 @@
       ],
       "artistIds": [
         "24a4129a-8c52-80da-af5b-c854e9b71a8b"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-809b-a267-cdeef0d6f043",
+      "slug": "critical-music",
+      "name": "Critical Music",
+      "country": "GB",
+      "bandcamp": "https://criticalmusic.bandcamp.com/",
+      "albumIds": [
+        "3b54129a-8c52-8023-9e6a-d4f1ad5ff441"
+      ],
+      "artistIds": [
+        "3b54129a-8c52-80de-94a9-e9c16d7e6ea5"
       ]
     },
     {
@@ -54040,9 +54137,10 @@
       "slug": "parapente",
       "name": "Parapente",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://parapente.bandcamp.com/",
       "albumIds": [
-        "1bc4129a-8c52-80c7-8145-dda6a9454519"
+        "1bc4129a-8c52-80c7-8145-dda6a9454519",
+        "3b54129a-8c52-8045-a94a-f60465140114"
       ],
       "artistIds": [
         "2434129a-8c52-80fa-82f2-c84975174032"

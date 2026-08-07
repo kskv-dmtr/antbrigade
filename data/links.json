@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T13:41:33Z",
+  "generatedAt": "2026-08-07T15:11:12Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16747,6 +16747,41 @@
       "upc": "349223006636",
       "tracks": 12,
       "releaseDate": "2022-28"
+    },
+    "3b54129a-8c52-8023-9e6a-d4f1ad5ff441": {
+      "source": "https://album.link/cw32rcnqfxzmh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6YYn1AjxZr5v9CxixP9iz0",
+        "pandora": "https://www.pandora.com/AL:20206016",
+        "deezer": "https://www.deezer.com/album/505279511",
+        "amazonMusic": "https://music.amazon.com/albums/B0CLWQK9WM",
+        "tidal": "https://listen.tidal.com/album/324581509",
+        "napster": "https://play.napster.com/album/alb.729924184",
+        "yandex": "https://music.yandex.ru/album/24390396",
+        "anghami": "https://play.anghami.com/album/1044962213?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0CLWQK9WM"
+      },
+      "upc": "8790001384255",
+      "tracks": 9,
+      "releaseDate": "2023-27"
+    },
+    "3b54129a-8c52-8045-a94a-f60465140114": {
+      "source": "https://album.link/mtxnh2ggfmp7m",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5eHWvqn2zFBZuWnGeC46fs",
+        "pandora": "https://www.pandora.com/AL:15161432",
+        "deezer": "https://www.deezer.com/album/317140557",
+        "amazonMusic": "https://music.amazon.com/albums/B09ZVGVDY9",
+        "tidal": "https://listen.tidal.com/album/443551451",
+        "napster": "https://play.napster.com/album/alb.666393043",
+        "boomplay": "https://www.boomplay.com/albums/111373168",
+        "anghami": "https://play.anghami.com/album/1028192737?refer=linktree",
+        "bandcamp": "https://parapente.bandcamp.com/album/future-me",
+        "amazonStore": "https://amazon.com/dp/B09ZVGVDY9"
+      },
+      "upc": "3701421569028",
+      "tracks": 5,
+      "releaseDate": "2022-05-08"
     }
   }
 }

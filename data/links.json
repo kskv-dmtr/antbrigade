@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T16:10:29Z",
+  "generatedAt": "2026-08-07T17:10:41Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16819,6 +16819,23 @@
       "upc": "5908252861408",
       "tracks": 14,
       "releaseDate": "2022-10-04"
+    },
+    "3b54129a-8c52-8078-be70-e0fc4334c265": {
+      "source": "https://album.link/tnptx867jdcps",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4gr5qXeIHW3uRpYvqBbYSo",
+        "pandora": "https://www.pandora.com/AL:17819702",
+        "deezer": "https://www.deezer.com/album/352955917",
+        "amazonMusic": "https://music.amazon.com/albums/B0BCXDHRQL",
+        "tidal": "https://listen.tidal.com/album/246341209",
+        "boomplay": "https://www.boomplay.com/albums/54132745",
+        "anghami": "https://play.anghami.com/album/1031675391?refer=linktree",
+        "bandcamp": "https://themanges.bandcamp.com/album/book-of-hate-for-good-people",
+        "amazonStore": "https://amazon.com/dp/B0BCXDHRQL"
+      },
+      "upc": "197083057325",
+      "tracks": 12,
+      "releaseDate": "2022-08-23"
     }
   }
 }

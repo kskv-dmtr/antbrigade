@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T16:10:13Z",
+  "generatedAt": "2026-08-07T17:10:27Z",
   "counts": {
-    "albums": 1056,
-    "artists": 947,
-    "labels": 592,
-    "videos": 49
+    "albums": 1057,
+    "artists": 948,
+    "labels": 593,
+    "videos": 50
   },
   "albums": [
     {
@@ -28973,6 +28973,37 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-8078-be70-e0fc4334c265",
+      "slug": "the-manges-book-of-hate-for-good-people",
+      "artist": "The Manges",
+      "album": "Book of Hate for Good People",
+      "url": "https://album.link/tnptx867jdcps",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Acff42495-2c0e-4cc1-9eac-b1fa163c5305%3Aa1720310801_10.jpg?table=block&id=3b54129a-8c52-8078-be70-e0fc4334c265&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Punk",
+        "Punk Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-09-23",
+      "year": 2022,
+      "artistIds": [
+        "3b54129a-8c52-80a8-b040-c0f3b1161ef9"
+      ],
+      "artists": [
+        "The Manges"
+      ],
+      "labelIds": [
+        "3144129a-8c52-80f8-9b70-efd4bebc7600",
+        "3b54129a-8c52-801f-9f0c-f223d9679a23"
+      ],
+      "labels": [
+        "Striped Records",
+        "Hey Suburbia"
+      ]
+    },
+    {
       "id": "3b24129a-8c52-806f-a7df-cb62930091ce",
       "slug": "marxist-love-disco-ensemble-mlde",
       "artist": "Marxist Love Disco Ensemble",
@@ -41851,7 +41882,7 @@
       "slug": "nu-genea",
       "name": "Nu Genea",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://nugenea.bandcamp.com/music",
       "albumIds": [
         "3534129a-8c52-8085-9f13-fd2087cd2dbc",
         "2404129a-8c52-804f-ab52-c2bae8eb834b"
@@ -41867,7 +41898,8 @@
       ],
       "videoIds": [
         "2404129a-8c52-80ab-ad37-cdb22b949a4b",
-        "2414129a-8c52-8095-a205-db0ceb2a8f62"
+        "2414129a-8c52-8095-a205-db0ceb2a8f62",
+        "3b54129a-8c52-80c6-8610-efd07b2181a0"
       ]
     },
     {
@@ -46431,6 +46463,25 @@
       ],
       "labelIds": [
         "2494129a-8c52-8078-9781-c8afa138bad9"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b54129a-8c52-80a8-b040-c0f3b1161ef9",
+      "slug": "the-manges",
+      "name": "The Manges",
+      "country": "IT",
+      "bandcamp": "https://themanges.bandcamp.com/music",
+      "albumIds": [
+        "3b54129a-8c52-8078-be70-e0fc4334c265"
+      ],
+      "genres": [
+        "Pop Punk",
+        "Punk Rock"
+      ],
+      "labelIds": [
+        "3144129a-8c52-80f8-9b70-efd4bebc7600",
+        "3b54129a-8c52-801f-9f0c-f223d9679a23"
       ],
       "videoIds": []
     },
@@ -51886,6 +51937,19 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-801f-9f0c-f223d9679a23",
+      "slug": "hey-suburbia",
+      "name": "Hey Suburbia",
+      "country": "IT",
+      "bandcamp": null,
+      "albumIds": [
+        "3b54129a-8c52-8078-be70-e0fc4334c265"
+      ],
+      "artistIds": [
+        "3b54129a-8c52-80a8-b040-c0f3b1161ef9"
+      ]
+    },
+    {
       "id": "2494129a-8c52-8036-8953-edc9bb77efb2",
       "slug": "hideous-mink-records",
       "name": "Hideous Mink Records",
@@ -53863,7 +53927,7 @@
       "slug": "ng-records",
       "name": "NG Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://ngrecords.bandcamp.com/",
       "albumIds": [
         "3534129a-8c52-8085-9f13-fd2087cd2dbc",
         "2404129a-8c52-804f-ab52-c2bae8eb834b"
@@ -56259,12 +56323,14 @@
       "slug": "striped-records",
       "name": "Striped Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://stripedrecords.bandcamp.com/music",
       "albumIds": [
-        "3144129a-8c52-802e-a79d-c2b0f243feb9"
+        "3144129a-8c52-802e-a79d-c2b0f243feb9",
+        "3b54129a-8c52-8078-be70-e0fc4334c265"
       ],
       "artistIds": [
-        "3144129a-8c52-80c0-9e2b-c818f793ec41"
+        "3144129a-8c52-80c0-9e2b-c818f793ec41",
+        "3b54129a-8c52-80a8-b040-c0f3b1161ef9"
       ]
     },
     {
@@ -57873,6 +57939,16 @@
       "released": null,
       "artistIds": [
         "3b54129a-8c52-8071-8b85-dbf65bc58b71"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-80c6-8610-efd07b2181a0",
+      "title": "Nu Genea | People of the Moon",
+      "url": "https://youtu.be/9050w_j1x_k?si=w7ftGAAwPHGzms9K",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ]
     },
     {

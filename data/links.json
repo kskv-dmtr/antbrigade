@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T17:10:41Z",
+  "generatedAt": "2026-08-07T19:18:21Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16836,6 +16836,25 @@
       "upc": "197083057325",
       "tracks": 12,
       "releaseDate": "2022-08-23"
+    },
+    "3b54129a-8c52-80c1-88d7-c6bc7b03378e": {
+      "source": "https://album.link/hjvstqnkcwc9r",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6T0E3FgVNErXEbsoO6L47M",
+        "pandora": "https://www.pandora.com/AL:10137107",
+        "deezer": "https://www.deezer.com/album/310769057",
+        "amazonMusic": "https://music.amazon.com/albums/B09XW82PB5",
+        "tidal": "https://listen.tidal.com/album/192032756",
+        "napster": "https://play.napster.com/album/alb.600057153",
+        "yandex": "https://music.yandex.ru/album/17050799",
+        "boomplay": "https://www.boomplay.com/albums/28903974",
+        "anghami": "https://play.anghami.com/album/1027571875?refer=linktree",
+        "bandcamp": "https://jaguar.bandcamp.com/album/madremonte",
+        "amazonStore": "https://amazon.com/dp/B09XW82PB5"
+      },
+      "upc": "5059863424497",
+      "tracks": 10,
+      "releaseDate": "2021-08-24"
     }
   }
 }

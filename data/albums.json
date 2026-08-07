@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T18:04:38Z",
+  "generatedAt": "2026-08-07T19:18:07Z",
   "counts": {
-    "albums": 1057,
-    "artists": 948,
-    "labels": 593,
+    "albums": 1058,
+    "artists": 949,
+    "labels": 594,
     "videos": 51
   },
   "albums": [
@@ -30019,6 +30019,36 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-80c1-88d7-c6bc7b03378e",
+      "slug": "jaguar-madremonte",
+      "artist": "Jaguar",
+      "album": "Madremonte",
+      "url": "https://album.link/hjvstqnkcwc9r",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae8cc8a43-d281-4411-a98b-ff5360c5a11b%3Aa1946795598_10.jpg?table=block&id=3b54129a-8c52-80c1-88d7-c6bc7b03378e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cumbia",
+        "Zouk",
+        "Latin"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-24",
+      "year": 2021,
+      "artistIds": [
+        "3b54129a-8c52-803a-934a-cb5bd9f01754"
+      ],
+      "artists": [
+        "Jaguar"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-80f3-88fe-d71f993c1674"
+      ],
+      "labels": [
+        "El Palmas Music"
+      ]
+    },
+    {
       "id": "2524129a-8c52-80ed-afc3-f411fbb7eefb",
       "slug": "okvsho-orange-wine",
       "artist": "Okvsho",
@@ -38188,6 +38218,25 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b54129a-8c52-803a-934a-cb5bd9f01754",
+      "slug": "jaguar",
+      "name": "Jaguar",
+      "country": "CO",
+      "bandcamp": "https://jaguar.bandcamp.com/music",
+      "albumIds": [
+        "3b54129a-8c52-80c1-88d7-c6bc7b03378e"
+      ],
+      "genres": [
+        "Cumbia",
+        "Zouk",
+        "Latin"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-80f3-88fe-d71f993c1674"
       ],
       "videoIds": []
     },
@@ -51103,6 +51152,19 @@
       ],
       "artistIds": [
         "2504129a-8c52-801e-9a46-d8379b9b27d0"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-80f3-88fe-d71f993c1674",
+      "slug": "el-palmas-music",
+      "name": "El Palmas Music",
+      "country": "ES",
+      "bandcamp": "https://elpalmasmusic.bandcamp.com/",
+      "albumIds": [
+        "3b54129a-8c52-80c1-88d7-c6bc7b03378e"
+      ],
+      "artistIds": [
+        "3b54129a-8c52-803a-934a-cb5bd9f01754"
       ]
     },
     {

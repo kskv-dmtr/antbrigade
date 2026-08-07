@@ -1,0 +1,49 @@
+---
+/* Плитка клипа. Оформление то же, что у релиза: кадр, выворот по наведению,
+   подпись под ним. Отличается пропорцией — 16:9 вместо 1:1: обрезать кадр до
+   квадрата значит выбросить почти половину ширины, обычно вместе с лицами.
+
+   Кадр скачан заранее и лежит локально. Если файла нет, остаётся штриховка:
+   тянуть картинку с i.ytimg.com нельзя, YouTube в России режут. */
+
+import Icon from './Icon.astro';
+import { thumbSrc, thumbSrcSet } from '../lib/db.js';
+
+const { video } = Astro.props;
+
+const src = thumbSrc(video, 480);
+const meta = [
+  video.kind === 'Official Video' ? 'Video' : 'Live',
+  video.released ? video.released.slice(0, 4) : null
+].filter(Boolean).join(' · ');
+
+/* На странице артиста его имя в начале названия лишнее: «Touch Girl Apple
+   Blossom | Heart-Go» показываем как «Heart-Go». */
+const title = video.title.includes(' | ')
+  ? video.title.split(' | ').slice(1).join(' | ')
+  : video.title;
+---
+<li class="tile tile--video">
+  <a class="tile__link" href={video.url} target="_blank" rel="noopener noreferrer">
+    <div class="tile__art">
+      {src && (
+        <img
+          src={src}
+          srcset={thumbSrcSet(video)}
+          sizes="(max-width: 640px) 90vw, 300px"
+          width="480"
+          height="270"
+          loading="lazy"
+          decoding="async"
+          alt=""
+        />
+      )}
+      <div class="tile__over" aria-hidden="true">
+        <span class="tile__meta">{meta}</span>
+        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
+      </div>
+    </div>
+    <span class="tile__stat">{meta}</span>
+    <span class="tile__title">{title}</span>
+  </a>
+</li>

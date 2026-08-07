@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import VideoCard from '../../components/VideoCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
 import GenreChips from '../../components/GenreChips.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, plural } from '../../lib/db.js';
@@ -70,15 +71,8 @@ const clipsSorted = clips.slice().sort((a, b) => {
         <h2 class="display display--md">Videos</h2>
         <span class="mono">{plural(clipsSorted.length, 'clip', 'clips')}</span>
       </div>
-      <ul class="links">
-        {clipsSorted.map((v) => (
-          <li>
-            <a href={v.url} target="_blank" rel="noopener noreferrer">
-              {v.title.includes(' | ') ? v.title.split(' | ').slice(1).join(' | ') : v.title}
-            </a>
-            {v.kind && <span class="tag">{v.kind === 'Official Video' ? 'video' : 'live'}</span>}
-          </li>
-        ))}
+      <ul class="tiles tiles--auto tiles--video">
+        {clipsSorted.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>
   )}

@@ -12,8 +12,9 @@ const projectRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.
 
 import data from '../../data/albums.json';
 import { coverId } from './cover-id.js';
+import { videoId } from './video-id.js';
 
-export { coverId };
+export { coverId, videoId };
 
 /* Ссылки на площадки лежат отдельно от данных Notion: их собирает
    scripts/fetch-links.mjs со страниц album.link. Файла может не быть —
@@ -63,6 +64,35 @@ export function coverSrc(album, size = 400) {
 export function coverSrcSet(album) {
   const one = coverSrc(album, 400);
   const two = coverSrc(album, 800);
+  return one && two ? `${one} 1x, ${two} 2x` : null;
+}
+
+/* ---------------------------------------------------- кадры роликов
+
+   Кадры лежат в public/videos/ — их скачивает scripts/fetch-thumbs.mjs.
+   В отличие от обложек запасного варианта нет: тянуть картинку прямо с
+   i.ytimg.com нельзя, YouTube в России режут. Нет файла — плитка покажет
+   штриховку, то самое пустое состояние из макета.                      */
+
+let localThumbs = new Set();
+try {
+  localThumbs = new Set(fs.readdirSync(path.join(projectRoot, 'public', 'videos')));
+} catch {
+  // папки ещё нет — значит кадры не скачаны
+}
+
+/** Адрес кадра нужной ширины, если он скачан. */
+export function thumbSrc(video, width = 480) {
+  const id = videoId(video?.url);
+  if (!id) return null;
+  const file = `${id}-${width}.webp`;
+  return localThumbs.has(file) ? `/videos/${file}` : null;
+}
+
+/** srcset для плитки: 480 как 1x, 960 как 2x. */
+export function thumbSrcSet(video) {
+  const one = thumbSrc(video, 480);
+  const two = thumbSrc(video, 960);
   return one && two ? `${one} 1x, ${two} 2x` : null;
 }
 

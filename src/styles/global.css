@@ -254,6 +254,11 @@ a { color: inherit; text-decoration: none; }
   background: var(--art);
   overflow: hidden;
 }
+
+/* Клип — кадр целиком, а не вырезанный из него квадрат. Плитки шире
+   обложечных, поэтому и колонка под них просторнее. */
+.tile--video .tile__art { aspect-ratio: 16 / 9; }
+.tiles--video { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .tile__art img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -1053,6 +1058,11 @@ select option { background: #1a1a19; color: var(--fg); }
   .foot__in { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
   .page-head { padding: 26px 0 18px; }
   .names__letter { font-size: 20px; margin-top: 22px; }
+
+  /* Клип в одну колонку: две дают кадр 165×93, а это уже не картинка.
+     Правило здесь, а не выше по файлу: `.tiles` в медиазапросе для 900 px
+     жёстко ставит две колонки и при равной специфичности победило бы. */
+  .tiles--video { grid-template-columns: minmax(0, 1fr); }
 
   /* Ряды управления на узком экране прокручиваются вбок, а не переносятся:
      алфавит из 27 букв переносом занял бы три строки, и липкая полоса

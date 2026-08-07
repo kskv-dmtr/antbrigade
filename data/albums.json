@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T00:17:13Z",
+  "generatedAt": "2026-08-07T13:41:21Z",
   "counts": {
-    "albums": 1051,
-    "artists": 943,
+    "albums": 1052,
+    "artists": 944,
     "labels": 589,
-    "videos": 47
+    "videos": 49
   },
   "albums": [
     {
@@ -29002,6 +29002,32 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-809a-bdda-e20666bff91b",
+      "slug": "lady-wray-piece-of-me",
+      "artist": "Lady Wray",
+      "album": "Piece of Me",
+      "url": "https://album.link/vgvgkwwpdrv5t",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af3eafa5c-ea51-4c09-87ae-dc7f6e5b8075%3Aa0434438569_10.jpg?table=block&id=3b54129a-8c52-809a-bdda-e20666bff91b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-08-07",
+      "year": 2022,
+      "artistIds": [
+        "2794129a-8c52-802a-9301-d1863da787fd"
+      ],
+      "artists": [
+        "Lady Wray"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80b5-a601-f724bcf55f84"
+      ],
+      "labels": [
+        "Big Crown Records"
+      ]
+    },
+    {
       "id": "2484129a-8c52-8092-a9e7-c500923f6237",
       "slug": "brijean-angelo",
       "artist": "Brijean",
@@ -39419,7 +39445,8 @@
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "2794129a-8c52-80a6-91a0-d04200066085"
+        "2794129a-8c52-80a6-91a0-d04200066085",
+        "3b54129a-8c52-809a-bdda-e20666bff91b"
       ],
       "genres": [
         "Soul",
@@ -41404,6 +41431,19 @@
         "2434129a-8c52-8044-9e94-d5d281e0dcab"
       ],
       "videoIds": []
+    },
+    {
+      "id": "3b54129a-8c52-8071-8b85-dbf65bc58b71",
+      "slug": "napalm-death",
+      "name": "Napalm Death",
+      "country": "GB",
+      "bandcamp": "https://napalmdeath.bandcamp.com/music",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3b54129a-8c52-807b-a083-e2a5beab82fe"
+      ]
     },
     {
       "id": "30f4129a-8c52-806d-b759-c38919da21b1",
@@ -45626,7 +45666,7 @@
       "slug": "teen-mortgage",
       "name": "Teen Mortgage",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://teenmortgage.bandcamp.com/music",
       "albumIds": [
         "1d24129a-8c52-8031-8fd2-dadde2911406",
         "30bb2a96-76af-4807-abd4-f546a75d9488"
@@ -45640,7 +45680,9 @@
         "2494129a-8c52-803f-9692-d7ebbb87f315",
         "2514129a-8c52-80fa-bf2e-dab1dd8337cb"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b54129a-8c52-80ee-ac7c-e287a200ccfb"
+      ]
     },
     {
       "id": "2524129a-8c52-80e1-8428-c60809c8907e",
@@ -49351,6 +49393,7 @@
         "6ab27855-1303-46f0-8629-28c5138847fe",
         "0e1f8737-6809-4e9c-bdbe-eba4e832342c",
         "46fffbcf-55b8-4c8f-becf-f15ca1ae1cff",
+        "3b54129a-8c52-809a-bdda-e20666bff91b",
         "2534129a-8c52-80f8-8577-f0c3643e8f78",
         "3b34129a-8c52-80bb-a119-e6705706332a"
       ],
@@ -57598,6 +57641,26 @@
       "released": "2007-04-16",
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-807b-a083-e2a5beab82fe",
+      "title": "Napalm Death | Tiny Desk Concert",
+      "url": "https://youtu.be/e81LZCHhNKQ?si=LRbWmuhQyxywvhbm",
+      "kind": "Live Video",
+      "released": null,
+      "artistIds": [
+        "3b54129a-8c52-8071-8b85-dbf65bc58b71"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-80ee-ac7c-e287a200ccfb",
+      "title": "Teen Mortgage | Democracy Manifest",
+      "url": "https://youtu.be/YAtuSBHjbEU?si=5xDSC7JV5gHAd0f6",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "2494129a-8c52-80e3-bc37-fb7824da0196"
       ]
     },
     {

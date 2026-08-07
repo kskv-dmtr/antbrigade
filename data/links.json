@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T00:17:32Z",
+  "generatedAt": "2026-08-07T13:41:33Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16728,6 +16728,25 @@
       "upc": "098787148367",
       "tracks": 10,
       "releaseDate": "2022-05-17"
+    },
+    "3b54129a-8c52-809a-bdda-e20666bff91b": {
+      "source": "https://album.link/vgvgkwwpdrv5t",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6YZfQdeTTIIkPUEAFmXvMB",
+        "pandora": "https://www.pandora.com/AL:10616583",
+        "deezer": "https://www.deezer.com/album/256496862",
+        "amazonMusic": "https://music.amazon.com/albums/B09FFXFNT7",
+        "tidal": "https://listen.tidal.com/album/196583555",
+        "napster": "https://play.napster.com/album/alb.609793085",
+        "yandex": "https://music.yandex.ru/album/17875584",
+        "boomplay": "https://www.boomplay.com/albums/31171776",
+        "anghami": "https://play.anghami.com/album/1022343256?refer=linktree",
+        "bandcamp": "https://ladywray.bandcamp.com/album/piece-of-me",
+        "amazonStore": "https://amazon.com/dp/B09FFXFNT7"
+      },
+      "upc": "349223006636",
+      "tracks": 12,
+      "releaseDate": "2022-28"
     }
   }
 }

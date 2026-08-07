@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T15:11:12Z",
+  "generatedAt": "2026-08-07T16:10:29Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16782,6 +16782,43 @@
       "upc": "3701421569028",
       "tracks": 5,
       "releaseDate": "2022-05-08"
+    },
+    "3b54129a-8c52-801c-9848-f31f1d26eff0": {
+      "source": "https://album.link/tcqnhxfp4xsg3",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4ly0DCSbwqgvQtaYum7RAD",
+        "pandora": "https://www.pandora.com/AL:21264149",
+        "deezer": "https://www.deezer.com/album/402622717",
+        "amazonMusic": "https://music.amazon.com/albums/B0BTM7T6SR",
+        "tidal": "https://listen.tidal.com/album/274399022",
+        "napster": "https://play.napster.com/album/alb.740541073",
+        "boomplay": "https://www.boomplay.com/albums/63582333",
+        "anghami": "https://play.anghami.com/album/1035934197?refer=linktree",
+        "bandcamp": "https://tzusing.bandcamp.com/album/green-hat",
+        "amazonStore": "https://amazon.com/dp/B0BTM7T6SR"
+      },
+      "upc": "617308047202",
+      "tracks": 12,
+      "releaseDate": "2023-02-31"
+    },
+    "3b54129a-8c52-80d9-8273-d3eb9b755099": {
+      "source": "https://album.link/cm6k8mncqnx3p",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2rm40ZrQ2gnjFFfbZ0URhN",
+        "pandora": "https://www.pandora.com/AL:16984037",
+        "deezer": "https://www.deezer.com/album/339439057",
+        "amazonMusic": "https://music.amazon.com/albums/B0B7NVDXZV",
+        "tidal": "https://listen.tidal.com/album/239872564",
+        "napster": "https://play.napster.com/album/alb.685881708",
+        "yandex": "https://music.yandex.ru/album/23073798",
+        "boomplay": "https://www.boomplay.com/albums/51510373",
+        "anghami": "https://play.anghami.com/album/1030500923?refer=linktree",
+        "bandcamp": "https://skalpel.bandcamp.com/album/origins",
+        "amazonStore": "https://amazon.com/dp/B0B7NVDXZV"
+      },
+      "upc": "5908252861408",
+      "tracks": 14,
+      "releaseDate": "2022-10-04"
     }
   }
 }

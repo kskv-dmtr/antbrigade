@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T15:10:46Z",
+  "generatedAt": "2026-08-07T16:10:13Z",
   "counts": {
-    "albums": 1054,
-    "artists": 945,
-    "labels": 590,
+    "albums": 1056,
+    "artists": 947,
+    "labels": 592,
     "videos": 49
   },
   "albums": [
@@ -27664,6 +27664,36 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-801c-9848-f31f1d26eff0",
+      "slug": "tzusing-green-hat",
+      "artist": "Tzusing",
+      "album": "绿帽 Green Hat",
+      "url": "https://album.link/tcqnhxfp4xsg3",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8e19ce40-4958-48a4-a5a4-53e18076f6e7%3Aa2770990913_10.jpg?table=block&id=3b54129a-8c52-801c-9848-f31f1d26eff0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Industrial Techno",
+        "EBM",
+        "Deconstructed Club"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-03-31",
+      "year": 2023,
+      "artistIds": [
+        "3b54129a-8c52-8049-a993-d17b8ce7120a"
+      ],
+      "artists": [
+        "Tzusing"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-8014-898d-d1fb2fc34cd6"
+      ],
+      "labels": [
+        "PAN"
+      ]
+    },
+    {
       "id": "58902b2f-8852-4751-8795-40ffe6cc66a1",
       "slug": "xiao-burn",
       "artist": "Xiao",
@@ -28617,6 +28647,36 @@
       ],
       "labels": [
         "Batov Records"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-80d9-8273-d3eb9b755099",
+      "slug": "skalpel-origins",
+      "artist": "Skalpel",
+      "album": "Origins",
+      "url": "https://album.link/cm6k8mncqnx3p",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A05749d55-13cd-4101-814b-9645bdda082c%3Aa0919967949_10.jpg?table=block&id=3b54129a-8c52-80d9-8273-d3eb9b755099&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Downtempo",
+        "Breakbeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-11-04",
+      "year": 2022,
+      "artistIds": [
+        "3b54129a-8c52-80eb-814c-c95a9905d1d1"
+      ],
+      "artists": [
+        "Skalpel"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-8097-abf4-ca3f5d660b01"
+      ],
+      "labels": [
+        "NoPaper Records"
       ]
     },
     {
@@ -44533,6 +44593,25 @@
       "videoIds": []
     },
     {
+      "id": "3b54129a-8c52-80eb-814c-c95a9905d1d1",
+      "slug": "skalpel",
+      "name": "Skalpel",
+      "country": "PL",
+      "bandcamp": "https://skalpel.bandcamp.com/music",
+      "albumIds": [
+        "3b54129a-8c52-80d9-8273-d3eb9b755099"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Downtempo",
+        "Breakbeat"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-8097-abf4-ca3f5d660b01"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80ec-b5b1-e35939f67dfc",
       "slug": "skee-mask",
       "name": "Skee Mask",
@@ -47447,6 +47526,25 @@
       ],
       "labelIds": [
         "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b54129a-8c52-8049-a993-d17b8ce7120a",
+      "slug": "tzusing",
+      "name": "Tzusing",
+      "country": "MY",
+      "bandcamp": "https://tzusing.bandcamp.com/music",
+      "albumIds": [
+        "3b54129a-8c52-801c-9848-f31f1d26eff0"
+      ],
+      "genres": [
+        "Industrial Techno",
+        "EBM",
+        "Deconstructed Club"
+      ],
+      "labelIds": [
+        "3b54129a-8c52-8014-898d-d1fb2fc34cd6"
       ],
       "videoIds": []
     },
@@ -53924,6 +54022,19 @@
       ]
     },
     {
+      "id": "3b54129a-8c52-8097-abf4-ca3f5d660b01",
+      "slug": "nopaper-records",
+      "name": "NoPaper Records",
+      "country": "PL",
+      "bandcamp": "https://nopaperrecords.bandcamp.com/",
+      "albumIds": [
+        "3b54129a-8c52-80d9-8273-d3eb9b755099"
+      ],
+      "artistIds": [
+        "3b54129a-8c52-80eb-814c-c95a9905d1d1"
+      ]
+    },
+    {
       "id": "3364129a-8c52-802e-aeb1-e725b30474df",
       "slug": "northern-underground-records",
       "name": "Northern Underground Records",
@@ -54104,6 +54215,19 @@
       "artistIds": [
         "3ac4129a-8c52-8057-9c28-e49e22789ba0",
         "31f4129a-8c52-8081-8241-e25497780faa"
+      ]
+    },
+    {
+      "id": "3b54129a-8c52-8014-898d-d1fb2fc34cd6",
+      "slug": "pan",
+      "name": "PAN",
+      "country": "DE",
+      "bandcamp": "https://p-a-n.bandcamp.com/",
+      "albumIds": [
+        "3b54129a-8c52-801c-9848-f31f1d26eff0"
+      ],
+      "artistIds": [
+        "3b54129a-8c52-8049-a993-d17b8ce7120a"
       ]
     },
     {

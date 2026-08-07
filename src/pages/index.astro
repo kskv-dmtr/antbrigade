@@ -1,13 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
-import { albums, formatDate } from '../lib/db.js';
+import { albums } from '../lib/db.js';
 
 /* Главная — витрина, а не каталог: весь список живёт на /releases.
 
    Сколько свежих показываем, какой глубины пул для случайного раздела и
    сколько из него видно за раз. */
-const LATEST = 5;
+const LATEST = 10;
 const POOL   = 60;
 const SHOW   = 10;
 
@@ -23,7 +23,6 @@ function shuffle(list) {
 }
 
 const latest = albums.slice(0, LATEST);
-const latestDate = formatDate(latest.find((a) => a.released)?.released);
 
 /* Пул выбирается на сборке и потому одинаков для всех, кто открыл сайт в
    один час. Случайность на статике даёт браузер: он тасует пул при каждой
@@ -41,7 +40,6 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   <section class="section">
     <div class="head">
       <h1 class="display display--md">Latest Releases</h1>
-      {latestDate && <span class="mono">{latestDate}</span>}
     </div>
     <ul class="tiles tiles--auto">
       {latest.map((a) => <AlbumCard album={a} />)}
@@ -51,6 +49,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Dig In</h2>
+      <span class="mono">Reload for a fresh dig</span>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта

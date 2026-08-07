@@ -521,22 +521,19 @@ a { color: inherit; text-decoration: none; }
 .search input::placeholder { color: var(--fg-dim); text-transform: uppercase; }
 .search input:focus-visible { border-color: var(--fg-muted); }
 
-/* Подсказка о горячей клавише. pointer-events: none — чтобы клик по ней
-   попадал в поле, а не в саму подсказку. */
-.search__key {
+/* Лупа справа. pointer-events: none — чтобы клик по ней попадал в поле, а
+   не в саму иконку. */
+.search__icon {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 14px;
   transform: translateY(-50%);
-  padding: 2px 7px;
+  width: 15px;
+  height: 15px;
   color: var(--fg-dim);
-  border: 1px solid var(--line);
   pointer-events: none;
-  transition: opacity 0.12s ease;
 }
-/* Прячется, как только в поле фокус или набранный текст. */
-.search input:focus ~ .search__key,
-.search input:not(:placeholder-shown) ~ .search__key { opacity: 0; }
+.search input:focus ~ .search__icon { color: var(--fg-muted); }
 
 .filters {
   display: flex;
@@ -616,8 +613,7 @@ select option { background: #1a1a19; color: var(--fg); }
   height: var(--chevron);
   margin-top: calc(var(--chevron) / -2);
   pointer-events: none;
-  background: var(--fg-muted);
-  clip-path: polygon(0 25%, 50% 75%, 100% 25%, 100% 45%, 50% 95%, 0 45%);
+  color: var(--fg-muted);
   transition: transform 0.12s ease;
 }
 .select[data-open] .select__chevron { transform: rotate(180deg); }
@@ -1076,7 +1072,7 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .select__chevron, .tile__over, .sticky-bar, .search__key { transition: none; }
+  .select__chevron, .tile__over, .sticky-bar { transition: none; }
 }
 
 /* -------------------------------------------- переключение вида

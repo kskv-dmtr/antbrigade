@@ -6,7 +6,7 @@
    релиз с обложкой. У двенадцати артистов релизов нет вовсе — там остаётся
    штриховка, то самое пустое состояние из макета. */
 
-import ArrowElbow from './ArrowElbow.astro';
+import Icon from './Icon.astro';
 import { coverSrc, coverSrcSet, countryName, plural } from '../lib/db.js';
 
 const { href, name, releases = [], country, as: Wrapper = 'div', class: extra } = Astro.props;
@@ -36,7 +36,7 @@ const meta = [country, count ? plural(count, 'release', 'releases') : 'no releas
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{countryName(country)}</span>
-        <span class="tile__cta">Open <ArrowElbow /></span>
+        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
       </div>
     </div>
     {/* Не .tile__artist: там имя исполнителя обычным шрифтом, а здесь

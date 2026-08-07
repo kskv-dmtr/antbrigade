@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { generatedAt } from '../lib/db.js';
 
 const { title, description, activeSection } = Astro.props;
 
@@ -84,7 +83,6 @@ const canonical = new URL(
       <span class="foot__note mono mono--sm">
         Made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a>
         using Notion database &amp; Claude Code<br />
-        Updated {generatedAt ? generatedAt.slice(0, 10) : '—'}<br />
         © {year} ant brigade
       </span>
 

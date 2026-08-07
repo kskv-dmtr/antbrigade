@@ -3,7 +3,12 @@
 
    Системную стрелку убираем: у неё не выровнять отступ справа под левый
    и не развернуть её при раскрытии. Шеврон — настоящий элемент, а не
-   псевдоэлемент: так его состояние видно и в разметке, и в тестах. */
+   псевдоэлемент: так его состояние видно и в разметке, и в тестах.
+
+   Раньше он был нарисован через clip-path; теперь это caret-down из
+   Phosphor, как и остальные значки в проекте. */
+
+import Icon from './Icon.astro';
 
 const { id, label } = Astro.props;
 ---
@@ -11,5 +16,5 @@ const { id, label } = Astro.props;
   <select id={id} aria-label={label}>
     <slot />
   </select>
-  <span class="select__chevron" aria-hidden="true"></span>
+  <Icon name="caret-down" class="select__chevron" />
 </span>

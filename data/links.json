@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T23:19:04Z",
+  "generatedAt": "2026-08-07T00:17:32Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16699,6 +16699,35 @@
       "upc": "4251804118118",
       "tracks": 7,
       "releaseDate": "2021-08-10"
+    },
+    "3b44129a-8c52-80e7-adc3-fbc9b22a6716": {
+      "source": "https://album.link/ksfzspbzqxzk7",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0DS9OxHBt693YOs3TDira2",
+        "yandex": "https://music.yandex.ru/album/43321541",
+        "bandcamp": "https://overmono.bandcamp.com/album/pure-devotion"
+      },
+      "upc": "191404166857",
+      "tracks": 11,
+      "releaseDate": "2026-07-07"
+    },
+    "3b44129a-8c52-8014-bb4e-fa1a91975330": {
+      "source": "https://album.link/bdvxghhgm66zd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4i2Cb9v7g9ieShCgf1gakk",
+        "pandora": "https://www.pandora.com/AL:14251471",
+        "deezer": "https://www.deezer.com/album/305934517",
+        "amazonMusic": "https://music.amazon.com/albums/B09WJMF4C6",
+        "tidal": "https://listen.tidal.com/album/223944511",
+        "napster": "https://play.napster.com/album/alb.675122131",
+        "boomplay": "https://www.boomplay.com/albums/43310848",
+        "anghami": "https://play.anghami.com/album/1028303161?refer=linktree",
+        "bandcamp": "https://stellawithasigma.bandcamp.com/album/up-and-away",
+        "amazonStore": "https://amazon.com/dp/B09WJMF4C6"
+      },
+      "upc": "098787148367",
+      "tracks": 10,
+      "releaseDate": "2022-05-17"
     }
   }
 }

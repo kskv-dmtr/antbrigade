@@ -1,13 +1,43 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-06T22:28:20Z",
+  "generatedAt": "2026-08-07T00:17:13Z",
   "counts": {
-    "albums": 1049,
-    "artists": 942,
+    "albums": 1051,
+    "artists": 943,
     "labels": 589,
-    "videos": 46
+    "videos": 47
   },
   "albums": [
+    {
+      "id": "3b44129a-8c52-80e7-adc3-fbc9b22a6716",
+      "slug": "overmono-pure-devotion",
+      "artist": "Overmono",
+      "album": "Pure Devotion",
+      "url": "https://album.link/ksfzspbzqxzk7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa6f4aac1-0caf-47b0-857a-1e2d86f4cf66%3Aa3819622098_10.jpg?table=block&id=3b44129a-8c52-80e7-adc3-fbc9b22a6716&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "UK Bass",
+        "Future Garage"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-07",
+      "year": 2026,
+      "artistIds": [
+        "3b44129a-8c52-8000-84db-c42330226e4c"
+      ],
+      "artists": [
+        "Overmono"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-800c-9dec-cb5621f22855"
+      ],
+      "labels": [
+        "XL Recordings"
+      ]
+    },
     {
       "id": "3af4129a-8c52-8054-bea4-c05c8252c5f8",
       "slug": "reverend-baron-daniel",
@@ -17169,8 +17199,12 @@
       "artists": [
         "Thee Sacred Souls"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "2504129a-8c52-80eb-8df6-e3a43ad40f12"
+      ],
+      "labels": [
+        "Daptone Records"
+      ]
     },
     {
       "id": "005e74cd-7219-488f-8f38-6df3bd440a99",
@@ -29197,6 +29231,37 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3b44129a-8c52-8014-bb4e-fa1a91975330",
+      "slug": "tella-up-and-away",
+      "artist": "Σtella",
+      "album": "Up and Away",
+      "url": "https://album.link/bdvxghhgm66zd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5547e715-dace-41a7-95c3-b7ebfe688e5a%3Aa0878865907_10.jpg?table=block&id=3b44129a-8c52-8014-bb4e-fa1a91975330&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Neo-Psychedelia",
+        "Psychedelic Folk",
+        "Greek Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-06-17",
+      "year": 2022,
+      "artistIds": [
+        "24a4129a-8c52-8082-8335-e14604efa91e"
+      ],
+      "artists": [
+        "Σtella"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8054-8334-e56a9e29b35e"
+      ],
+      "labels": [
+        "Sub Pop Records"
       ]
     },
     {
@@ -42067,6 +42132,25 @@
       "videoIds": []
     },
     {
+      "id": "3b44129a-8c52-8000-84db-c42330226e4c",
+      "slug": "overmono",
+      "name": "Overmono",
+      "country": "GB",
+      "bandcamp": "https://overmono.bandcamp.com/music",
+      "albumIds": [
+        "3b44129a-8c52-80e7-adc3-fbc9b22a6716"
+      ],
+      "genres": [
+        "IDM",
+        "UK Bass",
+        "Future Garage"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-800c-9dec-cb5621f22855"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3044129a-8c52-807e-a953-d81a50170acd",
       "slug": "owelu-dreamhouse",
       "name": "Owelu Dreamhouse",
@@ -46630,6 +46714,7 @@
         "Instrumental"
       ],
       "labelIds": [
+        "2504129a-8c52-80eb-8df6-e3a43ad40f12",
         "2514129a-8c52-80d0-a54c-ec7fc34b695e"
       ],
       "videoIds": []
@@ -48420,20 +48505,24 @@
       "slug": "tella",
       "name": "Σtella",
       "country": "GR",
-      "bandcamp": null,
+      "bandcamp": "https://stellawithasigma.bandcamp.com/music",
       "albumIds": [
-        "1ca4129a-8c52-80cd-a5bc-f4e5fc327f0c"
+        "1ca4129a-8c52-80cd-a5bc-f4e5fc327f0c",
+        "3b44129a-8c52-8014-bb4e-fa1a91975330"
       ],
       "genres": [
         "Indie Pop",
         "Indie Folk",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Psychedelic Folk",
+        "Greek Music"
       ],
       "labelIds": [
         "24a4129a-8c52-8054-8334-e56a9e29b35e"
       ],
       "videoIds": [
-        "1187dc03-b79b-486e-9a70-8e93836f6048"
+        "1187dc03-b79b-486e-9a70-8e93836f6048",
+        "3b44129a-8c52-80b4-88cc-c0d473cb25cc"
       ]
     },
     {
@@ -50249,6 +50338,7 @@
         "3814129a-8c52-80dc-bbcd-e74cc5471a1b",
         "30a4129a-8c52-800d-8eb5-c54fef904be8",
         "2994129a-8c52-8097-859d-d324a16ea80a",
+        "1144129a-8c52-80b6-89b2-cc2b6b138f8a",
         "1105d9d1-9043-404f-8b11-58098827b35b",
         "28c3520e-0b40-4860-8330-75725a79b2b6"
       ],
@@ -50256,7 +50346,8 @@
         "2504129a-8c52-80a0-8b21-f8ddf39dce47",
         "2504129a-8c52-80e2-8d5f-ff98ff79183e",
         "30a4129a-8c52-80ae-8b55-ebcb60162853",
-        "2994129a-8c52-8068-8cd4-e72a945ee58f"
+        "2994129a-8c52-8068-8cd4-e72a945ee58f",
+        "2434129a-8c52-80c9-8833-e0c8f133cde3"
       ]
     },
     {
@@ -55960,7 +56051,7 @@
       "slug": "sub-pop-records",
       "name": "Sub Pop Records",
       "country": "UM",
-      "bandcamp": null,
+      "bandcamp": "https://subpop.bandcamp.com/",
       "albumIds": [
         "3544129a-8c52-8051-a605-d8174728e702",
         "2734129a-8c52-80a1-a8d0-df038082046a",
@@ -55969,7 +56060,8 @@
         "498dd494-ea75-4180-a546-84ce88c14bb4",
         "dd76476e-47d0-48ff-b877-a0ac1f0440ef",
         "bc95aa48-de37-4325-8b42-07e981288df5",
-        "485d46f5-1f02-4126-88a7-d6bef327e3e0"
+        "485d46f5-1f02-4126-88a7-d6bef327e3e0",
+        "3b44129a-8c52-8014-bb4e-fa1a91975330"
       ],
       "artistIds": [
         "3544129a-8c52-8038-8c0a-da500622e342",
@@ -56936,14 +57028,16 @@
       "slug": "xl-recordings",
       "name": "XL Recordings",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://xlrecordings.bandcamp.com/",
       "albumIds": [
+        "3b44129a-8c52-80e7-adc3-fbc9b22a6716",
         "25c4129a-8c52-8053-b90e-f04999ccbe0a",
         "1ea6823e-c806-4e50-9dca-3998cf68f7e3",
         "9cd320d5-b7f9-416b-8cbb-d3d2937e5a16",
         "2cb8b473-c436-4f36-84c4-ad42a1200bb9"
       ],
       "artistIds": [
+        "3b44129a-8c52-8000-84db-c42330226e4c",
         "25c4129a-8c52-8048-8d92-de0608c75114",
         "2434129a-8c52-80e3-8917-de97363ee8b9",
         "2504129a-8c52-8030-a9ce-c017638d9c89",
@@ -57504,6 +57598,16 @@
       "released": "2007-04-16",
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+      ]
+    },
+    {
+      "id": "3b44129a-8c52-80b4-88cc-c0d473cb25cc",
+      "title": "Σtella | Up and Away",
+      "url": "https://youtu.be/m3_IKF_zN5g?si=bW-n4pFMBT58FzeH",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "24a4129a-8c52-8082-8335-e14604efa91e"
       ]
     }
   ]

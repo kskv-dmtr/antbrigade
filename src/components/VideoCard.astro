@@ -12,10 +12,13 @@ import { thumbSrc, thumbSrcSet } from '../lib/db.js';
 const { video } = Astro.props;
 
 const src = thumbSrc(video, 480);
-const meta = [
-  video.kind === 'Official Video' ? 'Video' : 'Live',
-  video.released ? video.released.slice(0, 4) : null
-].filter(Boolean).join(' · ');
+
+/* Вид ролика подписан ровно так, как он назван в Notion: «Official Video»,
+   «Live Video». Сокращать до «Video» и «Live» значит заводить свой словарь,
+   который придётся править каждый раз, когда в базе появится новый вид. */
+const meta = [video.kind, video.released ? video.released.slice(0, 4) : null]
+  .filter(Boolean)
+  .join(' · ');
 
 /* На странице артиста его имя в начале названия лишнее: «Touch Girl Apple
    Blossom | Heart-Go» показываем как «Heart-Go». */

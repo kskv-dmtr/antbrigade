@@ -49,7 +49,7 @@ const roster   = artistsOf(label.artistIds);
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Releases</h2>
-      <span class="mono">{plural(releases.length, 'release', 'releases')}</span>
+      <span class="mono">[{releases.length}]</span>
     </div>
     <ul class="tiles tiles--auto">
       {releases.map((a) => <AlbumCard album={a} />)}

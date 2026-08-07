@@ -39,22 +39,23 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
     <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
-  {/* Поиск и указатель по буквам — в липкой полосе, одинаково на списках
-      релизов, артистов, лейблов и жанров. Сортировка остаётся ниже: её
-      выбирают один раз, держать её на экране незачем. */}
+  {/* Всё управление в липкой полосе, одинаково на списках релизов, артистов,
+      лейблов и жанров: и поиск, и буквы, и сортировка возвращаются на экран
+      при прокрутке вверх.
+
+      Буквы и сортировка — одна строка: .filters выравнивает их по центру
+      по вертикали и разводит по краям. */}
   <div class="sticky-bar">
     <div class="controls__top">
       <SearchField label="Search by artist name" />
       <ViewSwitch />
     </div>
 
-    <nav class="alphabet" id="alphabet">
-      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-    </nav>
-  </div>
-
-  <div class="controls">
     <div class="filters">
+      <nav class="alphabet" id="alphabet">
+        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+      </nav>
+
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>

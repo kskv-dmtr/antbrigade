@@ -36,14 +36,14 @@ const PAGE = 50;
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
       содержание, и терять её целиком было бы неправильно. */}
+  {/* Всё управление в липкой полосе: и поиск, и тип релиза, и сортировка
+      возвращаются на экран при прокрутке вверх. */}
   <div class="sticky-bar">
     <div class="controls__top">
       <SearchField label="Search by artist or album" />
       <ViewSwitch />
     </div>
-  </div>
 
-  <div class="controls">
     <div class="filters">
       <div class="filters__group">
         <div class="seg" id="types" role="group" aria-label="Release type">
@@ -52,7 +52,7 @@ const PAGE = 50;
         </div>
       </div>
 
-      <div class="filters__group">
+      <div class="filters__group filters__group--end">
         <Select id="genre" label="Genre">
           <option value="">All genres</option>
           {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}

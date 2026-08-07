@@ -500,6 +500,7 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 10px;
   padding: 10px 0;
+  margin-bottom: 26px;
   background: var(--bg);
   transition: transform 0.22s ease;
 }
@@ -510,10 +511,10 @@ a { color: inherit; text-decoration: none; }
 
 .search { position: relative; }
 
-/* Справа оставлено место под подсказку с клавишей. */
+/* Поля по краям оставлены под лупу слева и клавишу справа. */
 .search input {
   width: 100%;
-  padding: 12px 42px 12px 14px;
+  padding: 12px 44px 12px 40px;
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.06em;
@@ -526,19 +527,35 @@ a { color: inherit; text-decoration: none; }
 .search input::placeholder { color: var(--fg-dim); text-transform: uppercase; }
 .search input:focus-visible { border-color: var(--fg-muted); }
 
-/* Лупа справа. pointer-events: none — чтобы клик по ней попадал в поле, а
-   не в саму иконку. */
-.search__icon {
+/* Лупа слева, клавиша справа. pointer-events: none у обеих — чтобы клик по
+   ним попадал в поле, а не в саму метку. */
+.search__icon,
+.search__key {
   position: absolute;
   top: 50%;
-  right: 14px;
   transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
   color: var(--fg-dim);
   pointer-events: none;
 }
-.search input:focus ~ .search__icon { color: var(--fg-muted); }
+
+.search__icon {
+  left: 14px;
+  width: 15px;
+  height: 15px;
+}
+
+/* Квадрат: ширина и высота равны, знак по центру. */
+.search__key {
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line);
+}
+
+.search:focus-within .search__icon { color: var(--fg-muted); }
 
 .filters {
   display: flex;
@@ -1067,17 +1084,36 @@ select option { background: #1a1a19; color: var(--fg); }
   /* Ряды управления на узком экране прокручиваются вбок, а не переносятся:
      алфавит из 27 букв переносом занял бы три строки, и липкая полоса
      съела бы четверть экрана. */
-  .filters,
-  .sticky-bar .alphabet {
+  .filters {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
     margin: 0 calc(var(--pad) * -1);
     padding: 2px var(--pad);
   }
+
+  /* Алфавит прокручивается внутри своей ячейки. Отрицательных полей здесь
+     быть не должно: он делит ряд с сортировкой, и вылезающий за свою
+     ширину блок налезал бы на неё. */
+  .sticky-bar .alphabet {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
   .filters::-webkit-scrollbar,
   .sticky-bar .alphabet::-webkit-scrollbar { display: none; }
   .sticky-bar .alphabet a { flex: none; }
+
+  /* Группы внутри прокручиваемого ряда не сжимаются и не переносятся: иначе
+     они ужимаются по ширине экрана, содержимое встаёт в три этажа, и липкая
+     полоса вырастает до двухсот пикселей. */
+  .filters__group {
+    flex: none;
+    flex-wrap: nowrap;
+  }
+  .filters__group--end { margin-left: 0; }
   select { max-width: 44vw; }
 }
 

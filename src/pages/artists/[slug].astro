@@ -28,9 +28,9 @@ const clipsSorted = clips.slice().sort((a, b) => {
   }.`}
   activeSection="artists"
 >
+  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
   <div class="page-head">
     <h1>{artist.name}</h1>
-    <p class="counter">{plural(discography.length, 'release', 'releases')}</p>
   </div>
 
   <BandcampLink url={artist.bandcamp} />
@@ -69,7 +69,7 @@ const clipsSorted = clips.slice().sort((a, b) => {
     <section class="section">
       <div class="head">
         <h2 class="display display--md">Videos</h2>
-        <span class="mono">{plural(clipsSorted.length, 'clip', 'clips')}</span>
+        <span class="mono">[{clipsSorted.length}]</span>
       </div>
       <ul class="tiles tiles--auto tiles--video">
         {clipsSorted.map((v) => <VideoCard video={v} />)}
@@ -80,7 +80,8 @@ const clipsSorted = clips.slice().sort((a, b) => {
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Discography</h2>
-      <span class="mono">{plural(discography.length, 'release', 'releases')}</span>
+      {/* Пустой счётчик вместо «[0]»: раздел и так объясняет, что релизов нет. */}
+      {discography.length > 0 && <span class="mono">[{discography.length}]</span>}
     </div>
     {discography.length > 0 ? (
       <ul class="tiles tiles--auto">

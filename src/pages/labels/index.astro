@@ -51,13 +51,11 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
       <ViewSwitch />
     </div>
 
-    <nav class="alphabet" id="alphabet">
-      {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-    </nav>
-  </div>
-
-  <div class="controls">
     <div class="filters">
+      <nav class="alphabet" id="alphabet">
+        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
+      </nav>
+
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>

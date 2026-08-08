@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T19:10:30Z",
+  "generatedAt": "2026-08-08T19:13:32Z",
   "counts": {
     "albums": 1060,
     "artists": 952,
@@ -47198,7 +47198,8 @@
         "2504129a-8c52-80b1-9280-e0a822d8e98b"
       ],
       "videoIds": [
-        "2754129a-8c52-8091-8e3e-d49513e3047b"
+        "2754129a-8c52-8091-8e3e-d49513e3047b",
+        "3b64129a-8c52-8052-9e48-d4b7a2fd1c8b"
       ]
     },
     {
@@ -58084,7 +58085,9 @@
       "title": "Thundercat | Dragonball Durag",
       "url": "https://youtu.be/ormQQG2UhtQ?si=Bw9wBbBTnD8sOCUo",
       "kind": "Official Video",
-      "artistIds": []
+      "artistIds": [
+        "2754129a-8c52-8003-9d6c-dbf229cd455f"
+      ]
     },
     {
       "id": "2704129a-8c52-80fd-af33-d33d94cfa19a",

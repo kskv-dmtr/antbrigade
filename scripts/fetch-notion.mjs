@@ -32,7 +32,9 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
              url: ']]HZ', genre: 'yEPm', type: '}j]w' };
-const PV = { date: 'PNct', url: ']]HZ', artist: 'kaf]', type: '}j]w' };
+/* Ключи свойств в таблице клипов. Даты здесь нет намеренно: поле из таблицы
+   убрано, и год у клипов не показывается. */
+const PV = { url: ']]HZ', artist: 'kaf]', type: '}j]w' };
 
 const root    = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'albums.json');
@@ -307,12 +309,12 @@ async function main() {
       title,
       url: plainText(prop(v.properties, PV.url)),
       kind: plainText(prop(v.properties, PV.type)),
-      released: dateStart(prop(v.properties, PV.date)),
       artistIds: relationIds(prop(v.properties, PV.artist))
     });
   }
-  videos.sort((a, b) =>
-    (b.released || '').localeCompare(a.released || '') || cmp(a.title, b.title) || cmp(a.id, b.id));
+  // По названию: даты у клипов нет, а порядок обязан быть устойчивым —
+  // иначе выгрузка при тех же данных даёт разный файл и CI коммитит пустоту.
+  videos.sort((a, b) => cmp(a.title, b.title) || cmp(a.id, b.id));
 
   // раскладка по артистам строится уже по отсортированному списку
   const videosByArtist = new Map();

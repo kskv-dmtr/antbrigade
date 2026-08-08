@@ -14,7 +14,7 @@ import { coverSrc, coverSrcSet, artistLine } from '../lib/db.js';
 
 // всё лишнее (data-* для фильтров) пробрасывается на обёртку как есть
 const { album, showArtist = true, as: Wrapper = 'li', class: extra, ...rest } = Astro.props;
-const meta = [album.types.join(' / '), album.year].filter(Boolean).join(' · ');
+const meta = [album.types.join(' · '), album.year].filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', extra]} {...rest}>
   <a class="tile__link" href={`/albums/${album.slug}`}>

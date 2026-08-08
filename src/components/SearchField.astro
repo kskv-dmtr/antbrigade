@@ -10,8 +10,8 @@
 
    Подсказка в поле одна и та же везде, поэтому лежит здесь, а не в
    параметрах. А вот aria-label у каждой страницы свой: экранный диктор
-   должен сказать, по чему именно ищут, — «type / to search» ему ничего не
-   объясняет. */
+   должен сказать, по чему именно ищут, — «search» ему ничего не объясняет.
+   Про горячую клавишу теперь говорит только значок справа. */
 
 import Icon from './Icon.astro';
 
@@ -22,7 +22,7 @@ const { label } = Astro.props;
   <input
     type="search"
     id="search"
-    placeholder="Type / to search"
+    placeholder="Search"
     autocomplete="off"
     spellcheck="false"
     aria-label={label}

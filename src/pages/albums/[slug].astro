@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import GenreChips from '../../components/GenreChips.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
-  albums, artistsOf, labelsOf, coverSrc, formatDate
+  albums, artistsOf, labelsOf, coverSrc, formatDate, artistLine
 } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -13,7 +13,9 @@ export function getStaticPaths() {
 const { album } = Astro.props;
 const artists = artistsOf(album.artistIds);
 const labels  = labelsOf(album.labelIds);
-const title   = `${album.artist} — ${album.album}`;
+/* artistLine, а не album.artist: в сырой строке из Notion соавторы разделены
+   косой чертой, и она попадала в заголовок вкладки и в описание страницы. */
+const title   = `${artistLine(album)} — ${album.album}`;
 const cover   = coverSrc(album, 800);
 ---
 <Base

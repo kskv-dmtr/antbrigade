@@ -4,7 +4,7 @@ import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
 import GenreChips from '../../components/GenreChips.astro';
-import { artists, albumsOf, labelsOf, videosOf, countryName, plural } from '../../lib/db.js';
+import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return artists.map((artist) => ({ params: { slug: artist.slug }, props: { artist } }));
@@ -15,10 +15,11 @@ const discography = albumsOf(artist.albumIds);
 const labels = labelsOf(artist.labelIds);
 const clips  = videosOf(artist.videoIds);
 
-// официальные клипы вперёд, живые записи следом
+// официальные клипы вперёд, живые записи следом, внутри — по названию:
+// даты у клипов не хранится, а порядок должен быть устойчивым
 const clipsSorted = clips.slice().sort((a, b) => {
   const rank = (v) => (v.kind === 'Official Video' ? 0 : 1);
-  return rank(a) - rank(b) || (b.released || '').localeCompare(a.released || '');
+  return rank(a) - rank(b) || videoTitle(a).localeCompare(videoTitle(b));
 });
 ---
 <Base

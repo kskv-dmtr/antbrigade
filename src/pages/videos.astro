@@ -11,17 +11,15 @@ import { videos, videoTitle, videoArtists } from '../lib/db.js';
    Здесь они собраны в один список — тем же устройством, что релизы: строка
    или плитка, поиск, вид и сортировка.
 
-   Порядок по умолчанию — сначала свежие. Без даты в базе нет ни одного, но
-   если появится, такой уедет в конец. */
+   Порядок по умолчанию — по исполнителю. Сортировки «сначала свежие» здесь
+   нет и быть не может: даты у клипов не хранится. */
 const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))].sort();
 
-const list = videos.slice().sort((a, b) => {
-  const da = a.released ?? '', db = b.released ?? '';
-  if (!da && !db) return 0;
-  if (!da) return 1;
-  if (!db) return -1;
-  return db.localeCompare(da);
-});
+const list = videos
+  .slice()
+  .sort((a, b) =>
+    videoArtists(a).localeCompare(videoArtists(b)) ||
+    videoTitle(a).localeCompare(videoTitle(b)));
 ---
 <Base
   title="Videos · ant brigade"
@@ -51,8 +49,6 @@ const list = videos.slice().sort((a, b) => {
 
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
-          <option value="new">Newest first</option>
-          <option value="old">Oldest first</option>
           <option value="artist">By artist</option>
           <option value="title">By title</option>
         </Select>
@@ -72,7 +68,6 @@ const list = videos.slice().sort((a, b) => {
         data-kind={v.kind ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
         data-title={videoTitle(v).toLowerCase()}
-        data-released={v.released ?? ''}
       >
         <div class="view-row"><VideoRow video={v} /></div>
         <VideoCard video={v} as="div" class="view-tile" showArtist />
@@ -94,7 +89,7 @@ const list = videos.slice().sort((a, b) => {
   const total = cards.length;
   const state = { q: '', kind: '' };
 
-  // Порядок с сервера — «сначала свежие»; запоминаем его как исходный.
+  // Порядок с сервера — по исполнителю; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
   function apply() {
@@ -112,22 +107,10 @@ const list = videos.slice().sort((a, b) => {
   }
 
   function sort() {
-    const by = sortEl.value;
-    let order;
-    if (by === 'new') {
-      order = initialOrder;
-    } else {
-      order = cards.slice().sort((a, b) => {
-        if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
-        if (by === 'title')  return a.dataset.title.localeCompare(b.dataset.title);
-        // «сначала старые»: клипы без даты всегда в конце
-        const da = a.dataset.released, db = b.dataset.released;
-        if (!da && !db) return 0;
-        if (!da) return 1;
-        if (!db) return -1;
-        return da.localeCompare(db);
-      });
-    }
+    const order = sortEl.value === 'artist'
+      ? initialOrder
+      : cards.slice().sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+
     const frag = document.createDocumentFragment();
     for (const el of order) frag.appendChild(el);
     list.appendChild(frag);

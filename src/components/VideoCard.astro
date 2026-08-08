@@ -19,10 +19,11 @@ const src = thumbSrc(video, 480);
 
 /* Вид ролика подписан ровно так, как он назван в Notion: «Official Video»,
    «Live Video». Сокращать до «Video» и «Live» значит заводить свой словарь,
-   который придётся править каждый раз, когда в базе появится новый вид. */
-const meta = [video.kind, video.released ? video.released.slice(0, 4) : null]
-  .filter(Boolean)
-  .join(' · ');
+   который придётся править каждый раз, когда в базе появится новый вид.
+
+   Под кадром его нет — там, как и у релиза, только исполнитель и название.
+   Вид показывается при наведении, в вывернутой плашке. */
+const meta = video.kind ?? '';
 ---
 <Wrapper class:list={['tile', 'tile--video', extra]}>
   <a class="tile__link" href={video.url} target="_blank" rel="noopener noreferrer">
@@ -41,10 +42,9 @@ const meta = [video.kind, video.released ? video.released.slice(0, 4) : null]
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
+        <span class="tile__cta">Watch <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
       </div>
     </div>
-    <span class="tile__stat">{meta}</span>
     {showArtist && <span class="tile__artist">{videoArtists(video)}</span>}
     <span class="tile__title">{videoTitle(video)}</span>
   </a>

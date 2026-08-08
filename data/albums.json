@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T14:51:27Z",
+  "generatedAt": "2026-08-08T18:52:25Z",
   "counts": {
     "albums": 1060,
     "artists": 952,
     "labels": 595,
-    "videos": 53
+    "videos": 56
   },
   "albums": [
     {
@@ -32407,7 +32407,7 @@
       "slug": "bat",
       "name": "BAT",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bewareofthebat.bandcamp.com/music",
       "albumIds": [
         "7a3956b5-be6a-41d5-8275-6175d6915715",
         "8785f6f2-5594-461f-afb6-9a5569c8b0f6",
@@ -37721,7 +37721,9 @@
       "labelIds": [
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b64129a-8c52-8020-a52a-ed8869e4d993"
+      ]
     },
     {
       "id": "2494129a-8c52-8016-ba6f-c2cbd5906496",
@@ -38977,7 +38979,9 @@
       "labelIds": [
         "2504129a-8c52-80fe-a8d4-c04a727cd9cc"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b64129a-8c52-8031-a68f-da9107f1b119"
+      ]
     },
     {
       "id": "2504129a-8c52-80eb-87d3-f9a282182569",
@@ -58142,6 +58146,26 @@
       ]
     },
     {
+      "id": "3b64129a-8c52-8020-a52a-ed8869e4d993",
+      "title": "Home Front | Nation",
+      "url": "https://youtu.be/0BtIiBI8rGc?si=jZWbqki-GbpbuUxV",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-8031-a68f-da9107f1b119",
+      "title": "Kamasi Washington | Street Fighter Mas",
+      "url": "https://youtu.be/LdyabrdFMC8?si=g83KxY0D1f283T1k",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "2504129a-8c52-8084-81c4-df8d7f572db2"
+      ]
+    },
+    {
       "id": "3b64129a-8c52-80c1-876c-eab3fe094086",
       "title": "Madness | Baggy Trousers",
       "url": "https://youtu.be/Dc3AovUZgvo?si=K2ZB8AT3zXOFlpZH",
@@ -58180,6 +58204,14 @@
       "artistIds": [
         "2494129a-8c52-80e3-bc37-fb7824da0196"
       ]
+    },
+    {
+      "id": "3b64129a-8c52-8052-9e48-d4b7a2fd1c8b",
+      "title": "Thundercat | Dragonball Durag",
+      "url": "https://youtu.be/ormQQG2UhtQ?si=Bw9wBbBTnD8sOCUo",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": []
     },
     {
       "id": "3b44129a-8c52-80b4-88cc-c0d473cb25cc",

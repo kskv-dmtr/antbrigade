@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import VideoCard from '../components/VideoCard.astro';
+import VideoRow from '../components/VideoRow.astro';
+import SearchField from '../components/SearchField.astro';
+import Select from '../components/Select.astro';
+import ViewSwitch from '../components/ViewSwitch.astro';
+import { videos, videoTitle, videoArtists } from '../lib/db.js';
+
+/* Клипы были разбросаны по страницам артистов, и увидеть их все было негде.
+   Здесь они собраны в один список — тем же устройством, что релизы: строка
+   или плитка, поиск, вид и сортировка.
+
+   Порядок по умолчанию — сначала свежие. Без даты в базе нет ни одного, но
+   если появится, такой уедет в конец. */
+const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))].sort();
+
+const list = videos.slice().sort((a, b) => {
+  const da = a.released ?? '', db = b.released ?? '';
+  if (!da && !db) return 0;
+  if (!da) return 1;
+  if (!db) return -1;
+  return db.localeCompare(da);
+});
+---
+<Base
+  title="Videos · ant brigade"
+  description={`${videos.length} music videos and live sets from the collection.`}
+  activeSection="videos"
+>
+  <div class="page-head">
+    <h1>Videos</h1>
+    {/* Пусто, пока не фильтруют: общее число в шапке ни к чему, а обратная
+        связь по поиску нужна. */}
+    <p class="counter" id="counter" aria-live="polite"></p>
+  </div>
+
+  <div class="sticky-bar">
+    <div class="controls__top">
+      <SearchField label="Search by artist or title" />
+      <ViewSwitch />
+    </div>
+
+    <div class="filters">
+      <div class="filters__group">
+        <div class="seg" id="kinds" role="group" aria-label="Video kind">
+          <button type="button" data-kind="" aria-pressed="true">All</button>
+          {kinds.map((k) => <button type="button" data-kind={k} aria-pressed="false">{k}</button>)}
+        </div>
+      </div>
+
+      <div class="filters__group filters__group--end">
+        <Select id="sort" label="Sorting">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+          <option value="artist">By artist</option>
+          <option value="title">By title</option>
+        </Select>
+      </div>
+    </div>
+  </div>
+
+  <p class="empty" id="empty" hidden>Nothing found.</p>
+
+  {/* Один <li> на клип, внутри обе разметки: строка и плитка. Видимую
+      выбирает data-view на списке. */}
+  <ul class="releases videos" id="list" data-view="list">
+    {list.map((v) => (
+      <li
+        class="release"
+        data-search={`${videoArtists(v)} ${videoTitle(v)}`.toLowerCase()}
+        data-kind={v.kind ?? ''}
+        data-artist={videoArtists(v).toLowerCase()}
+        data-title={videoTitle(v).toLowerCase()}
+        data-released={v.released ?? ''}
+      >
+        <div class="view-row"><VideoRow video={v} /></div>
+        <VideoCard video={v} as="div" class="view-tile" showArtist />
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<script>
+  const list    = document.getElementById('list');
+  const cards   = Array.from(list.children);
+  const counter = document.getElementById('counter');
+  const empty   = document.getElementById('empty');
+  const search  = document.getElementById('search');
+  const kindsEl = document.getElementById('kinds');
+  const viewsEl = document.getElementById('views');
+  const sortEl  = document.getElementById('sort');
+
+  const total = cards.length;
+  const state = { q: '', kind: '' };
+
+  // Порядок с сервера — «сначала свежие»; запоминаем его как исходный.
+  const initialOrder = cards.slice();
+
+  function apply() {
+    let shown = 0;
+    for (const el of cards) {
+      const d = el.dataset;
+      const ok = (!state.q || d.search.includes(state.q)) &&
+                 (!state.kind || d.kind === state.kind);
+      el.hidden = !ok;
+      if (ok) shown++;
+    }
+    empty.hidden = shown > 0;
+    // Пусто, пока не фильтруют: общее число в шапке ни к чему.
+    counter.textContent = (state.q || state.kind) ? shown + ' of ' + total : '';
+  }
+
+  function sort() {
+    const by = sortEl.value;
+    let order;
+    if (by === 'new') {
+      order = initialOrder;
+    } else {
+      order = cards.slice().sort((a, b) => {
+        if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
+        if (by === 'title')  return a.dataset.title.localeCompare(b.dataset.title);
+        // «сначала старые»: клипы без даты всегда в конце
+        const da = a.dataset.released, db = b.dataset.released;
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da.localeCompare(db);
+      });
+    }
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    list.appendChild(frag);
+  }
+
+  kindsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    state.kind = btn.dataset.kind;
+    for (const b of kindsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+    apply();
+  });
+
+  viewsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    list.dataset.view = btn.dataset.view;
+    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  });
+
+  sortEl.addEventListener('change', () => { sort(); apply(); });
+
+  let timer;
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      state.q = search.value.trim().toLowerCase();
+      apply();
+    }, 120);
+  });
+
+  /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами. */
+  for (const wrap of document.querySelectorAll('.select')) {
+    const field = wrap.querySelector('select');
+    const close = () => wrap.removeAttribute('data-open');
+    field.addEventListener('mousedown', () => wrap.toggleAttribute('data-open'));
+    field.addEventListener('keydown', (e) => {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+    });
+    field.addEventListener('change', close);
+    field.addEventListener('blur', close);
+  }
+</script>

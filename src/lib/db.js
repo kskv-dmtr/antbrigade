@@ -258,6 +258,22 @@ export function plural(n, one, many) {
    соавторов то косой чертой, то амперсандом, и делить её самим нельзя —
    «Bad//Dreems» это одно название группы, а не двое. У сольных релизов
    массив из одного имени, поэтому берём исходную строку как есть. */
+/* Название ролика без имени артиста в начале.
+
+   В Notion они заведены как «Touch Girl Apple Blossom | Heart-Go». Имя стоит
+   и в отдельной колонке, и в подписи плитки, поэтому в заголовке оно лишнее.
+   Разделитель может встретиться и внутри названия, поэтому отрезаем только
+   первую часть, остальное склеиваем обратно. */
+export function videoTitle(video) {
+  const raw = video?.title ?? '';
+  return raw.includes(' | ') ? raw.split(' | ').slice(1).join(' | ') : raw;
+}
+
+/** Исполнители ролика одной строкой, через точку. */
+export function videoArtists(video) {
+  return artistsOf(video?.artistIds).map((a) => a.name).join(' · ');
+}
+
 export function artistLine(album) {
   /* Отбрасываем имена, целиком входящие в другое имя из той же связки.
      В Notion у «Durand Jones & The Indications» проставлены и группа, и сам

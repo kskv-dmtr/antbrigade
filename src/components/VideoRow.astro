@@ -1,0 +1,17 @@
+---
+/* Строка клипа: исполнитель, название, вид, год.
+
+   Те же четыре колонки, что у релиза, и тот же класс .row — чтобы список
+   клипов читался как продолжение остальных списков сайта, а не как
+   отдельная выдумка. */
+
+import { videoTitle, videoArtists } from '../lib/db.js';
+
+const { video } = Astro.props;
+---
+<a class="row" href={video.url} target="_blank" rel="noopener noreferrer">
+  <span class="row__artist">{videoArtists(video)}</span>
+  <span class="row__title">{videoTitle(video)}</span>
+  <span class="row__meta">{video.kind}</span>
+  <span class="row__num">{video.released ? video.released.slice(0, 4) : '—'}</span>
+</a>

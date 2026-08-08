@@ -1145,6 +1145,16 @@ select option { background: #1a1a19; color: var(--fg); }
   gap: 30px var(--gap);
 }
 
+/* Клипы шире обложек: кадр 16:9 в колонке под квадрат вышел бы мелким.
+   Правило ниже общего — оно его и уточняет. */
+.videos[data-view='grid'] {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+@media (max-width: 640px) {
+  /* Две колонки дают кадр 165×93 — это уже не картинка. */
+  .videos[data-view='grid'] { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Буква — не плитка: в сетке она растягивается на всю строку и остаётся
    заголовком, а не превращается в ячейку рядом с обложками. */
 [data-view='grid'] .names__letter {

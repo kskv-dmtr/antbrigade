@@ -60,8 +60,14 @@ jobs:
         id: links
         run: node scripts/fetch-links.mjs --check
 
+      # Кадры роликов качаются с YouTube по тем же правилам, что и обложки:
+      # в готовой странице внешних адресов быть не должно.
+      - name: Проверить, нужны ли кадры роликов
+        id: thumbs
+        run: node scripts/fetch-thumbs.mjs --check
+
       - name: Установить зависимости
-        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true'
+        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true' || steps.thumbs.outputs.thumbs_needed == 'true'
         run: npm ci
 
       - name: Скачать недостающие обложки
@@ -72,19 +78,23 @@ jobs:
         if: steps.links.outputs.links_needed == 'true'
         run: node scripts/fetch-links.mjs
 
+      - name: Скачать недостающие кадры роликов
+        if: steps.thumbs.outputs.thumbs_needed == 'true'
+        run: node scripts/fetch-thumbs.mjs
+
       # Собираем до коммита: если новая запись ломает сборку, пусть падает
       # здесь, а не в продакшене.
       - name: Проверить, что сайт собирается
-        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true'
+        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true' || steps.thumbs.outputs.thumbs_needed == 'true'
         run: npm run build
 
       - name: Закоммитить и запушить
-        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true'
+        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true' || steps.thumbs.outputs.thumbs_needed == 'true'
         run: |
           COUNT=$(node -p "require('./data/albums.json').counts.albums")
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/albums.json data/links.json public/covers
+          git add data/albums.json data/links.json public/covers public/videos
           if git diff --cached --quiet; then
             echo "Коммитить нечего."
             exit 0
@@ -106,7 +116,7 @@ jobs:
       # Подстраховка на случай, если Vercel не отреагирует на пуш от бота.
       # Работает, только если задан секрет VERCEL_DEPLOY_HOOK.
       - name: Разбудить Vercel
-        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true'
+        if: steps.check.outputs.changed == 'true' || steps.covers.outputs.covers_needed == 'true' || steps.links.outputs.links_needed == 'true' || steps.thumbs.outputs.thumbs_needed == 'true'
         env:
           HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |

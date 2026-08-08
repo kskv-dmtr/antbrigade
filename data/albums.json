@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T02:23:22Z",
+  "generatedAt": "2026-08-08T09:03:12Z",
   "counts": {
-    "albums": 1059,
-    "artists": 950,
+    "albums": 1060,
+    "artists": 952,
     "labels": 595,
-    "videos": 51
+    "videos": 53
   },
   "albums": [
     {
@@ -24962,6 +24962,35 @@
       ]
     },
     {
+      "id": "3b64129a-8c52-8041-ada9-f6eb43436957",
+      "slug": "clowns-endless",
+      "artist": "Clowns",
+      "album": "ENDLESS",
+      "url": "https://album.link/zhm4nnvz5jk6m",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A11969982-832d-43ed-9bc6-aa3cbfbc7080%3Aa2474534163_10.jpg?table=block&id=3b64129a-8c52-8041-ada9-f6eb43436957&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Hardcore Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-10-20",
+      "year": 2023,
+      "artistIds": [
+        "3b64129a-8c52-803a-a4fb-fd8fc451e5ef"
+      ],
+      "artists": [
+        "Clowns"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d8-8930-fee6e1bd6466"
+      ],
+      "labels": [
+        "Fat Wreck Chords"
+      ]
+    },
+    {
       "id": "1c64129a-8c52-80c3-905c-ff5838aefafa",
       "slug": "forest-swords-bolted",
       "artist": "Forest Swords",
@@ -34007,6 +34036,24 @@
       "videoIds": []
     },
     {
+      "id": "3b64129a-8c52-803a-a4fb-fd8fc451e5ef",
+      "slug": "clowns",
+      "name": "Clowns",
+      "country": "AU",
+      "bandcamp": null,
+      "albumIds": [
+        "3b64129a-8c52-8041-ada9-f6eb43436957"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Hardcore Punk"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d8-8930-fee6e1bd6466"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2414129a-8c52-804c-820e-e24867e92943",
       "slug": "cobra-skulls",
       "name": "Cobra Skulls",
@@ -35158,7 +35205,9 @@
       "labelIds": [
         "24a4129a-8c52-8024-a0df-f6a8c068ec34"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b64129a-8c52-8088-a31f-fd4bf604ebb1"
+      ]
     },
     {
       "id": "24f4129a-8c52-80fb-bf4e-f0b1be6bee42",
@@ -40424,6 +40473,19 @@
         "2dc4129a-8c52-8057-ac42-da6018613722"
       ],
       "videoIds": []
+    },
+    {
+      "id": "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60",
+      "slug": "madness",
+      "name": "Madness",
+      "country": "GB",
+      "bandcamp": null,
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3b64129a-8c52-80c1-876c-eab3fe094086"
+      ]
     },
     {
       "id": "2504129a-8c52-8049-801b-fa839798e5d6",
@@ -51370,10 +51432,12 @@
       "country": "US",
       "bandcamp": null,
       "albumIds": [
-        "13acf9bd-0320-4498-8fe4-291e3ccda034"
+        "13acf9bd-0320-4498-8fe4-291e3ccda034",
+        "3b64129a-8c52-8041-ada9-f6eb43436957"
       ],
       "artistIds": [
-        "2504129a-8c52-80a7-86a3-fc515097be2c"
+        "2504129a-8c52-80a7-86a3-fc515097be2c",
+        "3b64129a-8c52-803a-a4fb-fd8fc451e5ef"
       ]
     },
     {
@@ -58065,6 +58129,26 @@
       "released": null,
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-8088-a31f-fd4bf604ebb1",
+      "title": "Don West | Live at Park Orchards Recording Studios",
+      "url": "https://youtu.be/aCL76rjPpY4?si=MlhSD46DZmuprW2e",
+      "kind": "Live Video",
+      "released": null,
+      "artistIds": [
+        "24a4129a-8c52-80b2-b0c9-e2766652e445"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-80c1-876c-eab3fe094086",
+      "title": "Madness | Baggy Trousers",
+      "url": "https://youtu.be/Dc3AovUZgvo?si=K2ZB8AT3zXOFlpZH",
+      "kind": "Official Video",
+      "released": null,
+      "artistIds": [
+        "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60"
       ]
     },
     {

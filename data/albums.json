@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T19:45:46Z",
+  "generatedAt": "2026-08-08T23:46:41Z",
   "counts": {
-    "albums": 1060,
-    "artists": 952,
+    "albums": 1061,
+    "artists": 953,
     "labels": 595,
     "videos": 56
   },
   "albums": [
+    {
+      "id": "3b64129a-8c52-80be-9d66-f3892cd8d367",
+      "slug": "ceremony-tell-me-your-dream",
+      "artist": "Ceremony",
+      "album": "Tell Me Your Dream",
+      "url": "https://album.link/przn98d9mp9dj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac26f8d24-0333-4915-accb-8b53c1ebd524%3Aa2254050561_10.jpg?table=block&id=3b64129a-8c52-80be-9d66-f3892cd8d367&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "New Wave"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-07",
+      "year": 2026,
+      "artistIds": [
+        "3b64129a-8c52-8090-9389-ee3930c03cbe"
+      ],
+      "artists": [
+        "Ceremony"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "labels": [
+        "Relapse Records"
+      ]
+    },
     {
       "id": "3b44129a-8c52-80e7-adc3-fbc9b22a6716",
       "slug": "overmono-pure-devotion",
@@ -33595,6 +33624,24 @@
       "videoIds": []
     },
     {
+      "id": "3b64129a-8c52-8090-9389-ee3930c03cbe",
+      "slug": "ceremony",
+      "name": "Ceremony",
+      "country": "US",
+      "bandcamp": "https://ceremonyrohnertpark.bandcamp.com/music",
+      "albumIds": [
+        "3b64129a-8c52-80be-9d66-f3892cd8d367"
+      ],
+      "genres": [
+        "Post-Punk",
+        "New Wave"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2484129a-8c52-804d-b61d-d6c4c4552b87",
       "slug": "chain-cult",
       "name": "Chain Cult",
@@ -55225,6 +55272,7 @@
       "country": "US",
       "bandcamp": "https://relapserecords.bandcamp.com/",
       "albumIds": [
+        "3b64129a-8c52-80be-9d66-f3892cd8d367",
         "3944129a-8c52-80e5-8a03-f8bdaf8b6f96",
         "35c4129a-8c52-80a7-8384-fb2307a075de",
         "2224129a-8c52-80f1-8e9e-d6ea55249019",
@@ -55235,6 +55283,7 @@
         "24772b18-8565-47c0-b190-53df4e56cb7d"
       ],
       "artistIds": [
+        "3b64129a-8c52-8090-9389-ee3930c03cbe",
         "3944129a-8c52-8043-a7ae-c6bc715ad30b",
         "35c4129a-8c52-80d8-967f-dd5e71659ce3",
         "2494129a-8c52-8086-b3ee-ee54fe241997",

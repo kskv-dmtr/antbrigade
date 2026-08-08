@@ -22,16 +22,22 @@ const cover   = coverSrc(album, 800);
   activeSection="albums"
 >
   <article class="detail">
-    {/* Обложка целиком на размытой копии себя самой, заголовок рядом. */}
-    <div class="detail__banner bleed">
+    {/* Обложка целиком на размытой копии себя самой, заголовок рядом.
+
+        Без `bleed`: с ним полоса вылезала на ширину полей за текстовую
+        колонку, и обложка начиналась левее всего остального на странице. */}
+    <div class="detail__banner">
       {cover && <img class="detail__backdrop" src={cover} alt="" aria-hidden="true" decoding="async" />}
       {cover && (
         <img class="detail__art" src={cover} width="800" height="800"
              alt={`${album.album} cover`} fetchpriority="high" />
       )}
       <div class="detail__head">
-        {/* Год отсюда убран: он и так стоит ниже, в Release date. */}
-        <p class="detail__kicker">{album.types.join(' · ')}</p>
+        {/* Дата стоит здесь, рядом с типом релиза, отдельной строки в
+            фактах под ней больше нет. */}
+        <p class="detail__kicker">
+          {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
+        </p>
         <h1 class="detail__title">{album.album}</h1>
         <p class="detail__artist">
           {artists.length > 0
@@ -52,13 +58,6 @@ const cover   = coverSrc(album, 800);
       </div>
 
       <dl class="facts facts--wide">
-        {album.released && (
-          <>
-            <dt>Release date</dt>
-            <dd>{formatDate(album.released)}</dd>
-          </>
-        )}
-
         {labels.length > 0 && (
           <>
             <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>

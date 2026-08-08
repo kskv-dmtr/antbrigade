@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T19:13:32Z",
+  "generatedAt": "2026-08-08T19:45:46Z",
   "counts": {
     "albums": 1060,
     "artists": 952,
@@ -41587,6 +41587,7 @@
         "2444129a-8c52-80bc-980e-d768395ab175"
       ],
       "videoIds": [
+        "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
         "1064129a-8c52-80bd-a54f-fbba51cdc4ed"
       ]
     },
@@ -57937,7 +57938,7 @@
       "url": "https://youtu.be/tgXSbdfIyZw?si=VmyZZ538maZOf0pz",
       "kind": "Official Video",
       "artistIds": [
-        "24f4129a-8c52-8098-9fbd-dd37b620291c",
+        "2504129a-8c52-804c-a693-dc85640a23de",
         "24f4129a-8c52-80aa-950d-c6b4128158db",
         "2504129a-8c52-804c-a693-dc85640a23de"
       ]
@@ -57953,12 +57954,12 @@
     },
     {
       "id": "2414129a-8c52-8095-a205-db0ceb2a8f62",
-      "title": "Nu Genea | Marechià (feat. Célia Kameni)",
+      "title": "Nu Genea / Célia Kameni | Marechià",
       "url": "https://youtu.be/N1FDkTO7D_0?si=_jZ0oqEjo2lm3DLr",
       "kind": "Official Video",
       "artistIds": [
-        "2414129a-8c52-803b-b033-e9640796d102",
-        "2404129a-8c52-8020-b165-edcb1d5c21f7"
+        "2404129a-8c52-8020-b165-edcb1d5c21f7",
+        "2414129a-8c52-803b-b033-e9640796d102"
       ]
     },
     {

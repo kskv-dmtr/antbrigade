@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T18:52:25Z",
+  "generatedAt": "2026-08-08T19:10:30Z",
   "counts": {
     "albums": 1060,
     "artists": 952,
@@ -35396,8 +35396,8 @@
         "2434129a-8c52-8022-abd2-d0c412936e59"
       ],
       "videoIds": [
-        "2414129a-8c52-80f2-a7df-d32535a51e60",
-        "2424129a-8c52-805d-ad8f-d0a05684ad23"
+        "2424129a-8c52-805d-ad8f-d0a05684ad23",
+        "2414129a-8c52-80f2-a7df-d32535a51e60"
       ]
     },
     {
@@ -42044,9 +42044,9 @@
         "2474129a-8c52-80e7-937d-feb32fb47e2c"
       ],
       "videoIds": [
-        "2404129a-8c52-80ab-ad37-cdb22b949a4b",
         "2414129a-8c52-8095-a205-db0ceb2a8f62",
-        "3b54129a-8c52-80c6-8610-efd07b2181a0"
+        "3b54129a-8c52-80c6-8610-efd07b2181a0",
+        "2404129a-8c52-80ab-ad37-cdb22b949a4b"
       ]
     },
     {
@@ -57653,476 +57653,12 @@
   ],
   "videos": [
     {
-      "id": "3774129a-8c52-8041-a6fd-efd6b8e1e22e",
-      "title": "Touch Girl Apple Blossom | Heart-Go",
-      "url": "https://youtu.be/O0tdfqTzvZQ?si=QPmeMqJoBHA8gEH0",
-      "kind": "Official Video",
-      "released": "2026-05-15",
-      "artistIds": [
-        "3744129a-8c52-80ef-9ebe-ec0ed9b8ee26"
-      ]
-    },
-    {
-      "id": "2814129a-8c52-80d2-8cb1-fcd73eb80eb6",
-      "title": "YĪN YĪN | Spirit Adapter",
-      "url": "https://youtu.be/2MpUGPzENIM?si=HjjtRtHeb8vn_-NZ",
-      "kind": "Official Video",
-      "released": "2025-09-24",
-      "artistIds": [
-        "2414129a-8c52-8012-9a94-e8afd5875a12"
-      ]
-    },
-    {
-      "id": "2894129a-8c52-8067-a0b1-c059d649a1b0",
-      "title": "Blue Earth Sound | Half & Half",
-      "url": "https://youtu.be/epaopGlHEuw?si=O-RpbWtz_X7x7eWc",
-      "kind": "Official Video",
-      "released": "2025-09-19",
-      "artistIds": [
-        "2894129a-8c52-80d7-a3d3-cf8d088ad296"
-      ]
-    },
-    {
-      "id": "2734129a-8c52-8038-996a-d4e951a8fdfc",
-      "title": "The Bouncing Souls | Power",
-      "url": "https://youtu.be/p4kfuw4gSvo?si=s5xTW6OK-kkrTH5A",
-      "kind": "Official Video",
-      "released": "2025-09-19",
-      "artistIds": [
-        "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
-      ]
-    },
-    {
-      "id": "2704129a-8c52-80fd-af33-d33d94cfa19a",
-      "title": "Totorro | New Music",
-      "url": "https://youtu.be/GXzp7mfPg5Y?si=nfBvYvoqAxTo_Saz",
-      "kind": "Official Video",
-      "released": "2025-09-17",
-      "artistIds": [
-        "2704129a-8c52-806d-bfca-fdbefc14172a"
-      ]
-    },
-    {
-      "id": "2754129a-8c52-8091-8e3e-d49513e3047b",
-      "title": "Thundercat / Remi Wolf | Children of the Baked Potato",
-      "url": "https://youtu.be/3qA2zGAH4jI?si=JRHYpagDXu3tqvpk",
-      "kind": "Official Video",
-      "released": "2025-09-15",
-      "artistIds": [
-        "2754129a-8c52-8003-9d6c-dbf229cd455f",
-        "2754129a-8c52-80ea-af7b-c26748dfe1cd"
-      ]
-    },
-    {
-      "id": "2784129a-8c52-8025-a0c2-d2a5ac8c9a98",
-      "title": "Castle Rat | WOLF I",
-      "url": "https://youtu.be/rWRmjkPgZkY?si=svAvNNDVGI5B7fKT",
-      "kind": "Official Video",
-      "released": "2025-09-04",
-      "artistIds": [
-        "2784129a-8c52-80bd-a66f-f6ecd160f2d0"
-      ]
-    },
-    {
-      "id": "3af4129a-8c52-80b3-a172-df0f101152c4",
-      "title": "Spøgelse | Speedfreaks",
-      "url": "https://youtu.be/cZAeYtDQwDc?si=vdTZJXkvZv_Plxsl",
-      "kind": "Official Video",
-      "released": "2025-08-22",
-      "artistIds": [
-        "2524129a-8c52-80ea-93f9-fe0796537a7f"
-      ]
-    },
-    {
-      "id": "2eb4129a-8c52-8001-b0ac-c122c4b42a94",
-      "title": "H 3 F | S.A.L.T.",
-      "url": "https://youtu.be/DxFmwhtlvIk?si=smnvavUqkxbhIu-J",
-      "kind": "Official Video",
-      "released": "2025-08-15",
-      "artistIds": [
-        "2504129a-8c52-8005-b193-cb5c07e82375"
-      ]
-    },
-    {
-      "id": "2414129a-8c52-80ea-b3dd-c89caaa8fecd",
-      "title": "Yuuf | Alma's Cove EP Full Live Performance (Live in Preveli Gorge, Crete)",
-      "url": "https://youtu.be/oK32xCYS4hU?si=qSsMsOfPu0hqHr82",
-      "kind": "Live Video",
-      "released": "2025-07-08",
-      "artistIds": [
-        "2414129a-8c52-805e-b11f-d3d452c6e3a2"
-      ]
-    },
-    {
-      "id": "2434129a-8c52-80e0-8575-c3b93b4a96af",
-      "title": "Glass Beams | Primavera Sound Festival 2025",
-      "url": "https://youtu.be/jWLt5ZnHho8?si=KQltDtaUnRpxRBIW",
-      "kind": "Live Video",
-      "released": "2025-07-04",
-      "artistIds": [
-        "2434129a-8c52-8062-8072-d25aba1f3aab"
-      ]
-    },
-    {
-      "id": "2404129a-8c52-80ab-ad37-cdb22b949a4b",
-      "title": "Nu Genea | Sciallà",
-      "url": "https://youtu.be/ZEa5FlJSQ9Y?si=ZfO1Eu8kQkoMbHsd",
-      "kind": "Official Video",
-      "released": "2025-07-03",
-      "artistIds": [
-        "2404129a-8c52-8020-b165-edcb1d5c21f7"
-      ]
-    },
-    {
-      "id": "2414129a-8c52-80f2-a7df-d32535a51e60",
-      "title": "Durand Jones & The Indications | Flower Moon",
-      "url": "https://youtu.be/EiAjOPM1IpA?si=HklpryMwNoLDl3ds",
-      "kind": "Official Video",
-      "released": "2025-04-22",
-      "artistIds": [
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8",
-        "2414129a-8c52-803f-84bf-e1d9f7fb7397"
-      ]
-    },
-    {
-      "id": "2564129a-8c52-803e-9063-d286b84af8d7",
-      "title": "Tunde Adebimpe | Somebody New",
-      "url": "https://youtu.be/Z_ilbTU5zGQ?si=qPz5ZK4eHVHLpVib",
-      "kind": "Official Video",
-      "released": "2025-04-15",
-      "artistIds": [
-        "2554129a-8c52-8058-b86d-c258ac4c6344"
-      ]
-    },
-    {
-      "id": "37f4129a-8c52-80ee-b56c-fddc39bef8d8",
-      "title": "Subsonic Eye | Aku Cemas",
-      "url": "https://youtu.be/vNRTL0nJFCA?si=rS0OD5iV8jdXgAD9",
-      "kind": "Official Video",
-      "released": "2025-04-13",
-      "artistIds": [
-        "37f4129a-8c52-80c2-8df0-e129efd28274"
-      ]
-    },
-    {
-      "id": "2414129a-8c52-80d4-a826-dbc26f9f2c01",
-      "title": "RIO KOSTA | It’s Starting",
-      "url": "https://youtu.be/xJKDcpkkK18?si=ZpIJMdTe-cOicDm4",
-      "kind": "Official Video",
-      "released": "2025-04-09",
-      "artistIds": [
-        "2404129a-8c52-8035-a990-db8919c35959"
-      ]
-    },
-    {
-      "id": "2424129a-8c52-805d-ad8f-d0a05684ad23",
-      "title": "Durand Jones & The Indications | Been So Long",
-      "url": "https://youtu.be/FVmtLopTBFw?si=ZmchfVBwu3GUAJpz",
-      "kind": "Official Video",
-      "released": "2025-03-19",
-      "artistIds": [
-        "2414129a-8c52-803f-84bf-e1d9f7fb7397",
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8"
-      ]
-    },
-    {
-      "id": "2424129a-8c52-804d-8ef0-d14d5924410e",
-      "title": "Gelli Haha | Bounce House",
-      "url": "https://youtu.be/T90Qd-NFIOc?si=-HbXkBb548pq8nCc",
-      "kind": "Official Video",
-      "released": "2025-03-19",
-      "artistIds": [
-        "2424129a-8c52-801f-928b-cd1b28ba171c"
-      ]
-    },
-    {
-      "id": "1187dc03-b79b-486e-9a70-8e93836f6048",
-      "title": "Σtella | Adagio",
-      "url": "https://youtu.be/4ByFni-WyaU?si=18Bsce_hEvlgSm8T",
-      "kind": "Official Video",
-      "released": "2025-01-09",
-      "artistIds": [
-        "24a4129a-8c52-8082-8335-e14604efa91e"
-      ]
-    },
-    {
-      "id": "12a4129a-8c52-80ed-8935-c303f06c3a52",
-      "title": "Dance with the Dead / Gunship | Wolf Pack",
-      "url": "https://youtu.be/JBWsodbadRg?si=CbLfyTwwy9ps6aAt",
-      "kind": "Official Video",
-      "released": "2024-10-25",
-      "artistIds": [
-        "2414129a-8c52-80a5-958a-f8794c88e67b",
-        "2414129a-8c52-805e-84b1-dfb6fbd20ab9"
-      ]
-    },
-    {
-      "id": "1254129a-8c52-807e-a65f-e7c9c6dfb7f8",
-      "title": "LA LOM | Moonlight Over Montobello",
-      "url": "https://youtu.be/y3uQ-Ny3imA?si=Pqr3cN6oB_anuKQs",
-      "kind": "Official Video",
-      "released": "2024-10-18",
-      "artistIds": [
-        "2414129a-8c52-80ba-b704-d7b64e3ae73c"
-      ]
-    },
-    {
-      "id": "36d4129a-8c52-8061-8052-f97ccc411dba",
-      "title": "Warbaby | And Always",
-      "url": "https://youtu.be/5UesClPxZFg?si=4iB6eUfdaMpFQcRc",
-      "kind": "Official Video",
-      "released": "2024-10-16",
-      "artistIds": [
-        "3454129a-8c52-808c-a823-c75492b83f4d"
-      ]
-    },
-    {
-      "id": "2434129a-8c52-8059-a732-c1dc6e9aea52",
-      "title": "Tuxedo | Back 4 More",
-      "url": "https://youtu.be/Q4WZ0Ac3rOw?si=cCvEKE2-Ja5fjIXa",
-      "kind": "Official Video",
-      "released": "2024-09-24",
-      "artistIds": [
-        "2434129a-8c52-808c-a4f7-fa69a88a9742"
-      ]
-    },
-    {
-      "id": "1064129a-8c52-801a-8799-f6af489f2c14",
-      "title": "Cobra Skulls | You Know I Know",
-      "url": "https://youtu.be/knVQINZs3_g?si=8i4Q_xL8kQ3k32i_",
-      "kind": "Official Video",
-      "released": "2024-09-18",
-      "artistIds": [
-        "2414129a-8c52-804c-820e-e24867e92943"
-      ]
-    },
-    {
-      "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
-      "title": "Mount Kimbie / King Krule | Empty and Silent",
-      "url": "https://youtu.be/tgXSbdfIyZw?si=VmyZZ538maZOf0pz",
-      "kind": "Official Video",
-      "released": "2024-09-18",
-      "artistIds": [
-        "24f4129a-8c52-8098-9fbd-dd37b620291c",
-        "24f4129a-8c52-80aa-950d-c6b4128158db",
-        "2504129a-8c52-804c-a693-dc85640a23de"
-      ]
-    },
-    {
-      "id": "1064129a-8c52-80ca-9b75-c0413cca4c86",
-      "title": "Alvilda | Angoisse",
-      "url": "https://youtu.be/0WLX5LRif_4?si=8lLyCVsEtvAf0Qpq",
-      "kind": "Official Video",
-      "released": "2024-09-17",
-      "artistIds": [
-        "2434129a-8c52-8040-a206-f275114bb194"
-      ]
-    },
-    {
-      "id": "eae73131-2081-49ac-817f-aece7dcce03f",
-      "title": "Los Bitchos | Talkie Talkie, Charlie Charlie",
-      "url": "https://youtu.be/h9bcXWAwHTQ?si=5nVd6m3q4V9f2JzN",
-      "kind": "Official Video",
-      "released": "2024-08-30",
-      "artistIds": [
-        "24f4129a-8c52-80de-ba69-f43b6a41ec4a"
-      ]
-    },
-    {
-      "id": "1064129a-8c52-8067-816a-fd3e9d834025",
-      "title": "Surely Shirley | Lavender Blues",
-      "url": "https://youtu.be/bxqEcuKZAeQ?si=FSAxjzSEPlVrugI8",
-      "kind": "Official Video",
-      "released": "2024-08-28",
-      "artistIds": [
-        "24f4129a-8c52-8034-b5f8-c86b33e20d27"
-      ]
-    },
-    {
-      "id": "38fe2b6c-c28d-48fc-a0a7-4c303776d1ca",
-      "title": "Chat Pile | Masc",
-      "url": "https://youtu.be/h8YoyzosPDw?si=YH1MwT2hJ2fYWgKU",
-      "kind": "Official Video",
-      "released": "2024-08-20",
-      "artistIds": [
-        "2434129a-8c52-80ea-9774-cfa180722a96"
-      ]
-    },
-    {
-      "id": "ef8e9343-699f-4b15-a111-c3f51708ef77",
-      "title": "Dance with the Dead / Shaun Phillips | Cold as Hell",
-      "url": "https://youtu.be/w3BPH2vWQAo?si=2Sswnu0X1agE1ZCt",
-      "kind": "Official Video",
-      "released": "2024-07-25",
-      "artistIds": [
-        "2414129a-8c52-80a5-958a-f8794c88e67b",
-        "2434129a-8c52-80d5-88d2-cc1cbf65f233"
-      ]
-    },
-    {
-      "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",
-      "title": "Slomosa | Battling Guns",
-      "url": "https://youtu.be/bXcUtP_O0J4?si=7akEiuUJktfZN62Z",
-      "kind": "Official Video",
-      "released": "2024-07-19",
-      "artistIds": [
-        "24f4129a-8c52-801b-b600-e0e7fd747383",
-        "2524129a-8c52-801e-a64d-c337e942f8b1"
-      ]
-    },
-    {
-      "id": "2484129a-8c52-80bf-9be4-caaf030fd370",
-      "title": "BANK | Amerika",
-      "url": "https://youtu.be/oYdfKqmYdmk?si=WwoYgdl2NTyIJ04q",
-      "kind": "Official Video",
-      "released": "2024-07-18",
-      "artistIds": [
-        "2484129a-8c52-808a-ac1b-ed859e33f197"
-      ]
-    },
-    {
-      "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",
-      "title": "Ginger Root | There Was a Time",
-      "url": "https://youtu.be/2eUf4rWtxLU?si=Vt-vcyIUtui5_kHp",
-      "kind": "Official Video",
-      "released": "2024-07-17",
-      "artistIds": [
-        "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
-      ]
-    },
-    {
-      "id": "45babf66-d859-4031-8634-59a4c0940906",
-      "title": "Masok | Cold Water",
-      "url": "https://youtu.be/FAzV6Wlo0q0?si=nP2dByf-UhvELvzW",
-      "kind": "Official Video",
-      "released": "2024-07-17",
-      "artistIds": [
-        "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
-      ]
-    },
-    {
-      "id": "7cff2645-771c-476b-b323-13101cba0a85",
-      "title": "L'Impératrice / Erick the Architect | Sweet & Sublime",
-      "url": "https://youtu.be/hDYiiOBLh8M?si=cKE3-cGpPzBud0mo",
-      "kind": "Official Video",
-      "released": "2024-07-16",
-      "artistIds": [
-        "24f4129a-8c52-8089-bd74-cf956ca4a0d1",
-        "24f4129a-8c52-801b-aea6-ea56a2a2d5a0"
-      ]
-    },
-    {
-      "id": "24b4129a-8c52-8059-8fe4-ce3745e38d05",
-      "title": "Brijean | Counting Sheep",
-      "url": "https://youtu.be/3Esbe_Yq20k?si=-MC4XD7ERv5-8N6u",
-      "kind": "Official Video",
-      "released": "2024-07-12",
-      "artistIds": [
-        "2424129a-8c52-807f-998f-f0675dd4ecac"
-      ]
-    },
-    {
-      "id": "e30c83a1-a5c1-4111-9be9-ba53af4dad3b",
-      "title": "GUNSHIP / Carpenter Brut / Gavin Rossdale | DooM Dance",
-      "url": "https://youtu.be/trF4sGKwfEQ?si=_oj__K9SWOn3_vrf",
-      "kind": "Official Video",
-      "released": "2024-07-10",
-      "artistIds": [
-        "2414129a-8c52-805e-84b1-dfb6fbd20ab9",
-        "24f4129a-8c52-80aa-ad15-ca73c90e9124",
-        "24f4129a-8c52-8055-ac67-eaa7094a6e2f"
-      ]
-    },
-    {
-      "id": "4ea3a645-86d0-4fc8-9efd-70c5c018d5ed",
-      "title": "Fontaines D.C. | Favourite",
-      "url": "https://youtu.be/0a_vpigwDb4?si=GVGMggTMVT3LCSna",
-      "kind": "Official Video",
-      "released": "2024-06-18",
-      "artistIds": [
-        "2434129a-8c52-80e3-8917-de97363ee8b9"
-      ]
-    },
-    {
-      "id": "a375d4dc-94e7-4003-8185-7b37dc880e98",
-      "title": "SML | Three Over Steel",
-      "url": "https://youtu.be/LPo8Ee5pp4M?si=enmV4dmcBbzPLlhZ",
-      "kind": "Official Video",
-      "released": "2024-06-06",
-      "artistIds": [
-        "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
-      ]
-    },
-    {
-      "id": "03ca4847-51fc-4dde-9edd-6723d6128532",
-      "title": "Dent May / Pearl & The Oysters | Time Flies When You're Having Fun",
-      "url": "https://youtu.be/mqxDExrrm0g?si=71fcPZUzPhTMCC6V",
-      "kind": "Official Video",
-      "released": "2024-03-07",
-      "artistIds": [
-        "2434129a-8c52-808d-adde-ea2a0edcd33a",
-        "2434129a-8c52-8013-b879-daddf61fdb34"
-      ]
-    },
-    {
-      "id": "067ec0d4-94df-434a-ac36-1269d1e6989e",
-      "title": "SUCK | Gravedigger",
-      "url": "https://youtu.be/d8nJ2aiOUJ4?si=4HxvSQEmIJDCutHc",
-      "kind": "Official Video",
-      "released": "2022-05-26",
-      "artistIds": [
-        "2414129a-8c52-80e4-bc92-e411321f1ca6"
-      ]
-    },
-    {
-      "id": "2414129a-8c52-8095-a205-db0ceb2a8f62",
-      "title": "Nu Genea | Marechià (feat. Célia Kameni)",
-      "url": "https://youtu.be/N1FDkTO7D_0?si=_jZ0oqEjo2lm3DLr",
-      "kind": "Official Video",
-      "released": "2021-07-19",
-      "artistIds": [
-        "2414129a-8c52-803b-b033-e9640796d102",
-        "2404129a-8c52-8020-b165-edcb1d5c21f7"
-      ]
-    },
-    {
       "id": "1014129a-8c52-807d-8b3a-c9edd9124bc9",
       "title": "!!! | One Girl/One Boy",
       "url": "https://youtu.be/STz5dlEJ6ZI?si=bl72eMaIDHDTgWUB",
       "kind": "Official Video",
-      "released": "2013-05-15",
       "artistIds": [
         "2414129a-8c52-8011-be30-ca3659f3e880"
-      ]
-    },
-    {
-      "id": "37d4129a-8c52-804f-b7d7-dccf9660ca01",
-      "title": "Anamanaguchi | MEOW",
-      "url": "https://youtu.be/vc3JWo2iiGc?si=JSgVYzpjhibxsGYL",
-      "kind": "Official Video",
-      "released": "2013-01-08",
-      "artistIds": [
-        "2494129a-8c52-80fd-905f-d7c6bcee8268"
-      ]
-    },
-    {
-      "id": "2424129a-8c52-80ad-a8a9-f768630a2696",
-      "title": "Maladroit | Gossip Problem",
-      "url": "https://youtu.be/u7Xiw9x_9-Y?si=3t5Y6pL6ae4ml1H4",
-      "kind": "Official Video",
-      "released": "2012-01-21",
-      "artistIds": [
-        "2424129a-8c52-80ab-bb89-c261c7561370"
-      ]
-    },
-    {
-      "id": "3144129a-8c52-80a9-a08d-dfcfdeaad66f",
-      "title": "Pig Destroyer | Gravedancer",
-      "url": "https://youtu.be/GvjGipvKaF0?si=urIA1iAG7R6KE_sI",
-      "kind": "Official Video",
-      "released": "2007-04-16",
-      "artistIds": [
-        "2514129a-8c52-803d-a508-c3aa9d1e29f0"
       ]
     },
     {
@@ -58130,9 +57666,110 @@
       "title": "Aaron Frazer | It’s a Shame",
       "url": "https://youtu.be/kAlb5pd7sNU?si=qCDAn9xMviU4kfKl",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
+      ]
+    },
+    {
+      "id": "1064129a-8c52-80ca-9b75-c0413cca4c86",
+      "title": "Alvilda | Angoisse",
+      "url": "https://youtu.be/0WLX5LRif_4?si=8lLyCVsEtvAf0Qpq",
+      "kind": "Official Video",
+      "artistIds": [
+        "2434129a-8c52-8040-a206-f275114bb194"
+      ]
+    },
+    {
+      "id": "37d4129a-8c52-804f-b7d7-dccf9660ca01",
+      "title": "Anamanaguchi | MEOW",
+      "url": "https://youtu.be/vc3JWo2iiGc?si=JSgVYzpjhibxsGYL",
+      "kind": "Official Video",
+      "artistIds": [
+        "2494129a-8c52-80fd-905f-d7c6bcee8268"
+      ]
+    },
+    {
+      "id": "2484129a-8c52-80bf-9be4-caaf030fd370",
+      "title": "BANK | Amerika",
+      "url": "https://youtu.be/oYdfKqmYdmk?si=WwoYgdl2NTyIJ04q",
+      "kind": "Official Video",
+      "artistIds": [
+        "2484129a-8c52-808a-ac1b-ed859e33f197"
+      ]
+    },
+    {
+      "id": "2894129a-8c52-8067-a0b1-c059d649a1b0",
+      "title": "Blue Earth Sound | Half & Half",
+      "url": "https://youtu.be/epaopGlHEuw?si=O-RpbWtz_X7x7eWc",
+      "kind": "Official Video",
+      "artistIds": [
+        "2894129a-8c52-80d7-a3d3-cf8d088ad296"
+      ]
+    },
+    {
+      "id": "24b4129a-8c52-8059-8fe4-ce3745e38d05",
+      "title": "Brijean | Counting Sheep",
+      "url": "https://youtu.be/3Esbe_Yq20k?si=-MC4XD7ERv5-8N6u",
+      "kind": "Official Video",
+      "artistIds": [
+        "2424129a-8c52-807f-998f-f0675dd4ecac"
+      ]
+    },
+    {
+      "id": "2784129a-8c52-8025-a0c2-d2a5ac8c9a98",
+      "title": "Castle Rat | WOLF I",
+      "url": "https://youtu.be/rWRmjkPgZkY?si=svAvNNDVGI5B7fKT",
+      "kind": "Official Video",
+      "artistIds": [
+        "2784129a-8c52-80bd-a66f-f6ecd160f2d0"
+      ]
+    },
+    {
+      "id": "38fe2b6c-c28d-48fc-a0a7-4c303776d1ca",
+      "title": "Chat Pile | Masc",
+      "url": "https://youtu.be/h8YoyzosPDw?si=YH1MwT2hJ2fYWgKU",
+      "kind": "Official Video",
+      "artistIds": [
+        "2434129a-8c52-80ea-9774-cfa180722a96"
+      ]
+    },
+    {
+      "id": "1064129a-8c52-801a-8799-f6af489f2c14",
+      "title": "Cobra Skulls | You Know I Know",
+      "url": "https://youtu.be/knVQINZs3_g?si=8i4Q_xL8kQ3k32i_",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-804c-820e-e24867e92943"
+      ]
+    },
+    {
+      "id": "12a4129a-8c52-80ed-8935-c303f06c3a52",
+      "title": "Dance with the Dead / Gunship | Wolf Pack",
+      "url": "https://youtu.be/JBWsodbadRg?si=CbLfyTwwy9ps6aAt",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-80a5-958a-f8794c88e67b",
+        "2414129a-8c52-805e-84b1-dfb6fbd20ab9"
+      ]
+    },
+    {
+      "id": "ef8e9343-699f-4b15-a111-c3f51708ef77",
+      "title": "Dance with the Dead / Shaun Phillips | Cold as Hell",
+      "url": "https://youtu.be/w3BPH2vWQAo?si=2Sswnu0X1agE1ZCt",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-80a5-958a-f8794c88e67b",
+        "2434129a-8c52-80d5-88d2-cc1cbf65f233"
+      ]
+    },
+    {
+      "id": "03ca4847-51fc-4dde-9edd-6723d6128532",
+      "title": "Dent May / Pearl & The Oysters | Time Flies When You're Having Fun",
+      "url": "https://youtu.be/mqxDExrrm0g?si=71fcPZUzPhTMCC6V",
+      "kind": "Official Video",
+      "artistIds": [
+        "2434129a-8c52-808d-adde-ea2a0edcd33a",
+        "2434129a-8c52-8013-b879-daddf61fdb34"
       ]
     },
     {
@@ -58140,9 +57777,84 @@
       "title": "Don West | Live at Park Orchards Recording Studios",
       "url": "https://youtu.be/aCL76rjPpY4?si=MlhSD46DZmuprW2e",
       "kind": "Live Video",
-      "released": null,
       "artistIds": [
         "24a4129a-8c52-80b2-b0c9-e2766652e445"
+      ]
+    },
+    {
+      "id": "2424129a-8c52-805d-ad8f-d0a05684ad23",
+      "title": "Durand Jones & The Indications | Been So Long",
+      "url": "https://youtu.be/FVmtLopTBFw?si=ZmchfVBwu3GUAJpz",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-803f-84bf-e1d9f7fb7397",
+        "2414129a-8c52-805f-b3ca-dc3408e30cf8"
+      ]
+    },
+    {
+      "id": "2414129a-8c52-80f2-a7df-d32535a51e60",
+      "title": "Durand Jones & The Indications | Flower Moon",
+      "url": "https://youtu.be/EiAjOPM1IpA?si=HklpryMwNoLDl3ds",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-805f-b3ca-dc3408e30cf8",
+        "2414129a-8c52-803f-84bf-e1d9f7fb7397"
+      ]
+    },
+    {
+      "id": "4ea3a645-86d0-4fc8-9efd-70c5c018d5ed",
+      "title": "Fontaines D.C. | Favourite",
+      "url": "https://youtu.be/0a_vpigwDb4?si=GVGMggTMVT3LCSna",
+      "kind": "Official Video",
+      "artistIds": [
+        "2434129a-8c52-80e3-8917-de97363ee8b9"
+      ]
+    },
+    {
+      "id": "2424129a-8c52-804d-8ef0-d14d5924410e",
+      "title": "Gelli Haha | Bounce House",
+      "url": "https://youtu.be/T90Qd-NFIOc?si=-HbXkBb548pq8nCc",
+      "kind": "Official Video",
+      "artistIds": [
+        "2424129a-8c52-801f-928b-cd1b28ba171c"
+      ]
+    },
+    {
+      "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",
+      "title": "Ginger Root | There Was a Time",
+      "url": "https://youtu.be/2eUf4rWtxLU?si=Vt-vcyIUtui5_kHp",
+      "kind": "Official Video",
+      "artistIds": [
+        "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
+      ]
+    },
+    {
+      "id": "2434129a-8c52-80e0-8575-c3b93b4a96af",
+      "title": "Glass Beams | Primavera Sound Festival 2025",
+      "url": "https://youtu.be/jWLt5ZnHho8?si=KQltDtaUnRpxRBIW",
+      "kind": "Live Video",
+      "artistIds": [
+        "2434129a-8c52-8062-8072-d25aba1f3aab"
+      ]
+    },
+    {
+      "id": "e30c83a1-a5c1-4111-9be9-ba53af4dad3b",
+      "title": "GUNSHIP / Carpenter Brut / Gavin Rossdale | DooM Dance",
+      "url": "https://youtu.be/trF4sGKwfEQ?si=_oj__K9SWOn3_vrf",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-805e-84b1-dfb6fbd20ab9",
+        "24f4129a-8c52-80aa-ad15-ca73c90e9124",
+        "24f4129a-8c52-8055-ac67-eaa7094a6e2f"
+      ]
+    },
+    {
+      "id": "2eb4129a-8c52-8001-b0ac-c122c4b42a94",
+      "title": "H 3 F | S.A.L.T.",
+      "url": "https://youtu.be/DxFmwhtlvIk?si=smnvavUqkxbhIu-J",
+      "kind": "Official Video",
+      "artistIds": [
+        "2504129a-8c52-8005-b193-cb5c07e82375"
       ]
     },
     {
@@ -58150,7 +57862,6 @@
       "title": "Home Front | Nation",
       "url": "https://youtu.be/0BtIiBI8rGc?si=jZWbqki-GbpbuUxV",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
       ]
@@ -58160,9 +57871,36 @@
       "title": "Kamasi Washington | Street Fighter Mas",
       "url": "https://youtu.be/LdyabrdFMC8?si=g83KxY0D1f283T1k",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "2504129a-8c52-8084-81c4-df8d7f572db2"
+      ]
+    },
+    {
+      "id": "7cff2645-771c-476b-b323-13101cba0a85",
+      "title": "L'Impératrice / Erick the Architect | Sweet & Sublime",
+      "url": "https://youtu.be/hDYiiOBLh8M?si=cKE3-cGpPzBud0mo",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-8089-bd74-cf956ca4a0d1",
+        "24f4129a-8c52-801b-aea6-ea56a2a2d5a0"
+      ]
+    },
+    {
+      "id": "1254129a-8c52-807e-a65f-e7c9c6dfb7f8",
+      "title": "LA LOM | Moonlight Over Montobello",
+      "url": "https://youtu.be/y3uQ-Ny3imA?si=Pqr3cN6oB_anuKQs",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-80ba-b704-d7b64e3ae73c"
+      ]
+    },
+    {
+      "id": "eae73131-2081-49ac-817f-aece7dcce03f",
+      "title": "Los Bitchos | Talkie Talkie, Charlie Charlie",
+      "url": "https://youtu.be/h9bcXWAwHTQ?si=5nVd6m3q4V9f2JzN",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-80de-ba69-f43b6a41ec4a"
       ]
     },
     {
@@ -58170,9 +57908,37 @@
       "title": "Madness | Baggy Trousers",
       "url": "https://youtu.be/Dc3AovUZgvo?si=K2ZB8AT3zXOFlpZH",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60"
+      ]
+    },
+    {
+      "id": "2424129a-8c52-80ad-a8a9-f768630a2696",
+      "title": "Maladroit | Gossip Problem",
+      "url": "https://youtu.be/u7Xiw9x_9-Y?si=3t5Y6pL6ae4ml1H4",
+      "kind": "Official Video",
+      "artistIds": [
+        "2424129a-8c52-80ab-bb89-c261c7561370"
+      ]
+    },
+    {
+      "id": "45babf66-d859-4031-8634-59a4c0940906",
+      "title": "Masok | Cold Water",
+      "url": "https://youtu.be/FAzV6Wlo0q0?si=nP2dByf-UhvELvzW",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
+      ]
+    },
+    {
+      "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
+      "title": "Mount Kimbie / King Krule | Empty and Silent",
+      "url": "https://youtu.be/tgXSbdfIyZw?si=VmyZZ538maZOf0pz",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-8098-9fbd-dd37b620291c",
+        "24f4129a-8c52-80aa-950d-c6b4128158db",
+        "2504129a-8c52-804c-a693-dc85640a23de"
       ]
     },
     {
@@ -58180,9 +57946,18 @@
       "title": "Napalm Death | Tiny Desk Concert",
       "url": "https://youtu.be/e81LZCHhNKQ?si=LRbWmuhQyxywvhbm",
       "kind": "Live Video",
-      "released": null,
       "artistIds": [
         "3b54129a-8c52-8071-8b85-dbf65bc58b71"
+      ]
+    },
+    {
+      "id": "2414129a-8c52-8095-a205-db0ceb2a8f62",
+      "title": "Nu Genea | Marechià (feat. Célia Kameni)",
+      "url": "https://youtu.be/N1FDkTO7D_0?si=_jZ0oqEjo2lm3DLr",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-803b-b033-e9640796d102",
+        "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ]
     },
     {
@@ -58190,9 +57965,90 @@
       "title": "Nu Genea | People of the Moon",
       "url": "https://youtu.be/9050w_j1x_k?si=w7ftGAAwPHGzms9K",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
+      ]
+    },
+    {
+      "id": "2404129a-8c52-80ab-ad37-cdb22b949a4b",
+      "title": "Nu Genea | Sciallà",
+      "url": "https://youtu.be/ZEa5FlJSQ9Y?si=ZfO1Eu8kQkoMbHsd",
+      "kind": "Official Video",
+      "artistIds": [
+        "2404129a-8c52-8020-b165-edcb1d5c21f7"
+      ]
+    },
+    {
+      "id": "3144129a-8c52-80a9-a08d-dfcfdeaad66f",
+      "title": "Pig Destroyer | Gravedancer",
+      "url": "https://youtu.be/GvjGipvKaF0?si=urIA1iAG7R6KE_sI",
+      "kind": "Official Video",
+      "artistIds": [
+        "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+      ]
+    },
+    {
+      "id": "2414129a-8c52-80d4-a826-dbc26f9f2c01",
+      "title": "RIO KOSTA | It’s Starting",
+      "url": "https://youtu.be/xJKDcpkkK18?si=ZpIJMdTe-cOicDm4",
+      "kind": "Official Video",
+      "artistIds": [
+        "2404129a-8c52-8035-a990-db8919c35959"
+      ]
+    },
+    {
+      "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",
+      "title": "Slomosa | Battling Guns",
+      "url": "https://youtu.be/bXcUtP_O0J4?si=7akEiuUJktfZN62Z",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-801b-b600-e0e7fd747383",
+        "2524129a-8c52-801e-a64d-c337e942f8b1"
+      ]
+    },
+    {
+      "id": "a375d4dc-94e7-4003-8185-7b37dc880e98",
+      "title": "SML | Three Over Steel",
+      "url": "https://youtu.be/LPo8Ee5pp4M?si=enmV4dmcBbzPLlhZ",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
+      ]
+    },
+    {
+      "id": "3af4129a-8c52-80b3-a172-df0f101152c4",
+      "title": "Spøgelse | Speedfreaks",
+      "url": "https://youtu.be/cZAeYtDQwDc?si=vdTZJXkvZv_Plxsl",
+      "kind": "Official Video",
+      "artistIds": [
+        "2524129a-8c52-80ea-93f9-fe0796537a7f"
+      ]
+    },
+    {
+      "id": "37f4129a-8c52-80ee-b56c-fddc39bef8d8",
+      "title": "Subsonic Eye | Aku Cemas",
+      "url": "https://youtu.be/vNRTL0nJFCA?si=rS0OD5iV8jdXgAD9",
+      "kind": "Official Video",
+      "artistIds": [
+        "37f4129a-8c52-80c2-8df0-e129efd28274"
+      ]
+    },
+    {
+      "id": "067ec0d4-94df-434a-ac36-1269d1e6989e",
+      "title": "SUCK | Gravedigger",
+      "url": "https://youtu.be/d8nJ2aiOUJ4?si=4HxvSQEmIJDCutHc",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-80e4-bc92-e411321f1ca6"
+      ]
+    },
+    {
+      "id": "1064129a-8c52-8067-816a-fd3e9d834025",
+      "title": "Surely Shirley | Lavender Blues",
+      "url": "https://youtu.be/bxqEcuKZAeQ?si=FSAxjzSEPlVrugI8",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-8034-b5f8-c86b33e20d27"
       ]
     },
     {
@@ -58200,9 +58056,27 @@
       "title": "Teen Mortgage | Democracy Manifest",
       "url": "https://youtu.be/YAtuSBHjbEU?si=5xDSC7JV5gHAd0f6",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "2494129a-8c52-80e3-bc37-fb7824da0196"
+      ]
+    },
+    {
+      "id": "2734129a-8c52-8038-996a-d4e951a8fdfc",
+      "title": "The Bouncing Souls | Power",
+      "url": "https://youtu.be/p4kfuw4gSvo?si=s5xTW6OK-kkrTH5A",
+      "kind": "Official Video",
+      "artistIds": [
+        "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
+      ]
+    },
+    {
+      "id": "2754129a-8c52-8091-8e3e-d49513e3047b",
+      "title": "Thundercat / Remi Wolf | Children of the Baked Potato",
+      "url": "https://youtu.be/3qA2zGAH4jI?si=JRHYpagDXu3tqvpk",
+      "kind": "Official Video",
+      "artistIds": [
+        "2754129a-8c52-8003-9d6c-dbf229cd455f",
+        "2754129a-8c52-80ea-af7b-c26748dfe1cd"
       ]
     },
     {
@@ -58210,15 +58084,85 @@
       "title": "Thundercat | Dragonball Durag",
       "url": "https://youtu.be/ormQQG2UhtQ?si=Bw9wBbBTnD8sOCUo",
       "kind": "Official Video",
-      "released": null,
       "artistIds": []
+    },
+    {
+      "id": "2704129a-8c52-80fd-af33-d33d94cfa19a",
+      "title": "Totorro | New Music",
+      "url": "https://youtu.be/GXzp7mfPg5Y?si=nfBvYvoqAxTo_Saz",
+      "kind": "Official Video",
+      "artistIds": [
+        "2704129a-8c52-806d-bfca-fdbefc14172a"
+      ]
+    },
+    {
+      "id": "3774129a-8c52-8041-a6fd-efd6b8e1e22e",
+      "title": "Touch Girl Apple Blossom | Heart-Go",
+      "url": "https://youtu.be/O0tdfqTzvZQ?si=QPmeMqJoBHA8gEH0",
+      "kind": "Official Video",
+      "artistIds": [
+        "3744129a-8c52-80ef-9ebe-ec0ed9b8ee26"
+      ]
+    },
+    {
+      "id": "2564129a-8c52-803e-9063-d286b84af8d7",
+      "title": "Tunde Adebimpe | Somebody New",
+      "url": "https://youtu.be/Z_ilbTU5zGQ?si=qPz5ZK4eHVHLpVib",
+      "kind": "Official Video",
+      "artistIds": [
+        "2554129a-8c52-8058-b86d-c258ac4c6344"
+      ]
+    },
+    {
+      "id": "2434129a-8c52-8059-a732-c1dc6e9aea52",
+      "title": "Tuxedo | Back 4 More",
+      "url": "https://youtu.be/Q4WZ0Ac3rOw?si=cCvEKE2-Ja5fjIXa",
+      "kind": "Official Video",
+      "artistIds": [
+        "2434129a-8c52-808c-a4f7-fa69a88a9742"
+      ]
+    },
+    {
+      "id": "36d4129a-8c52-8061-8052-f97ccc411dba",
+      "title": "Warbaby | And Always",
+      "url": "https://youtu.be/5UesClPxZFg?si=4iB6eUfdaMpFQcRc",
+      "kind": "Official Video",
+      "artistIds": [
+        "3454129a-8c52-808c-a823-c75492b83f4d"
+      ]
+    },
+    {
+      "id": "2814129a-8c52-80d2-8cb1-fcd73eb80eb6",
+      "title": "YĪN YĪN | Spirit Adapter",
+      "url": "https://youtu.be/2MpUGPzENIM?si=HjjtRtHeb8vn_-NZ",
+      "kind": "Official Video",
+      "artistIds": [
+        "2414129a-8c52-8012-9a94-e8afd5875a12"
+      ]
+    },
+    {
+      "id": "2414129a-8c52-80ea-b3dd-c89caaa8fecd",
+      "title": "Yuuf | Alma's Cove EP Full Live Performance (Live in Preveli Gorge, Crete)",
+      "url": "https://youtu.be/oK32xCYS4hU?si=qSsMsOfPu0hqHr82",
+      "kind": "Live Video",
+      "artistIds": [
+        "2414129a-8c52-805e-b11f-d3d452c6e3a2"
+      ]
+    },
+    {
+      "id": "1187dc03-b79b-486e-9a70-8e93836f6048",
+      "title": "Σtella | Adagio",
+      "url": "https://youtu.be/4ByFni-WyaU?si=18Bsce_hEvlgSm8T",
+      "kind": "Official Video",
+      "artistIds": [
+        "24a4129a-8c52-8082-8335-e14604efa91e"
+      ]
     },
     {
       "id": "3b44129a-8c52-80b4-88cc-c0d473cb25cc",
       "title": "Σtella | Up and Away",
       "url": "https://youtu.be/m3_IKF_zN5g?si=bW-n4pFMBT58FzeH",
       "kind": "Official Video",
-      "released": null,
       "artistIds": [
         "24a4129a-8c52-8082-8335-e14604efa91e"
       ]

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-07T19:18:07Z",
+  "generatedAt": "2026-08-08T02:23:22Z",
   "counts": {
-    "albums": 1058,
-    "artists": 949,
-    "labels": 594,
+    "albums": 1059,
+    "artists": 950,
+    "labels": 595,
     "videos": 51
   },
   "albums": [
@@ -36,6 +36,36 @@
       ],
       "labels": [
         "XL Recordings"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-807a-bb4e-d9adc2f4e76c",
+      "slug": "papangu-celestial",
+      "artist": "Papangu",
+      "album": "Celestial",
+      "url": "https://album.link/dg26mkhxdtfjh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A83bb8d73-d1ae-4dcd-96de-d9f7d81f0d4d%3Aa0274971549_10.jpg?table=block&id=3b64129a-8c52-807a-bb4e-d9adc2f4e76c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive Rock",
+        "Jazz-Rock",
+        "Progressive Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-07",
+      "year": 2026,
+      "artistIds": [
+        "3b64129a-8c52-8023-8782-cfd9518a5186"
+      ],
+      "artists": [
+        "Papangu"
+      ],
+      "labelIds": [
+        "3b64129a-8c52-80ca-b4ce-e7198258f58b"
+      ],
+      "labels": [
+        "Deck"
       ]
     },
     {
@@ -42553,6 +42583,25 @@
       "videoIds": []
     },
     {
+      "id": "3b64129a-8c52-8023-8782-cfd9518a5186",
+      "slug": "papangu",
+      "name": "Papangu",
+      "country": "BR",
+      "bandcamp": null,
+      "albumIds": [
+        "3b64129a-8c52-807a-bb4e-d9adc2f4e76c"
+      ],
+      "genres": [
+        "Progressive Rock",
+        "Jazz-Rock",
+        "Progressive Metal"
+      ],
+      "labelIds": [
+        "3b64129a-8c52-80ca-b4ce-e7198258f58b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2f74129a-8c52-80fe-91b6-cbbb590e222b",
       "slug": "parachute-day",
       "name": "Parachute Day",
@@ -50722,6 +50771,19 @@
       ],
       "artistIds": [
         "2504129a-8c52-805b-a0fc-ea88be1f2c17"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-80ca-b4ce-e7198258f58b",
+      "slug": "deck",
+      "name": "Deck",
+      "country": "BR",
+      "bandcamp": null,
+      "albumIds": [
+        "3b64129a-8c52-807a-bb4e-d9adc2f4e76c"
+      ],
+      "artistIds": [
+        "3b64129a-8c52-8023-8782-cfd9518a5186"
       ]
     },
     {

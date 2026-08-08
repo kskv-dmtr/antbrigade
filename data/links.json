@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T19:18:21Z",
+  "generatedAt": "2026-08-08T02:23:34Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16855,6 +16855,18 @@
       "upc": "5059863424497",
       "tracks": 10,
       "releaseDate": "2021-08-24"
+    },
+    "3b64129a-8c52-807a-bb4e-d9adc2f4e76c": {
+      "source": "https://album.link/dg26mkhxdtfjh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7FRhh6PfQM1FtxrAwGcEBz",
+        "pandora": "https://www.pandora.com/AL:68220334",
+        "tidal": "https://listen.tidal.com/album/542749502",
+        "bandcamp": "https://papangu.bandcamp.com/album/celestial"
+      },
+      "upc": "7898324331268",
+      "tracks": 10,
+      "releaseDate": "2026-07-07"
     }
   }
 }

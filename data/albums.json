@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T22:52:17Z",
+  "generatedAt": "2026-08-09T23:48:37Z",
   "counts": {
     "albums": 1065,
     "artists": 957,
-    "labels": 597,
+    "labels": 601,
     "videos": 58
   },
   "albums": [
@@ -2528,8 +2528,12 @@
       "artists": [
         "Bodalla"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Self-released"
+      ]
     },
     {
       "id": "3524129a-8c52-80c1-9302-fd47c0430808",
@@ -9767,8 +9771,12 @@
       "artists": [
         "SCARAB"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
+      ],
+      "labels": [
+        "Rebirth Records"
+      ]
     },
     {
       "id": "23b4129a-8c52-80c6-93e4-d6c460ae4ede",
@@ -17440,8 +17448,12 @@
       "artists": [
         "Fazer"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "2504129a-8c52-8014-99f3-eff1838f3ee6"
+      ],
+      "labels": [
+        "Squama"
+      ]
     },
     {
       "id": "10e4129a-8c52-80ab-9fdf-fbf5f32a5ec2",
@@ -18415,8 +18427,12 @@
       "artists": [
         "Patrol"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3b74129a-8c52-80b9-a6f4-cac6f3f9c605"
+      ],
+      "labels": [
+        "La Parca"
+      ]
     },
     {
       "id": "75ddd870-fc7e-47c5-8010-316dcc036bcf",
@@ -28383,8 +28399,12 @@
       "artists": [
         "Pest Control"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3b74129a-8c52-802f-8eae-c62e2c4313a5"
+      ],
+      "labels": [
+        "Quality Control HQ"
+      ]
     },
     {
       "id": "2524129a-8c52-802b-9ae3-ee0488b1b553",
@@ -30790,8 +30810,12 @@
       ],
       "released": "2020-06-19",
       "year": 2020,
-      "artistIds": [],
-      "artists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
       "labelIds": [
         "2524129a-8c52-8064-ac08-c6bb33bff5df"
       ],
@@ -31320,8 +31344,12 @@
       "artists": [
         "Fishmans"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3b74129a-8c52-80ab-b7a1-f4a85c2c3e3d"
+      ],
+      "labels": [
+        "Polydor Records"
+      ]
     },
     {
       "id": "2444129a-8c52-80d4-8545-d088ed60bf66",
@@ -33001,7 +33029,7 @@
       "slug": "bodalla",
       "name": "Bodalla",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://bodalla.bandcamp.com/music",
       "albumIds": [
         "3ac4129a-8c52-8009-9756-d14e6822a848"
       ],
@@ -33010,7 +33038,9 @@
         "Neo-Psychedelia",
         "Exotica"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
       "videoIds": []
     },
     {
@@ -36281,7 +36311,7 @@
       "slug": "fazer",
       "name": "Fazer",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://fazercamp.bandcamp.com/music",
       "albumIds": [
         "0d3b613b-f353-467d-85c1-cab8651e6e09"
       ],
@@ -36289,7 +36319,9 @@
         "Jazz",
         "Nu Jazz"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "2504129a-8c52-8014-99f3-eff1838f3ee6"
+      ],
       "videoIds": []
     },
     {
@@ -36441,7 +36473,9 @@
         "Downtempo",
         "Neo-Psychedelia"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "3b74129a-8c52-80ab-b7a1-f4a85c2c3e3d"
+      ],
       "videoIds": []
     },
     {
@@ -43021,7 +43055,7 @@
       "slug": "patrol",
       "name": "Patrol",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://patrolpatrolpatrol.bandcamp.com/music",
       "albumIds": [
         "a402e20b-1b80-47a6-9211-9e3220b838ea"
       ],
@@ -43029,7 +43063,9 @@
         "Punk'n'Roll",
         "Heavy Metal"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "3b74129a-8c52-80b9-a6f4-cac6f3f9c605"
+      ],
       "videoIds": []
     },
     {
@@ -43187,7 +43223,7 @@
       "slug": "pest-control",
       "name": "Pest Control",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://pestcontroluk.bandcamp.com/music",
       "albumIds": [
         "8e68bc81-6693-4fdd-ac1a-6c7867a4d577",
         "1024129a-8c52-8006-8d61-c03f586fbf1a"
@@ -43197,7 +43233,8 @@
         "Thrash Metal"
       ],
       "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3b74129a-8c52-802f-8eae-c62e2c4313a5"
       ],
       "videoIds": []
     },
@@ -44706,7 +44743,7 @@
       "slug": "scarab",
       "name": "SCARAB",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://scarabhc.bandcamp.com/music",
       "albumIds": [
         "2414129a-8c52-80d8-a663-deb36101dbbc"
       ],
@@ -44714,7 +44751,9 @@
         "Hardcore",
         "Powerviolence"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
+      ],
       "videoIds": []
     },
     {
@@ -48197,6 +48236,7 @@
         "24e4129a-8c52-80c4-864d-ef35463b5b9f",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
+        "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97"
       ],
       "genres": [
@@ -48209,6 +48249,7 @@
         "New Wave",
         "Disco",
         "Funk",
+        "Bossa Nova",
         "Lovers Rock",
         "Smooth Soul"
       ],
@@ -48217,6 +48258,7 @@
         "24e4129a-8c52-807a-920f-fb0794ae2606",
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
+        "2524129a-8c52-8064-ac08-c6bb33bff5df",
         "3b74129a-8c52-8060-af6b-ece8a3271488"
       ],
       "videoIds": []
@@ -50227,7 +50269,9 @@
       "albumIds": [
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6"
       ],
-      "artistIds": []
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ]
     },
     {
       "id": "2464129a-8c52-80b3-9ba2-d1aabc57113e",
@@ -53282,6 +53326,19 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-80b9-a6f4-cac6f3f9c605",
+      "slug": "la-parca",
+      "name": "La Parca",
+      "country": "ES",
+      "bandcamp": "https://laparcatebusca.bandcamp.com/",
+      "albumIds": [
+        "a402e20b-1b80-47a6-9211-9e3220b838ea"
+      ],
+      "artistIds": [
+        "2434129a-8c52-8079-a510-fe29c6090193"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-800c-ad3f-d3febf8ec22b",
       "slug": "la-pochette-surprise-records",
       "name": "la pochette surprise records",
@@ -55130,6 +55187,19 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-80ab-b7a1-f4a85c2c3e3d",
+      "slug": "polydor-records",
+      "name": "Polydor Records",
+      "country": "GB",
+      "bandcamp": null,
+      "albumIds": [
+        "2414129a-8c52-8047-8c86-f8367c2b6f8a"
+      ],
+      "artistIds": [
+        "2414129a-8c52-804c-a9ec-ce6d8b02ebc5"
+      ]
+    },
+    {
       "id": "2494129a-8c52-8032-99e9-cc6ed27f0944",
       "slug": "polyvinyl-records",
       "name": "Polyvinyl Records",
@@ -55328,6 +55398,19 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-802f-8eae-c62e2c4313a5",
+      "slug": "quality-control-hq",
+      "name": "Quality Control HQ",
+      "country": "GB",
+      "bandcamp": "https://qualitycontrolhq.bandcamp.com/music",
+      "albumIds": [
+        "1024129a-8c52-8006-8d61-c03f586fbf1a"
+      ],
+      "artistIds": [
+        "2434129a-8c52-80d0-9c2c-e023721f32bb"
+      ]
+    },
+    {
       "id": "2b04129a-8c52-8056-b315-f21fc034932c",
       "slug": "quintessentials",
       "name": "Quintessentials",
@@ -55423,6 +55506,19 @@
       ],
       "artistIds": [
         "2514129a-8c52-8076-be07-ccb8d4677e11"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-80fc-9ddf-d93a5b683f9e",
+      "slug": "rebirth-records",
+      "name": "Rebirth Records",
+      "country": "US",
+      "bandcamp": "https://rebirthrecordsphl.bandcamp.com/",
+      "albumIds": [
+        "2414129a-8c52-80d8-a663-deb36101dbbc"
+      ],
+      "artistIds": [
+        "2414129a-8c52-8018-875e-e5cb6beef380"
       ]
     },
     {
@@ -56037,6 +56133,7 @@
         "3804129a-8c52-803c-8242-c84d37a1367b",
         "36a4129a-8c52-80d0-a690-c4750bdd6851",
         "3554129a-8c52-80b2-876f-ffb0375e4110",
+        "3ac4129a-8c52-8009-9756-d14e6822a848",
         "3464129a-8c52-802e-b653-e68daa89a220",
         "3404129a-8c52-8003-8e65-ffbe73c82305",
         "3724129a-8c52-80e1-afc0-c879b79c40e3",
@@ -56145,6 +56242,7 @@
         "3804129a-8c52-8076-85b8-e4f0a0484780",
         "36a4129a-8c52-8063-b80c-f3716601c36f",
         "3554129a-8c52-80bd-9569-dcab83a7e536",
+        "3ac4129a-8c52-80f9-945f-e19f163f717b",
         "24f4129a-8c52-8070-96a3-c6efc6466b5b",
         "2f44129a-8c52-801a-a932-c5640bf20d24",
         "3724129a-8c52-80ca-810c-d2a89499a6e3",
@@ -56625,11 +56723,13 @@
       "slug": "squama",
       "name": "Squama",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://squamarecordings.bandcamp.com/",
       "albumIds": [
+        "0d3b613b-f353-467d-85c1-cab8651e6e09",
         "75cc8129-fa7e-4fa5-aa63-9da752bcfc7b"
       ],
       "artistIds": [
+        "2434129a-8c52-804f-be7e-c5898c2265d9",
         "2504129a-8c52-80c7-8bd7-c87e735722da"
       ]
     },

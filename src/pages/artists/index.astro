@@ -88,7 +88,6 @@ const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
           >
             <a class="row row--name view-row" href={`/artists/${a.slug}`}>
               <span class="row__title">{a.name}</span>
-              <span class="row__meta">{a.country ?? ''}</span>
               <span class="row__num">{a.albumIds.length ? `[${a.albumIds.length}]` : ''}</span>
             </a>
             <NameTile

@@ -83,7 +83,6 @@ const solo = genres.filter((g) => g.count === 1).length;
           >
             <a class="row row--name view-row" href={`/genres/${genre.slug}`}>
               <span class="row__title">{genre.name}</span>
-              <span class="row__meta"></span>
               <span class="row__num">[{genre.count}]</span>
             </a>
             <NameTile

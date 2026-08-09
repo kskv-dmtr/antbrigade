@@ -13,7 +13,15 @@ import { videos, videoTitle, videoArtists } from '../lib/db.js';
 
    Порядок по умолчанию — по исполнителю. Сортировки «сначала свежие» здесь
    нет и быть не может: даты у клипов не хранится. */
-const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))].sort();
+/* Порядок фильтра задан руками, а не алфавитом: клипов вида Official Video
+   в базе полсотни, Live Video — четыре, и по алфавиту редкий вид вставал
+   первым. Виды, которых в списке нет, уходят в конец по алфавиту — новый
+   вид из Notion появится в полосе сам, просто не впереди. */
+const KIND_ORDER = ['Official Video', 'Live Video'];
+const rank = (k) => { const i = KIND_ORDER.indexOf(k); return i < 0 ? KIND_ORDER.length : i; };
+
+const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
+  .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
 
 const list = videos
   .slice()
@@ -39,15 +47,16 @@ const list = videos
       <ViewSwitch />
     </div>
 
+    {/* Вид ролика и сортировка — одной группой у правого края. На релизах
+        слева стоит полоса типов, а здесь ей не с чем делить строку: одинокая
+        полоса у левого края висела бы в пустоте. */}
     <div class="filters">
-      <div class="filters__group">
+      <div class="filters__group filters__group--end">
         <div class="seg" id="kinds" role="group" aria-label="Video kind">
           <button type="button" data-kind="" aria-pressed="true">All</button>
           {kinds.map((k) => <button type="button" data-kind={k} aria-pressed="false">{k}</button>)}
         </div>
-      </div>
 
-      <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="artist">By artist</option>
           <option value="title">By title</option>

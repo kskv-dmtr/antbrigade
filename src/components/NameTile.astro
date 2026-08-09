@@ -13,9 +13,13 @@ const { href, name, releases = [], country, as: Wrapper = 'div', class: extra } 
 const cover = releases.find((a) => a?.cover) ?? null;
 const count = releases.length;
 
-/* Под обложкой — короткий код, он всегда на виду и не ломает плотную строку;
-   полное название уходит в подпись, которая появляется при наведении. */
-const meta = [country, count ? plural(count, 'release', 'releases') : 'no releases']
+/* Страна и счёт релизов целиком ушли в вывернутую плашку: под обложкой
+   остаётся только имя, ровно как у плитки релиза, и сетка из плиток читается
+   одним столбцом имён, а не чересполосицей из служебных строк.
+
+   В плашке место есть, поэтому страна полным названием, а не кодом: код имел
+   смысл в плотной строке, а рядом со счётом релизов он читался как шифр. */
+const meta = [countryName(country), count ? plural(count, 'release', 'releases') : 'no releases']
   .filter(Boolean)
   .join(' · ');
 ---
@@ -35,13 +39,10 @@ const meta = [country, count ? plural(count, 'release', 'releases') : 'no releas
         />
       )}
       <div class="tile__over" aria-hidden="true">
-        <span class="tile__meta">{countryName(country)}</span>
+        <span class="tile__meta">{meta}</span>
         <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
       </div>
     </div>
-    {/* Не .tile__artist: там имя исполнителя обычным шрифтом, а здесь
-        служебная строка — страна и счёт релизов, ей нужен моноширинный. */}
-    <span class="tile__stat">{meta}</span>
     <span class="tile__title">{name}</span>
   </a>
 </Wrapper>

@@ -304,18 +304,13 @@ a { color: inherit; text-decoration: none; }
 
 /* Имя исполнителя — текстовым шрифтом: это имя собственное, а не служебная
    подпись. Прописные и широкая разрядка ушли вместе с моноширинным: они
-   были его свойствами, а на пропорциональном читаются как ошибка. */
+   были его свойствами, а на пропорциональном читаются как ошибка.
+
+   Цвет не задан намеренно: имя наследует его от плитки — ровно так же, как
+   в строке индекса наследует от .row. Приглушать его только в сетке значило
+   бы рассказывать про одно и то же поле две разные истории. */
 .tile__artist {
   font-size: 13px;
-  color: var(--fg-muted);
-}
-/* Служебная строка плитки артиста, лейбла и жанра: страна и счёт релизов. */
-.tile__stat {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--fg-muted);
 }
 .tile__title {
   font-size: 19px;
@@ -323,7 +318,18 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
-.tile__artist, .tile__stat, .tile__title {
+/* Название подтянуто вверх на воздух над капителью.
+
+   gap считается между строчными боксами, а видимая граница текста проходит
+   внутри них: между именем и названием пустого поля два слоя — низ одной
+   строки и верх другой, — а между обложкой и именем один, у картинки своего
+   поля нет. При равном gap: 10px зазор под именем выглядит на четверть
+   больше (замер: 13.6 px против 16.4 px). Три пикселя — это воздух над
+   капителью названия: 19 px кегля минус 14 px высоты прописной, минус
+   отрицательный полулидинг при line-height: 1.15. */
+.tile__artist + .tile__title { margin-top: -3px; }
+
+.tile__artist, .tile__title {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -361,8 +367,10 @@ a { color: inherit; text-decoration: none; }
   padding: 13px 8px;
   border-bottom: 1px solid var(--line-soft);
 }
-/* Артисты и лейблы — та же строка, но колонок три: имя, страна, счётчик. */
-.row--name { grid-template-columns: minmax(0, 1fr) 90px 70px; }
+/* Артисты, лейблы и жанры — та же строка, но колонок две: имя и счётчик.
+   Страна из списка убрана: в сетке она есть в вывернутой плашке, а в
+   строке колонка из двухбуквенных кодов набиралась в столбик шума. */
+.row--name { grid-template-columns: minmax(0, 1fr) 70px; }
 
 /* Клипы — тоже три: исполнитель, название, вид ролика. Года у них нет,
    поэтому четвёртой колонки быть не должно. Ширина под «Official Video». */
@@ -1038,19 +1046,18 @@ select option { background: #1a1a19; color: var(--fg); }
   .row__num { grid-row: 2; grid-column: 2; font-size: 10px; }
   .row:hover, .row:focus-visible { padding-left: 8px; padding-right: 8px; }
 
-  /* У имени всего три ячейки, и вторая строка слева пустовала бы: страну и
-     счётчик ставим в один ряд справа от имени.
+  /* У имени всего две ячейки, и вторая строка слева пустовала бы: счётчик
+     ставим в один ряд справа от имени.
 
-     Все три ячейки размещаем явно. `auto` тут не годится: у .row__title
-     остаётся grid-column: 1 из правила выше, и авторазмещённые страна со
-     счётчиком занимают первый ряд сами, выталкивая имя во второй. */
-  .row--name { grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline; }
+     Обе ячейки размещаем явно. `auto` тут не годится: у .row__title
+     остаётся grid-column: 1 из правила выше, и авторазмещённый счётчик
+     занял бы первый ряд сам, вытолкнув имя во второй. */
+  .row--name { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; }
   .row--name .row__title {
     grid-row: 1; grid-column: 1;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
-  .row--name .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: 10px; }
-  .row--name .row__num  { grid-row: 1; grid-column: 3; font-size: 10px; }
+  .row--name .row__num  { grid-row: 1; grid-column: 2; font-size: 10px; }
 
   /* У клипа три ячейки: исполнитель и название слева друг под другом,
      вид ролика справа. */

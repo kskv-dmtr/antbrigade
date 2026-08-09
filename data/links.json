@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T15:05:06Z",
+  "generatedAt": "2026-08-09T15:54:53Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -6385,38 +6385,86 @@
     },
     "1fb4129a-8c52-803d-97c4-de6b2a3b7afc": {
       "source": "https://album.link/pkvnhtnmn82q4",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1R5xikPLRUDxHlBX8bl1k9",
+        "pandora": "https://www.pandora.com/AL:45274685",
+        "deezer": "https://www.deezer.com/album/718562051",
+        "amazonMusic": "https://music.amazon.com/albums/B0DYFB622F",
+        "tidal": "https://listen.tidal.com/album/420237899",
+        "boomplay": "https://www.boomplay.com/albums/108337433",
+        "anghami": "https://play.anghami.com/album/1066460960?refer=linktree",
+        "bandcamp": "https://mellejutte.bandcamp.com/album/low-tides",
+        "amazonStore": "https://amazon.com/dp/B0DYFB622F"
+      },
+      "upc": "5034644505626",
+      "tracks": 7,
+      "releaseDate": "2025-02-28"
     },
     "1c64129a-8c52-805c-b909-e25236d4f886": {
       "source": "https://album.link/pzk5xv8vntgzx",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1IaAUTHxdkp1agbRcscr9U",
+        "pandora": "https://www.pandora.com/AL:44420173",
+        "deezer": "https://www.deezer.com/album/719513931",
+        "amazonMusic": "https://music.amazon.com/albums/B0DYNW7CTN",
+        "tidal": "https://listen.tidal.com/album/420666277",
+        "anghami": "https://play.anghami.com/album/1065352375?refer=linktree",
+        "bandcamp": "https://salinmusic.bandcamp.com/album/rammana",
+        "amazonStore": "https://amazon.com/dp/B0DYNW7CTN"
+      },
+      "upc": "199066919958",
+      "tracks": 10,
+      "releaseDate": "2025-02-28"
     },
     "1c34129a-8c52-801e-9e31-c29f2ae8ec00": {
       "source": "https://album.link/h8rskmgppbwvn",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/07TD1cMf8okYcQWm00PxkG",
+        "pandora": "https://www.pandora.com/AL:42851837",
+        "deezer": "https://www.deezer.com/album/689032821",
+        "amazonMusic": "https://music.amazon.com/albums/B0DRLDV2SW",
+        "tidal": "https://listen.tidal.com/album/408080633",
+        "anghami": "https://play.anghami.com/album/1062501655?refer=linktree",
+        "bandcamp": "https://shop.snappedankles.com/album/hard-times-furious-dancing",
+        "amazonStore": "https://amazon.com/dp/B0DRLDV2SW"
+      },
+      "upc": "843190013494",
+      "tracks": 9,
+      "releaseDate": "2025-02-28"
     },
     "2fc4129a-8c52-80a8-9c07-f06672617115": {
       "source": "https://album.link/wdsrcp2jv7skw",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3cpbY6YDGJsTPnWTqSG2It",
+        "pandora": "https://www.pandora.com/AL:40620020",
+        "deezer": "https://www.deezer.com/album/660985791",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKPGCWQH",
+        "tidal": "https://listen.tidal.com/album/395170024",
+        "boomplay": "https://www.boomplay.com/albums/100531014",
+        "anghami": "https://play.anghami.com/album/1059725690?refer=linktree",
+        "bandcamp": "https://spellling.bandcamp.com/album/portrait-of-my-heart",
+        "amazonStore": "https://amazon.com/dp/B0DKPGCWQH"
+      },
+      "upc": "843563183618",
+      "tracks": 11,
+      "releaseDate": "2025-02-28"
     },
     "1c54129a-8c52-8069-80bb-d6d78f97a17a": {
       "source": "https://album.link/pqcxjv7jchbqn",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7HLOgO7dhpJ3gQYQnbczKJ",
+        "pandora": "https://www.pandora.com/AL:40373960",
+        "deezer": "https://www.deezer.com/album/711299111",
+        "amazonMusic": "https://music.amazon.com/albums/B0DWSZYC8P",
+        "tidal": "https://listen.tidal.com/album/417261502",
+        "boomplay": "https://www.boomplay.com/albums/106358319",
+        "anghami": "https://play.anghami.com/album/1064628503?refer=linktree",
+        "bandcamp": "https://vegatrails.bandcamp.com/album/sierra-tracks",
+        "amazonStore": "https://amazon.com/dp/B0DWSZYC8P"
+      },
+      "upc": "3663729365958",
+      "tracks": 10,
+      "releaseDate": "2025-02-28"
     },
     "2ed4129a-8c52-8081-8062-c624005318d4": {
       "source": "https://album.link/8wktghxfgksvq",
@@ -7240,227 +7288,514 @@
     },
     "7ec9bf44-ad21-49d5-9a59-cae694ebfdbb": {
       "source": "https://album.link/93qscnh6bqb3d",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/63yVK9jNRYJX26RyIekABQ",
+        "pandora": "https://www.pandora.com/AL:43509832",
+        "deezer": "https://www.deezer.com/album/695862981",
+        "amazonMusic": "https://music.amazon.com/albums/B0DSQY1DSQ",
+        "tidal": "https://listen.tidal.com/album/410894827",
+        "boomplay": "https://www.boomplay.com/albums/104823094",
+        "bandcamp": "https://oandthemo.bandcamp.com/album/make-way-for-the-sun",
+        "amazonStore": "https://amazon.com/dp/B0DSQY1DSQ"
+      },
+      "upc": "199089802374",
+      "tracks": 9,
+      "releaseDate": "2025-31"
     },
     "241250e8-83dc-4ca4-8f41-909db72fa2cc": {
       "source": "https://album.link/zgtzn2nphz7zr",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/20AtqMaAxXaiCFxeq2XDpV",
+        "pandora": "https://www.pandora.com/AL:39857032",
+        "deezer": "https://www.deezer.com/album/651618651",
+        "amazonMusic": "https://music.amazon.com/albums/B0DJFX213V",
+        "tidal": "https://listen.tidal.com/album/391132487",
+        "napster": "https://play.napster.com/album/alb.8491727975074692",
+        "yandex": "https://music.yandex.ru/album/35205780",
+        "anghami": "https://play.anghami.com/album/1058856327?refer=linktree",
+        "bandcamp": "https://thenightflightorchestra.bandcamp.com/album/give-us-the-moon",
+        "amazonStore": "https://amazon.com/dp/B0DJFX213V"
+      },
+      "upc": "810157921017",
+      "tracks": 13,
+      "releaseDate": "2025-31"
     },
     "33ef41a3-22a1-4cda-9545-e101279390b0": {
       "source": "https://album.link/73wh3r0fgzrcq",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4JLFz04wXXsghU9AssdfKa",
+        "deezer": "https://www.deezer.com/album/679964061",
+        "amazonMusic": "https://music.amazon.com/albums/B0DP18NQP2",
+        "tidal": "https://listen.tidal.com/album/402164908",
+        "yandex": "https://music.yandex.ru/album/34156412",
+        "boomplay": "https://www.boomplay.com/albums/103033072",
+        "anghami": "https://play.anghami.com/album/1061143046?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DP18NQP2"
+      },
+      "upc": "3617666705261",
+      "tracks": 9,
+      "releaseDate": "2025-24"
     },
     "d1de775c-d1db-437a-aca5-687015a28e3a": {
       "source": "https://album.link/qczggdbkjrkm6",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3VdM3kCS0lfmOAzNFJZVEl",
+        "pandora": "https://www.pandora.com/AL:42897773",
+        "deezer": "https://www.deezer.com/album/689541981",
+        "amazonMusic": "https://music.amazon.com/albums/B0DRPCHJNW",
+        "tidal": "https://listen.tidal.com/album/408192791",
+        "yandex": "https://music.yandex.ru/album/37392939",
+        "boomplay": "https://www.boomplay.com/albums/104177950",
+        "anghami": "https://play.anghami.com/album/1062531956?refer=linktree",
+        "bandcamp": "https://yufu.bandcamp.com/album/heal-me-good",
+        "amazonStore": "https://amazon.com/dp/B0DRPCHJNW"
+      },
+      "upc": "8721191904152",
+      "tracks": 10,
+      "releaseDate": "2025-24"
     },
     "5bd0016b-d6eb-4892-8a97-f83a4f1e9c28": {
       "source": "https://album.link/kmkfrhhcttp3v",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6eox2hniWAUJ5t8NlVld1u",
+        "pandora": "https://www.pandora.com/AL:43516646",
+        "deezer": "https://www.deezer.com/album/635413691",
+        "amazonMusic": "https://music.amazon.com/albums/B0DFHDVK4Z",
+        "tidal": "https://listen.tidal.com/album/411134422",
+        "boomplay": "https://www.boomplay.com/albums/105008776",
+        "anghami": "https://play.anghami.com/album/1063171772?refer=linktree",
+        "bandcamp": "https://songhoyblues.bandcamp.com/album/h-ritage-2",
+        "amazonStore": "https://amazon.com/dp/B0DFHDVK4Z"
+      },
+      "upc": "5400863173715",
+      "tracks": 11,
+      "releaseDate": "2025-17"
     },
     "45a5a7e5-459f-47fa-b109-ca9fe744de06": {
       "source": "https://album.link/7mqfgsn6hcp0s",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0XbUpViaSFfvHBdDFYV2zU",
+        "pandora": "https://www.pandora.com/AL:38038831",
+        "deezer": "https://www.deezer.com/album/628995621",
+        "amazonMusic": "https://music.amazon.com/albums/B0DD1MHCFF",
+        "tidal": "https://listen.tidal.com/album/381035497",
+        "boomplay": "https://www.boomplay.com/albums/96042701",
+        "anghami": "https://play.anghami.com/album/1062310951?refer=linktree",
+        "bandcamp": "https://thepro-teens.bandcamp.com/album/mf-teen-your-concurrence-in-the-above-is-assumed",
+        "amazonStore": "https://amazon.com/dp/B0DD1MHCFF"
+      },
+      "upc": "617308083873",
+      "tracks": 14,
+      "releaseDate": "2025-17"
     },
     "7fb3c71f-6535-4162-8e8d-eb909f0b1c18": {
       "source": "https://album.link/v8gddtz2qvmq7",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3hY3JokoocH15VkvxTqbK3",
+        "pandora": "https://www.pandora.com/AL:40563281",
+        "tidal": "https://listen.tidal.com/album/394825526",
+        "yandex": "https://music.yandex.ru/album/33748091"
+      },
+      "upc": "3617665141053",
+      "tracks": 5,
+      "releaseDate": "2025-10"
     },
     "74d80e95-0ec8-4c05-ad89-f5eeb7adabf6": {
       "source": "https://album.link/d3khp9wh7xt4z",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0m8G0dSYf4rc8SRftPjZXU",
+        "pandora": "https://www.pandora.com/AL:42368040",
+        "deezer": "https://www.deezer.com/album/684990031",
+        "amazonMusic": "https://music.amazon.com/albums/B0DQP2P2BM",
+        "tidal": "https://listen.tidal.com/album/406268434",
+        "yandex": "https://music.yandex.ru/album/34512229",
+        "anghami": "https://play.anghami.com/album/1062316898?refer=linktree",
+        "bandcamp": "https://saultglobal.bandcamp.com/album/acts-of-faith",
+        "amazonStore": "https://amazon.com/dp/B0DQP2P2BM"
+      },
+      "upc": "859799021938",
+      "tracks": 9,
+      "releaseDate": "2024-11-25"
     },
     "4a8a56ec-02e2-4cb4-b1e8-83ecf7e10ed8": {
       "source": "https://album.link/jtb82j8hpmfnx",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7KpjUEdi4nOl1MUhTHDzYF",
+        "pandora": "https://www.pandora.com/AL:42006867",
+        "deezer": "https://www.deezer.com/album/679935841",
+        "tidal": "https://listen.tidal.com/album/403961698",
+        "anghami": "https://play.anghami.com/album/1061613053?refer=linktree"
+      },
+      "upc": "199066142288",
+      "tracks": 6,
+      "releaseDate": "2024-11-20"
     },
     "1b14129a-8c52-804c-93ed-d308400b284a": {
       "source": "https://album.link/7cqxd7vpxfqzv",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5ASRaAy2ymvtiUfIMdat8L",
+        "pandora": "https://www.pandora.com/AL:41063065",
+        "deezer": "https://www.deezer.com/album/665819591",
+        "amazonMusic": "https://music.amazon.com/albums/B0DLW5Y5PY",
+        "tidal": "https://listen.tidal.com/album/397450874",
+        "boomplay": "https://www.boomplay.com/albums/101246822",
+        "anghami": "https://play.anghami.com/album/1060191334?refer=linktree",
+        "bandcamp": "https://celinedessberg.bandcamp.com/album/h-d",
+        "amazonStore": "https://amazon.com/dp/B0DLW5Y5PY"
+      },
+      "upc": "198878401316",
+      "tracks": 5,
+      "releaseDate": "2024-11-13"
     },
     "65a9a749-7ded-4986-bd28-34b0522032f0": {
       "source": "https://album.link/zpv03jcbz68cc",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4LRa4oEzLyJxq58mvCQpGH",
+        "pandora": "https://www.pandora.com/AL:42007567",
+        "deezer": "https://www.deezer.com/album/675719191",
+        "amazonMusic": "https://music.amazon.com/albums/B0DP387BH2",
+        "tidal": "https://listen.tidal.com/album/402003109",
+        "boomplay": "https://www.boomplay.com/albums/102502291",
+        "anghami": "https://play.anghami.com/album/1061175445?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DP387BH2"
+      },
+      "upc": "7041889519408",
+      "tracks": 9,
+      "releaseDate": "2024-11-13"
     },
     "16bfa06d-1366-46fb-9d44-81e563d986e7": {
       "source": "https://album.link/gn9s9fb3rhjqg",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0T20VsA2CY8kaUDymqhU8H",
+        "pandora": "https://www.pandora.com/AL:40705481",
+        "deezer": "https://www.deezer.com/album/661893281",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKZRJCQS",
+        "tidal": "https://listen.tidal.com/album/395756501",
+        "anghami": "https://play.anghami.com/album/1059836841?refer=linktree",
+        "bandcamp": "https://gammenterprises.bandcamp.com/album/the-punk-automata-ep",
+        "amazonStore": "https://amazon.com/dp/B0DKZRJCQS"
+      },
+      "upc": "198846757605",
+      "tracks": 4,
+      "releaseDate": "2024-11-12"
     },
     "07714ee6-2266-463a-8caf-642c6f1d5203": {
       "source": "https://album.link/db9zdg6zfws5w",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/49RfPmX8pYauQM0aSEZfZg",
+        "pandora": "https://www.pandora.com/AL:41206703",
+        "deezer": "https://www.deezer.com/album/668620001",
+        "amazonMusic": "https://music.amazon.com/albums/B0DMP7S7HD",
+        "tidal": "https://listen.tidal.com/album/398807673",
+        "boomplay": "https://www.boomplay.com/albums/101671441",
+        "anghami": "https://play.anghami.com/album/1060495266?refer=linktree",
+        "bandcamp": "https://akselaino.bandcamp.com/album/akvatisk-beredskap",
+        "amazonStore": "https://amazon.com/dp/B0DMP7S7HD"
+      },
+      "upc": "4251804170635",
+      "tracks": 11,
+      "releaseDate": "2024-11-06"
     },
     "b23aa992-2aac-4165-beb5-080416c13dce": {
       "source": "https://album.link/nvhvgkntrnfzr",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5MmHeQdWN8qfFoscTlInNm",
+        "pandora": "https://www.pandora.com/AL:40303028",
+        "tidal": "https://listen.tidal.com/album/393301672",
+        "yandex": "https://music.yandex.ru/album/33674451",
+        "boomplay": "https://www.boomplay.com/albums/99781512",
+        "bandcamp": "https://maximevallieres.bandcamp.com/album/islands"
+      },
+      "upc": "4062548101959",
+      "tracks": 4,
+      "releaseDate": "2024-11-06"
     },
     "e7d1ce8c-7e04-4e85-b636-e8afe12ea28b": {
       "source": "https://album.link/x9hsmjqtgqzrv",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1HyxwIOx0JFe1nlnj9JR4H",
+        "pandora": "https://www.pandora.com/AL:41181274",
+        "deezer": "https://www.deezer.com/album/664877171",
+        "amazonMusic": "https://music.amazon.com/albums/B0DLTSB58N",
+        "tidal": "https://listen.tidal.com/album/396828082",
+        "boomplay": "https://www.boomplay.com/albums/101181062",
+        "anghami": "https://play.anghami.com/album/1060437194?refer=linktree",
+        "bandcamp": "https://dorianconcept.bandcamp.com/album/music-from-a-room-full-of-synths",
+        "amazonStore": "https://amazon.com/dp/B0DLTSB58N"
+      },
+      "upc": "5050580834712",
+      "tracks": 9,
+      "releaseDate": "2024-11-06"
     },
     "1bf4129a-8c52-80a2-afe0-c0a825f331ad": {
       "source": "https://album.link/kcwgtmrqsrv8j",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1lvOIuc3C9zGYDC1RvaOEW",
+        "pandora": "https://www.pandora.com/AL:38168903",
+        "deezer": "https://www.deezer.com/album/630528781",
+        "amazonMusic": "https://music.amazon.com/albums/B0DDDVM565",
+        "tidal": "https://listen.tidal.com/album/381802968",
+        "boomplay": "https://www.boomplay.com/albums/96282338",
+        "anghami": "https://play.anghami.com/album/1056795229?refer=linktree",
+        "bandcamp": "https://emiliasisco.bandcamp.com/album/introducing-emilia-sisco",
+        "amazonStore": "https://amazon.com/dp/B0DDDVM565"
+      },
+      "upc": "617308084894",
+      "tracks": 10,
+      "releaseDate": "2024-11-06"
     },
     "25a4129a-8c52-80f2-afb9-cc6da0869d07": {
       "source": "https://album.link/gs85j0jsskwzk",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2eoOU0NvLBvVUx47dqwav1",
+        "pandora": "https://www.pandora.com/AL:38353993",
+        "deezer": "https://www.deezer.com/album/632970151",
+        "amazonMusic": "https://music.amazon.com/albums/B0DDYCDNVB",
+        "tidal": "https://listen.tidal.com/album/382747112",
+        "napster": "https://play.napster.com/album/alb.2521724336361434",
+        "yandex": "https://music.yandex.ru/album/32949981",
+        "boomplay": "https://www.boomplay.com/albums/96626742",
+        "anghami": "https://play.anghami.com/album/1057012058?refer=linktree",
+        "bandcamp": "https://neuegrafik.bandcamp.com/album/dalston-tape-vol-1",
+        "amazonStore": "https://amazon.com/dp/B0DDYCDNVB"
+      },
+      "upc": "4062548097450",
+      "tracks": 15,
+      "releaseDate": "2024-11-06"
     },
     "b135e1de-5f43-4ef9-b672-741cb6700f06": {
       "source": "https://album.link/mtpswrxwdwzxh",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1ut2nbC8iiNz4wyd5ftVkl",
+        "pandora": "https://www.pandora.com/AL:41746188",
+        "deezer": "https://www.deezer.com/album/676896091",
+        "tidal": "https://listen.tidal.com/album/402594098",
+        "yandex": "https://music.yandex.ru/album/34317010",
+        "anghami": "https://play.anghami.com/album/1061552648?refer=linktree"
+      },
+      "upc": "00602475455264",
+      "tracks": 5,
+      "releaseDate": "2024-11-06"
     },
     "8d0984da-7368-44db-9800-043f82ddaf0e": {
       "source": "https://album.link/rk29zhvmcwjtb",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0wmwMEZhuclYMqqwMjCAqp",
+        "pandora": "https://www.pandora.com/AL:41644336",
+        "tidal": "https://listen.tidal.com/album/399562633"
+      },
+      "upc": "198877056890",
+      "tracks": 14,
+      "releaseDate": "2024-11-06"
     },
     "75b07e55-cd80-4843-9253-814333ef566e": {
       "source": "https://album.link/hjx0jm0f5wh7n",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1nhdPGeZXLnyfzVy8ooPvJ",
+        "pandora": "https://www.pandora.com/AL:41918008",
+        "amazonMusic": "https://music.amazon.com/albums/B0DPJQWB8L",
+        "tidal": "https://listen.tidal.com/album/403515401",
+        "yandex": "https://music.yandex.ru/album/34335425",
+        "boomplay": "https://www.boomplay.com/albums/102951430",
+        "bandcamp": "https://theviolenthearts.bandcamp.com/album/songs-of-madness-and-violence",
+        "amazonStore": "https://amazon.com/dp/B0DPJQWB8L"
+      },
+      "upc": "734691349246",
+      "tracks": 10,
+      "releaseDate": "2024-11-06"
     },
     "1e54129a-8c52-8004-8fdc-eb478439bfe5": {
       "source": "https://album.link/jhfgsxn5hp962",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4fgJzdgO3lJS6Y8EJTOaHq",
+        "pandora": "https://www.pandora.com/AL:40992884",
+        "deezer": "https://www.deezer.com/album/662856781",
+        "amazonMusic": "https://music.amazon.com/albums/B0DLF5VDGR",
+        "tidal": "https://listen.tidal.com/album/396365197",
+        "boomplay": "https://www.boomplay.com/albums/101179237",
+        "anghami": "https://play.anghami.com/album/1060162084?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DLF5VDGR"
+      },
+      "upc": "5050580836648",
+      "tracks": 8,
+      "releaseDate": "2024-10-29"
     },
     "2f83d70f-9a87-456e-a8e3-a827de958d5f": {
       "source": "https://album.link/hhbkt09krtfn8",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6JgxW6J9FdH9rNK5GUbkxJ",
+        "pandora": "https://www.pandora.com/AL:39433649",
+        "deezer": "https://www.deezer.com/album/650730151",
+        "amazonMusic": "https://music.amazon.com/albums/B0DHS9N165",
+        "tidal": "https://listen.tidal.com/album/388944963",
+        "napster": "https://play.napster.com/album/alb.4871727091914093",
+        "anghami": "https://play.anghami.com/album/1058379477?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DHS9N165"
+      },
+      "upc": "198846367583",
+      "tracks": 10,
+      "releaseDate": "2024-10-29"
     },
     "c2bdab4d-377e-4abc-8df7-71b74b660e3d": {
       "source": "https://album.link/mfghzsvhck432",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3AvqrhILCQ0rnGqOkUcL2w",
+        "deezer": "https://www.deezer.com/album/645315921",
+        "amazonMusic": "https://music.amazon.com/albums/B0DHGG9HRK",
+        "tidal": "https://listen.tidal.com/album/388293724",
+        "yandex": "https://music.yandex.ru/album/33344261",
+        "amazonStore": "https://amazon.com/dp/B0DHGG9HRK"
+      },
+      "upc": "3617663684712",
+      "tracks": 6,
+      "releaseDate": "2024-10-27"
     },
     "1c84129a-8c52-8013-94b3-f4c2b70a6ce7": {
       "source": "https://album.link/0mhkbrwdnqc7s",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1KcMm91Cfdgf60yhnhTbFj",
+        "pandora": "https://www.pandora.com/AL:41304817",
+        "deezer": "https://www.deezer.com/album/633124261",
+        "amazonMusic": "https://music.amazon.com/albums/B0DF1V1Z9B",
+        "tidal": "https://listen.tidal.com/album/399654048",
+        "yandex": "https://music.yandex.ru/album/34098432",
+        "boomplay": "https://www.boomplay.com/albums/102140530",
+        "anghami": "https://play.anghami.com/album/1060940781?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DF1V1Z9B"
+      },
+      "upc": "00198704060731",
+      "tracks": 14,
+      "releaseDate": "2024-10-22"
     },
     "70113a81-ec11-4ef7-bfb1-502abb89fd1d": {
       "source": "https://album.link/383n9fm2z6z67",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/43r2887PJko52LqiNQ2Jbh",
+        "pandora": "https://www.pandora.com/AL:38850482",
+        "deezer": "https://www.deezer.com/album/639110261",
+        "amazonMusic": "https://music.amazon.com/albums/B0DG63P6HF",
+        "tidal": "https://listen.tidal.com/album/385530580",
+        "yandex": "https://music.yandex.ru/album/33155380",
+        "boomplay": "https://www.boomplay.com/albums/97500441",
+        "bandcamp": "https://djrum.bandcamp.com/album/meanings-edge",
+        "amazonStore": "https://amazon.com/dp/B0DG63P6HF"
+      },
+      "upc": "5060845323745",
+      "tracks": 5,
+      "releaseDate": "2024-10-22"
     },
     "a1f8e85d-1f3b-43f9-a4f1-d1a96cdac073": {
       "source": "https://album.link/rg4tdznmdzcmg",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3RH41G95sJX1QEAlqiFbQX",
+        "pandora": "https://www.pandora.com/AL:40422728",
+        "deezer": "https://www.deezer.com/album/659290001",
+        "amazonMusic": "https://music.amazon.com/albums/B0DK822XR8",
+        "tidal": "https://listen.tidal.com/album/394005608",
+        "napster": "https://play.napster.com/album/alb.5251729204923719",
+        "anghami": "https://play.anghami.com/album/1059479878?refer=linktree",
+        "bandcamp": "https://lifteddc.bandcamp.com/album/trellis",
+        "amazonStore": "https://amazon.com/dp/B0DK822XR8"
+      },
+      "upc": "198846585130",
+      "tracks": 7,
+      "releaseDate": "2024-10-22"
     },
     "9f61a1f2-265a-4893-bb66-b90e8fcfd29f": {
       "source": "https://album.link/sgwk75ngbpfqr",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1CwxoT55w7jQckpff3717G",
+        "pandora": "https://www.pandora.com/AL:41199517",
+        "deezer": "https://www.deezer.com/album/668489791",
+        "amazonMusic": "https://music.amazon.com/albums/B0DMNGG8H8",
+        "tidal": "https://listen.tidal.com/album/499919779",
+        "yandex": "https://music.yandex.ru/album/33973180",
+        "boomplay": "https://www.boomplay.com/albums/101653141",
+        "anghami": "https://play.anghami.com/album/1060484174?refer=linktree",
+        "bandcamp": "https://reubenvaunsmith.bandcamp.com/album/land-of-music",
+        "amazonStore": "https://amazon.com/dp/B0DMNGG8H8"
+      },
+      "upc": "780661142812",
+      "tracks": 12,
+      "releaseDate": "2024-10-22"
     },
     "138c0b94-0363-48b4-8f26-eb0be4457da7": {
       "source": "https://album.link/jrcxmd9gvshs3",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4m9abw8xMatwHVgN1sXKVV",
+        "pandora": "https://www.pandora.com/AL:37629025",
+        "deezer": "https://www.deezer.com/album/623600291",
+        "amazonMusic": "https://music.amazon.com/albums/B0DBX9FJ5P",
+        "tidal": "https://listen.tidal.com/album/378855828",
+        "boomplay": "https://www.boomplay.com/albums/95306126",
+        "anghami": "https://play.anghami.com/album/1056143235?refer=linktree",
+        "bandcamp": "https://roge.bandcamp.com/album/rog-curyman-ii",
+        "amazonStore": "https://amazon.com/dp/B0DBX9FJ5P"
+      },
+      "upc": "617308076844",
+      "tracks": 10,
+      "releaseDate": "2024-10-22"
     },
     "25f4129a-8c52-8006-9ce5-fd20ea0a0a35": {
       "source": "https://album.link/hcbc6tcbbn3b9",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5Cz944NT4taGMmOcAraPbm",
+        "deezer": "https://www.deezer.com/album/667309511",
+        "amazonMusic": "https://music.amazon.com/albums/B0DMFGHNWR",
+        "tidal": "https://listen.tidal.com/album/398557229",
+        "yandex": "https://music.yandex.ru/album/33954385",
+        "bandcamp": "https://thepanturas.bandcamp.com/album/galura-tropikalia",
+        "amazonStore": "https://amazon.com/dp/B0DMFGHNWR"
+      },
+      "upc": "3617666066829",
+      "tracks": 6,
+      "releaseDate": "2024-10-22"
     },
     "19f4129a-8c52-8036-b0f8-c599993c4a73": {
       "source": "https://album.link/w4gsxxgm4sc8m",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/33BgNUovE0OfWbwNEOSCYR",
+        "pandora": "https://www.pandora.com/AL:40627624",
+        "deezer": "https://www.deezer.com/album/661624551",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKLC2T1Y",
+        "tidal": "https://listen.tidal.com/album/395033730",
+        "boomplay": "https://www.boomplay.com/albums/100497335",
+        "bandcamp": "https://auntieflo.bandcamp.com/album/in-my-dreams-im-a-bird-and-im-free",
+        "amazonStore": "https://amazon.com/dp/B0DKLC2T1Y"
+      },
+      "upc": "198881026278",
+      "tracks": 10,
+      "releaseDate": "2024-10-21"
     },
     "87e966b9-8ca6-4e2e-811c-d98ee2fce434": {
       "source": "https://album.link/v5nv3v7x7fhgh",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4pWJJ5lAwob0xP5ef7FrHH",
+        "pandora": "https://www.pandora.com/AL:41135852",
+        "tidal": "https://listen.tidal.com/album/398384250",
+        "boomplay": "https://www.boomplay.com/albums/101520742"
+      },
+      "upc": "8721253254096",
+      "tracks": 10,
+      "releaseDate": "2024-10-15"
     },
     "993e6beb-11c2-4e03-88ae-b6af8f853181": {
       "source": "https://album.link/sf8qmdzkxwxtj",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7LwMf774lgfdBiTGwfJAMY",
+        "pandora": "https://www.pandora.com/AL:38509991",
+        "deezer": "https://www.deezer.com/album/634955921",
+        "amazonMusic": "https://music.amazon.com/albums/B0DFCXTLFV",
+        "tidal": "https://listen.tidal.com/album/383710235",
+        "napster": "https://play.napster.com/album/alb.4881724765184174",
+        "boomplay": "https://www.boomplay.com/albums/96906710",
+        "anghami": "https://play.anghami.com/album/1057198301?refer=linktree",
+        "bandcamp": "https://laspalabras.bandcamp.com/album/fe",
+        "amazonStore": "https://amazon.com/dp/B0DFCXTLFV"
+      },
+      "upc": "198391495182",
+      "tracks": 10,
+      "releaseDate": "2024-10-15"
     },
     "1b24129a-8c52-8039-b9b0-e76fb59356cb": {
       "source": "https://album.link/jjrzk843rtkk9",
@@ -7479,87 +7814,212 @@
     },
     "577b205e-7c05-481d-abaa-ec5e8aa44d5c": {
       "source": "https://album.link/px0dt8bfxdnbt",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4M5iN5GeHPwOGBRQw8JBxy",
+        "pandora": "https://www.pandora.com/AL:35595470",
+        "deezer": "https://www.deezer.com/album/598216462",
+        "amazonMusic": "https://music.amazon.com/albums/B0D6GXH4RZ",
+        "tidal": "https://listen.tidal.com/album/477528251",
+        "boomplay": "https://www.boomplay.com/albums/91909722",
+        "anghami": "https://play.anghami.com/album/1053720682?refer=linktree",
+        "bandcamp": "https://warmduscher.bandcamp.com/album/too-cold-to-hold",
+        "amazonStore": "https://amazon.com/dp/B0D6GXH4RZ"
+      },
+      "upc": "8720996261606",
+      "tracks": 11,
+      "releaseDate": "2024-10-15"
     },
     "85ac74c6-5f86-4668-8825-9a2b6df2e729": {
       "source": "https://album.link/69t8rs0wpkcs2",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6dRzcvIRBVOascFycBVvcS",
+        "pandora": "https://www.pandora.com/AL:39265890",
+        "deezer": "https://www.deezer.com/album/644853191",
+        "amazonMusic": "https://music.amazon.com/albums/B0DH8DMR48",
+        "tidal": "https://listen.tidal.com/album/387874877",
+        "napster": "https://play.napster.com/album/alb.7031726571042843",
+        "boomplay": "https://www.boomplay.com/albums/98310749",
+        "anghami": "https://play.anghami.com/album/1058143386?refer=linktree",
+        "bandcamp": "https://1000mods.bandcamp.com/album/cheat-death",
+        "amazonStore": "https://amazon.com/dp/B0DH8DMR48"
+      },
+      "upc": "198588991855",
+      "tracks": 10,
+      "releaseDate": "2024-10-08"
     },
     "9e53b1a5-7ce5-43d1-bdd9-d5c8a14a2038": {
       "source": "https://album.link/vjprbh7t9nhbk",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7z3bnrl3FwZ6DAE6rxEmML",
+        "pandora": "https://www.pandora.com/AL:40260400",
+        "deezer": "https://www.deezer.com/album/657787241",
+        "amazonMusic": "https://music.amazon.com/albums/B0DK1LTCJ8",
+        "tidal": "https://listen.tidal.com/album/393068342",
+        "boomplay": "https://www.boomplay.com/albums/99930518",
+        "anghami": "https://play.anghami.com/album/1059281292?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DK1LTCJ8"
+      },
+      "upc": "198846600758",
+      "tracks": 12,
+      "releaseDate": "2024-10-08"
     },
     "f6404c55-4c36-41ae-9ff5-fae5953a6aef": {
       "source": "https://album.link/z3rqw0d5q6rdg",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5168gPZm1FCxrQN4oZzqWL",
+        "pandora": "https://www.pandora.com/AL:41036138",
+        "deezer": "https://www.deezer.com/album/665864051",
+        "amazonMusic": "https://music.amazon.com/albums/B0DLXZNJBY",
+        "tidal": "https://listen.tidal.com/album/397591523",
+        "anghami": "https://play.anghami.com/album/1060221412?refer=linktree",
+        "bandcamp": "https://music-from-memory.bandcamp.com/album/the-big-melt",
+        "amazonStore": "https://amazon.com/dp/B0DLXZNJBY"
+      },
+      "upc": "0731628580864",
+      "tracks": 6,
+      "releaseDate": "2024-10-08"
     },
     "a06a5b69-f637-44bd-88cc-788a1dac2085": {
       "source": "https://album.link/zq5v0rqkf0r0r",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7zDjeJywE82j6NLoblb7OX",
+        "deezer": "https://www.deezer.com/album/616755821",
+        "amazonMusic": "https://music.amazon.com/albums/B0D9LWBNQG",
+        "tidal": "https://listen.tidal.com/album/375665520",
+        "yandex": "https://music.yandex.ru/album/32367474",
+        "boomplay": "https://www.boomplay.com/albums/94290888",
+        "anghami": "https://play.anghami.com/album/1055438546?refer=linktree",
+        "bandcamp": "https://louhayter.bandcamp.com/album/unfamiliar-skin",
+        "amazonStore": "https://amazon.com/dp/B0D9LWBNQG"
+      },
+      "upc": "3617660818783",
+      "tracks": 9,
+      "releaseDate": "2024-10-08"
     },
     "d4cc4a98-ef67-4960-b4d8-9caea62ccbfc": {
       "source": "https://album.link/4jdj9h94zvtvt",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0e7lXXUdpt9aBP6neNLolB",
+        "pandora": "https://www.pandora.com/AL:38473622",
+        "deezer": "https://www.deezer.com/album/634547031",
+        "amazonMusic": "https://music.amazon.com/albums/B0DF8LC3PC",
+        "tidal": "https://listen.tidal.com/album/383394495",
+        "napster": "https://play.napster.com/album/alb.3161724693454031",
+        "boomplay": "https://www.boomplay.com/albums/96843511",
+        "anghami": "https://play.anghami.com/album/1057156158?refer=linktree",
+        "bandcamp": "https://otooto.bandcamp.com/album/2nd-quake",
+        "amazonStore": "https://amazon.com/dp/B0DF8LC3PC"
+      },
+      "upc": "198846121239",
+      "tracks": 8,
+      "releaseDate": "2024-10-08"
     },
     "1b74129a-8c52-809e-ad31-f7896f5737eb": {
       "source": "https://album.link/7kjrv5mfghfjr",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0LFQxLVfF5eNv3wXTDUTEx",
+        "pandora": "https://www.pandora.com/AL:37499677",
+        "deezer": "https://www.deezer.com/album/622132071",
+        "amazonMusic": "https://music.amazon.com/albums/B0DBJRMM9Z",
+        "tidal": "https://listen.tidal.com/album/378169266",
+        "napster": "https://play.napster.com/album/alb.8401722287499793",
+        "boomplay": "https://www.boomplay.com/albums/95080842",
+        "anghami": "https://play.anghami.com/album/1056352760?refer=linktree",
+        "bandcamp": "https://soundwayrecords.bandcamp.com/album/ayo-ke-disco-boogie-pop-funk-from-the-south-china-sea-1974-88",
+        "amazonStore": "https://amazon.com/dp/B0DBJRMM9Z"
+      },
+      "upc": "5060571362551",
+      "tracks": 10,
+      "releaseDate": "2024-10-08"
     },
     "ee362d60-aa86-4585-8859-53fc1f67b9b7": {
       "source": "https://album.link/hmhc2q3n9pdn2",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4tBXKI7G2sQ67Y5VAsxkzv",
+        "pandora": "https://www.pandora.com/AL:37093276",
+        "deezer": "https://www.deezer.com/album/804597121",
+        "amazonMusic": "https://music.amazon.com/albums/B0FM8WCW2S",
+        "tidal": "https://listen.tidal.com/album/453935772",
+        "boomplay": "https://www.boomplay.com/albums/94361351",
+        "anghami": "https://play.anghami.com/album/1055495389?refer=linktree",
+        "bandcamp": "https://commonsaints.bandcamp.com/album/cinema-3000",
+        "amazonStore": "https://amazon.com/dp/B0FM8WCW2S"
+      },
+      "upc": "5059449185941",
+      "tracks": 14,
+      "releaseDate": "2024-10-01"
     },
     "2764129a-8c52-80dd-93b7-cc96b5a9f606": {
       "source": "https://album.link/smnjqcvkhsmrc",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1H96rR2NE8XkXZw5w9586X",
+        "pandora": "https://www.pandora.com/AL:39380234",
+        "deezer": "https://www.deezer.com/album/646157631",
+        "amazonMusic": "https://music.amazon.com/albums/B0DHM6WZMW",
+        "tidal": "https://listen.tidal.com/album/388685605",
+        "napster": "https://play.napster.com/album/alb.6291726874560367",
+        "anghami": "https://play.anghami.com/album/1058305449?refer=linktree",
+        "bandcamp": "https://jackj.bandcamp.com/album/blue-desert",
+        "amazonStore": "https://amazon.com/dp/B0DHM6WZMW"
+      },
+      "upc": "840200588409",
+      "tracks": 11,
+      "releaseDate": "2024-10-01"
     },
     "8efa65f4-09df-4006-8089-2869aee41410": {
       "source": "https://album.link/sdvcpmr8zt4xg",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6YeHigw7miVU2x9aXfa6zB",
+        "pandora": "https://www.pandora.com/AL:36767826",
+        "deezer": "https://www.deezer.com/album/613140982",
+        "amazonMusic": "https://music.amazon.com/albums/B0D94S4KQS",
+        "tidal": "https://listen.tidal.com/album/374201744",
+        "napster": "https://play.napster.com/album/alb.2221720534346037",
+        "yandex": "https://music.yandex.ru/album/32234777",
+        "boomplay": "https://www.boomplay.com/albums/93781162",
+        "anghami": "https://play.anghami.com/album/1055095171?refer=linktree",
+        "bandcamp": "https://orchestretoutpuissantmarcelduchamp.bandcamp.com/album/ventre-unique",
+        "amazonStore": "https://amazon.com/dp/B0D94S4KQS"
+      },
+      "upc": "4062548094824",
+      "tracks": 11,
+      "releaseDate": "2024-10-01"
     },
     "b9194966-b016-496e-84df-434786f1946d": {
       "source": "https://album.link/c4zghxjtrs8rs",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6HJMflSPljm5V4stQQX8lL",
+        "pandora": "https://www.pandora.com/AL:39525427",
+        "deezer": "https://www.deezer.com/album/779584521",
+        "amazonMusic": "https://music.amazon.com/albums/B0FFPVDZKZ",
+        "tidal": "https://listen.tidal.com/album/444529753",
+        "napster": "https://play.napster.com/album/alb.1541727374299227",
+        "boomplay": "https://www.boomplay.com/albums/98868309",
+        "anghami": "https://play.anghami.com/album/1058573262?refer=linktree",
+        "bandcamp": "https://shebadmusic.bandcamp.com/album/music-is-the-answer",
+        "amazonStore": "https://amazon.com/dp/B0FFPVDZKZ"
+      },
+      "upc": "198846451701",
+      "tracks": 10,
+      "releaseDate": "2024-10-01"
     },
     "2efc05ae-f616-4b76-ad07-3f192ab9df02": {
       "source": "https://album.link/kk30dr5pcx0nc",
-      "platforms": {},
-      "upc": null,
-      "tracks": null,
-      "releaseDate": null
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0LShnMXKnONtDB3jOVtY2R",
+        "pandora": "https://www.pandora.com/AL:38610560",
+        "deezer": "https://www.deezer.com/album/636632941",
+        "amazonMusic": "https://music.amazon.com/albums/B0DFNW57V8",
+        "tidal": "https://listen.tidal.com/album/384269083",
+        "napster": "https://play.napster.com/album/alb.5851724976427832",
+        "boomplay": "https://www.boomplay.com/albums/97113528",
+        "anghami": "https://play.anghami.com/album/1057318513?refer=linktree",
+        "bandcamp": "https://velociraptorau.bandcamp.com/album/computer-future",
+        "amazonStore": "https://amazon.com/dp/B0DFNW57V8"
+      },
+      "upc": "634457182462",
+      "tracks": 14,
+      "releaseDate": "2024-10-01"
     },
     "44fd9a66-7860-463a-aaa1-d81cec3817a4": {
       "source": "https://album.link/t8vw5k7sv4rzx",

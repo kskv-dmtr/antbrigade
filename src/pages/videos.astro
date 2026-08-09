@@ -47,16 +47,19 @@ const list = videos
       <ViewSwitch />
     </div>
 
-    {/* Вид ролика и сортировка — одной группой у правого края. На релизах
-        слева стоит полоса типов, а здесь ей не с чем делить строку: одинокая
-        полоса у левого края висела бы в пустоте. */}
+    {/* Вид ролика слева, сортировка справа — та же расстановка, что на
+        Music: выборка у левого края, порядок у правого. Одной группой у
+        правого края они уже стояли, и сортировка читалась приклеенной к
+        тегам, а не отдельным органом управления. */}
     <div class="filters">
-      <div class="filters__group filters__group--end">
+      <div class="filters__group">
         <div class="seg" id="kinds" role="group" aria-label="Video kind">
           <button type="button" data-kind="" aria-pressed="true">All</button>
           {kinds.map((k) => <button type="button" data-kind={k} aria-pressed="false">{k}</button>)}
         </div>
+      </div>
 
+      <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
           <option value="artist">By artist</option>
           <option value="title">By title</option>

@@ -9,6 +9,7 @@
     "postbuild": "node scripts/make-static-config.mjs",
     "preview": "astro preview",
     "sync": "node scripts/fetch-notion.mjs",
+    "doctor": "node scripts/doctor.mjs",
     "covers": "node scripts/fetch-covers.mjs",
     "links": "node scripts/fetch-links.mjs",
     "thumbs": "node scripts/fetch-thumbs.mjs",

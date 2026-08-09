@@ -4,6 +4,10 @@ dist.zip
 .astro/
 .vercel/
 
+# Настройки Claude Code: в launch.json абсолютный путь к node.exe на этой
+# машине, на любой другой он бесполезен.
+.claude/
+
 # служебное
 .DS_Store
 Thumbs.db

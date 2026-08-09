@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T09:58:52Z",
+  "generatedAt": "2026-08-09T11:47:02Z",
   "counts": {
     "albums": 1061,
-    "artists": 953,
+    "artists": 954,
     "labels": 595,
-    "videos": 57
+    "videos": 58
   },
   "albums": [
     {
@@ -40286,6 +40286,19 @@
       "videoIds": []
     },
     {
+      "id": "3b74129a-8c52-809a-b128-d980a5f8d12d",
+      "slug": "los-baby-jaguars",
+      "name": "Los Baby Jaguars",
+      "country": "DE",
+      "bandcamp": "https://losbabyjaguars.bandcamp.com/music",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3b74129a-8c52-802b-8443-eca317dfa9b6"
+      ]
+    },
+    {
       "id": "24f4129a-8c52-80de-ba69-f43b6a41ec4a",
       "slug": "los-bitchos",
       "name": "Los Bitchos",
@@ -57950,6 +57963,15 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-80ba-b704-d7b64e3ae73c"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-802b-8443-eca317dfa9b6",
+      "title": "Los Baby Jaguars | El Fuego (Salsa)",
+      "url": "https://youtu.be/WLaSfysazok?si=jqva7Gw_azndIUvQ",
+      "kind": "Official Video",
+      "artistIds": [
+        "3b74129a-8c52-809a-b128-d980a5f8d12d"
       ]
     },
     {

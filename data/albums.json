@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T20:53:30Z",
+  "generatedAt": "2026-08-09T22:52:17Z",
   "counts": {
-    "albums": 1064,
-    "artists": 956,
-    "labels": 596,
+    "albums": 1065,
+    "artists": 957,
+    "labels": 597,
     "videos": 58
   },
   "albums": [
@@ -1167,6 +1167,36 @@
       ],
       "labels": [
         "Relapse Records"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-80b2-b338-feeb077047b9",
+      "slug": "forest-drive-west-mantis-1920",
+      "artist": "Forest Drive West",
+      "album": "Mantis 1920",
+      "url": "https://album.link/vwbh9v7wpngdz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad1e098c4-aab3-4647-80cb-44951a6e4ecf%3Aa2491322027_10.jpg?table=block&id=3b74129a-8c52-80b2-b338-feeb077047b9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Minimal Techno",
+        "UK Bass",
+        "Autonomic"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-06-05",
+      "year": 2026,
+      "artistIds": [
+        "3b74129a-8c52-8057-9612-cf8b684b6cb7"
+      ],
+      "artists": [
+        "Forest Drive West"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8075-9b7f-d0bdc54cc23e"
+      ],
+      "labels": [
+        "Delsin Records"
       ]
     },
     {
@@ -36587,6 +36617,25 @@
       "videoIds": []
     },
     {
+      "id": "3b74129a-8c52-8057-9612-cf8b684b6cb7",
+      "slug": "forest-drive-west",
+      "name": "Forest Drive West",
+      "country": "GB",
+      "bandcamp": "https://forestdrivewest.bandcamp.com/music",
+      "albumIds": [
+        "3b74129a-8c52-80b2-b338-feeb077047b9"
+      ],
+      "genres": [
+        "Minimal Techno",
+        "UK Bass",
+        "Autonomic"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8075-9b7f-d0bdc54cc23e"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80a0-9283-e00355c89095",
       "slug": "forest-law",
       "name": "Forest Law",
@@ -51149,6 +51198,19 @@
       ],
       "artistIds": [
         "2524129a-8c52-80be-a583-efe0e89082b1"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-8075-9b7f-d0bdc54cc23e",
+      "slug": "delsin-records",
+      "name": "Delsin Records",
+      "country": "NL",
+      "bandcamp": "https://delsinrecords.bandcamp.com/",
+      "albumIds": [
+        "3b74129a-8c52-80b2-b338-feeb077047b9"
+      ],
+      "artistIds": [
+        "3b74129a-8c52-8057-9612-cf8b684b6cb7"
       ]
     },
     {

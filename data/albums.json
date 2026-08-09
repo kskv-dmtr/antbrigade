@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-08T18:37:19Z",
+  "generatedAt": "2026-08-09T09:58:52Z",
   "counts": {
-    "albums": 1060,
-    "artists": 952,
+    "albums": 1061,
+    "artists": 953,
     "labels": 595,
-    "videos": 53
+    "videos": 57
   },
   "albums": [
+    {
+      "id": "3b64129a-8c52-80be-9d66-f3892cd8d367",
+      "slug": "ceremony-tell-me-your-dream",
+      "artist": "Ceremony",
+      "album": "Tell Me Your Dream",
+      "url": "https://album.link/przn98d9mp9dj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac26f8d24-0333-4915-accb-8b53c1ebd524%3Aa2254050561_10.jpg?table=block&id=3b64129a-8c52-80be-9d66-f3892cd8d367&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "New Wave"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-07",
+      "year": 2026,
+      "artistIds": [
+        "3b64129a-8c52-8090-9389-ee3930c03cbe"
+      ],
+      "artists": [
+        "Ceremony"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "labels": [
+        "Relapse Records"
+      ]
+    },
     {
       "id": "3b44129a-8c52-80e7-adc3-fbc9b22a6716",
       "slug": "overmono-pure-devotion",
@@ -33595,6 +33624,24 @@
       "videoIds": []
     },
     {
+      "id": "3b64129a-8c52-8090-9389-ee3930c03cbe",
+      "slug": "ceremony",
+      "name": "Ceremony",
+      "country": "US",
+      "bandcamp": "https://ceremonyrohnertpark.bandcamp.com/music",
+      "albumIds": [
+        "3b64129a-8c52-80be-9d66-f3892cd8d367"
+      ],
+      "genres": [
+        "Post-Punk",
+        "New Wave"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2484129a-8c52-804d-b61d-d6c4c4552b87",
       "slug": "chain-cult",
       "name": "Chain Cult",
@@ -37721,7 +37768,9 @@
       "labelIds": [
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b64129a-8c52-8020-a52a-ed8869e4d993"
+      ]
     },
     {
       "id": "2494129a-8c52-8016-ba6f-c2cbd5906496",
@@ -38977,7 +39026,9 @@
       "labelIds": [
         "2504129a-8c52-80fe-a8d4-c04a727cd9cc"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b64129a-8c52-8031-a68f-da9107f1b119"
+      ]
     },
     {
       "id": "2504129a-8c52-80eb-87d3-f9a282182569",
@@ -41583,6 +41634,7 @@
         "2444129a-8c52-80bc-980e-d768395ab175"
       ],
       "videoIds": [
+        "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
         "1064129a-8c52-80bd-a54f-fbba51cdc4ed"
       ]
     },
@@ -47194,7 +47246,8 @@
         "2504129a-8c52-80b1-9280-e0a822d8e98b"
       ],
       "videoIds": [
-        "2754129a-8c52-8091-8e3e-d49513e3047b"
+        "2754129a-8c52-8091-8e3e-d49513e3047b",
+        "3b64129a-8c52-8052-9e48-d4b7a2fd1c8b"
       ]
     },
     {
@@ -55219,6 +55272,7 @@
       "country": "US",
       "bandcamp": "https://relapserecords.bandcamp.com/",
       "albumIds": [
+        "3b64129a-8c52-80be-9d66-f3892cd8d367",
         "3944129a-8c52-80e5-8a03-f8bdaf8b6f96",
         "35c4129a-8c52-80a7-8384-fb2307a075de",
         "2224129a-8c52-80f1-8e9e-d6ea55249019",
@@ -55229,6 +55283,7 @@
         "24772b18-8565-47c0-b190-53df4e56cb7d"
       ],
       "artistIds": [
+        "3b64129a-8c52-8090-9389-ee3930c03cbe",
         "3944129a-8c52-8043-a7ae-c6bc715ad30b",
         "35c4129a-8c52-80d8-967f-dd5e71659ce3",
         "2494129a-8c52-8086-b3ee-ee54fe241997",
@@ -57658,6 +57713,13 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-8094-a3e6-cc5a11fa5542",
+      "title": "Aaron Frazer | Bring You a Ring",
+      "url": "https://youtu.be/UtQbbtMDL9o?si=HdehXlqIE8Uk0Gnz",
+      "kind": "Official Video",
+      "artistIds": []
+    },
+    {
       "id": "3b54129a-8c52-8060-a912-cb42f34a69e9",
       "title": "Aaron Frazer | It’s a Shame",
       "url": "https://youtu.be/kAlb5pd7sNU?si=qCDAn9xMviU4kfKl",
@@ -57854,6 +57916,24 @@
       ]
     },
     {
+      "id": "3b64129a-8c52-8020-a52a-ed8869e4d993",
+      "title": "Home Front | Nation",
+      "url": "https://youtu.be/0BtIiBI8rGc?si=jZWbqki-GbpbuUxV",
+      "kind": "Official Video",
+      "artistIds": [
+        "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-8031-a68f-da9107f1b119",
+      "title": "Kamasi Washington | Street Fighter Mas",
+      "url": "https://youtu.be/LdyabrdFMC8?si=g83KxY0D1f283T1k",
+      "kind": "Official Video",
+      "artistIds": [
+        "2504129a-8c52-8084-81c4-df8d7f572db2"
+      ]
+    },
+    {
       "id": "7cff2645-771c-476b-b323-13101cba0a85",
       "title": "L'Impératrice / Erick the Architect | Sweet & Sublime",
       "url": "https://youtu.be/hDYiiOBLh8M?si=cKE3-cGpPzBud0mo",
@@ -57914,7 +57994,7 @@
       "url": "https://youtu.be/tgXSbdfIyZw?si=VmyZZ538maZOf0pz",
       "kind": "Official Video",
       "artistIds": [
-        "24f4129a-8c52-8098-9fbd-dd37b620291c",
+        "2504129a-8c52-804c-a693-dc85640a23de",
         "24f4129a-8c52-80aa-950d-c6b4128158db",
         "2504129a-8c52-804c-a693-dc85640a23de"
       ]
@@ -57930,12 +58010,12 @@
     },
     {
       "id": "2414129a-8c52-8095-a205-db0ceb2a8f62",
-      "title": "Nu Genea | Marechià (feat. Célia Kameni)",
+      "title": "Nu Genea / Célia Kameni | Marechià",
       "url": "https://youtu.be/N1FDkTO7D_0?si=_jZ0oqEjo2lm3DLr",
       "kind": "Official Video",
       "artistIds": [
-        "2414129a-8c52-803b-b033-e9640796d102",
-        "2404129a-8c52-8020-b165-edcb1d5c21f7"
+        "2404129a-8c52-8020-b165-edcb1d5c21f7",
+        "2414129a-8c52-803b-b033-e9640796d102"
       ]
     },
     {
@@ -58055,6 +58135,15 @@
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f",
         "2754129a-8c52-80ea-af7b-c26748dfe1cd"
+      ]
+    },
+    {
+      "id": "3b64129a-8c52-8052-9e48-d4b7a2fd1c8b",
+      "title": "Thundercat | Dragonball Durag",
+      "url": "https://youtu.be/ormQQG2UhtQ?si=Bw9wBbBTnD8sOCUo",
+      "kind": "Official Video",
+      "artistIds": [
+        "2754129a-8c52-8003-9d6c-dbf229cd455f"
       ]
     },
     {

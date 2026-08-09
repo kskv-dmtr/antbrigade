@@ -5,6 +5,10 @@
   "outputDirectory": "dist",
   "trailingSlash": false,
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/releases", "destination": "/music", "permanent": true },
+    { "source": "/releases.html", "destination": "/music", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/icons/(.*)",

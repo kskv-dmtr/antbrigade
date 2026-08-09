@@ -22,12 +22,12 @@ const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b
 const PAGE = 50;
 ---
 <Base
-  title="Releases · ant brigade"
+  title="Music · ant brigade"
   description={`All ${albums.length} releases in the collection: covers, genres, labels and links to listen.`}
   activeSection="albums"
 >
   <div class="page-head">
-    <h1>Releases</h1>
+    <h1>Music</h1>
     <p class="counter" id="counter" aria-live="polite">
       {plural(albums.length, 'release', 'releases')}
     </p>

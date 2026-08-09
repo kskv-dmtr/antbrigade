@@ -7,10 +7,11 @@ const { title, description, activeSection } = Astro.props;
    ссылка в никуда хуже отсутствующего пункта.
 
    Пункта «главная» в меню нет намеренно — на неё ведёт слово слева.
-   «Releases» указывает на /releases: каталог живёт там, а главная осталась
-   витриной со свежим и случайным. */
+   «Music» указывает на /music: каталог живёт там, а главная осталась
+   витриной со свежим и случайным. Прежний адрес /releases переправляется
+   сюда постоянным редиректом — на него уже ведут внешние ссылки. */
 const nav = [
-  { href: '/releases', label: 'Releases', key: 'albums' },
+  { href: '/music',   label: 'Music',    key: 'albums' },
   { href: '/videos',   label: 'Videos',   key: 'videos' },
   { href: '/artists', label: 'Artists',  key: 'artists' },
   { href: '/labels',  label: 'Labels',   key: 'labels' },
@@ -64,7 +65,22 @@ const canonical = new URL(
   <header class="masthead">
     <div class="masthead__in shell">
       <a class="brand" href="/">ant brigade</a>
-      <nav class="nav">
+
+      {/* Кнопка есть в разметке всегда, но показывает её только мобильный
+          медиазапрос и только при [data-js]: без скрипта нажимать было бы
+          не на что, и меню там остаётся развёрнутым, как было. */}
+      <button
+        class="burger"
+        type="button"
+        id="burger"
+        aria-controls="nav"
+        aria-expanded="false"
+        aria-label="Menu"
+      >
+        <span class="burger__lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="nav">
         {nav.map((item) => (
           <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>
             {item.label}
@@ -73,6 +89,11 @@ const canonical = new URL(
       </nav>
     </div>
   </header>
+
+  {/* Метка ставится до отрисовки страницы, а не из модуля внизу: тот
+      выполняется после разбора разметки, и меню успело бы моргнуть
+      развёрнутым. Она же переводит мобильную шапку на одну строку. */}
+  <script is:inline>document.documentElement.dataset.js = '';</script>
 
   <main id="main" class="shell">
     <slot />
@@ -94,6 +115,53 @@ const canonical = new URL(
   </footer>
 
   <script>
+    /* Бургер. Меню закрывается по Escape, по касанию мимо шапки и при
+       переходе на широкий экран: там пункты снова стоят в строке, и
+       забытое открытое состояние оставило бы крест вместо кнопки. */
+    const masthead = document.querySelector('.masthead');
+    const burger = document.getElementById('burger');
+
+    if (burger) {
+      const setOpen = (on) => {
+        masthead.toggleAttribute('data-open', on);
+        burger.setAttribute('aria-expanded', String(on));
+      };
+
+      burger.addEventListener('click', () => setOpen(!masthead.hasAttribute('data-open')));
+
+      addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape' || !masthead.hasAttribute('data-open')) return;
+        setOpen(false);
+        // Фокус возвращаем на кнопку: иначе он остался бы в закрытой панели.
+        burger.focus();
+      });
+
+      addEventListener('click', (e) => {
+        if (!masthead.contains(e.target)) setOpen(false);
+      });
+
+      matchMedia('(min-width: 641px)').addEventListener('change', (e) => {
+        if (e.matches) setOpen(false);
+      });
+    }
+
+    /* Высота шапки снимается с готовой вёрстки, а не задаётся числом: от неё
+       отсчитывается положение липкой полосы, и расхождение даже в пиксель
+       оставляет щель, сквозь которую едет содержимое. Числа в CSS остаются
+       запасными — они работают до выполнения скрипта и остаются
+       единственными, если он отключён.
+
+       Пересчитываем при смене размера окна и после загрузки шрифтов: до неё
+       строку меряет запасной шрифт, и высота выходит другая. */
+    if (masthead) {
+      const setHeadHeight = () => document.documentElement.style.setProperty(
+        '--head-h', masthead.getBoundingClientRect().height + 'px');
+
+      setHeadHeight();
+      addEventListener('resize', setHeadHeight, { passive: true });
+      document.fonts?.ready.then(setHeadHeight);
+    }
+
     /* Липкая полоса списков прячется при прокрутке вниз и возвращается при
        прокрутке вверх. Шапка при этом закреплена и видна всегда.
 

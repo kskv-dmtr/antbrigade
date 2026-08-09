@@ -198,6 +198,48 @@ a { color: inherit; text-decoration: none; }
   border-bottom-color: var(--fg);
 }
 
+/* Бургер. На широком экране пять пунктов стоят в строку, кнопка не нужна и
+   не показывается вовсе — её включает мобильный медиазапрос. */
+.burger {
+  display: none;
+  width: 36px;
+  height: 28px;
+  /* Линии уже кнопки, и без сдвига правый край меню отходил бы от края
+     содержимого заметнее, чем на глаз кажется правильным. */
+  margin-right: -8px;
+  padding: 0;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.burger:hover, .burger:focus-visible { color: var(--fg); }
+
+/* Три линии одним элементом: сам он средняя, псевдоэлементы — крайние. */
+.burger__lines,
+.burger__lines::before,
+.burger__lines::after {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.16s ease, background-color 0.16s ease;
+}
+.burger__lines { position: relative; margin: 0 auto; }
+.burger__lines::before,
+.burger__lines::after {
+  position: absolute;
+  left: 0;
+  content: '';
+}
+.burger__lines::before { top: -6px; }
+.burger__lines::after  { top: 6px; }
+
+/* Открытое меню — крест: средняя линия гаснет, крайние сходятся на её месте. */
+.masthead[data-open] .burger__lines { background: transparent; }
+.masthead[data-open] .burger__lines::before { transform: translateY(6px) rotate(45deg); }
+.masthead[data-open] .burger__lines::after  { transform: translateY(-6px) rotate(-45deg); }
+
 /* --------------------------------------------- размытая подложка
 
    Полоса на странице релиза — 16:7, а обложки в базе квадратные: растянуть
@@ -1071,8 +1113,10 @@ select option { background: #1a1a19; color: var(--fg); }
   :root { --pad: 16px; --gap: 14px; --tile-min: 150px; --head-h: 84px; }
 
   .brand { font-size: 20px; }
-  /* Четыре пункта меню в строку на 375 px не влезают — переносим их под
-     слово, а не прячем в кнопку: кнопка потребовала бы скрипта. */
+
+  /* Пять пунктов в строку на 375 px не влезают. Со скриптом они уходят под
+     бургер, без скрипта — переносятся под слово, как было раньше: нажимать
+     на кнопку там нечем, а меню нужно в любом случае. */
   .masthead__in {
     flex-wrap: wrap;
     gap: 8px 16px;
@@ -1080,6 +1124,42 @@ select option { background: #1a1a19; color: var(--fg); }
     padding-bottom: 14px;
   }
   .nav { gap: 16px; font-size: 11px; }
+
+  [data-js] .burger { display: block; }
+
+  /* Шапка с бургером — одна строка вместо двух, и отступ под липкую полосу
+     меньше ровно на строку меню. Значение приблизительное и живёт недолго:
+     скрипт заменяет его точной высотой шапки, снятой с вёрстки. */
+  [data-js] { --head-h: 57px; }
+
+  /* Меню выпадает из-под шапки поверх содержимого, а не раздвигает её:
+     от --head-h отсчитывается положение липкой полосы, и раздвинутая шапка
+     накрыла бы её собой. */
+  [data-js] .masthead .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 2px var(--pad) 10px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  [data-js] .masthead[data-open] .nav { display: flex; }
+
+  /* Пункт во всю ширину: на ощупь попадать в строку из четырёх букв
+     неудобно, поэтому целью служит вся строка. */
+  [data-js] .masthead .nav a {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  [data-js] .masthead .nav a:last-child { border-bottom: 0; }
+  /* Текущий раздел и так отмечен цветом; яркая линейка под ним читалась бы
+     разделителем другого веса, а не отметкой. */
+  [data-js] .masthead .nav a[aria-current='page'] { border-bottom-color: var(--line-soft); }
+  [data-js] .masthead .nav a:last-child[aria-current='page'] { border-bottom-color: transparent; }
 
   .display--md { font-size: 22px; }
 

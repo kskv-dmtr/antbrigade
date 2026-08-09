@@ -50,9 +50,15 @@ const solo = genres.filter((g) => g.count === 1).length;
     </div>
 
     <div class="filters">
-      <nav class="alphabet" id="alphabet">
-        {ordered.map(([letter]) => <a href={`#${anchor(letter)}`}>{letter}</a>)}
-      </nav>
+      {/* Первая буква — тот же сегментированный переключатель, что тип
+          релиза на Music и вид ролика на Videos: кнопка «все» и дальше по
+          кнопке на букву. Отсеивает список, а не уводит к заголовку. */}
+      <div class="seg seg--letters" id="alphabet" role="group" aria-label="First letter">
+        <button type="button" data-letter="" aria-pressed="true">All</button>
+        {ordered.map(([letter]) => (
+          <button type="button" data-letter={letter} aria-pressed="false">{letter}</button>
+        ))}
+      </div>
 
       <div class="filters__group filters__group--end">
         <Select id="sort" label="Sorting">
@@ -120,25 +126,28 @@ const solo = genres.filter((g) => g.count === 1).length;
   const initialOrder = Array.from(list.children);
 
   let query = '';
+  let letter = '';
 
   function apply() {
-    // Во время поиска буквы не нужны: результаты идут сплошным списком.
-    const alphabetical = sortEl.value === 'az' && !query;
+    /* Заголовки букв нужны только в сплошном алфавитном списке. При поиске
+       результаты идут подряд, при выбранной букве заголовок повторял бы
+       нажатую кнопку, при другой сортировке стоял бы вразнобой. */
+    const alphabetical = sortEl.value === 'az' && !query && !letter;
     const shown = new Set();
     let count = 0;
 
     for (const li of items) {
-      const ok = !query || li.dataset.search.includes(query);
+      const ok = (!query || li.dataset.search.includes(query)) &&
+                 (!letter || li.dataset.letter === letter);
       li.hidden = !ok;
       if (ok) { count++; shown.add(li.dataset.letter); }
     }
 
     for (const h of heads) h.hidden = !alphabetical || !shown.has(h.dataset.letter);
-    alphabet.hidden = !alphabetical;
 
     empty.hidden = count > 0;
     // Пусто, пока не фильтруют: общее число в шапке ни к чему.
-    counter.textContent = query ? count + ' of ' + total : '';
+    counter.textContent = (query || letter) ? count + ' of ' + total : '';
   }
 
   function sort() {
@@ -155,6 +164,14 @@ const solo = genres.filter((g) => g.count === 1).length;
     for (const el of order) frag.appendChild(el);
     list.appendChild(frag);
   }
+
+  alphabet.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    letter = btn.dataset.letter;
+    for (const b of alphabet.children) b.setAttribute('aria-pressed', String(b === btn));
+    apply();
+  });
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');

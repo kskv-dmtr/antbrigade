@@ -778,19 +778,16 @@ select option { background: #1a1a19; color: var(--fg); }
 }
 .more:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
-.alphabet {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-}
-.alphabet a {
-  padding: 5px 8px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--fg-dim);
-}
-.alphabet a:hover { background: var(--ink); color: var(--ink-fg); }
+/* Полоса первых букв — тот же сегментированный переключатель, что тип
+   релиза на Music и вид ролика на Videos, вплоть до кнопки «All».
+
+   Раньше здесь стояли якорные ссылки. Они уводили к заголовку, а не
+   отсеивали лишнее, и при сортировке «сначала крупные» теряли смысл —
+   приходилось прятать их целиком.
+
+   Кнопок под три десятка, поэтому поля по бокам уже обычных тринадцати:
+   иначе полоса не помещается в ряд рядом с сортировкой. */
+.seg--letters button { padding: 8px 9px; }
 
 /* -------------------------------------------------- карточка релиза
 
@@ -1242,19 +1239,20 @@ select option { background: #1a1a19; color: var(--fg); }
     padding: 2px var(--pad);
   }
 
-  /* Алфавит прокручивается внутри своей ячейки. Отрицательных полей здесь
-     быть не должно: он делит ряд с сортировкой, и вылезающий за свою
-     ширину блок налезал бы на неё. */
-  .sticky-bar .alphabet {
+  /* Буквы прокручиваются внутри своей ячейки, а не растягивают весь ряд:
+     двадцать восемь кнопок — это восемьсот пикселей, и сортировка уехала
+     бы за них далеко вправо. Отрицательных полей здесь быть не должно:
+     полоса делит ряд с сортировкой, и вылезающий за свою ширину блок
+     налезал бы на неё. */
+  .filters > .seg--letters {
     flex: 1;
     min-width: 0;
-    flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
   }
   .filters::-webkit-scrollbar,
-  .sticky-bar .alphabet::-webkit-scrollbar { display: none; }
-  .sticky-bar .alphabet a { flex: none; }
+  .filters > .seg--letters::-webkit-scrollbar { display: none; }
+  .filters > .seg--letters button { flex: none; }
 
   /* Группы внутри прокручиваемого ряда не сжимаются и не переносятся: иначе
      они ужимаются по ширине экрана, содержимое встаёт в три этажа, и липкая

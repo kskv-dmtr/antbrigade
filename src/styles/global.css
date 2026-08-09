@@ -486,6 +486,31 @@ a { color: inherit; text-decoration: none; }
 .head--bare { border-bottom: 0; padding-bottom: 0; }
 .head .mono { color: var(--fg-dim); white-space: nowrap; }
 
+/* Кнопка «ещё подборка» в заголовке раздела. Оформлена как кнопка полосы
+   фильтров — это такой же орган управления, только стоит в одиночку.
+   Без скрипта её нет: менять подборку некому, сервер отдаёт всем один
+   и тот же HTML. */
+.dig-again {
+  display: none;
+  padding: 8px 13px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  white-space: nowrap;
+}
+[data-js] .dig-again { display: block; }
+.dig-again:hover,
+.dig-again:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-color: var(--ink);
+}
+
 .page-head {
   display: flex;
   align-items: flex-end;

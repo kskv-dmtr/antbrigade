@@ -8,7 +8,7 @@ import { albums } from '../lib/db.js';
    Сколько свежих показываем, какой глубины пул для случайного раздела и
    сколько из него видно за раз. */
 const LATEST = 10;
-const POOL   = 60;
+const POOL   = 150;
 const SHOW   = 10;
 
 /* Фишер — Йетс. Не `sort(() => Math.random() - 0.5)`: та перестановка
@@ -26,9 +26,13 @@ const latest = albums.slice(0, LATEST);
 
 /* Пул выбирается на сборке и потому одинаков для всех, кто открыл сайт в
    один час. Случайность на статике даёт браузер: он тасует пул при каждой
-   загрузке и показывает из него SHOW штук. Пул пересобирается вместе с
-   сайтом, а сайт пересобирается ежечасно из-за синхронизации с Notion —
-   так что и он не застаивается.
+   загрузке и показывает из него SHOW штук, а кнопка листает дальше. Пул
+   пересобирается вместе с сайтом, а сайт пересобирается ежечасно из-за
+   синхронизации с Notion — так что и он не застаивается.
+
+   Полтораста записей — это пятнадцать подборок подряд без повторов и
+   примерно 55 КБ разметки сверх прежних шестидесяти. Больше брать смысла
+   мало: до конца пула долистывают единицы, а вес платят все.
 
    Свежие исключены: им уже отдан раздел выше. */
 const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
@@ -49,7 +53,9 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Dig In</h2>
-      <span class="mono">Reload page for a fresh dig</span>
+      {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
+          всем один и тот же HTML. */}
+      <button type="button" class="dig-again" id="dig-again">Dig again</button>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
@@ -62,24 +68,68 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
 </Base>
 
 <script>
-  /* Случайные релизы при каждой загрузке.
+  /* Случайные релизы при каждой загрузке и новая подборка по нажатию.
 
      Сайт статический: сервер отдаёт всем один и тот же HTML, поэтому
      выбирает браузер. В разметке лежит пул, отсюда тасуем его и оставляем
-     видимыми первые data-show. */
-  const dig = document.getElementById('dig');
-  const items = Array.from(dig.children);
-  const show = Number(dig.dataset.show) || 10;
+     видимыми первые data-show.
 
-  for (let i = items.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [items[i], items[j]] = [items[j], items[i]];
+     Нажатие не тасует пул заново, а листает его дальше. При повторной
+     жеребьёвке десяти из полутораста ожидаемое пересечение с предыдущей
+     подборкой — две трети плитки, и время от времени одна и та же обложка
+     оставалась бы на месте: нажатие читалось бы как сбой, а не как
+     обновление. Листание же даёт пятнадцать подборок подряд, у которых нет
+     ни одного общего релиза. */
+  const dig   = document.getElementById('dig');
+  const items = Array.from(dig.children);
+  const show  = Number(dig.dataset.show) || 10;
+  const again = document.getElementById('dig-again');
+
+  /* Неполной подборки в конце быть не должно: ряд, оборванный на середине,
+     читается как недогрузившийся. Остаток пула просто ждёт следующей
+     тасовки. */
+  const pages = Math.max(1, Math.floor(items.length / show));
+
+  let order = items;
+  let page = 0;
+
+  // Фишер — Йетс. Не `sort(() => Math.random() - 0.5)`: та перестановка
+  // заметно смещённая, часть записей оседает у краёв.
+  function shuffle() {
+    order = items.slice();
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+
+    // Переставляем и в разметке, иначе выбранные шли бы вразнобой по сетке.
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    dig.appendChild(frag);
   }
 
-  for (const [i, el] of items.entries()) el.hidden = i >= show;
+  function render() {
+    const start = page * show;
+    for (const [i, el] of order.entries()) el.hidden = i < start || i >= start + show;
 
-  // Переставляем и в разметке, иначе выбранные шли бы вразнобой по сетке.
-  const frag = document.createDocumentFragment();
-  for (const el of items) frag.appendChild(el);
-  dig.appendChild(frag);
+    /* Следующая подборка подгружается заранее: у скрытых плиток картинки
+       ленивые и к нажатию не скачаны — без этого на их месте секунду
+       держалась бы пустая штриховка. */
+    for (const el of order.slice(start + show, start + show * 2)) {
+      for (const img of el.querySelectorAll('img[loading="lazy"]')) img.loading = 'eager';
+    }
+  }
+
+  shuffle();
+  render();
+
+  again.addEventListener('click', () => {
+    page += 1;
+    // Пул кончился — тасуем заново, и следующий круг идёт в другом порядке.
+    if (page >= pages) {
+      shuffle();
+      page = 0;
+    }
+    render();
+  });
 </script>

@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T11:47:02Z",
+  "generatedAt": "2026-08-09T13:17:28Z",
   "counts": {
     "albums": 1061,
     "artists": 954,
@@ -31335,6 +31335,7 @@
         "2434129a-8c52-8078-b19c-db3c6316124d"
       ],
       "videoIds": [
+        "3b74129a-8c52-8094-a3e6-cc5a11fa5542",
         "3b54129a-8c52-8060-a912-cb42f34a69e9"
       ]
     },
@@ -57730,7 +57731,9 @@
       "title": "Aaron Frazer | Bring You a Ring",
       "url": "https://youtu.be/UtQbbtMDL9o?si=HdehXlqIE8Uk0Gnz",
       "kind": "Official Video",
-      "artistIds": []
+      "artistIds": [
+        "2404129a-8c52-800a-826f-dd385decf385"
+      ]
     },
     {
       "id": "3b54129a-8c52-8060-a912-cb42f34a69e9",

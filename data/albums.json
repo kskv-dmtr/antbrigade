@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T13:17:28Z",
+  "generatedAt": "2026-08-09T20:53:30Z",
   "counts": {
-    "albums": 1061,
-    "artists": 954,
-    "labels": 595,
+    "albums": 1064,
+    "artists": 956,
+    "labels": 596,
     "videos": 58
   },
   "albums": [
@@ -28418,6 +28418,34 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-8073-a9d7-f8e698d2df22",
+      "slug": "andrew-wasylyk-parallel-light",
+      "artist": "Andrew Wasylyk",
+      "album": "Parallel Light",
+      "url": "https://album.link/qwtcqhvzhcmnw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A43472d85-d851-4cb9-bbdd-9088fa5806d0%3Aa0646051375_10.jpg?table=block&id=3b74129a-8c52-8073-a9d7-f8e698d2df22&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Chamber Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-01-27",
+      "year": 2023,
+      "artistIds": [
+        "3b74129a-8c52-804f-8451-dc610a180e8c"
+      ],
+      "artists": [
+        "Andrew Wasylyk"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
+      ],
+      "labels": [
+        "Athens of the North"
+      ]
+    },
+    {
       "id": "e205103e-9f39-4eaa-9d4e-059976fa5fbe",
       "slug": "le-roi-angus-sosie",
       "artist": "Le Roi Angus",
@@ -30427,6 +30455,35 @@
       ]
     },
     {
+      "id": "3b74129a-8c52-80e1-b7dc-c7e75fcfe6f1",
+      "slug": "joseph-shabason-the-fellowship",
+      "artist": "Joseph Shabason",
+      "album": "The Fellowship",
+      "url": "https://album.link/gjs2fwhm5prjg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A11e1bdfa-8fb1-4378-9976-924664de464a%3Aa3363258549_10.jpg?table=block&id=3b74129a-8c52-80e1-b7dc-c7e75fcfe6f1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient",
+        "Chamber Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-30",
+      "year": 2021,
+      "artistIds": [
+        "3b74129a-8c52-8019-b9fd-c70a379e94bd"
+      ],
+      "artists": [
+        "Joseph Shabason"
+      ],
+      "labelIds": [
+        "30b4129a-8c52-80b0-81aa-f0e9abd36478"
+      ],
+      "labels": [
+        "Western Vinyl"
+      ]
+    },
+    {
       "id": "bace706f-ce66-4cfc-97b9-997366d1ed22",
       "slug": "mitch-murder-then-again",
       "artist": "Mitch Murder",
@@ -30825,6 +30882,36 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-806e-a3d9-c82dacea2e97",
+      "slug": "various-artists-for-the-love-of-you",
+      "artist": "Various Artists",
+      "album": "For the Love of You",
+      "url": "https://album.link/j7vvdsr26dfkx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abd82578e-037d-4b39-a69f-71c953c9fd15%3Aa3419816833_10.jpg?table=block&id=3b74129a-8c52-806e-a3d9-c82dacea2e97&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Lovers Rock",
+        "Smooth Soul",
+        "Boogie"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2020-03-27",
+      "year": 2020,
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
+      ],
+      "labels": [
+        "Athens of the North"
       ]
     },
     {
@@ -31767,6 +31854,23 @@
       ],
       "labelIds": [
         "24e4129a-8c52-80b8-a14f-e496184cb01c"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b74129a-8c52-804f-8451-dc610a180e8c",
+      "slug": "andrew-wasylyk",
+      "name": "Andrew Wasylyk",
+      "country": null,
+      "bandcamp": "https://andrewwasylyk.bandcamp.com/music",
+      "albumIds": [
+        "3b74129a-8c52-8073-a9d7-f8e698d2df22"
+      ],
+      "genres": [
+        "Chamber Jazz"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
       ],
       "videoIds": []
     },
@@ -38876,6 +38980,24 @@
       "labelIds": [
         "34c4129a-8c52-803f-b3b3-e3aeace3bef6",
         "2504129a-8c52-80a4-a33d-fbfe38ea2b55"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b74129a-8c52-8019-b9fd-c70a379e94bd",
+      "slug": "joseph-shabason",
+      "name": "Joseph Shabason",
+      "country": "CA",
+      "bandcamp": "https://josephshabason.bandcamp.com/music",
+      "albumIds": [
+        "3b74129a-8c52-80e1-b7dc-c7e75fcfe6f1"
+      ],
+      "genres": [
+        "Ambient",
+        "Chamber Jazz"
+      ],
+      "labelIds": [
+        "30b4129a-8c52-80b0-81aa-f0e9abd36478"
       ],
       "videoIds": []
     },
@@ -48025,7 +48147,8 @@
         "3674129a-8c52-8082-90ca-cc85795b72e4",
         "24e4129a-8c52-80c4-864d-ef35463b5b9f",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
-        "26eca379-5783-4be3-88d2-b52a28eda9b6"
+        "26eca379-5783-4be3-88d2-b52a28eda9b6",
+        "3b74129a-8c52-806e-a3d9-c82dacea2e97"
       ],
       "genres": [
         "City Pop",
@@ -48036,13 +48159,16 @@
         "Minimal Synth",
         "New Wave",
         "Disco",
-        "Funk"
+        "Funk",
+        "Lovers Rock",
+        "Smooth Soul"
       ],
       "labelIds": [
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
         "24e4129a-8c52-807a-920f-fb0794ae2606",
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
-        "2494129a-8c52-8080-9b9b-efb2b4dc157d"
+        "2494129a-8c52-8080-9b9b-efb2b4dc157d",
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
       ],
       "videoIds": []
     },
@@ -49586,6 +49712,21 @@
       ],
       "artistIds": [
         "3714129a-8c52-80cf-a371-dcf2efbe7a33"
+      ]
+    },
+    {
+      "id": "3b74129a-8c52-8060-af6b-ece8a3271488",
+      "slug": "athens-of-the-north",
+      "name": "Athens of the North",
+      "country": "GB",
+      "bandcamp": "https://aotns.bandcamp.com/",
+      "albumIds": [
+        "3b74129a-8c52-8073-a9d7-f8e698d2df22",
+        "3b74129a-8c52-806e-a3d9-c82dacea2e97"
+      ],
+      "artistIds": [
+        "3b74129a-8c52-804f-8451-dc610a180e8c",
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
     {
@@ -57488,12 +57629,14 @@
       "slug": "western-vinyl",
       "name": "Western Vinyl",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://westernvinyl.bandcamp.com/",
       "albumIds": [
-        "30b4129a-8c52-80d9-8364-dcdfffd80f7e"
+        "30b4129a-8c52-80d9-8364-dcdfffd80f7e",
+        "3b74129a-8c52-80e1-b7dc-c7e75fcfe6f1"
       ],
       "artistIds": [
-        "30b4129a-8c52-8020-b514-f09f453549e6"
+        "30b4129a-8c52-8020-b514-f09f453549e6",
+        "3b74129a-8c52-8019-b9fd-c70a379e94bd"
       ]
     },
     {

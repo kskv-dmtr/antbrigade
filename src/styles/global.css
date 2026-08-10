@@ -979,27 +979,11 @@ select option { background: #1a1a19; color: var(--fg); }
    ни сортировать (порядок читался бы сверху вниз в каждой колонке отдельно),
    ни выворачивать строку целиком.
 
-   Буквы лежат в том же <ul> отдельными <li>, а не оборачивают группы: так
-   сортировка переставляет только записи, а заголовки просто прячутся, когда
-   порядок перестаёт быть алфавитным.                                      */
+   Заголовков с буквами внутри списка нет: буква выбирается кнопкой в полосе
+   фильтров, и заголовок над выдачей повторял бы нажатое. Группировка по
+   первой букве осталась только как порядок записей.                       */
 
 .names { margin: 0; padding: 0; list-style: none; }
-
-.names__letter {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin: 30px 0 6px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-.names__letter:first-child { margin-top: 0; }
-/* Переход по букве не должен заводить заголовок под закреплённую шапку. */
-.names__letter { scroll-margin-top: calc(var(--head-h) + 16px); }
-.names__letter .mono { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.08em; }
 
 /* 284 жанра разной длины — не колонки, а поток. */
 .genre-cloud {
@@ -1223,7 +1207,6 @@ select option { background: #1a1a19; color: var(--fg); }
   .foot__in { flex-direction: column; align-items: flex-start; gap: 20px; }
   .foot__note--end { text-align: left; }
   .page-head { padding: 26px 0 18px; }
-  .names__letter { font-size: 20px; margin-top: 22px; }
 
   /* Клип в одну колонку: две дают кадр 165×93, а это уже не картинка.
      Правило здесь, а не выше по файлу: `.tiles` в медиазапросе для 900 px
@@ -1310,9 +1293,3 @@ select option { background: #1a1a19; color: var(--fg); }
   .videos[data-view='grid'] { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* Буква — не плитка: в сетке она растягивается на всю строку и остаётся
-   заголовком, а не превращается в ячейку рядом с обложками. */
-[data-view='grid'] .names__letter {
-  grid-column: 1 / -1;
-  margin-top: 16px;
-}

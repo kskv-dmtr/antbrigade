@@ -2,7 +2,7 @@
   "id": "/",
   "name": "ant brigade",
   "short_name": "ant brigade",
-  "description": "Hand-picked music collection: covers, genres, labels and where to listen.",
+  "description": "A personal music archive: covers, genres, labels and where to listen.",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/",

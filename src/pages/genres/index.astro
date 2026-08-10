@@ -28,7 +28,6 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   return a.localeCompare(b);
 });
 
-const anchor = (letter) => `letter-${letter === '#' ? 'other' : letter}`;
 const solo = genres.filter((g) => g.count === 1).length;
 ---
 <Base
@@ -72,13 +71,13 @@ const solo = genres.filter((g) => g.count === 1).length;
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
+  {/* Заголовков с буквами в списке нет: буква выбирается кнопкой в полосе
+      фильтров, и заголовок над выдачей повторял бы нажатое, а в общем
+      списке — резал бы его на два десятка кусков без всякой нужды.
+      Группировка осталась только как порядок записей. */}
   <ul class="names" id="list" data-view="list">
     {ordered.map(([letter, items]) => (
       <>
-        <li class="names__letter" id={anchor(letter)} data-letter={letter}>
-          <span>{letter}</span>
-          <span class="mono mono--sm">[{items.length}]</span>
-        </li>
         {items.map((genre) => (
           <li
             class="names__item"
@@ -117,33 +116,25 @@ const solo = genres.filter((g) => g.count === 1).length;
   const sortEl   = document.getElementById('sort');
   const alphabet = document.getElementById('alphabet');
 
-  const heads = Array.from(list.querySelectorAll('.names__letter'));
   const items = Array.from(list.querySelectorAll('.names__item'));
   const total = items.length;
 
-  // Исходный порядок — записи вперемешку с заголовками букв; храним целиком,
-  // чтобы возврат к алфавиту не пришлось собирать заново.
-  const initialOrder = Array.from(list.children);
+  // Порядок с сервера — алфавитный; запоминаем как исходный, чтобы возврат
+  // к нему не пришлось собирать заново.
+  const initialOrder = items.slice();
 
   let query = '';
   let letter = '';
 
   function apply() {
-    /* Заголовки букв нужны только в сплошном алфавитном списке. При поиске
-       результаты идут подряд, при выбранной букве заголовок повторял бы
-       нажатую кнопку, при другой сортировке стоял бы вразнобой. */
-    const alphabetical = sortEl.value === 'az' && !query && !letter;
-    const shown = new Set();
     let count = 0;
 
     for (const li of items) {
       const ok = (!query || li.dataset.search.includes(query)) &&
                  (!letter || li.dataset.letter === letter);
       li.hidden = !ok;
-      if (ok) { count++; shown.add(li.dataset.letter); }
+      if (ok) count++;
     }
-
-    for (const h of heads) h.hidden = !alphabetical || !shown.has(h.dataset.letter);
 
     empty.hidden = count > 0;
     // Пусто, пока не фильтруют: общее число в шапке ни к чему.

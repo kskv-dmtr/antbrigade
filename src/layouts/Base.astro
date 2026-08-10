@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { albums, plural } from '../lib/db.js';
 
 /* cardTitle — заголовок для карточки, которая разворачивается при отправке
    ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
@@ -26,8 +25,6 @@ const nav = [
   { href: '/labels',  label: 'Labels',   key: 'labels' },
   { href: '/genres',  label: 'Genres',   key: 'genres' }
 ];
-
-const year = new Date().getFullYear();
 
 /* Сборка идёт с format: 'file', поэтому внутри пути живут с расширением:
    /artists.html. Наружу Vercel с cleanUrls отдаёт /artists, а .html-адрес
@@ -145,22 +142,18 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   </main>
 
   {/* Слева — что это за сайт, справа — кто его сделал и куда написать.
-      Счётчик релизов берётся из данных: руками его писать нельзя, сайт
-      пересобирается каждый час и число меняется само. */}
+      По две строки в каждой колонке: подвал у витрины должен читаться
+      одним взглядом, а не разбираться. */}
   <footer class="foot">
     <div class="foot__in shell">
       <div class="foot__note mono mono--sm">
-        ant brigade — hand-picked music collection<br />
-        covers, genres, labels and where to listen<br />
-        {plural(albums.length, 'release', 'releases')}, updated hourly from Notion
+        ant brigade — a personal music archive<br />
+        new releases · old favorites · strange finds
       </div>
 
       <div class="foot__note foot__note--end mono mono--sm">
         made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">Telegram Channel</a><br />
-        {/* Без названия: оно стоит первой строкой слева, и в подвале из
-            шести строк повторять его дважды незачем. */}
-        © {year}
+        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">join telegram</a>
       </div>
     </div>
   </footer>

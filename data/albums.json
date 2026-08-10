@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-09T23:48:37Z",
+  "generatedAt": "2026-08-10T10:37:58Z",
   "counts": {
-    "albums": 1065,
-    "artists": 957,
-    "labels": 601,
+    "albums": 1066,
+    "artists": 958,
+    "labels": 602,
     "videos": 58
   },
   "albums": [
@@ -31088,6 +31088,34 @@
       ]
     },
     {
+      "id": "3b84129a-8c52-80f6-9abe-d1ada0bfa63d",
+      "slug": "cloud-one-spaced-out-the-very-best-of-cloud-one",
+      "artist": "Cloud One",
+      "album": "Spaced Out: The Very Best of Cloud One",
+      "url": "https://album.link/vh823q7nzg4fv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2fe16002-6a3a-422c-b7a0-34003e0c7fc0%3AR-13642035-1558898897-1902.jpg?table=block&id=3b84129a-8c52-80f6-9abe-d1ada0bfa63d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2019-04-13",
+      "year": 2019,
+      "artistIds": [
+        "3b84129a-8c52-80d9-95f0-d73ba4a3f2d3"
+      ],
+      "artists": [
+        "Cloud One"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-8028-909b-de5bdb708daa"
+      ],
+      "labels": [
+        "P&P Records"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-80b3-801d-fca6b44c57c7",
       "slug": "miel-de-montagne-miel-de-montagne",
       "artist": "Miel de Montagne",
@@ -34244,6 +34272,23 @@
       ],
       "labelIds": [
         "24f4129a-8c52-8060-94e4-cb491dd8a63d"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b84129a-8c52-80d9-95f0-d73ba4a3f2d3",
+      "slug": "cloud-one",
+      "name": "Cloud One",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3b84129a-8c52-80f6-9abe-d1ada0bfa63d"
+      ],
+      "genres": [
+        "Disco"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-8028-909b-de5bdb708daa"
       ],
       "videoIds": []
     },
@@ -54796,6 +54841,19 @@
       "artistIds": [
         "3ac4129a-8c52-8057-9c28-e49e22789ba0",
         "31f4129a-8c52-8081-8241-e25497780faa"
+      ]
+    },
+    {
+      "id": "3b84129a-8c52-8028-909b-de5bdb708daa",
+      "slug": "p-p-records",
+      "name": "P&P Records",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3b84129a-8c52-80f6-9abe-d1ada0bfa63d"
+      ],
+      "artistIds": [
+        "3b84129a-8c52-80d9-95f0-d73ba4a3f2d3"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T15:18:59Z",
+  "generatedAt": "2026-08-10T17:11:33Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16943,6 +16943,44 @@
       "upc": "3615939884392",
       "tracks": 10,
       "releaseDate": "1974-08-13"
+    },
+    "3b84129a-8c52-80c2-a7a7-ef38d586db6c": {
+      "source": "https://album.link/fbskfhhsgn7x9",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4HAkmw9E9Flw0xlVx4A3nx",
+        "pandora": "https://www.pandora.com/AL:11556163",
+        "deezer": "https://www.deezer.com/album/255519292",
+        "amazonMusic": "https://music.amazon.com/albums/B09F3PCQ57",
+        "tidal": "https://listen.tidal.com/album/195963920",
+        "napster": "https://play.napster.com/album/alb.608777863",
+        "yandex": "https://music.yandex.ru/album/17815932",
+        "boomplay": "https://www.boomplay.com/albums/31065275",
+        "anghami": "https://play.anghami.com/album/1022299514?refer=linktree",
+        "bandcamp": "https://favoriterecordings.bandcamp.com/album/deux",
+        "amazonStore": "https://amazon.com/dp/B09F3PCQ57"
+      },
+      "upc": "3760179356038",
+      "tracks": 7,
+      "releaseDate": "2021-10-19"
+    },
+    "3b84129a-8c52-809a-be36-cd8cb4b143c9": {
+      "source": "https://album.link/cs7shxcmchwpb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2jrva1iF8iLb0Ws3Ik9dz5",
+        "pandora": "https://www.pandora.com/AL:8647638",
+        "deezer": "https://www.deezer.com/album/275233662",
+        "amazonMusic": "https://music.amazon.com/albums/B08ZJPY9R4",
+        "tidal": "https://listen.tidal.com/album/177845180",
+        "napster": "https://play.napster.com/album/alb.567620365",
+        "yandex": "https://music.yandex.ru/album/14489086",
+        "boomplay": "https://www.boomplay.com/albums/120431678",
+        "anghami": "https://play.anghami.com/album/1018807833?refer=linktree",
+        "bandcamp": "https://music-from-memory.bandcamp.com/album/enter-the-zenmenn",
+        "amazonStore": "https://amazon.com/dp/B08ZJPY9R4"
+      },
+      "upc": "0603051913321",
+      "tracks": 9,
+      "releaseDate": "2021-03-12"
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-10T15:18:45Z",
+  "generatedAt": "2026-08-10T17:11:18Z",
   "counts": {
-    "albums": 1067,
-    "artists": 959,
-    "labels": 602,
+    "albums": 1069,
+    "artists": 961,
+    "labels": 603,
     "videos": 58
   },
   "albums": [
@@ -30071,6 +30071,34 @@
       ]
     },
     {
+      "id": "3b84129a-8c52-80c2-a7a7-ef38d586db6c",
+      "slug": "aldorande-deux",
+      "artist": "Aldorande",
+      "album": "deux",
+      "url": "https://album.link/fbskfhhsgn7x9",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7419fb24-aeae-4ce8-b81e-040b7bacb5a9%3Aa1056033757_10.jpg?table=block&id=3b84129a-8c52-80c2-a7a7-ef38d586db6c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-19",
+      "year": 2021,
+      "artistIds": [
+        "3b84129a-8c52-80a1-b02e-c51edcc377e8"
+      ],
+      "artists": [
+        "Aldorande"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80f0-9657-d9ff5b74f610"
+      ],
+      "labels": [
+        "Favorite Recordings"
+      ]
+    },
+    {
       "id": "0e0887f0-ed77-4021-93cb-b28035e0c8b5",
       "slug": "ross-from-friends-tread",
       "artist": "Ross From Friends",
@@ -30588,6 +30616,37 @@
       ],
       "labels": [
         "Kardinian Records"
+      ]
+    },
+    {
+      "id": "3b84129a-8c52-809a-be36-cd8cb4b143c9",
+      "slug": "the-zenmenn-enter-the-zenmenn",
+      "artist": "The Zenmenn",
+      "album": "Enter the Zenmenn",
+      "url": "https://album.link/cs7shxcmchwpb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A74cff09e-c598-4d35-b2e9-c72d25192f21%3Aa2997515377_10.jpg?table=block&id=3b84129a-8c52-809a-be36-cd8cb4b143c9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Exotica",
+        "Smooth Jazz",
+        "New Age",
+        "Art Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-12",
+      "year": 2021,
+      "artistIds": [
+        "3b84129a-8c52-8048-b65a-fdc7e5e673f1"
+      ],
+      "artists": [
+        "The Zenmenn"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
+      ],
+      "labels": [
+        "Music From Memory"
       ]
     },
     {
@@ -31747,6 +31806,23 @@
       ],
       "labelIds": [
         "2d04129a-8c52-80f5-a586-da08904a1842"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b84129a-8c52-80a1-b02e-c51edcc377e8",
+      "slug": "aldorande",
+      "name": "Aldorande",
+      "country": "FR",
+      "bandcamp": null,
+      "albumIds": [
+        "3b84129a-8c52-80c2-a7a7-ef38d586db6c"
+      ],
+      "genres": [
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80f0-9657-d9ff5b74f610"
       ],
       "videoIds": []
     },
@@ -47451,6 +47527,26 @@
       "videoIds": []
     },
     {
+      "id": "3b84129a-8c52-8048-b65a-fdc7e5e673f1",
+      "slug": "the-zenmenn",
+      "name": "The Zenmenn",
+      "country": "DE",
+      "bandcamp": null,
+      "albumIds": [
+        "3b84129a-8c52-809a-be36-cd8cb4b143c9"
+      ],
+      "genres": [
+        "Exotica",
+        "Smooth Jazz",
+        "New Age",
+        "Art Pop"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-8025-9293-c077b77155f3",
       "slug": "thee-marloes",
       "name": "Thee Marloes",
@@ -51864,6 +51960,19 @@
       ]
     },
     {
+      "id": "3b84129a-8c52-80f0-9657-d9ff5b74f610",
+      "slug": "favorite-recordings",
+      "name": "Favorite Recordings",
+      "country": "FR",
+      "bandcamp": "https://favoriterecordings.bandcamp.com/music",
+      "albumIds": [
+        "3b84129a-8c52-80c2-a7a7-ef38d586db6c"
+      ],
+      "artistIds": [
+        "3b84129a-8c52-80a1-b02e-c51edcc377e8"
+      ]
+    },
+    {
       "id": "2504129a-8c52-80fd-ab52-e91b03162a23",
       "slug": "feedelity",
       "name": "Feedelity",
@@ -54372,11 +54481,13 @@
       "bandcamp": null,
       "albumIds": [
         "32f4129a-8c52-80cc-9baa-e0213b383a89",
-        "f730e5dc-5065-40fc-92dc-989df83ef50a"
+        "f730e5dc-5065-40fc-92dc-989df83ef50a",
+        "3b84129a-8c52-809a-be36-cd8cb4b143c9"
       ],
       "artistIds": [
         "32f4129a-8c52-80b7-8f80-c162b0c0cad7",
-        "24a4129a-8c52-8016-9c11-e4831dfb97e4"
+        "24a4129a-8c52-8016-9c11-e4831dfb97e4",
+        "3b84129a-8c52-8048-b65a-fdc7e5e673f1"
       ]
     },
     {

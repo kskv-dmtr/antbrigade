@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-10T17:11:18Z",
+  "generatedAt": "2026-08-10T22:58:10Z",
   "counts": {
-    "albums": 1069,
-    "artists": 961,
-    "labels": 603,
+    "albums": 1070,
+    "artists": 962,
+    "labels": 604,
     "videos": 58
   },
   "albums": [
@@ -1167,6 +1167,35 @@
       ],
       "labels": [
         "Relapse Records"
+      ]
+    },
+    {
+      "id": "3b84129a-8c52-8019-9ee1-e89f9ada3bc5",
+      "slug": "bed-enso",
+      "artist": "bed",
+      "album": "円相 ｜Enso",
+      "url": "https://album.link/xcpxgj5qvqxtr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af55488c1-4f0e-49f7-b9a9-53ec01361f6c%3Aa2118793943_10.jpg?table=block&id=3b84129a-8c52-8019-9ee1-e89f9ada3bc5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dance-Punk",
+        "Electro-Industrial"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-06-05",
+      "year": 2026,
+      "artistIds": [
+        "3b84129a-8c52-8053-9c18-dcce0c9c1ad1"
+      ],
+      "artists": [
+        "bed"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80ec-98d8-cee5db19ba72"
+      ],
+      "labels": [
+        "40 MILES"
       ]
     },
     {
@@ -32826,6 +32855,24 @@
       "videoIds": []
     },
     {
+      "id": "3b84129a-8c52-8053-9c18-dcce0c9c1ad1",
+      "slug": "bed",
+      "name": "bed",
+      "country": "JP",
+      "bandcamp": "https://bedsleepwell.bandcamp.com/music",
+      "albumIds": [
+        "3b84129a-8c52-8019-9ee1-e89f9ada3bc5"
+      ],
+      "genres": [
+        "Dance-Punk",
+        "Electro-Industrial"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80ec-98d8-cee5db19ba72"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2484129a-8c52-804a-9f75-dcf986b2adf5",
       "slug": "belgrado",
       "name": "Belgrado",
@@ -49566,6 +49613,19 @@
       ],
       "artistIds": [
         "39b4129a-8c52-805a-a891-cb2844cc1afd"
+      ]
+    },
+    {
+      "id": "3b84129a-8c52-80ec-98d8-cee5db19ba72",
+      "slug": "40-miles",
+      "name": "40 MILES",
+      "country": "GB",
+      "bandcamp": "https://fortymiles.bandcamp.com/",
+      "albumIds": [
+        "3b84129a-8c52-8019-9ee1-e89f9ada3bc5"
+      ],
+      "artistIds": [
+        "3b84129a-8c52-8053-9c18-dcce0c9c1ad1"
       ]
     },
     {

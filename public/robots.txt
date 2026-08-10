@@ -1,0 +1,5 @@
+# Скрывать нечего: сайт целиком открыт и собран заранее.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.antbrigade.fun/sitemap.xml

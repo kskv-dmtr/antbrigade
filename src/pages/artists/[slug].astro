@@ -4,7 +4,7 @@ import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import BandcampLink from '../../components/BandcampLink.astro';
 import GenreChips from '../../components/GenreChips.astro';
-import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural } from '../../lib/db.js';
+import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return artists.map((artist) => ({ params: { slug: artist.slug }, props: { artist } }));
@@ -27,6 +27,9 @@ const clipsSorted = clips.slice().sort((a, b) => {
   description={`${artist.name}: ${plural(discography.length, 'release', 'releases')} in the collection${
     artist.genres.length ? `, ${artist.genres.slice(0, 4).join(', ')}` : ''
   }.`}
+  {/* В карточке ссылки — обложка самого свежего релиза: своей картинки у
+      артиста нет, а плитка в сетке берёт ту же. */}
+  image={coverSrc(discography.find((a) => a.cover), 800)}
   activeSection="artists"
 >
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}

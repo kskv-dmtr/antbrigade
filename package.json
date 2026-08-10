@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/make-static-config.mjs",
+    "postbuild": "node scripts/make-static-config.mjs && node scripts/make-sitemap.mjs",
     "preview": "astro preview",
     "sync": "node scripts/fetch-notion.mjs",
     "doctor": "node scripts/doctor.mjs",

@@ -21,6 +21,7 @@ const cover   = coverSrc(album, 800);
 <Base
   title={`${title} · ant brigade`}
   description={`${title}${album.year ? `, ${album.year}` : ''}. ${album.genres.join(', ')}.`}
+  image={coverSrc(album, 800)}
   activeSection="albums"
 >
   <article class="detail">

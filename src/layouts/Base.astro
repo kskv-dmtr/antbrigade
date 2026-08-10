@@ -1,7 +1,15 @@
 ---
 import '../styles/global.css';
 
-const { title, description, activeSection } = Astro.props;
+/* cardTitle — заголовок для карточки, которая разворачивается при отправке
+   ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
+   без приписки с именем сайта. Главная — исключение: во вкладке у неё
+   короткое «ant brigade», а в карточке человек видит ссылку без сайта
+   вокруг, и там уместно объяснить, куда он попадёт.
+
+   image — своя картинка карточки: у релиза это его обложка. Без неё берётся
+   иконка сайта. */
+const { title, description, activeSection, cardTitle, image } = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
    ссылка в никуда хуже отсутствующего пункта.
@@ -28,6 +36,21 @@ const canonical = new URL(
   Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, ''),
   Astro.site
 );
+
+/* Картинка карточки. Адрес обязан быть полным: разворачивают ссылку чужие
+   серверы, и относительный путь им не от чего отсчитывать.
+
+   Обложки лежат в webp. Telegram, куда эти ссылки и попадают чаще всего,
+   его понимает; у части других сервисов поддержка неровная, и там карточка
+   останется без картинки — но текст покажется в любом случае. Заводить
+   ради них вторую копию каждой обложки в jpeg не стоит того. */
+const cardImage = new URL(image ?? '/icons/icon-512.png?v=2026-08-08', Astro.site);
+
+/* Во вкладке к заголовку приписано имя сайта — там ему неоткуда взяться
+   иначе. В карточке оно уже стоит отдельной строкой в og:site_name, и
+   вторым разом читалось бы заиканием. Срезаем по умолчанию; страница может
+   задать свой cardTitle, как это делает главная. */
+const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 ---
 <!doctype html>
 <html lang="en">
@@ -38,6 +61,23 @@ const canonical = new URL(
   {description && <meta name="description" content={description} />}
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href={canonical} />
+
+  {/* Карточка ссылки. Проект живёт тем, что ссылки кидают в переписку, и без
+      этой разметки они разворачивались пустыми — ни обложки, ни подписи.
+      Для поиска эти теги роли не играют, это про мессенджеры. */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ant brigade" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={cardHeading} />
+  {description && <meta property="og:description" content={description} />}
+  <meta property="og:image" content={cardImage} />
+
+  {/* Крупная карточка, а не строчка с миниатюрой: обложка здесь и есть
+      содержание. */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={cardHeading} />
+  {description && <meta name="twitter:description" content={description} />}
+  <meta name="twitter:image" content={cardImage} />
 
   {/* Комментарии здесь только в фигурных скобках: HTML-комментарии Astro
       отдаёт наружу, и на 2840 страницах это лишний мегабайт трафика.

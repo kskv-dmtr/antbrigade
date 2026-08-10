@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-10T12:01:07Z",
+  "generatedAt": "2026-08-10T15:18:45Z",
   "counts": {
-    "albums": 1066,
-    "artists": 958,
+    "albums": 1067,
+    "artists": 959,
     "labels": 602,
     "videos": 58
   },
@@ -31408,6 +31408,36 @@
       "labels": [
         "Shredder Records"
       ]
+    },
+    {
+      "id": "3b84129a-8c52-80e6-85c6-e80656072383",
+      "slug": "ana-mazzotti-ninguem-vai-me-segurar",
+      "artist": "Ana Mazzotti",
+      "album": "Ninguém Vai Me Segurar",
+      "url": "https://album.link/c32bn5nnxmqzp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac58dadca-99ec-4253-99bd-be41e0137ea5%3Aa1052181084_10.jpg?table=block&id=3b84129a-8c52-80e6-85c6-e80656072383&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "MPB",
+        "Bossa Nova"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "1974-09-13",
+      "year": 1974,
+      "artistIds": [
+        "3b84129a-8c52-8029-b163-edd0477e91b2"
+      ],
+      "artists": [
+        "Ana Mazzotti"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "labels": [
+        "Far Out Recordings"
+      ]
     }
   ],
   "artists": [
@@ -31899,6 +31929,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80a7-a210-ee7ff567e1b6"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3b84129a-8c52-8029-b163-edd0477e91b2",
+      "slug": "ana-mazzotti",
+      "name": "Ana Mazzotti",
+      "country": "BR",
+      "bandcamp": "https://anamazzotti.bandcamp.com/music",
+      "albumIds": [
+        "3b84129a-8c52-80e6-85c6-e80656072383"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "MPB",
+        "Bossa Nova"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
       ],
       "videoIds": []
     },
@@ -51763,12 +51812,14 @@
       "slug": "far-out-recordings",
       "name": "Far Out Recordings",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://faroutrecordings.bandcamp.com/",
       "albumIds": [
-        "2284129a-8c52-8026-82d0-f9aff7dd22dc"
+        "2284129a-8c52-8026-82d0-f9aff7dd22dc",
+        "3b84129a-8c52-80e6-85c6-e80656072383"
       ],
       "artistIds": [
-        "24a4129a-8c52-80e2-8d09-f063edda164c"
+        "24a4129a-8c52-80e2-8d09-f063edda164c",
+        "3b84129a-8c52-8029-b163-edd0477e91b2"
       ]
     },
     {

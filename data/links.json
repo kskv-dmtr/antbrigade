@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T10:38:08Z",
+  "generatedAt": "2026-08-10T15:18:59Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -16924,6 +16924,25 @@
       "upc": "026656402524",
       "tracks": 20,
       "releaseDate": "2019-03-13"
+    },
+    "3b84129a-8c52-80e6-85c6-e80656072383": {
+      "source": "https://album.link/c32bn5nnxmqzp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4yiSLjQT0cRNT5dySoWKK3",
+        "pandora": "https://www.pandora.com/AL:2666387",
+        "deezer": "https://www.deezer.com/album/103185642",
+        "amazonMusic": "https://music.amazon.com/albums/B07V4GSQCR",
+        "tidal": "https://listen.tidal.com/album/113016534",
+        "napster": "https://play.napster.com/album/alb.390362860",
+        "yandex": "https://music.yandex.ru/album/8014111",
+        "boomplay": "https://www.boomplay.com/albums/3487640",
+        "anghami": "https://play.anghami.com/album/1007801023?refer=linktree",
+        "bandcamp": "https://anamazzotti.bandcamp.com/album/ninguem-vai-me-segurar",
+        "amazonStore": "https://amazon.com/dp/B07V4GSQCR"
+      },
+      "upc": "3615939884392",
+      "tracks": 10,
+      "releaseDate": "1974-08-13"
     }
   }
 }

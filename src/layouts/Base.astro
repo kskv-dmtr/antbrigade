@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { albums, plural } from '../lib/db.js';
 
 /* cardTitle — заголовок для карточки, которая разворачивается при отправке
    ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
@@ -143,18 +144,24 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     <slot />
   </main>
 
-  {/* Зеркало шапки: подпись слева, ссылка справа. */}
+  {/* Слева — что это за сайт, справа — кто его сделал и куда написать.
+      Счётчик релизов берётся из данных: руками его писать нельзя, сайт
+      пересобирается каждый час и число меняется само. */}
   <footer class="foot">
     <div class="foot__in shell">
-      <span class="foot__note mono mono--sm">
-        Made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a>
-        using Notion database &amp; Claude Code<br />
-        © {year} ant brigade
-      </span>
+      <div class="foot__note mono mono--sm">
+        ant brigade — hand-picked music collection<br />
+        covers, genres, labels and where to listen<br />
+        {plural(albums.length, 'release', 'releases')}, updated hourly from Notion
+      </div>
 
-      <nav class="foot__links mono">
-        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">Telegram</a>
-      </nav>
+      <div class="foot__note foot__note--end mono mono--sm">
+        made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
+        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">Telegram Channel</a><br />
+        {/* Без названия: оно стоит первой строкой слева, и в подвале из
+            шести строк повторять его дважды незачем. */}
+        © {year}
+      </div>
     </div>
   </footer>
 

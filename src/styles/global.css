@@ -1039,13 +1039,14 @@ select option { background: #1a1a19; color: var(--fg); }
 
 /* ---------------------------------------------------------- подвал
 
-   Крупное «Information» из макета убрано: слева внешние ссылки, справа
-   подпись. Ничего нового по оформлению здесь не заводится — ссылки взяты
-   от меню в шапке, подпись от прочих служебных строк.                  */
+   Крупное «Information» из макета убрано. Слева — что это за сайт, справа —
+   кто его сделал и куда написать. Ничего нового по оформлению не заводится:
+   обе колонки набраны той же служебной строкой, что и прочие подписи.    */
 
 .foot { border-top: 1px solid var(--line); margin-top: 60px; }
-/* По первой строке подписи, а не по нижнему краю: baseline ставит «Telegram»
-   ровно на ту же строку, что и «Made for fun by…». */
+/* По первой строке, а не по нижнему краю: baseline ставит «made for fun by»
+   ровно на ту же строку, что и название слева. Колонки разной высоты, и по
+   нижнему краю они разъехались бы. */
 .foot__in {
   display: flex;
   align-items: baseline;
@@ -1055,20 +1056,10 @@ select option { background: #1a1a19; color: var(--fg); }
   padding-bottom: 24px;
 }
 
-/* Ровно как .nav: тот же моноширинный, тот же приглушённый, та же
-   линейка при наведении. */
-.foot__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: var(--fg-muted);
-}
-.foot__links a {
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-}
-.foot__links a:hover,
-.foot__links a:focus-visible { color: var(--fg); border-bottom-color: var(--fg); }
+/* Правая колонка выключена по правому краю: иначе её левая граница висит
+   в случайном месте — ширина у строк разная, и общей вертикали не
+   получается. */
+.foot__note--end { text-align: right; }
 
 /* Регистр возвращён обычный: в подписи стоит имя собственное и название
    строчными, а .mono поднял бы всё в прописные. Ссылка рядом остаётся
@@ -1218,8 +1209,14 @@ select option { background: #1a1a19; color: var(--fg); }
   .display--md { font-size: 22px; }
 
   /* Подвал в столбик: две колонки по краям на 375 px не расходятся.
-     Ссылка идёт первой — как меню в шапке, оно тоже наверху. */
-  .foot__in { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
+
+     Первым идёт описание сайта, а не подпись автора: раньше наверх
+     поднималась одинокая ссылка на Telegram, теперь там три строки, и они
+     оттеснили бы вниз то, ради чего подвал читают. Выключку по правому
+     краю тоже снимаем — прижимать текст к правому краю экрана незачем,
+     когда колонка одна. */
+  .foot__in { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .foot__note--end { text-align: left; }
   .page-head { padding: 26px 0 18px; }
   .names__letter { font-size: 20px; margin-top: 22px; }
 

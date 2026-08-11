@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-10T22:58:10Z",
+  "generatedAt": "2026-08-11T10:14:41Z",
   "counts": {
     "albums": 1070,
     "artists": 962,
@@ -9976,10 +9976,11 @@
         "Posthuman"
       ],
       "labelIds": [
-        "2cf4129a-8c52-8084-802d-e0f8843ce148"
+        "2cf4129a-8c52-8084-802d-e0f8843ce148",
+        "3b94129a-8c52-8048-ac9a-ccf44aa8ea97"
       ],
       "labels": [
-        "I Love Acid"
+        "Flatlife Records"
       ]
     },
     {
@@ -43797,7 +43798,7 @@
       "slug": "posthuman",
       "name": "Posthuman",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://posthuman.bandcamp.com/music",
       "albumIds": [
         "2cf4129a-8c52-808a-9e28-e74d58668f9f"
       ],
@@ -43807,7 +43808,8 @@
         "Ambient Techno"
       ],
       "labelIds": [
-        "2cf4129a-8c52-8084-802d-e0f8843ce148"
+        "2cf4129a-8c52-8084-802d-e0f8843ce148",
+        "3b94129a-8c52-8048-ac9a-ccf44aa8ea97"
       ],
       "videoIds": []
     },
@@ -52141,6 +52143,19 @@
       ]
     },
     {
+      "id": "3b94129a-8c52-8048-ac9a-ccf44aa8ea97",
+      "slug": "flatlife-records",
+      "name": "Flatlife Records",
+      "country": "NL",
+      "bandcamp": "https://flatliferecords.bandcamp.com/",
+      "albumIds": [
+        "2cf4129a-8c52-808a-9e28-e74d58668f9f"
+      ],
+      "artistIds": [
+        "2cf4129a-8c52-8053-9b4a-dcd6cd1ca447"
+      ]
+    },
+    {
       "id": "3b24129a-8c52-80ae-a67d-f4bc8964217f",
       "slug": "flatspot-records",
       "name": "Flatspot Records",
@@ -52913,19 +52928,6 @@
       ],
       "artistIds": [
         "2514129a-8c52-805a-9ecf-d9bee35f6b8a"
-      ]
-    },
-    {
-      "id": "2cf4129a-8c52-8084-802d-e0f8843ce148",
-      "slug": "i-love-acid",
-      "name": "I Love Acid",
-      "country": "GB",
-      "bandcamp": null,
-      "albumIds": [
-        "2cf4129a-8c52-808a-9e28-e74d58668f9f"
-      ],
-      "artistIds": [
-        "2cf4129a-8c52-8053-9b4a-dcd6cd1ca447"
       ]
     },
     {

@@ -53,7 +53,7 @@ const PAGE = 50;
       </div>
 
       <div class="filters__group filters__group--end">
-        <Select id="genre" label="Genre">
+        <Select id="genre" label="Genre" narrow>
           <option value="">All genres</option>
           {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
         </Select>

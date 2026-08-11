@@ -10,9 +10,12 @@
 
 import Icon from './Icon.astro';
 
-const { id, label } = Astro.props;
+/* narrow — для списков, у которых пункты длиннее собственной подписи.
+   Ширину закрытой кнопки браузер берёт по самому длинному пункту, и такой
+   список раздувается рядом с соседями. */
+const { id, label, narrow = false } = Astro.props;
 ---
-<span class="select">
+<span class:list={['select', narrow && 'select--narrow']}>
   <select id={id} aria-label={label}>
     <slot />
   </select>

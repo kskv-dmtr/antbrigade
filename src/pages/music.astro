@@ -221,7 +221,41 @@ const PAGE = 50;
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  genreEl.addEventListener('change', () => { state.genre = genreEl.value; rewind(); apply(); });
+  /* Ширина списка жанров — по выбранному пункту, а не по самому длинному из
+     294: иначе закрытая кнопка вдвое шире соседних и читается пустым полем.
+     Фиксированной шириной тоже не обойтись — короткая режет длинные
+     названия, длинная возвращает пустоту.
+
+     Мерим настоящей вёрсткой, а не canvas: у canvas нет ни letter-spacing,
+     ни text-transform, и оценка выходит на несколько пикселей заниженной —
+     ровно настолько, чтобы подпись обрезалась. */
+  const fitGenre = (() => {
+    const cs = getComputedStyle(genreEl);
+    const проба = document.createElement('span');
+    проба.ariaHidden = 'true';
+    Object.assign(проба.style, {
+      position: 'absolute', visibility: 'hidden', whiteSpace: 'pre',
+      fontFamily: cs.fontFamily, fontSize: cs.fontSize, fontWeight: cs.fontWeight,
+      letterSpacing: cs.letterSpacing, textTransform: cs.textTransform
+    });
+    document.body.appendChild(проба);
+    const поля = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+
+    return () => {
+      проба.textContent = genreEl.options[genreEl.selectedIndex].textContent.trim();
+      genreEl.style.width = Math.ceil(проба.getBoundingClientRect().width + поля) + 'px';
+    };
+  })();
+
+  fitGenre();
+  // До загрузки шрифта строку меряет запасной, и ширина выходит другая.
+  document.fonts?.ready.then(fitGenre);
+
+  genreEl.addEventListener('change', () => {
+    state.genre = genreEl.value;
+    fitGenre();
+    rewind(); apply();
+  });
   yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  rewind(); apply(); });
   sortEl.addEventListener('change',  () => {
     state.sort = sortEl.value;
@@ -247,6 +281,7 @@ const PAGE = 50;
     Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });
     search.value = '';
     genreEl.value = '';
+    fitGenre();
     yearEl.value = '';
     sortEl.value = 'new';
     for (const [i, b] of [...typesEl.children].entries()) {

@@ -21,3 +21,55 @@ const { id, label, narrow = false } = Astro.props;
   </select>
   <Icon name="caret-down" class="select__chevron" />
 </span>
+
+<script>
+  /* Ширина закрытой кнопки — по выбранному пункту, а не по самому длинному
+     из списка. Браузер меряет её по длиннейшему, и список жанров из 294
+     названий раздувался вдвое против соседних, читаясь пустым полем.
+
+     Спрашиваем ширину у самого браузера: копия списка с одним выбранным
+     пунктом и width: auto. Замерять шрифт самим — что через canvas, что
+     скрытым элементом — не годится: внутри select браузер отводит тексту
+     на 2–3 пикселя больше, и подпись, подогнанная по замеру, обрезается
+     многоточием. Проверено на четырёх подписях, разница устойчивая.
+
+     Скрипт общий на страницу: Astro собирает его один раз, сколько бы
+     списков на ней ни стояло. */
+  const selects = document.querySelectorAll('.select select');
+
+  if (selects.length) {
+    const fit = (sel) => {
+      const пункт = sel.options[sel.selectedIndex];
+      if (!пункт) return;
+
+      const копия = sel.cloneNode(false);
+      копия.removeAttribute('id');          // второй такой же id в документе не нужен
+      копия.setAttribute('aria-hidden', 'true');
+      копия.tabIndex = -1;
+      копия.appendChild(пункт.cloneNode(true));
+      Object.assign(копия.style, {
+        position: 'absolute', visibility: 'hidden', width: 'auto', maxWidth: 'none'
+      });
+
+      // Кладём рядом: копия должна унаследовать те же стили, что и оригинал.
+      sel.parentNode.appendChild(копия);
+      const нужно = копия.getBoundingClientRect().width;
+      копия.remove();
+
+      sel.style.width = Math.ceil(нужно) + 'px';
+    };
+
+    const fitAll = () => { for (const sel of selects) fit(sel); };
+
+    fitAll();
+    // До загрузки шрифта строку меряет запасной, и ширина выходит другая.
+    document.fonts?.ready.then(fitAll);
+
+    for (const sel of selects) {
+      // change — выбор человеком; input — программная смена, например при
+      // сбросе фильтров, когда значение ставят из кода.
+      sel.addEventListener('change', () => fit(sel));
+      sel.addEventListener('input', () => fit(sel));
+    }
+  }
+</script>

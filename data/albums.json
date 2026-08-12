@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-12T18:08:56Z",
+  "generatedAt": "2026-08-12T22:04:42Z",
   "counts": {
-    "albums": 1071,
-    "artists": 963,
-    "labels": 604,
+    "albums": 1072,
+    "artists": 964,
+    "labels": 605,
     "videos": 59
   },
   "albums": [
@@ -8261,6 +8261,35 @@
       ],
       "labels": [
         "Metal Blade Records"
+      ]
+    },
+    {
+      "id": "3ba4129a-8c52-8009-a8c5-e1b616cb7c71",
+      "slug": "sakura-tsuruta-what-are-you-drinking",
+      "artist": "Sakura Tsuruta",
+      "album": "What are You Drinking?",
+      "url": "https://album.link/vpn6qg60hbxqn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab0cd0f4f-d822-47ad-a929-1a588f3023df%3Aa1907171696_10.jpg?table=block&id=3ba4129a-8c52-8009-a8c5-e1b616cb7c71&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "Tech House"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-09-26",
+      "year": 2025,
+      "artistIds": [
+        "3ba4129a-8c52-8014-a2d4-d08aee9b6fbd"
+      ],
+      "artists": [
+        "Sakura Tsuruta"
+      ],
+      "labelIds": [
+        "3ba4129a-8c52-803a-900e-d03da2a31cac"
+      ],
+      "labels": [
+        "Third Place Records"
       ]
     },
     {
@@ -44806,6 +44835,24 @@
       "videoIds": []
     },
     {
+      "id": "3ba4129a-8c52-8014-a2d4-d08aee9b6fbd",
+      "slug": "sakura-tsuruta",
+      "name": "Sakura Tsuruta",
+      "country": "JP",
+      "bandcamp": "https://sakuratsuruta.bandcamp.com/music",
+      "albumIds": [
+        "3ba4129a-8c52-8009-a8c5-e1b616cb7c71"
+      ],
+      "genres": [
+        "IDM",
+        "Tech House"
+      ],
+      "labelIds": [
+        "3ba4129a-8c52-803a-900e-d03da2a31cac"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-8020-bd60-e8033ccd3136",
       "slug": "salamanda",
       "name": "Salamanda",
@@ -57511,6 +57558,19 @@
         "3904129a-8c52-80df-90f0-ed19fa09ece9",
         "2824129a-8c52-80ca-b195-f3e8b6d3dd8b",
         "24a4129a-8c52-8053-8169-ef7a25dee213"
+      ]
+    },
+    {
+      "id": "3ba4129a-8c52-803a-900e-d03da2a31cac",
+      "slug": "third-place-records",
+      "name": "Third Place Records",
+      "country": "GB",
+      "bandcamp": "https://thirdplacerecords.bandcamp.com/music",
+      "albumIds": [
+        "3ba4129a-8c52-8009-a8c5-e1b616cb7c71"
+      ],
+      "artistIds": [
+        "3ba4129a-8c52-8014-a2d4-d08aee9b6fbd"
       ]
     },
     {

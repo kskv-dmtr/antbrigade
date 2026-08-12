@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T02:47:25Z",
+  "generatedAt": "2026-08-12T22:04:53Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17006,6 +17006,22 @@
       "upc": "0045778820061",
       "tracks": 14,
       "releaseDate": "2026-06-10"
+    },
+    "3ba4129a-8c52-8009-a8c5-e1b616cb7c71": {
+      "source": "https://album.link/vpn6qg60hbxqn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7AJYV3w7HDOwv8LpCqdlfB",
+        "pandora": "https://www.pandora.com/AL:53529583",
+        "amazonMusic": "https://music.amazon.com/albums/B0FMPH4GTK",
+        "tidal": "https://listen.tidal.com/album/461189791",
+        "yandex": "https://music.yandex.ru/album/38071612",
+        "boomplay": "https://www.boomplay.com/albums/116516944",
+        "bandcamp": "https://thirdplacerecords.bandcamp.com/album/what-are-you-drinking-ep",
+        "amazonStore": "https://amazon.com/dp/B0FMPH4GTK"
+      },
+      "upc": "5054289253225",
+      "tracks": 4,
+      "releaseDate": "2025-08-26"
     }
   }
 }

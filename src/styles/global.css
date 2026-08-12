@@ -878,6 +878,9 @@ select option { background: #1a1a19; color: var(--fg); }
   object-fit: cover;
   display: block;
 }
+/* Кадр клипа шире обложки: 16:9 против квадрата. Обрезать его до квадрата
+   значит выбросить почти половину ширины, обычно вместе с лицами. */
+.detail__art--video { aspect-ratio: 16 / 9; }
 .detail__head {
   position: relative;
   flex: 1;
@@ -1149,6 +1152,7 @@ select option { background: #1a1a19; color: var(--fg); }
     height: auto;
     aspect-ratio: 1 / 1;
   }
+  .detail__art--video { aspect-ratio: 16 / 9; }
   .detail__head {
     flex-direction: column;
     align-items: flex-start;

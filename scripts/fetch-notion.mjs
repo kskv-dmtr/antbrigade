@@ -316,6 +316,12 @@ async function main() {
   // иначе выгрузка при тех же данных даёт разный файл и CI коммитит пустоту.
   videos.sort((a, b) => cmp(a.title, b.title) || cmp(a.id, b.id));
 
+  /* Адреса клипов — из полного названия, как оно лежит в Notion: там уже
+     стоит имя артиста перед чертой, и «one-girl-one-boy» без него у двух
+     разных исполнителей столкнулись бы. */
+  const videoSlugs = assignSlugs(videos, (v) => v.title);
+  for (const v of videos) v.slug = videoSlugs.get(v.id);
+
   // раскладка по артистам строится уже по отсортированному списку
   const videosByArtist = new Map();
   for (const item of videos) {

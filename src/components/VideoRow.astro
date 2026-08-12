@@ -8,7 +8,7 @@ import { videoTitle, videoArtists } from '../lib/db.js';
 
 const { video } = Astro.props;
 ---
-<a class="row row--video" href={video.url} target="_blank" rel="noopener noreferrer">
+<a class="row row--video" href={`/videos/${video.slug}`}>
   <span class="row__artist">{videoArtists(video)}</span>
   <span class="row__title">{videoTitle(video)}</span>
   <span class="row__meta">{video.kind}</span>

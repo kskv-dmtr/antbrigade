@@ -1,0 +1,82 @@
+---
+/* Страница клипа — та же полоса с кадром и заголовком, что у релиза.
+   Отличается пропорцией кадра: 16:9 вместо квадратной обложки.
+
+   Проигрывателя здесь нет и не будет: встроенный плеер тянет скрипты и
+   кадры с доменов YouTube, а их в России режут — на странице осталась бы
+   серая дыра. Поэтому кадр свой, скачанный, а смотреть уводим ссылкой. */
+
+import Base from '../../layouts/Base.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import Icon from '../../components/Icon.astro';
+import { videos, artistsOf, videosOf, thumbSrc, videoTitle } from '../../lib/db.js';
+
+export function getStaticPaths() {
+  return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
+}
+
+const { video } = Astro.props;
+const artists = artistsOf(video.artistIds);
+const title = videoTitle(video);
+const thumb = thumbSrc(video, 960);
+
+/* Другие клипы тех же исполнителей. Через Map, а не через фильтр: у клипа
+   бывает двое исполнителей, и общий ролик иначе попал бы в список дважды. */
+const rest = [...new Map(
+  artists
+    .flatMap((a) => videosOf(a.videoIds))
+    .filter((v) => v.id !== video.id)
+    .map((v) => [v.id, v])
+).values()];
+---
+<Base
+  title={`${title} · ant brigade`}
+  description={`${artists.map((a) => a.name).join(' · ')} — ${title}${video.kind ? `. ${video.kind}.` : '.'}`}
+  image={thumb}
+  activeSection="videos"
+>
+  <article class="detail">
+    <div class="detail__banner">
+      {thumb && <img class="detail__backdrop" src={thumb} alt="" aria-hidden="true" decoding="async" />}
+      {thumb && (
+        <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
+             alt={`${title} still`} fetchpriority="high" />
+      )}
+      <div class="detail__head">
+        {video.kind && <p class="detail__kicker">{video.kind}</p>}
+        <h1 class="detail__title">{title}</h1>
+        <p class="detail__artist">
+          {artists.map((a, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={`/artists/${a.slug}`}>{a.name}</a>
+            </>
+          ))}
+        </p>
+      </div>
+    </div>
+
+    <div class="detail__body">
+      <div>
+        {/* Тот же ряд, что «где послушать» у релиза: кнопка уводит наружу. */}
+        <div class="listen">
+          <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
+            Watch on YouTube <Icon name="arrow-elbow-down-right" class="icon-arrow" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {rest.length > 0 && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">More from {artists.map((a) => a.name).join(' · ')}</h2>
+        <span class="mono">{rest.length}</span>
+      </div>
+      <ul class="tiles tiles--auto tiles--video">
+        {rest.map((v) => <VideoCard video={v} />)}
+      </ul>
+    </section>
+  )}
+</Base>

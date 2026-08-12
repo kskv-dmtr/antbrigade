@@ -26,7 +26,10 @@ const src = thumbSrc(video, 480);
 const meta = video.kind ?? '';
 ---
 <Wrapper class:list={['tile', 'tile--video', extra]}>
-  <a class="tile__link" href={video.url} target="_blank" rel="noopener noreferrer">
+  {/* Ведёт на страницу клипа, а не сразу на YouTube: у клипа есть своя
+      страница, как у релиза, и подпись по наведению поэтому «Open» —
+      такая же, как на всех плитках сайта. */}
+  <a class="tile__link" href={`/videos/${video.slug}`}>
     <div class="tile__art">
       {src && (
         <img
@@ -42,7 +45,7 @@ const meta = video.kind ?? '';
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Watch <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
+        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
       </div>
     </div>
     {showArtist && <span class="tile__artist">{videoArtists(video)}</span>}

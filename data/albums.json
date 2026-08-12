@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-12T02:47:13Z",
+  "generatedAt": "2026-08-12T18:08:56Z",
   "counts": {
     "albums": 1071,
     "artists": 963,
@@ -58364,7 +58364,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-8011-be30-ca3659f3e880"
-      ]
+      ],
+      "slug": "one-girl-one-boy"
     },
     {
       "id": "3b74129a-8c52-8094-a3e6-cc5a11fa5542",
@@ -58373,7 +58374,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
-      ]
+      ],
+      "slug": "aaron-frazer-bring-you-a-ring"
     },
     {
       "id": "3b54129a-8c52-8060-a912-cb42f34a69e9",
@@ -58382,7 +58384,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
-      ]
+      ],
+      "slug": "aaron-frazer-it-s-a-shame"
     },
     {
       "id": "1064129a-8c52-80ca-9b75-c0413cca4c86",
@@ -58391,7 +58394,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2434129a-8c52-8040-a206-f275114bb194"
-      ]
+      ],
+      "slug": "alvilda-angoisse"
     },
     {
       "id": "37d4129a-8c52-804f-b7d7-dccf9660ca01",
@@ -58400,7 +58404,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2494129a-8c52-80fd-905f-d7c6bcee8268"
-      ]
+      ],
+      "slug": "anamanaguchi-meow"
     },
     {
       "id": "2484129a-8c52-80bf-9be4-caaf030fd370",
@@ -58409,7 +58414,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2484129a-8c52-808a-ac1b-ed859e33f197"
-      ]
+      ],
+      "slug": "bank-amerika"
     },
     {
       "id": "2894129a-8c52-8067-a0b1-c059d649a1b0",
@@ -58418,7 +58424,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2894129a-8c52-80d7-a3d3-cf8d088ad296"
-      ]
+      ],
+      "slug": "blue-earth-sound-half-half"
     },
     {
       "id": "24b4129a-8c52-8059-8fe4-ce3745e38d05",
@@ -58427,7 +58434,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2424129a-8c52-807f-998f-f0675dd4ecac"
-      ]
+      ],
+      "slug": "brijean-counting-sheep"
     },
     {
       "id": "2784129a-8c52-8025-a0c2-d2a5ac8c9a98",
@@ -58436,7 +58444,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2784129a-8c52-80bd-a66f-f6ecd160f2d0"
-      ]
+      ],
+      "slug": "castle-rat-wolf-i"
     },
     {
       "id": "38fe2b6c-c28d-48fc-a0a7-4c303776d1ca",
@@ -58445,7 +58454,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2434129a-8c52-80ea-9774-cfa180722a96"
-      ]
+      ],
+      "slug": "chat-pile-masc"
     },
     {
       "id": "1064129a-8c52-801a-8799-f6af489f2c14",
@@ -58454,7 +58464,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-804c-820e-e24867e92943"
-      ]
+      ],
+      "slug": "cobra-skulls-you-know-i-know"
     },
     {
       "id": "12a4129a-8c52-80ed-8935-c303f06c3a52",
@@ -58464,7 +58475,8 @@
       "artistIds": [
         "2414129a-8c52-80a5-958a-f8794c88e67b",
         "2414129a-8c52-805e-84b1-dfb6fbd20ab9"
-      ]
+      ],
+      "slug": "dance-with-the-dead-gunship-wolf-pack"
     },
     {
       "id": "ef8e9343-699f-4b15-a111-c3f51708ef77",
@@ -58474,7 +58486,8 @@
       "artistIds": [
         "2414129a-8c52-80a5-958a-f8794c88e67b",
         "2434129a-8c52-80d5-88d2-cc1cbf65f233"
-      ]
+      ],
+      "slug": "dance-with-the-dead-shaun-phillips-cold-as-hell"
     },
     {
       "id": "3b94129a-8c52-804f-97d7-fcc0f7eea16d",
@@ -58483,7 +58496,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2524129a-8c52-80d8-960b-edb32e8a4eaf"
-      ]
+      ],
+      "slug": "deecracks-revenge"
     },
     {
       "id": "03ca4847-51fc-4dde-9edd-6723d6128532",
@@ -58493,7 +58507,8 @@
       "artistIds": [
         "2434129a-8c52-808d-adde-ea2a0edcd33a",
         "2434129a-8c52-8013-b879-daddf61fdb34"
-      ]
+      ],
+      "slug": "dent-may-pearl-the-oysters-time-flies-when-you-re-having-fun"
     },
     {
       "id": "3b64129a-8c52-8088-a31f-fd4bf604ebb1",
@@ -58502,7 +58517,8 @@
       "kind": "Live Performance",
       "artistIds": [
         "24a4129a-8c52-80b2-b0c9-e2766652e445"
-      ]
+      ],
+      "slug": "don-west-live-at-park-orchards-recording-studios"
     },
     {
       "id": "2424129a-8c52-805d-ad8f-d0a05684ad23",
@@ -58512,7 +58528,8 @@
       "artistIds": [
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
         "2414129a-8c52-805f-b3ca-dc3408e30cf8"
-      ]
+      ],
+      "slug": "durand-jones-the-indications-been-so-long"
     },
     {
       "id": "2414129a-8c52-80f2-a7df-d32535a51e60",
@@ -58522,7 +58539,8 @@
       "artistIds": [
         "2414129a-8c52-805f-b3ca-dc3408e30cf8",
         "2414129a-8c52-803f-84bf-e1d9f7fb7397"
-      ]
+      ],
+      "slug": "durand-jones-the-indications-flower-moon"
     },
     {
       "id": "4ea3a645-86d0-4fc8-9efd-70c5c018d5ed",
@@ -58531,7 +58549,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2434129a-8c52-80e3-8917-de97363ee8b9"
-      ]
+      ],
+      "slug": "fontaines-d-c-favourite"
     },
     {
       "id": "2424129a-8c52-804d-8ef0-d14d5924410e",
@@ -58540,7 +58559,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2424129a-8c52-801f-928b-cd1b28ba171c"
-      ]
+      ],
+      "slug": "gelli-haha-bounce-house"
     },
     {
       "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",
@@ -58549,7 +58569,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
-      ]
+      ],
+      "slug": "ginger-root-there-was-a-time"
     },
     {
       "id": "2434129a-8c52-80e0-8575-c3b93b4a96af",
@@ -58558,7 +58579,8 @@
       "kind": "Live Performance",
       "artistIds": [
         "2434129a-8c52-8062-8072-d25aba1f3aab"
-      ]
+      ],
+      "slug": "glass-beams-primavera-sound-festival-2025"
     },
     {
       "id": "e30c83a1-a5c1-4111-9be9-ba53af4dad3b",
@@ -58569,7 +58591,8 @@
         "2414129a-8c52-805e-84b1-dfb6fbd20ab9",
         "24f4129a-8c52-80aa-ad15-ca73c90e9124",
         "24f4129a-8c52-8055-ac67-eaa7094a6e2f"
-      ]
+      ],
+      "slug": "gunship-carpenter-brut-gavin-rossdale-doom-dance"
     },
     {
       "id": "2eb4129a-8c52-8001-b0ac-c122c4b42a94",
@@ -58578,7 +58601,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2504129a-8c52-8005-b193-cb5c07e82375"
-      ]
+      ],
+      "slug": "h-3-f-s-a-l-t"
     },
     {
       "id": "3b64129a-8c52-8020-a52a-ed8869e4d993",
@@ -58587,7 +58611,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
-      ]
+      ],
+      "slug": "home-front-nation"
     },
     {
       "id": "3b64129a-8c52-8031-a68f-da9107f1b119",
@@ -58596,7 +58621,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2504129a-8c52-8084-81c4-df8d7f572db2"
-      ]
+      ],
+      "slug": "kamasi-washington-street-fighter-mas"
     },
     {
       "id": "7cff2645-771c-476b-b323-13101cba0a85",
@@ -58606,7 +58632,8 @@
       "artistIds": [
         "24f4129a-8c52-8089-bd74-cf956ca4a0d1",
         "24f4129a-8c52-801b-aea6-ea56a2a2d5a0"
-      ]
+      ],
+      "slug": "l-imperatrice-erick-the-architect-sweet-sublime"
     },
     {
       "id": "1254129a-8c52-807e-a65f-e7c9c6dfb7f8",
@@ -58615,7 +58642,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-80ba-b704-d7b64e3ae73c"
-      ]
+      ],
+      "slug": "la-lom-moonlight-over-montobello"
     },
     {
       "id": "3b74129a-8c52-802b-8443-eca317dfa9b6",
@@ -58624,7 +58652,8 @@
       "kind": "Official Video",
       "artistIds": [
         "3b74129a-8c52-809a-b128-d980a5f8d12d"
-      ]
+      ],
+      "slug": "los-baby-jaguars-el-fuego-salsa"
     },
     {
       "id": "eae73131-2081-49ac-817f-aece7dcce03f",
@@ -58633,7 +58662,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24f4129a-8c52-80de-ba69-f43b6a41ec4a"
-      ]
+      ],
+      "slug": "los-bitchos-talkie-talkie-charlie-charlie"
     },
     {
       "id": "3b64129a-8c52-80c1-876c-eab3fe094086",
@@ -58642,7 +58672,8 @@
       "kind": "Official Video",
       "artistIds": [
         "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60"
-      ]
+      ],
+      "slug": "madness-baggy-trousers"
     },
     {
       "id": "2424129a-8c52-80ad-a8a9-f768630a2696",
@@ -58651,7 +58682,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2424129a-8c52-80ab-bb89-c261c7561370"
-      ]
+      ],
+      "slug": "maladroit-gossip-problem"
     },
     {
       "id": "45babf66-d859-4031-8634-59a4c0940906",
@@ -58660,7 +58692,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
-      ]
+      ],
+      "slug": "masok-cold-water"
     },
     {
       "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
@@ -58671,7 +58704,8 @@
         "2504129a-8c52-804c-a693-dc85640a23de",
         "24f4129a-8c52-80aa-950d-c6b4128158db",
         "2504129a-8c52-804c-a693-dc85640a23de"
-      ]
+      ],
+      "slug": "mount-kimbie-king-krule-empty-and-silent"
     },
     {
       "id": "3b54129a-8c52-807b-a083-e2a5beab82fe",
@@ -58680,7 +58714,8 @@
       "kind": "Live Performance",
       "artistIds": [
         "3b54129a-8c52-8071-8b85-dbf65bc58b71"
-      ]
+      ],
+      "slug": "napalm-death-tiny-desk-concert"
     },
     {
       "id": "2414129a-8c52-8095-a205-db0ceb2a8f62",
@@ -58690,7 +58725,8 @@
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7",
         "2414129a-8c52-803b-b033-e9640796d102"
-      ]
+      ],
+      "slug": "nu-genea-celia-kameni-marechia"
     },
     {
       "id": "3b54129a-8c52-80c6-8610-efd07b2181a0",
@@ -58699,7 +58735,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
-      ]
+      ],
+      "slug": "nu-genea-people-of-the-moon"
     },
     {
       "id": "2404129a-8c52-80ab-ad37-cdb22b949a4b",
@@ -58708,7 +58745,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
-      ]
+      ],
+      "slug": "nu-genea-scialla"
     },
     {
       "id": "3144129a-8c52-80a9-a08d-dfcfdeaad66f",
@@ -58717,7 +58755,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
-      ]
+      ],
+      "slug": "pig-destroyer-gravedancer"
     },
     {
       "id": "2414129a-8c52-80d4-a826-dbc26f9f2c01",
@@ -58726,7 +58765,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2404129a-8c52-8035-a990-db8919c35959"
-      ]
+      ],
+      "slug": "rio-kosta-it-s-starting"
     },
     {
       "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",
@@ -58736,7 +58776,8 @@
       "artistIds": [
         "24f4129a-8c52-801b-b600-e0e7fd747383",
         "2524129a-8c52-801e-a64d-c337e942f8b1"
-      ]
+      ],
+      "slug": "slomosa-battling-guns"
     },
     {
       "id": "a375d4dc-94e7-4003-8185-7b37dc880e98",
@@ -58745,7 +58786,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
-      ]
+      ],
+      "slug": "sml-three-over-steel"
     },
     {
       "id": "3af4129a-8c52-80b3-a172-df0f101152c4",
@@ -58754,7 +58796,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2524129a-8c52-80ea-93f9-fe0796537a7f"
-      ]
+      ],
+      "slug": "sp-gelse-speedfreaks"
     },
     {
       "id": "37f4129a-8c52-80ee-b56c-fddc39bef8d8",
@@ -58763,7 +58806,8 @@
       "kind": "Official Video",
       "artistIds": [
         "37f4129a-8c52-80c2-8df0-e129efd28274"
-      ]
+      ],
+      "slug": "subsonic-eye-aku-cemas"
     },
     {
       "id": "067ec0d4-94df-434a-ac36-1269d1e6989e",
@@ -58772,7 +58816,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-80e4-bc92-e411321f1ca6"
-      ]
+      ],
+      "slug": "suck-gravedigger"
     },
     {
       "id": "1064129a-8c52-8067-816a-fd3e9d834025",
@@ -58781,7 +58826,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24f4129a-8c52-8034-b5f8-c86b33e20d27"
-      ]
+      ],
+      "slug": "surely-shirley-lavender-blues"
     },
     {
       "id": "3b54129a-8c52-80ee-ac7c-e287a200ccfb",
@@ -58790,7 +58836,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2494129a-8c52-80e3-bc37-fb7824da0196"
-      ]
+      ],
+      "slug": "teen-mortgage-democracy-manifest"
     },
     {
       "id": "2734129a-8c52-8038-996a-d4e951a8fdfc",
@@ -58799,7 +58846,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
-      ]
+      ],
+      "slug": "the-bouncing-souls-power"
     },
     {
       "id": "2754129a-8c52-8091-8e3e-d49513e3047b",
@@ -58809,7 +58857,8 @@
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f",
         "2754129a-8c52-80ea-af7b-c26748dfe1cd"
-      ]
+      ],
+      "slug": "thundercat-remi-wolf-children-of-the-baked-potato"
     },
     {
       "id": "3b64129a-8c52-8052-9e48-d4b7a2fd1c8b",
@@ -58818,7 +58867,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f"
-      ]
+      ],
+      "slug": "thundercat-dragonball-durag"
     },
     {
       "id": "2704129a-8c52-80fd-af33-d33d94cfa19a",
@@ -58827,7 +58877,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2704129a-8c52-806d-bfca-fdbefc14172a"
-      ]
+      ],
+      "slug": "totorro-new-music"
     },
     {
       "id": "3774129a-8c52-8041-a6fd-efd6b8e1e22e",
@@ -58836,7 +58887,8 @@
       "kind": "Official Video",
       "artistIds": [
         "3744129a-8c52-80ef-9ebe-ec0ed9b8ee26"
-      ]
+      ],
+      "slug": "touch-girl-apple-blossom-heart-go"
     },
     {
       "id": "2564129a-8c52-803e-9063-d286b84af8d7",
@@ -58845,7 +58897,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2554129a-8c52-8058-b86d-c258ac4c6344"
-      ]
+      ],
+      "slug": "tunde-adebimpe-somebody-new"
     },
     {
       "id": "2434129a-8c52-8059-a732-c1dc6e9aea52",
@@ -58854,7 +58907,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2434129a-8c52-808c-a4f7-fa69a88a9742"
-      ]
+      ],
+      "slug": "tuxedo-back-4-more"
     },
     {
       "id": "36d4129a-8c52-8061-8052-f97ccc411dba",
@@ -58863,7 +58917,8 @@
       "kind": "Official Video",
       "artistIds": [
         "3454129a-8c52-808c-a823-c75492b83f4d"
-      ]
+      ],
+      "slug": "warbaby-and-always"
     },
     {
       "id": "2814129a-8c52-80d2-8cb1-fcd73eb80eb6",
@@ -58872,7 +58927,8 @@
       "kind": "Official Video",
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
-      ]
+      ],
+      "slug": "yin-yin-spirit-adapter"
     },
     {
       "id": "2414129a-8c52-80ea-b3dd-c89caaa8fecd",
@@ -58881,7 +58937,8 @@
       "kind": "Live Performance",
       "artistIds": [
         "2414129a-8c52-805e-b11f-d3d452c6e3a2"
-      ]
+      ],
+      "slug": "yuuf-alma-s-cove-ep-full-live-performance-live-in-preveli-go"
     },
     {
       "id": "1187dc03-b79b-486e-9a70-8e93836f6048",
@@ -58890,7 +58947,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24a4129a-8c52-8082-8335-e14604efa91e"
-      ]
+      ],
+      "slug": "tella-adagio"
     },
     {
       "id": "3b44129a-8c52-80b4-88cc-c0d473cb25cc",
@@ -58899,7 +58957,8 @@
       "kind": "Official Video",
       "artistIds": [
         "24a4129a-8c52-8082-8335-e14604efa91e"
-      ]
+      ],
+      "slug": "tella-up-and-away"
     }
   ]
 }

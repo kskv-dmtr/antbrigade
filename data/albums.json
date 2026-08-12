@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-11T13:45:14Z",
+  "generatedAt": "2026-08-12T00:01:54Z",
   "counts": {
     "albums": 1070,
     "artists": 962,
     "labels": 604,
-    "videos": 58
+    "videos": 59
   },
   "albums": [
     {
@@ -24696,8 +24696,8 @@
       "url": "https://album.link/6zns5jhj2rpk3",
       "cover": "https://antbrigade.notion.site/image/attachment%3A86800d66-0d2b-4ae3-8b01-5bb062c8ea99%3Aa1952095731_10.jpg?table=block&id=f3a51968-e656-4ffe-8820-4117ff5382ee&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Ramonescore",
-        "Pop Punk"
+        "Pop Punk",
+        "Punk Rock"
       ],
       "types": [
         "Compilation"
@@ -35293,13 +35293,15 @@
         "f3a51968-e656-4ffe-8820-4117ff5382ee"
       ],
       "genres": [
-        "Ramonescore",
-        "Pop Punk"
+        "Pop Punk",
+        "Punk Rock"
       ],
       "labelIds": [
         "2484129a-8c52-806e-bd5e-e0f260a9b0d3"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3b94129a-8c52-804f-97d7-fcc0f7eea16d"
+      ]
     },
     {
       "id": "3284129a-8c52-80a4-b2de-ceb5683dc20c",
@@ -58421,6 +58423,15 @@
       "artistIds": [
         "2414129a-8c52-80a5-958a-f8794c88e67b",
         "2434129a-8c52-80d5-88d2-cc1cbf65f233"
+      ]
+    },
+    {
+      "id": "3b94129a-8c52-804f-97d7-fcc0f7eea16d",
+      "title": "DeeCRACKS | Revenge",
+      "url": "https://youtu.be/kIpA8_ZbcPE?si=eRt3syosKqsZyU-V",
+      "kind": "Official Video",
+      "artistIds": [
+        "2524129a-8c52-80d8-960b-edb32e8a4eaf"
       ]
     },
     {

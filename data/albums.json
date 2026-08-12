@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-12T00:01:54Z",
+  "generatedAt": "2026-08-12T02:47:13Z",
   "counts": {
-    "albums": 1070,
-    "artists": 962,
+    "albums": 1071,
+    "artists": 963,
     "labels": 604,
     "videos": 59
   },
@@ -602,6 +602,36 @@
       ],
       "labels": [
         "Loma Vista Recordings"
+      ]
+    },
+    {
+      "id": "3ba4129a-8c52-804e-bfec-f63900b19289",
+      "slug": "the-garden-bootleg",
+      "artist": "The Garden",
+      "album": "Bootleg",
+      "url": "https://album.link/7j4swjrfspgvs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af33099e8-3dc6-48a2-acce-235a567bc5c0%3Aa1792931525_10.jpg?table=block&id=3ba4129a-8c52-804e-bfec-f63900b19289&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Art Punk",
+        "Garage Punk",
+        "Synth Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-10",
+      "year": 2026,
+      "artistIds": [
+        "3ba4129a-8c52-803d-8791-fea72a5bbed0"
+      ],
+      "artists": [
+        "The Garden"
+      ],
+      "labelIds": [
+        "35a4129a-8c52-80b2-8748-e67799ccaea3"
+      ],
+      "labels": [
+        "Epitaph"
       ]
     },
     {
@@ -47108,6 +47138,25 @@
       "videoIds": []
     },
     {
+      "id": "3ba4129a-8c52-803d-8791-fea72a5bbed0",
+      "slug": "the-garden",
+      "name": "The Garden",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3ba4129a-8c52-804e-bfec-f63900b19289"
+      ],
+      "genres": [
+        "Art Punk",
+        "Garage Punk",
+        "Synth Punk"
+      ],
+      "labelIds": [
+        "35a4129a-8c52-80b2-8748-e67799ccaea3"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-803f-b0be-d73d1fbb2181",
       "slug": "the-jesus-lizard",
       "name": "The Jesus Lizard",
@@ -51880,10 +51929,12 @@
       "bandcamp": null,
       "albumIds": [
         "3ad4129a-8c52-80fc-a118-df1a1ed54557",
+        "3ba4129a-8c52-804e-bfec-f63900b19289",
         "35a4129a-8c52-802f-9eef-daeebb4f66ad"
       ],
       "artistIds": [
         "3ad4129a-8c52-80d6-9b05-fe55e3d622c6",
+        "3ba4129a-8c52-803d-8791-fea72a5bbed0",
         "35a4129a-8c52-8060-a90c-d43af7ed6eee"
       ]
     },

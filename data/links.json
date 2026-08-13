@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T22:04:53Z",
+  "generatedAt": "2026-08-13T19:28:10Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17022,6 +17022,19 @@
       "upc": "5054289253225",
       "tracks": 4,
       "releaseDate": "2025-08-26"
+    },
+    "3bb4129a-8c52-809a-8d58-f9423673ea67": {
+      "source": "https://album.link/k6r9nhkqwsvtb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2kq8aMszimm6Km38MyJOcE",
+        "amazonMusic": "https://music.amazon.com/albums/B071RCSJD8",
+        "tidal": "https://listen.tidal.com/album/72976145",
+        "boomplay": "https://www.boomplay.com/albums/63482732",
+        "amazonStore": "https://amazon.com/dp/B071RCSJD8"
+      },
+      "upc": "840095151818",
+      "tracks": 10,
+      "releaseDate": "2013-01"
     }
   }
 }

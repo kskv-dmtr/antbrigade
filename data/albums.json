@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-12T22:04:42Z",
+  "generatedAt": "2026-08-13T19:27:55Z",
   "counts": {
-    "albums": 1072,
-    "artists": 964,
-    "labels": 605,
+    "albums": 1073,
+    "artists": 965,
+    "labels": 606,
     "videos": 59
   },
   "albums": [
@@ -31497,6 +31497,35 @@
       ]
     },
     {
+      "id": "3bb4129a-8c52-809a-8d58-f9423673ea67",
+      "slug": "the-visitors-yeti",
+      "artist": "The Visitors",
+      "album": "Yeti",
+      "url": "https://album.link/k6r9nhkqwsvtb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1467e6bf-a60a-4c4b-9990-f5b6d6514beb%3Aa0096965525_10.jpg?table=block&id=3bb4129a-8c52-809a-8d58-f9423673ea67&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Punk",
+        "Punk Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2013-08-14",
+      "year": 2013,
+      "artistIds": [
+        "3bb4129a-8c52-8041-a6dd-c5be017e3e05"
+      ],
+      "artists": [
+        "The Visitors"
+      ],
+      "labelIds": [
+        "3bb4129a-8c52-80c1-9d9c-c86a01cd91eb"
+      ],
+      "labels": [
+        "It’s Alive Records"
+      ]
+    },
+    {
       "id": "2414129a-8c52-8047-8c86-f8367c2b6f8a",
       "slug": "fishmans",
       "artist": "Fishmans",
@@ -47656,6 +47685,24 @@
       "videoIds": []
     },
     {
+      "id": "3bb4129a-8c52-8041-a6dd-c5be017e3e05",
+      "slug": "the-visitors",
+      "name": "The Visitors",
+      "country": "CA",
+      "bandcamp": null,
+      "albumIds": [
+        "3bb4129a-8c52-809a-8d58-f9423673ea67"
+      ],
+      "genres": [
+        "Pop Punk",
+        "Punk Rock"
+      ],
+      "labelIds": [
+        "3bb4129a-8c52-80c1-9d9c-c86a01cd91eb"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-80f0-a3bc-e774bdbecde9",
       "slug": "the-yum-yums",
       "name": "The Yum Yums",
@@ -53338,6 +53385,19 @@
       ],
       "artistIds": [
         "2504129a-8c52-80c5-a9e3-e0d17d0e6225"
+      ]
+    },
+    {
+      "id": "3bb4129a-8c52-80c1-9d9c-c86a01cd91eb",
+      "slug": "it-s-alive-records",
+      "name": "It’s Alive Records",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3bb4129a-8c52-809a-8d58-f9423673ea67"
+      ],
+      "artistIds": [
+        "3bb4129a-8c52-8041-a6dd-c5be017e3e05"
       ]
     },
     {

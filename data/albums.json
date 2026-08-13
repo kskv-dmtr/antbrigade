@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-13T19:27:55Z",
+  "generatedAt": "2026-08-13T22:05:03Z",
   "counts": {
-    "albums": 1073,
-    "artists": 965,
-    "labels": 606,
+    "albums": 1074,
+    "artists": 966,
+    "labels": 607,
     "videos": 59
   },
   "albums": [
@@ -4631,6 +4631,36 @@
       ],
       "labels": [
         "Strut"
+      ]
+    },
+    {
+      "id": "3bb4129a-8c52-807a-b1ab-f4a94bcfd1d8",
+      "slug": "nyve-becoming",
+      "artist": "NYVE",
+      "album": "Becoming",
+      "url": "https://album.link/s6gzvkdv0r848",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2d26db87-a6d9-41da-b5a8-870f6ca9a1d1%3Aa1251962125_10.jpg?table=block&id=3bb4129a-8c52-807a-b1ab-f4a94bcfd1d8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Bossa Nova",
+        "Jazz Pop"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-02-13",
+      "year": 2026,
+      "artistIds": [
+        "3bb4129a-8c52-8049-a304-e8a18403d8fa"
+      ],
+      "artists": [
+        "NYVE"
+      ],
+      "labelIds": [
+        "3bb4129a-8c52-80b2-8557-fe9ad7798dc1"
+      ],
+      "labels": [
+        "b-kube music"
       ]
     },
     {
@@ -35376,7 +35406,7 @@
       "slug": "deecracks",
       "name": "DeeCRACKS",
       "country": "AT",
-      "bandcamp": null,
+      "bandcamp": "https://deecracks.bandcamp.com/music",
       "albumIds": [
         "f3a51968-e656-4ffe-8820-4117ff5382ee"
       ],
@@ -42678,6 +42708,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3bb4129a-8c52-8049-a304-e8a18403d8fa",
+      "slug": "nyve",
+      "name": "NYVE",
+      "country": "NL",
+      "bandcamp": "https://nyve.bandcamp.com/music",
+      "albumIds": [
+        "3bb4129a-8c52-807a-b1ab-f4a94bcfd1d8"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Bossa Nova",
+        "Jazz Pop"
+      ],
+      "labelIds": [
+        "3bb4129a-8c52-80b2-8557-fe9ad7798dc1"
       ],
       "videoIds": []
     },
@@ -50289,6 +50338,19 @@
       "artistIds": [
         "2514129a-8c52-8059-a6a1-db3f210c547a",
         "24a4129a-8c52-80d4-8045-f3076b9a2b80"
+      ]
+    },
+    {
+      "id": "3bb4129a-8c52-80b2-8557-fe9ad7798dc1",
+      "slug": "b-kube-music",
+      "name": "b-kube music",
+      "country": "NL",
+      "bandcamp": null,
+      "albumIds": [
+        "3bb4129a-8c52-807a-b1ab-f4a94bcfd1d8"
+      ],
+      "artistIds": [
+        "3bb4129a-8c52-8049-a304-e8a18403d8fa"
       ]
     },
     {

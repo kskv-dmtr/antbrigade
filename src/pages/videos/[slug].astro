@@ -36,7 +36,7 @@ const rest = [...new Map(
   activeSection="videos"
 >
   <article class="detail">
-    <div class="detail__banner">
+    <div class="detail__banner detail__banner--video">
       {thumb && <img class="detail__backdrop" src={thumb} alt="" aria-hidden="true" decoding="async" />}
       {thumb && (
         <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
@@ -44,7 +44,7 @@ const rest = [...new Map(
       )}
       <div class="detail__head">
         {video.kind && <p class="detail__kicker">{video.kind}</p>}
-        <h1 class="detail__title">{title}</h1>
+        <h1 class="detail__title detail__title--video">{title}</h1>
         <p class="detail__artist">
           {artists.map((a, i) => (
             <>

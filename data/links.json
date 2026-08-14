@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T22:05:16Z",
+  "generatedAt": "2026-08-14T13:46:24Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17048,6 +17048,22 @@
       "upc": "5026854369686",
       "tracks": 6,
       "releaseDate": "2026-01-13"
+    },
+    "3bc4129a-8c52-8087-a140-c7ab7716e9d2": {
+      "source": "https://album.link/scxtmjsj5nxdz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0YdkoedEJ06zjdrBKxTXGV",
+        "pandora": "https://www.pandora.com/AL:48969125",
+        "deezer": "https://www.deezer.com/album/765114311",
+        "amazonMusic": "https://music.amazon.com/albums/B0FBHS118J",
+        "tidal": "https://listen.tidal.com/album/439185647",
+        "yandex": "https://music.yandex.ru/album/36905162",
+        "bandcamp": "https://jirijiri.bandcamp.com/album/give-me-disco-vol-1-selected-by-dj-kobayashi",
+        "amazonStore": "https://amazon.com/dp/B0FBHS118J"
+      },
+      "upc": "4062548119053",
+      "tracks": 4,
+      "releaseDate": "2025-06-18"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-13T22:05:03Z",
+  "generatedAt": "2026-08-14T13:46:13Z",
   "counts": {
-    "albums": 1074,
-    "artists": 966,
+    "albums": 1075,
+    "artists": 967,
     "labels": 607,
     "videos": 59
   },
@@ -10039,6 +10039,35 @@
       ],
       "labels": [
         "Mighty Eye Records"
+      ]
+    },
+    {
+      "id": "3bc4129a-8c52-8087-a140-c7ab7716e9d2",
+      "slug": "jiri-jiri-give-me-disco-vol-1-selected-by-dj-kobayashi",
+      "artist": "Jiri Jiri",
+      "album": "Give Me Disco, Vol. 1 (Selected by DJ Kobayashi)",
+      "url": "https://album.link/scxtmjsj5nxdz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A80662776-afd8-4f2e-893b-33194d8070c7%3Aa2364735370_10.jpg?table=block&id=3bc4129a-8c52-8087-a140-c7ab7716e9d2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Boogie"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-07-18",
+      "year": 2025,
+      "artistIds": [
+        "3bc4129a-8c52-80da-b4b3-f405f28c2856"
+      ],
+      "artists": [
+        "Jiri Jiri"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8056-af87-f846674a33ab"
+      ],
+      "labels": [
+        "Batov Records"
       ]
     },
     {
@@ -39164,6 +39193,24 @@
       "videoIds": []
     },
     {
+      "id": "3bc4129a-8c52-80da-b4b3-f405f28c2856",
+      "slug": "jiri-jiri",
+      "name": "Jiri Jiri",
+      "country": "DE",
+      "bandcamp": "https://jirijiri.bandcamp.com/music",
+      "albumIds": [
+        "3bc4129a-8c52-8087-a140-c7ab7716e9d2"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Boogie"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8056-af87-f846674a33ab"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24d4129a-8c52-8091-affd-c55a11dd4cb9",
       "slug": "jitwam",
       "name": "Jitwam",
@@ -50413,8 +50460,9 @@
       "slug": "batov-records",
       "name": "Batov Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://batovrecords.bandcamp.com/",
       "albumIds": [
+        "3bc4129a-8c52-8087-a140-c7ab7716e9d2",
         "2264129a-8c52-80ba-8e5f-ce7f24cd3e62",
         "10a4129a-8c52-8046-ae56-ee657a9d6398",
         "e2f791b2-8ce7-4045-a351-fcd96634d07d",
@@ -50422,6 +50470,7 @@
         "8f80099a-e6b5-4979-81fd-56bdc1f09871"
       ],
       "artistIds": [
+        "3bc4129a-8c52-80da-b4b3-f405f28c2856",
         "2494129a-8c52-8050-ab11-d101fbe0e5b8",
         "2504129a-8c52-80d8-9302-ef6c4c021119",
         "2504129a-8c52-8035-ab39-ea60ca960b99",

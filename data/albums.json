@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-14T13:46:13Z",
+  "generatedAt": "2026-08-15T01:51:26Z",
   "counts": {
-    "albums": 1075,
+    "albums": 1076,
     "artists": 967,
     "labels": 607,
     "videos": 59
   },
   "albums": [
+    {
+      "id": "3bc4129a-8c52-804a-bf1d-d6d5782a7a05",
+      "slug": "djrum-i-wander",
+      "artist": "DjRUM",
+      "album": "I Wander",
+      "url": "https://album.link/kc2x9jthsb3pd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aeaa375b3-c825-4b29-8419-c337496663ce%3Aa1485799457_10.jpg?table=block&id=3bc4129a-8c52-804a-bf1d-d6d5782a7a05&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "UK Bass"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-08-14",
+      "year": 2026,
+      "artistIds": [
+        "24a4129a-8c52-80e9-b904-cbd378ae2edc"
+      ],
+      "artists": [
+        "DjRUM"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-802c-b962-df1ad609c858"
+      ],
+      "labels": [
+        "Houndstooth"
+      ]
+    },
     {
       "id": "3b64129a-8c52-80be-9d66-f3892cd8d367",
       "slug": "ceremony-tell-me-your-dream",
@@ -35635,14 +35664,16 @@
       "slug": "djrum",
       "name": "DjRUM",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://djrum.bandcamp.com/music",
       "albumIds": [
+        "3bc4129a-8c52-804a-bf1d-d6d5782a7a05",
         "1e84129a-8c52-8014-bdce-d1d1980263fc",
         "70113a81-ec11-4ef7-bfb1-502abb89fd1d"
       ],
       "genres": [
-        "Electronic",
         "IDM",
+        "UK Bass",
+        "Electronic",
         "Techno"
       ],
       "labelIds": [
@@ -53088,8 +53119,9 @@
       "slug": "houndstooth",
       "name": "Houndstooth",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://houndstoothlabel.bandcamp.com/",
       "albumIds": [
+        "3bc4129a-8c52-804a-bf1d-d6d5782a7a05",
         "1e84129a-8c52-8014-bdce-d1d1980263fc",
         "70113a81-ec11-4ef7-bfb1-502abb89fd1d"
       ],

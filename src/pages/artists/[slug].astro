@@ -69,18 +69,8 @@ const clipsSorted = clips.slice().sort((a, b) => {
     )}
   </dl>
 
-  {clipsSorted.length > 0 && (
-    <section class="section">
-      <div class="head">
-        <h2 class="display display--md">Videos</h2>
-        <span class="mono">[{clipsSorted.length}]</span>
-      </div>
-      <ul class="tiles tiles--auto tiles--video">
-        {clipsSorted.map((v) => <VideoCard video={v} />)}
-      </ul>
-    </section>
-  )}
-
+  {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
+      дискография, а клипы есть у полутора десятков из девятисот. */}
   <section class="section">
     <div class="head">
       <h2 class="display display--md">Discography</h2>
@@ -95,4 +85,16 @@ const clipsSorted = clips.slice().sort((a, b) => {
       <p class="empty">No releases by this artist yet.</p>
     )}
   </section>
+
+  {clipsSorted.length > 0 && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">Videos</h2>
+        <span class="mono">[{clipsSorted.length}]</span>
+      </div>
+      <ul class="tiles tiles--auto tiles--video">
+        {clipsSorted.map((v) => <VideoCard video={v} />)}
+      </ul>
+    </section>
+  )}
 </Base>

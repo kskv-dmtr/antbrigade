@@ -36,6 +36,9 @@ const list = videos
   .sort((a, b) =>
     videoArtists(a).localeCompare(videoArtists(b)) ||
     videoTitle(a).localeCompare(videoTitle(b)));
+
+// Сколько записей показывать сразу и сколько добавлять по нажатию — как на Music.
+const PAGE = 50;
 ---
 <Base
   title="Videos · ant brigade"
@@ -94,6 +97,10 @@ const list = videos
       </li>
     ))}
   </ul>
+
+  {/* Кнопка появляется только со скриптом: без него показаны все записи,
+      и «показать ещё» было бы нечего делать. */}
+  <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
 </Base>
 
 <script>
@@ -105,43 +112,68 @@ const list = videos
   const kindsEl = document.getElementById('kinds');
   const viewsEl = document.getElementById('views');
   const sortEl  = document.getElementById('sort');
+  const more    = document.getElementById('more');
 
   const total = cards.length;
+  const PAGE  = Number(more.dataset.page) || 50;
   const state = { q: '', kind: '' };
 
   // Порядок с сервера — по исполнителю; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
+  /* Порядок, в котором записи сейчас лежат в разметке. Именно по нему
+     отсчитываются первые PAGE: считать по исходному массиву нельзя — после
+     сортировки «первыми» станут не те. */
+  let current = initialOrder;
+
+  // Сколько записей показано. Сбрасывается при любой смене выборки.
+  let limit = PAGE;
+
   function apply() {
+    // Видимость складывается из двух условий: запись подходит под выборку
+    // и попадает в текущие первые limit подходящих.
     let shown = 0;
-    for (const el of cards) {
+    for (const el of current) {
       const d = el.dataset;
       const ok = (!state.q || d.search.includes(state.q)) &&
                  (!state.kind || d.kind === state.kind);
-      el.hidden = !ok;
       if (ok) shown++;
+      el.hidden = !ok || shown > limit;
     }
     empty.hidden = shown > 0;
     // Как на Music: пока ничего не отсеяно — одно число, дальше «сколько
     // из скольких».
     counter.textContent = shown === total ? `[${shown}]` : `[${shown} / ${total}]`;
+
+    const rest = shown - limit;
+    more.hidden = rest <= 0;
+    if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
   }
 
+  // Любая смена выборки возвращает список к первой странице.
+  function rewind() { limit = PAGE; }
+
   function sort() {
-    const order = sortEl.value === 'artist'
+    current = sortEl.value === 'artist'
       ? initialOrder
       : cards.slice().sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
 
     const frag = document.createDocumentFragment();
-    for (const el of order) frag.appendChild(el);
+    for (const el of current) frag.appendChild(el);
     list.appendChild(frag);
   }
+
+  more.addEventListener('click', () => {
+    limit += PAGE;
+    apply();
+  });
 
   kindsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;
     state.kind = btn.dataset.kind;
     for (const b of kindsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+    rewind();
     apply();
   });
 
@@ -152,13 +184,14 @@ const list = videos
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  sortEl.addEventListener('change', () => { sort(); apply(); });
+  sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       state.q = search.value.trim().toLowerCase();
+      rewind();
       apply();
     }, 120);
   });
@@ -174,4 +207,8 @@ const list = videos
     field.addEventListener('change', close);
     field.addEventListener('blur', close);
   }
+
+  /* Первый расчёт: до него в разметке видны все записи — так страница
+     работает без скрипта и целиком достаётся поисковикам. */
+  apply();
 </script>

@@ -8,7 +8,6 @@
 
 import Base from '../../layouts/Base.astro';
 import VideoCard from '../../components/VideoCard.astro';
-import Icon from '../../components/Icon.astro';
 import { videos, artistsOf, videosOf, thumbSrc, videoTitle } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -58,10 +57,12 @@ const rest = [...new Map(
 
     <div class="detail__body">
       <div>
-        {/* Тот же ряд, что «где послушать» у релиза: кнопка уводит наружу. */}
+        {/* Тот же ряд, что «где послушать» у релиза: название площадки без
+            пояснений и без стрелки — на странице релиза кнопки набраны так
+            же, и «Watch on» рядом с ними выглядело бы объяснением очевидного. */}
         <div class="listen">
           <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
-            Watch on YouTube <Icon name="arrow-elbow-down-right" class="icon-arrow" />
+            YouTube
           </a>
         </div>
       </div>

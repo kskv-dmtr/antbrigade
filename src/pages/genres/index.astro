@@ -29,6 +29,8 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
 });
 
 const solo = genres.filter((g) => g.count === 1).length;
+// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
+const PAGE = 50;
 ---
 <Base
   title="Genres · ant brigade"
@@ -48,7 +50,7 @@ const solo = genres.filter((g) => g.count === 1).length;
       <ViewSwitch />
     </div>
 
-    <div class="filters filters--scroll">
+    <div class="filters">
       {/* Первая буква — тот же сегментированный переключатель, что тип
           релиза на Music и вид ролика на Videos: кнопка «все» и дальше по
           кнопке на букву. Отсеивает список, а не уводит к заголовку. */}
@@ -102,6 +104,10 @@ const solo = genres.filter((g) => g.count === 1).length;
     ))}
   </ul>
 
+  {/* Кнопка появляется только со скриптом: без него показаны все записи,
+      и «показать ещё» было бы нечего делать. */}
+  <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
+
   <p class="foot-note">
     {solo} of them {solo === 1 ? 'has' : 'have'} a single release.
   </p>
@@ -115,48 +121,73 @@ const solo = genres.filter((g) => g.count === 1).length;
   const sortEl   = document.getElementById('sort');
   const alphabet = document.getElementById('alphabet');
 
+  const more = document.getElementById('more');
+
   const items = Array.from(list.querySelectorAll('.names__item'));
+  const PAGE = Number(more.dataset.page) || 50;
 
   // Порядок с сервера — алфавитный; запоминаем как исходный, чтобы возврат
   // к нему не пришлось собирать заново.
   const initialOrder = items.slice();
 
+  /* Порядок, в котором записи сейчас лежат в разметке. Именно по нему
+     отсчитываются первые PAGE: считать по исходному массиву нельзя — после
+     сортировки «первыми» станут не те. */
+  let current = initialOrder;
+
+  // Сколько записей показано. Сбрасывается при любой смене выборки.
+  let limit = PAGE;
+
   let query = '';
   let letter = '';
 
   function apply() {
+    // Видимость складывается из двух условий: запись подходит под выборку
+    // и попадает в текущие первые limit подходящих.
     let count = 0;
 
-    for (const li of items) {
+    for (const li of current) {
       const ok = (!query || li.dataset.search.includes(query)) &&
                  (!letter || li.dataset.letter === letter);
-      li.hidden = !ok;
       if (ok) count++;
+      li.hidden = !ok || count > limit;
     }
 
     empty.hidden = count > 0;
+
+    const rest = count - limit;
+    more.hidden = rest <= 0;
+    if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
   }
+
+  // Любая смена выборки возвращает список к первой странице.
+  function rewind() { limit = PAGE; }
 
   function sort() {
     const by = sortEl.value;
-    let order;
-    if (by === 'az') order = initialOrder;
-    else if (by === 'za') order = items.slice().reverse();
-    else order = items.slice().sort(
+    if (by === 'az') current = initialOrder;
+    else if (by === 'za') current = items.slice().reverse();
+    else current = items.slice().sort(
       (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
              || a.dataset.name.localeCompare(b.dataset.name)
     );
 
     const frag = document.createDocumentFragment();
-    for (const el of order) frag.appendChild(el);
+    for (const el of current) frag.appendChild(el);
     list.appendChild(frag);
   }
+
+  more.addEventListener('click', () => {
+    limit += PAGE;
+    apply();
+  });
 
   alphabet.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;
     letter = btn.dataset.letter;
     for (const b of alphabet.children) b.setAttribute('aria-pressed', String(b === btn));
+    rewind();
     apply();
   });
 
@@ -167,13 +198,14 @@ const solo = genres.filter((g) => g.count === 1).length;
     for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
   });
 
-  sortEl.addEventListener('change', () => { sort(); apply(); });
+  sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
   let timer;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       query = search.value.trim().toLowerCase();
+      rewind();
       apply();
     }, 120);
   });
@@ -188,4 +220,8 @@ const solo = genres.filter((g) => g.count === 1).length;
     field.addEventListener('change', close);
     field.addEventListener('blur', close);
   }
+
+  /* Первый расчёт: до него в разметке видны все записи — так страница
+     работает без скрипта и целиком достаётся поисковикам. */
+  apply();
 </script>

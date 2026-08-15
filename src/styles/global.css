@@ -976,6 +976,10 @@ select option { background: #1a1a19; color: var(--fg); }
 .facts {
   display: grid;
   grid-template-columns: 130px minmax(0, 1fr);
+  /* По базовой линии, а не по верхнему краю: в значении «Genres» лежат чипсы
+     со своими полями, и подпись слева вставала выше их текста. Строкам из
+     обычного текста это ничего не меняет — кегль у подписи и значения один. */
+  align-items: baseline;
   gap: 12px 16px;
   margin: 0;
   padding-top: 20px;
@@ -1311,27 +1315,19 @@ select option { background: #1a1a19; color: var(--fg); }
   select,
   .select--narrow select { max-width: 44vw; }
 
-  /* Страницы с алфавитом — исключение: 27 кнопок переносом заняли бы три
-     строки, и липкая полоса съела бы четверть экрана. Там полоса остаётся
-     одной строкой с прокруткой вбок, а буквы прокручиваются внутри своей
-     ячейки — иначе сортировка уезжает за них далеко вправо. */
-  .filters--scroll {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin: 0 calc(var(--pad) * -1);
-    padding: 2px var(--pad);
-  }
-  .filters--scroll::-webkit-scrollbar { display: none; }
-  .filters--scroll .filters__group { flex: none; overflow: visible; }
-  .filters--scroll > .seg--letters {
-    flex: 1;
+  /* Полоса букв — такая же строка, как выборка на Music: во всю ширину и с
+     прокруткой внутри себя. Переносом двадцать восемь кнопок заняли бы три
+     этажа, а ужимать их в ячейку рядом с сортировкой оказалось хуже всего:
+     окошко выходило в 241 пиксель, и из двадцати восьми букв было видно
+     девять. */
+  .filters > .seg--letters {
+    flex: 1 0 100%;
     min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
-  .filters--scroll > .seg--letters::-webkit-scrollbar { display: none; }
-  .filters--scroll > .seg--letters button { flex: none; }
+  .filters > .seg--letters::-webkit-scrollbar { display: none; }
+  .filters > .seg--letters button { flex: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

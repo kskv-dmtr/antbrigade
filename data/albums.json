@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T13:00:48Z",
+  "generatedAt": "2026-08-15T14:41:30Z",
   "counts": {
-    "albums": 1077,
+    "albums": 1078,
     "artists": 967,
     "labels": 608,
     "videos": 59
@@ -28233,6 +28233,35 @@
       ]
     },
     {
+      "id": "3bd4129a-8c52-8050-abdd-e79c319b1c53",
+      "slug": "fange-privation",
+      "artist": "Fange",
+      "album": "Privation",
+      "url": "https://album.link/0bdqtvd6pdzqn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3580ab25-21fe-4e78-bd3e-03890ee7004f%3Aa4248374991_10.jpg?table=block&id=3bd4129a-8c52-8050-abdd-e79c319b1c53&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Sludge Metal",
+        "Industrial Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-03-10",
+      "year": 2023,
+      "artistIds": [
+        "2504129a-8c52-8049-baae-f2d4d683b29c"
+      ],
+      "artists": [
+        "Fange"
+      ],
+      "labelIds": [
+        "2504129a-8c52-809f-99cc-d94f4fd57ae7"
+      ],
+      "labels": [
+        "Throatruiner Records"
+      ]
+    },
+    {
       "id": "d3f1ffb6-0f3a-43aa-9182-7e0784db407f",
       "slug": "febueder-follow-the-colonnade",
       "artist": "Febueder",
@@ -36636,10 +36665,11 @@
       "slug": "fange",
       "name": "Fange",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://fange.bandcamp.com/music",
       "albumIds": [
         "1b74129a-8c52-802c-ab98-ddc590693ee9",
-        "43b173ac-04fd-4090-b94c-c28ff8bde657"
+        "43b173ac-04fd-4090-b94c-c28ff8bde657",
+        "3bd4129a-8c52-8050-abdd-e79c319b1c53"
       ],
       "genres": [
         "Sludge Metal",
@@ -57842,10 +57872,11 @@
       "slug": "throatruiner-records",
       "name": "Throatruiner Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://throatruinerrecords.bandcamp.com/",
       "albumIds": [
         "1b74129a-8c52-802c-ab98-ddc590693ee9",
-        "43b173ac-04fd-4090-b94c-c28ff8bde657"
+        "43b173ac-04fd-4090-b94c-c28ff8bde657",
+        "3bd4129a-8c52-8050-abdd-e79c319b1c53"
       ],
       "artistIds": [
         "2504129a-8c52-8049-baae-f2d4d683b29c"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T11:36:16Z",
+  "generatedAt": "2026-08-15T14:41:41Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17095,6 +17095,22 @@
       "upc": "5400863087050",
       "tracks": 15,
       "releaseDate": "2022-10-04"
+    },
+    "3bd4129a-8c52-8050-abdd-e79c319b1c53": {
+      "source": "https://album.link/0bdqtvd6pdzqn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5kCMw5Oque5I1QpZGaAu6D",
+        "pandora": "https://www.pandora.com/AL:20785632",
+        "deezer": "https://www.deezer.com/album/395773877",
+        "amazonMusic": "https://music.amazon.com/albums/B0BS675HRS",
+        "tidal": "https://listen.tidal.com/album/271033414",
+        "boomplay": "https://www.boomplay.com/albums/62376362",
+        "bandcamp": "https://fange.bandcamp.com/album/privation",
+        "amazonStore": "https://amazon.com/dp/B0BS675HRS"
+      },
+      "upc": "197187824212",
+      "tracks": 7,
+      "releaseDate": "2023-02-10"
     }
   }
 }

@@ -44,9 +44,9 @@ const list = videos
 >
   <div class="page-head">
     <h1>Videos</h1>
-    {/* Пусто, пока не фильтруют: общее число в шапке ни к чему, а обратная
-        связь по поиску нужна. */}
-    <p class="counter" id="counter" aria-live="polite"></p>
+    {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
+        все клипы — значение в разметке совпадает с первым расчётом. */}
+    <p class="counter" id="counter" aria-live="polite">[{videos.length}]</p>
   </div>
 
   <div class="sticky-bar">
@@ -122,8 +122,9 @@ const list = videos
       if (ok) shown++;
     }
     empty.hidden = shown > 0;
-    // Пусто, пока не фильтруют: общее число в шапке ни к чему.
-    counter.textContent = (state.q || state.kind) ? shown + ' of ' + total : '';
+    // Как на Music: пока ничего не отсеяно — одно число, дальше «сколько
+    // из скольких».
+    counter.textContent = shown === total ? `[${shown}]` : `[${shown} / ${total}]`;
   }
 
   function sort() {

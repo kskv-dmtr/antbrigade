@@ -32,10 +32,10 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   activeSection="artists"
 >
   <div class="page-head">
+    {/* Счётчика в шапке нет намеренно: числа на этой странице живут в самих
+        строках — сколько релизов у артиста. Ещё одно число рядом с фильтрами
+        считало бы другое и о том же. */}
     <h1>Artists</h1>
-    {/* Пусто, пока не фильтруют: общее число в шапке ни к чему, а обратная
-        связь по поиску нужна. */}
-    <p class="counter" id="counter" aria-live="polite"></p>
   </div>
 
   {/* Всё управление в липкой полосе, одинаково на списках релизов, артистов,
@@ -109,14 +109,12 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
 <script>
   const search   = document.getElementById('search');
   const empty    = document.getElementById('empty');
-  const counter  = document.getElementById('counter');
   const list     = document.getElementById('list');
   const viewsEl  = document.getElementById('views');
   const sortEl   = document.getElementById('sort');
   const alphabet = document.getElementById('alphabet');
 
   const items = Array.from(list.querySelectorAll('.names__item'));
-  const total = items.length;
 
   // Порядок с сервера — алфавитный; запоминаем как исходный, чтобы возврат
   // к нему не пришлось собирать заново.
@@ -136,7 +134,6 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
     }
 
     empty.hidden = count > 0;
-    counter.textContent = (query || letter) ? count + ' of ' + total : '';
   }
 
   function sort() {

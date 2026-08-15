@@ -238,6 +238,26 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
         if (Math.abs(y - last) > STEP) last = y;
       }, { passive: true });
+
+      /* Полоса живёт событиями прокрутки, а список под ней умеет внезапно
+         укорачиваться: выбрали редкую букву — и от девятисот имён осталось
+         два. Страница становится короче экрана, прокручивать нечего, новых
+         событий не приходит, и спрятанная полоса остаётся спрятанной. Найти
+         её тогда невозможно: она уехала под шапку, а вернуть нечем.
+
+         Ловим это по самой правке разметки: фильтры прячут записи атрибутом
+         hidden. Через ResizeObserver было бы прямее, но его вызовы привязаны
+         к отрисовке кадров, а MutationObserver срабатывает всегда — в том
+         числе в фоновой вкладке, где кадров не рисуют. */
+      const следитьЗаСписком = new MutationObserver(() => {
+        if (document.documentElement.scrollHeight <= innerHeight + STEP) {
+          bar.removeAttribute('data-hidden');
+          last = window.scrollY;
+        }
+      });
+      следитьЗаСписком.observe(document.getElementById('main'), {
+        subtree: true, attributes: true, attributeFilter: ['hidden']
+      });
     }
 
     /* Косая черта фокусирует поиск, Escape его отпускает — как на GitHub. */

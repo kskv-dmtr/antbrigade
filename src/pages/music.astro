@@ -5,7 +5,7 @@ import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import SearchField from '../components/SearchField.astro';
-import { albums, plural } from '../lib/db.js';
+import { albums } from '../lib/db.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
 // и её видят поисковики. Фильтры лишь прячут лишнее.
@@ -28,9 +28,9 @@ const PAGE = 50;
 >
   <div class="page-head">
     <h1>Music</h1>
-    <p class="counter" id="counter" aria-live="polite">
-      {plural(albums.length, 'release', 'releases')}
-    </p>
+    {/* До выполнения скрипта видны все записи — число в разметке совпадает
+        с тем, что скрипт поставит первым же расчётом. */}
+    <p class="counter" id="counter" aria-live="polite">[{albums.length}]</p>
   </div>
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
@@ -133,8 +133,13 @@ const PAGE = 50;
   // после нового поиска остался бы разворот от предыдущего.
   let limit = PAGE;
 
-  const label = (n) =>
-    n === total ? `${n} ${n === 1 ? 'release' : 'releases'}` : `${n} of ${total}`;
+  /* Только цифры в квадратных скобках — как счётчики релизов у артиста и
+     лейбла в списках. Слова не нужны: строка стоит рядом с заголовком
+     «Music», и что именно посчитано, видно и так.
+
+     Пока ничего не отсеяно, второе число было бы тем же самым, поэтому
+     показываем одно. */
+  const label = (n) => (n === total ? `[${n}]` : `[${n} / ${total}]`);
 
   function matches(el) {
     const d = el.dataset;

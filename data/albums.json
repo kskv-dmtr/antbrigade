@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T20:40:55Z",
+  "generatedAt": "2026-08-15T21:36:54Z",
   "counts": {
     "albums": 1081,
     "artists": 970,
     "labels": 610,
-    "videos": 60
+    "videos": 61
   },
   "albums": [
     {
@@ -41863,7 +41863,7 @@
       "slug": "mdou-moctar",
       "name": "Mdou Moctar",
       "country": "NE",
-      "bandcamp": null,
+      "bandcamp": "https://mdoumoctar.bandcamp.com/music",
       "albumIds": [
         "4018fae0-4d83-4053-b953-a1c6b9464231"
       ],
@@ -59233,6 +59233,14 @@
         "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
       ],
       "slug": "masok-cold-water"
+    },
+    {
+      "id": "3bd4129a-8c52-80be-880b-e74eba0d52a4",
+      "title": "Mdou Moctar | Full PLive on KEXP",
+      "url": "https://youtu.be/52CZVfiiMpY?si=dbI0Iepbouk5jgwG",
+      "kind": "Official Video",
+      "artistIds": [],
+      "slug": "mdou-moctar-full-plive-on-kexp"
     },
     {
       "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",

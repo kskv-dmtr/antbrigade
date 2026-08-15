@@ -28,7 +28,6 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
   return a.localeCompare(b);
 });
 
-const solo = genres.filter((g) => g.count === 1).length;
 // Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
 const PAGE = 50;
 ---
@@ -107,10 +106,6 @@ const PAGE = 50;
   {/* Кнопка появляется только со скриптом: без него показаны все записи,
       и «показать ещё» было бы нечего делать. */}
   <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
-
-  <p class="foot-note">
-    {solo} of them {solo === 1 ? 'has' : 'have'} a single release.
-  </p>
 </Base>
 
 <script>

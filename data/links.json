@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T01:51:44Z",
+  "generatedAt": "2026-08-15T11:36:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17077,6 +17077,24 @@
       "upc": "3618113538029",
       "tracks": 6,
       "releaseDate": "2026-07-14"
+    },
+    "3bd4129a-8c52-8055-b539-e1eda047aa56": {
+      "source": "https://album.link/tkphzfkqjqhwk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5M6dgtsmCnatYzHCHVOAYX",
+        "pandora": "https://www.pandora.com/AL:18634862",
+        "deezer": "https://www.deezer.com/album/365109827",
+        "amazonMusic": "https://music.amazon.com/albums/B09ZWRQWY4",
+        "tidal": "https://listen.tidal.com/album/253450985",
+        "napster": "https://play.napster.com/album/alb.716264151",
+        "boomplay": "https://www.boomplay.com/albums/57698202",
+        "anghami": "https://play.anghami.com/album/1033282658?refer=linktree",
+        "bandcamp": "https://danielavery.bandcamp.com/album/ultra-truth",
+        "amazonStore": "https://amazon.com/dp/B09ZWRQWY4"
+      },
+      "upc": "5400863087050",
+      "tracks": 15,
+      "releaseDate": "2022-10-04"
     }
   }
 }

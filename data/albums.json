@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T01:51:26Z",
+  "generatedAt": "2026-08-15T11:36:04Z",
   "counts": {
-    "albums": 1076,
+    "albums": 1077,
     "artists": 967,
     "labels": 607,
     "videos": 59
@@ -28935,6 +28935,32 @@
       ]
     },
     {
+      "id": "3bd4129a-8c52-8055-b539-e1eda047aa56",
+      "slug": "daniel-avery-ultra-truth",
+      "artist": "Daniel Avery",
+      "album": "Ultra Truth",
+      "url": "https://album.link/tkphzfkqjqhwk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad1aa1432-c8c7-41ca-880c-cdb7ccc09451%3Aa2631565452_10.jpg?table=block&id=3bd4129a-8c52-8055-b539-e1eda047aa56&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "Ambient Techno",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-11-04",
+      "year": 2022,
+      "artistIds": [
+        "29d4129a-8c52-8070-8396-ce0494f047f4"
+      ],
+      "artists": [
+        "Daniel Avery"
+      ],
+      "labelIds": [],
+      "labels": []
+    },
+    {
       "id": "584828cd-6332-4ac0-833e-5cbc86692a3a",
       "slug": "r-a-m-b-o-defy-extinction",
       "artist": "R.A.M.B.O.",
@@ -35203,13 +35229,17 @@
       "country": "GB",
       "bandcamp": null,
       "albumIds": [
-        "29d4129a-8c52-8081-8023-cea9aae8d67b"
+        "29d4129a-8c52-8081-8023-cea9aae8d67b",
+        "3bd4129a-8c52-8055-b539-e1eda047aa56"
       ],
       "genres": [
         "Indietronica",
         "Shoegaze",
         "Indie Rock",
-        "Noise Rock"
+        "Noise Rock",
+        "IDM",
+        "Ambient Techno",
+        "Downtempo"
       ],
       "labelIds": [
         "2444129a-8c52-80d9-b7ef-ea0ae0140d5b"

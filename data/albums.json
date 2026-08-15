@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T11:36:04Z",
+  "generatedAt": "2026-08-15T13:00:48Z",
   "counts": {
     "albums": 1077,
     "artists": 967,
-    "labels": 607,
+    "labels": 608,
     "videos": 59
   },
   "albums": [
@@ -28957,8 +28957,12 @@
       "artists": [
         "Daniel Avery"
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3bd4129a-8c52-80f1-8d45-c4fd33380ee8"
+      ],
+      "labels": [
+        "Phantasy Sound"
+      ]
     },
     {
       "id": "584828cd-6332-4ac0-833e-5cbc86692a3a",
@@ -35227,7 +35231,7 @@
       "slug": "daniel-avery",
       "name": "Daniel Avery",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://danielavery.bandcamp.com/music",
       "albumIds": [
         "29d4129a-8c52-8081-8023-cea9aae8d67b",
         "3bd4129a-8c52-8055-b539-e1eda047aa56"
@@ -35242,7 +35246,8 @@
         "Downtempo"
       ],
       "labelIds": [
-        "2444129a-8c52-80d9-b7ef-ea0ae0140d5b"
+        "2444129a-8c52-80d9-b7ef-ea0ae0140d5b",
+        "3bd4129a-8c52-80f1-8d45-c4fd33380ee8"
       ],
       "videoIds": []
     },
@@ -55623,6 +55628,19 @@
         "3794129a-8c52-80da-af46-f43cda8bf8a5",
         "2444129a-8c52-8014-8bad-c0c7eb45e98c",
         "2504129a-8c52-80fb-b187-c76da1cd0f62"
+      ]
+    },
+    {
+      "id": "3bd4129a-8c52-80f1-8d45-c4fd33380ee8",
+      "slug": "phantasy-sound",
+      "name": "Phantasy Sound",
+      "country": "GB",
+      "bandcamp": "https://phantasysound.bandcamp.com/",
+      "albumIds": [
+        "3bd4129a-8c52-8055-b539-e1eda047aa56"
+      ],
+      "artistIds": [
+        "29d4129a-8c52-8070-8396-ce0494f047f4"
       ]
     },
     {

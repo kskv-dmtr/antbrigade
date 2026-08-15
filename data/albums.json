@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T21:36:54Z",
+  "generatedAt": "2026-08-15T22:40:24Z",
   "counts": {
     "albums": 1081,
     "artists": 970,
     "labels": 610,
-    "videos": 61
+    "videos": 65
   },
   "albums": [
     {
@@ -32365,7 +32365,9 @@
       "labelIds": [
         "24a4129a-8c52-80a7-a210-ee7ff567e1b6"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3bd4129a-8c52-8052-9b2e-c7c23adbdb74"
+      ]
     },
     {
       "id": "3b84129a-8c52-8029-b163-edd0477e91b2",
@@ -37849,6 +37851,7 @@
         "2434129a-8c52-80d0-829f-e827d49262ab"
       ],
       "videoIds": [
+        "3bd4129a-8c52-80d1-b850-c1ab02aa74a9",
         "2434129a-8c52-80e0-8575-c3b93b4a96af"
       ]
     },
@@ -41873,7 +41876,9 @@
       "labelIds": [
         "24f4129a-8c52-8074-92d3-dd615b8458a6"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3bd4129a-8c52-80be-880b-e74eba0d52a4"
+      ]
     },
     {
       "id": "2504129a-8c52-80a7-86a3-fc515097be2c",
@@ -48261,7 +48266,9 @@
         "2444129a-8c52-8087-89c2-c61a693a3d01",
         "24f4129a-8c52-80be-a165-d669139458b6"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3bd4129a-8c52-807e-aa78-e188df026e32"
+      ]
     },
     {
       "id": "2494129a-8c52-8093-8c69-dad093b16ad5",
@@ -49531,7 +49538,9 @@
       "labelIds": [
         "2484129a-8c52-80b7-82f2-dbaef7be8b87"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3bd4129a-8c52-80d4-8bfa-e9059020804a"
+      ]
     },
     {
       "id": "2524129a-8c52-8026-8082-c9e9507596da",
@@ -58927,6 +58936,16 @@
       "slug": "alvilda-angoisse"
     },
     {
+      "id": "3bd4129a-8c52-8052-9b2e-c7c23adbdb74",
+      "title": "Amyl and The Sniffers | Chewing Gum",
+      "url": "https://youtu.be/DxOMGj8P2hY?si=5MlT_zXm9048qPjY",
+      "kind": "Official Video",
+      "artistIds": [
+        "24a4129a-8c52-80c1-9676-f010bbf73862"
+      ],
+      "slug": "amyl-and-the-sniffers-chewing-gum"
+    },
+    {
       "id": "37d4129a-8c52-804f-b7d7-dccf9660ca01",
       "title": "Anamanaguchi | MEOW",
       "url": "https://youtu.be/vc3JWo2iiGc?si=JSgVYzpjhibxsGYL",
@@ -59112,6 +59131,16 @@
       "slug": "ginger-root-there-was-a-time"
     },
     {
+      "id": "3bd4129a-8c52-80d1-b850-c1ab02aa74a9",
+      "title": "Glass Beams | Mahal EP (Full Live Performance)",
+      "url": "https://youtu.be/hGQu4_fan8Q?si=ntAYLq3rYzGrecvS",
+      "kind": "Live Performance",
+      "artistIds": [
+        "2434129a-8c52-8062-8072-d25aba1f3aab"
+      ],
+      "slug": "glass-beams-mahal-ep-full-live-performance"
+    },
+    {
       "id": "2434129a-8c52-80e0-8575-c3b93b4a96af",
       "title": "Glass Beams | Primavera Sound Festival 2025",
       "url": "https://youtu.be/jWLt5ZnHho8?si=KQltDtaUnRpxRBIW",
@@ -59236,11 +59265,13 @@
     },
     {
       "id": "3bd4129a-8c52-80be-880b-e74eba0d52a4",
-      "title": "Mdou Moctar | Full PLive on KEXP",
+      "title": "Mdou Moctar | Full Performance (Live on KEXP)",
       "url": "https://youtu.be/52CZVfiiMpY?si=dbI0Iepbouk5jgwG",
-      "kind": "Official Video",
-      "artistIds": [],
-      "slug": "mdou-moctar-full-plive-on-kexp"
+      "kind": "Live Performance",
+      "artistIds": [
+        "2504129a-8c52-8032-814b-f1fd9d407286"
+      ],
+      "slug": "mdou-moctar-full-performance-live-on-kexp"
     },
     {
       "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
@@ -59418,6 +59449,16 @@
       "slug": "thundercat-dragonball-durag"
     },
     {
+      "id": "3bd4129a-8c52-807e-aa78-e188df026e32",
+      "title": "toe | LONELINESS WILL SHINE",
+      "url": "https://youtu.be/ZcS6ix-cIYQ?si=ELno2uH2Xpj59UTE",
+      "kind": "Official Video",
+      "artistIds": [
+        "2444129a-8c52-8054-a02f-f562e02a6cfb"
+      ],
+      "slug": "toe-loneliness-will-shine"
+    },
+    {
       "id": "2704129a-8c52-80fd-af33-d33d94cfa19a",
       "title": "Totorro | New Music",
       "url": "https://youtu.be/GXzp7mfPg5Y?si=nfBvYvoqAxTo_Saz",
@@ -59466,6 +59507,16 @@
         "3454129a-8c52-808c-a823-c75492b83f4d"
       ],
       "slug": "warbaby-and-always"
+    },
+    {
+      "id": "3bd4129a-8c52-80d4-8bfa-e9059020804a",
+      "title": "With Honor | The Weight",
+      "url": "https://youtu.be/4bKrAThtTow?si=sK5V9WMj2K2eX4wz",
+      "kind": "Official Video",
+      "artistIds": [
+        "2524129a-8c52-80dd-9e61-eb00b3b83af9"
+      ],
+      "slug": "with-honor-the-weight"
     },
     {
       "id": "2814129a-8c52-80d2-8cb1-fcd73eb80eb6",

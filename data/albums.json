@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T14:41:30Z",
+  "generatedAt": "2026-08-15T20:40:55Z",
   "counts": {
-    "albums": 1078,
-    "artists": 967,
-    "labels": 608,
-    "videos": 59
+    "albums": 1081,
+    "artists": 970,
+    "labels": 610,
+    "videos": 60
   },
   "albums": [
     {
@@ -749,6 +749,41 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3bd4129a-8c52-8010-927f-e41ddcd4f996",
+      "slug": "tomo-katsurada-jonny-nash-at-the-emerald-pool",
+      "artist": "Tomo Katsurada / Jonny Nash",
+      "album": "At the Emerald Pool",
+      "url": "https://album.link/dwjvh6h3hqth2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa2dca6c1-3a11-444e-bbec-ed30c2c0109a%3Aa3808589626_10.jpg?table=block&id=3bd4129a-8c52-8010-927f-e41ddcd4f996&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient",
+        "New Age",
+        "Psychedelic Folk"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2026-07-02",
+      "year": 2026,
+      "artistIds": [
+        "3bd4129a-8c52-8049-97e6-ed48ef6a06ee",
+        "2494129a-8c52-80d6-904b-d160cb2b4043"
+      ],
+      "artists": [
+        "Tomo Katsurada",
+        "Jonny Nash"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80c8-bab6-c43ee5705123",
+        "3bd4129a-8c52-802f-9ab8-e7b9080fb67e"
+      ],
+      "labels": [
+        "Melody As Truth",
+        "Future Days Radio"
       ]
     },
     {
@@ -30191,6 +30226,35 @@
       ]
     },
     {
+      "id": "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb",
+      "slug": "etran-de-l-air-agadez",
+      "artist": "Etran de L'AÏr",
+      "album": "Agadez",
+      "url": "https://album.link/990rjnncj5tcm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6ec99402-47f7-4e88-b085-266e758558ed%3Aa1658507371_10.jpg?table=block&id=3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Rock",
+        "Tishoumaren"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-02-18",
+      "year": 2022,
+      "artistIds": [
+        "3bd4129a-8c52-80df-ab67-f7fdf0d9c626"
+      ],
+      "artists": [
+        "Etran de L'AÏr"
+      ],
+      "labelIds": [
+        "3bd4129a-8c52-8057-9733-ef7165204d13"
+      ],
+      "labels": [
+        "Sahel Sounds"
+      ]
+    },
+    {
       "id": "19c4129a-8c52-8092-b61e-c8635a25808d",
       "slug": "combo-chimbita-ire",
       "artist": "Combo Chimbita",
@@ -30911,6 +30975,36 @@
       ],
       "labels": [
         "Iron Lung Records"
+      ]
+    },
+    {
+      "id": "3bd4129a-8c52-806e-b8f9-ce9f11998292",
+      "slug": "wau-wau-collectif-yaral-sa-doom",
+      "artist": "Wau Wau Collectif",
+      "album": "Yaral Sa Doom",
+      "url": "https://album.link/d5zxhnv5v79s7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8fd1f8bc-5b52-4f56-adc4-2958aef01d16%3Aa1511235567_10.jpg?table=block&id=3bd4129a-8c52-806e-b8f9-ce9f11998292&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "West African Music",
+        "Spiritual Jazz",
+        "Wolof Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-02-26",
+      "year": 2021,
+      "artistIds": [
+        "3bd4129a-8c52-80d2-9c62-cc349cdc7b48"
+      ],
+      "artists": [
+        "Wau Wau Collectif"
+      ],
+      "labelIds": [
+        "3bd4129a-8c52-8057-9733-ef7165204d13"
+      ],
+      "labels": [
+        "Sahel Sounds"
       ]
     },
     {
@@ -36477,6 +36571,26 @@
       "videoIds": []
     },
     {
+      "id": "3bd4129a-8c52-80df-ab67-f7fdf0d9c626",
+      "slug": "etran-de-l-air",
+      "name": "Etran de L'AÏr",
+      "country": "NE",
+      "bandcamp": "https://etrandelair.bandcamp.com/music",
+      "albumIds": [
+        "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb"
+      ],
+      "genres": [
+        "Psychedelic Rock",
+        "Tishoumaren"
+      ],
+      "labelIds": [
+        "3bd4129a-8c52-8057-9733-ef7165204d13"
+      ],
+      "videoIds": [
+        "3bd4129a-8c52-8054-ab7b-cfcb3b74b562"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-8053-9643-f6a265d582ca",
       "slug": "evangeline",
       "name": "Evangeline",
@@ -39512,18 +39626,21 @@
       "id": "2494129a-8c52-80d6-904b-d160cb2b4043",
       "slug": "jonny-nash",
       "name": "Jonny Nash",
-      "country": "GB",
-      "bandcamp": null,
+      "country": "NL",
+      "bandcamp": "https://jonnynash.bandcamp.com/music",
       "albumIds": [
+        "3bd4129a-8c52-8010-927f-e41ddcd4f996",
         "2274129a-8c52-80fd-98e6-f226060caa42"
       ],
       "genres": [
         "Ambient",
         "New Age",
+        "Psychedelic Folk",
         "Folktronica"
       ],
       "labelIds": [
-        "2494129a-8c52-80c8-bab6-c43ee5705123"
+        "2494129a-8c52-80c8-bab6-c43ee5705123",
+        "3bd4129a-8c52-802f-9ab8-e7b9080fb67e"
       ],
       "videoIds": []
     },
@@ -48188,6 +48305,26 @@
       "videoIds": []
     },
     {
+      "id": "3bd4129a-8c52-8049-97e6-ed48ef6a06ee",
+      "slug": "tomo-katsurada",
+      "name": "Tomo Katsurada",
+      "country": "JP",
+      "bandcamp": "https://tomokatsurada.bandcamp.com/music",
+      "albumIds": [
+        "3bd4129a-8c52-8010-927f-e41ddcd4f996"
+      ],
+      "genres": [
+        "Ambient",
+        "New Age",
+        "Psychedelic Folk"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80c8-bab6-c43ee5705123",
+        "3bd4129a-8c52-802f-9ab8-e7b9080fb67e"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2a54129a-8c52-8048-b509-ff1dba5474e1",
       "slug": "tomo-nakayama",
       "name": "Tomo Nakayama",
@@ -49113,6 +49250,25 @@
       ],
       "labelIds": [
         "24f4129a-8c52-8074-92d3-dd615b8458a6"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3bd4129a-8c52-80d2-9c62-cc349cdc7b48",
+      "slug": "wau-wau-collectif",
+      "name": "Wau Wau Collectif",
+      "country": "SN",
+      "bandcamp": "https://wauwaucollectif.bandcamp.com/music",
+      "albumIds": [
+        "3bd4129a-8c52-806e-b8f9-ce9f11998292"
+      ],
+      "genres": [
+        "West African Music",
+        "Spiritual Jazz",
+        "Wolof Music"
+      ],
+      "labelIds": [
+        "3bd4129a-8c52-8057-9733-ef7165204d13"
       ],
       "videoIds": []
     },
@@ -52697,6 +52853,20 @@
       ]
     },
     {
+      "id": "3bd4129a-8c52-802f-9ab8-e7b9080fb67e",
+      "slug": "future-days-radio",
+      "name": "Future Days Radio",
+      "country": "NL",
+      "bandcamp": "https://futuredaysradio.bandcamp.com/",
+      "albumIds": [
+        "3bd4129a-8c52-8010-927f-e41ddcd4f996"
+      ],
+      "artistIds": [
+        "3bd4129a-8c52-8049-97e6-ed48ef6a06ee",
+        "2494129a-8c52-80d6-904b-d160cb2b4043"
+      ]
+    },
+    {
       "id": "24e4129a-8c52-801a-b8a1-dd416a7be170",
       "slug": "fuzz-club-records",
       "name": "Fuzz Club Records",
@@ -54494,11 +54664,13 @@
       "slug": "melody-as-truth",
       "name": "Melody As Truth",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://melodyastruth.bandcamp.com/",
       "albumIds": [
+        "3bd4129a-8c52-8010-927f-e41ddcd4f996",
         "2274129a-8c52-80fd-98e6-f226060caa42"
       ],
       "artistIds": [
+        "3bd4129a-8c52-8049-97e6-ed48ef6a06ee",
         "2494129a-8c52-80d6-904b-d160cb2b4043"
       ]
     },
@@ -56634,6 +56806,21 @@
         "3254129a-8c52-8035-8df3-eb9b8d30a40f",
         "2fc4129a-8c52-80a2-86a5-d1c580347850",
         "24a4129a-8c52-8078-9092-fab0e8b3a49d"
+      ]
+    },
+    {
+      "id": "3bd4129a-8c52-8057-9733-ef7165204d13",
+      "slug": "sahel-sounds",
+      "name": "Sahel Sounds",
+      "country": "US",
+      "bandcamp": "https://sahelsounds.bandcamp.com/",
+      "albumIds": [
+        "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb",
+        "3bd4129a-8c52-806e-b8f9-ce9f11998292"
+      ],
+      "artistIds": [
+        "3bd4129a-8c52-80df-ab67-f7fdf0d9c626",
+        "3bd4129a-8c52-80d2-9c62-cc349cdc7b48"
       ]
     },
     {
@@ -58883,6 +59070,16 @@
         "2414129a-8c52-803f-84bf-e1d9f7fb7397"
       ],
       "slug": "durand-jones-the-indications-flower-moon"
+    },
+    {
+      "id": "3bd4129a-8c52-8054-ab7b-cfcb3b74b562",
+      "title": "Etran De L'Aïr | Amidinine",
+      "url": "https://youtu.be/V18y_gpd7Yc?si=Ps-9qOJD4CJn90pI",
+      "kind": "Official Video",
+      "artistIds": [
+        "3bd4129a-8c52-80df-ab67-f7fdf0d9c626"
+      ],
+      "slug": "etran-de-l-air-amidinine"
     },
     {
       "id": "4ea3a645-86d0-4fc8-9efd-70c5c018d5ed",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T14:41:41Z",
+  "generatedAt": "2026-08-15T20:41:14Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17111,6 +17111,55 @@
       "upc": "197187824212",
       "tracks": 7,
       "releaseDate": "2023-02-10"
+    },
+    "3bd4129a-8c52-8010-927f-e41ddcd4f996": {
+      "source": "https://album.link/dwjvh6h3hqth2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2acZ1CPs0KN5MqSTk5AsOd",
+        "pandora": "https://www.pandora.com/AL:65868462",
+        "tidal": "https://listen.tidal.com/album/519928910",
+        "boomplay": "https://www.boomplay.com/albums/130262157"
+      },
+      "upc": "5063720065617",
+      "tracks": 10,
+      "releaseDate": "2026-06-02"
+    },
+    "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb": {
+      "source": "https://album.link/990rjnncj5tcm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3rTt2Gu71ktKEzfDumvuYG",
+        "pandora": "https://www.pandora.com/AL:11154778",
+        "deezer": "https://www.deezer.com/album/266370832",
+        "amazonMusic": "https://music.amazon.com/albums/B09JQTQN1K",
+        "tidal": "https://listen.tidal.com/album/201586326",
+        "napster": "https://play.napster.com/album/alb.619396833",
+        "yandex": "https://music.yandex.ru/album/18815041",
+        "boomplay": "https://www.boomplay.com/albums/33456456",
+        "bandcamp": "https://etrandelair.bandcamp.com/album/agadez",
+        "amazonStore": "https://amazon.com/dp/B09JQTQN1K"
+      },
+      "upc": "796167505396",
+      "tracks": 10,
+      "releaseDate": "2022-01-18"
+    },
+    "3bd4129a-8c52-806e-b8f9-ce9f11998292": {
+      "source": "https://album.link/d5zxhnv5v79s7",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1C8b9oBAH6qcFqlxFFvEDZ",
+        "pandora": "https://www.pandora.com/AL:7308256",
+        "deezer": "https://www.deezer.com/album/188386652",
+        "amazonMusic": "https://music.amazon.com/albums/B08P3W87D7",
+        "tidal": "https://listen.tidal.com/album/163240049",
+        "napster": "https://play.napster.com/album/alb.532843952",
+        "yandex": "https://music.yandex.ru/album/12895495",
+        "boomplay": "https://www.boomplay.com/albums/18393152",
+        "anghami": "https://play.anghami.com/album/1016252028?refer=linktree",
+        "bandcamp": "https://wauwaucollectif.bandcamp.com/album/yaral-sa-doom",
+        "amazonStore": "https://amazon.com/dp/B08P3W87D7"
+      },
+      "upc": "602318137272",
+      "tracks": 10,
+      "releaseDate": "2021-01-26"
     }
   }
 }

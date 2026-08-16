@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-15T22:40:24Z",
+  "generatedAt": "2026-08-16T11:36:25Z",
   "counts": {
-    "albums": 1081,
+    "albums": 1082,
     "artists": 970,
     "labels": 610,
-    "videos": 65
+    "videos": 66
   },
   "albums": [
     {
@@ -10353,8 +10353,8 @@
       "url": "https://album.link/qmtmssxjfk5w4",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ae6473b74-75f9-4090-a5a1-86c6fb531659%3Aphoto_2025-08-16_14-27-10.jpg?table=block&id=23d4129a-8c52-80fc-82db-d5573f65f8d6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Jazz",
-        "Spiritual Jazz"
+        "Spiritual Jazz",
+        "Jazz Fusion"
       ],
       "types": [
         "Album"
@@ -27309,6 +27309,35 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3be4129a-8c52-80cf-a767-ebbf7937068b",
+      "slug": "the-circling-sun-spirits",
+      "artist": "The Circling Sun",
+      "album": "Spirits",
+      "url": "https://album.link/58tf6pzk7050b",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6b3532e2-2522-4037-9e37-587703bb61f9%3Aa1681062444_10.jpg?table=block&id=3be4129a-8c52-80cf-a767-ebbf7937068b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Spiritual Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-05-19",
+      "year": 2023,
+      "artistIds": [
+        "2404129a-8c52-80de-8eb6-d488b844473e"
+      ],
+      "artists": [
+        "The Circling Sun"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
+      ],
+      "labels": [
+        "Soundway Records"
       ]
     },
     {
@@ -47330,13 +47359,14 @@
       "slug": "the-circling-sun",
       "name": "The Circling Sun",
       "country": "NZ",
-      "bandcamp": null,
+      "bandcamp": "https://thecirclingsun.bandcamp.com/music",
       "albumIds": [
-        "23d4129a-8c52-80fc-82db-d5573f65f8d6"
+        "23d4129a-8c52-80fc-82db-d5573f65f8d6",
+        "3be4129a-8c52-80cf-a767-ebbf7937068b"
       ],
       "genres": [
-        "Jazz",
-        "Spiritual Jazz"
+        "Spiritual Jazz",
+        "Jazz Fusion"
       ],
       "labelIds": [
         "24a4129a-8c52-8043-a0e9-ebc281641b70"
@@ -57519,13 +57549,14 @@
       "slug": "soundway-records",
       "name": "Soundway Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://soundwayrecords.bandcamp.com/",
       "albumIds": [
         "23d4129a-8c52-80fc-82db-d5573f65f8d6",
         "1a34129a-8c52-8099-9c8f-d6f893d3942d",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "11e4129a-8c52-8066-9e30-f39be953cae4",
         "54265483-5302-4e01-8f38-123740075942",
+        "3be4129a-8c52-80cf-a767-ebbf7937068b",
         "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5"
       ],
       "artistIds": [
@@ -59119,6 +59150,14 @@
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
       "slug": "gelli-haha-bounce-house"
+    },
+    {
+      "id": "3be4129a-8c52-805f-966a-c0a4df3dd5a0",
+      "title": "Gelli Haha | Klouds Will Carry Me to Sleep",
+      "url": "https://youtu.be/M7_6fuJdmAE?si=f4DrrzM2NniXzEEp",
+      "kind": "Official Video",
+      "artistIds": [],
+      "slug": "gelli-haha-klouds-will-carry-me-to-sleep"
     },
     {
       "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",

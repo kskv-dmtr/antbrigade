@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T20:41:14Z",
+  "generatedAt": "2026-08-16T11:36:37Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17160,6 +17160,22 @@
       "upc": "602318137272",
       "tracks": 10,
       "releaseDate": "2021-01-26"
+    },
+    "3be4129a-8c52-80cf-a767-ebbf7937068b": {
+      "source": "https://album.link/58tf6pzk7050b",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/13DmEvi2s2jZGW0CXaugbQ",
+        "pandora": "https://www.pandora.com/AL:22434495",
+        "deezer": "https://www.deezer.com/album/418840167",
+        "amazonMusic": "https://music.amazon.com/albums/B0BYTGWYLX",
+        "tidal": "https://listen.tidal.com/album/282452568",
+        "napster": "https://play.napster.com/album/alb.755326438",
+        "bandcamp": "https://thecirclingsun.bandcamp.com/album/spirits",
+        "amazonStore": "https://amazon.com/dp/B0BYTGWYLX"
+      },
+      "upc": "5060571362193",
+      "tracks": 8,
+      "releaseDate": "2023-04-19"
     }
   }
 }

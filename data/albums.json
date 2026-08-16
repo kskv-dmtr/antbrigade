@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-16T19:36:13Z",
+  "generatedAt": "2026-08-16T23:35:29Z",
   "counts": {
     "albums": 1083,
     "artists": 970,
     "labels": 610,
-    "videos": 66
+    "videos": 67
   },
   "albums": [
     {
@@ -45953,6 +45953,7 @@
         "2494129a-8c52-80a5-8c80-ebb8d408489c"
       ],
       "videoIds": [
+        "3be4129a-8c52-8099-ab2a-e83f0fedb0a7",
         "a375d4dc-94e7-4003-8185-7b37dc880e98"
       ]
     },
@@ -59434,6 +59435,16 @@
         "2524129a-8c52-801e-a64d-c337e942f8b1"
       ],
       "slug": "slomosa-battling-guns"
+    },
+    {
+      "id": "3be4129a-8c52-8099-ab2a-e83f0fedb0a7",
+      "title": "SML | SML on World Cafe (Studio Session)",
+      "url": "https://youtu.be/kfbF6SD4LEk?si=eyqqr7kuexL7P1KQ",
+      "kind": "Live Performance",
+      "artistIds": [
+        "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
+      ],
+      "slug": "sml-sml-on-world-cafe-studio-session"
     },
     {
       "id": "a375d4dc-94e7-4003-8185-7b37dc880e98",

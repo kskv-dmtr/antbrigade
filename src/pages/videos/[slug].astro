@@ -72,8 +72,10 @@ const rest = [...new Map(
   {rest.length > 0 && (
     <section class="section">
       <div class="head">
-        <h2 class="display display--md">More from {artists.map((a) => a.name).join(' · ')}</h2>
-        <span class="mono">{rest.length}</span>
+        {/* Без имени исполнителя: оно уже стоит в полосе над разделом, и
+            в заголовке повторялось бы третий раз за экран. */}
+        <h2 class="display display--md">More Videos</h2>
+        <span class="mono">[{rest.length}]</span>
       </div>
       <ul class="tiles tiles--auto tiles--video">
         {rest.map((v) => <VideoCard video={v} />)}

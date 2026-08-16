@@ -1,13 +1,41 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-16T11:36:25Z",
+  "generatedAt": "2026-08-16T19:36:13Z",
   "counts": {
-    "albums": 1082,
+    "albums": 1083,
     "artists": 970,
     "labels": 610,
     "videos": 66
   },
   "albums": [
+    {
+      "id": "3be4129a-8c52-801c-9603-d9cf88e1fc61",
+      "slug": "dent-may-the-big-one",
+      "artist": "Dent May",
+      "album": "The Big One",
+      "url": "https://album.link/gfpkkpcvz9qmz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6d25e396-80f7-451b-88ce-06e49188e7f6%3Aa2942019579_10.jpg?table=block&id=3be4129a-8c52-801c-9603-d9cf88e1fc61&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-14",
+      "year": 2026,
+      "artistIds": [
+        "2434129a-8c52-808d-adde-ea2a0edcd33a"
+      ],
+      "artists": [
+        "Dent May"
+      ],
+      "labelIds": [
+        "2a14129a-8c52-8074-ae1f-dbf4e38d93d0"
+      ],
+      "labels": [
+        "Carpark Records"
+      ]
+    },
     {
       "id": "3bc4129a-8c52-804a-bf1d-d6d5782a7a05",
       "slug": "djrum-i-wander",
@@ -35708,10 +35736,16 @@
       "slug": "dent-may",
       "name": "Dent May",
       "country": "US",
-      "bandcamp": null,
-      "albumIds": [],
-      "genres": [],
-      "labelIds": [],
+      "bandcamp": "https://dentmay.bandcamp.com/music",
+      "albumIds": [
+        "3be4129a-8c52-801c-9603-d9cf88e1fc61"
+      ],
+      "genres": [
+        "Indie Pop"
+      ],
+      "labelIds": [
+        "2a14129a-8c52-8074-ae1f-dbf4e38d93d0"
+      ],
       "videoIds": [
         "03ca4847-51fc-4dde-9edd-6723d6128532"
       ]
@@ -37722,7 +37756,8 @@
         "2434129a-8c52-806e-9bf1-e6c265c72db3"
       ],
       "videoIds": [
-        "2424129a-8c52-804d-8ef0-d14d5924410e"
+        "2424129a-8c52-804d-8ef0-d14d5924410e",
+        "3be4129a-8c52-805f-966a-c0a4df3dd5a0"
       ]
     },
     {
@@ -51261,11 +51296,13 @@
       "slug": "carpark-records",
       "name": "Carpark Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://carparkrecords.bandcamp.com/",
       "albumIds": [
+        "3be4129a-8c52-801c-9603-d9cf88e1fc61",
         "2a14129a-8c52-8032-be1d-f84fc7baa097"
       ],
       "artistIds": [
+        "2434129a-8c52-808d-adde-ea2a0edcd33a",
         "2a14129a-8c52-8071-bbc7-db785a450538"
       ]
     },
@@ -59156,7 +59193,9 @@
       "title": "Gelli Haha | Klouds Will Carry Me to Sleep",
       "url": "https://youtu.be/M7_6fuJdmAE?si=f4DrrzM2NniXzEEp",
       "kind": "Official Video",
-      "artistIds": [],
+      "artistIds": [
+        "2424129a-8c52-801f-928b-cd1b28ba171c"
+      ],
       "slug": "gelli-haha-klouds-will-carry-me-to-sleep"
     },
     {

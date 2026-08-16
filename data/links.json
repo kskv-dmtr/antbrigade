@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T11:36:37Z",
+  "generatedAt": "2026-08-16T19:36:26Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17176,6 +17176,19 @@
       "upc": "5060571362193",
       "tracks": 8,
       "releaseDate": "2023-04-19"
+    },
+    "3be4129a-8c52-801c-9603-d9cf88e1fc61": {
+      "source": "https://album.link/gfpkkpcvz9qmz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3np04BexvHb7nl0r4R2wWt",
+        "pandora": "https://www.pandora.com/AL:64985276",
+        "tidal": "https://listen.tidal.com/album/515380872",
+        "yandex": "https://music.yandex.ru/album/41961462",
+        "bandcamp": "https://dentmay.bandcamp.com/album/the-big-one"
+      },
+      "upc": "677517018851",
+      "tracks": 11,
+      "releaseDate": "2026-07-14"
     }
   }
 }

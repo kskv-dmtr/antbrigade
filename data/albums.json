@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-17T22:43:31Z",
+  "generatedAt": "2026-08-17T23:39:36Z",
   "counts": {
-    "albums": 1084,
-    "artists": 971,
-    "labels": 611,
+    "albums": 1086,
+    "artists": 974,
+    "labels": 612,
     "videos": 67
   },
   "albums": [
@@ -30485,6 +30485,36 @@
       ]
     },
     {
+      "id": "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e",
+      "slug": "jungle-by-night-algorhythm",
+      "artist": "Jungle by Night",
+      "album": "Algorhythm",
+      "url": "https://album.link/kzd2snzk0p2sw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad1689006-c07f-40df-996d-2a6d7e5281a5%3Aa2205392600_10.jpg?table=block&id=3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-22",
+      "year": 2021,
+      "artistIds": [
+        "3bf4129a-8c52-8066-be4e-cfe98123c08d"
+      ],
+      "artists": [
+        "Jungle by Night"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8032-b10a-f9a2c3035328"
+      ],
+      "labels": [
+        "V2 Records"
+      ]
+    },
+    {
       "id": "0e0887f0-ed77-4021-93cb-b28035e0c8b5",
       "slug": "ross-from-friends-tread",
       "artist": "Ross From Friends",
@@ -31209,6 +31239,38 @@
       ],
       "labels": [
         "Cascine"
+      ]
+    },
+    {
+      "id": "3bf4129a-8c52-801b-94bc-d1638b65a839",
+      "slug": "pellegrino-zodyaco-morphe",
+      "artist": "Pellegrino / Zodyaco",
+      "album": "Morphé",
+      "url": "https://album.link/pp58cqrkcscrz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9dc52e73-2eae-4f6e-b088-5d8beb187cdf%3Aa1368838800_10.jpg?table=block&id=3bf4129a-8c52-801b-94bc-d1638b65a839&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2020-10-19",
+      "year": 2020,
+      "artistIds": [
+        "3bf4129a-8c52-8056-aae0-f4114d77a199",
+        "3bf4129a-8c52-8058-8706-dca68a4f34aa"
+      ],
+      "artists": [
+        "Pellegrino",
+        "Zodyaco"
+      ],
+      "labelIds": [
+        "3bf4129a-8c52-8009-9e03-ceaba509be56"
+      ],
+      "labels": [
+        "Early Sounds Recordings"
       ]
     },
     {
@@ -39854,6 +39916,25 @@
       "videoIds": []
     },
     {
+      "id": "3bf4129a-8c52-8066-be4e-cfe98123c08d",
+      "slug": "jungle-by-night",
+      "name": "Jungle by Night",
+      "country": "NL",
+      "bandcamp": "https://junglebynight.bandcamp.com/music",
+      "albumIds": [
+        "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8032-b10a-f9a2c3035328"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-80d7-9ac4-c5687e4bd52d",
       "slug": "juniore",
       "name": "Juniore",
@@ -43912,6 +43993,24 @@
       ],
       "labelIds": [
         "2524129a-8c52-80c5-8aeb-d9540ca63542"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3bf4129a-8c52-8056-aae0-f4114d77a199",
+      "slug": "pellegrino",
+      "name": "Pellegrino",
+      "country": "IT",
+      "bandcamp": null,
+      "albumIds": [
+        "3bf4129a-8c52-801b-94bc-d1638b65a839"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk"
+      ],
+      "labelIds": [
+        "3bf4129a-8c52-8009-9e03-ceaba509be56"
       ],
       "videoIds": []
     },
@@ -50038,6 +50137,24 @@
       "videoIds": []
     },
     {
+      "id": "3bf4129a-8c52-8058-8706-dca68a4f34aa",
+      "slug": "zodyaco",
+      "name": "Zodyaco",
+      "country": "IT",
+      "bandcamp": null,
+      "albumIds": [
+        "3bf4129a-8c52-801b-94bc-d1638b65a839"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk"
+      ],
+      "labelIds": [
+        "3bf4129a-8c52-8009-9e03-ceaba509be56"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2ee4129a-8c52-8016-afe4-e25906cc77ab",
       "slug": "zu",
       "name": "Zu",
@@ -52417,6 +52534,20 @@
       ],
       "artistIds": [
         "24f4129a-8c52-80a5-bf76-d154fbf50a25"
+      ]
+    },
+    {
+      "id": "3bf4129a-8c52-8009-9e03-ceaba509be56",
+      "slug": "early-sounds-recordings",
+      "name": "Early Sounds Recordings",
+      "country": "IT",
+      "bandcamp": "https://earlysounds.bandcamp.com/music",
+      "albumIds": [
+        "3bf4129a-8c52-801b-94bc-d1638b65a839"
+      ],
+      "artistIds": [
+        "3bf4129a-8c52-8056-aae0-f4114d77a199",
+        "3bf4129a-8c52-8058-8706-dca68a4f34aa"
       ]
     },
     {
@@ -58621,11 +58752,13 @@
       "bandcamp": null,
       "albumIds": [
         "1b24129a-8c52-8039-b9b0-e76fb59356cb",
-        "b23ba8a3-1461-4815-ab0b-6ccd2a70190e"
+        "b23ba8a3-1461-4815-ab0b-6ccd2a70190e",
+        "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e"
       ],
       "artistIds": [
         "24a4129a-8c52-8091-bc26-d3398eac88bc",
-        "24f4129a-8c52-8070-96a3-c6efc6466b5b"
+        "24f4129a-8c52-8070-96a3-c6efc6466b5b",
+        "3bf4129a-8c52-8066-be4e-cfe98123c08d"
       ]
     },
     {

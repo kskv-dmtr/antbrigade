@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T22:43:40Z",
+  "generatedAt": "2026-08-17T23:39:53Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17203,6 +17203,42 @@
       "upc": "657628456629",
       "tracks": 12,
       "releaseDate": "2026-01-13"
+    },
+    "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e": {
+      "source": "https://album.link/kzd2snzk0p2sw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0MxoTIcn2CvjKZCncuuyvV",
+        "pandora": "https://www.pandora.com/AL:10073114",
+        "deezer": "https://www.deezer.com/album/245452062",
+        "amazonMusic": "https://music.amazon.com/albums/B099RZ1DZX",
+        "tidal": "https://listen.tidal.com/album/191409146",
+        "napster": "https://play.napster.com/album/alb.598793984",
+        "yandex": "https://music.yandex.ru/album/16936429",
+        "boomplay": "https://www.boomplay.com/albums/28600515",
+        "anghami": "https://play.anghami.com/album/1021319175?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B099RZ1DZX"
+      },
+      "upc": "8717931341516",
+      "tracks": 10,
+      "releaseDate": "2021-09-22"
+    },
+    "3bf4129a-8c52-801b-94bc-d1638b65a839": {
+      "source": "https://album.link/pp58cqrkcscrz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1upn88OBMmU8jz9eeO5zD1",
+        "pandora": "https://www.pandora.com/AL:6882771",
+        "deezer": "https://www.deezer.com/album/176840252",
+        "amazonMusic": "https://music.amazon.com/albums/B08KH2JKC4",
+        "tidal": "https://listen.tidal.com/album/410000556",
+        "napster": "https://play.napster.com/album/alb.517892041",
+        "yandex": "https://music.yandex.ru/album/12426121",
+        "anghami": "https://play.anghami.com/album/1015302795?refer=linktree",
+        "bandcamp": "https://earlysounds.bandcamp.com/album/morph",
+        "amazonStore": "https://amazon.com/dp/B08KH2JKC4"
+      },
+      "upc": "5054285375617",
+      "tracks": 7,
+      "releaseDate": "2020-09-19"
     }
   }
 }

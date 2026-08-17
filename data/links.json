@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T19:36:26Z",
+  "generatedAt": "2026-08-17T22:43:40Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17189,6 +17189,20 @@
       "upc": "677517018851",
       "tracks": 11,
       "releaseDate": "2026-07-14"
+    },
+    "3bf4129a-8c52-80ef-bd1e-f4be6d161fb0": {
+      "source": "https://album.link/vvdm7fbjfxnmc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4S14GEC3WWDIwAw2Pv85S9",
+        "pandora": "https://www.pandora.com/AL:58018511",
+        "amazonMusic": "https://music.amazon.com/albums/B0G3C2W1KD",
+        "tidal": "https://listen.tidal.com/album/482087881",
+        "bandcamp": "https://earthtongue.bandcamp.com/album/dungeon-vision",
+        "amazonStore": "https://amazon.com/dp/B0G3C2W1KD"
+      },
+      "upc": "657628456629",
+      "tracks": 12,
+      "releaseDate": "2026-01-13"
     }
   }
 }

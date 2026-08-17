@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-16T23:35:29Z",
+  "generatedAt": "2026-08-17T22:43:31Z",
   "counts": {
-    "albums": 1083,
-    "artists": 970,
-    "labels": 610,
+    "albums": 1084,
+    "artists": 971,
+    "labels": 611,
     "videos": 67
   },
   "albums": [
@@ -4665,6 +4665,35 @@
       ],
       "labels": [
         "Donnyland Records"
+      ]
+    },
+    {
+      "id": "3bf4129a-8c52-80ef-bd1e-f4be6d161fb0",
+      "slug": "earth-tongue-dungeon-vision",
+      "artist": "Earth Tongue",
+      "album": "Dungeon Vision",
+      "url": "https://album.link/vvdm7fbjfxnmc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3696f512-200c-4c2c-a80a-d57cdd36ab8a%3Aa4201833410_10.jpg?table=block&id=3bf4129a-8c52-80ef-bd1e-f4be6d161fb0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Heavy Psych",
+        "Stoner Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-02-13",
+      "year": 2026,
+      "artistIds": [
+        "3bf4129a-8c52-80d8-a44d-dd7ce2c32993"
+      ],
+      "artists": [
+        "Earth Tongue"
+      ],
+      "labelIds": [
+        "3bf4129a-8c52-80f4-9c70-fe0b67a215d9"
+      ],
+      "labels": [
+        "In The Red Records"
       ]
     },
     {
@@ -36291,6 +36320,24 @@
       "videoIds": []
     },
     {
+      "id": "3bf4129a-8c52-80d8-a44d-dd7ce2c32993",
+      "slug": "earth-tongue",
+      "name": "Earth Tongue",
+      "country": "NZ",
+      "bandcamp": "https://earthtongue.bandcamp.com/music",
+      "albumIds": [
+        "3bf4129a-8c52-80ef-bd1e-f4be6d161fb0"
+      ],
+      "genres": [
+        "Heavy Psych",
+        "Stoner Rock"
+      ],
+      "labelIds": [
+        "3bf4129a-8c52-80f4-9c70-fe0b67a215d9"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80f9-b775-db08e934426c",
       "slug": "ebbb",
       "name": "Ebbb",
@@ -53588,6 +53635,19 @@
       "artistIds": [
         "24a4129a-8c52-80ee-a6d2-d5ce7be36f03",
         "2524129a-8c52-809e-8590-f32aed267aa8"
+      ]
+    },
+    {
+      "id": "3bf4129a-8c52-80f4-9c70-fe0b67a215d9",
+      "slug": "in-the-red-records",
+      "name": "In The Red Records",
+      "country": "US",
+      "bandcamp": "https://intheredrecords.bandcamp.com/",
+      "albumIds": [
+        "3bf4129a-8c52-80ef-bd1e-f4be6d161fb0"
+      ],
+      "artistIds": [
+        "3bf4129a-8c52-80d8-a44d-dd7ce2c32993"
       ]
     },
     {

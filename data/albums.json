@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-17T23:39:36Z",
+  "generatedAt": "2026-08-18T21:40:54Z",
   "counts": {
-    "albums": 1086,
-    "artists": 974,
+    "albums": 1087,
+    "artists": 975,
     "labels": 612,
     "videos": 67
   },
@@ -1999,6 +1999,37 @@
       ],
       "labels": [
         "Ostgut Ton"
+      ]
+    },
+    {
+      "id": "3c04129a-8c52-800b-be92-e3fd74336b98",
+      "slug": "telehealth-green-world-image",
+      "artist": "Telehealth",
+      "album": "Green World Image",
+      "url": "https://album.link/0mvxq3vfnvtpx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4b4db61f-5270-499e-a531-d6ea3198052a%3Aa1234641912_10.jpg?table=block&id=3c04129a-8c52-800b-be92-e3fd74336b98&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Art Punk",
+        "Post-Punk",
+        "Dance-Punk",
+        "New Wave"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-05-15",
+      "year": 2026,
+      "artistIds": [
+        "3c04129a-8c52-8065-9303-d24d68bc6255"
+      ],
+      "artists": [
+        "Telehealth"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8054-8334-e56a9e29b35e"
+      ],
+      "labels": [
+        "Sub Pop Records"
       ]
     },
     {
@@ -47152,6 +47183,26 @@
       ]
     },
     {
+      "id": "3c04129a-8c52-8065-9303-d24d68bc6255",
+      "slug": "telehealth",
+      "name": "Telehealth",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3c04129a-8c52-800b-be92-e3fd74336b98"
+      ],
+      "genres": [
+        "Art Punk",
+        "Post-Punk",
+        "Dance-Punk",
+        "New Wave"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8054-8334-e56a9e29b35e"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-80e1-8428-c60809c8907e",
       "slug": "telemakus",
       "name": "Telemakus",
@@ -58065,6 +58116,7 @@
       "country": "UM",
       "bandcamp": "https://subpop.bandcamp.com/",
       "albumIds": [
+        "3c04129a-8c52-800b-be92-e3fd74336b98",
         "3544129a-8c52-8051-a605-d8174728e702",
         "2734129a-8c52-80a1-a8d0-df038082046a",
         "2554129a-8c52-8039-8af4-e28f39267696",
@@ -58076,6 +58128,7 @@
         "3b44129a-8c52-8014-bb4e-fa1a91975330"
       ],
       "artistIds": [
+        "3c04129a-8c52-8065-9303-d24d68bc6255",
         "3544129a-8c52-8038-8c0a-da500622e342",
         "2734129a-8c52-8012-b23d-e189e9f31aeb",
         "2554129a-8c52-8058-b86d-c258ac4c6344",

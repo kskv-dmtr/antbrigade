@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T23:39:53Z",
+  "generatedAt": "2026-08-18T21:41:04Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17239,6 +17239,20 @@
       "upc": "5054285375617",
       "tracks": 7,
       "releaseDate": "2020-09-19"
+    },
+    "3c04129a-8c52-800b-be92-e3fd74336b98": {
+      "source": "https://album.link/0mvxq3vfnvtpx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1aDMfclP6HvvAPAvIhyEtq",
+        "pandora": "https://www.pandora.com/AL:64742679",
+        "amazonMusic": "https://music.amazon.com/albums/B0GK34JSF8",
+        "tidal": "https://listen.tidal.com/album/495726436",
+        "bandcamp": "https://telehealth.bandcamp.com/album/green-world-image",
+        "amazonStore": "https://amazon.com/dp/B0GK34JSF8"
+      },
+      "upc": "098787172089",
+      "tracks": 13,
+      "releaseDate": "2026-04-15"
     }
   }
 }

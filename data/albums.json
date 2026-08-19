@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-18T21:40:54Z",
+  "generatedAt": "2026-08-19T20:47:27Z",
   "counts": {
-    "albums": 1087,
-    "artists": 975,
+    "albums": 1088,
+    "artists": 976,
     "labels": 612,
     "videos": 67
   },
@@ -689,6 +689,36 @@
       ],
       "labels": [
         "Epitaph"
+      ]
+    },
+    {
+      "id": "3c14129a-8c52-80e6-b59d-c3b7827df262",
+      "slug": "o-o",
+      "artist": "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ",
+      "album": "ʅ():: ● o ● o ●  ҈҈҈҈҈ :()(",
+      "url": "https://album.link/rzsh8pt4dw0zm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af2de7d7e-e394-4d1a-9a3b-db50c3e5b329%3Aa2226770948_10.jpg?table=block&id=3c14129a-8c52-80e6-b59d-c3b7827df262&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Microhouse",
+        "IDM",
+        "Folktronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-03",
+      "year": 2026,
+      "artistIds": [
+        "3c14129a-8c52-80f5-8dd5-d000d740375b"
+      ],
+      "artists": [
+        "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Self-released"
       ]
     },
     {
@@ -32079,6 +32109,25 @@
       "videoIds": []
     },
     {
+      "id": "3c14129a-8c52-80f5-8dd5-d000d740375b",
+      "slug": "3c14129a",
+      "name": "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ",
+      "country": "GB",
+      "bandcamp": null,
+      "albumIds": [
+        "3c14129a-8c52-80e6-b59d-c3b7827df262"
+      ],
+      "genres": [
+        "Microhouse",
+        "IDM",
+        "Folktronica"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2414129a-8c52-80ab-a980-f182862b20b2",
       "slug": "1000mods",
       "name": "1000mods",
@@ -57297,6 +57346,7 @@
       "bandcamp": null,
       "albumIds": [
         "3a94129a-8c52-8004-87dd-f0f24534f3a6",
+        "3c14129a-8c52-80e6-b59d-c3b7827df262",
         "3964129a-8c52-8063-a715-d68f15c5f7a0",
         "38a4129a-8c52-80f5-9b67-ef297a32ec2a",
         "3804129a-8c52-803c-8242-c84d37a1367b",
@@ -57406,6 +57456,7 @@
       ],
       "artistIds": [
         "3a94129a-8c52-8068-9284-edae16d44b33",
+        "3c14129a-8c52-80f5-8dd5-d000d740375b",
         "2c94129a-8c52-8057-87bc-ffc831f9f9e8",
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16",
         "3804129a-8c52-8076-85b8-e4f0a0484780",

@@ -1,13 +1,43 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-20T20:48:49Z",
+  "generatedAt": "2026-08-20T21:45:46Z",
   "counts": {
     "albums": 1089,
-    "artists": 976,
+    "artists": 977,
     "labels": 612,
     "videos": 67
   },
   "albums": [
+    {
+      "id": "3c24129a-8c52-8017-bbf1-c02fe37813bb",
+      "slug": "cleo-sol-gentlewoman",
+      "artist": "Cleo Sol",
+      "album": "Gentlewoman",
+      "url": "https://album.link/pzzqczbdgpcqq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A888890e2-3977-41a6-941b-e518f5f388ab%3Aa2285770469_10.jpg?table=block&id=3c24129a-8c52-8017-bbf1-c02fe37813bb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul",
+        "Singer-Songwriter"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-20",
+      "year": 2026,
+      "artistIds": [
+        "3c24129a-8c52-803e-be97-e6fd70f5965a"
+      ],
+      "artists": [
+        "Cleo Sol"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8081-88ac-e33ac3fbbeee"
+      ],
+      "labels": [
+        "Forever Living Originals"
+      ]
+    },
     {
       "id": "3be4129a-8c52-801c-9603-d9cf88e1fc61",
       "slug": "dent-may-the-big-one",
@@ -32065,24 +32095,6 @@
       "labels": [
         "Far Out Recordings"
       ]
-    },
-    {
-      "id": "3c24129a-8c52-8017-bbf1-c02fe37813bb",
-      "slug": "cleo-sol-gentlewoman",
-      "artist": "Cleo Sol",
-      "album": "Gentlewoman",
-      "url": "https://album.link/pzzqczbdgpcqq",
-      "cover": "https://antbrigade.notion.site/image/attachment%3A888890e2-3977-41a6-941b-e518f5f388ab%3Aa2285770469_10.jpg?table=block&id=3c24129a-8c52-8017-bbf1-c02fe37813bb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [
-        "Album"
-      ],
-      "released": null,
-      "year": null,
-      "artistIds": [],
-      "artists": [],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -34965,6 +34977,25 @@
       ],
       "labelIds": [
         "2a94129a-8c52-80bd-9f55-dcd8fbe8f634"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3c24129a-8c52-803e-be97-e6fd70f5965a",
+      "slug": "cleo-sol",
+      "name": "Cleo Sol",
+      "country": "GB",
+      "bandcamp": "https://cleosol.bandcamp.com/music",
+      "albumIds": [
+        "3c24129a-8c52-8017-bbf1-c02fe37813bb"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul",
+        "Singer-Songwriter"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8081-88ac-e33ac3fbbeee"
       ],
       "videoIds": []
     },
@@ -53121,11 +53152,13 @@
       "slug": "forever-living-originals",
       "name": "Forever Living Originals",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://foreverlivingoriginals.bandcamp.com/",
       "albumIds": [
+        "3c24129a-8c52-8017-bbf1-c02fe37813bb",
         "74d80e95-0ec8-4c05-ad89-f5eeb7adabf6"
       ],
       "artistIds": [
+        "3c24129a-8c52-803e-be97-e6fd70f5965a",
         "2524129a-8c52-80ac-bbc4-c4ae5e04ff5e"
       ]
     },

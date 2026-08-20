@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-19T20:47:27Z",
+  "generatedAt": "2026-08-20T20:48:49Z",
   "counts": {
-    "albums": 1088,
+    "albums": 1089,
     "artists": 976,
     "labels": 612,
     "videos": 67
@@ -32065,6 +32065,24 @@
       "labels": [
         "Far Out Recordings"
       ]
+    },
+    {
+      "id": "3c24129a-8c52-8017-bbf1-c02fe37813bb",
+      "slug": "cleo-sol-gentlewoman",
+      "artist": "Cleo Sol",
+      "album": "Gentlewoman",
+      "url": "https://album.link/pzzqczbdgpcqq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A888890e2-3977-41a6-941b-e518f5f388ab%3Aa2285770469_10.jpg?table=block&id=3c24129a-8c52-8017-bbf1-c02fe37813bb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [],
+      "types": [
+        "Album"
+      ],
+      "released": null,
+      "year": null,
+      "artistIds": [],
+      "artists": [],
+      "labelIds": [],
+      "labels": []
     }
   ],
   "artists": [

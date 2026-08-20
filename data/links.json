@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T20:47:37Z",
+  "generatedAt": "2026-08-20T20:48:59Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17262,6 +17262,20 @@
       "upc": "3663729448361",
       "tracks": 8,
       "releaseDate": "2026-06-03"
+    },
+    "3c24129a-8c52-8017-bbf1-c02fe37813bb": {
+      "source": "https://album.link/pzzqczbdgpcqq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3zjcu4Ejw43pByGix5kUSU",
+        "pandora": "https://www.pandora.com/AL:68868709",
+        "tidal": "https://listen.tidal.com/album/550712241",
+        "yandex": "https://music.yandex.ru/album/43469162",
+        "boomplay": "https://www.boomplay.com/albums/137651939",
+        "bandcamp": "https://cleosol.bandcamp.com/album/gentlewoman"
+      },
+      "upc": "859743823069",
+      "tracks": 15,
+      "releaseDate": "2026-07-20"
     }
   }
 }

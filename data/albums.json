@@ -1,13 +1,43 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-20T21:45:46Z",
+  "generatedAt": "2026-08-21T18:58:53Z",
   "counts": {
-    "albums": 1089,
-    "artists": 977,
+    "albums": 1090,
+    "artists": 978,
     "labels": 612,
     "videos": 67
   },
   "albums": [
+    {
+      "id": "3c34129a-8c52-8056-8c53-d7d6f6bbaa46",
+      "slug": "black-marble-life-in-small-spaces",
+      "artist": "Black Marble",
+      "album": "Life in Small Spaces",
+      "url": "https://album.link/fxxpvnzq9npfs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A05c7ba86-d7a8-42e1-9ce9-caf14515bd41%3Aa1738020903_10.jpg?table=block&id=3c34129a-8c52-8056-8c53-d7d6f6bbaa46&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "Synthpop",
+        "Coldwave"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-21",
+      "year": 2026,
+      "artistIds": [
+        "3c34129a-8c52-8090-88e6-f3124bfe7fd7"
+      ],
+      "artists": [
+        "Black Marble"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80db-94a2-e2d91763d1be"
+      ],
+      "labels": [
+        "Sacred Bones Records"
+      ]
+    },
     {
       "id": "3c24129a-8c52-8017-bbf1-c02fe37813bb",
       "slug": "cleo-sol-gentlewoman",
@@ -33698,6 +33728,25 @@
       "videoIds": []
     },
     {
+      "id": "3c34129a-8c52-8090-88e6-f3124bfe7fd7",
+      "slug": "black-marble",
+      "name": "Black Marble",
+      "country": "US",
+      "bandcamp": "https://blackmarble.bandcamp.com/music",
+      "albumIds": [
+        "3c34129a-8c52-8056-8c53-d7d6f6bbaa46"
+      ],
+      "genres": [
+        "Post-Punk",
+        "Synthpop",
+        "Coldwave"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80db-94a2-e2d91763d1be"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24f4129a-8c52-803c-be66-c9447b1219d0",
       "slug": "black-market-brass",
       "name": "Black Market Brass",
@@ -57215,13 +57264,15 @@
       "slug": "sacred-bones-records",
       "name": "Sacred Bones Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://sacredbonesrecords.bandcamp.com/",
       "albumIds": [
+        "3c34129a-8c52-8056-8c53-d7d6f6bbaa46",
         "3254129a-8c52-8041-88e7-f7a4826e27a4",
         "2fc4129a-8c52-80a8-9c07-f06672617115",
         "b07472d7-f1b7-4c52-9a09-29391e0d870d"
       ],
       "artistIds": [
+        "3c34129a-8c52-8090-88e6-f3124bfe7fd7",
         "3254129a-8c52-8035-8df3-eb9b8d30a40f",
         "2fc4129a-8c52-80a2-86a5-d1c580347850",
         "24a4129a-8c52-8078-9092-fab0e8b3a49d"

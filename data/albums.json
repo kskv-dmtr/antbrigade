@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-21T18:58:53Z",
+  "generatedAt": "2026-08-22T21:38:28Z",
   "counts": {
-    "albums": 1090,
-    "artists": 978,
-    "labels": 612,
+    "albums": 1091,
+    "artists": 979,
+    "labels": 613,
     "videos": 67
   },
   "albums": [
@@ -36,6 +36,36 @@
       ],
       "labels": [
         "Sacred Bones Records"
+      ]
+    },
+    {
+      "id": "3c44129a-8c52-80a7-a8ef-f3a2b8b319fb",
+      "slug": "sondre-lerche-acrobats",
+      "artist": "Sondre Lerche",
+      "album": "Acrobats",
+      "url": "https://album.link/kvfmwcbdsv2n4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad5d9cc68-665f-47af-b13f-833d2ebb9885%3Aa1651863911_10.jpg?table=block&id=3c44129a-8c52-80a7-a8ef-f3a2b8b319fb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Chamber Pop",
+        "Baroque Pop",
+        "Art Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-21",
+      "year": 2026,
+      "artistIds": [
+        "3c44129a-8c52-800c-9c6d-c5409c2c1d9b"
+      ],
+      "artists": [
+        "Sondre Lerche"
+      ],
+      "labelIds": [
+        "3c44129a-8c52-8093-9b95-cf350b2f1390"
+      ],
+      "labels": [
+        "PLZ"
       ]
     },
     {
@@ -46407,6 +46437,25 @@
       "videoIds": []
     },
     {
+      "id": "3c44129a-8c52-800c-9c6d-c5409c2c1d9b",
+      "slug": "sondre-lerche",
+      "name": "Sondre Lerche",
+      "country": "NO",
+      "bandcamp": null,
+      "albumIds": [
+        "3c44129a-8c52-80a7-a8ef-f3a2b8b319fb"
+      ],
+      "genres": [
+        "Chamber Pop",
+        "Baroque Pop",
+        "Art Pop"
+      ],
+      "labelIds": [
+        "3c44129a-8c52-8093-9b95-cf350b2f1390"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-8050-bf38-f961d0af463e",
       "slug": "songhoy-blues",
       "name": "Songhoy Blues",
@@ -56422,6 +56471,19 @@
       ],
       "artistIds": [
         "24a4129a-8c52-80d1-bb55-dbd3497a53e4"
+      ]
+    },
+    {
+      "id": "3c44129a-8c52-8093-9b95-cf350b2f1390",
+      "slug": "plz",
+      "name": "PLZ",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3c44129a-8c52-80a7-a8ef-f3a2b8b319fb"
+      ],
+      "artistIds": [
+        "3c44129a-8c52-800c-9c6d-c5409c2c1d9b"
       ]
     },
     {

@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-22T21:38:28Z",
+  "generatedAt": "2026-08-22T22:41:06Z",
   "counts": {
     "albums": 1091,
     "artists": 979,
@@ -46441,7 +46441,7 @@
       "slug": "sondre-lerche",
       "name": "Sondre Lerche",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://sondrelerchemusic.bandcamp.com/music",
       "albumIds": [
         "3c44129a-8c52-80a7-a8ef-f3a2b8b319fb"
       ],

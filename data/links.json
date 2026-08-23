@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T21:38:39Z",
+  "generatedAt": "2026-08-23T16:45:03Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17301,6 +17301,37 @@
       "upc": "823375100515",
       "tracks": 8,
       "releaseDate": "2026-07-21"
+    },
+    "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe": {
+      "source": "https://album.link/th4h0hgc32zgx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/61twNXRr9Gpb5XhLi7m5Qa",
+        "deezer": "https://www.deezer.com/album/726922771",
+        "amazonMusic": "https://music.amazon.com/albums/B0F1V81XJR",
+        "tidal": "https://listen.tidal.com/album/423743442",
+        "boomplay": "https://www.boomplay.com/albums/107800610",
+        "bandcamp": "https://ratbones.bandcamp.com/album/spaghettification",
+        "amazonStore": "https://amazon.com/dp/B0F1V81XJR"
+      },
+      "upc": "659499864862",
+      "tracks": 12,
+      "releaseDate": "2025-03-18"
+    },
+    "3c54129a-8c52-806f-a2b6-c8f50ac0d582": {
+      "source": "https://album.link/jgtp7bf5gms9n",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7hTDqGNzZ07KuYreh0pSjS",
+        "deezer": "https://www.deezer.com/album/319463247",
+        "amazonMusic": "https://music.amazon.com/albums/B0B1JKN72V",
+        "tidal": "https://listen.tidal.com/album/229769315",
+        "napster": "https://play.napster.com/album/alb.668664094",
+        "anghami": "https://play.anghami.com/album/1028374858?refer=linktree",
+        "bandcamp": "https://ratbones.bandcamp.com/album/teenage-confusion-and-adult-delusion",
+        "amazonStore": "https://amazon.com/dp/B0B1JKN72V"
+      },
+      "upc": "659499864985",
+      "tracks": 12,
+      "releaseDate": "2022-04-20"
     }
   }
 }

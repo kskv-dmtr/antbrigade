@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-22T22:41:06Z",
+  "generatedAt": "2026-08-23T16:44:47Z",
   "counts": {
-    "albums": 1091,
-    "artists": 979,
-    "labels": 613,
+    "albums": 1093,
+    "artists": 980,
+    "labels": 614,
     "videos": 67
   },
   "albums": [
@@ -13117,6 +13117,37 @@
       ],
       "labels": [
         "Bordello A Parigi"
+      ]
+    },
+    {
+      "id": "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe",
+      "slug": "ratbones-spaghettification",
+      "artist": "Ratbones",
+      "album": "Spaghettification",
+      "url": "https://album.link/th4h0hgc32zgx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af6436745-f94e-43c5-adce-a2233ded9306%3Aa1024244214_10.jpg?table=block&id=3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Punk",
+        "Power Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-04-18",
+      "year": 2025,
+      "artistIds": [
+        "3c54129a-8c52-800f-a89a-d4d7b71b1cc3"
+      ],
+      "artists": [
+        "Ratbones"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-9ebb-f93a5767b17a",
+        "3c54129a-8c52-8004-bb02-e9d1c8f374e0"
+      ],
+      "labels": [
+        "Mom's Basement Records",
+        "I Buy Records"
       ]
     },
     {
@@ -30149,6 +30180,37 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-806f-a2b6-c8f50ac0d582",
+      "slug": "ratbones-teenage-confusion-and-adult-delusion",
+      "artist": "Ratbones",
+      "album": "Teenage Confusion and Adult Delusion",
+      "url": "https://album.link/jgtp7bf5gms9n",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A364f03e6-5474-4830-a403-34bd2cdb9b9e%3Aa1379046642_10.jpg?table=block&id=3c54129a-8c52-806f-a2b6-c8f50ac0d582&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Punk",
+        "Power Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-20",
+      "year": 2022,
+      "artistIds": [
+        "3c54129a-8c52-800f-a89a-d4d7b71b1cc3"
+      ],
+      "artists": [
+        "Ratbones"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-9ebb-f93a5767b17a",
+        "3c54129a-8c52-8004-bb02-e9d1c8f374e0"
+      ],
+      "labels": [
+        "Mom's Basement Records",
+        "I Buy Records"
+      ]
+    },
+    {
       "id": "8369e90b-521b-4256-8496-8aa618d87c6c",
       "slug": "pkew-pkew-pkew-open-bar",
       "artist": "Pkew Pkew Pkew",
@@ -45001,6 +45063,26 @@
       "videoIds": []
     },
     {
+      "id": "3c54129a-8c52-800f-a89a-d4d7b71b1cc3",
+      "slug": "ratbones",
+      "name": "Ratbones",
+      "country": "IT",
+      "bandcamp": null,
+      "albumIds": [
+        "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe",
+        "3c54129a-8c52-806f-a2b6-c8f50ac0d582"
+      ],
+      "genres": [
+        "Pop Punk",
+        "Power Pop"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-9ebb-f93a5767b17a",
+        "3c54129a-8c52-8004-bb02-e9d1c8f374e0"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "36c4129a-8c52-804e-9085-cc4a1a6f25c4",
       "slug": "ratsalad",
       "name": "RATSALAD.",
@@ -53960,6 +54042,20 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-8004-bb02-e9d1c8f374e0",
+      "slug": "i-buy-records",
+      "name": "I Buy Records",
+      "country": "IT",
+      "bandcamp": "https://ibuyrecords.bandcamp.com/music",
+      "albumIds": [
+        "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe",
+        "3c54129a-8c52-806f-a2b6-c8f50ac0d582"
+      ],
+      "artistIds": [
+        "3c54129a-8c52-800f-a89a-d4d7b71b1cc3"
+      ]
+    },
+    {
       "id": "2504129a-8c52-8005-9c95-eeabd2afd5ba",
       "slug": "i-want-the-moon-records",
       "name": "I Want The Moon Records",
@@ -55412,13 +55508,16 @@
       "slug": "mom-s-basement-records",
       "name": "Mom's Basement Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://momsbasementrecords.bandcamp.com/music",
       "albumIds": [
         "3144129a-8c52-802e-a79d-c2b0f243feb9",
-        "ffc6c1bb-4044-421a-8301-7ac1ae22874c"
+        "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe",
+        "ffc6c1bb-4044-421a-8301-7ac1ae22874c",
+        "3c54129a-8c52-806f-a2b6-c8f50ac0d582"
       ],
       "artistIds": [
         "3144129a-8c52-80c0-9e2b-c818f793ec41",
+        "3c54129a-8c52-800f-a89a-d4d7b71b1cc3",
         "24a4129a-8c52-80bf-89f9-d934c7331c80"
       ]
     },

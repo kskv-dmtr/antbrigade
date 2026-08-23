@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-23T19:41:53Z",
+  "generatedAt": "2026-08-23T21:38:18Z",
   "counts": {
     "albums": 1098,
     "artists": 986,
     "labels": 616,
-    "videos": 72
+    "videos": 73
   },
   "albums": [
     {
@@ -49652,6 +49652,7 @@
       "genres": [],
       "labelIds": [],
       "videoIds": [
+        "3c54129a-8c52-8020-8568-e04189b20c5e",
         "3c54129a-8c52-80bf-891c-c4f566bfee76"
       ]
     },
@@ -61390,6 +61391,16 @@
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
       ],
       "slug": "the-bouncing-souls-power"
+    },
+    {
+      "id": "3c54129a-8c52-8020-8568-e04189b20c5e",
+      "title": "The Specials | Racist Friend",
+      "url": "https://youtu.be/gqH_0LPVoho?si=NNunFY4seGc8PS2r",
+      "kind": "Official Video",
+      "artistIds": [
+        "3c54129a-8c52-806a-b956-db14a7f4a286"
+      ],
+      "slug": "the-specials-racist-friend"
     },
     {
       "id": "3c54129a-8c52-80bf-891c-c4f566bfee76",

@@ -35,12 +35,12 @@
   "shortcuts": [
     {
       "name": "Artists",
-      "url": "/artists/",
+      "url": "/artists",
       "icons": [{ "src": "/icons/icon-192.png?v=2026-08-08", "sizes": "192x192" }]
     },
     {
       "name": "Labels",
-      "url": "/labels/",
+      "url": "/labels",
       "icons": [{ "src": "/icons/icon-192.png?v=2026-08-08", "sizes": "192x192" }]
     }
   ]

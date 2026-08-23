@@ -22,7 +22,8 @@ const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
 // bandcamp — ключ необязательного свойства со ссылкой, у каждой базы свой
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
-                  bandcamp:   'XmmI' };
+                  bandcamp:   'XmmI',
+                  youtube:    'drlg' };
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^' };
@@ -237,14 +238,16 @@ async function directory(source, label) {
   for (const v of store.values()) {
     const name = plainText(prop(v.properties, 'title'));
     if (!name) continue;
-    // поле заполняется вручную и у большинства записей пустое
+    // поля заполняются вручную и у большинства записей пустые
     const bandcamp = source.bandcamp ? plainText(prop(v.properties, source.bandcamp)) : '';
+    const youtube  = source.youtube  ? plainText(prop(v.properties, source.youtube))  : '';
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       name,
       country: countryCode(v.format?.page_icon),
-      bandcamp: bandcamp || null
+      bandcamp: bandcamp || null,
+      youtube: youtube || null
     });
   }
 
@@ -423,6 +426,7 @@ async function main() {
       name: a.name,
       country: a.country,
       bandcamp: a.bandcamp,
+      youtube: a.youtube,
       albumIds,
       genres: uniqueFrom(albumIds, 'genres'),
       labelIds: uniqueFrom(albumIds, 'labelIds'),

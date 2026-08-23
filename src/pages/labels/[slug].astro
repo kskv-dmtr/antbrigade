@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
-import BandcampLink from '../../components/BandcampLink.astro';
+import ProfileLinks from '../../components/ProfileLinks.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -23,7 +23,7 @@ const roster   = artistsOf(label.artistIds);
     <h1>{label.name}</h1>
   </div>
 
-  <BandcampLink url={label.bandcamp} />
+  <ProfileLinks bandcamp={label.bandcamp} />
 
   {/* Список раньше показывался только при непустом составе — теперь в нём
       живёт ещё и страна, поэтому условие переехало на сами строки. */}

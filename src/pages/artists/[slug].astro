@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
-import BandcampLink from '../../components/BandcampLink.astro';
+import ProfileLinks from '../../components/ProfileLinks.astro';
 import GenreChips from '../../components/GenreChips.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural, coverSrc } from '../../lib/db.js';
 
@@ -37,7 +37,7 @@ const clipsSorted = clips.slice().sort((a, b) => {
     <h1>{artist.name}</h1>
   </div>
 
-  <BandcampLink url={artist.bandcamp} />
+  <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
 
   <dl class="facts facts--wide">
     {artist.country && (

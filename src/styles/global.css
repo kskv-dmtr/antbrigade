@@ -954,7 +954,7 @@ select option { background: #1a1a19; color: var(--fg); }
   margin: 0 0 30px;
 }
 .listen__platform,
-.bandcamp {
+.profile {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -966,10 +966,18 @@ select option { background: #1a1a19; color: var(--fg); }
   border: 1px solid var(--line);
 }
 .listen__platform:hover,
-.bandcamp:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+.profile:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
-.bandcamp { margin-bottom: 26px; }
-.bandcamp__icon { width: 14px; height: 14px; fill: currentColor; flex: none; }
+/* Ряд ссылок наружу — Bandcamp, YouTube. Просвет и отступ снизу держит он,
+   а не сами кнопки: их бывает и одна, и две, и отступ не должен от этого
+   зависеть. */
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.profile__icon { width: 14px; height: 14px; fill: currentColor; flex: none; }
 
 /* ------------------------------------------------------------ факты */
 

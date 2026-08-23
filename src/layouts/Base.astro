@@ -26,6 +26,10 @@ const nav = [
   { href: '/genres',  label: 'Genres',   key: 'genres' }
 ];
 
+/* Год в знаке охраны — от времени сборки, а не вписанный руками: сайт
+   пересобирается ежечасно, так что первого января он сменится сам. */
+const year = new Date().getFullYear();
+
 /* Сборка идёт с format: 'file', поэтому внутри пути живут с расширением:
    /artists.html. Наружу Vercel с cleanUrls отдаёт /artists, а .html-адрес
    переправляет 308-м. Срезаем расширение, иначе канонической объявляется
@@ -142,18 +146,20 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   </main>
 
   {/* Слева — что это за сайт, справа — кто его сделал и куда написать.
-      По две строки в каждой колонке: подвал у витрины должен читаться
+      По три строки в каждой колонке: подвал у витрины должен читаться
       одним взглядом, а не разбираться. */}
   <footer class="foot">
     <div class="foot__in shell">
       <div class="foot__note mono mono--sm">
         ant brigade — a personal music archive<br />
-        new releases · old favorites · strange finds
+        new releases · old favorites · strange finds<br />
+        © {year} · 1723 · 1312
       </div>
 
       <div class="foot__note foot__note--end mono mono--sm">
         made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">join telegram</a>
+        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">tg: @antbrigade</a><br />
+        <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">tg: @antbrigade_rar</a>
       </div>
     </div>
   </footer>

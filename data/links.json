@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T17:37:42Z",
+  "generatedAt": "2026-08-23T18:50:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17351,6 +17351,39 @@
       "upc": "825764121033",
       "tracks": 17,
       "releaseDate": "1998-01-24"
+    },
+    "3c54129a-8c52-80c3-bf4c-e8acc85552f1": {
+      "source": "https://album.link/gvxm5stt9rd2j",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/40O7A0vHmXCqPhzFoBCyJi",
+        "amazonMusic": "https://music.amazon.com/albums/B07DJMRDWC",
+        "tidal": "https://listen.tidal.com/album/89967418",
+        "yandex": "https://music.yandex.ru/album/5441784",
+        "bandcamp": "https://benhaukeldn.bandcamp.com/album/only-old",
+        "amazonStore": "https://amazon.com/dp/B07DJMRDWC"
+      },
+      "upc": "3615932546938",
+      "tracks": 7,
+      "releaseDate": "2018-06-20"
+    },
+    "3c54129a-8c52-80c7-8e95-e792f0516474": {
+      "source": "https://album.link/pcndt82fnkh9h",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6x3e4qZeY518KCtSkb3ns3",
+        "pandora": "https://www.pandora.com/AL:9914408",
+        "deezer": "https://www.deezer.com/album/235101592",
+        "amazonMusic": "https://music.amazon.com/albums/B096MY513Q",
+        "tidal": "https://listen.tidal.com/album/186711832",
+        "napster": "https://play.napster.com/album/alb.589616866",
+        "yandex": "https://music.yandex.ru/album/16079171",
+        "boomplay": "https://www.boomplay.com/albums/26619711",
+        "anghami": "https://play.anghami.com/album/1020986928?refer=linktree",
+        "bandcamp": "https://balimayaproject.bandcamp.com/album/wolo-so",
+        "amazonStore": "https://amazon.com/dp/B096MY513Q"
+      },
+      "upc": "5050580765085",
+      "tracks": 7,
+      "releaseDate": "2021-06-30"
     }
   }
 }

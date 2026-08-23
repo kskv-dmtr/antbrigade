@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-23T17:37:31Z",
+  "generatedAt": "2026-08-23T18:50:00Z",
   "counts": {
-    "albums": 1094,
-    "artists": 981,
+    "albums": 1096,
+    "artists": 982,
     "labels": 615,
-    "videos": 67
+    "videos": 70
   },
   "albums": [
     {
@@ -31982,6 +31982,36 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-80c3-bf4c-e8acc85552f1",
+      "slug": "ben-hauke-only-old",
+      "artist": "Ben Hauke",
+      "album": "Only Old",
+      "url": "https://album.link/gvxm5stt9rd2j",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab167f56b-4be9-4666-a44a-754a46f57a43%3Aa1422301590_10.jpg?table=block&id=3c54129a-8c52-80c3-bf4c-e8acc85552f1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Downtempo",
+        "Nu Jazz"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2018-07-20",
+      "year": 2018,
+      "artistIds": [
+        "3c54129a-8c52-802a-8d71-ede070ab10f3"
+      ],
+      "artists": [
+        "Ben Hauke"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "labels": [
+        "Far Out Recordings"
+      ]
+    },
+    {
       "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
       "slug": "yadava-it-rains-here",
       "artist": "Yadava",
@@ -32247,6 +32277,24 @@
       "labels": [
         "Far Out Recordings"
       ]
+    },
+    {
+      "id": "3c54129a-8c52-80c7-8e95-e792f0516474",
+      "slug": "balimaya-project-wolo-so",
+      "artist": "Balimaya Project",
+      "album": "Wolo So",
+      "url": "https://album.link/pcndt82fnkh9h",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abf640499-aa6e-42ab-bed7-d66eb8a106d7%3Aa2013852854_10.jpg?table=block&id=3c54129a-8c52-80c7-8e95-e792f0516474&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [],
+      "types": [
+        "Album"
+      ],
+      "released": null,
+      "year": null,
+      "artistIds": [],
+      "artists": [],
+      "labelIds": [],
+      "labels": []
     }
   ],
   "artists": [
@@ -33667,6 +33715,25 @@
       "videoIds": []
     },
     {
+      "id": "3c54129a-8c52-802a-8d71-ede070ab10f3",
+      "slug": "ben-hauke",
+      "name": "Ben Hauke",
+      "country": "GB",
+      "bandcamp": "https://benhauke.bandcamp.com/music",
+      "albumIds": [
+        "3c54129a-8c52-80c3-bf4c-e8acc85552f1"
+      ],
+      "genres": [
+        "Deep House",
+        "Downtempo",
+        "Nu Jazz"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2534129a-8c52-806b-863e-f2bd6a4239a9",
       "slug": "benny-sings",
       "name": "Benny Sings",
@@ -33719,7 +33786,9 @@
         "24f4129a-8c52-8052-851d-defb18460675",
         "24f4129a-8c52-8005-a173-cbd53c85026e"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3c54129a-8c52-80da-82e4-caf94919cc69"
+      ]
     },
     {
       "id": "24f4129a-8c52-80a5-bf76-d154fbf50a25",
@@ -39029,6 +39098,7 @@
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
       ],
       "videoIds": [
+        "3c54129a-8c52-8067-9642-df3b7185557f",
         "3b64129a-8c52-8020-a52a-ed8869e4d993"
       ]
     },
@@ -45462,7 +45532,9 @@
       "labelIds": [
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3c54129a-8c52-80bc-8885-e006b8259e11"
+      ]
     },
     {
       "id": "2524129a-8c52-804c-b261-e5e1a8fe71c9",
@@ -53116,10 +53188,12 @@
       "bandcamp": "https://faroutrecordings.bandcamp.com/",
       "albumIds": [
         "2284129a-8c52-8026-82d0-f9aff7dd22dc",
+        "3c54129a-8c52-80c3-bf4c-e8acc85552f1",
         "3b84129a-8c52-80e6-85c6-e80656072383"
       ],
       "artistIds": [
         "24a4129a-8c52-80e2-8d09-f063edda164c",
+        "3c54129a-8c52-802a-8d71-ede070ab10f3",
         "3b84129a-8c52-8029-b163-edd0477e91b2"
       ]
     },
@@ -59657,6 +59731,16 @@
       "slug": "bank-amerika"
     },
     {
+      "id": "3c54129a-8c52-80da-82e4-caf94919cc69",
+      "title": "Béton Armé | L'Union Fait La Force",
+      "url": "https://youtu.be/nIdSPq5G1QU?si=3SLPBJg7vGUBKnZI",
+      "kind": "Official Video",
+      "artistIds": [
+        "24f4129a-8c52-8044-86c1-e381c8e3729f"
+      ],
+      "slug": "beton-arme-l-union-fait-la-force"
+    },
+    {
       "id": "2894129a-8c52-8067-a0b1-c059d649a1b0",
       "title": "Blue Earth Sound | Half & Half",
       "url": "https://youtu.be/epaopGlHEuw?si=O-RpbWtz_X7x7eWc",
@@ -59874,6 +59958,16 @@
       "slug": "h-3-f-s-a-l-t"
     },
     {
+      "id": "3c54129a-8c52-8067-9642-df3b7185557f",
+      "title": "Home Front | Light Sleeper",
+      "url": "https://youtu.be/cqgXrGrIguU?si=_PNTE5YNdv-ETVdy",
+      "kind": "Official Video",
+      "artistIds": [
+        "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
+      ],
+      "slug": "home-front-light-sleeper"
+    },
+    {
       "id": "3b64129a-8c52-8020-a52a-ed8869e4d993",
       "title": "Home Front | Nation",
       "url": "https://youtu.be/0BtIiBI8rGc?si=jZWbqki-GbpbuUxV",
@@ -60046,6 +60140,16 @@
         "2404129a-8c52-8035-a990-db8919c35959"
       ],
       "slug": "rio-kosta-it-s-starting"
+    },
+    {
+      "id": "3c54129a-8c52-80bc-8885-e006b8259e11",
+      "title": "Rixe | Tir Groupé",
+      "url": "https://youtu.be/zvVl2Sd4S1g?si=vB76zzhDFKoTcUA2",
+      "kind": "Official Video",
+      "artistIds": [
+        "2524129a-8c52-80cf-9fb4-f38fd194499c"
+      ],
+      "slug": "rixe-tir-groupe"
     },
     {
       "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",

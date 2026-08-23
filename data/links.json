@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T16:45:03Z",
+  "generatedAt": "2026-08-23T17:37:42Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17332,6 +17332,25 @@
       "upc": "659499864985",
       "tracks": 12,
       "releaseDate": "2022-04-20"
+    },
+    "3c54129a-8c52-80c1-83f2-d11e766bd01a": {
+      "source": "https://album.link/ndnbs5r3fp8m7",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2S3289mypNw2zP0OpFexMb",
+        "pandora": "https://www.pandora.com/AL:24631",
+        "deezer": "https://www.deezer.com/album/64484712",
+        "amazonMusic": "https://music.amazon.com/albums/B0CX33XJ8N",
+        "tidal": "https://listen.tidal.com/album/89339486",
+        "napster": "https://play.napster.com/album/alb.314844163",
+        "yandex": "https://music.yandex.ru/album/62494",
+        "boomplay": "https://www.boomplay.com/albums/7325090",
+        "anghami": "https://play.anghami.com/album/4354914?refer=linktree",
+        "bandcamp": "https://dusternumero.bandcamp.com/album/stratosphere",
+        "amazonStore": "https://amazon.com/dp/B0CX33XJ8N"
+      },
+      "upc": "825764121033",
+      "tracks": 17,
+      "releaseDate": "1998-01-24"
     }
   }
 }

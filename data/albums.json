@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-23T16:44:47Z",
+  "generatedAt": "2026-08-23T17:37:31Z",
   "counts": {
-    "albums": 1093,
-    "artists": 980,
-    "labels": 614,
+    "albums": 1094,
+    "artists": 981,
+    "labels": 615,
     "videos": 67
   },
   "albums": [
@@ -13128,7 +13128,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Af6436745-f94e-43c5-adce-a2233ded9306%3Aa1024244214_10.jpg?table=block&id=3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Pop Punk",
-        "Power Pop"
+        "Ramonescore"
       ],
       "types": [
         "Album"
@@ -30188,7 +30188,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A364f03e6-5474-4830-a403-34bd2cdb9b9e%3Aa1379046642_10.jpg?table=block&id=3c54129a-8c52-806f-a2b6-c8f50ac0d582&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Pop Punk",
-        "Power Pop"
+        "Ramonescore"
       ],
       "types": [
         "Album"
@@ -32125,6 +32125,36 @@
       ],
       "labels": [
         "It’s Alive Records"
+      ]
+    },
+    {
+      "id": "3c54129a-8c52-80c1-83f2-d11e766bd01a",
+      "slug": "duster-stratosphere",
+      "artist": "Duster",
+      "album": "Stratosphere",
+      "url": "https://album.link/ndnbs5r3fp8m7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A597cdac9-9855-4977-84ab-ad41c9ef574c%3Aa0165062421_10.jpg?table=block&id=3c54129a-8c52-80c1-83f2-d11e766bd01a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Slacker Rock",
+        "Dream Pop",
+        "Slowcore"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "1998-02-24",
+      "year": 1998,
+      "artistIds": [
+        "3c54129a-8c52-802d-b53e-fd5607ffd6c4"
+      ],
+      "artists": [
+        "Duster"
+      ],
+      "labelIds": [
+        "3c54129a-8c52-80b1-8ab6-c8de2ac4e6f1"
+      ],
+      "labels": [
+        "Up Records"
       ]
     },
     {
@@ -36609,6 +36639,25 @@
       "labelIds": [
         "28a4129a-8c52-8098-8f85-ccc168a6e7b3",
         "30f4129a-8c52-8024-8307-e7738d50d657"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3c54129a-8c52-802d-b53e-fd5607ffd6c4",
+      "slug": "duster",
+      "name": "Duster",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3c54129a-8c52-80c1-83f2-d11e766bd01a"
+      ],
+      "genres": [
+        "Slacker Rock",
+        "Dream Pop",
+        "Slowcore"
+      ],
+      "labelIds": [
+        "3c54129a-8c52-80b1-8ab6-c8de2ac4e6f1"
       ],
       "videoIds": []
     },
@@ -45074,7 +45123,7 @@
       ],
       "genres": [
         "Pop Punk",
-        "Power Pop"
+        "Ramonescore"
       ],
       "labelIds": [
         "2504129a-8c52-8045-9ebb-f93a5767b17a",
@@ -59096,6 +59145,19 @@
       ],
       "artistIds": [
         "2494129a-8c52-8069-a343-e2df98b8f212"
+      ]
+    },
+    {
+      "id": "3c54129a-8c52-80b1-8ab6-c8de2ac4e6f1",
+      "slug": "up-records",
+      "name": "Up Records",
+      "country": "US",
+      "bandcamp": null,
+      "albumIds": [
+        "3c54129a-8c52-80c1-83f2-d11e766bd01a"
+      ],
+      "artistIds": [
+        "3c54129a-8c52-802d-b53e-fd5607ffd6c4"
       ]
     },
     {

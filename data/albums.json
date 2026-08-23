@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-23T18:50:00Z",
+  "generatedAt": "2026-08-23T19:37:57Z",
   "counts": {
-    "albums": 1096,
-    "artists": 982,
-    "labels": 615,
-    "videos": 70
+    "albums": 1098,
+    "artists": 986,
+    "labels": 616,
+    "videos": 72
   },
   "albums": [
     {
@@ -30930,6 +30930,35 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-8007-a29e-c92b6745eb40",
+      "slug": "pool-boy-all-inclusive",
+      "artist": "Pool Boy",
+      "album": "All Inclusive",
+      "url": "https://album.link/xw8nsxwgpgwhq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A93561970-2b43-4200-9dac-0407f577bb1c%3Aa1283437770_10.jpg?table=block&id=3c54129a-8c52-8007-a29e-c92b6745eb40&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Outsider House",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-10",
+      "year": 2021,
+      "artistIds": [
+        "3c54129a-8c52-800f-9d71-c7e8043cacd9"
+      ],
+      "artists": [
+        "Pool Boy"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808e-a32e-ce3b469ff8ac"
+      ],
+      "labels": [
+        "Noire & Blanche"
+      ]
+    },
+    {
       "id": "2524129a-8c52-800d-801a-e396fe6bee19",
       "slug": "the-night-flight-orchestra-aeromantic-ii",
       "artist": "The Night Flight Orchestra",
@@ -31013,6 +31042,35 @@
       ],
       "labels": [
         "Phantom Island"
+      ]
+    },
+    {
+      "id": "3c54129a-8c52-80c7-8e95-e792f0516474",
+      "slug": "balimaya-project-wolo-so",
+      "artist": "Balimaya Project",
+      "album": "Wolo So",
+      "url": "https://album.link/pcndt82fnkh9h",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abf640499-aa6e-42ab-bed7-d66eb8a106d7%3Aa2013852854_10.jpg?table=block&id=3c54129a-8c52-80c7-8e95-e792f0516474&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Afro-Cuban Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-30",
+      "year": 2021,
+      "artistIds": [
+        "3c54129a-8c52-80eb-9116-ea51e4de9b7f"
+      ],
+      "artists": [
+        "Balimaya Project"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8084-9531-fab6c4efc4ad"
+      ],
+      "labels": [
+        "jazz re:freshed"
       ]
     },
     {
@@ -32041,6 +32099,36 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-80ce-9eef-edd00345ee5d",
+      "slug": "pool-boy-pool-boy",
+      "artist": "Pool Boy",
+      "album": "Pool Boy",
+      "url": "https://album.link/gc3fdz256smpn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A58515f44-e3ba-48d9-857f-99b25d9d2bec%3Aa4148805418_10.jpg?table=block&id=3c54129a-8c52-80ce-9eef-edd00345ee5d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Balearic Beat",
+        "Outsider House",
+        "Deep House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-04-16",
+      "year": 2018,
+      "artistIds": [
+        "3c54129a-8c52-800f-9d71-c7e8043cacd9"
+      ],
+      "artists": [
+        "Pool Boy"
+      ],
+      "labelIds": [
+        "3c54129a-8c52-80a7-9fea-f62282b4f3e2"
+      ],
+      "labels": [
+        "Coastal Haze"
+      ]
+    },
+    {
       "id": "f4454003-36fc-464d-bbc6-9104d16675f5",
       "slug": "les-dynamites-les-dynamites",
       "artist": "Les Dynamites",
@@ -32277,24 +32365,6 @@
       "labels": [
         "Far Out Recordings"
       ]
-    },
-    {
-      "id": "3c54129a-8c52-80c7-8e95-e792f0516474",
-      "slug": "balimaya-project-wolo-so",
-      "artist": "Balimaya Project",
-      "album": "Wolo So",
-      "url": "https://album.link/pcndt82fnkh9h",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Abf640499-aa6e-42ab-bed7-d66eb8a106d7%3Aa2013852854_10.jpg?table=block&id=3c54129a-8c52-80c7-8e95-e792f0516474&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [
-        "Album"
-      ],
-      "released": null,
-      "year": null,
-      "artistIds": [],
-      "artists": [],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -33443,6 +33513,24 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80a3-91ad-ea78da8d2b24"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3c54129a-8c52-80eb-9116-ea51e4de9b7f",
+      "slug": "balimaya-project",
+      "name": "Balimaya Project",
+      "country": "GB",
+      "bandcamp": "https://balimayaproject.bandcamp.com/music",
+      "albumIds": [
+        "3c54129a-8c52-80c7-8e95-e792f0516474"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Afro-Cuban Jazz"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8084-9531-fab6c4efc4ad"
       ],
       "videoIds": []
     },
@@ -35055,6 +35143,19 @@
         "36d4129a-8c52-8090-be43-d234339abc80"
       ],
       "videoIds": []
+    },
+    {
+      "id": "3c54129a-8c52-8092-a0f7-e31cfc8e52e5",
+      "slug": "choir-boy",
+      "name": "Choir Boy",
+      "country": "US",
+      "bandcamp": "https://choirboy.bandcamp.com/music",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3c54129a-8c52-80be-b59e-dc444aafc4e0"
+      ]
     },
     {
       "id": "24f4129a-8c52-8091-99c1-f8e3adc649b5",
@@ -44761,6 +44862,28 @@
       "videoIds": []
     },
     {
+      "id": "3c54129a-8c52-800f-9d71-c7e8043cacd9",
+      "slug": "pool-boy",
+      "name": "Pool Boy",
+      "country": "CA",
+      "bandcamp": null,
+      "albumIds": [
+        "3c54129a-8c52-8007-a29e-c92b6745eb40",
+        "3c54129a-8c52-80ce-9eef-edd00345ee5d"
+      ],
+      "genres": [
+        "Outsider House",
+        "Downtempo",
+        "Balearic Beat",
+        "Deep House"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808e-a32e-ce3b469ff8ac",
+        "3c54129a-8c52-80a7-9fea-f62282b4f3e2"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-8056-9b7a-d00d438c9029",
       "slug": "poolside",
       "name": "Poolside",
@@ -48642,6 +48765,19 @@
       "videoIds": []
     },
     {
+      "id": "3c54129a-8c52-806a-b956-db14a7f4a286",
+      "slug": "the-specials",
+      "name": "The Specials",
+      "country": "GB",
+      "bandcamp": null,
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3c54129a-8c52-80bf-891c-c4f566bfee76"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80b5-a255-db01a2a8447d",
       "slug": "the-violent-hearts",
       "name": "The Violent Hearts",
@@ -52134,6 +52270,19 @@
       ]
     },
     {
+      "id": "3c54129a-8c52-80a7-9fea-f62282b4f3e2",
+      "slug": "coastal-haze",
+      "name": "Coastal Haze",
+      "country": "GB",
+      "bandcamp": "https://coastalhaze.bandcamp.com/",
+      "albumIds": [
+        "3c54129a-8c52-80ce-9eef-edd00345ee5d"
+      ],
+      "artistIds": [
+        "3c54129a-8c52-800f-9d71-c7e8043cacd9"
+      ]
+    },
+    {
       "id": "3524129a-8c52-80a4-a076-d316784307c6",
       "slug": "colectivo-doble-cara",
       "name": "Colectivo Doble Cara",
@@ -54589,12 +54738,14 @@
       "slug": "jazz-re-freshed",
       "name": "jazz re:freshed",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://jazzrefreshed.bandcamp.com/",
       "albumIds": [
-        "2d0fc6a2-0b00-4c23-b835-488e7132afb6"
+        "2d0fc6a2-0b00-4c23-b835-488e7132afb6",
+        "3c54129a-8c52-80c7-8e95-e792f0516474"
       ],
       "artistIds": [
-        "2524129a-8c52-8096-915e-f09b203eeb14"
+        "2524129a-8c52-8096-915e-f09b203eeb14",
+        "3c54129a-8c52-80eb-9116-ea51e4de9b7f"
       ]
     },
     {
@@ -56138,16 +56289,18 @@
       "slug": "noire-blanche",
       "name": "Noire & Blanche",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://noire-et-blanche.bandcamp.com/",
       "albumIds": [
         "3354129a-8c52-80b1-ba66-c2a7fe2d8540",
         "2444129a-8c52-808b-80f1-d72e68411a84",
-        "2694129a-8c52-8099-a09e-ccb2da5ee48c"
+        "2694129a-8c52-8099-a09e-ccb2da5ee48c",
+        "3c54129a-8c52-8007-a29e-c92b6745eb40"
       ],
       "artistIds": [
         "3354129a-8c52-806f-b298-ff87dac3d380",
         "2444129a-8c52-80e3-9891-d5e37da1f658",
-        "2694129a-8c52-80a8-a944-d5f88a909134"
+        "2694129a-8c52-80a8-a944-d5f88a909134",
+        "3c54129a-8c52-800f-9d71-c7e8043cacd9"
       ]
     },
     {
@@ -59781,6 +59934,16 @@
       "slug": "chat-pile-masc"
     },
     {
+      "id": "3c54129a-8c52-80be-b59e-dc444aafc4e0",
+      "title": "Choir Boy | I’ll Always Let You Down",
+      "url": "https://youtu.be/M5t0ow5uwAM?si=qKG8HRNSr2jRBUCC",
+      "kind": "Official Video",
+      "artistIds": [
+        "3c54129a-8c52-8092-a0f7-e31cfc8e52e5"
+      ],
+      "slug": "choir-boy-i-ll-always-let-you-down"
+    },
+    {
       "id": "1064129a-8c52-801a-8799-f6af489f2c14",
       "title": "Cobra Skulls | You Know I Know",
       "url": "https://youtu.be/knVQINZs3_g?si=8i4Q_xL8kQ3k32i_",
@@ -60241,6 +60404,16 @@
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
       ],
       "slug": "the-bouncing-souls-power"
+    },
+    {
+      "id": "3c54129a-8c52-80bf-891c-c4f566bfee76",
+      "title": "The Specials | What I Like Most About You is Your Girlfriend",
+      "url": "https://youtu.be/hi_uV6ojDSs?si=_6Jq4sG6Mcw7fQZv",
+      "kind": "Official Video",
+      "artistIds": [
+        "3c54129a-8c52-806a-b956-db14a7f4a286"
+      ],
+      "slug": "the-specials-what-i-like-most-about-you-is-your-girlfriend"
     },
     {
       "id": "2754129a-8c52-8091-8e3e-d49513e3047b",

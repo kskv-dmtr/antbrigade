@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T18:50:16Z",
+  "generatedAt": "2026-08-23T19:38:12Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17384,6 +17384,34 @@
       "upc": "5050580765085",
       "tracks": 7,
       "releaseDate": "2021-06-30"
+    },
+    "3c54129a-8c52-8007-a29e-c92b6745eb40": {
+      "source": "https://album.link/xw8nsxwgpgwhq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3Ds49Xs732sr7FXcH6OrLJ",
+        "pandora": "https://www.pandora.com/AL:9533487",
+        "amazonMusic": "https://music.amazon.com/albums/B096FHFCRS",
+        "tidal": "https://listen.tidal.com/album/186281689",
+        "boomplay": "https://www.boomplay.com/albums/26445902",
+        "amazonStore": "https://amazon.com/dp/B096FHFCRS"
+      },
+      "upc": "4062548029505",
+      "tracks": 9,
+      "releaseDate": "2021-08-10"
+    },
+    "3c54129a-8c52-80ce-9eef-edd00345ee5d": {
+      "source": "https://album.link/gc3fdz256smpn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0XjbNxCbmwDPqBFnww1UrL",
+        "pandora": "https://www.pandora.com/AL:2572303",
+        "deezer": "https://www.deezer.com/album/346010337",
+        "tidal": "https://listen.tidal.com/album/242584454",
+        "yandex": "https://music.yandex.ru/album/6301780",
+        "bandcamp": "https://coastalhaze.bandcamp.com/album/pool-boy-lp"
+      },
+      "upc": "5054526450813",
+      "tracks": 10,
+      "releaseDate": "2018-03-16"
     }
   }
 }

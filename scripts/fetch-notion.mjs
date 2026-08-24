@@ -138,14 +138,20 @@ function dateStart(value) {
 }
 
 /** Relation хранит id связанных страниц в декорации ["p", <pageId>, <spaceId>] */
+/* Повторы убираем здесь: в Notion одну и ту же страницу случается выбрать в
+   связи дважды, и заметить это в интерфейсе трудно — чипсы стоят рядом и
+   выглядят одинаково. Наружу это выходило удвоенным именем: у клипа
+   «Mount Kimbie / King Krule» исполнитель значился как
+   «Mount Kimbie · King Krule · Mount Kimbie». Второй раз связь ничего не
+   добавляет, поэтому и в данных ей делать нечего. */
 function relationIds(value) {
-  const ids = [];
+  const ids = new Set();
   for (const seg of segments(value)) {
     for (const dec of segments(seg?.[1])) {
-      if (dec?.[0] === 'p' && dec[1]) ids.push(dec[1]);
+      if (dec?.[0] === 'p' && dec[1]) ids.add(dec[1]);
     }
   }
-  return ids;
+  return [...ids];
 }
 
 const prop = (props, key) => props?.[key] ?? null;

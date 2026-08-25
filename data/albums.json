@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-25T17:47:00Z",
+  "generatedAt": "2026-08-25T18:59:39Z",
   "counts": {
     "albums": 1099,
     "artists": 987,
     "labels": 616,
-    "videos": 74
+    "videos": 75
   },
   "albums": [
     {
@@ -33933,8 +33933,8 @@
       "slug": "benny-sings",
       "name": "Benny Sings",
       "country": "NL",
-      "bandcamp": null,
-      "youtube": null,
+      "bandcamp": "https://bennysings.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@BennySings",
       "albumIds": [
         "2534129a-8c52-8046-8e24-e9d131ffb2ca"
       ],
@@ -33945,7 +33945,9 @@
       "labelIds": [
         "2444129a-8c52-8014-88cc-c0144285751a"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3c74129a-8c52-8087-a74d-cd37607161b0"
+      ]
     },
     {
       "id": "24e4129a-8c52-80b3-99ab-c54b19b547ce",
@@ -42318,6 +42320,7 @@
       "genres": [],
       "labelIds": [],
       "videoIds": [
+        "3c74129a-8c52-80e8-a498-dd362a63edbc",
         "3b74129a-8c52-802b-8443-eca317dfa9b6"
       ]
     },
@@ -60174,7 +60177,7 @@
       "name": "Stones Throw Records",
       "country": "US",
       "bandcamp": "https://stonesthrow.bandcamp.com/",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@stonesthrow",
       "albumIds": [
         "3914129a-8c52-80e6-b3d2-ddf2259a9530",
         "2e04129a-8c52-808d-b82c-ef5bbd1e5d0c",
@@ -61538,6 +61541,16 @@
       "slug": "bank-amerika"
     },
     {
+      "id": "3c74129a-8c52-8087-a74d-cd37607161b0",
+      "title": "Benny Sings | You Love Me",
+      "url": "https://youtu.be/POOr_8fL-7g?si=40iKG83gwBXyd6jq",
+      "kind": "Official Video",
+      "artistIds": [
+        "2534129a-8c52-806b-863e-f2bd6a4239a9"
+      ],
+      "slug": "benny-sings-you-love-me"
+    },
+    {
       "id": "3c54129a-8c52-80da-82e4-caf94919cc69",
       "title": "Béton Armé | L'Union Fait La Force",
       "url": "https://youtu.be/nIdSPq5G1QU?si=3SLPBJg7vGUBKnZI",
@@ -61830,7 +61843,9 @@
       "title": "Los Baby Jaguars | El Fuego (Latin Funk)",
       "url": "https://youtu.be/AHux-RBJgnU?si=gCDCBZ7m5h_lYVFz",
       "kind": "Official Video",
-      "artistIds": [],
+      "artistIds": [
+        "3b74129a-8c52-809a-b128-d980a5f8d12d"
+      ],
       "slug": "los-baby-jaguars-el-fuego-latin-funk"
     },
     {

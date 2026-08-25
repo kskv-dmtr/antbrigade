@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-25T10:51:25Z",
+  "generatedAt": "2026-08-25T17:47:00Z",
   "counts": {
     "albums": 1099,
     "artists": 987,
@@ -60283,7 +60283,7 @@
       "name": "Sub Pop Records",
       "country": "UM",
       "bandcamp": "https://subpop.bandcamp.com/",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@subpop",
       "albumIds": [
         "3c04129a-8c52-800b-be92-e3fd74336b98",
         "3544129a-8c52-8051-a605-d8174728e702",

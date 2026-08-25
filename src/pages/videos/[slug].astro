@@ -36,7 +36,6 @@ const rest = [...new Map(
   activeSection="videos"
 >
   <Breadcrumbs
-    section={{ href: '/videos', label: 'Videos' }}
     trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
     name={title}
   />

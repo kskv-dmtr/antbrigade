@@ -19,7 +19,7 @@ const roster   = artistsOf(label.artistIds);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="labels"
 >
-  <Breadcrumbs section={{ href: "/labels", label: "Labels" }} name={label.name} place />
+  <Breadcrumbs name={label.name} place />
 
   <div class="page-head">
     {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}

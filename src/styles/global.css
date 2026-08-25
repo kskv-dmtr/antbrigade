@@ -874,6 +874,37 @@ select option { background: #1a1a19; color: var(--fg); }
 .crumbs a:hover,
 .crumbs a:focus-visible { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
+/* Кнопка «назад». Набрана как остальные звенья пути и подчёркнута так же:
+   рядом с одиннадцатым кеглем рамка читалась бы отдельным органом
+   управления, а это продолжение той же строки. Шрифт, разрядку и
+   прописные задаём явно — своё у кнопки браузер ставит сам и не наследует.
+
+   Без скрипта её нет: пришли ли откуда-то внутри сайта, знает только он. */
+.crumbs__back {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  flex: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.crumbs__back:not([hidden]) { display: inline-flex; }
+.crumbs__back:hover,
+.crumbs__back:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-bottom-color: transparent;
+}
+/* Тот же кегль, что у шеврона в списках фильтров. */
+.crumbs__chevron { width: 9px; height: 9px; flex: none; }
+
 /* Путь всегда в одну строку, длинное обрезается многоточием. Переносом он
    разрастался до трёх строк — «Alma's Cove EP Full Live Performance (Live in
    Preveli Gorge, Crete)» на узком экране, — и всё это ради названия, которое
@@ -908,7 +939,7 @@ select option { background: #1a1a19; color: var(--fg); }
 
    Потолок в 40% нужен на случай, когда сжимать приходится уже его: без
    него самое длинное название лейбла заняло бы почти всю строку. */
-.crumbs a[data-from] {
+.crumbs a.crumbs__from {
   flex-shrink: 1;
   min-width: 0;
   max-width: 40%;
@@ -917,9 +948,18 @@ select option { background: #1a1a19; color: var(--fg); }
   white-space: nowrap;
 }
 
-/* Путь уже отступил сверху за обоих: следующему блоку своё поле не нужно. */
-.crumbs + .page-head { padding-top: 18px; }
-.crumbs + .detail { padding-top: 14px; }
+/* Путь уже отступил сверху за обоих: следующему блоку своё поле не нужно.
+
+   Через `~`, а не `+`: между строкой пути и следующим блоком стоит
+   инлайновый скрипт, который её наполняет, а он тоже элемент — соседним
+   селектором блок перестал доставаться, и заголовок опускался на два
+   десятка пикселей.
+
+   `:not([hidden])` — на странице жанра, лейбла и исполнителя строка пути
+   бывает спрятана целиком, и тогда отступ у блока должен остаться своим,
+   полным. Скрипт снимает hidden до первой отрисовки, так что прыжка нет. */
+.crumbs:not([hidden]) ~ .page-head { padding-top: 18px; }
+.crumbs:not([hidden]) ~ .detail { padding-top: 14px; }
 
 .detail { padding: 28px 0 10px; }
 

@@ -1,11 +1,14 @@
 ---
-/* Путь до страницы: раздел, необязательные промежуточные звенья и текущая
-   запись.
+/* Путь до страницы и кнопка «назад» над ним.
 
-   Только на внутренних страницах — у списков разделов путь состоял бы из
-   одного звена, а в меню наверху текущий раздел и так подчёркнут. Первым
-   звеном не ставим главную: на неё ведёт слово слева в шапке, и в коротком
-   пути «ant brigade / Music / …» первое звено — шум.
+   В пути стоят только имена — исполнитель, лейбл, жанр, название релиза.
+   Слов-разделов больше нет: «Music», «Artists», «Videos», «Labels» и
+   «Genres» и так стоят в шапке строкой выше, и в пути они занимали место,
+   ничего не добавляя. Осталось то, что бывает только здесь.
+
+   Первое звено — место, откуда пришли, если пришли из каталога: со
+   страницы жанра, лейбла или исполнителя. Механика в скрипте под
+   разметкой.
 
    Промежуточным звеном у релиза и клипа идёт исполнитель: на сайте релиз и
    называется «исполнитель — альбом», а его дискография живёт как раз на
@@ -14,31 +17,40 @@
    значит. Таких релизов два десятка из тысячи.
 
    Последнее звено не ссылка: это страница, на которой человек уже стоит.
-   Оно повторяет заголовок ниже, но у пути своя работа — показать, откуда
-   пришёл и куда вернуться.
 
-   Первое звено — раздел, но только пока человек пришёл со стороны. Если он
-   пришёл из каталога, со страницы жанра, лейбла или исполнителя, вместо
-   раздела встаёт то самое место: не «Genres», а «Post-Punk». Слово-раздел
-   тут самое дешёвое звено — все пять и так стоят в шапке, а ценно именно
-   какой жанр. Подробности механики — в скрипте под разметкой.
+   place — эта страница сама может стать местом, куда возвращаются.
+   Ставится у жанра, лейбла и исполнителя; у релиза и клипа нет:
+   возвращаться «в релиз» из соседнего релиза незачем. */
 
-   place — эта страница сама может стать таким местом. Ставится у жанра,
-   лейбла и исполнителя; у релиза и клипа нет: возвращаться «в релиз» из
-   соседнего релиза незачем. */
+import Icon from './Icon.astro';
 
-const { section, trail = [], name, place = false } = Astro.props;
+const { trail = [], name, place = false } = Astro.props;
+
+/* У жанра, лейбла и исполнителя промежуточных звеньев нет, и без
+   слова-раздела путь состоял бы из одного имени — того самого, что стоит
+   заголовком строкой ниже. Такую строку прячем целиком и показываем,
+   только когда в неё есть что поставить: кнопку «назад» или место, откуда
+   пришли. */
+const bare = trail.length === 0;
 ---
 <nav
   class="crumbs mono mono--sm"
   aria-label="Breadcrumb"
   data-place={place ? name : undefined}
+  hidden={bare}
 >
-  <a href={section.href}>{section.label}</a>
+  <button type="button" class="crumbs__back" hidden>
+    <Icon name="caret-left" class="crumbs__chevron" />Back
+  </button>
+
+  {/* Пустая заготовка под место, откуда пришли: адрес и имя подставляет
+      скрипт. Отдавать её с сервера заполненной нечем — сервер один на всех,
+      а пришёл каждый по-своему. */}
+  <a class="crumbs__from" hidden></a>
+  <span class="crumbs__sep" data-sep="from" aria-hidden="true" hidden>/</span>
 
   {trail.length > 0 && (
     <>
-      <span class="crumbs__sep" aria-hidden="true">/</span>
       {/* Соавторы внутри одного звена: между ними точка, а не косая черта —
           косая читалась бы как ещё один уровень вложенности, которого нет. */}
       <span class="crumbs__trail">
@@ -49,25 +61,24 @@ const { section, trail = [], name, place = false } = Astro.props;
           </>
         ))}
       </span>
+      <span class="crumbs__sep" aria-hidden="true">/</span>
     </>
   )}
 
-  <span class="crumbs__sep" aria-hidden="true">/</span>
-  <span class="crumbs__here">{name}</span>
+  <span class="crumbs__here" hidden={bare}>{name}</span>
 </nav>
 
-{/* Скрипт стоит вплотную под разметкой и намеренно is:inline: обычный
-    Astro собирает в модуль, а тот выполняется после разбора страницы — путь
-    успел бы отрисоваться со словом «Music» и на глазах смениться. Здесь он
-    парсится и выполняется до первой отрисовки, подмены не видно.
+{/* Скрипт стоит вплотную под разметкой и намеренно is:inline: обычный Astro
+    собирает в модуль, а тот выполняется после разбора страницы — строка
+    успела бы отрисоваться пустой и на глазах наполниться.
 
-    Имя места берём не из адреса, а из sessionStorage: по адресу
-    /genres/post-punk можно восстановить только огрызок «post punk», а
-    настоящее написание — «Post-Punk», и у имён вроде «O’Flynn» из адреса
-    не получится вовсе. Поэтому каждая страница-место записывает своё имя
-    сама, а следующая читает — но применяет, только если записанный адрес
-    совпал с document.referrer. Без совпадения (пришли из поиска, из
-    закладки, по ссылке из переписки) остаётся обычный путь.
+    Имя места берём не из адреса, а из sessionStorage: по /genres/post-punk
+    восстанавливается только огрызок «post punk», а настоящее написание —
+    «Post-Punk», и у имён вроде «O’Flynn» из адреса не выйдет вовсе. Поэтому
+    каждая страница-место записывает своё имя сама, а следующая читает — но
+    применяет, только если записанный адрес совпал с document.referrer. Без
+    совпадения (пришли из поиска, из закладки, по ссылке из переписки)
+    строка остаётся такой, какой её отдал сервер.
 
     Записываем после чтения, а не до: в хранилище лежит имя предыдущей
     страницы, и обратный порядок затёр бы его собой. */}
@@ -79,40 +90,55 @@ const { section, trail = [], name, place = false } = Astro.props;
     var KEY = 'crumb';
     // Адреса сравниваем без расширения: снаружи Vercel отдаёт их чистыми,
     // но по прямой ссылке на .html человек тоже может прийти.
-    var bare = function (p) { return p.replace(/\.html$/, ''); };
-    var was = null;
+    var clean = function (p) { return p.replace(/\.html$/, ''); };
 
-    try { was = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
+    var back    = nav.querySelector('.crumbs__back');
+    var from    = nav.querySelector('.crumbs__from');
+    var fromSep = nav.querySelector('[data-sep="from"]');
+    var here    = nav.querySelector('.crumbs__here');
+    var trail   = nav.querySelector('.crumbs__trail');
 
     var ref = document.referrer;
+    var inside = !!ref && ref.indexOf(location.origin + '/') === 0;
 
-    if (was && ref && ref.indexOf(location.origin + '/') === 0) {
-      var from = bare(new URL(ref).pathname);
+    /* Кнопка «назад» — только когда возвращаться есть куда внутри сайта.
+       Пришли из поиска или по ссылке из переписки — history.back() увёл бы
+       с сайта совсем, а кнопка обещает обратное. */
+    if (inside) {
+      back.hidden = false;
+      nav.hidden = false;
+      back.addEventListener('click', function () { history.back(); });
+    }
 
-      if (from === was.p) {
-        var links = nav.getElementsByTagName('a');
-        var already = false;
+    var was = null;
+    try { was = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
 
-        /* Если место уже стоит в пути, подменять нечего: со страницы
-           исполнителя на его же релиз дало бы «Lusine / Lusine / …». */
-        for (var i = 0; i < links.length; i++) {
-          if (links[i].getAttribute('href') === from) already = true;
-        }
+    if (was && inside && clean(new URL(ref).pathname) === was.p) {
+      var links = trail ? trail.getElementsByTagName('a') : [];
+      var already = false;
 
-        if (!already) {
-          links[0].href = from;
-          links[0].textContent = was.l;
-          // По этой метке звено получает право сжиматься: слово «Music» в
-          // пять букв не жало никогда, а «Border Community Recordings» жмёт.
-          links[0].dataset.from = '';
-        }
+      /* Если место уже стоит в пути, подставлять его нечего: со страницы
+         исполнителя на его же релиз дало бы «Lusine / Lusine / …». */
+      for (var i = 0; i < links.length; i++) {
+        if (links[i].getAttribute('href') === was.p) already = true;
+      }
+
+      if (!already) {
+        from.href = was.p;
+        from.textContent = was.l;
+        from.hidden = false;
+        fromSep.hidden = false;
+        nav.hidden = false;
+        // На странице места собственное имя показываем только теперь, когда
+        // перед ним появился путь и оно перестало быть строкой в одиночку.
+        here.hidden = false;
       }
     }
 
     if (nav.dataset.place) {
       try {
         sessionStorage.setItem(KEY, JSON.stringify({
-          p: bare(location.pathname), l: nav.dataset.place
+          p: clean(location.pathname), l: nav.dataset.place
         }));
       } catch (e) {}
     }

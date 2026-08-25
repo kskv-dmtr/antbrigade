@@ -19,7 +19,7 @@ const related = relatedGenres(genre);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="genres"
 >
-  <Breadcrumbs section={{ href: "/genres", label: "Genres" }} name={genre.name} place />
+  <Breadcrumbs name={genre.name} place />
 
   <div class="page-head">
     <h1>{genre.name}</h1>

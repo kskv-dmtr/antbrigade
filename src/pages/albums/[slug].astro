@@ -40,7 +40,6 @@ const more = [...new Map(
   activeSection="albums"
 >
   <Breadcrumbs
-    section={{ href: '/music', label: 'Music' }}
     trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
     name={album.album}
   />

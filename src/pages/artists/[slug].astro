@@ -33,7 +33,7 @@ const clipsSorted = clips.slice().sort((a, b) => {
   image={coverSrc(discography.find((a) => a.cover), 800)}
   activeSection="artists"
 >
-  <Breadcrumbs section={{ href: "/artists", label: "Artists" }} name={artist.name} place />
+  <Breadcrumbs name={artist.name} place />
 
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
   <div class="page-head">

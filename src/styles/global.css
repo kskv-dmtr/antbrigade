@@ -376,13 +376,29 @@ a { color: inherit; text-decoration: none; }
    отрицательный полулидинг при line-height: 1.15. */
 .tile__artist + .tile__title { margin-top: -3px; }
 
-.tile__artist, .tile__title {
+/* Имя исполнителя — в двух строках с многоточием. Его роль на плитке
+   служебная, подпись над названием, и длинное имя не должно отжимать
+   название вниз. Обрезается оно редко: на тысячу плиток один случай. */
+.tile__artist {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+/* Название не обрезается вовсе: на плитке оно и есть содержание. Двух строк
+   не хватало десяти релизам из 1099 на широком экране и тридцати на узком, и
+   как раз там обрезанное теряет смысл — «Ayo Ke Disco: Boogie, Pop & Funk
+   from the South…» не отличить от соседнего сборника той же серии.
+
+   Плитка растёт вниз, обложки в ряду остаются на одной линии: они стоят
+   выше подписи, а высоту ряда задаёт самая высокая плитка. Лишних строк
+   набегает не больше четырёх, и только у этих десятков.
+
+   overflow-wrap — на случай слова, которое само шире колонки: на узком
+   экране в ней 165 пикселей. */
+.tile__title { overflow-wrap: anywhere; }
 
 /* ---------------------------------------------------------- индекс
 
@@ -464,13 +480,19 @@ a { color: inherit; text-decoration: none; }
   color: var(--fg-muted);
 }
 /* Тип релиза из многоточия исключён намеренно: он должен читаться целиком,
-   под это и подобрана ширина колонки. Обрезаются только имена и названия —
-   они произвольной длины. */
-.row__artist, .row__title {
+   под это и подобрана ширина колонки. Имя исполнителя в одну строку с
+   многоточием — в колонке 458 пикселей за неё не выходит ни одно из 1099. */
+.row__artist {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* Название переносится, а не обрезается. На узком экране так было с самого
+   начала — white-space: normal ниже по файлу, — а на широком в ту же
+   колонку не помещались десять названий из 1099. Строка под них растёт,
+   соседние колонки остаются по центру. */
+.row__title { overflow-wrap: anywhere; }
 .row__meta { white-space: nowrap; }
 
 /* Сам механизм переключения «строка / плитка» лежит в конце файла: там он
@@ -1346,7 +1368,9 @@ select option { background: #1a1a19; color: var(--fg); }
     padding: 12px 0;
   }
   .row__artist { font-size: 12px; }
-  .row__title { grid-column: 1; font-size: 16px; letter-spacing: -0.01em; white-space: normal; }
+  /* white-space здесь больше не задаём: название переносится и на широком
+     экране, эта строка только меняла бы кегль и место в сетке. */
+  .row__title { grid-column: 1; font-size: 16px; letter-spacing: -0.01em; }
   .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: 10px; }
   .row__num { grid-row: 2; grid-column: 2; font-size: 10px; }
   .row:hover, .row:focus-visible { padding-left: 8px; padding-right: 8px; }

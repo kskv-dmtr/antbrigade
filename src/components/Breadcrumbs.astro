@@ -15,11 +15,25 @@
 
    Последнее звено не ссылка: это страница, на которой человек уже стоит.
    Оно повторяет заголовок ниже, но у пути своя работа — показать, откуда
-   пришёл и куда вернуться. */
+   пришёл и куда вернуться.
 
-const { section, trail = [], name } = Astro.props;
+   Первое звено — раздел, но только пока человек пришёл со стороны. Если он
+   пришёл из каталога, со страницы жанра, лейбла или исполнителя, вместо
+   раздела встаёт то самое место: не «Genres», а «Post-Punk». Слово-раздел
+   тут самое дешёвое звено — все пять и так стоят в шапке, а ценно именно
+   какой жанр. Подробности механики — в скрипте под разметкой.
+
+   place — эта страница сама может стать таким местом. Ставится у жанра,
+   лейбла и исполнителя; у релиза и клипа нет: возвращаться «в релиз» из
+   соседнего релиза незачем. */
+
+const { section, trail = [], name, place = false } = Astro.props;
 ---
-<nav class="crumbs mono mono--sm" aria-label="Breadcrumb">
+<nav
+  class="crumbs mono mono--sm"
+  aria-label="Breadcrumb"
+  data-place={place ? name : undefined}
+>
   <a href={section.href}>{section.label}</a>
 
   {trail.length > 0 && (
@@ -41,3 +55,66 @@ const { section, trail = [], name } = Astro.props;
   <span class="crumbs__sep" aria-hidden="true">/</span>
   <span class="crumbs__here">{name}</span>
 </nav>
+
+{/* Скрипт стоит вплотную под разметкой и намеренно is:inline: обычный
+    Astro собирает в модуль, а тот выполняется после разбора страницы — путь
+    успел бы отрисоваться со словом «Music» и на глазах смениться. Здесь он
+    парсится и выполняется до первой отрисовки, подмены не видно.
+
+    Имя места берём не из адреса, а из sessionStorage: по адресу
+    /genres/post-punk можно восстановить только огрызок «post punk», а
+    настоящее написание — «Post-Punk», и у имён вроде «O’Flynn» из адреса
+    не получится вовсе. Поэтому каждая страница-место записывает своё имя
+    сама, а следующая читает — но применяет, только если записанный адрес
+    совпал с document.referrer. Без совпадения (пришли из поиска, из
+    закладки, по ссылке из переписки) остаётся обычный путь.
+
+    Записываем после чтения, а не до: в хранилище лежит имя предыдущей
+    страницы, и обратный порядок затёр бы его собой. */}
+<script is:inline>
+  (function () {
+    var nav = document.currentScript.previousElementSibling;
+    if (!nav || !nav.classList.contains('crumbs')) return;
+
+    var KEY = 'crumb';
+    // Адреса сравниваем без расширения: снаружи Vercel отдаёт их чистыми,
+    // но по прямой ссылке на .html человек тоже может прийти.
+    var bare = function (p) { return p.replace(/\.html$/, ''); };
+    var was = null;
+
+    try { was = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
+
+    var ref = document.referrer;
+
+    if (was && ref && ref.indexOf(location.origin + '/') === 0) {
+      var from = bare(new URL(ref).pathname);
+
+      if (from === was.p) {
+        var links = nav.getElementsByTagName('a');
+        var already = false;
+
+        /* Если место уже стоит в пути, подменять нечего: со страницы
+           исполнителя на его же релиз дало бы «Lusine / Lusine / …». */
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].getAttribute('href') === from) already = true;
+        }
+
+        if (!already) {
+          links[0].href = from;
+          links[0].textContent = was.l;
+          // По этой метке звено получает право сжиматься: слово «Music» в
+          // пять букв не жало никогда, а «Border Community Recordings» жмёт.
+          links[0].dataset.from = '';
+        }
+      }
+    }
+
+    if (nav.dataset.place) {
+      try {
+        sessionStorage.setItem(KEY, JSON.stringify({
+          p: bare(location.pathname), l: nav.dataset.place
+        }));
+      } catch (e) {}
+    }
+  })();
+</script>

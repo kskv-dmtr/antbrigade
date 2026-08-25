@@ -9,7 +9,29 @@ import { albums } from '../lib/db.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
 // и её видят поисковики. Фильтры лишь прячут лишнее.
-const types = [...new Set(albums.flatMap((a) => a.types))].sort();
+/* Подписи кнопок и их порядок заданы руками. В Notion типы записаны в
+   единственном числе — «Album», «EP», — а на кнопке фильтра читается
+   множественное: нажимаешь не на один альбом, а на все сразу. Порядок тоже
+   свой: по алфавиту редкая «Collaboration» вставала перед «EP», которых в
+   базе почти две сотни.
+
+   Ключом фильтра остаётся значение из Notion, подпись только показывается.
+   Тип, которого в списке нет, уходит в конец под своим именем — новый из
+   Notion появится в полосе сам, просто не впереди и без множественного. */
+const TYPE_LABELS = new Map([
+  ['Album', 'Albums'],
+  ['EP', 'EPs'],
+  ['Compilation', 'Compilations'],
+  ['Collaboration', 'Collaborations']
+]);
+const порядокТипа = (t) => {
+  const i = [...TYPE_LABELS.keys()].indexOf(t);
+  return i < 0 ? TYPE_LABELS.size : i;
+};
+
+const types = [...new Set(albums.flatMap((a) => a.types))]
+  .sort((a, b) => порядокТипа(a) - порядокТипа(b) || a.localeCompare(b))
+  .map((value) => ({ value, label: TYPE_LABELS.get(value) ?? value }));
 
 const genreCounts = new Map();
 for (const a of albums) {
@@ -48,7 +70,9 @@ const PAGE = 50;
       <div class="filters__group">
         <div class="seg" id="types" role="group" aria-label="Release type">
           <button type="button" data-type="" aria-pressed="true">All</button>
-          {types.map((t) => <button type="button" data-type={t} aria-pressed="false">{t}</button>)}
+          {types.map((t) => (
+            <button type="button" data-type={t.value} aria-pressed="false">{t.label}</button>
+          ))}
         </div>
       </div>
 

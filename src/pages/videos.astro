@@ -21,15 +21,24 @@ import { videos, videoTitle, videoArtists } from '../lib/db.js';
    Сверяем в нижнем регистре: имена приходят из Notion как есть, и однажды
    их там уже переписали — «Official Video» стал «Official video». Точное
    сравнение тогда молча перестало совпадать, и полоса вернулась к
-   алфавиту, никак об этом не сообщив. */
-const KIND_ORDER = ['official video', 'live performance'];
+   алфавиту, никак об этом не сообщив.
+
+   Подписи тоже свои: в Notion вид записан в единственном числе, а на кнопке
+   фильтра читается множественное — нажимаешь не на один ролик, а на все
+   сразу. Ключом фильтра остаётся значение из Notion, подпись только
+   показывается. */
+const KIND_LABELS = new Map([
+  ['official video', 'Official Videos'],
+  ['live performance', 'Live Performances']
+]);
 const rank = (k) => {
-  const i = KIND_ORDER.indexOf(k.toLowerCase());
-  return i < 0 ? KIND_ORDER.length : i;
+  const i = [...KIND_LABELS.keys()].indexOf(k.toLowerCase());
+  return i < 0 ? KIND_LABELS.size : i;
 };
 
 const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
-  .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
+  .map((value) => ({ value, label: KIND_LABELS.get(value.toLowerCase()) ?? value }));
 
 const list = videos
   .slice()
@@ -66,7 +75,9 @@ const PAGE = 50;
       <div class="filters__group">
         <div class="seg" id="kinds" role="group" aria-label="Video kind">
           <button type="button" data-kind="" aria-pressed="true">All</button>
-          {kinds.map((k) => <button type="button" data-kind={k} aria-pressed="false">{k}</button>)}
+          {kinds.map((k) => (
+            <button type="button" data-kind={k.value} aria-pressed="false">{k.label}</button>
+          ))}
         </div>
       </div>
 

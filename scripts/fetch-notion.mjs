@@ -26,7 +26,8 @@ const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   youtube:    'drlg' };
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
-                  bandcamp:   'Wd@^' };
+                  bandcamp:   'Wd@^',
+                  youtube:    'imKP' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
 
@@ -448,6 +449,7 @@ async function main() {
       name: l.name,
       country: l.country,
       bandcamp: l.bandcamp,
+      youtube: l.youtube,
       albumIds,
       artistIds: uniqueFrom(albumIds, 'artistIds')
     };

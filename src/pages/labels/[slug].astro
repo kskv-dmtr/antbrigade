@@ -23,7 +23,7 @@ const roster   = artistsOf(label.artistIds);
     <h1>{label.name}</h1>
   </div>
 
-  <ProfileLinks bandcamp={label.bandcamp} />
+  <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
 
   {/* Список раньше показывался только при непустом составе — теперь в нём
       живёт ещё и страна, поэтому условие переехало на сами строки. */}

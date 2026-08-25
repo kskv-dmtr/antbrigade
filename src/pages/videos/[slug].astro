@@ -35,7 +35,11 @@ const rest = [...new Map(
   image={thumb}
   activeSection="videos"
 >
-  <Breadcrumbs section={{ href: "/videos", label: "Videos" }} name={title} />
+  <Breadcrumbs
+    section={{ href: '/videos', label: 'Videos' }}
+    trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
+    name={title}
+  />
 
   <article class="detail">
     <div class="detail__banner detail__banner--video">

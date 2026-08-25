@@ -25,7 +25,11 @@ const cover   = coverSrc(album, 800);
   image={coverSrc(album, 800)}
   activeSection="albums"
 >
-  <Breadcrumbs section={{ href: "/music", label: "Music" }} name={title} />
+  <Breadcrumbs
+    section={{ href: '/music', label: 'Music' }}
+    trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
+    name={album.album}
+  />
 
   <article class="detail">
     {/* Обложка целиком на размытой копии себя самой, заголовок рядом.

@@ -848,6 +848,42 @@ select option { background: #1a1a19; color: var(--fg); }
    обложка целиком слева, крупный заголовок справа.                      */
 
 /* Отступ сверху: обложка не должна упираться в закреплённую шапку. */
+/* Путь до страницы. Набран как прочие служебные строки — моноширинным
+   прописными, — и стоит первым в содержимом, отделяя шапку от заголовка.
+
+   Отступ снизу нулевой: под ним всегда идёт либо .page-head со своим полем
+   сверху, либо .detail со своим. Свой добавил бы к чужому и развёл бы путь
+   с заголовком дальше, чем нужно. */
+.crumbs {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding-top: 28px;
+  color: var(--fg-dim);
+}
+.crumbs a,
+.crumbs__sep { flex: none; }
+.crumbs a { color: var(--fg-muted); border-bottom: 1px solid var(--line); }
+.crumbs a:hover,
+.crumbs a:focus-visible { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+
+/* Путь всегда в одну строку, длинное имя обрезается многоточием. Переносом
+   он разрастался до трёх строк — «Alma's Cove EP Full Live Performance (Live
+   in Preveli Gorge, Crete)» на узком экране, — и всё это ради названия,
+   которое стоит целиком строкой ниже. Обрезать здесь ничего не стоит: путь
+   показывает, откуда пришёл, а не что это за страница. */
+.crumbs__here {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Путь уже отступил сверху за обоих: следующему блоку своё поле не нужно. */
+.crumbs + .page-head { padding-top: 18px; }
+.crumbs + .detail { padding-top: 14px; }
+
 .detail { padding: 28px 0 10px; }
 
 /* Related на странице жанра: подпись и жанры на одной горизонтали. */

@@ -8,6 +8,7 @@
 
 import Base from '../../layouts/Base.astro';
 import VideoCard from '../../components/VideoCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { videos, artistsOf, videosOf, thumbSrc, videoTitle } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -34,6 +35,8 @@ const rest = [...new Map(
   image={thumb}
   activeSection="videos"
 >
+  <Breadcrumbs section={{ href: "/videos", label: "Videos" }} name={title} />
+
   <article class="detail">
     <div class="detail__banner detail__banner--video">
       {thumb && <img class="detail__backdrop" src={thumb} alt="" aria-hidden="true" decoding="async" />}

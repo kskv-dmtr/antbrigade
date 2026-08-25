@@ -4,6 +4,7 @@ import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
 import GenreChips from '../../components/GenreChips.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -32,6 +33,8 @@ const clipsSorted = clips.slice().sort((a, b) => {
   image={coverSrc(discography.find((a) => a.cover), 800)}
   activeSection="artists"
 >
+  <Breadcrumbs section={{ href: "/artists", label: "Artists" }} name={artist.name} />
+
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
   <div class="page-head">
     <h1>{artist.name}</h1>

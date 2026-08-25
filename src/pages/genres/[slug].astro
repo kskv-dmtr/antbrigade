@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { genres, albumsOf, relatedGenres, plural, coverSrc } from '../../lib/db.js';
 
 
@@ -18,6 +19,8 @@ const related = relatedGenres(genre);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="genres"
 >
+  <Breadcrumbs section={{ href: "/genres", label: "Genres" }} name={genre.name} />
+
   <div class="page-head">
     <h1>{genre.name}</h1>
     <p class="counter">[{releases.length}]</p>

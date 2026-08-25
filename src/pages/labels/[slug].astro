@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -18,6 +19,8 @@ const roster   = artistsOf(label.artistIds);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="labels"
 >
+  <Breadcrumbs section={{ href: "/labels", label: "Labels" }} name={label.name} />
+
   <div class="page-head">
     {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
     <h1>{label.name}</h1>

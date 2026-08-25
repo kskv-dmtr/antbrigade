@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import GenreChips from '../../components/GenreChips.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
   albums, artistsOf, labelsOf, coverSrc, formatDate, artistLine
@@ -24,6 +25,8 @@ const cover   = coverSrc(album, 800);
   image={coverSrc(album, 800)}
   activeSection="albums"
 >
+  <Breadcrumbs section={{ href: "/music", label: "Music" }} name={title} />
+
   <article class="detail">
     {/* Обложка целиком на размытой копии себя самой, заголовок рядом.
 

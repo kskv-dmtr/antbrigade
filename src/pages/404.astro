@@ -7,13 +7,12 @@
  * пути назад. При трёх тысячах адресов и недавнем переезде каталога с
  * /releases на /music это не редкий случай.
  *
- * Меню разделов продублировано в теле страницы намеренно, хотя оно есть в
- * шапке: на узком экране шапка прячет его под бургер, а человек, попавший
- * в тупик, не должен искать выход за кнопкой.
+ * Ряда кнопок с разделами здесь нет намеренно: он повторял бы меню в
+ * шапке. Выход из тупика — само меню и находки ниже.
  *
- * Случайные релизы под ними — тот же «Lucky Finds», что на главной, и
- * назван так же: это одна и та же вещь, заводить ей второе имя незачем.
- * Тупик превращается во вход в каталог, а не в извинение.
+ * Случайные релизы — тот же «Lucky Finds», что на главной, и назван так
+ * же: это одна и та же вещь, заводить ей второе имя незачем. Тупик
+ * превращается во вход в каталог, а не в извинение.
  */
 
 import Base from '../layouts/Base.astro';
@@ -44,17 +43,6 @@ function shuffle(list) {
 /* Свежие не исключаем, в отличие от главной: там раздел Latest Releases
    стоит прямо над находками и повтор был бы виден, здесь его нет. */
 const pool = shuffle(albums).slice(0, POOL);
-
-/* Тот же список, что в шапке, и в том же порядке. Держать его здесь, а не
-   тащить из Base, — сознательно: там он про меню, а тут про выход из
-   тупика, и совпадение их порядка ничего не связывает. */
-const sections = [
-  { href: '/music',   label: 'Music' },
-  { href: '/videos',  label: 'Videos' },
-  { href: '/artists', label: 'Artists' },
-  { href: '/labels',  label: 'Labels' },
-  { href: '/genres',  label: 'Genres' }
-];
 ---
 <Base
   title="Page not found · ant brigade"
@@ -71,12 +59,8 @@ const sections = [
 
   <p class="lost">
     There is no page at this address — it was renamed, or the link lost a
-    piece on the way here. Everything else is where it was:
+    piece on the way here.
   </p>
-
-  <div class="listen">
-    {sections.map((s) => <a class="listen__platform" href={s.href}>{s.label}</a>)}
-  </div>
 
   <section class="section">
     <div class="head head--center">

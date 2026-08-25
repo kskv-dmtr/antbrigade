@@ -47,10 +47,13 @@ const bare = trail.length === 0;
       скрипт. Отдавать её с сервера заполненной нечем — сервер один на всех,
       а пришёл каждый по-своему. */}
   <a class="crumbs__from" hidden></a>
-  <span class="crumbs__sep" data-sep="from" aria-hidden="true" hidden>/</span>
 
   {trail.length > 0 && (
     <>
+      {/* Своя черта у подставленного звена нужна только когда за ним идёт
+          исполнитель. Без него черту рисует хвост, и вторая была бы лишней. */}
+      <span class="crumbs__sep" data-sep="from" aria-hidden="true" hidden>/</span>
+
       {/* Соавторы внутри одного звена: между ними точка, а не косая черта —
           косая читалась бы как ещё один уровень вложенности, которого нет. */}
       <span class="crumbs__trail">
@@ -61,11 +64,17 @@ const bare = trail.length === 0;
           </>
         ))}
       </span>
-      <span class="crumbs__sep" aria-hidden="true">/</span>
     </>
   )}
 
-  <span class="crumbs__here" hidden={bare}>{name}</span>
+  {/* Название и черта перед ним — одним куском: сжимаются вместе, и когда
+      места не остаётся вовсе, черта исчезает вместе с названием. Порознь
+      путь обрывался бы висящей косой в конце — так и было, пока кнопка не
+      забрала себе семьдесят пикселей. */}
+  <span class="crumbs__tail" hidden={bare}>
+    <span class="crumbs__sep" aria-hidden="true">/</span>
+    <span class="crumbs__here">{name}</span>
+  </span>
 </nav>
 
 {/* Скрипт стоит вплотную под разметкой и намеренно is:inline: обычный Astro
@@ -94,8 +103,9 @@ const bare = trail.length === 0;
 
     var back    = nav.querySelector('.crumbs__back');
     var from    = nav.querySelector('.crumbs__from');
+    // Своей черты у подставленного звена нет там, где нет исполнителя.
     var fromSep = nav.querySelector('[data-sep="from"]');
-    var here    = nav.querySelector('.crumbs__here');
+    var tail    = nav.querySelector('.crumbs__tail');
     var trail   = nav.querySelector('.crumbs__trail');
 
     var ref = document.referrer;
@@ -127,11 +137,11 @@ const bare = trail.length === 0;
         from.href = was.p;
         from.textContent = was.l;
         from.hidden = false;
-        fromSep.hidden = false;
+        if (fromSep) fromSep.hidden = false;
         nav.hidden = false;
         // На странице места собственное имя показываем только теперь, когда
         // перед ним появился путь и оно перестало быть строкой в одиночку.
-        here.hidden = false;
+        tail.hidden = false;
       }
     }
 

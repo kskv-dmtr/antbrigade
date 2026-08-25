@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-24T18:34:36Z",
+  "generatedAt": "2026-08-25T05:49:07Z",
   "counts": {
-    "albums": 1098,
-    "artists": 986,
+    "albums": 1099,
+    "artists": 987,
     "labels": 616,
     "videos": 73
   },
@@ -36,6 +36,36 @@
       ],
       "labels": [
         "Sacred Bones Records"
+      ]
+    },
+    {
+      "id": "3c74129a-8c52-8095-a809-f207bd6a3cbe",
+      "slug": "lusine-melting-days",
+      "artist": "Lusine",
+      "album": "Melting Days",
+      "url": "https://album.link/pbgqct8bcd2bh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A00a21573-3d1c-423a-9c0d-8ffa880acabe%3Aa3098374836_10.jpg?table=block&id=3c74129a-8c52-8095-a809-f207bd6a3cbe&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient",
+        "Electronic",
+        "Post-Minimalism"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-21",
+      "year": 2026,
+      "artistIds": [
+        "3c74129a-8c52-80ef-8510-dea04b18cc04"
+      ],
+      "artists": [
+        "Lusine"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "labels": [
+        "Ghostly International"
       ]
     },
     {
@@ -42448,6 +42478,26 @@
       "videoIds": []
     },
     {
+      "id": "3c74129a-8c52-80ef-8510-dea04b18cc04",
+      "slug": "lusine",
+      "name": "Lusine",
+      "country": "US",
+      "bandcamp": "https://lusine.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3c74129a-8c52-8095-a809-f207bd6a3cbe"
+      ],
+      "genres": [
+        "Ambient",
+        "Electronic",
+        "Post-Minimalism"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "28b4129a-8c52-80e7-a020-ee4b82f2097d",
       "slug": "m-sage",
       "name": "M. Sage",
@@ -54769,6 +54819,7 @@
       "country": "US",
       "bandcamp": "https://ghostly.bandcamp.com/",
       "albumIds": [
+        "3c74129a-8c52-8095-a809-f207bd6a3cbe",
         "1d54129a-8c52-80eb-beba-fb902a1ef9d4",
         "12a4129a-8c52-80c6-98bd-eb4f88841288",
         "1004129a-8c52-80e5-bea3-d120b24d4d37",
@@ -54780,6 +54831,7 @@
         "ae7dbc6c-d3ce-41e5-af28-6ccbd8bf106e"
       ],
       "artistIds": [
+        "3c74129a-8c52-80ef-8510-dea04b18cc04",
         "2494129a-8c52-806a-8979-f2c1e2ea7fec",
         "2494129a-8c52-80fc-8bf6-e3246aea9eeb",
         "24b4129a-8c52-8031-8a4b-fd19633c5e2c",

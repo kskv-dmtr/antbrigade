@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T19:38:12Z",
+  "generatedAt": "2026-08-25T05:49:17Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17412,6 +17412,20 @@
       "upc": "5054526450813",
       "tracks": 10,
       "releaseDate": "2018-03-16"
+    },
+    "3c74129a-8c52-8095-a809-f207bd6a3cbe": {
+      "source": "https://album.link/pbgqct8bcd2bh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1tLBaM7LWJkX1zi3K6wuLu",
+        "pandora": "https://www.pandora.com/AL:66488878",
+        "amazonMusic": "https://music.amazon.com/albums/B0H1STYL52",
+        "tidal": "https://listen.tidal.com/album/524762840",
+        "boomplay": "https://www.boomplay.com/albums/131366670",
+        "amazonStore": "https://amazon.com/dp/B0H1STYL52"
+      },
+      "upc": "804297849706",
+      "tracks": 10,
+      "releaseDate": "2026-07-21"
     }
   }
 }

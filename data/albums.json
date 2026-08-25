@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-25T07:06:12Z",
+  "generatedAt": "2026-08-25T10:51:25Z",
   "counts": {
     "albums": 1099,
     "artists": 987,
     "labels": 616,
-    "videos": 73
+    "videos": 74
   },
   "albums": [
     {
@@ -42313,7 +42313,7 @@
       "name": "Los Baby Jaguars",
       "country": "DE",
       "bandcamp": "https://losbabyjaguars.bandcamp.com/music",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@losbabyjaguars7592",
       "albumIds": [],
       "genres": [],
       "labelIds": [],
@@ -61824,6 +61824,14 @@
         "2414129a-8c52-80ba-b704-d7b64e3ae73c"
       ],
       "slug": "la-lom-moonlight-over-montobello"
+    },
+    {
+      "id": "3c74129a-8c52-80e8-a498-dd362a63edbc",
+      "title": "Los Baby Jaguars | El Fuego (Latin Funk)",
+      "url": "https://youtu.be/AHux-RBJgnU?si=gCDCBZ7m5h_lYVFz",
+      "kind": "Official Video",
+      "artistIds": [],
+      "slug": "los-baby-jaguars-el-fuego-latin-funk"
     },
     {
       "id": "3b74129a-8c52-802b-8443-eca317dfa9b6",

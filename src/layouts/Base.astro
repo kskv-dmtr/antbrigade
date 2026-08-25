@@ -8,8 +8,12 @@ import '../styles/global.css';
    вокруг, и там уместно объяснить, куда он попадёт.
 
    image — своя картинка карточки: у релиза это его обложка. Без неё берётся
-   иконка сайта. */
-const { title, description, activeSection, cardTitle, image } = Astro.props;
+   иконка сайта.
+
+   noindex — страница не для выдачи. Сейчас такая одна, 404: хостинг отдаёт
+   её с кодом 404, и поисковик её и так не возьмёт, но сам файл лежит ещё и
+   по адресу /404 и оттуда отвечает обычным «двухсотым». */
+const { title, description, activeSection, cardTitle, image, noindex } = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
    ссылка в никуда хуже отсутствующего пункта.
@@ -62,7 +66,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
   <meta name="color-scheme" content="dark" />
-  <link rel="canonical" href={canonical} />
+
+  {/* Каноническая ссылка — только у страниц, которым место в выдаче.
+      Ставить её на noindex значит говорить две вещи разом: «не бери» и
+      «главный адрес этой страницы вот». Одного запрета достаточно. */}
+  {noindex
+    ? <meta name="robots" content="noindex, follow" />
+    : <link rel="canonical" href={canonical} />}
 
   {/* Карточка ссылки. Проект живёт тем, что ссылки кидают в переписку, и без
       этой разметки они разворачивались пустыми — ни обложки, ни подписи.

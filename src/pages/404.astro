@@ -1,0 +1,155 @@
+---
+/* Страница для несуществующих адресов.
+ *
+ * Отдаётся хостингом на любой промах: Vercel и Cloudflare Pages оба берут
+ * dist/404.html сами, настраивать для этого нечего. Раньше её не было, и
+ * промах упирался в серую заглушку хостинга — без шапки, без меню, без
+ * пути назад. При трёх тысячах адресов и недавнем переезде каталога с
+ * /releases на /music это не редкий случай.
+ *
+ * Меню разделов продублировано в теле страницы намеренно, хотя оно есть в
+ * шапке: на узком экране шапка прячет его под бургер, а человек, попавший
+ * в тупик, не должен искать выход за кнопкой.
+ *
+ * Случайные релизы под ними — тот же «Lucky Finds», что на главной, и
+ * назван так же: это одна и та же вещь, заводить ей второе имя незачем.
+ * Тупик превращается во вход в каталог, а не в извинение.
+ */
+
+import Base from '../layouts/Base.astro';
+import AlbumCard from '../components/AlbumCard.astro';
+import { albums } from '../lib/db.js';
+
+/* Показываем столько же, сколько на главной: при пяти колонках десятка
+   ложится двумя полными рядами, а шестёрка — рядом из пяти и одинокой
+   плиткой под ним, что читается как недогрузившаяся страница.
+
+   Пул втрое меньше, чем на главной (там 150): это страница-промах, её вес
+   платят те, кто уже ошибся адресом. Пять подборок подряд без повторов —
+   с запасом, дольше здесь никто не задержится. */
+const POOL = 50;
+const SHOW = 10;
+
+/* Фишер — Йетс, как на главной. Не `sort(() => Math.random() - 0.5)`: та
+   перестановка заметно смещённая, часть записей оседает у краёв. */
+function shuffle(list) {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* Свежие не исключаем, в отличие от главной: там раздел Latest Releases
+   стоит прямо над находками и повтор был бы виден, здесь его нет. */
+const pool = shuffle(albums).slice(0, POOL);
+
+/* Тот же список, что в шапке, и в том же порядке. Держать его здесь, а не
+   тащить из Base, — сознательно: там он про меню, а тут про выход из
+   тупика, и совпадение их порядка ничего не связывает. */
+const sections = [
+  { href: '/music',   label: 'Music' },
+  { href: '/videos',  label: 'Videos' },
+  { href: '/artists', label: 'Artists' },
+  { href: '/labels',  label: 'Labels' },
+  { href: '/genres',  label: 'Genres' }
+];
+---
+<Base
+  title="Page not found · ant brigade"
+  description={`No page at this address. The collection is where it was: ${albums.length} releases, covers, genres, labels.`}
+  noindex
+>
+  {/* Счёт в квадратных скобках — та же строка, что показывает число
+      релизов на списках. Здесь в ней код ответа: место одно и то же,
+      и читается оно сразу. */}
+  <div class="page-head">
+    <h1>Page not found</h1>
+    <p class="counter">[404]</p>
+  </div>
+
+  <p class="lost">
+    There is no page at this address — it was renamed, or the link lost a
+    piece on the way here. Everything else is where it was:
+  </p>
+
+  <div class="listen">
+    {sections.map((s) => <a class="listen__platform" href={s.href}>{s.label}</a>)}
+  </div>
+
+  <section class="section">
+    <div class="head head--center">
+      <h2 class="display display--md">Lucky Finds</h2>
+      {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
+          всем один и тот же HTML. */}
+      <button type="button" class="dig-again" id="dig-again">Dig again</button>
+    </div>
+
+    {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
+        страница показывает осмысленную выборку и не мигает подменой
+        картинок сразу после загрузки. */}
+    <ul class="tiles tiles--auto" id="dig" data-show={SHOW}>
+      {pool.map((a, i) => <AlbumCard album={a} hidden={i >= SHOW} />)}
+    </ul>
+  </section>
+</Base>
+
+<script>
+  /* Тот же механизм, что у находок на главной: пул лежит в разметке,
+     браузер тасует его при загрузке и показывает первые data-show, а
+     нажатие листает дальше — не тасует заново.
+
+     Почему листает, а не тасует: при повторной жеребьёвке шести из
+     полусотни время от времени одна и та же обложка оставалась бы на
+     месте, и нажатие читалось бы как сбой, а не как обновление. */
+  const dig   = document.getElementById('dig');
+  const items = Array.from(dig.children);
+  const show  = Number(dig.dataset.show) || 10;
+  const again = document.getElementById('dig-again');
+
+  /* Неполной подборки в конце быть не должно: ряд, оборванный на середине,
+     читается как недогрузившийся. Остаток пула ждёт следующей тасовки. */
+  const pages = Math.max(1, Math.floor(items.length / show));
+
+  let order = items;
+  let page = 0;
+
+  function shuffle() {
+    order = items.slice();
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+
+    // Переставляем и в разметке, иначе выбранные шли бы вразнобой по сетке.
+    const frag = document.createDocumentFragment();
+    for (const el of order) frag.appendChild(el);
+    dig.appendChild(frag);
+  }
+
+  function render() {
+    const start = page * show;
+    for (const [i, el] of order.entries()) el.hidden = i < start || i >= start + show;
+
+    /* Следующая подборка подгружается заранее: у скрытых плиток картинки
+       ленивые и к нажатию не скачаны — без этого на их месте секунду
+       держалась бы пустая штриховка. */
+    for (const el of order.slice(start + show, start + show * 2)) {
+      for (const img of el.querySelectorAll('img[loading="lazy"]')) img.loading = 'eager';
+    }
+  }
+
+  shuffle();
+  render();
+
+  again.addEventListener('click', () => {
+    page += 1;
+    // Пул кончился — тасуем заново, и следующий круг идёт в другом порядке.
+    if (page >= pages) {
+      shuffle();
+      page = 0;
+    }
+    render();
+  });
+</script>

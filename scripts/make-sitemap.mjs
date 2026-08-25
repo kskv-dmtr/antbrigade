@@ -20,10 +20,15 @@ const SITE = 'https://www.antbrigade.fun';
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const dist = path.join(root, 'dist');
 
-/* Страница-перенаправление со старого адреса каталога. В карте ей делать
-   нечего: она помечена noindex и существует только ради тех, кто придёт по
-   ссылке из прошлого. */
-const SKIP = new Set(['releases.html']);
+/* Страницы, которым в карте не место.
+
+   releases.html — перенаправление со старого адреса каталога: помечено
+   noindex и существует только ради тех, кто придёт по ссылке из прошлого.
+
+   404.html — страница промаха. Приглашать поисковика по адресу, который
+   хостинг отдаёт с кодом 404, — верный способ получить в отчёте ошибку
+   вместо страницы. */
+const SKIP = new Set(['releases.html', '404.html']);
 
 async function walk(dir) {
   const out = [];

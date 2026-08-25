@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-25T18:59:39Z",
+  "generatedAt": "2026-08-25T19:47:27Z",
   "counts": {
-    "albums": 1099,
-    "artists": 987,
-    "labels": 616,
+    "albums": 1100,
+    "artists": 988,
+    "labels": 617,
     "videos": 75
   },
   "albums": [
@@ -183,6 +183,35 @@
       ],
       "labels": [
         "Houndstooth"
+      ]
+    },
+    {
+      "id": "3c74129a-8c52-8056-ba49-cdef78afc479",
+      "slug": "sailor-honeymoon-the-worst-of-sailor-honeymoon",
+      "artist": "Sailor Honeymoon",
+      "album": "The Worst of Sailor Honeymoon",
+      "url": "https://album.link/gckrrf3sfxdcf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A830d5cce-27de-4297-8a3b-8b9d25d85b75%3Aa3700952919_10.jpg?table=block&id=3c74129a-8c52-8056-ba49-cdef78afc479&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Garage Punk",
+        "Dance-Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-14",
+      "year": 2026,
+      "artistIds": [
+        "3c74129a-8c52-8032-9756-f1a707aeb8cf"
+      ],
+      "artists": [
+        "Sailor Honeymoon"
+      ],
+      "labelIds": [
+        "3c74129a-8c52-804d-8ddf-c62749405df9"
+      ],
+      "labels": [
+        "Good Good Records"
       ]
     },
     {
@@ -46699,6 +46728,25 @@
       "videoIds": []
     },
     {
+      "id": "3c74129a-8c52-8032-9756-f1a707aeb8cf",
+      "slug": "sailor-honeymoon",
+      "name": "Sailor Honeymoon",
+      "country": "KR",
+      "bandcamp": "https://sailorhoneymoon.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3c74129a-8c52-8056-ba49-cdef78afc479"
+      ],
+      "genres": [
+        "Garage Punk",
+        "Dance-Punk"
+      ],
+      "labelIds": [
+        "3c74129a-8c52-804d-8ddf-c62749405df9"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3ba4129a-8c52-8014-a2d4-d08aee9b6fbd",
       "slug": "sakura-tsuruta",
       "name": "Sakura Tsuruta",
@@ -55123,6 +55171,20 @@
       ],
       "artistIds": [
         "2f04129a-8c52-80f9-9ab2-df8b79b1b82e"
+      ]
+    },
+    {
+      "id": "3c74129a-8c52-804d-8ddf-c62749405df9",
+      "slug": "good-good-records",
+      "name": "Good Good Records",
+      "country": "KR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3c74129a-8c52-8056-ba49-cdef78afc479"
+      ],
+      "artistIds": [
+        "3c74129a-8c52-8032-9756-f1a707aeb8cf"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T05:49:17Z",
+  "generatedAt": "2026-08-25T19:47:39Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17426,6 +17426,18 @@
       "upc": "804297849706",
       "tracks": 10,
       "releaseDate": "2026-07-21"
+    },
+    "3c74129a-8c52-8056-ba49-cdef78afc479": {
+      "source": "https://album.link/gckrrf3sfxdcf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3MOLPIN1MCtv9sjhdRs2JT",
+        "pandora": "https://www.pandora.com/AL:68862572",
+        "tidal": "https://listen.tidal.com/album/550481984",
+        "boomplay": "https://www.boomplay.com/albums/137810909"
+      },
+      "upc": "0792105358482",
+      "tracks": 13,
+      "releaseDate": "2026-07-14"
     }
   }
 }

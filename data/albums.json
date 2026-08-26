@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-25T19:47:27Z",
+  "generatedAt": "2026-08-26T15:54:40Z",
   "counts": {
     "albums": 1100,
     "artists": 988,
     "labels": 617,
-    "videos": 75
+    "videos": 76
   },
   "albums": [
     {
@@ -45318,8 +45318,8 @@
       "slug": "pig-destroyer",
       "name": "Pig Destroyer",
       "country": "US",
-      "bandcamp": null,
-      "youtube": null,
+      "bandcamp": "https://pigdestroyer.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@PigDestroyerOfficial",
       "albumIds": [
         "24772b18-8565-47c0-b190-53df4e56cb7d"
       ],
@@ -45331,7 +45331,8 @@
         "2494129a-8c52-8004-b48e-d6c9b8c826f5"
       ],
       "videoIds": [
-        "3144129a-8c52-80a9-a08d-dfcfdeaad66f"
+        "3144129a-8c52-80a9-a08d-dfcfdeaad66f",
+        "3c84129a-8c52-8021-80ee-e0d98abf4bf1"
       ]
     },
     {
@@ -58885,7 +58886,7 @@
       "name": "Relapse Records",
       "country": "US",
       "bandcamp": "https://relapserecords.bandcamp.com/",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@relapserecords",
       "albumIds": [
         "3b64129a-8c52-80be-9d66-f3892cd8d367",
         "3944129a-8c52-80e5-8a03-f8bdaf8b6f96",
@@ -62031,6 +62032,16 @@
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
       ],
       "slug": "pig-destroyer-gravedancer"
+    },
+    {
+      "id": "3c84129a-8c52-8021-80ee-e0d98abf4bf1",
+      "title": "Pig Destroyer | Mt. Skull",
+      "url": "https://youtu.be/7IMhNSro3GE?si=mMgxSb4kK7IjblAA",
+      "kind": "Official Video",
+      "artistIds": [
+        "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+      ],
+      "slug": "pig-destroyer-mt-skull"
     },
     {
       "id": "2414129a-8c52-80d4-a826-dbc26f9f2c01",

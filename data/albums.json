@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-26T15:54:40Z",
+  "generatedAt": "2026-08-26T19:19:46Z",
   "counts": {
     "albums": 1100,
     "artists": 988,
     "labels": 617,
-    "videos": 76
+    "videos": 77
   },
   "albums": [
     {
@@ -39626,6 +39626,7 @@
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
       ],
       "videoIds": [
+        "3c84129a-8c52-80d5-8f6c-f85d18ada47a",
         "3c54129a-8c52-8067-9642-df3b7185557f",
         "3b64129a-8c52-8020-a52a-ed8869e4d993"
       ]
@@ -61849,6 +61850,16 @@
         "2504129a-8c52-8005-b193-cb5c07e82375"
       ],
       "slug": "h-3-f-s-a-l-t"
+    },
+    {
+      "id": "3c84129a-8c52-80d5-8f6c-f85d18ada47a",
+      "title": "Home Front | Full Performance (Live on KEXP)",
+      "url": "https://youtu.be/ThcSsr8KLjU?si=EckBRTfyUSKNLvKj",
+      "kind": "Live Performance",
+      "artistIds": [
+        "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
+      ],
+      "slug": "home-front-full-performance-live-on-kexp"
     },
     {
       "id": "3c54129a-8c52-8067-9642-df3b7185557f",

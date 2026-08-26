@@ -74,6 +74,9 @@ const PAGE = 50;
           <option value="za">Z → A</option>
           <option value="releases">Most releases</option>
         </Select>
+
+        {/* Появляется, только когда есть что сбрасывать, — как на Music. */}
+        <button type="button" id="reset" class="reset" hidden>Reset</button>
       </div>
     </div>
   </div>
@@ -123,6 +126,7 @@ const PAGE = 50;
   const viewsEl  = document.getElementById('views');
   const sortEl   = document.getElementById('sort');
   const alphabet = document.getElementById('alphabet');
+  const reset    = document.getElementById('reset');
   const letterEl = document.getElementById('letter');
 
   const more = document.getElementById('more');
@@ -162,6 +166,10 @@ const PAGE = 50;
     const rest = count - limit;
     more.hidden = rest <= 0;
     if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
+
+    // Порядок A → Z — то, с чем страница открывается, поэтому он же
+    // считается нетронутым состоянием.
+    reset.hidden = !(query || letter || sortEl.value !== 'az');
   }
 
   // Любая смена выборки возвращает список к первой странице.
@@ -221,6 +229,24 @@ const PAGE = 50;
   });
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
+
+  reset.addEventListener('click', () => {
+    query = '';
+    letter = '';
+    search.value = '';
+    letterEl.value = '';
+    sortEl.value = 'az';
+    /* Значения поставлены из кода, и сами по себе событий не рождают —
+       сообщаем о смене, чтобы списки пересчитали свою ширину. */
+    for (const el of [letterEl, sortEl]) el.dispatchEvent(new Event('input'));
+    for (const [i, b] of [...alphabet.children].entries()) {
+      b.setAttribute('aria-pressed', String(i === 0));
+    }
+    sort();
+    rewind();
+    apply();
+    window.scrollTo({ top: 0 });
+  });
 
   let timer;
   search.addEventListener('input', () => {

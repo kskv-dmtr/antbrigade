@@ -94,6 +94,9 @@ const PAGE = 50;
           <option value="artist">By artist</option>
           <option value="title">By title</option>
         </Select>
+
+        {/* Появляется, только когда есть что сбрасывать, — как на Music. */}
+        <button type="button" id="reset" class="reset" hidden>Reset</button>
       </div>
     </div>
   </div>
@@ -132,6 +135,7 @@ const PAGE = 50;
   const kindEl  = document.getElementById('kind');
   const viewsEl = document.getElementById('views');
   const sortEl  = document.getElementById('sort');
+  const reset   = document.getElementById('reset');
   const more    = document.getElementById('more');
 
   const total = cards.length;
@@ -168,6 +172,10 @@ const PAGE = 50;
     const rest = shown - limit;
     more.hidden = rest <= 0;
     if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
+
+    // Порядок по исполнителю — то, с чем страница открывается, поэтому он
+    // же считается нетронутым состоянием.
+    reset.hidden = !(state.q || state.kind || sortEl.value !== 'artist');
   }
 
   // Любая смена выборки возвращает список к первой странице.
@@ -223,6 +231,23 @@ const PAGE = 50;
   });
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
+
+  reset.addEventListener('click', () => {
+    Object.assign(state, { q: '', kind: '' });
+    search.value = '';
+    kindEl.value = '';
+    sortEl.value = 'artist';
+    /* Значения поставлены из кода, и сами по себе событий не рождают —
+       сообщаем о смене, чтобы списки пересчитали свою ширину. */
+    for (const el of [kindEl, sortEl]) el.dispatchEvent(new Event('input'));
+    for (const [i, b] of [...kindsEl.children].entries()) {
+      b.setAttribute('aria-pressed', String(i === 0));
+    }
+    sort();
+    rewind();
+    apply();
+    window.scrollTo({ top: 0 });
+  });
 
   let timer;
   search.addEventListener('input', () => {

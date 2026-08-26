@@ -67,7 +67,14 @@ const PAGE = 50;
     </div>
 
     <div class="filters">
-      <div class="filters__group">
+      {/* Тип релиза показан двумя способами разом, и лишний прячет
+          медиазапрос: на широком экране полоса кнопок, на узком — такой же
+          выпадающий список, как жанр и год. Сайт статический, разметка одна
+          на все ширины, поэтому оба контрола лежат в ней всегда.
+
+          Значение у них общее: обработчики зовут одну setType, и что бы ни
+          нажали, второй контрол переставляется следом. */}
+      <div class="filters__group filters__group--types">
         <div class="seg" id="types" role="group" aria-label="Release type">
           <button type="button" data-type="" aria-pressed="true">All</button>
           {types.map((t) => (
@@ -77,6 +84,11 @@ const PAGE = 50;
       </div>
 
       <div class="filters__group filters__group--end">
+        <Select id="type" label="Release type" class="select--type">
+          <option value="">All types</option>
+          {types.map((t) => <option value={t.value}>{t.label}</option>)}
+        </Select>
+
         <Select id="genre" label="Genre" narrow>
           <option value="">All genres</option>
           {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
@@ -135,6 +147,7 @@ const PAGE = 50;
   const reset   = document.getElementById('reset');
   const search  = document.getElementById('search');
   const typesEl = document.getElementById('types');
+  const typeEl  = document.getElementById('type');
   const viewsEl = document.getElementById('views');
   const genreEl = document.getElementById('genre');
   const yearEl  = document.getElementById('year');
@@ -234,14 +247,32 @@ const PAGE = 50;
     }, 120);
   });
 
-  typesEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    state.type = btn.dataset.type;
-    for (const b of typesEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  /* Тип релиза выбирают двумя контролами — полосой кнопок на широком экране
+     и списком на узком, — а значение у них одно. Поэтому смена идёт через
+     общую функцию, и второй контрол переставляется следом: человек может
+     повернуть телефон, и выбор должен пережить смену ширины.
+
+     Списку после программной смены значения посылаем input: по нему скрипт
+     компонента заново подгоняет ширину кнопки под выбранный пункт. */
+  function setType(value) {
+    state.type = value;
+    for (const b of typesEl.children) {
+      b.setAttribute('aria-pressed', String(b.dataset.type === value));
+    }
+    if (typeEl.value !== value) {
+      typeEl.value = value;
+      typeEl.dispatchEvent(new Event('input'));
+    }
     rewind();
     apply();
+  }
+
+  typesEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (btn) setType(btn.dataset.type);
   });
+
+  typeEl.addEventListener('change', () => setType(typeEl.value));
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
@@ -277,12 +308,13 @@ const PAGE = 50;
   reset.addEventListener('click', () => {
     Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });
     search.value = '';
+    typeEl.value = '';
     genreEl.value = '';
     yearEl.value = '';
     sortEl.value = 'new';
     /* Значения поставлены из кода, и сами по себе события не рождают —
        сообщаем о смене, чтобы списки пересчитали свою ширину. */
-    for (const el of [genreEl, yearEl, sortEl]) el.dispatchEvent(new Event('input'));
+    for (const el of [typeEl, genreEl, yearEl, sortEl]) el.dispatchEvent(new Event('input'));
     for (const [i, b] of [...typesEl.children].entries()) {
       b.setAttribute('aria-pressed', String(i === 0));
     }

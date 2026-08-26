@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-26T19:19:46Z",
+  "generatedAt": "2026-08-26T23:38:04Z",
   "counts": {
-    "albums": 1100,
-    "artists": 988,
-    "labels": 617,
-    "videos": 77
+    "albums": 1101,
+    "artists": 990,
+    "labels": 618,
+    "videos": 78
   },
   "albums": [
     {
@@ -4904,6 +4904,36 @@
       ],
       "labels": [
         "In The Red Records"
+      ]
+    },
+    {
+      "id": "3c84129a-8c52-806c-97b6-e2fe19fe6738",
+      "slug": "jill-scott-to-whom-this-may-concern",
+      "artist": "Jill Scott",
+      "album": "To Whom This May Concern",
+      "url": "https://album.link/jqf4xrh8t6vzp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ade4cd74b-dd8a-4063-8842-65e262a8ff7b%3AToWhomThisMayConcernDigital.webp?table=block&id=3c84129a-8c52-806c-97b6-e2fe19fe6738&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Contemporary R'n'B",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-02-13",
+      "year": 2026,
+      "artistIds": [
+        "3c84129a-8c52-8061-ad96-f956e3c4b9e7"
+      ],
+      "artists": [
+        "Jill Scott"
+      ],
+      "labelIds": [
+        "3c84129a-8c52-8069-a702-eef1027504e7"
+      ],
+      "labels": [
+        "Blues Babe Records"
       ]
     },
     {
@@ -40524,6 +40554,26 @@
       "videoIds": []
     },
     {
+      "id": "3c84129a-8c52-8061-ad96-f956e3c4b9e7",
+      "slug": "jill-scott",
+      "name": "Jill Scott",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3c84129a-8c52-806c-97b6-e2fe19fe6738"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Contemporary R'n'B",
+        "Smooth Soul"
+      ],
+      "labelIds": [
+        "3c84129a-8c52-8069-a702-eef1027504e7"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2414129a-8c52-800a-92fb-ceb904ac44bc",
       "slug": "jimi-tenor",
       "name": "Jimi Tenor",
@@ -50559,6 +50609,20 @@
       "videoIds": []
     },
     {
+      "id": "3c84129a-8c52-8089-adcc-ee79cb8b5106",
+      "slug": "tycho-2",
+      "name": "Tycho",
+      "country": "US",
+      "bandcamp": "https://tycho.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@Tychomusic",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3c84129a-8c52-80f3-a91e-d9b794831ded"
+      ]
+    },
+    {
       "id": "3b54129a-8c52-8049-a993-d17b8ce7120a",
       "slug": "tzusing",
       "name": "Tzusing",
@@ -52919,6 +52983,20 @@
       "artistIds": [
         "29c4129a-8c52-80a7-bbdf-c7f2ba3e949b",
         "2504129a-8c52-801d-9b7d-ef6432972547"
+      ]
+    },
+    {
+      "id": "3c84129a-8c52-8069-a702-eef1027504e7",
+      "slug": "blues-babe-records",
+      "name": "Blues Babe Records",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3c84129a-8c52-806c-97b6-e2fe19fe6738"
+      ],
+      "artistIds": [
+        "3c84129a-8c52-8061-ad96-f956e3c4b9e7"
       ]
     },
     {
@@ -62255,6 +62333,16 @@
         "2434129a-8c52-808c-a4f7-fa69a88a9742"
       ],
       "slug": "tuxedo-back-4-more"
+    },
+    {
+      "id": "3c84129a-8c52-80f3-a91e-d9b794831ded",
+      "title": "Tycho | Time to Run",
+      "url": "https://youtu.be/38bw_3hQK8o?si=xyd7UmIClF7DqSJ9",
+      "kind": "Official Video",
+      "artistIds": [
+        "3c84129a-8c52-8089-adcc-ee79cb8b5106"
+      ],
+      "slug": "tycho-time-to-run"
     },
     {
       "id": "36d4129a-8c52-8061-8052-f97ccc411dba",

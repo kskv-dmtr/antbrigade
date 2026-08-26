@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T19:47:39Z",
+  "generatedAt": "2026-08-26T23:38:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17438,6 +17438,20 @@
       "upc": "0792105358482",
       "tracks": 13,
       "releaseDate": "2026-07-14"
+    },
+    "3c84129a-8c52-806c-97b6-e2fe19fe6738": {
+      "source": "https://album.link/jqf4xrh8t6vzp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7mwyiTViOEtAtOeoilQ3QG",
+        "pandora": "https://www.pandora.com/AL:61215588",
+        "amazonMusic": "https://music.amazon.com/albums/B0G6YDH354",
+        "tidal": "https://listen.tidal.com/album/498227685",
+        "bandcamp": "https://jillscott.bandcamp.com/album/to-whom-this-may-concern",
+        "amazonStore": "https://amazon.com/dp/B0G6YDH354"
+      },
+      "upc": "199806634806",
+      "tracks": 19,
+      "releaseDate": "2026-01-13"
     }
   }
 }

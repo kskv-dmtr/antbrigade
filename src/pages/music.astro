@@ -74,7 +74,7 @@ const PAGE = 50;
 
           Значение у них общее: обработчики зовут одну setType, и что бы ни
           нажали, второй контрол переставляется следом. */}
-      <div class="filters__group filters__group--types">
+      <div class="filters__group filters__group--strip">
         <div class="seg" id="types" role="group" aria-label="Release type">
           <button type="button" data-type="" aria-pressed="true">All</button>
           {types.map((t) => (
@@ -84,7 +84,7 @@ const PAGE = 50;
       </div>
 
       <div class="filters__group filters__group--end">
-        <Select id="type" label="Release type" class="select--type">
+        <Select id="type" label="Release type" class="select--strip">
           <option value="">All types</option>
           {types.map((t) => <option value={t.value}>{t.label}</option>)}
         </Select>

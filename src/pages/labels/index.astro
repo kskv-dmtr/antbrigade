@@ -64,6 +64,14 @@ const PAGE = 50;
       </div>
 
       <div class="filters__group filters__group--end">
+        {/* Первая буква списком: на узком экране полоса из двадцати восьми
+            кнопок прячется, и выбор идёт отсюда. Оба контрола держат одно
+            значение. */}
+        <Select id="letter" label="First letter" class="select--strip">
+          <option value="">All letters</option>
+          {ordered.map(([letter]) => <option value={letter}>{letter}</option>)}
+        </Select>
+
         <Select id="sort" label="Sorting">
           <option value="az">A → Z</option>
           <option value="za">Z → A</option>
@@ -119,6 +127,7 @@ const PAGE = 50;
   const viewsEl  = document.getElementById('views');
   const sortEl   = document.getElementById('sort');
   const alphabet = document.getElementById('alphabet');
+  const letterEl = document.getElementById('letter');
 
   const more = document.getElementById('more');
 
@@ -181,14 +190,32 @@ const PAGE = 50;
     apply();
   });
 
-  alphabet.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    letter = btn.dataset.letter;
-    for (const b of alphabet.children) b.setAttribute('aria-pressed', String(b === btn));
+  /* Первую букву выбирают двумя контролами — полосой кнопок на широком
+     экране и списком на узком, — а значение у них одно. Смена идёт через
+     общую функцию, и второй контрол переставляется следом: человек может
+     повернуть телефон, и выбор должен пережить смену ширины.
+
+     Списку после программной смены значения посылаем input: по нему скрипт
+     компонента заново подгоняет ширину кнопки под выбранный пункт. */
+  function setLetter(value) {
+    letter = value;
+    for (const b of alphabet.children) {
+      b.setAttribute('aria-pressed', String(b.dataset.letter === value));
+    }
+    if (letterEl.value !== value) {
+      letterEl.value = value;
+      letterEl.dispatchEvent(new Event('input'));
+    }
     rewind();
     apply();
+  }
+
+  alphabet.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (btn) setLetter(btn.dataset.letter);
   });
+
+  letterEl.addEventListener('change', () => setLetter(letterEl.value));
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');

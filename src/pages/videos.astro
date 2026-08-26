@@ -72,7 +72,10 @@ const PAGE = 50;
         правого края они уже стояли, и сортировка читалась приклеенной к
         тегам, а не отдельным органом управления. */}
     <div class="filters">
-      <div class="filters__group">
+      {/* Вид ролика показан двумя способами разом, и лишний прячет
+          медиазапрос: на широком экране полоса кнопок, на узком — список
+          рядом с сортировкой. Как тип релиза на Music. */}
+      <div class="filters__group filters__group--strip">
         <div class="seg" id="kinds" role="group" aria-label="Video kind">
           <button type="button" data-kind="" aria-pressed="true">All</button>
           {kinds.map((k) => (
@@ -82,6 +85,11 @@ const PAGE = 50;
       </div>
 
       <div class="filters__group filters__group--end">
+        <Select id="kind" label="Video kind" class="select--strip">
+          <option value="">All kinds</option>
+          {kinds.map((k) => <option value={k.value}>{k.label}</option>)}
+        </Select>
+
         <Select id="sort" label="Sorting">
           <option value="artist">By artist</option>
           <option value="title">By title</option>
@@ -121,6 +129,7 @@ const PAGE = 50;
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
   const kindsEl = document.getElementById('kinds');
+  const kindEl  = document.getElementById('kind');
   const viewsEl = document.getElementById('views');
   const sortEl  = document.getElementById('sort');
   const more    = document.getElementById('more');
@@ -179,14 +188,32 @@ const PAGE = 50;
     apply();
   });
 
-  kindsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    state.kind = btn.dataset.kind;
-    for (const b of kindsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+  /* Вид ролика выбирают двумя контролами — полосой кнопок на широком экране
+     и списком на узком, — а значение у них одно. Смена идёт через общую
+     функцию, и второй контрол переставляется следом: человек может
+     повернуть телефон, и выбор должен пережить смену ширины.
+
+     Списку после программной смены значения посылаем input: по нему скрипт
+     компонента заново подгоняет ширину кнопки под выбранный пункт. */
+  function setKind(value) {
+    state.kind = value;
+    for (const b of kindsEl.children) {
+      b.setAttribute('aria-pressed', String(b.dataset.kind === value));
+    }
+    if (kindEl.value !== value) {
+      kindEl.value = value;
+      kindEl.dispatchEvent(new Event('input'));
+    }
     rewind();
     apply();
+  }
+
+  kindsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (btn) setKind(btn.dataset.kind);
   });
+
+  kindEl.addEventListener('change', () => setKind(kindEl.value));
 
   viewsEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button');

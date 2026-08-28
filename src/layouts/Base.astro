@@ -98,8 +98,29 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       из требований к установке, а кэширование добавим отдельно. */}
   <link rel="manifest" href="/manifest.webmanifest" />
 
-  {/* Тема одна, тёмная — второй meta с media больше не нужен. */}
-  <meta name="theme-color" content="#0c0c0b" />
+  {/* Цвет полосы браузера идёт за темой: скрипт ниже переписывает его при
+      переключении. В разметке стоит тёмный — он же исходный. */}
+  <meta name="theme-color" content="#0c0c0b" id="theme-color" />
+
+  {/* Тема ставится здесь, в <head>, до того как отрисуется хоть что-то:
+      поставь её ниже — и страница успела бы мигнуть тёмной, прежде чем
+      стать светлой.
+
+      Выбор человека лежит в localStorage; пока его нет, спрашиваем
+      систему. Дальше это же значение читает скрипт внизу страницы, чтобы
+      подписать кнопку. */}
+  <script is:inline>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+
+      var theme = saved === 'light' || saved === 'dark'
+        ? saved
+        : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 
   {/* Метка версии в адресе — не украшение. Имена файлов иконок постоянны, и
       у тех, кто заходил до замены картинки, лежит старая копия; другой адрес
@@ -112,7 +133,15 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="ant brigade" />
-  {/* Страница тёмная во всю высоту, поэтому часы в статус-баре светлые. */}
+  {/* Часы в статус-баре светлые, потому что страница под ними тёмная.
+
+      Со светлой темой это расходится: значение читается при запуске
+      установленного приложения и на ходу не меняется, как и theme_color в
+      манифесте. То есть у поставившего приложение обрамление останется
+      тем, каким было при установке. Трогать не стал: значение default
+      вернуло бы обычную полосу с тёмными часами всем, включая тех, у кого
+      тёмная тема, и отняло бы у них край в край. Задето это только у
+      установленного приложения на iOS. */}
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 <body>
@@ -163,7 +192,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       <div class="foot__note mono mono--sm">
         ant brigade — a personal music archive<br />
         new releases · old favorites · strange finds<br />
-        © {year} · 1723 · 1312
+        © {year} · 1723 · 1312 · <button type="button" class="foot__theme" id="theme">Light</button>
       </div>
 
       <div class="foot__note foot__note--end mono mono--sm">
@@ -175,6 +204,55 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   </footer>
 
   <script>
+    /* Переключатель темы. Саму тему поставил инлайновый скрипт в <head> —
+       здесь только подпись, нажатие и запоминание.
+
+       Подписан действием, а не состоянием: в тёмной теме на кнопке
+       «Light», то есть куда переключит. Состоянием подписанная кнопка на
+       такой строке читается наоборот примерно поровну.
+
+       Цвет полосы браузера переписываем тем же значением, что стоит в
+       токене --bg: держать второй список цветов в скрипте — верный способ
+       развести их при первой же правке палитры. */
+    const themeBtn = document.getElementById('theme');
+
+    if (themeBtn) {
+      const label = () =>
+        document.documentElement.dataset.theme === 'light' ? 'Dark' : 'Light';
+
+      const paint = () => {
+        themeBtn.textContent = label();
+        themeBtn.setAttribute('aria-label', `Switch to ${label().toLowerCase()} theme`);
+
+        const meta = document.getElementById('theme-color');
+        if (meta) {
+          meta.content = getComputedStyle(document.documentElement)
+            .getPropertyValue('--bg').trim();
+        }
+      };
+
+      paint();
+
+      themeBtn.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        paint();
+      });
+
+      /* Пока человек не выбрал сам, идём за системой — и если она
+         переключится на ходу, идём следом. После явного выбора уже нет:
+         выбор человека сильнее. */
+      matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        let saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (err) {}
+        if (saved === 'light' || saved === 'dark') return;
+
+        document.documentElement.dataset.theme = e.matches ? 'light' : 'dark';
+        paint();
+      });
+    }
+
     /* Бургер. Меню закрывается по Escape, по касанию мимо шапки и при
        переходе на широкий экран: там пункты снова стоят в строке, и
        забытое открытое состояние оставило бы крест вместо кнопки. */

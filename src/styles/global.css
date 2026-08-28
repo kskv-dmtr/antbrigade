@@ -50,6 +50,11 @@
   --art:         repeating-linear-gradient(45deg, #191918 0 10px, #141413 10px 20px);
   --art-flat:    #141413;
 
+  /* Фон пунктов раскрытого списка. Список рисует система, и он всегда на
+     своём фоне: без явного цвета пункты в части браузеров остаются чёрным
+     по чёрному. Токеном, а не литералом, ровно ради светлой темы. */
+  --option-bg:   #1a1a19;
+
   --measure:     1280px;    /* ширина кадра из макета, вместе с полями */
   --pad:         28px;
   /* Высота закреплённой шапки: от неё отсчитываются липкая строка поиска
@@ -64,6 +69,55 @@
   --font-head: 'Space Grotesk Variable', var(--font);
 
   color-scheme: dark;
+}
+
+/* -------------------------------------------------------- светлая тема
+
+   Инверсия тёмной, а не отдельная палитра. Половина значений уже была в
+   наборе: тройка --ink была «светлая плашка с тёмным текстом», то есть
+   ровно светлая поверхность, — она и становится основной, а --ink
+   переворачивается в тёмную плашку.
+
+   Своих значений понадобилось четыре: приглушённый потише (--fg-dim),
+   две линейки и штриховка. Подобраны не на глаз, а по контрасту к фону —
+   так, чтобы отношения повторяли тёмную тему:
+
+       к фону        тёмная   светлая
+       --fg           17.49    17.49
+       --fg-muted      7.71     6.71
+       --fg-dim        4.72     4.80   (порог для мелкого текста — 4.5)
+       --line          1.36     1.40
+       --line-soft     1.15     1.16
+
+   Тему ставит скрипт в Base.astro: он читает выбор из localStorage, иначе
+   спрашивает систему, и вешает атрибут на <html> до первой отрисовки.
+   Медиазапроса prefers-color-scheme здесь намеренно нет — иначе тот же
+   десяток значений пришлось бы держать в двух местах. Плата за это одна:
+   при отключённом скрипте тема остаётся тёмной, какой бы ни была
+   системная. Тёмная тут исходная, так что это не поломка. */
+:root[data-theme='light'] {
+  --bg:          #f3f2f0;
+  --fg:          #0c0c0b;
+
+  --fg-muted:    #55554f;
+  --fg-dim:      #6b6b64;
+
+  --line:        #cfcfc8;
+  --line-soft:   #e2e2db;
+
+  /* Плашка выворотки переворачивается вместе с темой: на светлой странице
+     выделенное становится тёмным. Приглушённый на ней — тот самый
+     --fg-muted тёмной темы, он для этого и подбирался. */
+  --ink:         #0c0c0b;
+  --ink-fg:      #f3f2f0;
+  --ink-muted:   #a3a39c;
+
+  --art:         repeating-linear-gradient(45deg, #e6e6df 0 10px, #eaeae3 10px 20px);
+  --art-flat:    #eaeae3;
+
+  --option-bg:   #fbfbf9;
+
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -859,7 +913,7 @@ select {
 select:hover { border-color: var(--fg-muted); }
 /* Раскрытый список рисует система, и он всегда на своём фоне: без этого
    в тёмной теме пункты остаются чёрным по чёрному в части браузеров. */
-select option { background: #1a1a19; color: var(--fg); }
+select option { background: var(--option-bg); color: var(--fg); }
 
 .select__chevron {
   position: absolute;
@@ -1360,6 +1414,32 @@ select option { background: #1a1a19; color: var(--fg); }
 .foot__note a { color: var(--fg-muted); border-bottom: 1px solid var(--line); }
 .foot__note a:hover,
 .foot__note a:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-bottom-color: transparent;
+}
+
+/* Переключатель темы стоит в подвале, а не в шапке. Шапка держит только
+   слово и разделы, и орган управления среди них читался бы шестым
+   разделом; а подвал уже собран из сведений о самом сайте — описание, год,
+   куда писать, — и настройка там своя среди своих.
+
+   Набран как ссылка рядом, той же строкой и с той же вывороткой: своего
+   оформления не заводит. Без скрипта его нет — переключать некому. */
+.foot__theme {
+  display: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+[data-js] .foot__theme { display: inline; }
+.foot__theme:hover,
+.foot__theme:focus-visible {
   background: var(--ink);
   color: var(--ink-fg);
   border-bottom-color: transparent;

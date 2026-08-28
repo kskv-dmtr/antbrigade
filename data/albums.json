@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-26T23:38:04Z",
+  "generatedAt": "2026-08-28T05:26:19Z",
   "counts": {
-    "albums": 1101,
+    "albums": 1102,
     "artists": 990,
     "labels": 618,
     "videos": 78
   },
   "albums": [
+    {
+      "id": "3c94129a-8c52-80b6-ade5-fce1766d6081",
+      "slug": "wine-lips-tv-dinner",
+      "artist": "Wine Lips",
+      "album": "TV Dinner",
+      "url": "https://album.link/8fm90jdtqx4j6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af1e62180-0ed0-4d2e-a34a-ded915a27799%3Aa1409553656_10.jpg?table=block&id=3c94129a-8c52-80b6-ade5-fce1766d6081&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Garage Rock",
+        "Garage Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-28",
+      "year": 2026,
+      "artistIds": [
+        "2524129a-8c52-8013-900d-d54062fa89db"
+      ],
+      "artists": [
+        "Wine Lips"
+      ],
+      "labelIds": [
+        "2514129a-8c52-80d0-9997-d70a46aa1a26"
+      ],
+      "labels": [
+        "Stomp Records"
+      ]
+    },
     {
       "id": "3c34129a-8c52-8056-8c53-d7d6f6bbaa46",
       "slug": "black-marble-life-in-small-spaces",
@@ -51432,9 +51461,10 @@
       "slug": "wine-lips",
       "name": "Wine Lips",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://winelips.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
+        "3c94129a-8c52-80b6-ade5-fce1766d6081",
         "a7f33ebe-e8e3-4540-966d-83ec090d0848"
       ],
       "genres": [
@@ -60288,9 +60318,10 @@
       "slug": "stomp-records",
       "name": "Stomp Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://stomprecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3c94129a-8c52-80b6-ade5-fce1766d6081",
         "a7f33ebe-e8e3-4540-966d-83ec090d0848",
         "d149d51e-fd0b-4103-a428-e741b559d48e"
       ],

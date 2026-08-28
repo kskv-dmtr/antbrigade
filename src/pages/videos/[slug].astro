@@ -42,7 +42,6 @@ const rest = [...new Map(
 
   <article class="detail">
     <div class="detail__banner detail__banner--video">
-      {thumb && <img class="detail__backdrop" src={thumb} alt="" aria-hidden="true" decoding="async" />}
       {thumb && (
         <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
              alt={`${title} still`} fetchpriority="high" />

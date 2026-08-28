@@ -65,7 +65,8 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
-  <meta name="color-scheme" content="dark" />
+  {/* color-scheme задаётся в стилях и переключается вместе с темой; здесь
+      он был бы вторым источником правды и половину времени врал бы. */}
 
   {/* Каноническая ссылка — только у страниц, которым место в выдаче.
       Ставить её на noindex значит говорить две вещи разом: «не бери» и
@@ -172,6 +173,16 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           </a>
         ))}
       </nav>
+
+      {/* Переключатель темы — последним в разметке, после меню.
+
+          На широком экране он встаёт справа от разделов и отделён от них
+          рамкой, чтобы не читаться шестым разделом. На узком меню уезжает
+          под бургер и из потока выпадает, поэтому кнопка остаётся видимой
+          и порядком встаёт перед бургером.
+
+          Без скрипта её нет: переключать некому. */}
+      <button type="button" class="theme" id="theme">Light</button>
     </div>
   </header>
 
@@ -192,7 +203,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       <div class="foot__note mono mono--sm">
         ant brigade — a personal music archive<br />
         new releases · old favorites · strange finds<br />
-        © {year} · 1723 · 1312 · <button type="button" class="foot__theme" id="theme">Light</button>
+        © {year} · 1723 · 1312
       </div>
 
       <div class="foot__note foot__note--end mono mono--sm">
@@ -214,7 +225,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Цвет полосы браузера переписываем тем же значением, что стоит в
        токене --bg: держать второй список цветов в скрипте — верный способ
        развести их при первой же правке палитры. */
-    const themeBtn = document.getElementById('theme');
+    const themeBtn = document.getElementById("theme");
 
     if (themeBtn) {
       const label = () =>

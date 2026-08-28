@@ -245,6 +245,10 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
+  /* Прижато вправо своим полем, а не space-between у родителя: справа от
+     меню стоит кнопка темы, и при space-between они разъехались бы по
+     краям, оставив разделы посередине. */
+  margin-left: auto;
 }
 .nav a {
   padding-bottom: 2px;
@@ -294,29 +298,55 @@ a { color: inherit; text-decoration: none; }
 .burger__lines::before { top: -6px; }
 .burger__lines::after  { top: 6px; }
 
+/* Переключатель темы в шапке, справа от разделов.
+
+   В рамке, а не текстом: рядом стоят пять разделов тем же моноширинным, и
+   без рамки кнопка читалась бы шестым разделом. Поля у́же, чем у кнопок на
+   страницах, — шапка тесная, и полновесная кнопка спорила бы со словом
+   слева.
+
+   Без скрипта её нет: переключать некому. */
+.theme {
+  display: none;
+  flex: none;
+  margin-left: 20px;
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  white-space: nowrap;
+}
+[data-js] .theme { display: block; }
+.theme:hover,
+.theme:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-color: var(--ink);
+}
+
 /* Открытое меню — крест: средняя линия гаснет, крайние сходятся на её месте. */
 .masthead[data-open] .burger__lines { background: transparent; }
 .masthead[data-open] .burger__lines::before { transform: translateY(6px) rotate(45deg); }
 .masthead[data-open] .burger__lines::after  { transform: translateY(-6px) rotate(-45deg); }
 
-/* --------------------------------------------- размытая подложка
+/* Размытой подложки под полосой больше нет. Полоса на странице релиза —
+   16:7, обложки квадратные, и остаток заливала размытая копия той же
+   обложки. Держалась она на затемнении: blur с brightness(0.42), поверх
+   которого шёл светлый текст.
 
-   Полоса на странице релиза — 16:7, а обложки в базе квадратные: растянуть
-   квадрат по `cover` значит выбросить больше половины картинки. Поэтому
-   полосу заливает размытая копия той же обложки, а сама обложка лежит на
-   ней целиком и не режется.
+   Со светлой темой это разъехалось. Затемнение никуда не делось, а текст
+   стал тёмным — заголовок ложился тёмным на тёмное пятно случайного цвета,
+   и читался тем хуже, чем темнее оказалась обложка. Подкрутить яркость под
+   обе темы нельзя: под каждой обложкой она своя.
 
-   На главной такой полосы больше нет: ведущую работу заменила сетка из
-   шести плиток.                                                        */
-
-.detail__backdrop {
-  position: absolute;
-  inset: -6%;               /* с запасом: размытие съедает края */
-  width: 112%;
-  height: 112%;
-  object-fit: cover;
-  filter: blur(46px) brightness(0.42) saturate(0.85);
-}
+   Теперь под текстом остаётся фон самой полосы — штриховка `--art`, у
+   которой контраст к фону 1.12 в обеих темах. Обложка лежит слева целиком
+   и по-прежнему не режется. */
 
 /* --------------------------------------------------------- плитки
 
@@ -1419,31 +1449,6 @@ select option { background: var(--option-bg); color: var(--fg); }
   border-bottom-color: transparent;
 }
 
-/* Переключатель темы стоит в подвале, а не в шапке. Шапка держит только
-   слово и разделы, и орган управления среди них читался бы шестым
-   разделом; а подвал уже собран из сведений о самом сайте — описание, год,
-   куда писать, — и настройка там своя среди своих.
-
-   Набран как ссылка рядом, той же строкой и с той же вывороткой: своего
-   оформления не заводит. Без скрипта его нет — переключать некому. */
-.foot__theme {
-  display: none;
-  padding: 0;
-  font: inherit;
-  letter-spacing: inherit;
-  color: var(--fg-muted);
-  background: none;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  cursor: pointer;
-}
-[data-js] .foot__theme { display: inline; }
-.foot__theme:hover,
-.foot__theme:focus-visible {
-  background: var(--ink);
-  color: var(--ink-fg);
-  border-bottom-color: transparent;
-}
 
 /* Установленное приложение открывается во весь экран, поэтому по краям
    учитываем вырез и домашний индикатор. */
@@ -1566,6 +1571,20 @@ select option { background: var(--option-bg); color: var(--fg); }
   .nav { gap: 16px; font-size: 11px; }
 
   [data-js] .burger { display: block; }
+
+  /* Порядок в строке: слово, кнопка темы, бургер. В разметке кнопка стоит
+     последней — так на широком экране она оказывается справа от разделов, —
+     а здесь меню выпадает из потока под бургер, и без перестановки кнопка
+     встала бы за ним.
+
+     Поле слева убираем: вправо пару толкает уже само меню своим
+     margin-left: auto, а без скрипта — эта же кнопка. */
+  [data-js] .theme { order: 1; margin-left: auto; }
+  [data-js] .burger { order: 2; margin-left: 12px; }
+
+  /* Без скрипта меню остаётся в потоке и переносится под слово. Прижимать
+     его вправо в этом случае незачем — оно занимает всю строку. */
+  .nav { margin-left: 0; }
 
   /* Шапка с бургером — одна строка вместо двух, и отступ под липкую полосу
      меньше ровно на строку меню. Значение приблизительное и живёт недолго:

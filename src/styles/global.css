@@ -298,36 +298,44 @@ a { color: inherit; text-decoration: none; }
 .burger__lines::before { top: -6px; }
 .burger__lines::after  { top: 6px; }
 
-/* Переключатель темы в шапке, справа от разделов.
+/* Переключатель темы в шапке, справа от разделов. Значком, а не словом:
+   рядом стоят пять разделов моноширинным, и слово в рамке читалось бы
+   шестым разделом, а рамка вокруг него спорила бы со словом слева.
 
-   В рамке, а не текстом: рядом стоят пять разделов тем же моноширинным, и
-   без рамки кнопка читалась бы шестым разделом. Поля у́же, чем у кнопок на
-   страницах, — шапка тесная, и полновесная кнопка спорила бы со словом
-   слева.
+   Квадрат под палец: 34 на 34 — столько же, сколько у бургера по высоте.
 
    Без скрипта её нет: переключать некому. */
 .theme {
   display: none;
   flex: none;
-  margin-left: 20px;
-  padding: 6px 10px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 18px;
+  padding: 0;
   color: var(--fg-muted);
   background: none;
   border: 1px solid var(--line);
   cursor: pointer;
-  white-space: nowrap;
 }
-[data-js] .theme { display: block; }
+[data-js] .theme { display: inline-flex; }
 .theme:hover,
 .theme:focus-visible {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
 }
+
+/* Значок крупнее кегля родителя: у кнопки своего текста нет, и 1em здесь
+   отсчитывался бы от унаследованных пятнадцати. */
+.theme__icon { width: 17px; height: 17px; }
+
+/* Показываем тот значок, куда переключит: солнце в тёмной теме, полумесяц
+   в светлой. Выбор делает CSS по атрибуту, поэтому значок верен уже на
+   первой отрисовке — скрипту тут делать нечего. */
+:root[data-theme='dark'] .theme__icon--moon,
+:root[data-theme='light'] .theme__icon--sun { display: none; }
 
 /* Открытое меню — крест: средняя линия гаснет, крайние сходятся на её месте. */
 .masthead[data-open] .burger__lines { background: transparent; }
@@ -1588,8 +1596,11 @@ select option { background: var(--option-bg); color: var(--fg); }
 
   /* Шапка с бургером — одна строка вместо двух, и отступ под липкую полосу
      меньше ровно на строку меню. Значение приблизительное и живёт недолго:
-     скрипт заменяет его точной высотой шапки, снятой с вёрстки. */
-  [data-js] { --head-h: 57px; }
+     скрипт заменяет его точной высотой шапки, снятой с вёрстки.
+
+     Было 57, пока в шапке не появилась кнопка темы: она на 34 пикселя,
+     выше бургера, и строка выросла на шесть. */
+  [data-js] { --head-h: 63px; }
 
   /* Меню выпадает из-под шапки поверх содержимого, а не раздвигает её:
      от --head-h отсчитывается положение липкой полосы, и раздвинутая шапка

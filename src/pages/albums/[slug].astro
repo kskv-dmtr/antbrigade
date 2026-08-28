@@ -29,6 +29,10 @@ const cover   = coverSrc(album, 800);
    причина, что у заголовка на странице клипа. */
 const longTitle = album.album.length > 60;
 
+/* Дата и лейбл стоят одной строкой внизу полосы, поэтому дата нужна ещё и
+   отдельно: по ней решается, ставить ли перед первым лейблом разделитель. */
+const dateText = formatDate(album.released);
+
 /* Другие релизы тех же исполнителей — то же, что «More Videos» на странице
    клипа. Через Map, а не через фильтр: у релиза бывает двое исполнителей,
    и совместная работа иначе попала бы в список дважды.
@@ -68,14 +72,17 @@ const more = [...new Map(
           Раньше весь блок жался к низу, а лейбл с жанрами и кнопками стояли
           отдельным этажом под полосой. */}
       <div class="detail__head">
-        {/* Сверху вниз: исполнитель, название, тип с датой. Исполнитель
-            подводкой над заголовком, а служебная строка ушла под него —
-            прежде она стояла первой.
-
-            Тип и дата соединены точкой, как на плитке и в строке индекса:
-            это одна и та же пара, и разделять её здесь по-другому значило бы
-            завести третий приём для того же самого. */}
+        {/* Сверху вниз: тип, название, исполнитель. Тот же порядок, что на
+            странице клипа: там надстрочной строкой стоит вид ролика, а имя
+            уходит под заголовок. Дата ушла вниз, к лейблу: обе — справка о
+            выпуске, и стоять им вместе. */}
         <div class="detail__name">
+          <p class="detail__kicker">{album.types.join(' · ')}</p>
+
+          <h1 class:list={['detail__title', longTitle && 'detail__title--long']}>
+            {album.album}
+          </h1>
+
           <p class="detail__artist">
             {artists.length > 0
               ? artists.map((a, i) => (
@@ -86,39 +93,31 @@ const more = [...new Map(
                 ))
               : album.artist}
           </p>
-
-          <h1 class:list={['detail__title', longTitle && 'detail__title--long']}>
-            {album.album}
-          </h1>
-
-          <p class="detail__kicker">
-            {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
-          </p>
         </div>
 
         <div class="detail__meta">
-          <dl class="facts facts--wide">
-            {labels.length > 0 && (
-              <>
-                <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>
-                <dd>
-                  {labels.map((l, i) => (
-                    <>
-                      {i > 0 && ', '}
-                      <a href={`/labels/${l.slug}`}>{l.name}</a>
-                    </>
-                  ))}
-                </dd>
-              </>
+          {/* Подписей «Label» и «Genres» больше нет: колонка в 130 пикселей
+              под них съедала треть ширины, а угадать по строке, что
+              «Sacred Bones» — лейбл, а «Post-Punk» — жанр, можно и без них.
+              Поэтому и не список определений: терминов в нём не осталось. */}
+          <div class="detail__facts">
+            {(dateText || labels.length > 0) && (
+              <p class="detail__fact">
+                {dateText}
+                {/* Точка, а не запятая, между лейблами: в дате слева уже есть
+                    запятая («August 21, 2026»), и вторая в той же строке
+                    встала бы с ней на равных. */}
+                {labels.map((l, i) => (
+                  <>
+                    {(i > 0 || dateText) && <span class="sep"> · </span>}
+                    <a href={`/labels/${l.slug}`}>{l.name}</a>
+                  </>
+                ))}
+              </p>
             )}
 
-            {album.genres.length > 0 && (
-              <>
-                <dt>Genres</dt>
-                <dd><GenreChips names={album.genres} /></dd>
-              </>
-            )}
-          </dl>
+            <GenreChips names={album.genres} />
+          </div>
 
           <ListenLinks album={album} />
         </div>

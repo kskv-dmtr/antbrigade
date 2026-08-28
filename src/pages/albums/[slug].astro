@@ -20,6 +20,15 @@ const labels  = labelsOf(album.labelIds);
 const title   = `${artistLine(album)} — ${album.album}`;
 const cover   = coverSrc(album, 800);
 
+/* Длинному названию — кегль помельче. В правой колонке полосы у заголовка
+   бюджет в четыре строки: дальше блок с площадками выходит за полосу, а у
+   неё overflow: hidden, и кнопки просто обрезало бы.
+
+   Порог в 60 знаков берёт три релиза из 1102, и самый длинный из них — 83
+   знака — при обычном кегле занимал пять строк. Тот же приём и та же
+   причина, что у заголовка на странице клипа. */
+const longTitle = album.album.length > 60;
+
 /* Другие релизы тех же исполнителей — то же, что «More Videos» на странице
    клипа. Через Map, а не через фильтр: у релиза бывает двое исполнителей,
    и совместная работа иначе попала бы в список дважды.
@@ -54,53 +63,62 @@ const more = [...new Map(
         <img class="detail__art" src={cover} width="800" height="800"
              alt={`${album.album} cover`} fetchpriority="high" />
       )}
+      {/* Две опоры и воздух между ними: имя прижато к верху полосы,
+          служебное — к низу, и обе колонки заканчиваются на одной линии.
+          Раньше весь блок жался к низу, а лейбл с жанрами и кнопками стояли
+          отдельным этажом под полосой. */}
       <div class="detail__head">
-        {/* Дата стоит здесь, рядом с типом релиза, отдельной строки в
-            фактах под ней больше нет. */}
-        <p class="detail__kicker">
-          {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
-        </p>
-        <h1 class="detail__title">{album.album}</h1>
-        <p class="detail__artist">
-          {artists.length > 0
-            ? artists.map((a, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}>{a.name}</a>
-                </>
-              ))
-            : album.artist}
-        </p>
+        {/* Текстовый блок прежний: тип с датой надстрочной строкой,
+            заголовок, исполнитель под ним. Новое здесь только его место —
+            он прижат к верху полосы, а не к низу. */}
+        <div class="detail__name">
+          <p class="detail__kicker">
+            {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
+          </p>
+
+          <h1 class:list={['detail__title', longTitle && 'detail__title--long']}>
+            {album.album}
+          </h1>
+
+          <p class="detail__artist">
+            {artists.length > 0
+              ? artists.map((a, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${a.slug}`}>{a.name}</a>
+                  </>
+                ))
+              : album.artist}
+          </p>
+        </div>
+
+        <div class="detail__meta">
+          <dl class="facts facts--wide">
+            {labels.length > 0 && (
+              <>
+                <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>
+                <dd>
+                  {labels.map((l, i) => (
+                    <>
+                      {i > 0 && ', '}
+                      <a href={`/labels/${l.slug}`}>{l.name}</a>
+                    </>
+                  ))}
+                </dd>
+              </>
+            )}
+
+            {album.genres.length > 0 && (
+              <>
+                <dt>Genres</dt>
+                <dd><GenreChips names={album.genres} /></dd>
+              </>
+            )}
+          </dl>
+
+          <ListenLinks album={album} />
+        </div>
       </div>
-    </div>
-
-    <div class="detail__body">
-      <div>
-        <ListenLinks album={album} />
-      </div>
-
-      <dl class="facts facts--wide">
-        {labels.length > 0 && (
-          <>
-            <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>
-            <dd>
-              {labels.map((l, i) => (
-                <>
-                  {i > 0 && ', '}
-                  <a href={`/labels/${l.slug}`}>{l.name}</a>
-                </>
-              ))}
-            </dd>
-          </>
-        )}
-
-        {album.genres.length > 0 && (
-          <>
-            <dt>Genres</dt>
-            <dd><GenreChips names={album.genres} /></dd>
-          </>
-        )}
-      </dl>
     </div>
   </article>
 

@@ -55,7 +55,13 @@
      по чёрному. Токеном, а не литералом, ровно ради светлой темы. */
   --option-bg:   #1a1a19;
 
-  --measure:     1280px;    /* ширина кадра из макета, вместе с полями */
+  /* Ширина кадра вместе с полями. Подобрана под 1920: 1406 = 1350 + два
+     поля по 28, и тогда содержимое начинается ровно в 285 пикселях от края
+     экрана, как задано. Прежние 1280 давали 348.
+
+     Если понадобится отсчитывать 285 не до содержимого, а до самой рамки
+     кадра, значение здесь становится 1350. */
+  --measure:     1406px;
   --pad:         28px;
   /* Высота закреплённой шапки: от неё отсчитываются липкая строка поиска
      и отступы для якорей. Меняете отступы в шапке — поправьте и здесь. */
@@ -1180,15 +1186,21 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .related__label { color: var(--fg-dim); flex: none; }
 
+/* Никакой подложки под обложкой: у полосы нет ни размытой копии, ни
+   штриховки, только сама обложка слева и текст справа на фоне страницы.
+
+   Штриховка осталась у клипов и только там: кадр с YouTube может не
+   скачаться, и на его месте нужно пустое состояние. У релизов такого случая
+   нет — обложка есть у всех 1102. */
 .detail__banner {
   position: relative;
   display: flex;
   align-items: stretch;
   gap: 32px;
   aspect-ratio: 16 / 7;
-  background: var(--art);
   overflow: hidden;
 }
+.detail__banner--video { background: var(--art); }
 .detail__art {
   position: relative;
   flex: none;
@@ -1222,10 +1234,14 @@ select option { background: var(--option-bg); color: var(--fg); }
   min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* Имя к верху, служебное к низу: обе колонки полосы заканчиваются на
+     одной линии. У клипа блок один, и он прижимается к низу правилом ниже —
+     там разводить нечего. */
+  justify-content: space-between;
   gap: 10px;
-  padding: 0 var(--pad) 26px 0;
+  padding: 26px var(--pad) 26px 0;
 }
+.detail__banner--video .detail__head { justify-content: flex-end; }
 
 .detail__kicker {
   margin: 0;
@@ -1248,6 +1264,13 @@ select option { background: var(--option-bg); color: var(--fg); }
    (Live in Preveli Gorge, Crete)». Правило стоит после базового намеренно:
    сила у них одинаковая, и решает порядок в файле. */
 .detail__title--video { font-size: clamp(26px, 3.2vw, 46px); }
+
+/* Та же поправка для длинных названий релизов: в правой колонке у заголовка
+   бюджет в четыре строки, дальше блок с площадками выходит за полосу, а у
+   неё overflow: hidden. Порог — 60 знаков, под него попадают три релиза из
+   1102. Правило стоит после базового намеренно: сила у них одинаковая, и
+   решает порядок в файле. */
+.detail__title--long { font-size: clamp(30px, 3.8vw, 52px); }
 .detail__artist {
   margin: 0;
   font-size: 17px;
@@ -1255,6 +1278,24 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .detail__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
 .detail__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+
+/* ------------------------------- шапка релиза: две опоры и воздух
+
+   Имя прижато к верху полосы, служебное — к низу, между ними пустота. Она
+   тут не «незанятое место», а часть композиции: содержимое даже в тяжёлом
+   случае занимает около 450 пикселей из 535, и без разведения по краям
+   верх был бы плотным, а низ пустым.
+
+   Работает это на .detail__head, который стал space-between вместо
+   flex-end; сами блоки держат свои просветы. */
+.detail__name,
+.detail__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail__meta { gap: 20px; }
+
 
 .detail__body {
   display: grid;

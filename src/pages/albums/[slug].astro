@@ -68,18 +68,14 @@ const more = [...new Map(
           Раньше весь блок жался к низу, а лейбл с жанрами и кнопками стояли
           отдельным этажом под полосой. */}
       <div class="detail__head">
-        {/* Текстовый блок прежний: тип с датой надстрочной строкой,
-            заголовок, исполнитель под ним. Новое здесь только его место —
-            он прижат к верху полосы, а не к низу. */}
+        {/* Сверху вниз: исполнитель, название, тип с датой. Исполнитель
+            подводкой над заголовком, а служебная строка ушла под него —
+            прежде она стояла первой.
+
+            Тип и дата соединены точкой, как на плитке и в строке индекса:
+            это одна и та же пара, и разделять её здесь по-другому значило бы
+            завести третий приём для того же самого. */}
         <div class="detail__name">
-          <p class="detail__kicker">
-            {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
-          </p>
-
-          <h1 class:list={['detail__title', longTitle && 'detail__title--long']}>
-            {album.album}
-          </h1>
-
           <p class="detail__artist">
             {artists.length > 0
               ? artists.map((a, i) => (
@@ -89,6 +85,14 @@ const more = [...new Map(
                   </>
                 ))
               : album.artist}
+          </p>
+
+          <h1 class:list={['detail__title', longTitle && 'detail__title--long']}>
+            {album.album}
+          </h1>
+
+          <p class="detail__kicker">
+            {[album.types.join(' · '), formatDate(album.released)].filter(Boolean).join(' · ')}
           </p>
         </div>
 

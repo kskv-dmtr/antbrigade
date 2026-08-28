@@ -9,7 +9,7 @@
 import Base from '../../layouts/Base.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { videos, artistsOf, videosOf, thumbSrc, videoTitle } from '../../lib/db.js';
+import { videos, artistsOf, videosOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
@@ -19,6 +19,11 @@ const { video } = Astro.props;
 const artists = artistsOf(video.artistIds);
 const title = videoTitle(video);
 const thumb = thumbSrc(video, 960);
+
+/* Дата выхода — той же строкой внизу полосы, что «дата · лейбл» у релиза.
+   Колонка «Release Date» в таблице клипов заполнена не у всех, поэтому
+   строка условная: без даты внизу остаётся одна кнопка. */
+const dateText = formatDate(video.released);
 
 /* Другие клипы тех же исполнителей. Через Map, а не через фильтр: у клипа
    бывает двое исполнителей, и общий ролик иначе попал бы в список дважды. */
@@ -46,29 +51,40 @@ const rest = [...new Map(
         <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
              alt={`${title} still`} fetchpriority="high" />
       )}
-      <div class="detail__head">
-        {video.kind && <p class="detail__kicker">{video.kind}</p>}
-        <h1 class="detail__title detail__title--video">{title}</h1>
-        <p class="detail__artist">
-          {artists.map((a, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/artists/${a.slug}`}>{a.name}</a>
-            </>
-          ))}
-        </p>
-      </div>
-    </div>
+      {/* Две опоры и воздух между ними, как на странице релиза: вид ролика,
+          название и имя прижаты к верху полосы, кнопка — к низу, и обе
+          колонки заканчиваются на одной линии.
 
-    <div class="detail__body">
-      <div>
-        {/* Тот же ряд, что «где послушать» у релиза: название площадки без
-            пояснений и без стрелки — на странице релиза кнопки набраны так
-            же, и «Watch on» рядом с ними выглядело бы объяснением очевидного. */}
-        <div class="listen">
-          <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
-            YouTube
-          </a>
+          Внизу дата выхода — та же строка, что «дата · лейбл» у релиза, но
+          без лейбла: его в записи клипа нет. Жанров тоже нет, поэтому
+          линейка одна, перед кнопкой, а не две. */}
+      <div class="detail__head">
+        <div class="detail__name">
+          {video.kind && <p class="detail__kicker">{video.kind}</p>}
+          <h1 class="detail__title detail__title--video">{title}</h1>
+          <p class="detail__artist">
+            {artists.map((a, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${a.slug}`}>{a.name}</a>
+              </>
+            ))}
+          </p>
+        </div>
+
+        <div class="detail__meta">
+          {dateText && <p class="detail__fact">{dateText}</p>}
+
+          {/* Тот же ряд, что «где послушать» у релиза: название площадки без
+              пояснений и без стрелки — на странице релиза кнопки набраны так
+              же, и «Watch on» рядом с ними выглядело бы объяснением
+              очевидного. Ряд переехал из этажа под полосой внутрь неё, туда
+              же, где кнопки площадок у релиза. */}
+          <div class="listen">
+            <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
+              YouTube
+            </a>
+          </div>
         </div>
       </div>
     </div>

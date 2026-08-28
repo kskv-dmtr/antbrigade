@@ -34,9 +34,12 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
              url: ']]HZ', genre: 'yEPm', type: '}j]w' };
-/* Ключи свойств в таблице клипов. Даты здесь нет намеренно: поле из таблицы
-   убрано, и год у клипов не показывается. */
-const PV = { url: ']]HZ', artist: 'kaf]', type: '}j]w' };
+/* Ключи свойств в таблице клипов. Ключ даты здесь свой, LStn: колонка
+   «Release Date» заведена заново 29 августа 2026, и прежний ключ она не
+   унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
+   лежат осиротевшие значения от удалённой когда-то колонки: в интерфейсе
+   Notion их не видно и не поправить. */
+const PV = { url: ']]HZ', artist: 'kaf]', type: '}j]w', date: 'LStn' };
 
 const root    = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'albums.json');
@@ -314,16 +317,22 @@ async function main() {
   for (const v of videoStore.values()) {
     const title = plainText(prop(v.properties, 'title'));
     if (!title) continue;
+    const released = dateStart(prop(v.properties, PV.date));
+
     videos.push({
       id: v.id,
       title,
       url: plainText(prop(v.properties, PV.url)),
       kind: plainText(prop(v.properties, PV.type)),
+      released,
+      year: released ? Number(released.slice(0, 4)) : null,
       artistIds: relationIds(prop(v.properties, PV.artist))
     });
   }
-  // По названию: даты у клипов нет, а порядок обязан быть устойчивым —
-  // иначе выгрузка при тех же данных даёт разный файл и CI коммитит пустоту.
+  /* По названию, а не по дате: дата у клипов заполнена не везде, а порядок
+     обязан быть устойчивым — иначе выгрузка при тех же данных даёт разный
+     файл и CI коммитит пустоту. Порядок в списках клипов задаёт страница,
+     а не этот файл. */
   videos.sort((a, b) => cmp(a.title, b.title) || cmp(a.id, b.id));
 
   /* Адреса клипов — из полного названия, как оно лежит в Notion: там уже

@@ -1053,7 +1053,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   align-items: baseline;
   flex-wrap: nowrap;
   gap: 8px;
-  padding-top: 28px;
+  padding-top: 20px;
   color: var(--fg-dim);
 }
 .crumbs a,
@@ -1175,11 +1175,11 @@ select option { background: var(--option-bg); color: var(--fg); }
    У полосы релиза и клипа своего поля не убавляем: строка пути там не
    подводка к заголовку, а отдельный этаж с кнопкой `Back` в рамке, и
    рамка эта должна стоять посреди воздуха, а не липнуть к обложке. Поле
-   `.detail` в 28 пикселей ровно равно `padding-top` самого пути, так
-   что сверху и снизу у кнопки поровну. Было 14 снизу против 28 сверху. */
+   `.detail` ровно равно `padding-top` самого пути, так что сверху и
+   снизу у кнопки поровну. Было 14 снизу против 28 сверху. */
 .crumbs:not([hidden]) ~ .page-head { padding-top: 18px; }
 
-.detail { padding: 28px 0 10px; }
+.detail { padding: 20px 0 10px; }
 
 /* Related на странице жанра: подпись и жанры на одной горизонтали. */
 .related {
@@ -1240,13 +1240,12 @@ select option { background: var(--option-bg); color: var(--fg); }
   display: flex;
   flex-direction: column;
   /* Имя к верху, служебное к низу: обе колонки полосы заканчиваются на
-     одной линии. У клипа блок один, и он прижимается к низу правилом ниже —
-     там разводить нечего. */
+     одной линии. У клипа то же самое — там наверху вид ролика с названием
+     и именем, внизу кнопка на YouTube. */
   justify-content: space-between;
   gap: 10px;
   padding: 26px var(--pad) 26px 0;
 }
-.detail__banner--video .detail__head { justify-content: flex-end; }
 
 .detail__kicker {
   margin: 0;
@@ -1339,14 +1338,6 @@ select option { background: var(--option-bg); color: var(--fg); }
   margin-bottom: 0;
 }
 
-
-.detail__body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
-  gap: 48px;
-  padding-top: 34px;
-  align-items: start;
-}
 
 /* ---------------------------------------------- где послушать */
 
@@ -1579,7 +1570,6 @@ select option { background: var(--option-bg); color: var(--fg); }
 @media (max-width: 900px) {
   .tiles { grid-template-columns: repeat(2, 1fr); }
   .tiles > * { grid-column: auto; }
-  .detail__body { grid-template-columns: minmax(0, 1fr); gap: 30px; }
 }
 
 /* Полоса 16:7 с обложкой сбоку на узком экране не живёт: в макете здесь
@@ -1603,6 +1593,15 @@ select option { background: var(--option-bg); color: var(--fg); }
     gap: 12px;
     padding: 18px var(--pad) 22px;
   }
+
+  /* Обе опоры — во всю ширину колонки. При `align-items: flex-start` они
+     сжимались до своего содержимого, и линейки шли не по тексту, а по нему:
+     над кнопкой клипа черта выходила в 88 пикселей вместо 311, а над
+     жанрами релиза её длина гуляла от числа жанров. Ширину задаём блокам,
+     а не меняем выключку: на `stretch` завязано выравнивание по левому
+     краю у всего остального в полосе. */
+  .detail__name,
+  .detail__meta { width: 100%; }
 
   /* Индекс складывается в две строки: слева артист и название, справа
      формат с годом — как в мобильном макете. */

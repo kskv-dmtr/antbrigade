@@ -161,7 +161,11 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         aria-expanded="false"
         aria-label="Menu"
       >
-        <span class="burger__lines" aria-hidden="true"></span>
+        {/* Оба значка лежат друг на друге, видимый выбирает прозрачность по
+            data-open на шапке. Так переход остаётся плавным и не требует
+            скрипта: атрибут и без того ставит обработчик меню. */}
+        <Icon name="list" class="burger__icon burger__icon--menu" />
+        <Icon name="x" class="burger__icon burger__icon--close" />
       </button>
 
       <nav class="nav" id="nav">

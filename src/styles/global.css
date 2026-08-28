@@ -295,25 +295,25 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--ink);
 }
 
-/* Три линии одним элементом: сам он средняя, псевдоэлементы — крайние. */
-.burger__lines,
-.burger__lines::before,
-.burger__lines::after {
-  display: block;
-  width: 20px;
-  height: 1px;
-  background: currentColor;
-  transition: transform 0.16s ease, background-color 0.16s ease;
-}
-.burger__lines { position: relative; margin: 0 auto; }
-.burger__lines::before,
-.burger__lines::after {
+/* Значки меню и креста лежат друг на друге, видимый выбирает
+   прозрачность. Раньше здесь были три линии, сложенные из элемента и его
+   псевдоэлементов, и они перетекали в крест поворотом. Смотрелось хорошо,
+   пока бургер стоял голым; в рамке рядом с переключателем темы расхождение
+   стало видно — знак выходил 20 на 14 при толщине штриха в пиксель, а
+   сосед 15.9 на 15.9 при 1.25.
+
+   Плавность сохранена: вместо поворота линий — переход прозрачности, и
+   по-прежнему без скрипта, на том же data-open, который ставит обработчик
+   меню. */
+.burger__icon {
   position: absolute;
-  left: 0;
-  content: '';
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.16s ease;
 }
-.burger__lines::before { top: -6px; }
-.burger__lines::after  { top: 6px; }
+.burger__icon--close { opacity: 0; }
+.masthead[data-open] .burger__icon--menu { opacity: 0; }
+.masthead[data-open] .burger__icon--close { opacity: 1; }
 
 /* Переключатель темы в шапке, справа от разделов. Тот же сегментированный
    переключатель, что вид списка на страницах, — общая рамка, два сегмента,
@@ -363,11 +363,6 @@ a { color: inherit; text-decoration: none; }
   background: var(--ink);
   color: var(--ink-fg);
 }
-
-/* Открытое меню — крест: средняя линия гаснет, крайние сходятся на её месте. */
-.masthead[data-open] .burger__lines { background: transparent; }
-.masthead[data-open] .burger__lines::before { transform: translateY(6px) rotate(45deg); }
-.masthead[data-open] .burger__lines::after  { transform: translateY(-6px) rotate(-45deg); }
 
 /* Размытой подложки под полосой больше нет. Полоса на странице релиза —
    16:7, обложки квадратные, и остаток заливала размытая копия той же

@@ -179,13 +179,21 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           под бургер и из потока выпадает, поэтому кнопка остаётся видимой
           и порядком встаёт перед бургером.
 
-          Внутри оба значка сразу, а показывает нужный медиазапрос по теме:
-          так значок верен уже на первой отрисовке, без участия скрипта.
-          Показываем тот, куда переключит, — солнце в тёмной теме. */}
-      <button type="button" class="theme" id="theme">
-        <Icon name="sun" class="theme__icon theme__icon--sun" />
-        <Icon name="moon" class="theme__icon theme__icon--moon" />
-      </button>
+          Устроен как переключатель вида на списках: два сегмента в общей
+          рамке, нажатый вывернут. Оба варианта видны сразу, и отмечен не
+          тот, куда переключит, а тот, который сейчас, — как у List / Grid.
+
+          Какой сегмент вывернут, решает CSS по data-theme на <html>: он
+          верен уже на первой отрисовке. Скрипт доставляет только
+          aria-pressed, который стилями не задать. */}
+      <div class="seg seg--theme" id="theme" role="group" aria-label="Theme">
+        <button type="button" data-theme-set="light" aria-label="Light theme">
+          <Icon name="sun" class="theme__icon" />
+        </button>
+        <button type="button" data-theme-set="dark" aria-label="Dark theme">
+          <Icon name="moon" class="theme__icon" />
+        </button>
+      </div>
     </div>
   </header>
 
@@ -226,12 +234,15 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Цвет берём из токена --bg, а не из своего списка: держать второй
        перечень цветов в скрипте — верный способ развести их при первой же
        правке палитры. */
-    const themeBtn = document.getElementById('theme');
+    const themeSeg = document.getElementById('theme');
 
-    if (themeBtn) {
+    if (themeSeg) {
       const paint = () => {
-        const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-        themeBtn.setAttribute('aria-label', `Switch to ${next} theme`);
+        const now = document.documentElement.dataset.theme;
+
+        for (const b of themeSeg.children) {
+          b.setAttribute('aria-pressed', String(b.dataset.themeSet === now));
+        }
 
         const meta = document.getElementById('theme-color');
         if (meta) {
@@ -242,10 +253,12 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
       paint();
 
-      themeBtn.addEventListener('click', () => {
-        const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-        document.documentElement.dataset.theme = next;
-        try { localStorage.setItem('theme', next); } catch (e) {}
+      themeSeg.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+
+        document.documentElement.dataset.theme = btn.dataset.themeSet;
+        try { localStorage.setItem('theme', btn.dataset.themeSet); } catch (err) {}
         paint();
       });
     }

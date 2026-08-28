@@ -47,9 +47,14 @@ const rest = [...new Map(
 
   <article class="detail">
     <div class="detail__banner detail__banner--video">
-      {thumb && (
+      {/* Без кадра на его месте остаётся заштрихованная заготовка тех же
+          пропорций: полоса не должна складываться в одну колонку из-за
+          недокачанного файла. Сейчас кадры есть у всех 78. */}
+      {thumb ? (
         <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
              alt={`${title} still`} fetchpriority="high" />
+      ) : (
+        <div class="detail__art detail__art--video detail__art--empty" aria-hidden="true"></div>
       )}
       {/* Две опоры и воздух между ними, как на странице релиза: вид ролика,
           название и имя прижаты к верху полосы, кнопка — к низу, и обе

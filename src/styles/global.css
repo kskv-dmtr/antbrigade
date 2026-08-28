@@ -1194,9 +1194,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 /* Никакой подложки под обложкой: у полосы нет ни размытой копии, ни
    штриховки, только сама обложка слева и текст справа на фоне страницы.
 
-   Штриховка осталась у клипов и только там: кадр с YouTube может не
-   скачаться, и на его месте нужно пустое состояние. У релизов такого случая
-   нет — обложка есть у всех 1102. */
+   Штриховка осталась у клипов, но не под всей полосой, а строго под кадром:
+   она пустое состояние на случай, если кадр с YouTube не скачался, и место
+   у неё ровно там, где кадр. Под текстом её быть не должно — там ей нечего
+   обозначать. У релизов такого случая нет вовсе: обложка есть у всех 1102. */
 .detail__banner {
   position: relative;
   display: flex;
@@ -1205,7 +1206,6 @@ select option { background: var(--option-bg); color: var(--fg); }
   aspect-ratio: 16 / 7;
   overflow: hidden;
 }
-.detail__banner--video { background: var(--art); }
 .detail__art {
   position: relative;
   flex: none;
@@ -1232,7 +1232,12 @@ select option { background: var(--option-bg); color: var(--fg); }
   width: 58%;
   height: auto;
   aspect-ratio: 16 / 9;
+  /* Штриховка под самим кадром: видна, если файл не скачался, и не вылезает
+     за его границы. Пустая заготовка ниже держит то же место, когда кадра
+     нет вовсе и картинку нечем отдать. */
+  background: var(--art);
 }
+.detail__art--empty { display: block; }
 .detail__head {
   position: relative;
   flex: 1;

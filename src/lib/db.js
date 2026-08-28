@@ -164,22 +164,6 @@ export function genreFor(name) {
   return genreIndex.get(String(name).toLowerCase()) ?? null;
 }
 
-/** Жанры, чаще всего встречающиеся вместе с этим. */
-export function relatedGenres(genre, limit = 8) {
-  const together = new Map();
-  for (const id of genre.albumIds) {
-    for (const raw of albumById.get(id).genres) {
-      const key = raw.toLowerCase();
-      if (key === genre.key) continue;
-      together.set(key, (together.get(key) ?? 0) + 1);
-    }
-  }
-  return [...together.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .slice(0, limit)
-    .map(([key]) => genreIndex.get(key));
-}
-
 /* ---------------------------------------------------------- площадки */
 
 // Показываем не всё, что отдаёт Odesli, а только то, чем реально пользуются.

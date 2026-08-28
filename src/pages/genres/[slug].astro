@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { genres, albumsOf, relatedGenres, plural, coverSrc } from '../../lib/db.js';
+import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
 
 
 export function getStaticPaths() {
@@ -11,7 +11,17 @@ export function getStaticPaths() {
 
 const { genre } = Astro.props;
 const releases = albumsOf(genre.albumIds);
-const related = relatedGenres(genre);
+
+/* Исполнители жанра — из его же релизов. Через Map, а не через фильтр: у
+   релиза бывает двое исполнителей, и у одного исполнителя обычно несколько
+   релизов в жанре, иначе имя попало бы в строку несколько раз.
+
+   По алфавиту, как список на /artists. Порядок, в котором имена приходят из
+   albumIds, идёт из Notion и ничего не значит — тот же довод, что у
+   «More Releases» на странице релиза. */
+const roster = [...new Map(
+  releases.flatMap((a) => artistsOf(a.artistIds)).map((a) => [a.id, a])
+).values()].sort((a, b) => a.name.localeCompare(b.name));
 ---
 <Base
   title={`${genre.name} · ant brigade`}
@@ -21,21 +31,25 @@ const related = relatedGenres(genre);
 >
   <Breadcrumbs name={genre.name} place />
 
+  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
+      Так же собраны страницы исполнителя и лейбла. */}
   <div class="page-head">
     <h1>{genre.name}</h1>
-    <p class="counter">[{releases.length}]</p>
   </div>
 
-  {/* Related в строку: подпись и сами жанры на одной горизонтали, а не
-      двумя колонками, как в остальных списках фактов. */}
-  {related.length > 0 && (
-    <div class="related">
-      <span class="related__label mono mono--sm">Related</span>
+  {/* Под именем линейка, под ней исполнители жанра во всю ширину — та же
+      полоса, что несёт состав на странице лейбла, и тем же межстрочным.
+
+      Подписи нет: строка стоит под именем жанра, и что это имена, видно по
+      ней самой — как состав под именем лейбла и жанры под именем
+      исполнителя, которые тоже идут без подписей. */}
+  {roster.length > 0 && (
+    <div class="profile-bar profile-bar--wide">
       <p class="meta-line">
-        {related.map((g, i) => (
+        {roster.map((a, i) => (
           <>
             {i > 0 && <span class="sep"> · </span>}
-            <a href={`/genres/${g.slug}`}>{g.name}</a>
+            <a href={`/artists/${a.slug}`}>{a.name}</a>
           </>
         ))}
       </p>
@@ -43,6 +57,10 @@ const related = relatedGenres(genre);
   )}
 
   <section class="section">
+    <div class="head">
+      <h2 class="display display--md">Releases</h2>
+      <span class="mono">[{releases.length}]</span>
+    </div>
     <ul class="tiles tiles--auto">
       {releases.map((album) => <AlbumCard album={album} />)}
     </ul>

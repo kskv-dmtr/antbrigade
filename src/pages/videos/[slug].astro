@@ -78,18 +78,19 @@ const rest = [...new Map(
         </div>
 
         <div class="detail__meta">
-          {dateText && <p class="detail__fact">{dateText}</p>}
-
           {/* Тот же ряд, что «где послушать» у релиза: название площадки без
               пояснений и без стрелки — на странице релиза кнопки набраны так
               же, и «Watch on» рядом с ними выглядело бы объяснением
               очевидного. Ряд переехал из этажа под полосой внутрь неё, туда
-              же, где кнопки площадок у релиза. */}
+              же, где кнопки площадок у релиза, и стоит так же — над линейкой,
+              а дата под ней. */}
           <div class="listen">
             <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
               YouTube
             </a>
           </div>
+
+          {dateText && <p class="detail__fact">{dateText}</p>}
         </div>
       </div>
     </div>

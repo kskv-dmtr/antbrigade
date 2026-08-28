@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
-import GenreChips from '../../components/GenreChips.astro';
+import GenreLinks from '../../components/GenreLinks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, videoTitle, plural, coverSrc } from '../../lib/db.js';
 
@@ -22,6 +22,13 @@ const clipsSorted = clips.slice().sort((a, b) => {
   const rank = (v) => (v.kind === 'Official Video' ? 0 : 1);
   return rank(a) - rank(b) || videoTitle(a).localeCompare(videoTitle(b));
 });
+
+/* Полосу под именем показываем, только когда в ней есть чему стоять: у
+   артиста без жанров, лейблов и ссылок наружу осталась бы одна линейка
+   поперёк пустоты. Ссылки заполняются в Notion руками, и у большинства
+   записей их нет. Страна в счёт не идёт — она ушла наверх, к имени. */
+const hasLinks = Boolean(artist.bandcamp || artist.youtube);
+const hasBar   = Boolean(labels.length || artist.genres.length);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
@@ -35,42 +42,63 @@ const clipsSorted = clips.slice().sort((a, b) => {
 >
   <Breadcrumbs name={artist.name} place />
 
-  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
+  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
+
+      Справа от имени — страна в квадратных скобках, тем же набором, что
+      счётчики на списках: скобки на сайте означают служебное число или
+      пометку, и страна здесь именно пометка. Выключка по нижней линии имени
+      достаётся от .page-head, он для того и собран — на списках так же
+      стоит счётчик. */}
   <div class="page-head">
     <h1>{artist.name}</h1>
+    {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
   </div>
 
-  <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
+  {/* Под именем — линейка, под ней две колонки: слева жанры, справа
+      название лейбла. Раздел разбит по той же силовой линии, что делит
+      полосу релиза: левая колонка шириной с квадратную обложку в полосе
+      16:7, то есть 43.75% ширины, и просвет между колонками те же 32
+      пикселя. Содержимое правой прижато к дальнему правому краю — туда же,
+      где кончается страна строкой выше.
 
-  <dl class="facts facts--wide">
-    {artist.country && (
-      <>
-        <dt>Country</dt>
-        <dd>{countryName(artist.country)}</dd>
-      </>
-    )}
+      Подписей «Label» и «Genres» нет — как и на полосе релиза: по строке
+      видно, где лейбл, а где жанры. Поэтому и не список определений. */}
+  {hasBar && (
+    <div class="profile-bar">
+      <GenreLinks names={artist.genres} />
 
-    {artist.genres.length > 0 && (
-      <>
-        <dt>Genres</dt>
-        <dd><GenreChips names={artist.genres} /></dd>
-      </>
-    )}
-
-    {labels.length > 0 && (
-      <>
-        <dt>{labels.length > 1 ? 'Labels' : 'Label'}</dt>
-        <dd>
+      {/* Лейбл набран тем же, чем дата внизу полосы релиза, и лейблы
+          разделены точкой, а не запятой: их бывает до шести, а запятая на
+          сайте разделяет внутри значения, не значения между собой. */}
+      {labels.length > 0 && (
+        <p class="detail__fact profile-bar__label">
           {labels.map((l, i) => (
             <>
-              {i > 0 && ', '}
+              {i > 0 && <span class="sep"> · </span>}
               <a href={`/labels/${l.slug}`}>{l.name}</a>
             </>
           ))}
-        </dd>
-      </>
-    )}
-  </dl>
+        </p>
+      )}
+    </div>
+  )}
+
+  {/* Ссылки наружу — своим разделом, наравне с дискографией и клипами, а не
+      строкой в справке. Заголовок и линейка под ним те же, что у соседей;
+      кнопки под линейкой, слева.
+
+      Счётчика в заголовке нет намеренно: у соседей он говорит, сколько
+      плиток под ним, а тут кнопок одна или две и они целиком на виду —
+      число пересказывало бы картинку. Так же собран заголовок на странице
+      жанра. */}
+  {hasLinks && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">Links</h2>
+      </div>
+      <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
+    </section>
+  )}
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
       дискография, а клипы есть у полутора десятков из девятисот. */}

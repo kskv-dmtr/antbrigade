@@ -21,33 +21,44 @@ const roster   = artistsOf(label.artistIds);
 >
   <Breadcrumbs name={label.name} place />
 
+  {/* Устройство то же, что на странице исполнителя: счёт релизов только в
+      заголовке раздела ниже, а справа от имени — страна в квадратных
+      скобках, по нижней его линии. */}
   <div class="page-head">
-    {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался. */}
     <h1>{label.name}</h1>
+    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
   </div>
 
-  <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
+  {/* Под именем линейка, под ней состав — слева, в той же колонке, где у
+      исполнителя стоят жанры, и той же ширины: 43.75% по силовой линии
+      полосы релиза. Правая колонка пустая: у лейбла нет того, что у
+      исполнителя лежит справа. Подписи «Artists» нет — по чипсам с именами
+      видно, что это состав. */}
+  {roster.length > 0 && (
+    <div class="profile-bar">
+      {/* Имена набраны и подчёркнуты так же, как жанры у исполнителя и лейбл
+          внизу полосы релиза: ссылка на страницу списка везде выглядит
+          одинаково. */}
+      <p class="meta-line">
+        {roster.map((a, i) => (
+          <>
+            {i > 0 && <span class="sep"> · </span>}
+            <a href={`/artists/${a.slug}`}>{a.name}</a>
+          </>
+        ))}
+      </p>
+    </div>
+  )}
 
-  {/* Список раньше показывался только при непустом составе — теперь в нём
-      живёт ещё и страна, поэтому условие переехало на сами строки. */}
-  {(label.country || roster.length > 0) && (
-    <dl class="facts facts--wide">
-      {label.country && (
-        <>
-          <dt>Country</dt>
-          <dd>{countryName(label.country)}</dd>
-        </>
-      )}
-
-      {roster.length > 0 && (
-        <>
-          <dt>{plural(roster.length, 'Artist', 'Artists')}</dt>
-          <dd class="chips">
-            {roster.map((a) => <a class="chip chip--link" href={`/artists/${a.slug}`}>{a.name}</a>)}
-          </dd>
-        </>
-      )}
-    </dl>
+  {/* Ссылки наружу — своим разделом, как у исполнителя: тот же заголовок,
+      та же линейка, кнопки под ней слева, счётчика нет. */}
+  {(label.bandcamp || label.youtube) && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">Links</h2>
+      </div>
+      <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
+    </section>
   )}
 
   <section class="section">

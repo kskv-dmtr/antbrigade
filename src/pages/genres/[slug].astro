@@ -31,11 +31,14 @@ const related = relatedGenres(genre);
   {related.length > 0 && (
     <div class="related">
       <span class="related__label mono mono--sm">Related</span>
-      <div class="chips">
-        {related.map((g) => (
-          <a class="chip chip--link" href={`/genres/${g.slug}`}>{g.name}</a>
+      <p class="meta-line">
+        {related.map((g, i) => (
+          <>
+            {i > 0 && <span class="sep"> · </span>}
+            <a href={`/genres/${g.slug}`}>{g.name}</a>
+          </>
         ))}
-      </div>
+      </p>
     </div>
   )}
 

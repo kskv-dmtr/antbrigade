@@ -16,8 +16,11 @@ const discography = albumsOf(artist.albumIds);
 const labels = labelsOf(artist.labelIds);
 const clips  = videosOf(artist.videoIds);
 
-// официальные клипы вперёд, живые записи следом, внутри — по названию:
-// даты у клипов не хранится, а порядок должен быть устойчивым
+/* Официальные клипы вперёд, живые записи следом, внутри — по названию.
+   Так сложилось, когда даты у клипов не было; с 29 августа 2026 она есть, и
+   разделы «Videos» на страницах релиза и клипа сортируются по ней, от свежих
+   к старым. Здесь порядок оставлен прежним — менять его отдельно не просили;
+   если сводить к одному, то сразу все три. */
 const clipsSorted = clips.slice().sort((a, b) => {
   const rank = (v) => (v.kind === 'Official Video' ? 0 : 1);
   return rank(a) - rank(b) || videoTitle(a).localeCompare(videoTitle(b));

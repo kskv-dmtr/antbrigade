@@ -1,11 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import VideoCard from '../../components/VideoCard.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
-  albums, albumsOf, artistsOf, labelsOf, coverSrc, formatDate, artistLine
+  albums, albumsOf, artistsOf, labelsOf, videosOf, coverSrc, formatDate, artistLine
 } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -44,6 +45,13 @@ const more = [...new Map(
     .flatMap((a) => albumsOf(a.albumIds))
     .filter((a) => a.id !== album.id)
     .map((a) => [a.id, a])
+).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
+
+/* Клипы тех же исполнителей — тем же приёмом и в том же порядке, что релизы
+   выше: через Map от повторов у совместных работ, от свежих к старым. Дата
+   у клипов появилась 29 августа 2026, до неё сортировать было не по чему. */
+const clips = [...new Map(
+  artists.flatMap((a) => videosOf(a.videoIds)).map((v) => [v.id, v])
 ).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
 ---
 <Base
@@ -152,6 +160,20 @@ const more = [...new Map(
           как ещё одна работа дуэта. */}
       <ul class="tiles tiles--auto">
         {more.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
+      </ul>
+    </section>
+  )}
+
+  {clips.length > 0 && (
+    <section class="section">
+      <div class="head">
+        {/* Назван так же, как раздел на странице исполнителя: это тот же
+            список, только собранный от релиза. */}
+        <h2 class="display display--md">Videos</h2>
+        <span class="mono">[{clips.length}]</span>
+      </div>
+      <ul class="tiles tiles--auto tiles--video">
+        {clips.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>
   )}

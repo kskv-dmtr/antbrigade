@@ -7,9 +7,10 @@
    серая дыра. Поэтому кадр свой, скачанный, а смотреть уводим ссылкой. */
 
 import Base from '../../layouts/Base.astro';
+import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { videos, artistsOf, videosOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
+import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
@@ -33,6 +34,13 @@ const rest = [...new Map(
     .filter((v) => v.id !== video.id)
     .map((v) => [v.id, v])
 ).values()];
+
+/* Релизы тех же исполнителей — тем же приёмом и в том же порядке, что
+   «More Releases» на странице релиза: через Map от повторов у совместных
+   работ, от свежих к старым. */
+const discography = [...new Map(
+  artists.flatMap((a) => albumsOf(a.albumIds)).map((a) => [a.id, a])
+).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
 ---
 <Base
   title={`${title} · ant brigade`}
@@ -106,6 +114,24 @@ const rest = [...new Map(
       </div>
       <ul class="tiles tiles--auto tiles--video">
         {rest.map((v) => <VideoCard video={v} />)}
+      </ul>
+    </section>
+  )}
+
+  {discography.length > 0 && (
+    <section class="section">
+      <div class="head">
+        {/* Назван так же, как раздел на странице исполнителя: это тот же
+            список, только собранный от клипа. */}
+        <h2 class="display display--md">Discography</h2>
+        <span class="mono">[{discography.length}]</span>
+      </div>
+      {/* Имя на плитках — только у совместных клипов, по тому же доводу,
+          что у «More Releases» на странице релиза: у сольного все плитки
+          принадлежат тому же исполнителю, а у дуэта сюда попадают и сольные
+          работы каждого. */}
+      <ul class="tiles tiles--auto">
+        {discography.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
       </ul>
     </section>
   )}

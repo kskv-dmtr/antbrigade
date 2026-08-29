@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-29T02:13:44Z",
+  "generatedAt": "2026-08-29T18:10:57Z",
   "counts": {
-    "albums": 1103,
-    "artists": 991,
+    "albums": 1104,
+    "artists": 992,
     "labels": 619,
-    "videos": 79
+    "videos": 80
   },
   "albums": [
     {
@@ -18587,6 +18587,36 @@
       ]
     },
     {
+      "id": "3cb4129a-8c52-8007-a2ae-f5e81654e3ad",
+      "slug": "adult-dvd-next-day-shipping",
+      "artist": "Adult DVD",
+      "album": "Next Day Shipping",
+      "url": "https://album.link/d8nn4fckmdskp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A33b01ec0-bd45-4670-8f65-52dfa4d2c61e%3Aa2114609025_10.jpg?table=block&id=3cb4129a-8c52-8007-a2ae-f5e81654e3ad&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dance-Punk",
+        "Alternative Dance",
+        "Mutant Disco"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2024-09-06",
+      "year": 2024,
+      "artistIds": [
+        "3cb4129a-8c52-80c8-b478-fca9935731a1"
+      ],
+      "artists": [
+        "Adult DVD"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Self-released"
+      ]
+    },
+    {
       "id": "ef97f649-7196-4cd2-90cf-11e1dc63fc63",
       "slug": "dummy-free-energy",
       "artist": "Dummy",
@@ -32718,6 +32748,28 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": []
+    },
+    {
+      "id": "3cb4129a-8c52-80c8-b478-fca9935731a1",
+      "slug": "adult-dvd",
+      "name": "Adult DVD",
+      "country": "GB",
+      "bandcamp": "https://adultdvd.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@adultdvdband/",
+      "albumIds": [
+        "3cb4129a-8c52-8007-a2ae-f5e81654e3ad"
+      ],
+      "genres": [
+        "Dance-Punk",
+        "Alternative Dance",
+        "Mutant Disco"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [
+        "3cb4129a-8c52-80b2-be79-f93b24895d7c"
+      ]
     },
     {
       "id": "2414129a-8c52-80b3-a2f6-ee548319b500",
@@ -59716,6 +59768,7 @@
         "1184129a-8c52-806a-9576-d09fe005980f",
         "2754129a-8c52-80e9-827a-dab9df1305d3",
         "1054129a-8c52-8002-8f36-f9ee233d5dcd",
+        "3cb4129a-8c52-8007-a2ae-f5e81654e3ad",
         "1014129a-8c52-801b-89c7-eb6d673cc7ce",
         "7097f6e3-d9b8-4b92-b75f-675af5d7c5d3",
         "1a34129a-8c52-80bc-9956-ff9b20721f00",
@@ -59825,6 +59878,7 @@
         "2514129a-8c52-80ae-8a7f-cd94b8865a85",
         "2754129a-8c52-809e-84f4-dc3a8655ac4c",
         "2504129a-8c52-8066-8f76-cf547a98ca22",
+        "3cb4129a-8c52-80c8-b478-fca9935731a1",
         "2504129a-8c52-80b4-b677-dcacc7a32f48",
         "24e4129a-8c52-80b3-99ab-c54b19b547ce",
         "24a4129a-8c52-80f3-895c-ecd2e64227ef",
@@ -61742,6 +61796,18 @@
         "2404129a-8c52-800a-826f-dd385decf385"
       ],
       "slug": "aaron-frazer-it-s-a-shame"
+    },
+    {
+      "id": "3cb4129a-8c52-80b2-be79-f93b24895d7c",
+      "title": "Adult DVD | Rolling Face",
+      "url": "https://youtu.be/P_hmXTTcaTM?si=FYbgfpfjX6YLAVK2",
+      "kind": "Official Visualizer",
+      "released": "2026-08-11",
+      "year": 2026,
+      "artistIds": [
+        "3cb4129a-8c52-80c8-b478-fca9935731a1"
+      ],
+      "slug": "adult-dvd-rolling-face"
     },
     {
       "id": "1064129a-8c52-80ca-9b75-c0413cca4c86",

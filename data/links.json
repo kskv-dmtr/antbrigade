@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T02:13:53Z",
+  "generatedAt": "2026-08-29T18:11:14Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17477,6 +17477,22 @@
       "upc": "617308055832",
       "tracks": 11,
       "releaseDate": "2026-07-28"
+    },
+    "3cb4129a-8c52-8007-a2ae-f5e81654e3ad": {
+      "source": "https://album.link/d8nn4fckmdskp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0L7959l48tfNtyED8YYTiq",
+        "pandora": "https://www.pandora.com/AL:37772296",
+        "deezer": "https://www.deezer.com/album/626279101",
+        "amazonMusic": "https://music.amazon.com/albums/B0DCBZXCTV",
+        "tidal": "https://listen.tidal.com/album/379567655",
+        "boomplay": "https://www.boomplay.com/albums/95567626",
+        "bandcamp": "https://adultdvd.bandcamp.com/album/next-day-shipping",
+        "amazonStore": "https://amazon.com/dp/B0DCBZXCTV"
+      },
+      "upc": "198664727385",
+      "tracks": 5,
+      "releaseDate": "2024-08-06"
     }
   }
 }

@@ -29,7 +29,8 @@ import { videos, videoTitle, videoArtists } from '../lib/db.js';
    показывается. */
 const KIND_LABELS = new Map([
   ['official video', 'Official Videos'],
-  ['live performance', 'Live Performances']
+  ['live performance', 'Live Performances'],
+  ['official visualizer', 'Official Visualizers']
 ]);
 const rank = (k) => {
   const i = [...KIND_LABELS.keys()].indexOf(k.toLowerCase());

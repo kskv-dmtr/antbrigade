@@ -1,0 +1,166 @@
+---
+/* Отбор с множественным выбором: кнопка как у выпадающего списка, под ней
+   панель с флажками, своей полосой прокрутки и кнопкой сброса.
+
+   Родной <select> тут не годится. Множественный выбор он показывает только
+   развёрнутым списком на несколько строк — полоса управления от такого
+   разъезжается, — а раскрытый список рисует система, и ни ширины, ни полосы
+   прокрутки в нём не задать.
+
+   Собрано на <details>, а не на своём поповере с ролями ARIA: раскрытие,
+   закрытие и клавиатура тогда достаются от браузера, а без скрипта блок
+   остаётся закрытым, а не разложенным во весь экран. Отбор и так работает
+   только со скриптом — как и прежние списки. */
+
+import Icon from './Icon.astro';
+
+const {
+  id,
+  label,        // для screen reader: «Genre»
+  allLabel,     // подпись, когда не выбрано ничего: «All genres»
+  manyLabel,    // подпись, когда выбрано несколько: «Genres»
+  items = []    // [{ value, label, count }]
+} = Astro.props;
+---
+<details class="multi" id={id} data-all={allLabel} data-many={manyLabel}>
+  <summary class="multi__button" aria-label={label}>
+    <span class="multi__label">{allLabel}</span>
+
+    {/* Шеврон и крестик занимают одно место и меняются: пока не выбрано
+        ничего — шеврон, как у обычного списка; как только выбрано — крестик,
+        и он же сбрасывает отбор. Отдельной кнопки сброса поэтому нет: она
+        стояла бы рядом с тем же действием.
+
+        Крестик оформлен как подсказка клавиши в поиске — квадрат 22×22 с
+        рамкой: на странице это уже сложившийся вид для маленького знака в
+        углу поля. */}
+    <Icon name="caret-down" class="select__chevron" />
+    <button type="button" class="multi__clear" aria-label={`Clear ${label}`} hidden>
+      <Icon name="x" class="multi__x" />
+    </button>
+  </summary>
+
+  <div class="multi__panel">
+    <div class="multi__list">
+      {items.map((item) => (
+        <label class="multi__item">
+          <input type="checkbox" value={item.value} />
+          <span class="multi__name">{item.label}</span>
+          {/* Счёт отдельным узлом: страница пересчитывает его при каждой
+              смене отбора, а имя не трогает. */}
+          <span class="multi__count">({item.count})</span>
+        </label>
+      ))}
+
+      {/* Видно, когда под текущий отбор не подходит ни один пункт: пустая
+          панель без объяснения читалась бы поломкой. */}
+      <p class="multi__none" hidden>Nothing here</p>
+    </div>
+  </div>
+</details>
+
+<script>
+  /* Скрипт общий на страницу: Astro собирает его один раз, сколько бы таких
+     блоков на ней ни стояло. Наружу блок отдаёт обычное событие change —
+     страница слушает его так же, как слушала <select>. */
+  const blocks = document.querySelectorAll('.multi');
+
+  if (blocks.length) {
+    const chosen = (root) =>
+      [...root.querySelectorAll('input:checked')];
+
+    /* Подпись на кнопке: ничего не выбрано — «All genres», один пункт — его
+       собственное имя, несколько — «Genres [3]». Число вместо перечисления
+       потому, что кнопка узкая и три названия в неё всё равно не влезут. */
+    function label(root) {
+      const marked = chosen(root);
+      const text = root.querySelector('.multi__label');
+      if (marked.length === 0)      text.textContent = root.dataset.all;
+      else if (marked.length === 1) {
+        const item = marked[0].closest('.multi__item');
+        text.textContent = `${item.querySelector('.multi__name').textContent} ${item.querySelector('.multi__count').textContent}`;
+      }
+      else                          text.textContent = `${root.dataset.many} [${marked.length}]`;
+
+      /* Крестик появляется вместо шеврона; сам шеврон прячет CSS по этому
+         же признаку. */
+      root.querySelector('.multi__clear').hidden = marked.length === 0;
+
+      /* Атрибут именно удаляем, а не ставим пустым: data-chosen="" в
+         разметке остаётся, и селектор [data-chosen] срабатывает на нём —
+         шеврон прятался бы и когда не выбрано ничего. */
+      if (marked.length) root.dataset.chosen = 'yes';
+      else delete root.dataset.chosen;
+    }
+
+    /* Панель на узком экране раскрывается во всю ширину под рядом фильтров,
+       а не под своей кнопкой. Причина не в удобстве попадания пальцем: ряд
+       там прокручивается вбок (overflow-x у .filters__group), и панель
+       внутри него обрезало бы краем прокрутки. position: fixed выносит её
+       из-под обрезки, но тогда верх нужно посчитать самим. */
+    const wide = () => window.matchMedia('(min-width: 641px)').matches;
+
+    function place(root) {
+      const panel = root.querySelector('.multi__panel');
+      if (wide()) { panel.style.top = ''; return; }
+      const bar = root.closest('.filters') ?? root;
+      panel.style.top = `${Math.round(bar.getBoundingClientRect().bottom + 6)}px`;
+    }
+
+    for (const root of blocks) {
+      label(root);
+
+      root.addEventListener('toggle', () => {
+        if (!root.open) return;
+        // Раскрытым остаётся один: две панели рядом перекрывали бы друг друга.
+        for (const other of blocks) if (other !== root) other.open = false;
+        place(root);
+      });
+
+      root.addEventListener('change', () => label(root));
+
+      /* Страница пересчитала счётчики — подпись кнопки показывает счёт
+         выбранного пункта и должна за ними успевать. */
+      root.addEventListener('relabel', () => label(root));
+
+      root.querySelector('.multi__clear').addEventListener('click', (e) => {
+        /* Крестик живёт внутри <summary>, а щелчок по summary раскрывает
+           блок. Отменяем и не пускаем событие дальше: нажали на сброс, а не
+           на кнопку. */
+        e.preventDefault();
+        e.stopPropagation();
+
+        for (const box of chosen(root)) box.checked = false;
+        label(root);
+        root.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    }
+
+    // Щелчок мимо закрывает: у <details> своего такого поведения нет.
+    document.addEventListener('click', (e) => {
+      for (const root of blocks) {
+        if (root.open && !root.contains(e.target)) root.open = false;
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      for (const root of blocks) {
+        if (root.open) { root.open = false; root.querySelector('summary').focus(); }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      for (const root of blocks) if (root.open) place(root);
+    });
+
+    /* На узком экране панель приколота к окну, а полоса фильтров при
+       прокрутке вниз уезжает вверх — панель осталась бы висеть сама по
+       себе. Закрываем. Прокрутка внутри самого списка сюда не долетает:
+       у него overscroll-behavior: contain. */
+    window.addEventListener('scroll', () => {
+      if (wide()) return;
+      for (const root of blocks) if (root.open) root.open = false;
+    }, { passive: true });
+  }
+</script>

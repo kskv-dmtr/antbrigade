@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
+import MultiSelect from '../components/MultiSelect.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import SearchField from '../components/SearchField.astro';
 import { albums } from '../lib/db.js';
@@ -38,7 +39,9 @@ for (const a of albums) {
   for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
 }
 const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-const years = [...new Set(albums.map((a) => a.year).filter(Boolean))].sort((a, b) => b - a);
+const yearCounts = new Map();
+for (const a of albums) if (a.year) yearCounts.set(a.year, (yearCounts.get(a.year) || 0) + 1);
+const years = [...yearCounts.keys()].sort((a, b) => b - a);
 
 // Сколько строк показывать сразу и сколько добавлять по нажатию.
 const PAGE = 50;
@@ -89,24 +92,28 @@ const PAGE = 50;
           {types.map((t) => <option value={t.value}>{t.label}</option>)}
         </Select>
 
-        <Select id="genre" label="Genre" narrow>
-          <option value="">All genres</option>
-          {genres.map(([g, n]) => <option value={g}>{g} ({n})</option>)}
-        </Select>
+{/* Жанр и год выбираются пачкой: у релиза жанров обычно два-три, и искать
+            их по одному было мучением. Отбор — «любой из отмеченных», а не
+            «все сразу»: пересечение почти всегда пусто, у 506 релизов из
+            1102 жанра ровно два. */}
+        <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
+                     items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
 
-        <Select id="year" label="Year">
-          <option value="">All years</option>
-          {years.map((y) => <option value={y}>{y}</option>)}
-        </Select>
+        <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
+                     items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
 
+        {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
+            подписи — та же, что у списков A → Z на /artists, /labels и
+            /genres, чтобы направление читалось одинаково везде. */}
         <Select id="sort" label="Sorting">
           <option value="new">Newest first</option>
           <option value="old">Oldest first</option>
-          <option value="artist">By artist</option>
-          <option value="album">By album</option>
+          <option value="artist-az">Artists A → Z</option>
+          <option value="artist-za">Artists Z → A</option>
+          <option value="album-az">Albums A → Z</option>
+          <option value="album-za">Albums Z → A</option>
         </Select>
 
-        <button type="button" id="reset" class="reset" hidden>Reset</button>
       </div>
     </div>
   </div>
@@ -144,7 +151,6 @@ const PAGE = 50;
   const cards   = Array.from(grid.children);
   const counter = document.getElementById('counter');
   const empty   = document.getElementById('empty');
-  const reset   = document.getElementById('reset');
   const search  = document.getElementById('search');
   const typesEl = document.getElementById('types');
   const typeEl  = document.getElementById('type');
@@ -156,7 +162,7 @@ const PAGE = 50;
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', type: '', genre: '', year: '', sort: 'new' };
+  const state = { q: '', type: '', genres: [], years: [], sort: 'new' };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -178,13 +184,70 @@ const PAGE = 50;
      показываем одно. */
   const label = (n) => (n === total ? `[${n}]` : `[${n} / ${total}]`);
 
-  function matches(el) {
-    const d = el.dataset;
+  /* Отбор с возможностью пропустить одну ось. Пропуск нужен счётчикам:
+     сколько релизов у года считается по всем остальным условиям, но без
+     самого отбора по годам — иначе, выбрав 2024, у всех прочих лет мы
+     увидели бы нули. Это обычное правило фасетного отбора: ось не отбирает
+     сама себя. */
+  function passes(d, skip) {
     if (state.q && !d.search.includes(state.q)) return false;
     if (state.type && !d.types.split('|').includes(state.type)) return false;
-    if (state.genre && !d.genres.split('|').includes(state.genre)) return false;
-    if (state.year && d.year !== state.year) return false;
+    /* Любой из отмеченных, а не все сразу: у релиза жанров два-три, и
+       пересечение трёх выбранных почти всегда пусто. */
+    if (skip !== 'genres' && state.genres.length &&
+        !state.genres.some((g) => d.genres.split('|').includes(g))) return false;
+    if (skip !== 'years' && state.years.length && !state.years.includes(d.year)) return false;
     return true;
+  }
+
+  const matches = (el) => passes(el.dataset, null);
+
+  /* Пересчёт счётчиков в обоих блоках: один проход по записям с накоплением
+     в Map, а не перебор каждого пункта против каждой записи. При 1102
+     записях и 298 жанрах это разница между тысячей сравнений и тремястами
+     тысячами. */
+  function recount() {
+    const byGenre = new Map();
+    const byYear  = new Map();
+
+    for (const el of cards) {
+      const d = el.dataset;
+      if (passes(d, 'genres')) {
+        for (const name of d.genres.split('|')) {
+          if (name) byGenre.set(name, (byGenre.get(name) || 0) + 1);
+        }
+      }
+      if (passes(d, 'years') && d.year) {
+        byYear.set(d.year, (byYear.get(d.year) || 0) + 1);
+      }
+    }
+
+    paint(genreEl, byGenre);
+    paint(yearEl, byYear);
+  }
+
+  function paint(root, counts) {
+    let shown = 0;
+
+    for (const item of root.querySelectorAll('.multi__item')) {
+      const box = item.querySelector('input');
+      const n = counts.get(box.value) || 0;
+      item.querySelector('.multi__count').textContent = `(${n})`;
+
+      /* Пункт с нулём прячем — выбирать в нём нечего. Но только пока он не
+         отмечен: отмеченный с нулём случается (отметили год, потом жанр,
+         которого в том году нет), и, спрятав его, мы отняли бы
+         единственный способ снять флажок. Такой остаётся видимым и
+         приглушается. */
+      item.hidden = n === 0 && !box.checked;
+      if (!item.hidden) shown++;
+      if (n) delete item.dataset.empty; else item.dataset.empty = 'yes';
+    }
+
+    root.querySelector('.multi__none').hidden = shown > 0;
+
+    // Подпись кнопки показывает счёт выбранного пункта — обновляем и её.
+    root.dispatchEvent(new Event('relabel'));
   }
 
   function apply() {
@@ -199,13 +262,12 @@ const PAGE = 50;
 
     empty.hidden = matched > 0;
     counter.textContent = label(matched);
+    recount();
 
     const rest = matched - limit;
     more.hidden = rest <= 0;
     if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
 
-    const dirty = state.q || state.type || state.genre || state.year || state.sort !== 'new';
-    reset.hidden = !dirty;
   }
 
   // Любая смена выборки возвращает список к первой странице.
@@ -217,8 +279,10 @@ const PAGE = 50;
       current = initialOrder;
     } else {
       current = cards.slice().sort((a, b) => {
-        if (by === 'artist') return a.dataset.artist.localeCompare(b.dataset.artist);
-        if (by === 'album')  return a.dataset.album.localeCompare(b.dataset.album);
+        if (by === 'artist-az') return a.dataset.artist.localeCompare(b.dataset.artist);
+        if (by === 'artist-za') return b.dataset.artist.localeCompare(a.dataset.artist);
+        if (by === 'album-az')  return a.dataset.album.localeCompare(b.dataset.album);
+        if (by === 'album-za')  return b.dataset.album.localeCompare(a.dataset.album);
         const da = a.dataset.released, db = b.dataset.released;
         // релизы без даты всегда в конце
         if (!da && !db) return 0;
@@ -283,8 +347,12 @@ const PAGE = 50;
 
   /* Ширину списков под выбранный пункт подгоняет общий скрипт компонента
      Select — здесь об этом заботиться не нужно. */
-  genreEl.addEventListener('change', () => { state.genre = genreEl.value; rewind(); apply(); });
-  yearEl.addEventListener('change',  () => { state.year  = yearEl.value;  rewind(); apply(); });
+  /* Блоки отбора отдают обычное change, как отдавал <select>; читаем из них
+     не одно значение, а список отмеченных. */
+  const marked = (root) => [...root.querySelectorAll('input:checked')].map((b) => b.value);
+
+  genreEl.addEventListener('change', () => { state.genres = marked(genreEl); rewind(); apply(); });
+  yearEl.addEventListener('change',  () => { state.years  = marked(yearEl);  rewind(); apply(); });
   sortEl.addEventListener('change',  () => {
     state.sort = sortEl.value;
     sort(); rewind(); apply();
@@ -304,25 +372,6 @@ const PAGE = 50;
     field.addEventListener('change', close);
     field.addEventListener('blur', close);
   }
-
-  reset.addEventListener('click', () => {
-    Object.assign(state, { q: '', type: '', genre: '', year: '', sort: 'new' });
-    search.value = '';
-    typeEl.value = '';
-    genreEl.value = '';
-    yearEl.value = '';
-    sortEl.value = 'new';
-    /* Значения поставлены из кода, и сами по себе события не рождают —
-       сообщаем о смене, чтобы списки пересчитали свою ширину. */
-    for (const el of [typeEl, genreEl, yearEl, sortEl]) el.dispatchEvent(new Event('input'));
-    for (const [i, b] of [...typesEl.children].entries()) {
-      b.setAttribute('aria-pressed', String(i === 0));
-    }
-    sort();
-    rewind();
-    apply();
-    window.scrollTo({ top: 0 });
-  });
 
   /* Первый расчёт: до него в разметке видны все записи — так страница
      работает без скрипта и целиком достаётся поисковикам. */

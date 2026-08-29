@@ -40,9 +40,14 @@ const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
   .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
   .map((value) => ({ value, label: KIND_LABELS.get(value.toLowerCase()) ?? value }));
 
+/* Порядок с сервера — от свежих к старым, как на Music: с ним страница
+   открывается, к нему возвращает Reset, и он же остаётся без скрипта.
+   Дальше по имени и названию — чтобы у клипов одной даты порядок был
+   устойчивым, а не зависел от порядка в выгрузке. */
 const list = videos
   .slice()
   .sort((a, b) =>
+    (b.released ?? '').localeCompare(a.released ?? '') ||
     videoArtists(a).localeCompare(videoArtists(b)) ||
     videoTitle(a).localeCompare(videoTitle(b)));
 
@@ -90,9 +95,17 @@ const PAGE = 50;
           {kinds.map((k) => <option value={k.value}>{k.label}</option>)}
         </Select>
 
+        {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
+            алфавиту, и у каждой оси обе стороны. По умолчанию тоже как на
+            Music — «Newest first»: с ним страница открывается и к нему
+            возвращает Reset. */}
         <Select id="sort" label="Sorting">
-          <option value="artist">By artist</option>
-          <option value="title">By title</option>
+          <option value="new" selected>Newest first</option>
+          <option value="old">Oldest first</option>
+          <option value="artist-az">Artists A → Z</option>
+          <option value="artist-za">Artists Z → A</option>
+          <option value="title-az">Titles A → Z</option>
+          <option value="title-za">Titles Z → A</option>
         </Select>
 
         {/* Появляется, только когда есть что сбрасывать, — как на Music. */}
@@ -113,6 +126,7 @@ const PAGE = 50;
         data-kind={v.kind ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
         data-title={videoTitle(v).toLowerCase()}
+        data-released={v.released ?? ''}
       >
         <div class="view-row"><VideoRow video={v} /></div>
         <VideoCard video={v} as="div" class="view-tile" showArtist />
@@ -142,7 +156,7 @@ const PAGE = 50;
   const PAGE  = Number(more.dataset.page) || 50;
   const state = { q: '', kind: '' };
 
-  // Порядок с сервера — по исполнителю; запоминаем его как исходный.
+  // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
 
   /* Порядок, в котором записи сейчас лежат в разметке. Именно по нему
@@ -175,16 +189,41 @@ const PAGE = 50;
 
     // Порядок по исполнителю — то, с чем страница открывается, поэтому он
     // же считается нетронутым состоянием.
-    reset.hidden = !(state.q || state.kind || sortEl.value !== 'artist');
+    reset.hidden = !(state.q || state.kind || sortEl.value !== 'new');
   }
 
   // Любая смена выборки возвращает список к первой странице.
   function rewind() { limit = PAGE; }
 
   function sort() {
-    current = sortEl.value === 'artist'
-      ? initialOrder
-      : cards.slice().sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+    const by = sortEl.value;
+    if (by === 'new') {
+      current = initialOrder;
+    } else if (by === 'artist-az') {
+      current = cards.slice().sort((a, b) => a.dataset.artist.localeCompare(b.dataset.artist));
+    } else if (by === 'artist-za') {
+      /* Разворачиваем по имени, а не переворачиваем весь список: сортировка
+         устойчива, и у клипов одного исполнителя порядок остаётся тем же,
+         что в прямую сторону, — от свежих к старым. Полный reverse
+         перевернул бы и его. */
+      current = cards.slice().sort((a, b) => b.dataset.artist.localeCompare(a.dataset.artist));
+    } else if (by === 'title-az') {
+      current = cards.slice().sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+    } else if (by === 'title-za') {
+      current = cards.slice().sort((a, b) => b.dataset.title.localeCompare(a.dataset.title));
+    } else {
+      /* По дате. Сортировка устойчива, поэтому у клипов с одной датой
+         сохраняется порядок с сервера — по исполнителю. Клипы без даты
+         всегда в конце: сейчас дата есть у всех 78, но колонка в Notion
+         заполняется руками, и новая запись может прийти без неё. */
+      current = cards.slice().sort((a, b) => {
+        const da = a.dataset.released, db = b.dataset.released;
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return by === 'old' ? da.localeCompare(db) : db.localeCompare(da);
+      });
+    }
 
     const frag = document.createDocumentFragment();
     for (const el of current) frag.appendChild(el);
@@ -236,7 +275,7 @@ const PAGE = 50;
     Object.assign(state, { q: '', kind: '' });
     search.value = '';
     kindEl.value = '';
-    sortEl.value = 'artist';
+    sortEl.value = 'new';
     /* Значения поставлены из кода, и сами по себе событий не рождают —
        сообщаем о смене, чтобы списки пересчитали свою ширину. */
     for (const el of [kindEl, sortEl]) el.dispatchEvent(new Event('input'));

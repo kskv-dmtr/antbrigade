@@ -1,13 +1,42 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-28T19:47:36Z",
+  "generatedAt": "2026-08-29T02:13:44Z",
   "counts": {
-    "albums": 1102,
-    "artists": 990,
-    "labels": 618,
-    "videos": 78
+    "albums": 1103,
+    "artists": 991,
+    "labels": 619,
+    "videos": 79
   },
   "albums": [
+    {
+      "id": "3ca4129a-8c52-805b-8443-d671cbcf6791",
+      "slug": "dinosaur-jr-there-near",
+      "artist": "Dinosaur Jr.",
+      "album": "There Near",
+      "url": "https://album.link/qfpsx7922n63m",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad7482c66-b0fc-4062-ae3d-0ca81b2a7156%3Aa3289436639_10.jpg?table=block&id=3ca4129a-8c52-805b-8443-d671cbcf6791&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Slacker Rock",
+        "Alternative Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-28",
+      "year": 2026,
+      "artistIds": [
+        "3ca4129a-8c52-8080-b130-c0b6eef3503e"
+      ],
+      "artists": [
+        "Dinosaur Jr."
+      ],
+      "labelIds": [
+        "3ca4129a-8c52-8043-8894-f9b4dbc73859"
+      ],
+      "labels": [
+        "Jagjaguwar"
+      ]
+    },
     {
       "id": "3c94129a-8c52-80b6-ade5-fce1766d6081",
       "slug": "wine-lips-tv-dinner",
@@ -36590,7 +36619,7 @@
       "slug": "del-paxton",
       "name": "Del Paxton",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://delpaxton.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3284129a-8c52-8093-9033-cfea4909f54d"
@@ -36780,6 +36809,27 @@
         "24a4129a-8c52-8018-9de3-f5dcf290eee6"
       ],
       "videoIds": []
+    },
+    {
+      "id": "3ca4129a-8c52-8080-b130-c0b6eef3503e",
+      "slug": "dinosaur-jr",
+      "name": "Dinosaur Jr.",
+      "country": "US",
+      "bandcamp": "https://dinosaurjr.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@dinosaurjrtv",
+      "albumIds": [
+        "3ca4129a-8c52-805b-8443-d671cbcf6791"
+      ],
+      "genres": [
+        "Slacker Rock",
+        "Alternative Rock"
+      ],
+      "labelIds": [
+        "3ca4129a-8c52-8043-8894-f9b4dbc73859"
+      ],
+      "videoIds": [
+        "3ca4129a-8c52-8091-a856-de8e856a24c7"
+      ]
     },
     {
       "id": "24a4129a-8c52-80e9-b904-cbd378ae2edc",
@@ -56161,6 +56211,20 @@
       ]
     },
     {
+      "id": "3ca4129a-8c52-8043-8894-f9b4dbc73859",
+      "slug": "jagjaguwar",
+      "name": "Jagjaguwar",
+      "country": "US",
+      "bandcamp": "https://jagjaguwar.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3ca4129a-8c52-805b-8443-d671cbcf6791"
+      ],
+      "artistIds": [
+        "3ca4129a-8c52-8080-b130-c0b6eef3503e"
+      ]
+    },
+    {
       "id": "2524129a-8c52-808c-aa13-ce752fa0ab3c",
       "slug": "jakarta-records",
       "name": "Jakarta Records",
@@ -60457,7 +60521,7 @@
       "id": "24a4129a-8c52-8054-8334-e56a9e29b35e",
       "slug": "sub-pop-records",
       "name": "Sub Pop Records",
-      "country": "UM",
+      "country": "US",
       "bandcamp": "https://subpop.bandcamp.com/",
       "youtube": "https://www.youtube.com/@subpop",
       "albumIds": [
@@ -61873,6 +61937,18 @@
         "2434129a-8c52-8013-b879-daddf61fdb34"
       ],
       "slug": "dent-may-pearl-the-oysters-time-flies-when-you-re-having-fun"
+    },
+    {
+      "id": "3ca4129a-8c52-8091-a856-de8e856a24c7",
+      "title": "Dinosaur Jr. | Everything at Once",
+      "url": "https://youtu.be/rouiJX5lcjc?si=oH0x-L3iq5cnZKJd",
+      "kind": "Official Video",
+      "released": "2026-08-28",
+      "year": 2026,
+      "artistIds": [
+        "3ca4129a-8c52-8080-b130-c0b6eef3503e"
+      ],
+      "slug": "dinosaur-jr-everything-at-once"
     },
     {
       "id": "3b64129a-8c52-8088-a31f-fd4bf604ebb1",

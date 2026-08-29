@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T05:26:30Z",
+  "generatedAt": "2026-08-29T02:13:53Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17463,6 +17463,19 @@
       },
       "upc": "626177021169",
       "tracks": 13,
+      "releaseDate": "2026-07-28"
+    },
+    "3ca4129a-8c52-805b-8443-d671cbcf6791": {
+      "source": "https://album.link/qfpsx7922n63m",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4x9eupWjvX2qpy7pAgPAQE",
+        "pandora": "https://www.pandora.com/AL:67042156",
+        "tidal": "https://listen.tidal.com/album/530163307",
+        "boomplay": "https://www.boomplay.com/albums/132737409",
+        "bandcamp": "https://dinosaurjr.bandcamp.com/album/there-near"
+      },
+      "upc": "617308055832",
+      "tracks": 11,
       "releaseDate": "2026-07-28"
     }
   }

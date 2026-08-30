@@ -31,7 +31,7 @@ const clipsSorted = clips.slice()
    артиста без жанров, лейблов и ссылок наружу осталась бы одна линейка
    поперёк пустоты. Ссылки заполняются в Notion руками, и у большинства
    записей их нет. Страна в счёт не идёт — она ушла наверх, к имени. */
-const hasLinks = Boolean(artist.bandcamp || artist.youtube);
+const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
 const hasBar   = Boolean(labels.length || artist.genres.length);
 ---
 <Base
@@ -100,7 +100,7 @@ const hasBar   = Boolean(labels.length || artist.genres.length);
       <div class="head">
         <h2 class="display display--md">Links</h2>
       </div>
-      <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
+      <ProfileLinks website={artist.website} bandcamp={artist.bandcamp} youtube={artist.youtube} />
     </section>
   )}
 

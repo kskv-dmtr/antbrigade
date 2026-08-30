@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-29T18:10:57Z",
+  "generatedAt": "2026-08-30T09:19:51Z",
   "counts": {
-    "albums": 1104,
-    "artists": 992,
+    "albums": 1105,
+    "artists": 993,
     "labels": 619,
     "videos": 80
   },
@@ -31514,6 +31514,35 @@
       ]
     },
     {
+      "id": "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6",
+      "slug": "derrick-cross-never-too-much",
+      "artist": "Derrick Cross",
+      "album": "Never too Much",
+      "url": "https://album.link/tfrcfg6g0rzrd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af4632104-0593-4de5-962a-fb4cc6be2f96%3Aa2651886731_10.jpg?table=block&id=3cc4129a-8c52-80a2-91c7-fdbe4a9685a6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Lovers Rock",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2021-02-26",
+      "year": 2021,
+      "artistIds": [
+        "3cc4129a-8c52-8088-8f16-c667c5af0498"
+      ],
+      "artists": [
+        "Derrick Cross"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
+      ],
+      "labels": [
+        "Athens of the North"
+      ]
+    },
+    {
       "id": "1ab4129a-8c52-80eb-9f7c-f05e7791975a",
       "slug": "slant-1",
       "artist": "Slant",
@@ -36741,6 +36770,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80b5-bde5-c18cba06948b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cc4129a-8c52-8088-8f16-c667c5af0498",
+      "slug": "derrick-cross",
+      "name": "Derrick Cross",
+      "country": "GB",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6"
+      ],
+      "genres": [
+        "Lovers Rock",
+        "Smooth Soul"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
       ],
       "videoIds": []
     },
@@ -52707,10 +52755,12 @@
       "youtube": null,
       "albumIds": [
         "3b74129a-8c52-8073-a9d7-f8e698d2df22",
+        "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97"
       ],
       "artistIds": [
         "3b74129a-8c52-804f-8451-dc610a180e8c",
+        "3cc4129a-8c52-8088-8f16-c667c5af0498",
         "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T18:11:14Z",
+  "generatedAt": "2026-08-30T09:20:07Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17493,6 +17493,23 @@
       "upc": "198664727385",
       "tracks": 5,
       "releaseDate": "2024-08-06"
+    },
+    "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6": {
+      "source": "https://album.link/tfrcfg6g0rzrd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3PRWhJpvnFyxeJFq95lzhW",
+        "pandora": "https://www.pandora.com/AL:8282457",
+        "deezer": "https://www.deezer.com/album/208457642",
+        "amazonMusic": "https://music.amazon.com/albums/B08X187JZN",
+        "tidal": "https://listen.tidal.com/album/174154038",
+        "napster": "https://play.napster.com/album/alb.561040046",
+        "yandex": "https://music.yandex.ru/album/13948644",
+        "bandcamp": "https://aotns.bandcamp.com/album/never-too-much",
+        "amazonStore": "https://amazon.com/dp/B08X187JZN"
+      },
+      "upc": "5050580757905",
+      "tracks": 2,
+      "releaseDate": "2021-01-26"
     }
   }
 }

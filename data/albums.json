@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-30T09:19:51Z",
+  "generatedAt": "2026-08-30T12:56:24Z",
   "counts": {
-    "albums": 1105,
-    "artists": 993,
-    "labels": 619,
-    "videos": 80
+    "albums": 1107,
+    "artists": 994,
+    "labels": 620,
+    "videos": 81
   },
   "albums": [
     {
@@ -1940,6 +1940,36 @@
       ],
       "labels": [
         "Self-released"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-808e-aff1-d06b96ed0281",
+      "slug": "mia-in-the-moonlight",
+      "artist": "MIA",
+      "album": "In the Moonlight",
+      "url": "https://album.link/mzw9tn9m4hfq3",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac64f1a81-2914-4330-a674-b5e801151d45%3Aab67616d0000b2737558d8ae0dd86930316637e9.jpg?table=block&id=3cc4129a-8c52-808e-aff1-d06b96ed0281&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk",
+        "Boogie"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-05-29",
+      "year": 2026,
+      "artistIds": [
+        "3cc4129a-8c52-8023-a25e-d2ff5e69f082"
+      ],
+      "artists": [
+        "MIA"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80d4-8ca4-d8d25c13737d"
+      ],
+      "labels": [
+        "Star Creature Universal Vibrations"
       ]
     },
     {
@@ -6846,6 +6876,36 @@
       ],
       "labels": [
         "Fat Possum Records"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-80c2-968b-c9928c7415f2",
+      "slug": "l-osmose-first-dog",
+      "artist": "L’Osmose",
+      "album": "First Dog",
+      "url": "https://album.link/0vkvx7z3tcnhs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6823a72f-978f-4d83-b7c0-50274a0ffab6%3Aa4029138007_10.jpg?table=block&id=3cc4129a-8c52-80c2-968b-c9928c7415f2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Rock",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-11-07",
+      "year": 2025,
+      "artistIds": [
+        "2504129a-8c52-80cd-b20c-d52638aa492a"
+      ],
+      "artists": [
+        "L’Osmose"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-8034-af73-cdfb207135b6"
+      ],
+      "labels": [
+        "First Dog Records"
       ]
     },
     {
@@ -17938,11 +17998,11 @@
       "url": "https://album.link/0nhqg3j5tm8pj",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aea99a9ee-50ba-4c65-8470-7700cccfe9c9%3Aphoto_2025-08-14_15-46-03.jpg?table=block&id=b23ba8a3-1461-4815-ab0b-6ccd2a70190e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
         "Disco",
         "Funk",
         "Instrumental",
-        "Surf"
+        "Surf",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -17973,7 +18033,7 @@
         "Disco",
         "World Music",
         "Funk",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -18178,8 +18238,8 @@
       "genres": [
         "Electronic",
         "Minimal",
-        "Psychedelic",
-        "World Music"
+        "World Music",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album",
@@ -18803,9 +18863,9 @@
       "url": "https://album.link/cgqtpszsz6jjv",
       "cover": "https://antbrigade.notion.site/image/attachment%3A09f5ea8b-9476-46ae-9d53-71451af5d1cc%3Aphoto_2025-08-15_18-40-25.jpg?table=block&id=ec69dd71-5f14-4160-a7f9-057abb7b7413&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
         "Cumbia",
-        "Instrumental"
+        "Instrumental",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -19484,8 +19544,8 @@
       "url": "https://album.link/4bhsmvqm6cmk9",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ac5f1a604-3d25-40d9-8679-ea85c8446e64%3Aphoto_2025-08-15_00-48-09.jpg?table=block&id=0505b721-816c-4941-bbc0-46a89c8e65fb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
-        "Funk"
+        "Funk",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -19932,7 +19992,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A691e659d-7593-4f1a-b8a5-172e492ed5d0%3Aphoto_2025-08-03_03-42-43.jpg?table=block&id=cd65a8e1-4854-4000-8a38-e854f706fadb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -20224,8 +20284,8 @@
       "genres": [
         "Jazz",
         "Jazz Fusion",
-        "Psychedelic",
-        "Electronic"
+        "Electronic",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -21940,9 +22000,9 @@
       "url": "https://album.link/pc0g9vtrqnvxg",
       "cover": "https://antbrigade.notion.site/image/attachment%3A41e3bf9d-8c27-482a-9d12-62071f86f9c1%3Aphoto_2025-08-16_14-34-45.jpg?table=block&id=45f8ad70-7971-4636-8905-96a1cbfc92d6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
         "Cumbia",
-        "World Music"
+        "World Music",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -22817,8 +22877,8 @@
       "url": "https://album.link/38pdqb5xtmtjg",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aca1f516a-2938-4bbd-ab0c-9bea5bd70696%3Aphoto_2025-08-15_18-06-40.jpg?table=block&id=8389e071-7e19-40af-bf6b-0db2f40af087&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
-        "Funk"
+        "Funk",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -22932,7 +22992,8 @@
       "url": "https://album.link/sxkrwbz2qshsq",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aae1958a6-7f65-4bb9-ac7d-8a1fec0a11ac%3Aphoto_2025-08-15_17-22-14.jpg?table=block&id=54d2749c-617d-48af-8ca1-83a8f06b65aa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic"
+        "Neo-Psychedelia",
+        "Exotica"
       ],
       "types": [
         "Album"
@@ -23116,7 +23177,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A8c769bc8-e229-4f9a-94fd-fd76bf64c354%3Aphoto_2025-08-14_15-37-22.jpg?table=block&id=0a9200f5-35d6-4f88-ab9b-8879c14b7946&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Soul",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -23205,9 +23266,9 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A795ecac6-72bf-482d-956c-3f64fa0f2d87%3Aphoto_2025-08-17_04-22-17.jpg?table=block&id=fa35dba8-30a0-44db-bb3c-137ac97f3e6b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Latin Pop",
-        "Psychedelic",
         "World Music",
-        "Cumbia"
+        "Cumbia",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -23325,7 +23386,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A2ff792b7-442b-4491-b2bf-fce4808d0ac6%3Aphoto_2025-08-03_00-54-37.jpg?table=block&id=c91c2431-05fb-486b-9180-eafa668a823b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "EP"
@@ -24236,8 +24297,8 @@
       "url": "https://album.link/mprrs63xn3ch7",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aba2ee893-4426-41af-8ad5-89af395417db%3Aphoto_2025-08-15_18-15-38.jpg?table=block&id=7c63a660-5a1e-4d5d-8b3c-6d4d028b7d1e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
-        "Folk"
+        "Folk",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -24555,8 +24616,8 @@
       "url": "https://album.link/jp2hd2zh0qjqf",
       "cover": "https://antbrigade.notion.site/image/attachment%3A69487482-6ac1-4669-ba94-c524e0a98c9d%3Aphoto_2025-08-16_14-36-59.jpg?table=block&id=8db88dd3-f26b-4ca9-968e-18058276427a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Garage Rock"
+        "Garage Rock",
+        "Punk Rock"
       ],
       "types": [
         "Album"
@@ -25117,7 +25178,7 @@
         "Electronic",
         "Krautrock",
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -25207,8 +25268,8 @@
       "url": "https://album.link/fbjwhsxnmkhn9",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aa90f8bbc-3bf6-43b8-b45c-55159dfa1e2f%3Aphoto_2025-08-14_15-03-23.jpg?table=block&id=9366f15e-9b72-403f-9022-63cdfb62fa08&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
-        "Afrobeat"
+        "Afrobeat",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -25907,9 +25968,9 @@
       "url": "https://album.link/wtgpc5ts8dzff",
       "cover": "https://antbrigade.notion.site/image/attachment%3A0890c11d-5360-4ba7-bbf7-c2b58361b530%3Aa3083129091_10.jpg?table=block&id=3a9d78d4-28c3-4e3f-802d-9f2965e38a33&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
         "Indie Pop",
-        "Instrumental"
+        "Instrumental",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -26026,7 +26087,7 @@
       "genres": [
         "R'n'B",
         "Neo-Soul",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -26116,7 +26177,7 @@
       "genres": [
         "Funk",
         "Afrobeat",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -26347,8 +26408,8 @@
       "url": "https://album.link/qctdzq4vrhvhh",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ac9fe78fd-f566-4762-9d6c-6069cca37953%3Aa1466278667_10.jpg?table=block&id=f9e4c167-0588-4b65-88b3-9712c5918739&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
-        "Funk"
+        "Funk",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -26378,7 +26439,7 @@
       "genres": [
         "Funk",
         "Afrobeat",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -26953,9 +27014,9 @@
       "url": "https://album.link/vzndcxzxst9vm",
       "cover": "https://antbrigade.notion.site/image/attachment%3A37e8d00f-ae6b-41c3-b474-f18c13af05b7%3Aphoto_2025-08-15_02-03-21.jpg?table=block&id=65fbcf5d-dd2a-4c40-a1b6-d7eb5a9d1745&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Psychedelic",
         "Funk",
-        "Dub"
+        "Dub",
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -28580,7 +28641,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A8e79fdce-1602-458e-931e-5dc643b5fdaf%3Aphoto_2025-08-03_03-39-16.jpg?table=block&id=c2a57a30-242f-4a51-beb2-cf27cdd9d022&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "Album"
@@ -31320,7 +31381,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Aec359fff-5277-4029-ad52-00bb85380180%3Aa3460456796_10_(1).jpg?table=block&id=335f957e-501d-4503-9d32-92e725dde516&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "types": [
         "EP"
@@ -33429,8 +33490,8 @@
       "genres": [
         "Jazz",
         "Jazz Fusion",
-        "Psychedelic",
-        "Electronic"
+        "Electronic",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2444129a-8c52-8014-88cc-c0144285751a"
@@ -33836,8 +33897,8 @@
         "f9e4c167-0588-4b65-88b3-9712c5918739"
       ],
       "genres": [
-        "Psychedelic",
-        "Funk"
+        "Funk",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24f4129a-8c52-8068-9792-c9eb666a66d9",
@@ -34356,7 +34417,7 @@
       "genres": [
         "Funk",
         "Afrobeat",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24f4129a-8c52-809f-b04c-e94b3d66798e"
@@ -34950,7 +35011,7 @@
         "Electronic",
         "Krautrock",
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2494129a-8c52-80c7-a59b-dd172c30db64"
@@ -34968,8 +35029,8 @@
         "9366f15e-9b72-403f-9022-63cdfb62fa08"
       ],
       "genres": [
-        "Psychedelic",
-        "Afrobeat"
+        "Afrobeat",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24f4129a-8c52-8027-9fd4-f604efa85336"
@@ -35438,7 +35499,7 @@
       ],
       "genres": [
         "Soul",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2444129a-8c52-8073-8ac2-dd5d733aa9c9"
@@ -35854,10 +35915,10 @@
       "genres": [
         "Surf Rock",
         "Instrumental",
-        "Psychedelic",
         "Disco",
         "Funk",
-        "Surf"
+        "Surf",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b",
@@ -36452,7 +36513,7 @@
         "Disco",
         "World Music",
         "Funk",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24a4129a-8c52-8043-a0e9-ebc281641b70"
@@ -37527,9 +37588,9 @@
         "65fbcf5d-dd2a-4c40-a1b6-d7eb5a9d1745"
       ],
       "genres": [
-        "Psychedelic",
         "Funk",
-        "Dub"
+        "Dub",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2494129a-8c52-8056-af87-f846674a33ab"
@@ -39105,7 +39166,7 @@
       ],
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-8088-921f-e4f39ef46bee",
@@ -41328,7 +41389,7 @@
       "name": "Kelela",
       "country": "US",
       "bandcamp": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@kelelaofficial",
       "albumIds": [
         "3ae4129a-8c52-8061-a18f-d976199c95dd"
       ],
@@ -41340,7 +41401,9 @@
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3cc4129a-8c52-80e1-9d04-fea7eda78ae3"
+      ]
     },
     {
       "id": "2a64129a-8c52-804e-b6b5-f05c8fdca18a",
@@ -41412,7 +41475,8 @@
         "54d2749c-617d-48af-8ca1-83a8f06b65aa"
       ],
       "genres": [
-        "Psychedelic"
+        "Neo-Psychedelia",
+        "Exotica"
       ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
@@ -41869,16 +41933,20 @@
       "slug": "l-osmose",
       "name": "L’Osmose",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://losmose.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
+        "3cc4129a-8c52-80c2-968b-c9928c7415f2",
         "8389e071-7e19-40af-bf6b-0db2f40af087"
       ],
       "genres": [
-        "Psychedelic",
+        "Neo-Psychedelia",
+        "Psychedelic Rock",
+        "Jazz Fusion",
         "Funk"
       ],
       "labelIds": [
+        "3cc4129a-8c52-8034-af73-cdfb207135b6",
         "2504129a-8c52-80af-8a35-cb2972b02208"
       ],
       "videoIds": []
@@ -42083,8 +42151,8 @@
         "7c63a660-5a1e-4d5d-8b3c-6d4d028b7d1e"
       ],
       "genres": [
-        "Psychedelic",
-        "Folk"
+        "Folk",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24a4129a-8c52-80d2-98a1-d4f718ffd533"
@@ -42104,7 +42172,7 @@
       "genres": [
         "R'n'B",
         "Neo-Soul",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
@@ -42594,9 +42662,9 @@
         "ec69dd71-5f14-4160-a7f9-057abb7b7413"
       ],
       "genres": [
-        "Psychedelic",
         "Cumbia",
-        "Instrumental"
+        "Instrumental",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
@@ -43037,8 +43105,8 @@
       "genres": [
         "Electronic",
         "Minimal",
-        "Psychedelic",
-        "World Music"
+        "World Music",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2494129a-8c52-8056-af87-f846674a33ab"
@@ -43692,6 +43760,26 @@
       ],
       "labelIds": [
         "2734129a-8c52-80e5-aaae-dfb7c0300101"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cc4129a-8c52-8023-a25e-d2ff5e69f082",
+      "slug": "mia",
+      "name": "MIA",
+      "country": "US",
+      "bandcamp": "https://miahoneydeux.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-808e-aff1-d06b96ed0281"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk",
+        "Boogie"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80d4-8ca4-d8d25c13737d"
       ],
       "videoIds": []
     },
@@ -44873,7 +44961,6 @@
         "Neo-Psychedelia",
         "Psychedelic Rock",
         "Indie Pop",
-        "Psychedelic",
         "Instrumental"
       ],
       "labelIds": [
@@ -45834,7 +45921,7 @@
       "genres": [
         "Funk",
         "Afrobeat",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -46183,7 +46270,7 @@
       ],
       "genres": [
         "Jazz",
-        "Psychedelic"
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-8036-930d-f6635b80b570"
@@ -46571,9 +46658,9 @@
       ],
       "genres": [
         "Latin Pop",
-        "Psychedelic",
         "World Music",
-        "Cumbia"
+        "Cumbia",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2514129a-8c52-805d-bc0d-f6a0a9197269",
@@ -49805,9 +49892,9 @@
         "45f8ad70-7971-4636-8905-96a1cbfc92d6"
       ],
       "genres": [
-        "Psychedelic",
         "Cumbia",
-        "World Music"
+        "World Music",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -49925,8 +50012,8 @@
         "8db88dd3-f26b-4ca9-968e-18058276427a"
       ],
       "genres": [
-        "Punk",
-        "Garage Rock"
+        "Garage Rock",
+        "Punk Rock"
       ],
       "labelIds": [
         "24a4129a-8c52-80a3-935f-cd2ee01127fa"
@@ -50605,8 +50692,8 @@
       "genres": [
         "Electronic",
         "Minimal",
-        "Psychedelic",
-        "World Music"
+        "World Music",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2494129a-8c52-8056-af87-f846674a33ab"
@@ -55028,6 +55115,20 @@
       ],
       "artistIds": [
         "24e4129a-8c52-80ff-8e73-d996f1f54973"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-8034-af73-cdfb207135b6",
+      "slug": "first-dog-records",
+      "name": "First Dog Records",
+      "country": "CH",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-80c2-968b-c9928c7415f2"
+      ],
+      "artistIds": [
+        "2504129a-8c52-80cd-b20c-d52638aa492a"
       ]
     },
     {
@@ -60406,13 +60507,15 @@
       "slug": "star-creature-universal-vibrations",
       "name": "Star Creature Universal Vibrations",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://starcreature.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3cc4129a-8c52-808e-aff1-d06b96ed0281",
         "2c74129a-8c52-80c0-b1ab-e03509aa485d",
         "23a4129a-8c52-80fc-a1e0-fe0f0beff984"
       ],
       "artistIds": [
+        "3cc4129a-8c52-8023-a25e-d2ff5e69f082",
         "2c74129a-8c52-804f-8911-dd95d795423e",
         "2434129a-8c52-80ee-8e88-ca89e7a547dc"
       ]
@@ -60503,7 +60606,7 @@
       "slug": "stone-pixels",
       "name": "Stone Pixels",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://stonepixels.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "8389e071-7e19-40af-bf6b-0db2f40af087"
@@ -61485,7 +61588,7 @@
       "name": "Warp Records",
       "country": "GB",
       "bandcamp": "https://warprecords.bandcamp.com/",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@warprecords",
       "albumIds": [
         "3ae4129a-8c52-8061-a18f-d976199c95dd",
         "36f4129a-8c52-8047-9cd8-c5a42d135115",
@@ -62261,6 +62364,18 @@
         "2504129a-8c52-8084-81c4-df8d7f572db2"
       ],
       "slug": "kamasi-washington-street-fighter-mas"
+    },
+    {
+      "id": "3cc4129a-8c52-80e1-9d04-fea7eda78ae3",
+      "title": "Kelela | linknb",
+      "url": "https://youtu.be/DrjRQyQFGh4?si=UV5pFNXEHi0RMjz-",
+      "kind": "Official Video",
+      "released": "2026-05-05",
+      "year": 2026,
+      "artistIds": [
+        "3ae4129a-8c52-808c-9c06-d2927dc7bae0"
+      ],
+      "slug": "kelela-linknb"
     },
     {
       "id": "7cff2645-771c-476b-b323-13101cba0a85",

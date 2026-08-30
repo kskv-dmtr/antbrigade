@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T09:20:07Z",
+  "generatedAt": "2026-08-30T12:56:41Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17510,6 +17510,30 @@
       "upc": "5050580757905",
       "tracks": 2,
       "releaseDate": "2021-01-26"
+    },
+    "3cc4129a-8c52-808e-aff1-d06b96ed0281": {
+      "source": "https://album.link/mzw9tn9m4hfq3",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4ZUO7xm83qZDzqdKWtZjHB",
+        "pandora": "https://www.pandora.com/AL:65013072",
+        "tidal": "https://listen.tidal.com/album/528826308",
+        "yandex": "https://music.yandex.ru/album/42319361"
+      },
+      "upc": "5054289972782",
+      "tracks": 9,
+      "releaseDate": "2026-04-29"
+    },
+    "3cc4129a-8c52-80c2-968b-c9928c7415f2": {
+      "source": "https://album.link/0vkvx7z3tcnhs",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2IIdPKiQVJ3bbNLwmOdyRJ",
+        "pandora": "https://www.pandora.com/AL:54697707",
+        "tidal": "https://listen.tidal.com/album/466109583",
+        "boomplay": "https://www.boomplay.com/albums/117744627"
+      },
+      "upc": "199744135007",
+      "tracks": 11,
+      "releaseDate": "2025-10-07"
     }
   }
 }

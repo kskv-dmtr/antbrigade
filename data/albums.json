@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-30T17:32:08Z",
+  "generatedAt": "2026-08-30T17:39:23Z",
   "counts": {
     "albums": 1107,
     "artists": 994,
@@ -41396,7 +41396,7 @@
       "name": "John Henderson",
       "country": "AU",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://johnhenderson1.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1c14129a-8c52-800d-b6b4-f5ca02adbfcb"

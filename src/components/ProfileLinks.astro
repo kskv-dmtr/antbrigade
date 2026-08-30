@@ -6,13 +6,26 @@
 
    Пришёл на смену BandcampLink, когда у исполнителей появилось второе такое
    поле: две отдельные кнопки подряд разъезжались бы пробелом между строчными
-   элементами, а ряду нужен общий просвет. */
+   элементами, а ряду нужен общий просвет.
 
-const { bandcamp, youtube } = Astro.props;
-const есть = Boolean(bandcamp || youtube);
+   Собственный сайт идёт первым: это дом, а площадки — витрины. Колонка
+   Website заведена в Notion только у лейблов, поэтому страница исполнителя
+   этот параметр не передаёт и кнопка там не выходит. */
+
+import Icon from './Icon.astro';
+
+const { website, bandcamp, youtube } = Astro.props;
+const есть = Boolean(website || bandcamp || youtube);
 ---
 {есть && (
   <div class="profiles">
+    {website && (
+      <a class="profile" href={website} target="_blank" rel="noopener noreferrer">
+        <Icon name="globe" class="profile__icon" />
+        <span>Website</span>
+      </a>
+    )}
+
     {bandcamp && (
       <a class="profile" href={bandcamp} target="_blank" rel="noopener noreferrer">
         <svg class="profile__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

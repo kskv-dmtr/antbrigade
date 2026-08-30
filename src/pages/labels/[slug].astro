@@ -51,12 +51,12 @@ const roster   = artistsOf(label.artistIds);
 
   {/* Ссылки наружу — своим разделом, как у исполнителя: тот же заголовок,
       та же линейка, кнопки под ней слева, счётчика нет. */}
-  {(label.bandcamp || label.youtube) && (
+  {(label.website || label.bandcamp || label.youtube) && (
     <section class="section">
       <div class="head">
         <h2 class="display display--md">Links</h2>
       </div>
-      <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
+      <ProfileLinks website={label.website} bandcamp={label.bandcamp} youtube={label.youtube} />
     </section>
   )}
 

@@ -27,7 +27,8 @@ const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
-                  youtube:    'imKP' };
+                  youtube:    'imKP',
+                  website:    'H>J[' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
 
@@ -248,16 +249,20 @@ async function directory(source, label) {
   for (const v of store.values()) {
     const name = plainText(prop(v.properties, 'title'));
     if (!name) continue;
-    // поля заполняются вручную и у большинства записей пустые
+    /* Поля заполняются вручную и у большинства записей пустые. Ключи у
+       каждой базы свои и не у всех есть: колонка Website заведена только в
+       таблице лейблов, поэтому source.website там есть, а у артистов нет. */
     const bandcamp = source.bandcamp ? plainText(prop(v.properties, source.bandcamp)) : '';
     const youtube  = source.youtube  ? plainText(prop(v.properties, source.youtube))  : '';
+    const website  = source.website  ? plainText(prop(v.properties, source.website))  : '';
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
-      youtube: youtube || null
+      youtube: youtube || null,
+      website: website || null
     });
   }
 
@@ -457,6 +462,7 @@ async function main() {
       slug: l.slug,
       name: l.name,
       country: l.country,
+      website: l.website,
       bandcamp: l.bandcamp,
       youtube: l.youtube,
       albumIds,

@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-30T21:09:54Z",
+  "generatedAt": "2026-08-30T23:32:26Z",
   "counts": {
-    "albums": 1107,
-    "artists": 994,
-    "labels": 620,
-    "videos": 81
+    "albums": 1109,
+    "artists": 996,
+    "labels": 621,
+    "videos": 82
   },
   "albums": [
     {
@@ -13618,6 +13618,35 @@
       ]
     },
     {
+      "id": "3cc4129a-8c52-80c2-b23e-ca6a226c74ba",
+      "slug": "lush-life-why-not",
+      "artist": "Lush Life",
+      "album": "Why Not?",
+      "url": "https://album.link/fbmjbvvpphq6w",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A375f2369-dde1-41fc-857f-289f73ee82f6%3Aa3835208806_10.jpg?table=block&id=3cc4129a-8c52-80c2-b23e-ca6a226c74ba&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazzy House",
+        "Nu Jazz"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-04-10",
+      "year": 2025,
+      "artistIds": [
+        "3cc4129a-8c52-808c-820c-f3f3e68a7a03"
+      ],
+      "artists": [
+        "Lush Life"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8092-9fb7-fe240ad21a1a"
+      ],
+      "labels": [
+        "Wooo! Music"
+      ]
+    },
+    {
       "id": "29f4129a-8c52-8074-8861-e7d3d75958ad",
       "slug": "nebraska-archive-tracks-vol-01",
       "artist": "Nebraska",
@@ -24025,10 +24054,10 @@
       "url": "https://album.link/xrcsxjvpxjvmk",
       "cover": "https://antbrigade.notion.site/image/attachment%3A90fc50f3-2e60-48e1-a807-5633c4eb23ed%3Aa3999289950_10_(1).jpg?table=block&id=a50d7c63-f6b5-4c2e-a07c-e6a5dd64c2dd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Industrial",
         "Dance-Punk",
         "Noise Rock",
-        "Post-Punk"
+        "Post-Punk",
+        "Industrial Rock"
       ],
       "types": [
         "EP"
@@ -24586,8 +24615,8 @@
       "url": "https://album.link/vz2mdrnrrf25j",
       "cover": "https://antbrigade.notion.site/image/attachment%3Acb6b867c-0040-4fa6-92e4-d536a722a010%3Aphoto_2025-08-17_13-42-18.jpg?table=block&id=22b27e4d-bc91-40a3-8eee-75fd0a587f19&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Industrial",
-        "Dub"
+        "Dub",
+        "Post-Industrial"
       ],
       "types": [
         "Album"
@@ -29541,8 +29570,7 @@
       "url": "https://album.link/tzfsh0mrxgmjz",
       "cover": "https://antbrigade.notion.site/image/attachment%3A60e42cba-cdac-455b-b910-5d861a15c916%3Aphoto_2025-08-17_04-18-53.jpg?table=block&id=584828cd-6332-4ac0-833e-5cbc86692a3a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Hardcore",
-        "Punk"
+        "Hardcore Punk"
       ],
       "types": [
         "Album"
@@ -31018,6 +31046,36 @@
       ],
       "labels": [
         "Radio Juicy"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-8098-acf0-c76f857ab95d",
+      "slug": "the-riptides-tombs-of-gold",
+      "artist": "The Riptides",
+      "album": "Tombs of Gold",
+      "url": "https://album.link/jx6wqnrjc6qc5",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6a87cd39-2415-4755-878b-9b0a2b190f28%3Aab67616d0000b273f9779f423397026198f6e488.jpg?table=block&id=3cc4129a-8c52-8098-acf0-c76f857ab95d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Power Pop",
+        "New Wave",
+        "Surf Rock"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-10-01",
+      "year": 2021,
+      "artistIds": [
+        "3cc4129a-8c52-80cc-b75e-e596cc478561"
+      ],
+      "artists": [
+        "The Riptides"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80db-b462-f79a56bb6ef2"
+      ],
+      "labels": [
+        "IS Music"
       ]
     },
     {
@@ -35545,8 +35603,8 @@
         "Dance-Punk",
         "Post-Punk",
         "Alternative Dance",
-        "Industrial",
-        "Noise Rock"
+        "Noise Rock",
+        "Industrial Rock"
       ],
       "labelIds": [
         "3234129a-8c52-80b5-b769-e6d3a53ba971",
@@ -43323,6 +43381,26 @@
       "videoIds": []
     },
     {
+      "id": "3cc4129a-8c52-808c-820c-f3f3e68a7a03",
+      "slug": "lush-life",
+      "name": "Lush Life",
+      "country": "AU",
+      "website": null,
+      "bandcamp": "https://lushlife1.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-80c2-b23e-ca6a226c74ba"
+      ],
+      "genres": [
+        "Jazzy House",
+        "Nu Jazz"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8092-9fb7-fe240ad21a1a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3c74129a-8c52-80ef-8510-dea04b18cc04",
       "slug": "lusine",
       "name": "Lusine",
@@ -45461,7 +45539,9 @@
       "labelIds": [
         "24b4129a-8c52-80f3-a55a-f6c37d0fa115"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3cc4129a-8c52-80d0-aa04-edc2c8d28e66"
+      ]
     },
     {
       "id": "2cc4129a-8c52-8018-864a-d85adaa92404",
@@ -46980,8 +47060,7 @@
         "584828cd-6332-4ac0-833e-5cbc86692a3a"
       ],
       "genres": [
-        "Hardcore",
-        "Punk"
+        "Hardcore Punk"
       ],
       "labelIds": [
         "2494129a-8c52-8004-b48e-d6c9b8c826f5"
@@ -47554,8 +47633,8 @@
       "name": "Roi Turbo",
       "country": "ZA",
       "website": null,
-      "bandcamp": null,
-      "youtube": null,
+      "bandcamp": "https://roiturbomusic.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@RoiTurbo",
       "albumIds": [
         "1e24129a-8c52-8016-b03c-c3615a6d555c",
         "37660482-6666-4904-b098-50e1027584ad"
@@ -47724,8 +47803,8 @@
         "22b27e4d-bc91-40a3-8eee-75fd0a587f19"
       ],
       "genres": [
-        "Industrial",
-        "Dub"
+        "Dub",
+        "Post-Industrial"
       ],
       "labelIds": [
         "2524129a-8c52-8059-bec0-f671a6b99eb1"
@@ -50858,6 +50937,27 @@
       ],
       "labelIds": [
         "2484129a-8c52-806e-bd5e-e0f260a9b0d3"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cc4129a-8c52-80cc-b75e-e596cc478561",
+      "slug": "the-riptides-2",
+      "name": "The Riptides",
+      "country": "AU",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-8098-acf0-c76f857ab95d"
+      ],
+      "genres": [
+        "Power Pop",
+        "New Wave",
+        "Surf Rock"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80db-b462-f79a56bb6ef2"
       ],
       "videoIds": []
     },
@@ -57605,6 +57705,21 @@
       ]
     },
     {
+      "id": "3cc4129a-8c52-80db-b462-f79a56bb6ef2",
+      "slug": "is-music",
+      "name": "IS Music",
+      "country": "AU",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-8098-acf0-c76f857ab95d"
+      ],
+      "artistIds": [
+        "3cc4129a-8c52-80cc-b75e-e596cc478561"
+      ]
+    },
+    {
       "id": "2514129a-8c52-80ab-9f4f-db92d113d231",
       "slug": "island-records",
       "name": "Island Records",
@@ -58520,9 +58635,9 @@
       "slug": "mad-decent",
       "name": "Mad Decent",
       "country": "US",
-      "website": null,
+      "website": "https://maddecent.com/",
       "bandcamp": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@maddecent",
       "albumIds": [
         "52f7e4ca-1416-4d94-aee9-fc2035866caf",
         "bace706f-ce66-4cfc-97b9-997366d1ed22"
@@ -60312,9 +60427,9 @@
       "slug": "popop",
       "name": "popop",
       "country": "CA",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
+      "website": "https://www.popopmusic.com/",
+      "bandcamp": "https://popopmusic.bandcamp.com/",
+      "youtube": "https://www.youtube.com/@popoplabel",
       "albumIds": [
         "3484129a-8c52-8032-a41a-e3c3d9e9685a",
         "28f4129a-8c52-8034-880d-e178c6e424a9",
@@ -63385,10 +63500,12 @@
       "bandcamp": "https://wooomusic.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3cc4129a-8c52-80c2-b23e-ca6a226c74ba",
         "1c14129a-8c52-800d-b6b4-f5ca02adbfcb",
         "539e120a-2c3a-48de-b76e-77e1cef1d845"
       ],
       "artistIds": [
+        "3cc4129a-8c52-808c-820c-f3f3e68a7a03",
         "2494129a-8c52-80c3-8f01-e12e422f84bc",
         "2504129a-8c52-80f2-884c-f7ea16ab6725"
       ]
@@ -64159,6 +64276,18 @@
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ],
       "slug": "nu-genea-scialla"
+    },
+    {
+      "id": "3cc4129a-8c52-80d0-aa04-edc2c8d28e66",
+      "title": "Omar Souleyman | Ya Bnayya",
+      "url": "https://youtu.be/T4R6iFSYDZ0?si=P9lfhKG4kDhllu_E",
+      "kind": "Official Video",
+      "released": "2017-06-08",
+      "year": 2017,
+      "artistIds": [
+        "24b4129a-8c52-801e-a852-cd618201c873"
+      ],
+      "slug": "omar-souleyman-ya-bnayya"
     },
     {
       "id": "3144129a-8c52-80a9-a08d-dfcfdeaad66f",

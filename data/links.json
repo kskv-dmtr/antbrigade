@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T12:56:41Z",
+  "generatedAt": "2026-08-30T23:32:44Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17534,6 +17534,30 @@
       "upc": "199744135007",
       "tracks": 11,
       "releaseDate": "2025-10-07"
+    },
+    "3cc4129a-8c52-80c2-b23e-ca6a226c74ba": {
+      "source": "https://album.link/fbmjbvvpphq6w",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/20knyNkQonQQ1wZAI45mPc",
+        "pandora": "https://www.pandora.com/AL:46827753",
+        "tidal": "https://listen.tidal.com/album/428545306"
+      },
+      "upc": "9361385115941",
+      "tracks": 5,
+      "releaseDate": "2025-03-10"
+    },
+    "3cc4129a-8c52-8098-acf0-c76f857ab95d": {
+      "source": "https://album.link/jx6wqnrjc6qc5",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5tqMX7NZk7KclqdGXLpW5x",
+        "pandora": "https://www.pandora.com/AL:715791",
+        "deezer": "https://www.deezer.com/album/262345562",
+        "tidal": "https://listen.tidal.com/album/199429282",
+        "yandex": "https://music.yandex.ru/album/18436191"
+      },
+      "upc": "00602438880607",
+      "tracks": 13,
+      "releaseDate": "2021-09-01"
     }
   }
 }

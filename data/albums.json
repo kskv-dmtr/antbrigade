@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-30T15:22:08Z",
+  "generatedAt": "2026-08-30T17:32:08Z",
   "counts": {
     "albums": 1107,
     "artists": 994,
@@ -6536,7 +6536,6 @@
       "url": "https://album.link/w7r8hcqmdr3vq",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ae1ea61b5-a8d1-499c-a95a-0e9eca40ac2a%3Aa1311023059_10.jpg?table=block&id=2b34129a-8c52-803f-97c6-ef0c119d1f2c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Indie Punk",
         "Indie Rock",
         "Punk Rock"
       ],
@@ -10383,7 +10382,7 @@
       "url": "https://album.link/wjgjhx3bbdcnw",
       "cover": "https://antbrigade.notion.site/image/attachment%3Abf406a56-3ae5-4aef-a4a6-1c959047ebd6%3Aa2351754713_10.jpg?table=block&id=23b4129a-8c52-80c6-93e4-d6c460ae4ede&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Indie Punk"
+        "Midwest Emo"
       ],
       "types": [
         "Compilation"
@@ -48331,7 +48330,7 @@
         "23b4129a-8c52-80c6-93e4-d6c460ae4ede"
       ],
       "genres": [
-        "Indie Punk"
+        "Midwest Emo"
       ],
       "labelIds": [
         "2434129a-8c52-80e6-83b0-c7909015aa3b"
@@ -50914,7 +50913,6 @@
         "2b34129a-8c52-803f-97c6-ef0c119d1f2c"
       ],
       "genres": [
-        "Indie Punk",
         "Indie Rock",
         "Punk Rock"
       ],

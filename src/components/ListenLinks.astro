@@ -3,25 +3,36 @@
    рядом. Раньше album.link стоял отдельным блоком с пояснением под ним;
    пояснение убрано, кнопка встала в общий ряд последней.
 
-   Логотипы площадок намеренно не рисую: выдуманный логотип хуже его
-   отсутствия. Пока текстовые кнопки, иконки придут с макетом. */
+   Логотипы настоящие, не выдуманные: Spotify из Phosphor, Bandcamp с сайта
+   самой площадки. У Yandex Music знака нет ни в Phosphor, ни в Simple
+   Icons, и кнопка идёт без значка — выдуманный логотип хуже его
+   отсутствия. У album.link логотипа не бывает вовсе: это не площадка, а
+   сборник ссылок на них, поэтому там звено цепи. */
 
+import Icon from './Icon.astro';
 import { listenLinks } from '../lib/db.js';
 
 const { album } = Astro.props;
 const links = listenLinks(album);
+
+const ЗНАЧКИ = new Map([
+  ['spotify', 'spotify-logo'],
+  ['bandcamp', 'bandcamp']
+]);
 ---
 {(links.length > 0 || album.url) && (
   <div class="listen">
     {links.map((link) => (
       <a class="listen__platform" href={link.url} target="_blank" rel="noopener noreferrer">
-        {link.label}
+        {ЗНАЧКИ.has(link.key) && <Icon name={ЗНАЧКИ.get(link.key)} class="listen__icon" />}
+        <span>{link.label}</span>
       </a>
     ))}
 
     {album.url && (
       <a class="listen__platform" href={album.url} target="_blank" rel="noopener noreferrer">
-        Open album.link
+        <Icon name="link" class="listen__icon" />
+        <span>album.link</span>
       </a>
     )}
   </div>

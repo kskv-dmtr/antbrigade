@@ -1513,6 +1513,12 @@ select option { background: var(--option-bg); color: var(--fg); }
   padding: 11px 16px;
   font-family: var(--mono);
   font-size: 11px;
+  /* Ровно по значку: у кнопки со значком высоту содержимого задаёт он, 16
+     пикселей, а у кнопки без значка — строка текста, и её собственная
+     высота меньше. Разница выходила в 0.6 пикселя, и рамка у такой кнопки
+     оказывалась чуть ниже соседних. Сейчас без значка живёт одна кнопка,
+     Yandex Music, но правило общее: значка может не найтись и у следующей. */
+  line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 1px solid var(--line);
@@ -1587,7 +1593,8 @@ select option { background: var(--option-bg); color: var(--fg); }
   justify-self: end;
   text-align: right;
 }
-.profile__icon { width: 14px; height: 14px; fill: currentColor; flex: none; }
+.profile__icon,
+.listen__icon { width: 16px; height: 16px; fill: currentColor; flex: none; }
 
 /* Список определений `.facts` — подпись слева, значение справа — удалён 29
    августа 2026 вместе с последним его употреблением. Стоял он на страницах

@@ -60,6 +60,31 @@ async function readJson(file, fallback) {
   }
 }
 
+/* Дата релиза со страницы album.link.
+
+   Два подвоха, оба стоили каталогу неверных дат у всех 1107 записей.
+
+   Первый: месяц в ответе 0-based — August приходит семёркой. Пишется он в
+   виде {year, month, day, hour, minute}, то есть это сериализованный
+   JS-Date, а у него месяцы считаются с нуля. Прибавляем единицу.
+
+   Второй: раньше части даты просеивались через filter(Boolean), и январь —
+   месяц 0 — выпадал целиком. Из «1 января» выходило «YYYY-01», где 01 это
+   день, и такая запись читалась как год с месяцем. День нулём не бывает,
+   поэтому теперь проверяем наличие поля, а не его истинность. */
+function releaseDateOf(rd) {
+  if (!rd || typeof rd.year !== 'number') return null;
+
+  const части = [String(rd.year)];
+  if (typeof rd.month === 'number') {
+    части.push(String(rd.month + 1).padStart(2, '0'));
+    if (typeof rd.day === 'number' && rd.day > 0) {
+      части.push(String(rd.day).padStart(2, '0'));
+    }
+  }
+  return части.join('-');
+}
+
 /** Достаёт из страницы album.link все ссылки на площадки и данные о релизе. */
 function parsePage(html) {
   const raw = html.match(/<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s);
@@ -79,10 +104,7 @@ function parsePage(html) {
     platforms,
     upc: entity.upc ?? null,
     tracks: entity.numTracks ?? null,
-    releaseDate: entity.releaseDate
-      ? [entity.releaseDate.year, entity.releaseDate.month, entity.releaseDate.day]
-          .filter(Boolean).map((n) => String(n).padStart(2, '0')).join('-')
-      : null
+    releaseDate: releaseDateOf(entity.releaseDate)
   };
 }
 

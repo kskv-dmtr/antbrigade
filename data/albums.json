@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T11:25:23Z",
+  "generatedAt": "2026-08-31T11:50:37Z",
   "counts": {
     "albums": 1117,
     "artists": 998,
@@ -23785,9 +23785,9 @@
       "url": "https://album.link/ggjc83dxbtt5q",
       "cover": "https://antbrigade.notion.site/image/attachment%3Acefd8f50-f91e-4b6d-bf1f-efc718380837%3Aphoto_2025-08-16_02-53-29.jpg?table=block&id=f3962709-b773-4565-b421-69b5a9ce4e00&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Garage Rock",
-        "Power Pop"
+        "Power Pop",
+        "Garage Punk"
       ],
       "types": [
         "Album"
@@ -24021,7 +24021,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A8ae256e7-bdda-4cd5-a8db-4b827cef796b%3Aphoto_2025-08-15_01-53-02.jpg?table=block&id=fd0b9edd-e415-449b-8013-20cf40dfe783&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Garage Rock",
-        "Punk"
+        "Garage Punk"
       ],
       "types": [
         "Album"
@@ -25929,7 +25929,6 @@
       "url": "https://album.link/cfzzr9j9b66jz",
       "cover": "https://antbrigade.notion.site/image/attachment%3A6621fae7-b803-4358-81a9-1a15fac4c490%3Aa0176648277_10.jpg?table=block&id=4fe80a6e-2fd5-4cc5-a20f-ff6fd93f47eb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Hardcore Punk"
       ],
       "types": [
@@ -26431,7 +26430,6 @@
       "url": "https://album.link/jksrccpqgv0xz",
       "cover": "https://antbrigade.notion.site/image/attachment%3A52b5d0d3-993f-4283-b340-eed27d969460%3Aphoto_2025-08-17_13-54-16.jpg?table=block&id=3d34d661-e017-4722-b3b9-edbff5fb3487&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Hard Rock",
         "Punk'n'Roll"
       ],
@@ -26720,8 +26718,8 @@
       "url": "https://album.link/zbk9n66g29hjq",
       "cover": "https://antbrigade.notion.site/image/attachment%3Abd00ebd8-8c4e-46a4-a35e-eaacfe872459%3Aa2427008216_10.jpg?table=block&id=325e85a4-b6a8-4ba6-b213-283baab98998&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Oi!"
+        "Oi!",
+        "Post-Punk"
       ],
       "types": [
         "EP"
@@ -26807,7 +26805,8 @@
       "url": "https://album.link/dbr5wkv8rmmjm",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ad19c4ac7-c806-487a-94e0-6cf1d0ecee18%3Aa3420712331_10.jpg?table=block&id=c1b1c837-45e4-452b-bbd3-e17393694107&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Indie Rock",
+        "Heartland Rock"
       ],
       "types": [
         "Album"
@@ -27068,7 +27067,9 @@
       "url": "https://album.link/svvxg75gsg6rn",
       "cover": "https://antbrigade.notion.site/image/attachment%3A990acbee-308b-4cf6-9fc8-a6c73fedb46f%3Aphoto_2025-08-16_01-44-30.jpg?table=block&id=2248cccf-b648-4272-a74c-594edec85308&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Street Punk",
+        "Oi!",
+        "Hardcore Punk"
       ],
       "types": [
         "Album"
@@ -27500,8 +27501,8 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A18ce26c7-fe55-4efd-9b96-9d9985579c18%3Aphoto_2025-08-15_18-13-22.jpg?table=block&id=1134129a-8c52-80b5-9ead-d6cabd1153fa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "New Wave",
-        "Punk",
-        "Post-Punk"
+        "Post-Punk",
+        "Dance-Punk"
       ],
       "types": [
         "Album"
@@ -27557,7 +27558,8 @@
       "url": "https://album.link/2m25f8pxqtm5s",
       "cover": "https://antbrigade.notion.site/image/attachment%3Adc58d5f2-e74e-4257-ad9b-fe22e670d490%3Aa0065232976_10.jpg?table=block&id=ccfccce7-5a0e-43ab-9596-ce244dc1363f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Indie Pop",
+        "Jangle Pop"
       ],
       "types": [
         "Album"
@@ -27671,9 +27673,8 @@
       "url": "https://album.link/bn0ngrrtk2b4f",
       "cover": "https://antbrigade.notion.site/image/attachment%3A1c0ccaaa-3cba-4853-8c9d-d9d6ebf7a3d0%3Aphoto_2025-08-13_15-09-36.jpg?table=block&id=7fdd88f8-7b6a-4845-923c-a34a9f0c73d7&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Power Pop",
-        "Glam Rock"
+        "Glam Punk"
       ],
       "types": [
         "Album"
@@ -27701,7 +27702,6 @@
       "url": "https://album.link/fnmvk5nngfn7v",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aa8f7c326-90ff-4c53-ba9e-caa09787ac4b%3Aphoto_2025-08-15_00-50-17.jpg?table=block&id=992ca047-c5e8-4621-aa3e-3ceb764a32b8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Oi!"
       ],
       "types": [
@@ -28835,7 +28835,8 @@
       "url": "https://album.link/jc5ppqjkbjqtf",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ae075a4e6-9d75-4d8e-8553-7968ae7015e4%3Aa1990959215_10.jpg?table=block&id=a0852638-ee0f-4dfa-a52b-77cba11cfd9a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Punk Rock",
+        "Pop Punk"
       ],
       "types": [
         "Album"
@@ -29889,7 +29890,8 @@
       "url": "https://album.link/jrvb9wgcprpbw",
       "cover": "https://antbrigade.notion.site/image/attachment%3Abd36a31f-1f97-4cf8-993d-ebe1ade48496%3Aa3631675517_10.jpg?table=block&id=653ccc22-d508-485a-a740-5c3b96b82600&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Indie Rock",
+        "Power Pop"
       ],
       "types": [
         "Album"
@@ -30356,7 +30358,8 @@
       "url": "https://album.link/4fxvqnhs9j64s",
       "cover": "https://antbrigade.notion.site/image/attachment%3Af312b00e-53a0-431b-b973-f55f2cfc1d9e%3Aa3334060445_10.jpg?table=block&id=3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Synth Punk",
+        "Egg Punk"
       ],
       "types": [
         "EP"
@@ -31547,7 +31550,6 @@
       "url": "https://album.link/mm5xcrksrgdxr",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ae648537c-0fa1-47ad-8492-6b31e15a4791%3Aa4140845049_10.jpg?table=block&id=2484129a-8c52-80bd-8a93-dd0d62dfee2f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Hardcore Punk"
       ],
       "types": [
@@ -32077,8 +32079,8 @@
       "url": "https://album.link/qtnhpb8kff9k6",
       "cover": "https://antbrigade.notion.site/image/attachment%3A75c43b9d-389f-462e-aa3a-6204794a63d2%3Aa2760094659_10.jpg?table=block&id=f16e9641-bf53-475e-8450-e22c864cd19e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Post-Punk"
+        "Post-Punk",
+        "Garage Punk"
       ],
       "types": [
         "Album"
@@ -34405,9 +34407,8 @@
         "7fdd88f8-7b6a-4845-923c-a34a9f0c73d7"
       ],
       "genres": [
-        "Punk",
         "Power Pop",
-        "Glam Rock"
+        "Glam Punk"
       ],
       "labelIds": [
         "24e4129a-8c52-80a1-ba37-fdf1c5952a9a"
@@ -34608,7 +34609,6 @@
         "992ca047-c5e8-4621-aa3e-3ceb764a32b8"
       ],
       "genres": [
-        "Punk",
         "Oi!"
       ],
       "labelIds": [
@@ -35787,7 +35787,6 @@
         "2484129a-8c52-80bd-8a93-dd0d62dfee2f"
       ],
       "genres": [
-        "Punk",
         "Hardcore Punk"
       ],
       "labelIds": [
@@ -37817,7 +37816,7 @@
       ],
       "genres": [
         "Garage Rock",
-        "Punk"
+        "Garage Punk"
       ],
       "labelIds": [
         "24f4129a-8c52-8037-9079-e3fe913096f6"
@@ -39439,8 +39438,8 @@
         "f16e9641-bf53-475e-8450-e22c864cd19e"
       ],
       "genres": [
-        "Punk",
-        "Post-Punk"
+        "Post-Punk",
+        "Garage Punk"
       ],
       "labelIds": [
         "2524129a-8c52-8003-9138-ca1f9204d545"
@@ -40017,7 +40016,8 @@
         "a0852638-ee0f-4dfa-a52b-77cba11cfd9a"
       ],
       "genres": [
-        "Punk"
+        "Punk Rock",
+        "Pop Punk"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -42859,7 +42859,6 @@
         "Dance-Punk",
         "Art Punk",
         "New Wave",
-        "Punk",
         "Post-Punk"
       ],
       "labelIds": [
@@ -44548,7 +44547,9 @@
         "2248cccf-b648-4272-a74c-594edec85308"
       ],
       "genres": [
-        "Punk"
+        "Street Punk",
+        "Oi!",
+        "Hardcore Punk"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -46718,7 +46719,8 @@
         "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9"
       ],
       "genres": [
-        "Punk"
+        "Synth Punk",
+        "Egg Punk"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -46821,9 +46823,9 @@
         "f3962709-b773-4565-b421-69b5a9ce4e00"
       ],
       "genres": [
-        "Punk",
         "Garage Rock",
-        "Power Pop"
+        "Power Pop",
+        "Garage Punk"
       ],
       "labelIds": [
         "2504129a-8c52-80b0-a286-f08d24913bae"
@@ -47073,7 +47075,8 @@
         "653ccc22-d508-485a-a740-5c3b96b82600"
       ],
       "genres": [
-        "Punk"
+        "Indie Rock",
+        "Power Pop"
       ],
       "labelIds": [
         "2524129a-8c52-8044-833d-f19f00210ffc"
@@ -47417,8 +47420,7 @@
       "genres": [
         "Oi!",
         "Post-Punk",
-        "Coldwave",
-        "Punk"
+        "Coldwave"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -48382,7 +48384,6 @@
         "3d34d661-e017-4722-b3b9-edbff5fb3487"
       ],
       "genres": [
-        "Punk",
         "Hard Rock",
         "Punk'n'Roll"
       ],
@@ -49195,7 +49196,8 @@
         "c1b1c837-45e4-452b-bbd3-e17393694107"
       ],
       "genres": [
-        "Punk"
+        "Indie Rock",
+        "Heartland Rock"
       ],
       "labelIds": [
         "2484129a-8c52-80b7-82f2-dbaef7be8b87"
@@ -51877,7 +51879,8 @@
         "ccfccce7-5a0e-43ab-9596-ce244dc1363f"
       ],
       "genres": [
-        "Punk"
+        "Indie Pop",
+        "Jangle Pop"
       ],
       "labelIds": [
         "2524129a-8c52-8084-9402-eeab09178e36"

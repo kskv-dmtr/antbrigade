@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T20:08:55Z",
+  "generatedAt": "2026-08-31T23:53:15Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17763,6 +17763,46 @@
       "upc": "825764180566",
       "tracks": 4,
       "releaseDate": "1982-01-01"
+    },
+    "3cd4129a-8c52-80f5-8b30-e2ec39b6c9da": {
+      "source": "https://album.link/fsdnc33bkqt93",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6h3oWD2bbqDIYcngrXKHPC",
+        "amazonMusic": "https://music.amazon.com/albums/B0DHJ9Z9H9",
+        "tidal": "https://listen.tidal.com/album/388447135",
+        "yandex": "https://music.yandex.ru/album/33355505",
+        "bandcamp": "https://thousandislandsrecords.bandcamp.com/album/i-know-the-future",
+        "amazonStore": "https://amazon.com/dp/B0DHJ9Z9H9"
+      },
+      "upc": "3617663675208",
+      "tracks": 10,
+      "releaseDate": "2024-10-18"
+    },
+    "3cd4129a-8c52-8086-a9a2-f4de36f49dce": {
+      "source": "https://album.link/zghpm4zhvkkkb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4Kr4hsvi9e1p9U9yTZmLxi",
+        "pandora": "https://www.pandora.com/AL:1845045",
+        "amazonMusic": "https://music.amazon.com/albums/B07K2HXPMQ",
+        "tidal": "https://listen.tidal.com/album/97694150",
+        "yandex": "https://music.yandex.ru/album/7301902",
+        "amazonStore": "https://amazon.com/dp/B07K2HXPMQ"
+      },
+      "upc": "647603403618",
+      "tracks": 2,
+      "releaseDate": "2018-11-09"
+    },
+    "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc": {
+      "source": "https://album.link/frjfppnzwchh3",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/037EmkP6KZxJwM0Yu7eXMq",
+        "napster": "https://play.napster.com/album/alb.269615746",
+        "boomplay": "https://www.boomplay.com/albums/8502858",
+        "bandcamp": "https://theimpalers.bandcamp.com/album/cellar-dweller-lp"
+      },
+      "upc": "5055869524353",
+      "tracks": 10,
+      "releaseDate": "2017-08-11"
     }
   }
 }

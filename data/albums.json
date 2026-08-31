@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T20:08:29Z",
+  "generatedAt": "2026-08-31T23:52:54Z",
   "counts": {
-    "albums": 1123,
+    "albums": 1126,
     "artists": 998,
-    "labels": 625,
-    "videos": 82
+    "labels": 627,
+    "videos": 83
   },
   "albums": [
     {
@@ -10771,9 +10771,7 @@
       "artistIds": [
         "2414129a-8c52-8018-875e-e5cb6beef380"
       ],
-      "artists": [
-        "SCARAB"
-      ],
+      "artists": [],
       "labelIds": [
         "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
       ],
@@ -11442,9 +11440,7 @@
       "artistIds": [
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
-      "artists": [
-        "Gelli Haha"
-      ],
+      "artists": [],
       "labelIds": [
         "2434129a-8c52-806e-9bf1-e6c265c72db3"
       ],
@@ -18190,6 +18186,36 @@
       ],
       "labels": [
         "Gondwana Records"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80f5-8b30-e2ec39b6c9da",
+      "slug": "the-lookout-i-know-the-future",
+      "artist": "The Lookout",
+      "album": "I Know the Future",
+      "url": "https://album.link/fsdnc33bkqt93",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2caf0acc-e830-43d3-aa25-ff8ddd5666ad%3Aa2039751092_10.jpg?table=block&id=3cd4129a-8c52-80f5-8b30-e2ec39b6c9da&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Garage Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-10-18",
+      "year": 2024,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-8029-a0a8-f20cba05d72a"
+      ],
+      "artists": [
+        "The Lookout"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8086-86e8-c55f5bf69a17"
+      ],
+      "labels": [
+        "Thousand Islands Records"
       ]
     },
     {
@@ -33783,6 +33809,36 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-8086-a9a2-f4de36f49dce",
+      "slug": "boss-steel-box-i-m-the-dog-you-re-the-ball",
+      "artist": "Boss",
+      "album": "Steel Box / I’m the Dog (You’re the Ball)",
+      "url": "https://album.link/zghpm4zhvkkkb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8dd45b39-d77d-4c11-bd2a-70c8e57ce054%3Aa2605498258_10.jpg?table=block&id=3cd4129a-8c52-8086-a9a2-f4de36f49dce&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk'n'Roll",
+        "Garage Punk"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2018-11-09",
+      "year": 2018,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-802c-8745-fff257f071ee"
+      ],
+      "artists": [
+        "Boss"
+      ],
+      "labelIds": [
+        "2f04129a-8c52-801e-9926-e5cf15568223"
+      ],
+      "labels": [
+        "Goner Records"
+      ]
+    },
+    {
       "id": "24772b18-8565-47c0-b190-53df4e56cb7d",
       "slug": "pig-destroyer-head-cage",
       "artist": "Pig Destroyer",
@@ -33932,6 +33988,38 @@
       ],
       "labels": [
         "Kame'a Music"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc",
+      "slug": "impalers-cellar-dweller",
+      "artist": "Impalers",
+      "album": "Cellar Dweller",
+      "url": "https://album.link/frjfppnzwchh3",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A77d3d227-4c78-4f05-8419-5eb9447ff4ed%3Aa1132798576_10.jpg?table=block&id=3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Hardcore Punk",
+        "D-Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-07-07",
+      "year": 2017,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-804b-adbd-eac30bc2c100"
+      ],
+      "artists": [
+        "Impalers"
+      ],
+      "labelIds": [
+        "2474129a-8c52-800e-a91a-f36d335f66e0",
+        "3cd4129a-8c52-801d-947d-cfa11fb9664e"
+      ],
+      "labels": [
+        "Static Shock Records",
+        "540 Records"
       ]
     },
     {
@@ -36413,17 +36501,19 @@
       "name": "Boss",
       "country": "FR",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://boss.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "3cd4129a-8c52-80cc-91fa-ef6609a9454a"
+        "3cd4129a-8c52-80cc-91fa-ef6609a9454a",
+        "3cd4129a-8c52-8086-a9a2-f4de36f49dce"
       ],
       "genres": [
         "Punk'n'Roll",
         "Garage Punk"
       ],
       "labelIds": [
-        "2474129a-8c52-800e-a91a-f36d335f66e0"
+        "2474129a-8c52-800e-a91a-f36d335f66e0",
+        "2f04129a-8c52-801e-9926-e5cf15568223"
       ],
       "videoIds": []
     },
@@ -40929,29 +41019,6 @@
       "videoIds": []
     },
     {
-      "id": "2424129a-8c52-801f-928b-cd1b28ba171c",
-      "slug": "gelli-haha",
-      "name": "Gelli Haha",
-      "country": "US",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "21f4129a-8c52-80c9-8ca7-fdab8a2ddc9a"
-      ],
-      "genres": [
-        "Synthpop",
-        "Indietronica"
-      ],
-      "labelIds": [
-        "2434129a-8c52-806e-9bf1-e6c265c72db3"
-      ],
-      "videoIds": [
-        "2424129a-8c52-804d-8ef0-d14d5924410e",
-        "3be4129a-8c52-805f-966a-c0a4df3dd5a0"
-      ]
-    },
-    {
       "id": "2d74129a-8c52-80e1-b265-cf418f174485",
       "slug": "gerry-read",
       "name": "Gerry Read",
@@ -42176,6 +42243,27 @@
       ],
       "labelIds": [
         "2434129a-8c52-8096-9bb6-ceb82978fb30"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-804b-adbd-eac30bc2c100",
+      "slug": "impalers",
+      "name": "Impalers",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc"
+      ],
+      "genres": [
+        "Hardcore Punk",
+        "D-Beat"
+      ],
+      "labelIds": [
+        "2474129a-8c52-800e-a91a-f36d335f66e0",
+        "3cd4129a-8c52-801d-947d-cfa11fb9664e"
       ],
       "videoIds": []
     },
@@ -44514,7 +44602,7 @@
       "name": "LI YILEI",
       "country": "CN",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://liyilei.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "f9ae495e-ee8f-4b05-8c59-1f83b8ae78de"
@@ -49322,7 +49410,7 @@
       "country": "US",
       "website": null,
       "bandcamp": "https://russiancircles.bandcamp.com/music",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@russiancircles",
       "albumIds": [
         "3cd4129a-8c52-8086-9b81-fa226e9d52a5"
       ],
@@ -49333,7 +49421,9 @@
       "labelIds": [
         "2434129a-8c52-80ed-86c3-e0d26c986e3f"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3cd4129a-8c52-806a-a593-ec8c43f97f5a"
+      ]
     },
     {
       "id": "2c94129a-8c52-809c-b3f2-cb7064d6ce56",
@@ -49655,26 +49745,6 @@
       "labelIds": [
         "2864129a-8c52-80cb-9223-fe406c7f1133",
         "2504129a-8c52-8043-bbf7-dccba6159cb1"
-      ],
-      "videoIds": []
-    },
-    {
-      "id": "2414129a-8c52-8018-875e-e5cb6beef380",
-      "slug": "scarab",
-      "name": "SCARAB",
-      "country": "US",
-      "website": null,
-      "bandcamp": "https://scarabhc.bandcamp.com/music",
-      "youtube": null,
-      "albumIds": [
-        "2414129a-8c52-80d8-a663-deb36101dbbc"
-      ],
-      "genres": [
-        "Hardcore",
-        "Powerviolence"
-      ],
-      "labelIds": [
-        "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
       ],
       "videoIds": []
     },
@@ -52142,6 +52212,26 @@
       ],
       "labelIds": [
         "2494129a-8c52-8078-9781-c8afa138bad9"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-8029-a0a8-f20cba05d72a",
+      "slug": "the-lookout",
+      "name": "The Lookout",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://thelookout.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80f5-8b30-e2ec39b6c9da"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Garage Punk"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8086-86e8-c55f5bf69a17"
       ],
       "videoIds": []
     },
@@ -55047,6 +55137,21 @@
       "artistIds": [
         "24a4129a-8c52-8056-9f0a-e627d3933971",
         "2504129a-8c52-8032-ab7b-dbadf4248593"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-801d-947d-cfa11fb9664e",
+      "slug": "540-records",
+      "name": "540 Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc"
+      ],
+      "artistIds": [
+        "3cd4129a-8c52-804b-adbd-eac30bc2c100"
       ]
     },
     {
@@ -58424,13 +58529,15 @@
       "name": "Goner Records",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://gonerrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "2f04129a-8c52-80db-b231-dd50189bc28f"
+        "2f04129a-8c52-80db-b231-dd50189bc28f",
+        "3cd4129a-8c52-8086-a9a2-f4de36f49dce"
       ],
       "artistIds": [
-        "2f04129a-8c52-80f9-9ab2-df8b79b1b82e"
+        "2f04129a-8c52-80f9-9ab2-df8b79b1b82e",
+        "3cd4129a-8c52-802c-8745-fff257f071ee"
       ]
     },
     {
@@ -60512,9 +60619,9 @@
       "id": "24a4129a-8c52-80a1-af07-e4107fb026a0",
       "slug": "metron-records",
       "name": "Métron Records",
-      "country": "DE",
-      "website": null,
-      "bandcamp": null,
+      "country": "GB",
+      "website": "https://metronrecords.com/",
+      "bandcamp": "https://metronrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "f9ae495e-ee8f-4b05-8c59-1f83b8ae78de"
@@ -62929,9 +63036,9 @@
       "slug": "sargent-house",
       "name": "Sargent House",
       "country": "US",
-      "website": null,
+      "website": "https://www.sargenthouse.com/",
       "bandcamp": "https://sargenthouse.bandcamp.com/",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@sargenthouse/videos",
       "albumIds": [
         "3cd4129a-8c52-8086-9b81-fa226e9d52a5",
         "37a4129a-8c52-800f-8f4e-f38b1f649c04",
@@ -63819,7 +63926,8 @@
         "e927bf04-04fa-4827-89d9-acf3123200a4",
         "76f8a8b5-f371-42e5-a48b-517eca0ecb91",
         "afd60682-390c-4b6d-8e7e-688f6c73c134",
-        "3cd4129a-8c52-80cc-91fa-ef6609a9454a"
+        "3cd4129a-8c52-80cc-91fa-ef6609a9454a",
+        "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc"
       ],
       "artistIds": [
         "32c4129a-8c52-80be-afe6-e7c8a2d1b820",
@@ -63827,7 +63935,8 @@
         "2434129a-8c52-8040-a206-f275114bb194",
         "2504129a-8c52-80c2-878f-de0f8a1d7795",
         "2424129a-8c52-8086-b61b-ca5dd82f932d",
-        "3cd4129a-8c52-802c-8745-fff257f071ee"
+        "3cd4129a-8c52-802c-8745-fff257f071ee",
+        "3cd4129a-8c52-804b-adbd-eac30bc2c100"
       ]
     },
     {
@@ -64294,6 +64403,21 @@
       ],
       "artistIds": [
         "3ba4129a-8c52-8014-a2d4-d08aee9b6fbd"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-8086-86e8-c55f5bf69a17",
+      "slug": "thousand-islands-records",
+      "name": "Thousand Islands Records",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://thousandislandsrecords.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80f5-8b30-e2ec39b6c9da"
+      ],
+      "artistIds": [
+        "3cd4129a-8c52-8029-a0a8-f20cba05d72a"
       ]
     },
     {
@@ -66026,6 +66150,19 @@
         "2524129a-8c52-80cf-9fb4-f38fd194499c"
       ],
       "slug": "rixe-tir-groupe"
+    },
+    {
+      "id": "3cd4129a-8c52-806a-a593-ec8c43f97f5a",
+      "title": "Russian Circles | Empath",
+      "url": "https://youtu.be/qrb64_QFetU?si=8reR3McZWM9cuPtC",
+      "kind": "Official Video",
+      "released": "2026-06-24",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-80e6-a380-f60243ce3d97"
+      ],
+      "slug": "russian-circles-empath"
     },
     {
       "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",

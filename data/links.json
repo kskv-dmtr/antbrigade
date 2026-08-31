@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T23:32:44Z",
+  "generatedAt": "2026-08-31T05:41:23Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17558,6 +17558,56 @@
       "upc": "00602438880607",
       "tracks": 13,
       "releaseDate": "2021-09-01"
+    },
+    "3cc4129a-8c52-808b-9ee0-e24497b71f15": {
+      "source": "https://album.link/mjgxgwjnnzhtk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1774mLDzZ1sUNnI7pcsVcG",
+        "pandora": "https://www.pandora.com/AL:65148523",
+        "tidal": "https://listen.tidal.com/album/516097065"
+      },
+      "upc": "5056688859206",
+      "tracks": 5,
+      "releaseDate": "2026-04-15"
+    },
+    "3cd4129a-8c52-80cc-91fa-ef6609a9454a": {
+      "source": "https://album.link/bx57chp3gzgjs",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7CjEFdP3PTQQFFSdfCy75p",
+        "pandora": "https://www.pandora.com/AL:11238024",
+        "deezer": "https://www.deezer.com/album/268453482",
+        "amazonMusic": "https://music.amazon.com/albums/B09KHCXX7Y",
+        "tidal": "https://listen.tidal.com/album/202737367",
+        "napster": "https://play.napster.com/album/alb.621493683",
+        "yandex": "https://music.yandex.ru/album/19006670",
+        "bandcamp": "https://staticshockrecords.bandcamp.com/album/cash-em-in",
+        "amazonStore": "https://amazon.com/dp/B09KHCXX7Y"
+      },
+      "upc": "5056321665188",
+      "tracks": 2,
+      "releaseDate": "2021-11-03"
+    },
+    "3cc4129a-8c52-806d-aba1-d5e0911705c8": {
+      "source": "https://album.link/tcmkxwzfng9ss",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4HGYfrwQXQQNRKxZUdoYvo",
+        "pandora": "https://www.pandora.com/AL:17402399",
+        "tidal": "https://listen.tidal.com/album/218712810"
+      },
+      "upc": "1941520421199",
+      "tracks": 6,
+      "releaseDate": "2019-01"
+    },
+    "3cc4129a-8c52-804d-9db3-eb772ae4ce4e": {
+      "source": "https://album.link/vrcrsrqrnh09k",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1L7G2YrXjDL50MeLRWgmEz",
+        "pandora": "https://www.pandora.com/AL:17398288",
+        "tidal": "https://listen.tidal.com/album/219020503"
+      },
+      "upc": "1941520279066",
+      "tracks": 5,
+      "releaseDate": "2019-07-02"
     }
   }
 }

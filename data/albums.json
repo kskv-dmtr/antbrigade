@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-30T23:32:26Z",
+  "generatedAt": "2026-08-31T05:40:58Z",
   "counts": {
-    "albums": 1109,
-    "artists": 996,
-    "labels": 621,
+    "albums": 1113,
+    "artists": 998,
+    "labels": 622,
     "videos": 82
   },
   "albums": [
@@ -2266,6 +2266,36 @@
       ],
       "labels": [
         "Ostgut Ton"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-808b-9ee0-e24497b71f15",
+      "slug": "stingray-enemy",
+      "artist": "Stingray",
+      "album": "Enemy",
+      "url": "https://album.link/mjgxgwjnnzhtk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A03c25616-819b-4b31-b660-2fd64c5dd91b%3Aa0699420445_10.jpg?table=block&id=3cc4129a-8c52-808b-9ee0-e24497b71f15&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Crossover Thrash",
+        "Hardcore Punk",
+        "D-Beat"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-05-15",
+      "year": 2026,
+      "artistIds": [
+        "3cc4129a-8c52-804d-bf08-d16a1d63e3f0"
+      ],
+      "artists": [
+        "Stingray"
+      ],
+      "labelIds": [
+        "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
+      ],
+      "labels": [
+        "La Vida Es Un Mus Discos"
       ]
     },
     {
@@ -22133,8 +22163,7 @@
         "2414129a-8c52-800a-92fb-ceb904ac44bc"
       ],
       "artists": [
-        "Aura Safari",
-        "Jimi Tenor"
+        "Aura Safari"
       ],
       "labelIds": [
         "2434129a-8c52-80dd-821a-cceae600384b"
@@ -30935,6 +30964,35 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-80cc-91fa-ef6609a9454a",
+      "slug": "boss-cash-em-in",
+      "artist": "Boss",
+      "album": "Cash ‘Em In",
+      "url": "https://album.link/bx57chp3gzgjs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A840c873f-c72a-4a7a-a7b3-81eb43dadc47%3Aa4055641714_10.jpg?table=block&id=3cd4129a-8c52-80cc-91fa-ef6609a9454a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk'n'Roll",
+        "Garage Punk"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2021-12-03",
+      "year": 2021,
+      "artistIds": [
+        "3cd4129a-8c52-802c-8745-fff257f071ee"
+      ],
+      "artists": [
+        "Boss"
+      ],
+      "labelIds": [
+        "2474129a-8c52-800e-a91a-f36d335f66e0"
+      ],
+      "labels": [
+        "Static Shock Records"
+      ]
+    },
+    {
       "id": "3b84129a-8c52-80c2-a7a7-ef38d586db6c",
       "slug": "aldorande-deux",
       "artist": "Aldorande",
@@ -32159,6 +32217,66 @@
       ],
       "labels": [
         "Raw Tapes Records"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-806d-aba1-d5e0911705c8",
+      "slug": "club-music-club-music-vol-ii",
+      "artist": "Club Music",
+      "album": "Club Music Vol. II",
+      "url": "https://album.link/tcmkxwzfng9ss",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A25d828f5-8e4c-45ba-89fb-ca89feabd528%3Aa1517834322_10.jpg?table=block&id=3cc4129a-8c52-806d-aba1-d5e0911705c8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "EBM",
+        "New Beat",
+        "Electro-Industrial"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2019-11-01",
+      "year": 2019,
+      "artistIds": [
+        "3cc4129a-8c52-80de-a96f-fcad16e92880"
+      ],
+      "artists": [
+        "Club Music"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80da-9e4c-dde8e1938bda"
+      ],
+      "labels": [
+        "Chicago Research"
+      ]
+    },
+    {
+      "id": "3cc4129a-8c52-804d-9db3-eb772ae4ce4e",
+      "slug": "club-music-club-music-vol-i",
+      "artist": "Club Music",
+      "album": "Club Music Vol. I",
+      "url": "https://album.link/vrcrsrqrnh09k",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A43a8b207-09ad-418b-847b-2e6a7692e4cd%3Aa4225177205_10.jpg?table=block&id=3cc4129a-8c52-804d-9db3-eb772ae4ce4e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "EBM",
+        "New Beat",
+        "Electro-Industrial"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2019-08-02",
+      "year": 2019,
+      "artistIds": [
+        "3cc4129a-8c52-80de-a96f-fcad16e92880"
+      ],
+      "artists": [
+        "Club Music"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80da-9e4c-dde8e1938bda"
+      ],
+      "labels": [
+        "Chicago Research"
       ]
     },
     {
@@ -34927,6 +35045,26 @@
       "videoIds": []
     },
     {
+      "id": "3cd4129a-8c52-802c-8745-fff257f071ee",
+      "slug": "boss",
+      "name": "Boss",
+      "country": "FR",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80cc-91fa-ef6609a9454a"
+      ],
+      "genres": [
+        "Punk'n'Roll",
+        "Garage Punk"
+      ],
+      "labelIds": [
+        "2474129a-8c52-800e-a91a-f36d335f66e0"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2444129a-8c52-805f-bddd-f88098633684",
       "slug": "boston-babies",
       "name": "Boston Babies",
@@ -36106,6 +36244,28 @@
       ],
       "labelIds": [
         "2504129a-8c52-80d8-8930-fee6e1bd6466"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cc4129a-8c52-80de-a96f-fcad16e92880",
+      "slug": "club-music",
+      "name": "Club Music",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-806d-aba1-d5e0911705c8",
+        "3cc4129a-8c52-804d-9db3-eb772ae4ce4e"
+      ],
+      "genres": [
+        "EBM",
+        "New Beat",
+        "Electro-Industrial"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80da-9e4c-dde8e1938bda"
       ],
       "videoIds": []
     },
@@ -41282,26 +41442,6 @@
       ],
       "labelIds": [
         "3c84129a-8c52-8069-a702-eef1027504e7"
-      ],
-      "videoIds": []
-    },
-    {
-      "id": "2414129a-8c52-800a-92fb-ceb904ac44bc",
-      "slug": "jimi-tenor",
-      "name": "Jimi Tenor",
-      "country": "FI",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "fc78c0ac-aa0e-4cd2-a6a8-aa9847df46c4"
-      ],
-      "genres": [
-        "Jazz",
-        "Funk"
-      ],
-      "labelIds": [
-        "2434129a-8c52-80dd-821a-cceae600384b"
       ],
       "videoIds": []
     },
@@ -49385,6 +49525,27 @@
       "videoIds": []
     },
     {
+      "id": "3cc4129a-8c52-804d-bf08-d16a1d63e3f0",
+      "slug": "stingray",
+      "name": "Stingray",
+      "country": "GB",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-808b-9ee0-e24497b71f15"
+      ],
+      "genres": [
+        "Crossover Thrash",
+        "Hardcore Punk",
+        "D-Beat"
+      ],
+      "labelIds": [
+        "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "37f4129a-8c52-80c2-8df0-e129efd28274",
       "slug": "subsonic-eye",
       "name": "Subsonic Eye",
@@ -54833,6 +54994,22 @@
       ]
     },
     {
+      "id": "3cc4129a-8c52-80da-9e4c-dde8e1938bda",
+      "slug": "chicago-research",
+      "name": "Chicago Research",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://chicagoresearch.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cc4129a-8c52-806d-aba1-d5e0911705c8",
+        "3cc4129a-8c52-804d-9db3-eb772ae4ce4e"
+      ],
+      "artistIds": [
+        "3cc4129a-8c52-80de-a96f-fcad16e92880"
+      ]
+    },
+    {
       "id": "2c64129a-8c52-8017-8054-ce3055e35e15",
       "slug": "choke-artist",
       "name": "Choke Artist",
@@ -58270,6 +58447,7 @@
       "bandcamp": "https://lavidaesunmus.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
+        "3cc4129a-8c52-808b-9ee0-e24497b71f15",
         "2ac4129a-8c52-806b-b5a2-c2f34e8481be",
         "22c4129a-8c52-80a8-8a82-fcec336ccb20",
         "005e74cd-7219-488f-8f38-6df3bd440a99",
@@ -58279,6 +58457,7 @@
         "009646a2-780c-4254-a080-bf3fa62d3e40"
       ],
       "artistIds": [
+        "3cc4129a-8c52-804d-bf08-d16a1d63e3f0",
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c",
         "2514129a-8c52-8011-9ad1-ddc3245e1ed9",
         "2484129a-8c52-804d-b61d-d6c4c4552b87",
@@ -62187,14 +62366,16 @@
         "2314129a-8c52-80ee-957b-d4e4c6155823",
         "e927bf04-04fa-4827-89d9-acf3123200a4",
         "76f8a8b5-f371-42e5-a48b-517eca0ecb91",
-        "afd60682-390c-4b6d-8e7e-688f6c73c134"
+        "afd60682-390c-4b6d-8e7e-688f6c73c134",
+        "3cd4129a-8c52-80cc-91fa-ef6609a9454a"
       ],
       "artistIds": [
         "32c4129a-8c52-80be-afe6-e7c8a2d1b820",
         "2494129a-8c52-809f-a56f-cf071a4e6216",
         "2434129a-8c52-8040-a206-f275114bb194",
         "2504129a-8c52-80c2-878f-de0f8a1d7795",
-        "2424129a-8c52-8086-b61b-ca5dd82f932d"
+        "2424129a-8c52-8086-b61b-ca5dd82f932d",
+        "3cd4129a-8c52-802c-8745-fff257f071ee"
       ]
     },
     {

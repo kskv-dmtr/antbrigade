@@ -27,6 +27,10 @@ const thumb = thumbSrc(video, 960);
    строка условная: без даты внизу остаётся одна кнопка. */
 const dateText = formatDate(video.released);
 
+/* Дата оригинала — у роликов, выложенных много позже съёмки. Показывается
+   только здесь: порядок в списках держит released, как и у релиза. */
+const origText = formatDate(video.origReleased);
+
 /* Другие клипы тех же исполнителей. Через Map, а не через фильтр: у клипа
    бывает двое исполнителей, и общий ролик иначе попал бы в список дважды.
 
@@ -106,6 +110,10 @@ const discography = [...new Map(
 
           <div class="detail__dates">
             {dateText && <p class="detail__fact">{dateText}</p>}
+
+            {origText && (
+              <p class="detail__fact detail__fact--faint">Originally released {origText}</p>
+            )}
           </div>
         </div>
       </div>

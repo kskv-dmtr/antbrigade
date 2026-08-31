@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T14:44:04Z",
+  "generatedAt": "2026-08-31T14:59:40Z",
   "counts": {
     "albums": 1118,
     "artists": 998,
@@ -33191,36 +33191,6 @@
       ]
     },
     {
-      "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
-      "slug": "yadava-it-rains-here",
-      "artist": "Yadava",
-      "album": "It Rains Here",
-      "url": "https://album.link/sz8dzhmf7whbz",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Aae634444-142c-4fbb-839c-78218930a419%3Aa3550446877_10.jpg?table=block&id=1232e5c2-48d8-496e-aa9e-7f82a50f22c1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [
-        "Downtempo",
-        "Deep House"
-      ],
-      "types": [
-        "Album"
-      ],
-      "released": "2020-07-22",
-      "year": 2020,
-      "origReleased": "2018-06-01",
-      "artistIds": [
-        "2524129a-8c52-800f-b39b-c4646ab57cee"
-      ],
-      "artists": [
-        "Yadava"
-      ],
-      "labelIds": [
-        "2524129a-8c52-8012-b545-c65c1442115e"
-      ],
-      "labels": [
-        "Church"
-      ]
-    },
-    {
       "id": "f16e9641-bf53-475e-8450-e22c864cd19e",
       "slug": "futuro-terror-sangre",
       "artist": "Futuro Terror",
@@ -33792,6 +33762,36 @@
       ],
       "labels": [
         "Far Out Recordings"
+      ]
+    },
+    {
+      "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
+      "slug": "yadava-it-rains-here",
+      "artist": "Yadava",
+      "album": "It Rains Here",
+      "url": "https://album.link/sz8dzhmf7whbz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aae634444-142c-4fbb-839c-78218930a419%3Aa3550446877_10.jpg?table=block&id=1232e5c2-48d8-496e-aa9e-7f82a50f22c1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Deep House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-06-01",
+      "year": 2018,
+      "origReleased": null,
+      "artistIds": [
+        "2524129a-8c52-800f-b39b-c4646ab57cee"
+      ],
+      "artists": [
+        "Yadava"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8012-b545-c65c1442115e"
+      ],
+      "labels": [
+        "Church"
       ]
     },
     {
@@ -65118,6 +65118,7 @@
       "kind": "Official Video",
       "released": "2013-05-15",
       "year": 2013,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-8011-be30-ca3659f3e880"
       ],
@@ -65130,6 +65131,7 @@
       "kind": "Official Video",
       "released": "2023-09-06",
       "year": 2023,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
       ],
@@ -65142,6 +65144,7 @@
       "kind": "Official Video",
       "released": "2026-05-06",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-800a-826f-dd385decf385"
       ],
@@ -65154,6 +65157,7 @@
       "kind": "Official Visualizer",
       "released": "2026-08-11",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3cb4129a-8c52-80c8-b478-fca9935731a1"
       ],
@@ -65166,6 +65170,7 @@
       "kind": "Official Video",
       "released": "2024-09-17",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-8040-a206-f275114bb194"
       ],
@@ -65178,6 +65183,7 @@
       "kind": "Official Video",
       "released": "2024-08-21",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24a4129a-8c52-80c1-9676-f010bbf73862"
       ],
@@ -65190,6 +65196,7 @@
       "kind": "Official Video",
       "released": "2013-01-08",
       "year": 2013,
+      "origReleased": null,
       "artistIds": [
         "2494129a-8c52-80fd-905f-d7c6bcee8268"
       ],
@@ -65202,6 +65209,7 @@
       "kind": "Official Video",
       "released": "2024-07-18",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2484129a-8c52-808a-ac1b-ed859e33f197"
       ],
@@ -65214,6 +65222,7 @@
       "kind": "Official Video",
       "released": "2026-08-24",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2534129a-8c52-806b-863e-f2bd6a4239a9"
       ],
@@ -65226,6 +65235,7 @@
       "kind": "Official Video",
       "released": "2024-06-12",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-8044-86c1-e381c8e3729f"
       ],
@@ -65238,6 +65248,7 @@
       "kind": "Official Video",
       "released": "2025-09-19",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2894129a-8c52-80d7-a3d3-cf8d088ad296"
       ],
@@ -65250,6 +65261,7 @@
       "kind": "Official Video",
       "released": "2024-07-12",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2424129a-8c52-807f-998f-f0675dd4ecac"
       ],
@@ -65262,6 +65274,7 @@
       "kind": "Official Video",
       "released": "2025-09-04",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2784129a-8c52-80bd-a66f-f6ecd160f2d0"
       ],
@@ -65274,6 +65287,7 @@
       "kind": "Official Video",
       "released": "2024-08-20",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-80ea-9774-cfa180722a96"
       ],
@@ -65286,6 +65300,7 @@
       "kind": "Official Video",
       "released": "2026-04-16",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3c54129a-8c52-8092-a0f7-e31cfc8e52e5"
       ],
@@ -65298,6 +65313,7 @@
       "kind": "Official Video",
       "released": "2024-09-18",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-804c-820e-e24867e92943"
       ],
@@ -65310,6 +65326,7 @@
       "kind": "Official Video",
       "released": "2024-10-25",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-80a5-958a-f8794c88e67b",
         "2414129a-8c52-805e-84b1-dfb6fbd20ab9"
@@ -65323,6 +65340,7 @@
       "kind": "Official Video",
       "released": "2024-07-25",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-80a5-958a-f8794c88e67b",
         "2434129a-8c52-80d5-88d2-cc1cbf65f233"
@@ -65336,6 +65354,7 @@
       "kind": "Official Video",
       "released": "2026-07-31",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2524129a-8c52-80d8-960b-edb32e8a4eaf"
       ],
@@ -65348,6 +65367,7 @@
       "kind": "Official Video",
       "released": "2024-03-07",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-808d-adde-ea2a0edcd33a",
         "2434129a-8c52-8013-b879-daddf61fdb34"
@@ -65361,6 +65381,7 @@
       "kind": "Official Video",
       "released": "2026-08-28",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3ca4129a-8c52-8080-b130-c0b6eef3503e"
       ],
@@ -65373,6 +65394,7 @@
       "kind": "Live Performance",
       "released": "2026-05-13",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "24a4129a-8c52-80b2-b0c9-e2766652e445"
       ],
@@ -65385,6 +65407,7 @@
       "kind": "Official Video",
       "released": "2025-03-19",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
         "2414129a-8c52-805f-b3ca-dc3408e30cf8"
@@ -65398,6 +65421,7 @@
       "kind": "Official Video",
       "released": "2025-04-22",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-805f-b3ca-dc3408e30cf8",
         "2414129a-8c52-803f-84bf-e1d9f7fb7397"
@@ -65411,6 +65435,7 @@
       "kind": "Official Video",
       "released": "2025-10-27",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "3bd4129a-8c52-80df-ab67-f7fdf0d9c626"
       ],
@@ -65423,6 +65448,7 @@
       "kind": "Official Video",
       "released": "2024-06-18",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-80e3-8917-de97363ee8b9"
       ],
@@ -65435,6 +65461,7 @@
       "kind": "Official Video",
       "released": "2025-03-18",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
@@ -65447,6 +65474,7 @@
       "kind": "Official Video",
       "released": "2026-03-25",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
@@ -65459,6 +65487,7 @@
       "kind": "Official Video",
       "released": "2024-07-17",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
       ],
@@ -65471,6 +65500,7 @@
       "kind": "Live Performance",
       "released": "2024-03-22",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-8062-8072-d25aba1f3aab"
       ],
@@ -65483,6 +65513,7 @@
       "kind": "Live Performance",
       "released": "2025-07-04",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-8062-8072-d25aba1f3aab"
       ],
@@ -65495,6 +65526,7 @@
       "kind": "Official Video",
       "released": "2024-07-10",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-805e-84b1-dfb6fbd20ab9",
         "24f4129a-8c52-80aa-ad15-ca73c90e9124",
@@ -65509,6 +65541,7 @@
       "kind": "Official Video",
       "released": "2025-08-15",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2504129a-8c52-8005-b193-cb5c07e82375"
       ],
@@ -65521,6 +65554,7 @@
       "kind": "Live Performance",
       "released": "2026-05-12",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
       ],
@@ -65533,6 +65567,7 @@
       "kind": "Official Video",
       "released": "2025-09-09",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
       ],
@@ -65545,6 +65580,7 @@
       "kind": "Official Video",
       "released": "2023-03-03",
       "year": 2023,
+      "origReleased": null,
       "artistIds": [
         "2ac4129a-8c52-8063-ba16-f4f3cfe2a15c"
       ],
@@ -65557,6 +65593,7 @@
       "kind": "Official Video",
       "released": "2018-06-20",
       "year": 2018,
+      "origReleased": null,
       "artistIds": [
         "2504129a-8c52-8084-81c4-df8d7f572db2"
       ],
@@ -65569,6 +65606,7 @@
       "kind": "Official Video",
       "released": "2026-05-05",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3ae4129a-8c52-808c-9c06-d2927dc7bae0"
       ],
@@ -65581,6 +65619,7 @@
       "kind": "Official Video",
       "released": "2024-07-16",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-8089-bd74-cf956ca4a0d1",
         "24f4129a-8c52-801b-aea6-ea56a2a2d5a0"
@@ -65594,6 +65633,7 @@
       "kind": "Official Video",
       "released": "2024-10-17",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-80ba-b704-d7b64e3ae73c"
       ],
@@ -65606,6 +65646,7 @@
       "kind": "Official Video",
       "released": "2026-08-02",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3b74129a-8c52-809a-b128-d980a5f8d12d"
       ],
@@ -65618,6 +65659,7 @@
       "kind": "Official Video",
       "released": "2026-08-11",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3b74129a-8c52-809a-b128-d980a5f8d12d"
       ],
@@ -65630,6 +65672,7 @@
       "kind": "Official Video",
       "released": "2024-08-30",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-80de-ba69-f43b6a41ec4a"
       ],
@@ -65642,6 +65685,7 @@
       "kind": "Official Video",
       "released": "2011-09-02",
       "year": 2011,
+      "origReleased": "1980-09-05",
       "artistIds": [
         "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60"
       ],
@@ -65654,6 +65698,7 @@
       "kind": "Official Video",
       "released": "2012-01-21",
       "year": 2012,
+      "origReleased": null,
       "artistIds": [
         "2424129a-8c52-80ab-bb89-c261c7561370"
       ],
@@ -65666,6 +65711,7 @@
       "kind": "Official Video",
       "released": "2024-07-17",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
       ],
@@ -65678,6 +65724,7 @@
       "kind": "Live Performance",
       "released": "2022-09-27",
       "year": 2022,
+      "origReleased": null,
       "artistIds": [
         "2504129a-8c52-8032-814b-f1fd9d407286"
       ],
@@ -65690,6 +65737,7 @@
       "kind": "Official Video",
       "released": "2024-09-18",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2504129a-8c52-804c-a693-dc85640a23de",
         "24f4129a-8c52-80aa-950d-c6b4128158db"
@@ -65703,6 +65751,7 @@
       "kind": "Live Performance",
       "released": "2026-07-15",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3b54129a-8c52-8071-8b85-dbf65bc58b71"
       ],
@@ -65715,6 +65764,7 @@
       "kind": "Official Video",
       "released": "2021-07-19",
       "year": 2021,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7",
         "2414129a-8c52-803b-b033-e9640796d102"
@@ -65728,6 +65778,7 @@
       "kind": "Official Video",
       "released": "2026-05-07",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ],
@@ -65740,6 +65791,7 @@
       "kind": "Official Video",
       "released": "2025-07-03",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ],
@@ -65752,6 +65804,7 @@
       "kind": "Official Video",
       "released": "2017-06-08",
       "year": 2017,
+      "origReleased": null,
       "artistIds": [
         "24b4129a-8c52-801e-a852-cd618201c873"
       ],
@@ -65764,6 +65817,7 @@
       "kind": "Official Video",
       "released": "2007-04-16",
       "year": 2007,
+      "origReleased": null,
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
       ],
@@ -65776,6 +65830,7 @@
       "kind": "Official Video",
       "released": "2018-08-29",
       "year": 2018,
+      "origReleased": null,
       "artistIds": [
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
       ],
@@ -65788,6 +65843,7 @@
       "kind": "Official Video",
       "released": "2025-04-09",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2404129a-8c52-8035-a990-db8919c35959"
       ],
@@ -65800,6 +65856,7 @@
       "kind": "Official Video",
       "released": "2024-07-26",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2524129a-8c52-80cf-9fb4-f38fd194499c"
       ],
@@ -65812,6 +65869,7 @@
       "kind": "Official Video",
       "released": "2024-07-18",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-801b-b600-e0e7fd747383",
         "2524129a-8c52-801e-a64d-c337e942f8b1"
@@ -65825,6 +65883,7 @@
       "kind": "Live Performance",
       "released": "2026-01-21",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
       ],
@@ -65837,6 +65896,7 @@
       "kind": "Official Video",
       "released": "2024-06-06",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
       ],
@@ -65849,6 +65909,7 @@
       "kind": "Official Video",
       "released": "2025-08-22",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2524129a-8c52-80ea-93f9-fe0796537a7f"
       ],
@@ -65861,6 +65922,7 @@
       "kind": "Official Video",
       "released": "2025-04-22",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "37f4129a-8c52-80c2-8df0-e129efd28274"
       ],
@@ -65873,6 +65935,7 @@
       "kind": "Official Video",
       "released": "2022-05-26",
       "year": 2022,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-80e4-bc92-e411321f1ca6"
       ],
@@ -65885,6 +65948,7 @@
       "kind": "Official Video",
       "released": "2024-08-27",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "24f4129a-8c52-8034-b5f8-c86b33e20d27"
       ],
@@ -65897,6 +65961,7 @@
       "kind": "Official Video",
       "released": "2026-08-06",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "2494129a-8c52-80e3-bc37-fb7824da0196"
       ],
@@ -65909,6 +65974,7 @@
       "kind": "Official Video",
       "released": "2025-09-19",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
       ],
@@ -65921,6 +65987,7 @@
       "kind": "Official Video",
       "released": "2009-03-13",
       "year": 2009,
+      "origReleased": "1983-08-26",
       "artistIds": [
         "3c54129a-8c52-806a-b956-db14a7f4a286"
       ],
@@ -65933,6 +66000,7 @@
       "kind": "Official Video",
       "released": "2009-03-13",
       "year": 2009,
+      "origReleased": "1984-09-01",
       "artistIds": [
         "3c54129a-8c52-806a-b956-db14a7f4a286"
       ],
@@ -65945,6 +66013,7 @@
       "kind": "Official Video",
       "released": "2025-09-15",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f",
         "2754129a-8c52-80ea-af7b-c26748dfe1cd"
@@ -65958,6 +66027,7 @@
       "kind": "Official Video",
       "released": "2020-02-27",
       "year": 2020,
+      "origReleased": null,
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f"
       ],
@@ -65970,6 +66040,7 @@
       "kind": "Official Video",
       "released": "2024-07-09",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2444129a-8c52-8054-a02f-f562e02a6cfb"
       ],
@@ -65982,6 +66053,7 @@
       "kind": "Official Video",
       "released": "2025-09-16",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2704129a-8c52-806d-bfca-fdbefc14172a"
       ],
@@ -65994,6 +66066,7 @@
       "kind": "Official Video",
       "released": "2026-05-15",
       "year": 2026,
+      "origReleased": null,
       "artistIds": [
         "3744129a-8c52-80ef-9ebe-ec0ed9b8ee26"
       ],
@@ -66006,6 +66079,7 @@
       "kind": "Official Video",
       "released": "2025-04-15",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2554129a-8c52-8058-b86d-c258ac4c6344"
       ],
@@ -66018,6 +66092,7 @@
       "kind": "Official Video",
       "released": "2024-09-24",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "2434129a-8c52-808c-a4f7-fa69a88a9742"
       ],
@@ -66030,6 +66105,7 @@
       "kind": "Official Video",
       "released": "2023-07-10",
       "year": 2023,
+      "origReleased": null,
       "artistIds": [
         "3c84129a-8c52-8089-adcc-ee79cb8b5106"
       ],
@@ -66042,6 +66118,7 @@
       "kind": "Official Video",
       "released": "2024-10-15",
       "year": 2024,
+      "origReleased": null,
       "artistIds": [
         "3454129a-8c52-808c-a823-c75492b83f4d"
       ],
@@ -66054,6 +66131,7 @@
       "kind": "Official Video",
       "released": "2023-08-22",
       "year": 2023,
+      "origReleased": null,
       "artistIds": [
         "2524129a-8c52-80dd-9e61-eb00b3b83af9"
       ],
@@ -66066,6 +66144,7 @@
       "kind": "Official Video",
       "released": "2025-09-24",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ],
@@ -66078,6 +66157,7 @@
       "kind": "Live Performance",
       "released": "2025-07-08",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "2414129a-8c52-805e-b11f-d3d452c6e3a2"
       ],
@@ -66090,6 +66170,7 @@
       "kind": "Official Video",
       "released": "2025-01-09",
       "year": 2025,
+      "origReleased": null,
       "artistIds": [
         "24a4129a-8c52-8082-8335-e14604efa91e"
       ],
@@ -66102,6 +66183,7 @@
       "kind": "Official Video",
       "released": "2022-04-20",
       "year": 2022,
+      "origReleased": null,
       "artistIds": [
         "24a4129a-8c52-8082-8335-e14604efa91e"
       ],

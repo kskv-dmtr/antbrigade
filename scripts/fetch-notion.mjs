@@ -41,7 +41,7 @@ const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
    унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
    лежат осиротевшие значения от удалённой когда-то колонки: в интерфейсе
    Notion их не видно и не поправить. */
-const PV = { url: ']]HZ', artist: 'kaf]', type: '}j]w', date: 'LStn' };
+const PV = { url: ']]HZ', artist: 'kaf]', type: '}j]w', date: 'LStn', origDate: 's^=g' };
 
 const root    = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'albums.json');
@@ -325,6 +325,10 @@ async function main() {
     const title = plainText(prop(v.properties, 'title'));
     if (!title) continue;
     const released = dateStart(prop(v.properties, PV.date));
+    /* Дата оригинала — у роликов, выложенных на YouTube много позже съёмки.
+       Сверить её не с чем: YouTube отдаёт только дату загрузки, она же
+       лежит в released. Держится на знании владельца. */
+    const origReleased = dateStart(prop(v.properties, PV.origDate));
 
     videos.push({
       id: v.id,
@@ -333,6 +337,7 @@ async function main() {
       kind: plainText(prop(v.properties, PV.type)),
       released,
       year: released ? Number(released.slice(0, 4)) : null,
+      origReleased,
       artistIds: relationIds(prop(v.properties, PV.artist))
     });
   }

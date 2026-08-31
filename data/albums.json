@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T14:14:24Z",
+  "generatedAt": "2026-08-31T14:44:04Z",
   "counts": {
     "albums": 1118,
     "artists": 998,
@@ -32148,7 +32148,7 @@
       ],
       "released": "2021-11-19",
       "year": 2021,
-      "origReleased": null,
+      "origReleased": "1991-10-01",
       "artistIds": [
         "3cc4129a-8c52-80cc-b75e-e596cc478561"
       ],
@@ -33191,6 +33191,36 @@
       ]
     },
     {
+      "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
+      "slug": "yadava-it-rains-here",
+      "artist": "Yadava",
+      "album": "It Rains Here",
+      "url": "https://album.link/sz8dzhmf7whbz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aae634444-142c-4fbb-839c-78218930a419%3Aa3550446877_10.jpg?table=block&id=1232e5c2-48d8-496e-aa9e-7f82a50f22c1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Deep House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-07-22",
+      "year": 2020,
+      "origReleased": "2018-06-01",
+      "artistIds": [
+        "2524129a-8c52-800f-b39b-c4646ab57cee"
+      ],
+      "artists": [
+        "Yadava"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8012-b545-c65c1442115e"
+      ],
+      "labels": [
+        "Church"
+      ]
+    },
+    {
       "id": "f16e9641-bf53-475e-8450-e22c864cd19e",
       "slug": "futuro-terror-sangre",
       "artist": "Futuro Terror",
@@ -33704,37 +33734,6 @@
       ]
     },
     {
-      "id": "2f74129a-8c52-8067-a3e8-e85f767ee29f",
-      "slug": "clever-girl-no-drum-and-bass-in-the-jazz-room",
-      "artist": "Clever Girl",
-      "album": "No Drum and Bass in the Jazz Room",
-      "url": "https://album.link/zrqqgm2f9tzhr",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Abc33be1d-09a9-4192-aac9-df6c2bd2b222%3Aa1102744964_10.jpg?table=block&id=2f74129a-8c52-8067-a3e8-e85f767ee29f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [
-        "Math Rock",
-        "Post-Rock",
-        "Jazz-Rock"
-      ],
-      "types": [
-        "EP"
-      ],
-      "released": "2018-11-23",
-      "year": 2018,
-      "origReleased": "2014-04-23",
-      "artistIds": [
-        "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
-      ],
-      "artists": [
-        "Clever Girl"
-      ],
-      "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
-      ],
-      "labels": [
-        "Self-released"
-      ]
-    },
-    {
       "id": "24772b18-8565-47c0-b190-53df4e56cb7d",
       "slug": "pig-destroyer-head-cage",
       "artist": "Pig Destroyer",
@@ -33793,36 +33792,6 @@
       ],
       "labels": [
         "Far Out Recordings"
-      ]
-    },
-    {
-      "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
-      "slug": "yadava-it-rains-here",
-      "artist": "Yadava",
-      "album": "It Rains Here",
-      "url": "https://album.link/sz8dzhmf7whbz",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Aae634444-142c-4fbb-839c-78218930a419%3Aa3550446877_10.jpg?table=block&id=1232e5c2-48d8-496e-aa9e-7f82a50f22c1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [
-        "Downtempo",
-        "Deep House"
-      ],
-      "types": [
-        "Album"
-      ],
-      "released": "2018-06-01",
-      "year": 2018,
-      "origReleased": null,
-      "artistIds": [
-        "2524129a-8c52-800f-b39b-c4646ab57cee"
-      ],
-      "artists": [
-        "Yadava"
-      ],
-      "labelIds": [
-        "2524129a-8c52-8012-b545-c65c1442115e"
-      ],
-      "labels": [
-        "Church"
       ]
     },
     {
@@ -33908,6 +33877,37 @@
       ],
       "artists": [
         "BAT"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Self-released"
+      ]
+    },
+    {
+      "id": "2f74129a-8c52-8067-a3e8-e85f767ee29f",
+      "slug": "clever-girl-no-drum-and-bass-in-the-jazz-room",
+      "artist": "Clever Girl",
+      "album": "No Drum and Bass in the Jazz Room",
+      "url": "https://album.link/zrqqgm2f9tzhr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abc33be1d-09a9-4192-aac9-df6c2bd2b222%3Aa1102744964_10.jpg?table=block&id=2f74129a-8c52-8067-a3e8-e85f767ee29f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock",
+        "Post-Rock",
+        "Jazz-Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2014-04-23",
+      "year": 2014,
+      "origReleased": null,
+      "artistIds": [
+        "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
+      ],
+      "artists": [
+        "Clever Girl"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
@@ -56315,7 +56315,7 @@
       "name": "Church",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://churchofficial.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "1232e5c2-48d8-496e-aa9e-7f82a50f22c1"
@@ -63044,8 +63044,8 @@
         "c70f158e-28b6-4339-af37-348710c79313",
         "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
         "ddf78bc2-c478-4f46-b405-877b53f9a518",
-        "2f74129a-8c52-8067-a3e8-e85f767ee29f",
-        "5618b6c4-09dd-41c5-a869-bd4af0651883"
+        "5618b6c4-09dd-41c5-a869-bd4af0651883",
+        "2f74129a-8c52-8067-a3e8-e85f767ee29f"
       ],
       "artistIds": [
         "3a94129a-8c52-8068-9284-edae16d44b33",
@@ -63146,8 +63146,8 @@
         "2524129a-8c52-801b-820d-f48f3d34ffba",
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
         "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
-        "2f74129a-8c52-80f8-b898-cb4f67ecf40c",
-        "2424129a-8c52-8044-b0ee-ec4e110778f1"
+        "2424129a-8c52-8044-b0ee-ec4e110778f1",
+        "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
       ]
     },
     {

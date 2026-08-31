@@ -22,32 +22,14 @@ const roster   = artistsOf(label.artistIds);
   <Breadcrumbs name={label.name} place />
 
   {/* Устройство то же, что на странице исполнителя: счёт релизов только в
-      заголовке раздела ниже, а справа от имени — страна в квадратных
-      скобках, по нижней его линии. */}
+      заголовке раздела ниже, а страна — под именем, тем же набором, что
+      счётчики на списках. */}
   <div class="page-head">
-    <h1>{label.name}</h1>
-    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
-  </div>
-
-  {/* Под именем линейка, под ней состав во всю ширину. Полоса здесь в одну
-      колонку, а не в две, как у исполнителя: справа от состава ставить
-      нечего, того, что у исполнителя лежит справа, у лейбла нет. Подписи
-      «Artists» нет — по именам видно, что это состав. */}
-  {roster.length > 0 && (
-    <div class="profile-bar profile-bar--wide">
-      {/* Имена набраны и подчёркнуты так же, как жанры у исполнителя и лейбл
-          внизу полосы релиза: ссылка на страницу списка везде выглядит
-          одинаково. */}
-      <p class="meta-line">
-        {roster.map((a, i) => (
-          <>
-            {i > 0 && <span class="sep"> · </span>}
-            <a href={`/artists/${a.slug}`}>{a.name}</a>
-          </>
-        ))}
-      </p>
+    <div class="page-head__name">
+      <h1>{label.name}</h1>
+      {label.country && <p class="counter">[{countryName(label.country)}]</p>}
     </div>
-  )}
+  </div>
 
   {/* Ссылки наружу — своим разделом, как у исполнителя: тот же заголовок,
       та же линейка, кнопки под ней слева, счётчика нет. */}
@@ -57,6 +39,29 @@ const roster   = artistsOf(label.artistIds);
         <h2 class="display display--md">Links</h2>
       </div>
       <ProfileLinks website={label.website} bandcamp={label.bandcamp} youtube={label.youtube} />
+    </section>
+  )}
+
+  {/* Состав — своим разделом, как лейблы на странице исполнителя. Заголовок склоняется по числу, а счётчик
+      стоит справа всегда — как у соседних разделов.
+
+      Имена набраны и подчёркнуты так же, как жанры у исполнителя и лейбл
+      внизу полосы релиза: ссылка на страницу списка везде выглядит
+      одинаково. */}
+  {roster.length > 0 && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">{roster.length > 1 ? 'Artists' : 'Artist'}</h2>
+        <span class="mono">[{roster.length}]</span>
+      </div>
+      <p class="meta-line">
+        {roster.map((a, i) => (
+          <>
+            {i > 0 && <span class="sep"> · </span>}
+            <a href={`/artists/${a.slug}`}>{a.name}</a>
+          </>
+        ))}
+      </p>
     </section>
   )}
 

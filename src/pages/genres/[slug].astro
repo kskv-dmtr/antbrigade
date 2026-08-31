@@ -37,14 +37,14 @@ const roster = [...new Map(
     <h1>{genre.name}</h1>
   </div>
 
-  {/* Под именем линейка, под ней исполнители жанра во всю ширину — та же
-      полоса, что несёт состав на странице лейбла, и тем же межстрочным.
-
-      Подписи нет: строка стоит под именем жанра, и что это имена, видно по
-      ней самой — как состав под именем лейбла и жанры под именем
-      исполнителя, которые тоже идут без подписей. */}
+  {/* Исполнители — своим разделом, как состав на странице лейбла. Заголовок
+      склоняется по числу, счётчик стоит справа всегда — как у соседей. */}
   {roster.length > 0 && (
-    <div class="profile-bar profile-bar--wide">
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">{roster.length > 1 ? 'Artists' : 'Artist'}</h2>
+        <span class="mono">[{roster.length}]</span>
+      </div>
       <p class="meta-line">
         {roster.map((a, i) => (
           <>
@@ -53,7 +53,7 @@ const roster = [...new Map(
           </>
         ))}
       </p>
-    </div>
+    </section>
   )}
 
   <section class="section">

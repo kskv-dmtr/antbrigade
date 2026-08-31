@@ -10,10 +10,19 @@
 
 import { genreFor } from '../lib/db.js';
 
-const { names = [] } = Astro.props;
+/* inline — отдать только ссылки, без своего <p>: на странице исполнителя
+   жанры стоят в общей строке со страной, и второй абзац там не нужен. */
+const { names = [], inline = false } = Astro.props;
 const items = names.map((name) => genreFor(name)).filter(Boolean);
 ---
-{items.length > 0 && (
+{items.length > 0 && (inline ? (
+  items.map((genre, i) => (
+    <>
+      {i > 0 && <span class="sep"> · </span>}
+      <a href={`/genres/${genre.slug}`}>{genre.name}</a>
+    </>
+  ))
+) : (
   <p class="meta-line">
     {items.map((genre, i) => (
       <>
@@ -22,4 +31,4 @@ const items = names.map((name) => genreFor(name)).filter(Boolean);
       </>
     ))}
   </p>
-)}
+))}

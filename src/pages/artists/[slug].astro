@@ -27,12 +27,9 @@ const clips  = videosOf(artist.videoIds);
 const clipsSorted = clips.slice()
   .sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
 
-/* Полосу под именем показываем, только когда в ней есть чему стоять: у
-   артиста без жанров, лейблов и ссылок наружу осталась бы одна линейка
-   поперёк пустоты. Ссылки заполняются в Notion руками, и у большинства
-   записей их нет. Страна в счёт не идёт — она ушла наверх, к имени. */
+/* Раздел ссылок наружу показываем, только когда есть что показать: поля в
+   Notion заполняются руками, и у большинства записей они пустые. */
 const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
-const hasBar   = Boolean(labels.length || artist.genres.length);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
@@ -48,44 +45,27 @@ const hasBar   = Boolean(labels.length || artist.genres.length);
 
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
 
-      Справа от имени — страна в квадратных скобках, тем же набором, что
+      Страна стоит под именем, а не справа от него, и набрана тем же, чем
       счётчики на списках: скобки на сайте означают служебное число или
-      пометку, и страна здесь именно пометка. Выключка по нижней линии имени
-      достаётся от .page-head, он для того и собран — на списках так же
-      стоит счётчик. */}
+      пометку, и страна здесь именно пометка. Просвет до имени — те же 10,
+      что между строками в шапке релиза: имя со страной такая же пара, что
+      название с исполнителем. */}
   <div class="page-head">
-    <h1>{artist.name}</h1>
-    {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
-  </div>
+    <div class="page-head__name">
+      <h1>{artist.name}</h1>
 
-  {/* Под именем — линейка, под ней две колонки: слева жанры, справа
-      название лейбла. Раздел разбит по той же силовой линии, что делит
-      полосу релиза: левая колонка шириной с квадратную обложку в полосе
-      16:7, то есть 43.75% ширины, и просвет между колонками те же 32
-      пикселя. Содержимое правой прижато к дальнему правому краю — туда же,
-      где кончается страна строкой выше.
-
-      Подписей «Label» и «Genres» нет — как и на полосе релиза: по строке
-      видно, где лейбл, а где жанры. Поэтому и не список определений. */}
-  {hasBar && (
-    <div class="profile-bar">
-      <GenreLinks names={artist.genres} />
-
-      {/* Лейбл набран тем же, чем дата внизу полосы релиза, и лейблы
-          разделены точкой, а не запятой: их бывает до шести, а запятая на
-          сайте разделяет внутри значения, не значения между собой. */}
-      {labels.length > 0 && (
-        <p class="detail__fact profile-bar__label">
-          {labels.map((l, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/labels/${l.slug}`}>{l.name}</a>
-            </>
-          ))}
+      {/* Страна и жанры одной строкой через точку. Страна в скобках, как
+          счётчики на списках: скобки на сайте означают служебную пометку.
+          Жанры идут ссылками — тем же подчёркиванием, что везде. */}
+      {(artist.country || artist.genres.length > 0) && (
+        <p class="meta-line">
+          {artist.country && <>[{countryName(artist.country)}]</>}
+          {artist.country && artist.genres.length > 0 && <span class="sep"> · </span>}
+          <GenreLinks names={artist.genres} inline />
         </p>
       )}
     </div>
-  )}
+  </div>
 
   {/* Ссылки наружу — своим разделом, наравне с дискографией и клипами, а не
       строкой в справке. Заголовок и линейка под ним те же, что у соседей;
@@ -101,6 +81,28 @@ const hasBar   = Boolean(labels.length || artist.genres.length);
         <h2 class="display display--md">Links</h2>
       </div>
       <ProfileLinks website={artist.website} bandcamp={artist.bandcamp} youtube={artist.youtube} />
+    </section>
+  )}
+
+  {/* Лейблы — своим разделом, как ссылки наружу. Заголовок склоняется по
+      числу, а счётчик стоит справа всегда — как у соседних разделов.
+
+      Имена набраны и разделены точкой так же, как состав на странице лейбла
+      и жанры в шапке: ссылка на страницу списка везде выглядит одинаково. */}
+  {labels.length > 0 && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">{labels.length > 1 ? 'Labels' : 'Label'}</h2>
+        <span class="mono">[{labels.length}]</span>
+      </div>
+      <p class="meta-line">
+        {labels.map((l, i) => (
+          <>
+            {i > 0 && <span class="sep"> · </span>}
+            <a href={`/labels/${l.slug}`}>{l.name}</a>
+          </>
+        ))}
+      </p>
     </section>
   )}
 

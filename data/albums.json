@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T11:50:37Z",
+  "generatedAt": "2026-08-31T13:57:28Z",
   "counts": {
-    "albums": 1117,
+    "albums": 1118,
     "artists": 998,
     "labels": 623,
     "videos": 82
@@ -31078,6 +31078,36 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-808a-a27b-fa93c1eeb30e",
+      "slug": "the-riptides-wave-rock",
+      "artist": "The Riptides",
+      "album": "Wave Rock",
+      "url": "https://album.link/jqm4jnthvqstw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A260cfbfd-c52c-43bf-bbce-0bdc9b245513%3Aab67616d0000b27378fd05f7671f474e4905e7c3.jpg?table=block&id=3cd4129a-8c52-808a-a27b-fa93c1eeb30e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Power Pop",
+        "New Wave",
+        "Surf Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-19",
+      "year": 2021,
+      "artistIds": [
+        "3cc4129a-8c52-80cc-b75e-e596cc478561"
+      ],
+      "artists": [
+        "The Riptides"
+      ],
+      "labelIds": [
+        "3cc4129a-8c52-80db-b462-f79a56bb6ef2"
+      ],
+      "labels": [
+        "IS Music"
+      ]
+    },
+    {
       "id": "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e",
       "slug": "jungle-by-night-algorhythm",
       "artist": "Jungle by Night",
@@ -34603,7 +34633,7 @@
       "name": "Béton Armé",
       "country": "CA",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://betonarmeoimtl.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "992ca047-c5e8-4621-aa3e-3ceb764a32b8"
@@ -36221,7 +36251,7 @@
       "name": "Clever Girl",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://clevergirl.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2f74129a-8c52-8067-a3e8-e85f767ee29f"
@@ -51226,6 +51256,7 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
+        "3cd4129a-8c52-808a-a27b-fa93c1eeb30e",
         "3cc4129a-8c52-8098-acf0-c76f857ab95d"
       ],
       "genres": [
@@ -58009,6 +58040,7 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
+        "3cd4129a-8c52-808a-a27b-fa93c1eeb30e",
         "3cc4129a-8c52-8098-acf0-c76f857ab95d"
       ],
       "artistIds": [

@@ -22,13 +22,11 @@ const roster   = artistsOf(label.artistIds);
   <Breadcrumbs name={label.name} place />
 
   {/* Устройство то же, что на странице исполнителя: счёт релизов только в
-      заголовке раздела ниже, а страна — под именем, тем же набором, что
-      счётчики на списках. */}
+      заголовке раздела ниже, а страна — справа от имени, по нижней его
+      линии, тем же набором, что счётчики на списках. */}
   <div class="page-head">
-    <div class="page-head__name">
-      <h1>{label.name}</h1>
-      {label.country && <p class="counter">[{countryName(label.country)}]</p>}
-    </div>
+    <h1>{label.name}</h1>
+    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
   </div>
 
   {/* Ссылки наружу — своим разделом, как у исполнителя: тот же заголовок,

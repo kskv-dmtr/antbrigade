@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T15:09:57Z",
+  "generatedAt": "2026-08-31T20:08:55Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17698,6 +17698,71 @@
       "upc": "5050580715783",
       "tracks": 10,
       "releaseDate": "2020-08-26"
+    },
+    "3cd4129a-8c52-8086-9b81-fa226e9d52a5": {
+      "source": "https://album.link/pqfw7nxxg3v3z",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7tt3vmIfxLV30N1UJPmTNf"
+      },
+      "upc": "634457264717",
+      "tracks": 7,
+      "releaseDate": "2026-08-28"
+    },
+    "3cd4129a-8c52-8025-b3e5-c6f82ade1b3e": {
+      "source": "https://album.link/mrfxgqzb4sprc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1pc15m0RSArRV0kiVkIvPq",
+        "pandora": "https://www.pandora.com/AL:2498505",
+        "deezer": "https://www.deezer.com/album/687803001",
+        "amazonMusic": "https://music.amazon.com/albums/B08KTMFNVN",
+        "tidal": "https://listen.tidal.com/album/407366318",
+        "napster": "https://play.napster.com/album/alb.528835956",
+        "yandex": "https://music.yandex.ru/album/12754633",
+        "anghami": "https://play.anghami.com/album/1015930726?refer=linktree",
+        "bandcamp": "https://thevision.bandcamp.com/album/the-vision-feat-honey-dijon-dames-brown-roy-ayers-nikki-o-andreya-triana-ben-westbeech",
+        "amazonStore": "https://amazon.com/dp/B08KTMFNVN"
+      },
+      "upc": "826194506599",
+      "tracks": 14,
+      "releaseDate": "2020-11-13"
+    },
+    "3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e": {
+      "source": "https://album.link/8stfhsgz69hf2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1tGb56safZmPrAgRrDQuR8",
+        "pandora": "https://www.pandora.com/AL:632863",
+        "deezer": "https://www.deezer.com/album/544751202",
+        "amazonMusic": "https://music.amazon.com/albums/B0CV4PZMSJ",
+        "tidal": "https://listen.tidal.com/album/344564348",
+        "napster": "https://play.napster.com/album/alb.38652648",
+        "yandex": "https://music.yandex.ru/album/992665",
+        "boomplay": "https://www.boomplay.com/albums/11354396",
+        "anghami": "https://play.anghami.com/album/1048599005?refer=linktree",
+        "bandcamp": "https://evil-army.bandcamp.com/album/evil-army",
+        "amazonStore": "https://amazon.com/dp/B0CV4PZMSJ"
+      },
+      "upc": "198080565752",
+      "tracks": 13,
+      "releaseDate": "2009-01-26"
+    },
+    "3cd4129a-8c52-8039-a0a8-fd4becb36387": {
+      "source": "https://album.link/3crrd3nf2f2jw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/39VaqEkzu1GAw1pESi2tBt",
+        "pandora": "https://www.pandora.com/AL:2023824",
+        "deezer": "https://www.deezer.com/album/84618332",
+        "amazonMusic": "https://music.amazon.com/albums/B07N5FYGFX",
+        "tidal": "https://listen.tidal.com/album/102548011",
+        "napster": "https://play.napster.com/album/alb.347493190",
+        "yandex": "https://music.yandex.ru/album/6661010",
+        "boomplay": "https://www.boomplay.com/albums/7351549",
+        "anghami": "https://play.anghami.com/album/5996520?refer=linktree",
+        "bandcamp": "https://800line.bandcamp.com/album/disco-jazz",
+        "amazonStore": "https://amazon.com/dp/B07N5FYGFX"
+      },
+      "upc": "825764180566",
+      "tracks": 4,
+      "releaseDate": "1982-01-01"
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T15:09:46Z",
+  "generatedAt": "2026-08-31T20:08:29Z",
   "counts": {
-    "albums": 1119,
+    "albums": 1123,
     "artists": 998,
-    "labels": 623,
+    "labels": 625,
     "videos": 82
   },
   "albums": [
@@ -36,6 +36,36 @@
       ],
       "labels": [
         "Jagjaguwar"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-8086-9b81-fa226e9d52a5",
+      "slug": "russian-circles-nine",
+      "artist": "Russian Circles",
+      "album": "Nine",
+      "url": "https://album.link/pqfw7nxxg3v3z",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A75191da6-8079-4aa0-ba03-e6e7f899f699%3Aa1666412586_10.jpg?table=block&id=3cd4129a-8c52-8086-9b81-fa226e9d52a5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Metal",
+        "Sludge Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-28",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-80e6-a380-f60243ce3d97"
+      ],
+      "artists": [
+        "Russian Circles"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80ed-86c3-e0d26c986e3f"
+      ],
+      "labels": [
+        "Sargent House"
       ]
     },
     {
@@ -4791,9 +4821,7 @@
       "artistIds": [
         "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
       ],
-      "artists": [
-        "Sam Goku"
-      ],
+      "artists": [],
       "labelIds": [
         "3164129a-8c52-8050-be76-d856ba5d0622"
       ],
@@ -5832,9 +5860,7 @@
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ],
-      "artists": [
-        "YĪN YĪN"
-      ],
+      "artists": [],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
       ],
@@ -11388,9 +11414,7 @@
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
         "2414129a-8c52-805f-b3ca-dc3408e30cf8"
       ],
-      "artists": [
-        "Durand Jones & The Indications"
-      ],
+      "artists": [],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
       ],
@@ -11818,9 +11842,7 @@
       "artistIds": [
         "2414129a-8c52-805e-b11f-d3d452c6e3a2"
       ],
-      "artists": [
-        "Yuuf"
-      ],
+      "artists": [],
       "labelIds": [
         "2484129a-8c52-8053-9a67-cfd3b9aa2dd9"
       ],
@@ -21532,9 +21554,7 @@
       "artistIds": [
         "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
       ],
-      "artists": [
-        "Sam Goku"
-      ],
+      "artists": [],
       "labelIds": [
         "24a4129a-8c52-802a-83c0-e7232cfbaa33"
       ],
@@ -25882,9 +25902,7 @@
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ],
-      "artists": [
-        "YĪN YĪN"
-      ],
+      "artists": [],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
       ],
@@ -33098,6 +33116,37 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-8025-b3e5-c6f82ade1b3e",
+      "slug": "the-vision-the-vision",
+      "artist": "The Vision",
+      "album": "The Vision",
+      "url": "https://album.link/mrfxgqzb4sprc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A20425a8e-ea9a-4c0d-a0a3-c9befdc0f08c%3Aa0304229508_10.jpg?table=block&id=3cd4129a-8c52-8025-b3e5-c6f82ade1b3e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Nu-Disco",
+        "Funky House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-11-13",
+      "year": 2020,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-80f8-bf09-fbe5efaefdb6"
+      ],
+      "artists": [
+        "The Vision"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8093-8e20-e9bce305340d"
+      ],
+      "labels": [
+        "Defected Records"
+      ]
+    },
+    {
       "id": "a608372f-55df-417b-b29f-ed8752af1898",
       "slug": "southern-shores-siena",
       "artist": "Southern Shores",
@@ -33977,6 +34026,36 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e",
+      "slug": "evil-army-evil-army",
+      "artist": "Evil Army",
+      "album": "Evil Army",
+      "url": "https://album.link/8stfhsgz69hf2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A975f7be0-23ba-4f60-ba91-77fdfcc083d4%3Aa4254975044_10.jpg?table=block&id=3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2009-01-26",
+      "year": 2009,
+      "origReleased": "2006-01-01",
+      "artistIds": [
+        "3cd4129a-8c52-8045-94c2-e8849d6fde07"
+      ],
+      "artists": [
+        "Evil Army"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-8078-adb0-df6297674486"
+      ],
+      "labels": [
+        "Hells Headbangers Records"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-80c1-83f2-d11e766bd01a",
       "slug": "duster-stratosphere",
       "artist": "Duster",
@@ -34068,6 +34147,37 @@
       ],
       "labels": [
         "Shredder Records"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-8039-a0a8-fd4becb36387",
+      "slug": "rupa-disco-jazz",
+      "artist": "Rupa",
+      "album": "Disco Jazz",
+      "url": "https://album.link/3crrd3nf2f2jw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A71ab2fcc-7561-4405-be6b-ea0e6365be56%3Aa3835360885_10.jpg?table=block&id=3cd4129a-8c52-8039-a0a8-fd4becb36387&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco",
+        "Funk",
+        "Indian Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "1982-01-01",
+      "year": 1982,
+      "origReleased": null,
+      "artistIds": [
+        "3cd4129a-8c52-802e-82bb-cd2c94b1863a"
+      ],
+      "artists": [
+        "Rupa"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8044-b062-ea28dbfaf226"
+      ],
+      "labels": [
+        "Numero Group"
       ]
     },
     {
@@ -39046,29 +39156,6 @@
       "videoIds": []
     },
     {
-      "id": "2414129a-8c52-803f-84bf-e1d9f7fb7397",
-      "slug": "durand-jones-the-indications",
-      "name": "Durand Jones & The Indications",
-      "country": "US",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "21f4129a-8c52-806c-88c0-f1aa033f1df4"
-      ],
-      "genres": [
-        "Neo-Soul",
-        "R'n'B"
-      ],
-      "labelIds": [
-        "2434129a-8c52-8022-abd2-d0c412936e59"
-      ],
-      "videoIds": [
-        "2424129a-8c52-805d-ad8f-d0a05684ad23",
-        "2414129a-8c52-80f2-a7df-d32535a51e60"
-      ]
-    },
-    {
       "id": "28a4129a-8c52-80b1-844d-c094893c789f",
       "slug": "dust",
       "name": "dust",
@@ -39593,6 +39680,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80bd-a5cb-cf4dd4ffece4"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-8045-94c2-e8849d6fde07",
+      "slug": "evil-army",
+      "name": "Evil Army",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e"
+      ],
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-8078-adb0-df6297674486"
       ],
       "videoIds": []
     },
@@ -49188,6 +49295,47 @@
       "videoIds": []
     },
     {
+      "id": "3cd4129a-8c52-802e-82bb-cd2c94b1863a",
+      "slug": "rupa",
+      "name": "Rupa",
+      "country": "IN",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-8039-a0a8-fd4becb36387"
+      ],
+      "genres": [
+        "Disco",
+        "Funk",
+        "Indian Pop"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8044-b062-ea28dbfaf226"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-80e6-a380-f60243ce3d97",
+      "slug": "russian-circles",
+      "name": "Russian Circles",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://russiancircles.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-8086-9b81-fa226e9d52a5"
+      ],
+      "genres": [
+        "Post-Metal",
+        "Sludge Metal"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80ed-86c3-e0d26c986e3f"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2c94129a-8c52-809c-b3f2-cb7064d6ce56",
       "slug": "ruthven",
       "name": "Ruthven",
@@ -49375,29 +49523,6 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
-      ],
-      "videoIds": []
-    },
-    {
-      "id": "2414129a-8c52-8020-b53b-c21aa6f6c6ec",
-      "slug": "sam-goku",
-      "name": "Sam Goku",
-      "country": "DE",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "3164129a-8c52-809e-9684-fcc92213317b",
-        "a36a1469-6bc7-4330-aa52-bba779acce85"
-      ],
-      "genres": [
-        "Tech House",
-        "Techno",
-        "Electronic"
-      ],
-      "labelIds": [
-        "3164129a-8c52-8050-be76-d856ba5d0622",
-        "24a4129a-8c52-802a-83c0-e7232cfbaa33"
       ],
       "videoIds": []
     },
@@ -52538,6 +52663,27 @@
       "videoIds": []
     },
     {
+      "id": "3cd4129a-8c52-80f8-bf09-fbe5efaefdb6",
+      "slug": "the-vision",
+      "name": "The Vision",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://thevision.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-8025-b3e5-c6f82ade1b3e"
+      ],
+      "genres": [
+        "Deep House",
+        "Nu-Disco",
+        "Funky House"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-8093-8e20-e9bce305340d"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3bb4129a-8c52-8041-a6dd-c5be017e3e05",
       "slug": "the-visitors",
       "name": "The Visitors",
@@ -54493,34 +54639,6 @@
       "videoIds": []
     },
     {
-      "id": "2414129a-8c52-8012-9a94-e8afd5875a12",
-      "slug": "yin-yin",
-      "name": "YĪN YĪN",
-      "country": "NL",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "2f14129a-8c52-80f6-9983-e35e491f7d65",
-        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2"
-      ],
-      "genres": [
-        "Neo-Psychedelia",
-        "Psychedelic Rock",
-        "Groove",
-        "Disco",
-        "Exotica",
-        "Funk",
-        "Mutant Disco"
-      ],
-      "labelIds": [
-        "24a4129a-8c52-8093-8156-f94f7507964c"
-      ],
-      "videoIds": [
-        "2814129a-8c52-80d2-8cb1-fcd73eb80eb6"
-      ]
-    },
-    {
       "id": "3774129a-8c52-8088-a2bb-c511938eaa80",
       "slug": "yoni-mayraz",
       "name": "Yoni Mayraz",
@@ -54617,28 +54735,6 @@
         "2504129a-8c52-8085-8030-c1434e2e4b4d"
       ],
       "videoIds": []
-    },
-    {
-      "id": "2414129a-8c52-805e-b11f-d3d452c6e3a2",
-      "slug": "yuuf",
-      "name": "Yuuf",
-      "country": "GB",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "2194129a-8c52-8012-ad54-ed6766baaf28"
-      ],
-      "genres": [
-        "Neo-Psychedelia",
-        "Instrumental"
-      ],
-      "labelIds": [
-        "2484129a-8c52-8053-9a67-cfd3b9aa2dd9"
-      ],
-      "videoIds": [
-        "2414129a-8c52-80ea-b3dd-c89caaa8fecd"
-      ]
     },
     {
       "id": "2494129a-8c52-8086-ae24-f014c339074b",
@@ -57081,6 +57177,21 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-8093-8e20-e9bce305340d",
+      "slug": "defected-records",
+      "name": "Defected Records",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://defected.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-8025-b3e5-c6f82ade1b3e"
+      ],
+      "artistIds": [
+        "3cd4129a-8c52-80f8-bf09-fbe5efaefdb6"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-802a-83c0-e7232cfbaa33",
       "slug": "dekmantel-records",
       "name": "Dekmantel Records",
@@ -58564,10 +58675,12 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "8785f6f2-5594-461f-afb6-9a5569c8b0f6"
+        "8785f6f2-5594-461f-afb6-9a5569c8b0f6",
+        "3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e"
       ],
       "artistIds": [
-        "2424129a-8c52-8044-b0ee-ec4e110778f1"
+        "2424129a-8c52-8044-b0ee-ec4e110778f1",
+        "3cd4129a-8c52-8045-94c2-e8849d6fde07"
       ]
     },
     {
@@ -61266,6 +61379,21 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-8044-b062-ea28dbfaf226",
+      "slug": "numero-group",
+      "name": "Numero Group",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://numerogroup.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-8039-a0a8-fd4becb36387"
+      ],
+      "artistIds": [
+        "3cd4129a-8c52-802e-82bb-cd2c94b1863a"
+      ]
+    },
+    {
       "id": "2494129a-8c52-80c0-80db-d2a89f894b7b",
       "slug": "nye-blanke",
       "name": "Nye Blanke",
@@ -62802,14 +62930,16 @@
       "name": "Sargent House",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://sargenthouse.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3cd4129a-8c52-8086-9b81-fa226e9d52a5",
         "37a4129a-8c52-800f-8f4e-f38b1f649c04",
         "2434129a-8c52-802a-807c-fd76e6fee339",
         "4727337d-28c9-4a43-827d-5aabc799c442"
       ],
       "artistIds": [
+        "3cd4129a-8c52-80e6-a380-f60243ce3d97",
         "37a4129a-8c52-80e5-a0c7-dd9a738efd1a",
         "2434129a-8c52-802e-943f-e097d38cba59",
         "2524129a-8c52-804d-afe0-c9b48ff116da"

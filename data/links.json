@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T13:57:39Z",
+  "generatedAt": "2026-08-31T15:09:57Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17686,6 +17686,18 @@
       "upc": "00602445110308",
       "tracks": 11,
       "releaseDate": "2021-11-19"
+    },
+    "3cd4129a-8c52-8016-8871-ce03d420a1aa": {
+      "source": "https://album.link/hfhfb9zwmdzbw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4IM2aVRdSkWGj3uzpMuBie",
+        "pandora": "https://www.pandora.com/AL:2371126",
+        "tidal": "https://listen.tidal.com/album/307535511",
+        "bandcamp": "https://churchofficial.bandcamp.com/album/aura-safari"
+      },
+      "upc": "5050580715783",
+      "tracks": 10,
+      "releaseDate": "2020-08-26"
     }
   }
 }

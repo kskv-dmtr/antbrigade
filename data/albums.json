@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T14:59:40Z",
+  "generatedAt": "2026-08-31T15:09:46Z",
   "counts": {
-    "albums": 1118,
+    "albums": 1119,
     "artists": 998,
     "labels": 623,
     "videos": 82
@@ -33525,6 +33525,36 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-8016-8871-ce03d420a1aa",
+      "slug": "aura-safari-aura-safari",
+      "artist": "Aura Safari",
+      "album": "Aura Safari",
+      "url": "https://album.link/hfhfb9zwmdzbw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aaaefe561-f323-436a-b03a-c103af7958d1%3Aa2713993432_10.jpg?table=block&id=3cd4129a-8c52-8016-8871-ce03d420a1aa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Balearic Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-05-31",
+      "year": 2019,
+      "origReleased": null,
+      "artistIds": [
+        "2414129a-8c52-809b-91a4-c685424e6987"
+      ],
+      "artists": [
+        "Aura Safari"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8012-b545-c65c1442115e"
+      ],
+      "labels": [
+        "Church"
+      ]
+    },
+    {
       "id": "8785f6f2-5594-461f-afb6-9a5569c8b0f6",
       "slug": "bat-axestasy",
       "artist": "BAT",
@@ -35148,19 +35178,22 @@
       "name": "Aura Safari",
       "country": "IT",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://aurasafari.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "fc78c0ac-aa0e-4cd2-a6a8-aa9847df46c4",
-        "bd329a54-ba1b-436e-9bd9-53b2e8f0defc"
+        "bd329a54-ba1b-436e-9bd9-53b2e8f0defc",
+        "3cd4129a-8c52-8016-8871-ce03d420a1aa"
       ],
       "genres": [
         "Jazz",
         "Funk",
-        "Balearic Beat"
+        "Balearic Beat",
+        "Nu Jazz"
       ],
       "labelIds": [
-        "2434129a-8c52-80dd-821a-cceae600384b"
+        "2434129a-8c52-80dd-821a-cceae600384b",
+        "2524129a-8c52-8012-b545-c65c1442115e"
       ],
       "videoIds": []
     },
@@ -56318,9 +56351,11 @@
       "bandcamp": "https://churchofficial.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3cd4129a-8c52-8016-8871-ce03d420a1aa",
         "1232e5c2-48d8-496e-aa9e-7f82a50f22c1"
       ],
       "artistIds": [
+        "2414129a-8c52-809b-91a4-c685424e6987",
         "2524129a-8c52-800f-b39b-c4646ab57cee"
       ]
     },

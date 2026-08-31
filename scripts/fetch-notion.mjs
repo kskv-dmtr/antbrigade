@@ -35,7 +35,7 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
-             url: ']]HZ', genre: 'yEPm', type: '}j]w' };
+             url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ' };
 /* Ключи свойств в таблице клипов. Ключ даты здесь свой, LStn: колонка
    «Release Date» заведена заново 29 августа 2026, и прежний ключ она не
    унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
@@ -381,6 +381,13 @@ async function main() {
     const labelIds  = relationIds(prop(props, P.label));
     const released  = dateStart(prop(props, P.date));
 
+    /* Дата оригинала — только у переизданий и допечаток. Порядок и отбор на
+       сайте держит released: это дата того издания, которое лежит в
+       каталоге. Оригинал показывается на странице релиза и больше нигде —
+       иначе плитка говорила бы один год, а отбор по годам находил бы
+       релиз в другом. */
+    const origReleased = dateStart(prop(props, P.origDate));
+
     albums.push({
       id: v.id,
       slug: null,          // раздадим ниже, когда будет виден весь список
@@ -392,6 +399,7 @@ async function main() {
       types: splitList(plainText(prop(props, P.type))),
       released,
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
+      origReleased,
       artistIds,
       artists: artistIds.map((id) => artistsDir.get(id)?.name).filter(Boolean),
       labelIds,

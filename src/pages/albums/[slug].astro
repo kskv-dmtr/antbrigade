@@ -34,6 +34,11 @@ const longTitle = album.album.length > 60;
    отдельно: по ней решается, ставить ли перед первым лейблом разделитель. */
 const dateText = formatDate(album.released);
 
+/* Дата оригинала есть только у переизданий и допечаток. Показываем её здесь
+   и больше нигде: порядок, отбор по годам и подпись на плитке держит дата
+   издания, иначе плитка говорила бы один год, а отбор находил бы другой. */
+const origText = formatDate(album.origReleased);
+
 /* Другие релизы тех же исполнителей — то же, что «More Videos» на странице
    клипа. Через Map, а не через фильтр: у релиза бывает двое исполнителей,
    и совместная работа иначе попала бы в список дважды.
@@ -125,6 +130,7 @@ const clips = [...new Map(
               Поэтому и не список определений: терминов в нём не осталось. */}
           <ListenLinks album={album} />
 
+          <div class="detail__dates">
           {(dateText || labels.length > 0) && (
             <p class="detail__fact">
               {dateText}
@@ -139,6 +145,11 @@ const clips = [...new Map(
               ))}
             </p>
           )}
+
+          {origText && (
+            <p class="detail__fact detail__fact--faint">Originally released {origText}</p>
+          )}
+          </div>
         </div>
       </div>
     </div>

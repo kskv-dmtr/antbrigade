@@ -6,7 +6,6 @@
    релиз с обложкой. У двенадцати артистов релизов нет вовсе — там остаётся
    штриховка, то самое пустое состояние из макета. */
 
-import Icon from './Icon.astro';
 import { coverSrc, coverSrcSet, countryName, plural } from '../lib/db.js';
 
 const { href, name, releases = [], country, as: Wrapper = 'div', class: extra } = Astro.props;
@@ -40,7 +39,7 @@ const meta = [countryName(country), count ? plural(count, 'release', 'releases')
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
+        <span class="tile__cta">Open</span>
       </div>
     </div>
     <span class="tile__title">{name}</span>

@@ -10,7 +10,6 @@
    общей странице клипов плитка соседствует со строкой внутри общего <li>, и
    там нужен <div> — второй <li> внутри первого разметку сломал бы. */
 
-import Icon from './Icon.astro';
 import { thumbSrc, thumbSrcSet, videoTitle, videoArtists } from '../lib/db.js';
 
 const { video, showArtist = false, as: Wrapper = 'li', class: extra } = Astro.props;
@@ -22,8 +21,14 @@ const src = thumbSrc(video, 480);
    который придётся править каждый раз, когда в базе появится новый вид.
 
    Под кадром его нет — там, как и у релиза, только исполнитель и название.
-   Вид показывается при наведении, в вывернутой плашке. */
-const meta = video.kind ?? '';
+   Вид показывается при наведении, в вывернутой плашке — вместе с годом и
+   через ту же точку, что «Album · 2024» у релиза.
+
+   Год берётся из released, даты загрузки на YouTube. У ролика, выложенного
+   много позже съёмки, дата оригинала есть отдельным полем, но на плитку она
+   не идёт: там же, где у релиза, показывается год того, что лежит в
+   каталоге. */
+const meta = [video.kind, video.year].filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', 'tile--video', extra]}>
   {/* Ведёт на страницу клипа, а не сразу на YouTube: у клипа есть своя
@@ -45,7 +50,7 @@ const meta = video.kind ?? '';
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Open <Icon name="arrow-elbow-down-right" class="icon-arrow" /></span>
+        <span class="tile__cta">Open</span>
       </div>
     </div>
     {showArtist && <span class="tile__artist">{videoArtists(video)}</span>}

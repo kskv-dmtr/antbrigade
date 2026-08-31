@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T05:40:58Z",
+  "generatedAt": "2026-08-31T11:25:23Z",
   "counts": {
-    "albums": 1113,
+    "albums": 1117,
     "artists": 998,
-    "labels": 622,
+    "labels": 623,
     "videos": 82
   },
   "albums": [
@@ -11124,7 +11124,7 @@
       "url": "https://album.link/ds2x9gwjn7cdf",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ab1819cb6-f70e-4219-bee9-0cef3dd166e5%3Aa0541193294_10.jpg?table=block&id=2234129a-8c52-8060-be61-d082627b147e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Oi",
+        "Oi!",
         "Punk'n'Roll"
       ],
       "types": [
@@ -11858,7 +11858,7 @@
       "url": "https://album.link/fckp9nckzh0hb",
       "cover": "https://antbrigade.notion.site/image/attachment%3A5216a2eb-11ae-4ddd-be63-812442563cdd%3Aphoto_2025-08-03_14-14-25.jpg?table=block&id=2094129a-8c52-8004-b5e3-eb09f3dd442a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Oi",
+        "Oi!",
         "Post-Punk",
         "Coldwave"
       ],
@@ -12095,7 +12095,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Ad7062a21-e120-419b-86d4-5ef0ec685311%3Aphoto_2025-08-03_14-03-24.jpg?table=block&id=2064129a-8c52-80fd-a126-f1b3d73b6634&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Street Punk",
-        "Oi"
+        "Oi!"
       ],
       "types": [
         "Album"
@@ -15544,7 +15544,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A34c4f70c-494a-4a5a-8650-03895fa471d2%3A93d6e7e96acb48bea2ceb73146fcf750.webp?table=block&id=57ecc630-6387-4faa-9e39-ef596d6039c2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Street Punk",
-        "Oi"
+        "Oi!"
       ],
       "types": [
         "Album"
@@ -17112,7 +17112,6 @@
       "url": "https://album.link/t8vw5k7sv4rzx",
       "cover": "https://antbrigade.notion.site/image/attachment%3A8c1229df-f08b-491d-a35e-49cd394b86a6%3A0x1900-000000-80-0-0.jpg?table=block&id=44fd9a66-7860-463a-aaa1-d81cec3817a4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Electronic",
         "Synth Punk"
       ],
@@ -17171,8 +17170,9 @@
       "url": "https://album.link/rt8xznm6fzcv7",
       "cover": "https://antbrigade.notion.site/image/attachment%3Afb994a33-5727-440f-a528-0d5a0378764b%3Aa3269091749_10.jpg?table=block&id=e927bf04-04fa-4827-89d9-acf3123200a4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Garage Rock",
+        "Twee Pop"
       ],
       "types": [
         "Album"
@@ -17731,8 +17731,8 @@
       "url": "https://album.link/jctq9vcskmdc2",
       "cover": "https://antbrigade.notion.site/image/attachment%3A64f366fd-cf91-4f41-97b2-329894863d18%3Aphoto_2025-08-14_14-45-15.jpg?table=block&id=11a4129a-8c52-807d-91de-f008c8c6d6b1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Punk Rock"
       ],
       "types": [
         "Album"
@@ -18197,6 +18197,37 @@
       ],
       "labels": [
         "Brainfeeder"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80ce-8b61-e332a50937ab",
+      "slug": "mork-still-dreamin",
+      "artist": "Mörk",
+      "album": "Still Dreamin’",
+      "url": "https://album.link/ww3wktnnmfhq0",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A104ba789-e2b0-4230-9c9f-a8d11ea91665%3Aa0663849485_10.jpg?table=block&id=3cd4129a-8c52-80ce-8b61-e332a50937ab&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul",
+        "Alternative R'n'B",
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-09-27",
+      "year": 2024,
+      "artistIds": [
+        "3cd4129a-8c52-8012-9bde-f05c804df769"
+      ],
+      "artists": [
+        "Mörk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8036-930d-f6635b80b570"
+      ],
+      "labels": [
+        "Albert’s Favourites"
       ]
     },
     {
@@ -19216,8 +19247,8 @@
       "url": "https://album.link/ptrgkrnsmpd0m",
       "cover": "https://antbrigade.notion.site/image/attachment%3A689722b2-2301-4683-818f-b13cd9c3e38e%3Aphoto_2025-08-17_13-29-32.jpg?table=block&id=1e3657a6-f16b-4e72-851f-80fbd51790ad&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Oi",
-        "Punk"
+        "Oi!",
+        "Synth Punk"
       ],
       "types": [
         "EP"
@@ -19644,9 +19675,7 @@
       "artistIds": [
         "2414129a-8c52-801d-914c-c4884689694b"
       ],
-      "artists": [
-        "Big Yawn"
-      ],
+      "artists": [],
       "labelIds": [
         "2434129a-8c52-80d0-829f-e827d49262ab"
       ],
@@ -20384,10 +20413,7 @@
         "2414129a-8c52-80d3-b4f9-efccafe58ff1",
         "2414129a-8c52-80b9-b9d1-d0b0e427b129"
       ],
-      "artists": [
-        "Bosq",
-        "Kaleta"
-      ],
+      "artists": [],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
@@ -21147,8 +21173,8 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A78788c6b-cbae-450c-94a5-423ce1171a9a%3Aphoto_2025-08-13_15-02-14.jpg?table=block&id=9b4030a1-0e7e-4b42-aee2-cd72922b9cb7&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Garage Rock",
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Garage Punk"
       ],
       "types": [
         "Album"
@@ -21469,8 +21495,8 @@
       "url": "https://album.link/krqkc4gzr4vvx",
       "cover": "https://antbrigade.notion.site/image/attachment%3A91965b4e-56b1-453a-81b9-7a9ebb8cba39%3Aa2913138440_10.jpg?table=block&id=55c350b0-f508-4af0-93ee-573093c6dc68&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
-        "Oi"
+        "Oi!",
+        "Street Punk"
       ],
       "types": [
         "Compilation"
@@ -21616,8 +21642,7 @@
       "url": "https://album.link/4rzgwcwwnqggn",
       "cover": "https://antbrigade.notion.site/image/attachment%3A7f1c5c8c-9849-43f5-96cf-93d72629618f%3Aphoto_2025-08-14_14-51-43.jpg?table=block&id=afd60682-390c-4b6d-8e7e-688f6c73c134&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Hardcore",
-        "Punk"
+        "Hardcore Punk"
       ],
       "types": [
         "Album"
@@ -21971,7 +21996,6 @@
       "url": "https://album.link/hwjhqgwgdn0tp",
       "cover": "https://antbrigade.notion.site/image/attachment%3A30acf0f9-6376-4f0d-8712-8c8b700a006d%3Aphoto_2025-08-15_18-08-33.jpg?table=block&id=dae9099f-74fd-44a4-85c2-bc16cbf55668&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Electronic",
         "Synth Punk"
       ],
@@ -22238,7 +22262,8 @@
       "url": "https://album.link/vnzpdkhzgdjpd",
       "cover": "https://antbrigade.notion.site/image/attachment%3A333f0cc4-4ce2-476f-903a-92d277f09d3b%3Aphoto_2025-08-15_14-59-42.jpg?table=block&id=115b2896-c8c6-43e7-bbe0-b83c24f1807b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Post-Punk",
+        "Punk Rock"
       ],
       "types": [
         "Album"
@@ -23383,7 +23408,6 @@
       "url": "https://album.link/ngwcm8gvnnnt4",
       "cover": "https://antbrigade.notion.site/image/attachment%3A10d90bde-0a89-4100-a40b-a7327bdae164%3Aphoto_2025-08-04_02-52-23.jpg?table=block&id=f97585a0-e688-46d7-9be6-6973ff83be6e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Punk'n'Roll",
         "Rock'n'Roll"
       ],
@@ -26349,7 +26373,8 @@
       "url": "https://album.link/xc8q75kb0sbnq",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ad26b06c7-35fd-4ca7-b0c1-971e275ee19f%3Aa2458092662_10.jpg?table=block&id=d149d51e-fd0b-4103-a428-e741b559d48e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Punk Rock",
+        "Pop Punk"
       ],
       "types": [
         "Album"
@@ -26696,7 +26721,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Abd00ebd8-8c4e-46a4-a35e-eaacfe872459%3Aa2427008216_10.jpg?table=block&id=325e85a4-b6a8-4ba6-b213-283baab98998&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Punk",
-        "Oi"
+        "Oi!"
       ],
       "types": [
         "EP"
@@ -27677,7 +27702,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Aa8f7c326-90ff-4c53-ba9e-caa09787ac4b%3Aphoto_2025-08-15_00-50-17.jpg?table=block&id=992ca047-c5e8-4621-aa3e-3ceb764a32b8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Punk",
-        "Oi"
+        "Oi!"
       ],
       "types": [
         "EP"
@@ -29421,7 +29446,6 @@
       "url": "https://album.link/nqfxkhkt6pwjp",
       "cover": "https://antbrigade.notion.site/image/attachment%3Afda86837-a0fc-411f-9224-610433323b5c%3Aphoto_2025-08-15_18-10-22.jpg?table=block&id=56b0b89a-74f2-4af1-86ca-76a967592c4a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk",
         "Electronic",
         "Synth Punk"
       ],
@@ -30512,7 +30536,8 @@
       "url": "https://album.link/bqz28fddg6dhh",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aed48d34b-86e0-42d9-ba69-75caba254553%3Aa4266066799_10.jpg?table=block&id=8369e90b-521b-4256-8496-8aa618d87c6c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Punk"
+        "Punk Rock",
+        "Pop Punk"
       ],
       "types": [
         "Album"
@@ -30588,6 +30613,35 @@
       ],
       "labels": [
         "Warp Records"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80b1-b14e-ed72ee3ec037",
+      "slug": "biznaga-bremen-no-existe",
+      "artist": "Biznaga",
+      "album": "Bremen No Existe",
+      "url": "https://album.link/sq4md43hd5fgb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8cc4af09-43e2-49cc-973e-1538b65590c9%3Aa1428975916_10.jpg?table=block&id=3cd4129a-8c52-80b1-b14e-ed72ee3ec037&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Power Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-04-22",
+      "year": 2022,
+      "artistIds": [
+        "2424129a-8c52-800c-8709-fb16a2d55c7f"
+      ],
+      "artists": [
+        "Biznaga"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-8056-baf6-c97db7003278"
+      ],
+      "labels": [
+        "Montgrí"
       ]
     },
     {
@@ -31398,6 +31452,35 @@
       ]
     },
     {
+      "id": "3cd4129a-8c52-80d9-8426-eadd38a496ac",
+      "slug": "fuga-ronto-greatest-treasure-2",
+      "artist": "Fuga Ronto",
+      "album": "Greatest Treasure",
+      "url": "https://album.link/bdpkwdh2xr0b5",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A85277bb8-97aa-43cf-b5f7-0f945ff915a7%3Aa1779831890_10.jpg?table=block&id=3cd4129a-8c52-80d9-8426-eadd38a496ac&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Balearic Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-08-30",
+      "year": 2021,
+      "artistIds": [
+        "3cd4129a-8c52-8076-8625-d5a8cb9e054c"
+      ],
+      "artists": [
+        "Fuga Ronto"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-80bf-a84a-d6185253f34e"
+      ],
+      "labels": [
+        "Phantom Island"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-80c7-8e95-e792f0516474",
       "slug": "balimaya-project-wolo-so",
       "artist": "Balimaya Project",
@@ -31864,6 +31947,36 @@
       "labels": [
         "Dead Oceans",
         "Easy Eye Sound"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80e7-9fca-d215e7e43cba",
+      "slug": "fatima-yamaha-spontaneous-order",
+      "artist": "Fatima Yamaha",
+      "album": "Spontaneous Order",
+      "url": "https://album.link/p7bqhjgfrg9w8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A61c22554-d4e6-4404-b0b5-35f5b5443d8c%3Aa0521321618_10.jpg?table=block&id=3cd4129a-8c52-80e7-9fca-d215e7e43cba&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Electro",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-11-13",
+      "year": 2020,
+      "artistIds": [
+        "3cd4129a-8c52-80be-9496-d94e42c121a3"
+      ],
+      "artists": [
+        "Fatima Yamaha"
+      ],
+      "labelIds": [
+        "2624129a-8c52-8087-b44d-fab0e774efa3"
+      ],
+      "labels": [
+        "Magnetron Music"
       ]
     },
     {
@@ -33327,8 +33440,9 @@
         "e927bf04-04fa-4827-89d9-acf3123200a4"
       ],
       "genres": [
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Garage Rock",
+        "Twee Pop"
       ],
       "labelIds": [
         "2474129a-8c52-800e-a91a-f36d335f66e0"
@@ -34036,8 +34150,8 @@
       ],
       "genres": [
         "Garage Rock",
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Garage Punk"
       ],
       "labelIds": [
         "24e4129a-8c52-80b1-ae95-c67c77472f14"
@@ -34495,7 +34609,7 @@
       ],
       "genres": [
         "Punk",
-        "Oi"
+        "Oi!"
       ],
       "labelIds": [
         "24f4129a-8c52-8052-851d-defb18460675",
@@ -34566,28 +34680,6 @@
       "videoIds": []
     },
     {
-      "id": "2414129a-8c52-801d-914c-c4884689694b",
-      "slug": "big-yawn",
-      "name": "Big Yawn",
-      "country": "AU",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "6f6d2a50-53dc-4f75-9c0e-a8852699e264"
-      ],
-      "genres": [
-        "Electronic",
-        "Experimental",
-        "Breakbeat",
-        "Ambient"
-      ],
-      "labelIds": [
-        "2434129a-8c52-80d0-829f-e827d49262ab"
-      ],
-      "videoIds": []
-    },
-    {
       "id": "24f4129a-8c52-8008-a7f3-f10c3ab08159",
       "slug": "bitchin-bajas",
       "name": "Bitchin Bajas",
@@ -34613,14 +34705,15 @@
       "name": "Biznaga",
       "country": "ES",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://biznaga.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "11a4129a-8c52-807d-91de-f008c8c6d6b1"
+        "11a4129a-8c52-807d-91de-f008c8c6d6b1",
+        "3cd4129a-8c52-80b1-b14e-ed72ee3ec037"
       ],
       "genres": [
-        "Punk",
-        "Power Pop"
+        "Power Pop",
+        "Punk Rock"
       ],
       "labelIds": [
         "24f4129a-8c52-8056-baf6-c97db7003278"
@@ -34976,8 +35069,7 @@
         "afd60682-390c-4b6d-8e7e-688f6c73c134"
       ],
       "genres": [
-        "Hardcore",
-        "Punk"
+        "Hardcore Punk"
       ],
       "labelIds": [
         "2474129a-8c52-800e-a91a-f36d335f66e0",
@@ -35025,26 +35117,6 @@
       "videoIds": []
     },
     {
-      "id": "2414129a-8c52-80d3-b4f9-efccafe58ff1",
-      "slug": "bosq",
-      "name": "Bosq",
-      "country": "US",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "1944129a-8c52-8088-9134-eaaf83eb1451"
-      ],
-      "genres": [
-        "Afrobeat",
-        "Afro House"
-      ],
-      "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
-      ],
-      "videoIds": []
-    },
-    {
       "id": "3cd4129a-8c52-802c-8745-fff257f071ee",
       "slug": "boss",
       "name": "Boss",
@@ -35076,7 +35148,6 @@
         "f97585a0-e688-46d7-9be6-6973ff83be6e"
       ],
       "genres": [
-        "Punk",
         "Punk'n'Roll",
         "Rock'n'Roll"
       ],
@@ -36075,7 +36146,7 @@
         "2234129a-8c52-8060-be61-d082627b147e"
       ],
       "genres": [
-        "Oi",
+        "Oi!",
         "Punk'n'Roll"
       ],
       "labelIds": [
@@ -38633,6 +38704,27 @@
       "videoIds": []
     },
     {
+      "id": "3cd4129a-8c52-80be-9496-d94e42c121a3",
+      "slug": "fatima-yamaha",
+      "name": "Fatima Yamaha",
+      "country": "NL",
+      "website": null,
+      "bandcamp": "https://fatimayamaha.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80e7-9fca-d215e7e43cba"
+      ],
+      "genres": [
+        "Deep House",
+        "Electro",
+        "Nu-Disco"
+      ],
+      "labelIds": [
+        "2624129a-8c52-8087-b44d-fab0e774efa3"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "26e4129a-8c52-80aa-926c-f19957777f3a",
       "slug": "faze",
       "name": "Faze",
@@ -38791,7 +38883,7 @@
       ],
       "genres": [
         "Street Punk",
-        "Oi"
+        "Oi!"
       ],
       "labelIds": [
         "2444129a-8c52-8019-9240-d21190d3ef57",
@@ -39267,7 +39359,8 @@
         "115b2896-c8c6-43e7-bbe0-b83c24f1807b"
       ],
       "genres": [
-        "Punk"
+        "Post-Punk",
+        "Punk Rock"
       ],
       "labelIds": [
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
@@ -39290,6 +39383,26 @@
       ],
       "labelIds": [
         "2524129a-8c52-809b-b141-d09f0edb8ce3"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-8076-8625-d5a8cb9e054c",
+      "slug": "fuga-ronto-2",
+      "name": "Fuga Ronto",
+      "country": "CH",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80d9-8426-eadd38a496ac"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Balearic Beat"
+      ],
+      "labelIds": [
+        "3cd4129a-8c52-80bf-a84a-d6185253f34e"
       ],
       "videoIds": []
     },
@@ -41902,26 +42015,6 @@
       "videoIds": []
     },
     {
-      "id": "2414129a-8c52-80b9-b9d1-d0b0e427b129",
-      "slug": "kaleta",
-      "name": "Kaleta",
-      "country": "BJ",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "1944129a-8c52-8088-9134-eaaf83eb1451"
-      ],
-      "genres": [
-        "Afrobeat",
-        "Afro House"
-      ],
-      "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
-      ],
-      "videoIds": []
-    },
-    {
       "id": "2504129a-8c52-8084-81c4-df8d7f572db2",
       "slug": "kamasi-washington",
       "name": "Kamasi Washington",
@@ -42635,7 +42728,6 @@
         "56b0b89a-74f2-4af1-86ca-76a967592c4a"
       ],
       "genres": [
-        "Punk",
         "Electronic",
         "Synth Punk"
       ],
@@ -43205,8 +43297,7 @@
       ],
       "genres": [
         "Street Punk",
-        "Oi",
-        "Punk"
+        "Oi!"
       ],
       "labelIds": [
         "2484129a-8c52-806e-bd5e-e0f260a9b0d3",
@@ -44852,6 +44943,28 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cd4129a-8c52-8012-9bde-f05c804df769",
+      "slug": "mork",
+      "name": "Mörk",
+      "country": "HU",
+      "website": null,
+      "bandcamp": "https://thisismork.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80ce-8b61-e332a50937ab"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul",
+        "Alternative R'n'B",
+        "Funk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8036-930d-f6635b80b570"
       ],
       "videoIds": []
     },
@@ -46645,7 +46758,8 @@
         "8369e90b-521b-4256-8496-8aa618d87c6c"
       ],
       "genres": [
-        "Punk"
+        "Punk Rock",
+        "Pop Punk"
       ],
       "labelIds": [
         "2514129a-8c52-80d0-9997-d70a46aa1a26",
@@ -47301,7 +47415,7 @@
         "325e85a4-b6a8-4ba6-b213-283baab98998"
       ],
       "genres": [
-        "Oi",
+        "Oi!",
         "Post-Punk",
         "Coldwave",
         "Punk"
@@ -47694,8 +47808,8 @@
         "1e3657a6-f16b-4e72-851f-80fbd51790ad"
       ],
       "genres": [
-        "Oi",
-        "Punk"
+        "Oi!",
+        "Synth Punk"
       ],
       "labelIds": [
         "2484129a-8c52-804e-b0b5-f3b55aae2ee8"
@@ -53772,12 +53886,14 @@
       "youtube": null,
       "albumIds": [
         "31e4129a-8c52-80fa-b9f0-e312bedcc98c",
+        "3cd4129a-8c52-80ce-8b61-e332a50937ab",
         "cd65a8e1-4854-4000-8a38-e854f706fadb",
         "5b47f2c2-5fd0-4374-ac74-48f897a1e32a",
         "c2a57a30-242f-4a51-beb2-cf27cdd9d022"
       ],
       "artistIds": [
         "2504129a-8c52-805e-bba4-cb0169d5bcae",
+        "3cd4129a-8c52-8012-9bde-f05c804df769",
         "2434129a-8c52-8011-b9fc-e62b618d726d"
       ]
     },
@@ -58848,13 +58964,15 @@
       "name": "Magnetron Music",
       "country": "NL",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://magnetronmusic.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "2624129a-8c52-80d7-8aa8-d8577abb698d"
+        "2624129a-8c52-80d7-8aa8-d8577abb698d",
+        "3cd4129a-8c52-80e7-9fca-d215e7e43cba"
       ],
       "artistIds": [
-        "2624129a-8c52-8005-94da-dbd9231fb08b"
+        "2624129a-8c52-8005-94da-dbd9231fb08b",
+        "3cd4129a-8c52-80be-9496-d94e42c121a3"
       ]
     },
     {
@@ -59306,7 +59424,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "11a4129a-8c52-807d-91de-f008c8c6d6b1"
+        "11a4129a-8c52-807d-91de-f008c8c6d6b1",
+        "3cd4129a-8c52-80b1-b14e-ed72ee3ec037"
       ],
       "artistIds": [
         "2424129a-8c52-800c-8709-fb16a2d55c7f"
@@ -60352,6 +60471,21 @@
       ],
       "artistIds": [
         "2524129a-8c52-809f-af88-d3650da05ce9"
+      ]
+    },
+    {
+      "id": "3cd4129a-8c52-80bf-a84a-d6185253f34e",
+      "slug": "phantom-island-2",
+      "name": "Phantom Island",
+      "country": "CH",
+      "website": null,
+      "bandcamp": "https://phantomisland.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cd4129a-8c52-80d9-8426-eadd38a496ac"
+      ],
+      "artistIds": [
+        "3cd4129a-8c52-8076-8625-d5a8cb9e054c"
       ]
     },
     {

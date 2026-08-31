@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T05:41:23Z",
+  "generatedAt": "2026-08-31T11:25:49Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17608,6 +17608,72 @@
       "upc": "1941520279066",
       "tracks": 5,
       "releaseDate": "2019-07-02"
+    },
+    "3cd4129a-8c52-80ce-8b61-e332a50937ab": {
+      "source": "https://album.link/ww3wktnnmfhq0",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/68NLCJBXQCfpp3Y8TsRg8F",
+        "deezer": "https://www.deezer.com/album/622781431",
+        "amazonMusic": "https://music.amazon.com/albums/B0DBQ6XL6K",
+        "tidal": "https://listen.tidal.com/album/378487159",
+        "yandex": "https://music.yandex.ru/album/32602005",
+        "bandcamp": "https://thisismork.bandcamp.com/album/still-dreamin",
+        "amazonStore": "https://amazon.com/dp/B0DBQ6XL6K"
+      },
+      "upc": "3617661521743",
+      "tracks": 9,
+      "releaseDate": "2024-08-27"
+    },
+    "3cd4129a-8c52-80b1-b14e-ed72ee3ec037": {
+      "source": "https://album.link/sq4md43hd5fgb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1fc5Ssy2rWphRUwIoXk3l6",
+        "pandora": "https://www.pandora.com/AL:13738807",
+        "deezer": "https://www.deezer.com/album/303569127",
+        "amazonMusic": "https://music.amazon.com/albums/B09VMNR7XK",
+        "tidal": "https://listen.tidal.com/album/487912006",
+        "napster": "https://play.napster.com/album/alb.653527804",
+        "yandex": "https://music.yandex.ru/album/22038301",
+        "boomplay": "https://www.boomplay.com/albums/42622500",
+        "anghami": "https://play.anghami.com/album/1026840548?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B09VMNR7XK"
+      },
+      "upc": "8426946908750",
+      "tracks": 10,
+      "releaseDate": "2022-03-22"
+    },
+    "3cd4129a-8c52-80d9-8426-eadd38a496ac": {
+      "source": "https://album.link/bdpkwdh2xr0b5",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4Dg2HyHpqy4TmbkkewvFOm",
+        "pandora": "https://www.pandora.com/AL:10480086",
+        "deezer": "https://www.deezer.com/album/254150032",
+        "amazonMusic": "https://music.amazon.com/albums/B09DGVCZX2",
+        "tidal": "https://listen.tidal.com/album/195128860",
+        "napster": "https://play.napster.com/album/alb.608760494",
+        "yandex": "https://music.yandex.ru/album/17670524",
+        "boomplay": "https://www.boomplay.com/albums/30593832",
+        "anghami": "https://play.anghami.com/album/1022090521?refer=linktree",
+        "bandcamp": "https://phantomisland.bandcamp.com/album/greatest-treasure",
+        "amazonStore": "https://amazon.com/dp/B09DGVCZX2"
+      },
+      "upc": "4066218054866",
+      "tracks": 7,
+      "releaseDate": "2021-07-30"
+    },
+    "3cd4129a-8c52-80e7-9fca-d215e7e43cba": {
+      "source": "https://album.link/p7bqhjgfrg9w8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/16E1tOEfd32Ry573fmYvOO",
+        "pandora": "https://www.pandora.com/AL:6474433",
+        "deezer": "https://www.deezer.com/album/169765862",
+        "tidal": "https://listen.tidal.com/album/153415958",
+        "napster": "https://play.napster.com/album/alb.507022013",
+        "bandcamp": "https://fatimayamaha.bandcamp.com/album/spontaneous-order"
+      },
+      "upc": "8718857965718",
+      "tracks": 10,
+      "releaseDate": "2020-10-13"
     }
   }
 }

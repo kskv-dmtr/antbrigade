@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T23:53:15Z",
+  "generatedAt": "2026-09-01T14:56:23Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17803,6 +17803,31 @@
       "upc": "5055869524353",
       "tracks": 10,
       "releaseDate": "2017-08-11"
+    },
+    "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2": {
+      "source": "https://album.link/kqfv7cgssprwf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/35R9obxPtaG0oyIFH7QFRp",
+        "pandora": "https://www.pandora.com/AL:67410789",
+        "tidal": "https://listen.tidal.com/album/533975396"
+      },
+      "upc": "840054915505",
+      "tracks": 8,
+      "releaseDate": "2026-08-14"
+    },
+    "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc": {
+      "source": "https://album.link/3r3cqw2s45mvk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4Pl4aMw79sdIlxHvzT1wup",
+        "pandora": "https://www.pandora.com/AL:5948413",
+        "deezer": "https://www.deezer.com/album/216358762",
+        "amazonMusic": "https://music.amazon.com/albums/B08ZL83G6S",
+        "tidal": "https://listen.tidal.com/album/177912815",
+        "amazonStore": "https://amazon.com/dp/B08ZL83G6S"
+      },
+      "upc": "713152690554",
+      "tracks": 11,
+      "releaseDate": "2017-01-05"
     }
   }
 }

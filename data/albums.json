@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-01T08:56:49Z",
+  "generatedAt": "2026-09-01T14:56:07Z",
   "counts": {
-    "albums": 1126,
-    "artists": 1008,
-    "labels": 627,
+    "albums": 1128,
+    "artists": 1009,
+    "labels": 629,
     "videos": 83
   },
   "albums": [
@@ -279,6 +279,39 @@
       ],
       "labels": [
         "Houndstooth"
+      ]
+    },
+    {
+      "id": "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2",
+      "slug": "nechazz-pieces-of-a-dream",
+      "artist": "Nechazz",
+      "album": "Pieces of a Dream",
+      "url": "https://album.link/kqfv7cgssprwf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A37d750a6-5071-4136-aab7-d5db034b916b%3Aa2532874560_10.jpg?table=block&id=3ce4129a-8c52-80f4-9d69-f2d74c99d2e2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "City Pop",
+        "Synth Funk",
+        "Synthpop",
+        "Sophisti-Pop",
+        "Pop Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-14",
+      "year": 2026,
+      "origReleased": "1989-01-01",
+      "artistIds": [
+        "3ce4129a-8c52-8085-b12a-fd721cb6968e"
+      ],
+      "artists": [
+        "Nechazz"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-8040-9fe7-c20666b8f22d"
+      ],
+      "labels": [
+        "Habibi Funk Records"
       ]
     },
     {
@@ -34045,6 +34078,36 @@
       ]
     },
     {
+      "id": "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc",
+      "slug": "deecracks-totally-cracked",
+      "artist": "DeeCRACKS",
+      "album": "Totally Cracked!",
+      "url": "https://album.link/3r3cqw2s45mvk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A050bc1c2-352c-425e-bd00-ec75d214ed14%3Aa2356189118_10.jpg?table=block&id=3ce4129a-8c52-8087-9bc6-f157c2a1d3bc&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2017-01-05",
+      "year": 2017,
+      "origReleased": null,
+      "artistIds": [
+        "2524129a-8c52-80d8-960b-edb32e8a4eaf"
+      ],
+      "artists": [
+        "DeeCRACKS"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-803d-85b8-c2370343ed0b"
+      ],
+      "labels": [
+        "Between The Days Records"
+      ]
+    },
+    {
       "id": "5618b6c4-09dd-41c5-a869-bd4af0651883",
       "slug": "bat-wings-of-chains",
       "artist": "BAT",
@@ -38684,14 +38747,16 @@
       "bandcamp": "https://deecracks.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "f3a51968-e656-4ffe-8820-4117ff5382ee"
+        "f3a51968-e656-4ffe-8820-4117ff5382ee",
+        "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc"
       ],
       "genres": [
         "Pop Punk",
         "Punk Rock"
       ],
       "labelIds": [
-        "2484129a-8c52-806e-bd5e-e0f260a9b0d3"
+        "2484129a-8c52-806e-bd5e-e0f260a9b0d3",
+        "3ce4129a-8c52-803d-85b8-c2370343ed0b"
       ],
       "videoIds": [
         "3b94129a-8c52-804f-97d7-fcc0f7eea16d"
@@ -46797,6 +46862,29 @@
       "videoIds": []
     },
     {
+      "id": "3ce4129a-8c52-8085-b12a-fd721cb6968e",
+      "slug": "nechazz",
+      "name": "Nechazz",
+      "country": "JO",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2"
+      ],
+      "genres": [
+        "City Pop",
+        "Synth Funk",
+        "Synthpop",
+        "Sophisti-Pop",
+        "Pop Soul"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-8040-9fe7-c20666b8f22d"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-80c2-878f-de0f8a1d7795",
       "slug": "negative-gears",
       "name": "Negative Gears",
@@ -52332,7 +52420,7 @@
       "name": "The Field",
       "country": "SE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://thefield.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3684129a-8c52-80b1-b9d3-d5a58b1a25db"
@@ -56176,6 +56264,21 @@
       ]
     },
     {
+      "id": "3ce4129a-8c52-803d-85b8-c2370343ed0b",
+      "slug": "between-the-days-records",
+      "name": "Between The Days Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc"
+      ],
+      "artistIds": [
+        "2524129a-8c52-80d8-960b-edb32e8a4eaf"
+      ]
+    },
+    {
       "id": "3214129a-8c52-8003-9cdd-ced27b2e7f13",
       "slug": "big-bite-records",
       "name": "Big Bite Records",
@@ -58890,6 +58993,21 @@
         "2684129a-8c52-80f4-8b9f-f252db84780d",
         "24a4129a-8c52-8005-ae09-fcce349f6dad",
         "2504129a-8c52-800a-b793-c6996ed2ccf5"
+      ]
+    },
+    {
+      "id": "3ce4129a-8c52-8040-9fe7-c20666b8f22d",
+      "slug": "habibi-funk-records",
+      "name": "Habibi Funk Records",
+      "country": "DE",
+      "website": null,
+      "bandcamp": "https://habibifunkrecords.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2"
+      ],
+      "artistIds": [
+        "3ce4129a-8c52-8085-b12a-fd721cb6968e"
       ]
     },
     {
@@ -64336,7 +64454,7 @@
       "name": "Studio Barnhus",
       "country": "SE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://studiobarnhus.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "3684129a-8c52-80b1-b9d3-d5a58b1a25db"

@@ -35,7 +35,8 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
-             url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ' };
+             url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ',
+             featured: 'Hfn}' };
 /* Ключи свойств в таблице клипов. Ключ даты здесь свой, LStn: колонка
    «Release Date» заведена заново 29 августа 2026, и прежний ключ она не
    унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
@@ -428,6 +429,11 @@ async function main() {
        релиз в другом. */
     const origReleased = dateStart(prop(props, P.origDate));
 
+    /* Флажок «в подборке». Notion хранит его текстом «Yes» и только у
+       отмеченных строк: у снятого флажка свойства в записи нет вовсе —
+       поэтому сверяем значение, а не наличие ключа. */
+    const featured = plainText(prop(props, P.featured)) === 'Yes';
+
     albums.push({
       id: v.id,
       slug: null,          // раздадим ниже, когда будет виден весь список
@@ -440,6 +446,7 @@ async function main() {
       released,
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
       origReleased,
+      featured,
       artistIds,
       artists: artistIds.map((id) => artistsDir.get(id)?.name).filter(Boolean),
       labelIds,

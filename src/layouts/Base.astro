@@ -28,7 +28,8 @@ const nav = [
   { href: '/videos',   label: 'Videos',   key: 'videos' },
   { href: '/artists', label: 'Artists',  key: 'artists' },
   { href: '/labels',  label: 'Labels',   key: 'labels' },
-  { href: '/genres',  label: 'Genres',   key: 'genres' }
+  { href: '/genres',  label: 'Genres',   key: 'genres' },
+  { href: '/featured', label: 'Featured', key: 'featured' }
 ];
 
 /* Год в знаке охраны — от времени сборки, а не вписанный руками: сайт
@@ -216,7 +217,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   <footer class="foot">
     <div class="foot__in shell">
       <div class="foot__note mono mono--sm">
-        ant brigade — a personal music archive<br />
+        a personal music archive<br />
         new releases · old favorites · strange finds<br />
         © {year} · 1723 · 1312
       </div>

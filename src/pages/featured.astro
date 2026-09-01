@@ -66,6 +66,7 @@ const PAGE = 50;
     ? `${plural(featured.length, 'release', 'releases')} worth starting with.`
     : 'A hand-picked selection from the collection.'}
   image={coverSrc(featured.find((a) => a.cover), 800)}
+  activeSection="featured"
 >
   <div class="page-head">
     <h1>Featured</h1>

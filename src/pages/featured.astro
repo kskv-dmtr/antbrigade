@@ -1,0 +1,373 @@
+---
+import Base from '../layouts/Base.astro';
+import AlbumCard from '../components/AlbumCard.astro';
+import ReleaseRow from '../components/ReleaseRow.astro';
+import Select from '../components/Select.astro';
+import MultiSelect from '../components/MultiSelect.astro';
+import ViewSwitch from '../components/ViewSwitch.astro';
+import SearchField from '../components/SearchField.astro';
+import { albums, coverSrc, plural } from '../lib/db.js';
+
+/* Подборка: релизы, отмеченные флажком в Notion.
+
+   Отбор держит одно поле `featured`, а не отдельная база и не список
+   адресов в коде: отметить релиз должно быть делом одного щелчка там же,
+   где он заведён. Снятый флажок Notion в записи не хранит вовсе, поэтому
+   выгрузка сверяет значение, а не наличие ключа, — см. fetch-notion.mjs.
+
+   Устройство страницы повторяет /music целиком: липкая полоса с поиском и
+   переключателем вида, отбор по типу, жанру и году, сортировка по шести
+   осям, «показать ещё». Пока это буквальная копия — так подборка ведёт
+   себя ровно как каталог, и не приходится помнить, где она отличается.
+
+   Порядок по умолчанию тот же, что везде, — свежие сверху. Своего у
+   подборки нет намеренно: ручная расстановка потребовала бы второго поля с
+   номером, а ради пригоршни релизов это лишняя механика. */
+const featured = albums.filter((a) => a.featured);
+
+/* Подписи и порядок типов — те же, что на /music: в Notion они записаны в
+   единственном числе, а на кнопке читается множественное. */
+const TYPE_LABELS = new Map([
+  ['Album', 'Albums'],
+  ['EP', 'EPs'],
+  ['Single', 'Singles'],
+  ['Compilation', 'Compilations'],
+  ['Collaboration', 'Collaborations']
+]);
+const порядокТипа = (t) => {
+  const i = [...TYPE_LABELS.keys()].indexOf(t);
+  return i < 0 ? TYPE_LABELS.size : i;
+};
+
+/* Все три оси отбора считаются по самой подборке, а не по каталогу. Иначе в
+   полосе стояли бы кнопки типов, которых в подборке нет, а в списках — три
+   сотни жанров с нулями: пункт с нулём мы и так прячем, но собирать его,
+   чтобы тут же спрятать, незачем. */
+const types = [...new Set(featured.flatMap((a) => a.types))]
+  .sort((a, b) => порядокТипа(a) - порядокТипа(b) || a.localeCompare(b))
+  .map((value) => ({ value, label: TYPE_LABELS.get(value) ?? value }));
+
+const genreCounts = new Map();
+for (const a of featured) {
+  for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
+}
+const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+const yearCounts = new Map();
+for (const a of featured) if (a.year) yearCounts.set(a.year, (yearCounts.get(a.year) || 0) + 1);
+const years = [...yearCounts.keys()].sort((a, b) => b - a);
+
+// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
+const PAGE = 50;
+---
+<Base
+  title="Featured · ant brigade"
+  description={featured.length
+    ? `${plural(featured.length, 'release', 'releases')} worth starting with.`
+    : 'A hand-picked selection from the collection.'}
+  image={coverSrc(featured.find((a) => a.cover), 800)}
+>
+  <div class="page-head">
+    <h1>Featured</h1>
+    {/* До выполнения скрипта видны все записи — число в разметке совпадает
+        с тем, что скрипт поставит первым же расчётом. */}
+    {featured.length > 0 && (
+      <p class="counter" id="counter" aria-live="polite">[{featured.length}]</p>
+    )}
+  </div>
+
+  {featured.length > 0 ? (
+    <>
+      {/* Всё управление в липкой полосе: и поиск, и тип релиза, и
+          сортировка возвращаются на экран при прокрутке вверх. */}
+      <div class="sticky-bar">
+        <div class="controls__top">
+          <SearchField label="Search by artist or album" />
+          <ViewSwitch />
+        </div>
+
+        <div class="filters">
+          {/* Тип релиза показан двумя способами разом, лишний прячет
+              медиазапрос: на широком экране полоса кнопок, на узком — такой
+              же список, как жанр и год. Значение у них общее: обработчики
+              зовут одну setType, и второй контрол переставляется следом. */}
+          <div class="filters__group filters__group--strip">
+            <div class="seg" id="types" role="group" aria-label="Release type">
+              <button type="button" data-type="" aria-pressed="true">All</button>
+              {types.map((t) => (
+                <button type="button" data-type={t.value} aria-pressed="false">{t.label}</button>
+              ))}
+            </div>
+          </div>
+
+          <div class="filters__group filters__group--end">
+            <Select id="type" label="Release type" class="select--strip">
+              <option value="">All</option>
+              {types.map((t) => <option value={t.value}>{t.label}</option>)}
+            </Select>
+
+            {/* Жанр и год выбираются пачкой, отбор — «любой из отмеченных»,
+                а не «все сразу»: у релиза жанров два-три, и пересечение
+                почти всегда пусто. */}
+            <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
+                         items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
+
+            <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
+                         items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
+
+            {/* У каждой оси обе стороны: и по дате, и по алфавиту. */}
+            <Select id="sort" label="Sorting">
+              <option value="new">Newest first</option>
+              <option value="old">Oldest first</option>
+              <option value="artist-az">Artists A → Z</option>
+              <option value="artist-za">Artists Z → A</option>
+              <option value="album-az">Albums A → Z</option>
+              <option value="album-za">Albums Z → A</option>
+            </Select>
+          </div>
+        </div>
+      </div>
+
+      <p class="empty" id="empty" hidden>Nothing found.</p>
+
+      {/* Один <li> на релиз, внутри обе разметки: строка и плитка. Видимую
+          выбирает data-view на списке, поэтому фильтру достаточно спрятать
+          сам <li> — переключение вида его не касается. */}
+      <ul class="releases" id="grid" data-view="list">
+        {featured.map((a) => (
+          <li
+            class="release"
+            data-search={`${a.artist} ${a.album}`.toLowerCase()}
+            data-genres={a.genres.join('|')}
+            data-types={a.types.join('|')}
+            data-year={a.year ?? ''}
+            data-released={a.released ?? ''}
+            data-artist={a.artist.toLowerCase()}
+            data-album={(a.album || '').toLowerCase()}
+          >
+            <div class="view-row"><ReleaseRow album={a} /></div>
+            <AlbumCard album={a} as="div" class="view-tile" />
+          </li>
+        ))}
+      </ul>
+
+      {/* Кнопка появляется только со скриптом: без него показаны все
+          записи, и «показать ещё» было бы нечего делать. */}
+      <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
+    </>
+  ) : (
+    /* Пустая подборка — обычное состояние, а не поломка: флажки снимаются
+       так же легко, как ставятся. Полосы управления при этом нет вовсе:
+       отбирать не из чего, и шесть контролов над пустотой читались бы
+       поломкой вернее, чем сама пустота. */
+    <p class="empty">Nothing picked yet.</p>
+  )}
+</Base>
+
+<script>
+  /* Механика /music целиком. Общего модуля у страниц нет намеренно: пока
+     это буквальная копия, и слой настроек над ней был бы длиннее самой
+     разницы. Появится третий такой список — самое время вынести. */
+  const grid = document.getElementById('grid');
+
+  /* Разметки нет, когда подборка пуста: страница тогда состоит из заголовка
+     и строки-объяснения, и управлять нечем. */
+  if (grid) {
+    const cards   = Array.from(grid.children);
+    const counter = document.getElementById('counter');
+    const empty   = document.getElementById('empty');
+    const search  = document.getElementById('search');
+    const typesEl = document.getElementById('types');
+    const typeEl  = document.getElementById('type');
+    const viewsEl = document.getElementById('views');
+    const genreEl = document.getElementById('genre');
+    const yearEl  = document.getElementById('year');
+    const sortEl  = document.getElementById('sort');
+    const more    = document.getElementById('more');
+
+    const total = cards.length;
+    const PAGE  = Number(more.dataset.page) || 50;
+    const state = { q: '', type: '', genres: [], years: [], sort: 'new' };
+
+    // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
+    const initialOrder = cards.slice();
+    let current = initialOrder;
+    let limit = PAGE;
+
+    const label = (n) => (n === total ? `[${n}]` : `[${n} / ${total}]`);
+
+    /* Ось не отбирает сама себя: счёт у года считается по всем прочим
+       условиям, но без отбора по годам, — иначе у всех остальных лет были
+       бы нули. */
+    function passes(d, skip) {
+      if (state.q && !d.search.includes(state.q)) return false;
+      if (state.type && !d.types.split('|').includes(state.type)) return false;
+      if (skip !== 'genres' && state.genres.length &&
+          !state.genres.some((g) => d.genres.split('|').includes(g))) return false;
+      if (skip !== 'years' && state.years.length && !state.years.includes(d.year)) return false;
+      return true;
+    }
+
+    const matches = (el) => passes(el.dataset, null);
+
+    function recount() {
+      const byGenre = new Map();
+      const byYear  = new Map();
+
+      for (const el of cards) {
+        const d = el.dataset;
+        if (passes(d, 'genres')) {
+          for (const name of d.genres.split('|')) {
+            if (name) byGenre.set(name, (byGenre.get(name) || 0) + 1);
+          }
+        }
+        if (passes(d, 'years') && d.year) {
+          byYear.set(d.year, (byYear.get(d.year) || 0) + 1);
+        }
+      }
+
+      paint(genreEl, byGenre);
+      paint(yearEl, byYear);
+    }
+
+    function paint(root, counts) {
+      let shown = 0;
+
+      for (const item of root.querySelectorAll('.multi__item')) {
+        const box = item.querySelector('input');
+        const n = counts.get(box.value) || 0;
+        item.querySelector('.multi__count').textContent = `(${n})`;
+
+        /* Пункт с нулём прячем, но только пока он не отмечен: иначе у
+           отмеченного отняли бы единственный способ снять флажок. */
+        item.hidden = n === 0 && !box.checked;
+        if (!item.hidden) shown++;
+        if (n) delete item.dataset.empty; else item.dataset.empty = 'yes';
+      }
+
+      root.querySelector('.multi__none').hidden = shown > 0;
+      root.dispatchEvent(new Event('relabel'));
+    }
+
+    function apply() {
+      let matched = 0;
+      for (const el of current) {
+        const ok = matches(el);
+        if (ok) matched++;
+        el.hidden = !ok || matched > limit;
+      }
+
+      empty.hidden = matched > 0;
+      counter.textContent = label(matched);
+      recount();
+
+      const rest = matched - limit;
+      more.hidden = rest <= 0;
+      if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
+    }
+
+    // Любая смена выборки возвращает список к первой странице.
+    function rewind() { limit = PAGE; }
+
+    function sort() {
+      const by = state.sort;
+      if (by === 'new') {
+        current = initialOrder;
+      } else {
+        current = cards.slice().sort((a, b) => {
+          if (by === 'artist-az') return a.dataset.artist.localeCompare(b.dataset.artist);
+          if (by === 'artist-za') return b.dataset.artist.localeCompare(a.dataset.artist);
+          if (by === 'album-az')  return a.dataset.album.localeCompare(b.dataset.album);
+          if (by === 'album-za')  return b.dataset.album.localeCompare(a.dataset.album);
+          const da = a.dataset.released, db = b.dataset.released;
+          // релизы без даты всегда в конце
+          if (!da && !db) return 0;
+          if (!da) return 1;
+          if (!db) return -1;
+          return da.localeCompare(db);
+        });
+      }
+      const frag = document.createDocumentFragment();
+      for (const el of current) frag.appendChild(el);
+      grid.appendChild(frag);
+    }
+
+    more.addEventListener('click', () => {
+      limit += PAGE;
+      apply();
+    });
+
+    let timer;
+    search.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        state.q = search.value.trim().toLowerCase();
+        rewind();
+        apply();
+      }, 120);
+    });
+
+    /* Тип выбирают двумя контролами — полосой на широком экране и списком
+       на узком, — а значение у них одно: человек может повернуть телефон, и
+       выбор должен пережить смену ширины.
+
+       Списку после программной смены значения посылаем input: по нему
+       скрипт компонента заново подгоняет ширину кнопки под пункт. */
+    function setType(value) {
+      state.type = value;
+      for (const b of typesEl.children) {
+        b.setAttribute('aria-pressed', String(b.dataset.type === value));
+      }
+      if (typeEl.value !== value) {
+        typeEl.value = value;
+        typeEl.dispatchEvent(new Event('input'));
+      }
+      rewind();
+      apply();
+    }
+
+    typesEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (btn) setType(btn.dataset.type);
+    });
+
+    typeEl.addEventListener('change', () => setType(typeEl.value));
+
+    viewsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      grid.dataset.view = btn.dataset.view;
+      for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
+    });
+
+    /* Блоки отбора отдают обычное change, как отдавал <select>; читаем из
+       них не одно значение, а список отмеченных. */
+    const marked = (root) => [...root.querySelectorAll('input:checked')].map((b) => b.value);
+
+    genreEl.addEventListener('change', () => { state.genres = marked(genreEl); rewind(); apply(); });
+    yearEl.addEventListener('change',  () => { state.years  = marked(yearEl);  rewind(); apply(); });
+    sortEl.addEventListener('change',  () => {
+      state.sort = sortEl.value;
+      sort(); rewind(); apply();
+    });
+
+    /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами:
+       стрелка должна смотреть вверх, пока список открыт. */
+    for (const wrap of document.querySelectorAll('.select')) {
+      const field = wrap.querySelector('select');
+      const close = () => wrap.removeAttribute('data-open');
+      field.addEventListener('mousedown', () => {
+        wrap.toggleAttribute('data-open');
+      });
+      field.addEventListener('keydown', (e) => {
+        if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) wrap.setAttribute('data-open', '');
+      });
+      field.addEventListener('change', close);
+      field.addEventListener('blur', close);
+    }
+
+    /* Первый расчёт: до него в разметке видны все записи — так страница
+       работает без скрипта и целиком достаётся поисковикам. */
+    apply();
+  }
+</script>

@@ -7,6 +7,7 @@ import MultiSelect from '../components/MultiSelect.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import SearchField from '../components/SearchField.astro';
 import { albums, coverSrc, plural } from '../lib/db.js';
+import { fold } from '../lib/fold.js';
 
 /* Подборка: релизы, отмеченные флажком в Notion.
 
@@ -138,7 +139,7 @@ const PAGE = 50;
         {featured.map((a) => (
           <li
             class="release"
-            data-search={`${a.artist} ${a.album}`.toLowerCase()}
+            data-search={fold(`${a.artist} ${a.album}`)}
             data-genres={a.genres.join('|')}
             data-types={a.types.join('|')}
             data-year={a.year ?? ''}
@@ -166,6 +167,8 @@ const PAGE = 50;
 </Base>
 
 <script>
+  import { fold } from '../lib/fold.js';
+
   /* Механика /music целиком. Общего модуля у страниц нет намеренно: пока
      это буквальная копия, и слой настроек над ней был бы длиннее самой
      разницы. Появится третий такой список — самое время вынести. */
@@ -302,7 +305,7 @@ const PAGE = 50;
     search.addEventListener('input', () => {
       clearTimeout(timer);
       timer = setTimeout(() => {
-        state.q = search.value.trim().toLowerCase();
+        state.q = fold(search.value.trim());
         rewind();
         apply();
       }, 120);

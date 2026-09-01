@@ -5,6 +5,7 @@ import ViewSwitch from '../../components/ViewSwitch.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import { artists, albumsOf } from '../../lib/db.js';
+import { fold } from '../../lib/fold.js';
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
@@ -97,7 +98,7 @@ const PAGE = 50;
         {items.map((a) => (
           <li
             class="names__item"
-            data-search={a.name.toLowerCase()}
+            data-search={fold(a.name)}
             data-name={a.name.toLowerCase()}
             data-count={a.albumIds.length}
             data-letter={letter}
@@ -125,6 +126,8 @@ const PAGE = 50;
 </Base>
 
 <script>
+  import { fold } from '../../lib/fold.js';
+
   const search   = document.getElementById('search');
   const empty    = document.getElementById('empty');
   const list     = document.getElementById('list');
@@ -257,7 +260,7 @@ const PAGE = 50;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      query = search.value.trim().toLowerCase();
+      query = fold(search.value.trim());
       rewind();
       apply();
     }, 120);

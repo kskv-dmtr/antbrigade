@@ -6,6 +6,7 @@ import SearchField from '../components/SearchField.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
+import { fold } from '../lib/fold.js';
 
 /* Клипы были разбросаны по страницам артистов, и увидеть их все было негде.
    Здесь они собраны в один список — тем же устройством, что релизы: строка
@@ -123,7 +124,7 @@ const PAGE = 50;
     {list.map((v) => (
       <li
         class="release"
-        data-search={`${videoArtists(v)} ${videoTitle(v)}`.toLowerCase()}
+        data-search={fold(`${videoArtists(v)} ${videoTitle(v)}`)}
         data-kind={v.kind ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
         data-title={videoTitle(v).toLowerCase()}
@@ -141,6 +142,8 @@ const PAGE = 50;
 </Base>
 
 <script>
+  import { fold } from '../lib/fold.js';
+
   const list    = document.getElementById('list');
   const cards   = Array.from(list.children);
   const counter = document.getElementById('counter');
@@ -293,7 +296,7 @@ const PAGE = 50;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      state.q = search.value.trim().toLowerCase();
+      state.q = fold(search.value.trim());
       rewind();
       apply();
     }, 120);

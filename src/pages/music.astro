@@ -7,6 +7,7 @@ import MultiSelect from '../components/MultiSelect.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import SearchField from '../components/SearchField.astro';
 import { albums } from '../lib/db.js';
+import { fold } from '../lib/fold.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
 // и её видят поисковики. Фильтры лишь прячут лишнее.
@@ -129,7 +130,7 @@ const PAGE = 50;
     {albums.map((a) => (
       <li
         class="release"
-        data-search={`${a.artist} ${a.album}`.toLowerCase()}
+        data-search={fold(`${a.artist} ${a.album}`)}
         data-genres={a.genres.join('|')}
         data-types={a.types.join('|')}
         data-year={a.year ?? ''}
@@ -149,6 +150,8 @@ const PAGE = 50;
 </Base>
 
 <script>
+  import { fold } from '../lib/fold.js';
+
   const grid    = document.getElementById('grid');
   const cards   = Array.from(grid.children);
   const counter = document.getElementById('counter');
@@ -307,7 +310,7 @@ const PAGE = 50;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      state.q = search.value.trim().toLowerCase();
+      state.q = fold(search.value.trim());
       rewind();
       apply();
     }, 120);

@@ -5,6 +5,7 @@ import ViewSwitch from '../../components/ViewSwitch.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import { labels, albumsOf } from '../../lib/db.js';
+import { fold } from '../../lib/fold.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -96,7 +97,7 @@ const PAGE = 50;
         {items.map((l) => (
           <li
             class="names__item"
-            data-search={l.name.toLowerCase()}
+            data-search={fold(l.name)}
             data-name={l.name.toLowerCase()}
             data-count={l.albumIds.length}
             data-letter={letter}
@@ -124,6 +125,8 @@ const PAGE = 50;
 </Base>
 
 <script>
+  import { fold } from '../../lib/fold.js';
+
   const search   = document.getElementById('search');
   const empty    = document.getElementById('empty');
   const list     = document.getElementById('list');
@@ -256,7 +259,7 @@ const PAGE = 50;
   search.addEventListener('input', () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      query = search.value.trim().toLowerCase();
+      query = fold(search.value.trim());
       rewind();
       apply();
     }, 120);

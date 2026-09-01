@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-08-31T23:52:54Z",
+  "generatedAt": "2026-09-01T08:56:49Z",
   "counts": {
     "albums": 1126,
-    "artists": 998,
+    "artists": 1008,
     "labels": 627,
     "videos": 83
   },
@@ -4821,7 +4821,9 @@
       "artistIds": [
         "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
       ],
-      "artists": [],
+      "artists": [
+        "Sam Goku"
+      ],
       "labelIds": [
         "3164129a-8c52-8050-be76-d856ba5d0622"
       ],
@@ -5860,7 +5862,9 @@
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ],
-      "artists": [],
+      "artists": [
+        "YĪN YĪN"
+      ],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
       ],
@@ -10771,7 +10775,9 @@
       "artistIds": [
         "2414129a-8c52-8018-875e-e5cb6beef380"
       ],
-      "artists": [],
+      "artists": [
+        "SCARAB"
+      ],
       "labelIds": [
         "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
       ],
@@ -11412,7 +11418,9 @@
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
         "2414129a-8c52-805f-b3ca-dc3408e30cf8"
       ],
-      "artists": [],
+      "artists": [
+        "Durand Jones & The Indications"
+      ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
       ],
@@ -11440,7 +11448,9 @@
       "artistIds": [
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
-      "artists": [],
+      "artists": [
+        "Gelli Haha"
+      ],
       "labelIds": [
         "2434129a-8c52-806e-9bf1-e6c265c72db3"
       ],
@@ -11838,7 +11848,9 @@
       "artistIds": [
         "2414129a-8c52-805e-b11f-d3d452c6e3a2"
       ],
-      "artists": [],
+      "artists": [
+        "Yuuf"
+      ],
       "labelIds": [
         "2484129a-8c52-8053-9a67-cfd3b9aa2dd9"
       ],
@@ -20388,7 +20400,9 @@
       "artistIds": [
         "2414129a-8c52-801d-914c-c4884689694b"
       ],
-      "artists": [],
+      "artists": [
+        "Big Yawn"
+      ],
       "labelIds": [
         "2434129a-8c52-80d0-829f-e827d49262ab"
       ],
@@ -21151,7 +21165,10 @@
         "2414129a-8c52-80d3-b4f9-efccafe58ff1",
         "2414129a-8c52-80b9-b9d1-d0b0e427b129"
       ],
-      "artists": [],
+      "artists": [
+        "Bosq",
+        "Kaleta"
+      ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
@@ -21580,7 +21597,9 @@
       "artistIds": [
         "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
       ],
-      "artists": [],
+      "artists": [
+        "Sam Goku"
+      ],
       "labelIds": [
         "24a4129a-8c52-802a-83c0-e7232cfbaa33"
       ],
@@ -22983,7 +23002,8 @@
         "2414129a-8c52-800a-92fb-ceb904ac44bc"
       ],
       "artists": [
-        "Aura Safari"
+        "Aura Safari",
+        "Jimi Tenor"
       ],
       "labelIds": [
         "2434129a-8c52-80dd-821a-cceae600384b"
@@ -25928,7 +25948,9 @@
       "artistIds": [
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ],
-      "artists": [],
+      "artists": [
+        "YĪN YĪN"
+      ],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
       ],
@@ -36059,6 +36081,28 @@
       "videoIds": []
     },
     {
+      "id": "2414129a-8c52-801d-914c-c4884689694b",
+      "slug": "big-yawn",
+      "name": "Big Yawn",
+      "country": "AU",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "6f6d2a50-53dc-4f75-9c0e-a8852699e264"
+      ],
+      "genres": [
+        "Electronic",
+        "Experimental",
+        "Breakbeat",
+        "Ambient"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80d0-829f-e827d49262ab"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24f4129a-8c52-8008-a7f3-f10c3ab08159",
       "slug": "bitchin-bajas",
       "name": "Bitchin Bajas",
@@ -36492,6 +36536,26 @@
       ],
       "labelIds": [
         "38c4129a-8c52-80c7-a0eb-f6e75e47f667"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "2414129a-8c52-80d3-b4f9-efccafe58ff1",
+      "slug": "bosq",
+      "name": "Bosq",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "1944129a-8c52-8088-9134-eaaf83eb1451"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Afro House"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": []
     },
@@ -39246,6 +39310,29 @@
       "videoIds": []
     },
     {
+      "id": "2414129a-8c52-803f-84bf-e1d9f7fb7397",
+      "slug": "durand-jones-the-indications",
+      "name": "Durand Jones & The Indications",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "21f4129a-8c52-806c-88c0-f1aa033f1df4"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "R'n'B"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8022-abd2-d0c412936e59"
+      ],
+      "videoIds": [
+        "2424129a-8c52-805d-ad8f-d0a05684ad23",
+        "2414129a-8c52-80f2-a7df-d32535a51e60"
+      ]
+    },
+    {
       "id": "28a4129a-8c52-80b1-844d-c094893c789f",
       "slug": "dust",
       "name": "dust",
@@ -41017,6 +41104,29 @@
         "2494129a-8c52-8004-b48e-d6c9b8c826f5"
       ],
       "videoIds": []
+    },
+    {
+      "id": "2424129a-8c52-801f-928b-cd1b28ba171c",
+      "slug": "gelli-haha",
+      "name": "Gelli Haha",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "21f4129a-8c52-80c9-8ca7-fdab8a2ddc9a"
+      ],
+      "genres": [
+        "Synthpop",
+        "Indietronica"
+      ],
+      "labelIds": [
+        "2434129a-8c52-806e-9bf1-e6c265c72db3"
+      ],
+      "videoIds": [
+        "2424129a-8c52-804d-8ef0-d14d5924410e",
+        "3be4129a-8c52-805f-966a-c0a4df3dd5a0"
+      ]
     },
     {
       "id": "2d74129a-8c52-80e1-b265-cf418f174485",
@@ -42935,6 +43045,26 @@
       "videoIds": []
     },
     {
+      "id": "2414129a-8c52-800a-92fb-ceb904ac44bc",
+      "slug": "jimi-tenor",
+      "name": "Jimi Tenor",
+      "country": "FI",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "fc78c0ac-aa0e-4cd2-a6a8-aa9847df46c4"
+      ],
+      "genres": [
+        "Jazz",
+        "Funk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80dd-821a-cceae600384b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3bc4129a-8c52-80da-b4b3-f405f28c2856",
       "slug": "jiri-jiri",
       "name": "Jiri Jiri",
@@ -43387,6 +43517,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-8013-97c1-fa528a97a204"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "2414129a-8c52-80b9-b9d1-d0b0e427b129",
+      "slug": "kaleta",
+      "name": "Kaleta",
+      "country": "BJ",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "1944129a-8c52-8088-9134-eaaf83eb1451"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Afro House"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": []
     },
@@ -49617,6 +49767,29 @@
       "videoIds": []
     },
     {
+      "id": "2414129a-8c52-8020-b53b-c21aa6f6c6ec",
+      "slug": "sam-goku",
+      "name": "Sam Goku",
+      "country": "DE",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3164129a-8c52-809e-9684-fcc92213317b",
+        "a36a1469-6bc7-4330-aa52-bba779acce85"
+      ],
+      "genres": [
+        "Tech House",
+        "Techno",
+        "Electronic"
+      ],
+      "labelIds": [
+        "3164129a-8c52-8050-be76-d856ba5d0622",
+        "24a4129a-8c52-802a-83c0-e7232cfbaa33"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80bd-88bd-db0b7da9198c",
       "slug": "sam-redmore",
       "name": "Sam Redmore",
@@ -49745,6 +49918,26 @@
       "labelIds": [
         "2864129a-8c52-80cb-9223-fe406c7f1133",
         "2504129a-8c52-8043-bbf7-dccba6159cb1"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "2414129a-8c52-8018-875e-e5cb6beef380",
+      "slug": "scarab",
+      "name": "SCARAB",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://scarabhc.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "2414129a-8c52-80d8-a663-deb36101dbbc"
+      ],
+      "genres": [
+        "Hardcore",
+        "Powerviolence"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-80fc-9ddf-d93a5b683f9e"
       ],
       "videoIds": []
     },
@@ -54729,6 +54922,34 @@
       "videoIds": []
     },
     {
+      "id": "2414129a-8c52-8012-9a94-e8afd5875a12",
+      "slug": "yin-yin",
+      "name": "YĪN YĪN",
+      "country": "NL",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "2f14129a-8c52-80f6-9983-e35e491f7d65",
+        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Rock",
+        "Groove",
+        "Disco",
+        "Exotica",
+        "Funk",
+        "Mutant Disco"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8093-8156-f94f7507964c"
+      ],
+      "videoIds": [
+        "2814129a-8c52-80d2-8cb1-fcd73eb80eb6"
+      ]
+    },
+    {
       "id": "3774129a-8c52-8088-a2bb-c511938eaa80",
       "slug": "yoni-mayraz",
       "name": "Yoni Mayraz",
@@ -54825,6 +55046,28 @@
         "2504129a-8c52-8085-8030-c1434e2e4b4d"
       ],
       "videoIds": []
+    },
+    {
+      "id": "2414129a-8c52-805e-b11f-d3d452c6e3a2",
+      "slug": "yuuf",
+      "name": "Yuuf",
+      "country": "GB",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "2194129a-8c52-8012-ad54-ed6766baaf28"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Instrumental"
+      ],
+      "labelIds": [
+        "2484129a-8c52-8053-9a67-cfd3b9aa2dd9"
+      ],
+      "videoIds": [
+        "2414129a-8c52-80ea-b3dd-c89caaa8fecd"
+      ]
     },
     {
       "id": "2494129a-8c52-8086-ae24-f014c339074b",

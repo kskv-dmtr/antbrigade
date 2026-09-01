@@ -65,7 +65,7 @@ async function api(endpoint, body, attempt = 1) {
   }
 }
 
-async function queryCollection({ collection, view }, filter = null) {
+async function queryCollection({ collection, view }, filter = null, sort = null) {
   const loader = {
     type: 'reducer',
     reducers: { collection_group_results: { type: 'results', limit: 5000 } },
@@ -73,6 +73,7 @@ async function queryCollection({ collection, view }, filter = null) {
     userTimeZone: 'Europe/Moscow'
   };
   if (filter) loader.filter = filter;
+  if (sort) loader.sort = sort;
 
   const res = await api('queryCollection?src=sync', {
     source: { type: 'collection', id: collection, spaceId: SPACE_ID },
@@ -240,10 +241,31 @@ const cmp = (a, b) => collator.compare(a, b);
 
 // ------------------------------------------------------------ выгрузка
 
-async function directory(source, label) {
+/* Справочник целиком, в обход потолка в тысячу строк.
+
+   Notion отдаёт список id полностью, а сами записи — не больше тысячи за
+   запрос. Пока артистов было меньше, это не замечалось; 31 августа 2026 их
+   стало 1010, и десять последних молча перестали попадать в выгрузку —
+   вместе со своими страницами и ссылками с релизов.
+
+   Берём тем же запросом в обратном порядке и складываем: тысяча с начала
+   плюс тысяча с конца перекрывают всё, пока в справочнике меньше двух
+   тысяч строк. Дальше середина снова начнёт теряться, поэтому ниже стоит
+   проверка — она не даст этому случиться тихо. */
+async function fullCollection(source) {
   const res = await queryCollection(source);
   const store = new Map();
   collect(store, res.blocks, source.collection);
+
+  if (store.size < res.ids.length) {
+    const назад = await queryCollection(source, null, [{ property: 'title', direction: 'descending' }]);
+    collect(store, назад.blocks, source.collection);
+  }
+  return { store, total: res.ids.length };
+}
+
+async function directory(source, label) {
+  const { store, total } = await fullCollection(source);
 
   const dir = new Map();
   let withBandcamp = 0;
@@ -271,7 +293,20 @@ async function directory(source, label) {
   const slugs = assignSlugs([...dir.values()], (x) => x.name);
   for (const item of dir.values()) item.slug = slugs.get(item.id);
 
-  console.log(`  ${label.padEnd(8)} -> ${dir.size} из ${res.ids.length}, с Bandcamp: ${withBandcamp}`);
+  /* Строки без имени пропускаются выше намеренно — это заготовки, их в
+     справочнике быть не должно. А вот недобор самих строк означает, что
+     часть записей до нас не доехала: связи с релизов будут указывать в
+     пустоту, страниц у таких артистов не появится. Молча этого допускать
+     нельзя — на такой потере мы уже теряли одиннадцать имён. */
+  if (store.size < total) {
+    throw new Error(
+      `${label}: получено ${store.size} строк из ${total}. ` +
+      'Справочник больше двух тысяч строк, и двух заходов уже не хватает — ' +
+      'выгрузку надо разбивать мельче.'
+    );
+  }
+
+  console.log(`  ${label.padEnd(8)} -> ${dir.size} из ${total}, с Bandcamp: ${withBandcamp}`);
   return dir;
 }
 

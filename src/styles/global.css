@@ -745,24 +745,8 @@ a { color: inherit; text-decoration: none; }
   gap: 20px;
   padding: 40px 0 22px;
 }
-/* Строка жанров под именем исполнителя. Поле снизу у .page-head для неё
-   убавлено с 22 до 10 — до того же просвета, что между строками в шапке
-   релиза: имя с жанрами такая же пара, что название с исполнителем. Своё
-   поле снизу строка держит сама, чтобы общий ритм не сбился.
-
-   Правило висит на заголовке, а не на строке: полю неоткуда взяться
-   отрицательным. Страницы без жанров — лейбл, жанр — его не касаются. */
-.page-head:has(+ .page-genres) { padding-bottom: 10px; }
-.page-genres {
-  margin: 0 0 22px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.page-genres a { border-bottom: 1px solid var(--line); }
-.page-genres a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+/* Строка жанров под именем (`.page-genres`) удалена 31 августа 2026: жанры
+   стали разделом, как лейблы, и под именем не осталось ничего. */
 
 .page-head h1 {
   margin: 0;
@@ -1941,6 +1925,19 @@ select option { background: var(--option-bg); color: var(--fg); }
   .foot__in { flex-direction: column; align-items: flex-start; gap: 20px; }
   .foot__note--end { text-align: left; }
   .page-head { padding: 26px 0 18px; }
+
+  /* Страна уходит под имя. На широком экране она стоит справа, по нижней
+     его линии, но на узком длинное имя переносится в три-четыре строки, и
+     пометка у правого края повисает сама по себе далеко от того, к чему
+     относится.
+
+     Правило только для страниц артиста и лейбла: у списков в этом же месте
+     стоит счётчик записей, и его место справа от заголовка законно. */
+  .page-head--country {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
   /* Клип в одну колонку: две дают кадр 165×93, а это уже не картинка.
      Правило здесь, а не выше по файлу: `.tiles` в медиазапросе для 900 px

@@ -49,21 +49,10 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
       чем счётчики на списках: скобки на сайте означают служебное число или
       пометку, и страна здесь именно пометка. Выключку даёт сам .page-head —
       он для того и собран, на списках так же стоит счётчик. */}
-  <div class="page-head">
+  <div class="page-head page-head--country">
     <h1>{artist.name}</h1>
     {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
   </div>
-
-  {/* Жанры — строкой под именем, ссылками и через точку. Подписи «Genres»
-      нет, как и на полосе релиза: по строке видно, что это жанры.
-
-      Просвет до имени — те же 10, что между строками в шапке релиза; поле
-      снизу у .page-head для этого убавлено правилом в стилях. */}
-  {artist.genres.length > 0 && (
-    <p class="page-genres">
-      <GenreLinks names={artist.genres} inline />
-    </p>
-  )}
 
   {/* Ссылки наружу — своим разделом, наравне с дискографией и клипами, а не
       строкой в справке. Заголовок и линейка под ним те же, что у соседей;
@@ -79,6 +68,22 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
         <h2 class="display display--md">Links</h2>
       </div>
       <ProfileLinks website={artist.website} bandcamp={artist.bandcamp} youtube={artist.youtube} />
+    </section>
+  )}
+
+  {/* Жанры — своим разделом, как лейблы. Стоят перед ними: на полосе
+      релиза жанры тоже идут выше строки с лейблом.
+
+      Заголовок склоняется по числу, счётчик справа всегда — как у соседей. */}
+  {artist.genres.length > 0 && (
+    <section class="section">
+      <div class="head">
+        <h2 class="display display--md">{artist.genres.length > 1 ? 'Genres' : 'Genre'}</h2>
+        <span class="mono">[{artist.genres.length}]</span>
+      </div>
+      <p class="meta-line">
+        <GenreLinks names={artist.genres} inline />
+      </p>
     </section>
   )}
 

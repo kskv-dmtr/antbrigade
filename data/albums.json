@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-01T14:56:07Z",
+  "generatedAt": "2026-09-01T21:48:50Z",
   "counts": {
-    "albums": 1128,
-    "artists": 1009,
-    "labels": 629,
-    "videos": 83
+    "albums": 1129,
+    "artists": 1010,
+    "labels": 630,
+    "videos": 84
   },
   "albums": [
     {
@@ -2964,6 +2964,37 @@
       ],
       "labels": [
         "Sub Pop Records"
+      ]
+    },
+    {
+      "id": "3ce4129a-8c52-804d-9762-fc7b5553bc55",
+      "slug": "jump-source-fold",
+      "artist": "Jump Source",
+      "album": "Fold",
+      "url": "https://album.link/k2chhvvvdpwg8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aad66e112-2701-4ead-a40a-ee582b5f26bf%3Aa2756178546_10.jpg?table=block&id=3ce4129a-8c52-804d-9762-fc7b5553bc55&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Tech House",
+        "Microhouse",
+        "IDM"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-30",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "3ce4129a-8c52-8013-97af-fb1917597747"
+      ],
+      "artists": [
+        "Jump Source"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-8062-b155-e982031cccdf"
+      ],
+      "labels": [
+        "naff recordings"
       ]
     },
     {
@@ -34515,7 +34546,8 @@
       ],
       "videoIds": [
         "3b74129a-8c52-8094-a3e6-cc5a11fa5542",
-        "3b54129a-8c52-8060-a912-cb42f34a69e9"
+        "3b54129a-8c52-8060-a912-cb42f34a69e9",
+        "3ce4129a-8c52-8013-aeae-e0447048a99a"
       ]
     },
     {
@@ -43499,6 +43531,27 @@
       ],
       "labelIds": [
         "2b14129a-8c52-8065-9f7a-f2885d491cbd"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3ce4129a-8c52-8013-97af-fb1917597747",
+      "slug": "jump-source",
+      "name": "Jump Source",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://jumpsource.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3ce4129a-8c52-804d-9762-fc7b5553bc55"
+      ],
+      "genres": [
+        "Tech House",
+        "Microhouse",
+        "IDM"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-8062-b155-e982031cccdf"
       ],
       "videoIds": []
     },
@@ -61433,6 +61486,21 @@
       ]
     },
     {
+      "id": "3ce4129a-8c52-8062-b155-e982031cccdf",
+      "slug": "naff-recordings",
+      "name": "naff recordings",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://naffrecordings.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3ce4129a-8c52-804d-9762-fc7b5553bc55"
+      ],
+      "artistIds": [
+        "3ce4129a-8c52-8013-97af-fb1917597747"
+      ]
+    },
+    {
       "id": "3194129a-8c52-8027-8d72-efcb106e9fb5",
       "slug": "naive-records",
       "name": "Naïve Records",
@@ -65799,6 +65867,19 @@
         "2404129a-8c52-800a-826f-dd385decf385"
       ],
       "slug": "aaron-frazer-it-s-a-shame"
+    },
+    {
+      "id": "3ce4129a-8c52-8013-aeae-e0447048a99a",
+      "title": "Aaron Frazer | Paint the Picture",
+      "url": "https://youtu.be/sv1-XxN0Yn8?si=dJUtuuapORl2L0Ny",
+      "kind": "Official Video",
+      "released": "2026-09-01",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "2404129a-8c52-800a-826f-dd385decf385"
+      ],
+      "slug": "aaron-frazer-paint-the-picture"
     },
     {
       "id": "3cb4129a-8c52-80b2-be79-f93b24895d7c",

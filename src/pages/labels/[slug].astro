@@ -29,15 +29,15 @@ const roster   = artistsOf(label.artistIds);
     {label.country && <p class="counter">[{countryName(label.country)}]</p>}
   </div>
 
-  {/* Ссылки наружу — своим разделом, как у исполнителя: тот же заголовок,
-      та же линейка, кнопки под ней слева, счётчика нет. */}
+  {/* Ссылки наружу стоят прямо под именем, без заголовка и линейки — как и
+      у исполнителя: заголовок «Links» с чертой во всю ширину ради одной-двух
+      кнопок весил больше, чем сами кнопки, а рядом такие же заголовки ведут
+      к спискам и сеткам.
+
+      Просвет до имени держит поле .page-head, а свой отступ снизу — ряд
+      кнопок; ниже он схлопывается с полем первого раздела. */}
   {(label.website || label.bandcamp || label.youtube) && (
-    <section class="section">
-      <div class="head">
-        <h2 class="display display--md">Links</h2>
-      </div>
-      <ProfileLinks website={label.website} bandcamp={label.bandcamp} youtube={label.youtube} />
-    </section>
+    <ProfileLinks website={label.website} bandcamp={label.bandcamp} youtube={label.youtube} />
   )}
 
   {/* Состав — своим разделом, как лейблы на странице исполнителя. Заголовок склоняется по числу, а счётчик

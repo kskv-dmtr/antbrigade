@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T16:37:26Z",
+  "generatedAt": "2026-09-02T18:48:56Z",
   "counts": {
-    "albums": 1131,
+    "albums": 1130,
     "artists": 1012,
     "labels": 631,
     "videos": 84
@@ -33756,38 +33756,8 @@
       ]
     },
     {
-      "id": "0b4b5631-ce80-48bb-a3ed-844b288024a0",
-      "slug": "fuga-ronto-greatest-treasure",
-      "artist": "Fuga Ronto",
-      "album": "Greatest Treasure",
-      "url": "https://album.link/bpbk5z8nd5f3h",
-      "cover": "https://antbrigade.notion.site/image/attachment%3A41b47ece-7d40-44ef-8ccc-31e853e6933f%3Aa1779831890_10.jpg?table=block&id=0b4b5631-ce80-48bb-a3ed-844b288024a0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [
-        "Balearic Beat"
-      ],
-      "types": [
-        "Album"
-      ],
-      "released": "2021-08-30",
-      "year": 2021,
-      "origReleased": null,
-      "featured": false,
-      "artistIds": [
-        "2524129a-8c52-809f-af88-d3650da05ce9"
-      ],
-      "artists": [
-        "Fuga Ronto"
-      ],
-      "labelIds": [
-        "2524129a-8c52-809b-b141-d09f0edb8ce3"
-      ],
-      "labels": [
-        "Phantom Island"
-      ]
-    },
-    {
       "id": "3cd4129a-8c52-80d9-8426-eadd38a496ac",
-      "slug": "fuga-ronto-greatest-treasure-2",
+      "slug": "fuga-ronto-greatest-treasure",
       "artist": "Fuga Ronto",
       "album": "Greatest Treasure",
       "url": "https://album.link/bdpkwdh2xr0b5",
@@ -42148,15 +42118,9 @@
       "website": null,
       "bandcamp": null,
       "youtube": null,
-      "albumIds": [
-        "0b4b5631-ce80-48bb-a3ed-844b288024a0"
-      ],
-      "genres": [
-        "Balearic Beat"
-      ],
-      "labelIds": [
-        "2524129a-8c52-809b-b141-d09f0edb8ce3"
-      ],
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
       "videoIds": []
     },
     {
@@ -63551,12 +63515,8 @@
       "website": null,
       "bandcamp": null,
       "youtube": null,
-      "albumIds": [
-        "0b4b5631-ce80-48bb-a3ed-844b288024a0"
-      ],
-      "artistIds": [
-        "2524129a-8c52-809f-af88-d3650da05ce9"
-      ]
+      "albumIds": [],
+      "artistIds": []
     },
     {
       "id": "3cd4129a-8c52-80bf-a84a-d6185253f34e",

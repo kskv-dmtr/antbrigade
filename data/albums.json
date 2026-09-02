@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T18:48:56Z",
+  "generatedAt": "2026-09-02T19:18:10Z",
   "counts": {
     "albums": 1130,
-    "artists": 1012,
-    "labels": 631,
+    "artists": 1010,
+    "labels": 630,
     "videos": 84
   },
   "albums": [
@@ -42111,21 +42111,8 @@
       "videoIds": []
     },
     {
-      "id": "2524129a-8c52-809f-af88-d3650da05ce9",
-      "slug": "fuga-ronto",
-      "name": "Fuga Ronto",
-      "country": "CH",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [],
-      "genres": [],
-      "labelIds": [],
-      "videoIds": []
-    },
-    {
       "id": "3cd4129a-8c52-8076-8625-d5a8cb9e054c",
-      "slug": "fuga-ronto-2",
+      "slug": "fuga-ronto",
       "name": "Fuga Ronto",
       "country": "CH",
       "website": null,
@@ -55109,8 +55096,8 @@
       "name": "Tycho",
       "country": "US",
       "website": null,
-      "bandcamp": null,
-      "youtube": null,
+      "bandcamp": "https://tycho.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@Tychomusic",
       "albumIds": [
         "a5c574fb-15b0-46b2-8f53-be597c810268"
       ],
@@ -55122,19 +55109,6 @@
       "labelIds": [
         "2434129a-8c52-8088-921f-e4f39ef46bee"
       ],
-      "videoIds": []
-    },
-    {
-      "id": "3c84129a-8c52-8089-adcc-ee79cb8b5106",
-      "slug": "tycho-2",
-      "name": "Tycho",
-      "country": "US",
-      "website": null,
-      "bandcamp": "https://tycho.bandcamp.com/music",
-      "youtube": "https://www.youtube.com/@Tychomusic",
-      "albumIds": [],
-      "genres": [],
-      "labelIds": [],
       "videoIds": [
         "3c84129a-8c52-80f3-a91e-d9b794831ded"
       ]
@@ -63508,19 +63482,8 @@
       ]
     },
     {
-      "id": "2524129a-8c52-809b-b141-d09f0edb8ce3",
-      "slug": "phantom-island",
-      "name": "Phantom Island",
-      "country": "CH",
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [],
-      "artistIds": []
-    },
-    {
       "id": "3cd4129a-8c52-80bf-a84a-d6185253f34e",
-      "slug": "phantom-island-2",
+      "slug": "phantom-island",
       "name": "Phantom Island",
       "country": "CH",
       "website": null,
@@ -68061,7 +68024,8 @@
       "year": 2023,
       "origReleased": null,
       "artistIds": [
-        "3c84129a-8c52-8089-adcc-ee79cb8b5106"
+        "3c84129a-8c52-8089-adcc-ee79cb8b5106",
+        "2514129a-8c52-8031-8512-d6d8bae5b210"
       ],
       "slug": "tycho-time-to-run"
     },

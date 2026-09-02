@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T21:59:49Z",
+  "generatedAt": "2026-09-02T22:40:40Z",
   "counts": {
     "albums": 1132,
     "artists": 1012,
@@ -39498,7 +39498,7 @@
       "name": "Cuir",
       "country": "FR",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://cuir1.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3cf4129a-8c52-80d8-a62c-d28c0a29e200"

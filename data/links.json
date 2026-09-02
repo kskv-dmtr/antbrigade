@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T19:49:16Z",
+  "generatedAt": "2026-09-02T22:40:56Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17846,6 +17846,31 @@
       "upc": "0812388025052",
       "tracks": 9,
       "releaseDate": "2015-02-24"
+    },
+    "3cf4129a-8c52-801f-aa5c-f48bd1144e8b": {
+      "source": "https://album.link/ndkmd3ms9smbm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3cgOB20VrKxHzvTPuMmav2",
+        "tidal": "https://listen.tidal.com/album/556848192",
+        "yandex": "https://music.yandex.ru/album/43756480",
+        "boomplay": "https://www.boomplay.com/albums/139170789"
+      },
+      "upc": "859745016636",
+      "tracks": 10,
+      "releaseDate": "2026-08-28"
+    },
+    "3cf4129a-8c52-80d8-a62c-d28c0a29e200": {
+      "source": "https://album.link/cjpvdgk7vw3sq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5bO2ZyyVr9J6FB0paQLZPF",
+        "pandora": "https://www.pandora.com/AL:67136342",
+        "tidal": "https://listen.tidal.com/album/531017034",
+        "yandex": "https://music.yandex.ru/album/42467595",
+        "boomplay": "https://www.boomplay.com/albums/132951789"
+      },
+      "upc": "4069493927818",
+      "tracks": 8,
+      "releaseDate": "2026-06-19"
     }
   }
 }

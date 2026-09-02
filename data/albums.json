@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T11:23:05Z",
+  "generatedAt": "2026-09-02T16:37:26Z",
   "counts": {
-    "albums": 1130,
-    "artists": 1011,
-    "labels": 630,
+    "albums": 1131,
+    "artists": 1012,
+    "labels": 631,
     "videos": 84
   },
   "albums": [
@@ -35321,6 +35321,38 @@
       ]
     },
     {
+      "id": "3cf4129a-8c52-80e8-b1be-cbe5999d0145",
+      "slug": "patrick-holland-i-want-to-believe",
+      "artist": "Patrick Holland",
+      "album": "I Want to Believe",
+      "url": "https://album.link/xfjwftv4z3bh8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae0425a02-6c5b-47bc-a88a-4de00833ef6b%3Aa1024343008_10.jpg?table=block&id=3cf4129a-8c52-80e8-b1be-cbe5999d0145&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Outsider House",
+        "Deep House",
+        "Lo-Fi House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2015-02-24",
+      "year": 2015,
+      "origReleased": null,
+      "featured": true,
+      "artistIds": [
+        "3cf4129a-8c52-8066-9d85-c9c4d78042df"
+      ],
+      "artists": [
+        "Patrick Holland"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-805c-acc7-c5d496de2565"
+      ],
+      "labels": [
+        "Verdicchio Music Publishing"
+      ]
+    },
+    {
       "id": "2f74129a-8c52-8067-a3e8-e85f767ee29f",
       "slug": "clever-girl-no-drum-and-bass-in-the-jazz-room",
       "artist": "Clever Girl",
@@ -49197,6 +49229,27 @@
       ],
       "labelIds": [
         "2484129a-8c52-80bb-94c1-e62863f464c3"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cf4129a-8c52-8066-9d85-c9c4d78042df",
+      "slug": "patrick-holland",
+      "name": "Patrick Holland",
+      "country": "CA",
+      "website": "https://hollandpatrick.com/",
+      "bandcamp": "https://patrickholland.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@PatrickHollandofficial",
+      "albumIds": [
+        "3cf4129a-8c52-80e8-b1be-cbe5999d0145"
+      ],
+      "genres": [
+        "Outsider House",
+        "Deep House",
+        "Lo-Fi House"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-805c-acc7-c5d496de2565"
       ],
       "videoIds": []
     },
@@ -66559,6 +66612,21 @@
         "24a4129a-8c52-8091-bc26-d3398eac88bc",
         "24f4129a-8c52-8070-96a3-c6efc6466b5b",
         "3bf4129a-8c52-8066-be4e-cfe98123c08d"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-805c-acc7-c5d496de2565",
+      "slug": "verdicchio-music-publishing",
+      "name": "Verdicchio Music Publishing",
+      "country": "CA",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-80e8-b1be-cbe5999d0145"
+      ],
+      "artistIds": [
+        "3cf4129a-8c52-8066-9d85-c9c4d78042df"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T11:23:15Z",
+  "generatedAt": "2026-09-02T16:37:37Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17853,6 +17853,18 @@
       "upc": "4069493241846",
       "tracks": 4,
       "releaseDate": "2025-04-04"
+    },
+    "3cf4129a-8c52-80e8-b1be-cbe5999d0145": {
+      "source": "https://album.link/xfjwftv4z3bh8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/00zjQRFbCfBAX7YjW3ctjS",
+        "deezer": "https://www.deezer.com/album/349867737",
+        "tidal": "https://listen.tidal.com/album/372224809",
+        "bandcamp": "https://patrickholland.bandcamp.com/album/i-want-to-believe"
+      },
+      "upc": "0812388025052",
+      "tracks": 9,
+      "releaseDate": "2015-02-24"
     }
   }
 }

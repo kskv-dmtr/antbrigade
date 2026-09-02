@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T21:49:01Z",
+  "generatedAt": "2026-09-02T11:23:15Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17839,6 +17839,20 @@
       "upc": "840536900319",
       "tracks": 11,
       "releaseDate": "2026-04-30"
+    },
+    "3cf4129a-8c52-809e-8a95-d5e834e00b19": {
+      "source": "https://album.link/p8mt50m5wskjv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7d9eTORvq0V4X6onDYfLyw",
+        "deezer": "https://www.deezer.com/album/732905111",
+        "amazonMusic": "https://music.amazon.com/albums/B0F2GJ9KG3",
+        "tidal": "https://listen.tidal.com/album/426234071",
+        "bandcamp": "https://hesitational.bandcamp.com/album/demo",
+        "amazonStore": "https://amazon.com/dp/B0F2GJ9KG3"
+      },
+      "upc": "4069493241846",
+      "tracks": 4,
+      "releaseDate": "2025-04-04"
     }
   }
 }

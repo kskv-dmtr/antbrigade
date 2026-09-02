@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T00:17:32Z",
+  "generatedAt": "2026-09-02T11:23:05Z",
   "counts": {
-    "albums": 1129,
-    "artists": 1010,
+    "albums": 1130,
+    "artists": 1011,
     "labels": 630,
     "videos": 84
   },
@@ -15484,6 +15484,37 @@
       "labels": [
         "Bella Union",
         "Wharf Cat Records"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-809e-8a95-d5e834e00b19",
+      "slug": "drama-demo",
+      "artist": "Drama",
+      "album": "Demo",
+      "url": "https://album.link/p8mt50m5wskjv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad0adcc9f-b66b-4116-90c4-7820dae95ef7%3Aa0497132059_10.jpg?table=block&id=3cf4129a-8c52-809e-8a95-d5e834e00b19&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "Punk Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-03-14",
+      "year": 2025,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3cf4129a-8c52-8017-8873-c0c364bcc302"
+      ],
+      "artists": [
+        "Drama"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Self-released"
       ]
     },
     {
@@ -40475,6 +40506,26 @@
       "videoIds": []
     },
     {
+      "id": "3cf4129a-8c52-8017-8873-c0c364bcc302",
+      "slug": "drama",
+      "name": "Drama",
+      "country": "DE",
+      "website": null,
+      "bandcamp": "https://dramapunx.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-809e-8a95-d5e834e00b19"
+      ],
+      "genres": [
+        "Post-Punk",
+        "Punk Rock"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24f4129a-8c52-804a-b996-d1acd268fe19",
       "slug": "drunk-mums",
       "name": "Drunk Mums",
@@ -64811,6 +64862,7 @@
         "1e64129a-8c52-800e-ba51-f4fee6337e53",
         "1c64129a-8c52-805c-b909-e25236d4f886",
         "2374129a-8c52-8036-9f55-c9fe32271637",
+        "3cf4129a-8c52-809e-8a95-d5e834e00b19",
         "1e44129a-8c52-809f-993e-fd57e166d1f7",
         "1984129a-8c52-804f-99a8-eeaaec4b3d4c",
         "570bf4d9-7647-4dd8-80cb-f5256d921f4f",
@@ -64921,6 +64973,7 @@
         "2494129a-8c52-8085-9d8a-fa473dff08d1",
         "24a4129a-8c52-8066-9ca6-f309eecf972f",
         "2424129a-8c52-80d1-9528-c0734ae7a166",
+        "3cf4129a-8c52-8017-8873-c0c364bcc302",
         "24a4129a-8c52-800f-84cf-dcd344edcc05",
         "2484129a-8c52-8083-abd4-d6fb31cff87a",
         "24a4129a-8c52-80bf-89f9-d934c7331c80",

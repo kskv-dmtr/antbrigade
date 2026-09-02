@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T19:49:05Z",
+  "generatedAt": "2026-09-02T21:59:49Z",
   "counts": {
-    "albums": 1131,
-    "artists": 1011,
-    "labels": 630,
+    "albums": 1132,
+    "artists": 1012,
+    "labels": 631,
     "videos": 84
   },
   "albums": [
@@ -32,8 +32,12 @@
       "artists": [
         "Andrew W.K."
       ],
-      "labelIds": [],
-      "labels": []
+      "labelIds": [
+        "3cf4129a-8c52-80b6-a054-ff8e87311827"
+      ],
+      "labels": [
+        "The Louise Harland Corporation"
+      ]
     },
     {
       "id": "3ca4129a-8c52-805b-8443-d671cbcf6791",
@@ -633,7 +637,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -1079,7 +1083,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -1173,7 +1177,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -1369,7 +1373,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -1400,6 +1404,37 @@
       ],
       "labels": [
         "Third Man Records"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-80d8-a62c-d28c0a29e200",
+      "slug": "cuir-monoface",
+      "artist": "Cuir",
+      "album": "MONOFACE",
+      "url": "https://album.link/cjpvdgk7vw3sq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A71da05af-bbdf-4dee-9c9a-3b32bb0e59e3%3Aa4253136710_10.jpg?table=block&id=3cf4129a-8c52-80d8-a62c-d28c0a29e200&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Synth Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-06-19",
+      "year": 2026,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3cf4129a-8c52-80e5-b650-d1dddc46abeb"
+      ],
+      "artists": [
+        "Cuir"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
       ]
     },
     {
@@ -2161,7 +2196,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -2255,7 +2290,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -3054,7 +3089,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -3337,7 +3372,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -3500,7 +3535,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -3850,7 +3885,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -4324,7 +4359,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -4545,7 +4580,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -4983,7 +5018,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -5329,7 +5364,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -5640,7 +5675,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -6215,7 +6250,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -6524,7 +6559,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -6618,7 +6653,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -7653,7 +7688,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -7685,7 +7720,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -8193,7 +8228,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -9799,7 +9834,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10403,7 +10438,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10435,7 +10470,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10530,7 +10565,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10723,7 +10758,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10754,7 +10789,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -10944,7 +10979,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -11036,7 +11071,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -11067,7 +11102,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -11288,7 +11323,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -11510,7 +11545,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -12304,7 +12339,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -12367,7 +12402,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -12803,7 +12838,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -12929,7 +12964,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -12960,7 +12995,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -13433,7 +13468,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -14062,7 +14097,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -14565,7 +14600,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -14752,7 +14787,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -15039,7 +15074,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -15227,7 +15262,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -15383,7 +15418,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -15541,7 +15576,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -16234,7 +16269,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -16613,7 +16648,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -16956,7 +16991,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -17019,7 +17054,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -17210,7 +17245,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -17274,7 +17309,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -17305,7 +17340,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -18381,7 +18416,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -18695,7 +18730,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -19233,7 +19268,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -19390,7 +19425,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -19738,7 +19773,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -20027,7 +20062,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -20216,7 +20251,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -20599,7 +20634,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21134,7 +21169,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21292,7 +21327,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21482,7 +21517,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21702,7 +21737,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21763,7 +21798,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -21989,7 +22024,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -22054,7 +22089,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -22150,7 +22185,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -22245,7 +22280,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -22466,7 +22501,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23253,7 +23288,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23348,7 +23383,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23443,7 +23478,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23476,7 +23511,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23598,7 +23633,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -23786,7 +23821,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -24103,7 +24138,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -25388,7 +25423,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -25451,7 +25486,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -25669,7 +25704,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -25825,7 +25860,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -26207,7 +26242,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -27145,7 +27180,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -27210,7 +27245,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -27494,7 +27529,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -27585,7 +27620,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -28244,7 +28279,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -28738,7 +28773,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -28986,7 +29021,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -29017,7 +29052,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -29112,7 +29147,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -29359,7 +29394,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -29823,7 +29858,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -29947,7 +29982,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -30010,7 +30045,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -30102,7 +30137,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -30787,7 +30822,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -31001,7 +31036,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -31063,7 +31098,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -31220,7 +31255,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -31376,7 +31411,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -31937,7 +31972,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -32442,7 +32477,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -32628,7 +32663,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -32974,7 +33009,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -34654,7 +34689,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -34908,7 +34943,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -35001,7 +35036,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -35314,7 +35349,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -35378,7 +35413,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "labels": [
-        "Self-released"
+        "Not on Label"
       ]
     },
     {
@@ -36297,7 +36332,9 @@
         "Dark Jazz",
         "Crime Jazz"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "3cf4129a-8c52-80b6-a054-ff8e87311827"
+      ],
       "videoIds": []
     },
     {
@@ -39452,6 +39489,26 @@
       ],
       "labelIds": [
         "2444129a-8c52-80f1-9c61-e9b7eeb5f749"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3cf4129a-8c52-80e5-b650-d1dddc46abeb",
+      "slug": "cuir",
+      "name": "Cuir",
+      "country": "FR",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-80d8-a62c-d28c0a29e200"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Synth Punk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": []
     },
@@ -63046,6 +63103,232 @@
       ]
     },
     {
+      "id": "2434129a-8c52-80c6-94b5-c189d8b7405b",
+      "slug": "not-on-label",
+      "name": "Not on Label",
+      "country": null,
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3a94129a-8c52-8004-87dd-f0f24534f3a6",
+        "3c14129a-8c52-80e6-b59d-c3b7827df262",
+        "3964129a-8c52-8063-a715-d68f15c5f7a0",
+        "38a4129a-8c52-80f5-9b67-ef297a32ec2a",
+        "3cf4129a-8c52-80d8-a62c-d28c0a29e200",
+        "3804129a-8c52-803c-8242-c84d37a1367b",
+        "36a4129a-8c52-80d0-a690-c4750bdd6851",
+        "3554129a-8c52-80b2-876f-ffb0375e4110",
+        "3ac4129a-8c52-8009-9756-d14e6822a848",
+        "3464129a-8c52-802e-b653-e68daa89a220",
+        "3404129a-8c52-8003-8e65-ffbe73c82305",
+        "3724129a-8c52-80e1-afc0-c879b79c40e3",
+        "3284129a-8c52-8093-9033-cfea4909f54d",
+        "3244129a-8c52-8090-b63a-d4b3d363b3a3",
+        "3114129a-8c52-809a-a104-e15c5dd7b02c",
+        "3064129a-8c52-8008-93e3-d8d9f41d3766",
+        "35f4129a-8c52-8090-83b1-cc901c1df55a",
+        "3004129a-8c52-801b-bb7b-c4c0948a637d",
+        "2ce4129a-8c52-80e8-bd4e-f5cb1152e039",
+        "2b34129a-8c52-80e4-b050-fc4065b82028",
+        "2c94129a-8c52-806d-a8cc-d3f448deae37",
+        "2974129a-8c52-8049-ae99-f48c24066677",
+        "2984129a-8c52-8087-962b-d13adf1700fd",
+        "2644129a-8c52-8060-8549-d979439840b4",
+        "25e4129a-8c52-80be-8451-e51868e4db1f",
+        "2a44129a-8c52-8040-829e-e9a76398576e",
+        "2564129a-8c52-8097-975f-c210bdd329c0",
+        "2504129a-8c52-80d1-bdb7-eb944f8d376b",
+        "24d4129a-8c52-8020-8c9d-cb244b61e67a",
+        "2474129a-8c52-8042-a3af-d22fe05f9dd6",
+        "24d4129a-8c52-80bd-be5a-c898c9f7e6a0",
+        "23e4129a-8c52-8076-9992-f64d168afdc8",
+        "23f4129a-8c52-80f4-a406-c55d85ab6f0b",
+        "2c84129a-8c52-809a-ad7e-f5a9eec6c706",
+        "2164129a-8c52-80f2-a948-dfe50918c2a6",
+        "2094129a-8c52-8004-b5e3-eb09f3dd442a",
+        "2074129a-8c52-8014-983d-fbc0cd121339",
+        "2034129a-8c52-80c7-878e-e07028c20eeb",
+        "1f64129a-8c52-80ab-a605-d99a51b462b8",
+        "2134129a-8c52-80b6-94ce-dfefb04b2bfd",
+        "1e14129a-8c52-80ce-bd27-edb9c9ca6dbf",
+        "29f4129a-8c52-8074-8861-e7d3d75958ad",
+        "1e64129a-8c52-800e-ba51-f4fee6337e53",
+        "1c64129a-8c52-805c-b909-e25236d4f886",
+        "2374129a-8c52-8036-9f55-c9fe32271637",
+        "3cf4129a-8c52-809e-8a95-d5e834e00b19",
+        "1e44129a-8c52-809f-993e-fd57e166d1f7",
+        "1984129a-8c52-804f-99a8-eeaaec4b3d4c",
+        "570bf4d9-7647-4dd8-80cb-f5256d921f4f",
+        "7ec9bf44-ad21-49d5-9a59-cae694ebfdbb",
+        "7fb3c71f-6535-4162-8e8d-eb909f0b1c18",
+        "4a8a56ec-02e2-4cb4-b1e8-83ecf7e10ed8",
+        "1b14129a-8c52-804c-93ed-d308400b284a",
+        "b9194966-b016-496e-84df-434786f1946d",
+        "8e68bc81-6693-4fdd-ac1a-6c7867a4d577",
+        "11f4129a-8c52-8063-8de9-c88d3f99941d",
+        "1184129a-8c52-806a-9576-d09fe005980f",
+        "2754129a-8c52-80e9-827a-dab9df1305d3",
+        "1054129a-8c52-8002-8f36-f9ee233d5dcd",
+        "3cb4129a-8c52-8007-a2ae-f5e81654e3ad",
+        "1014129a-8c52-801b-89c7-eb6d673cc7ce",
+        "7097f6e3-d9b8-4b92-b75f-675af5d7c5d3",
+        "1a34129a-8c52-80bc-9956-ff9b20721f00",
+        "1274129a-8c52-8054-9232-d90e83febc17",
+        "1074886d-d2aa-490d-a590-979fa7f29d36",
+        "a509baae-6d31-41f9-b07a-3690bf3b1406",
+        "1944129a-8c52-8088-9134-eaaf83eb1451",
+        "012eb997-f1ea-4a6b-a872-2cc9ab08cf6c",
+        "01755075-ae26-4b7c-a51b-c9ca82ffd983",
+        "2144129a-8c52-8039-8c65-f7d4a1f2fa65",
+        "2f44129a-8c52-8085-ad3a-da31fdc2dcb8",
+        "0a588099-193b-4ccb-8bc8-34e79c7f948b",
+        "2384129a-8c52-8033-a6ad-e2659f82457d",
+        "2014129a-8c52-804a-a476-ce200fc5dec8",
+        "98a22ec5-805d-4eb9-8ba8-6a004fa77bfd",
+        "9e6a12a4-8909-43c3-9acc-ec45b12ee95b",
+        "45f8ad70-7971-4636-8905-96a1cbfc92d6",
+        "0c3638c4-58de-45a1-a275-02ed85e75bc7",
+        "cb07ebb7-8dbd-4e8d-a515-09946692e0c7",
+        "c050e4f9-8e48-4070-89ed-f68ebc4f3bd9",
+        "77f637df-30dc-47aa-b4e9-f1e834fc9a32",
+        "230c2369-228c-4330-8361-fc423e6d251f",
+        "17977601-b0cd-45f6-8e8e-f0f9420ad7ae",
+        "bb36210e-eba2-405e-a0df-bb73b07142a0",
+        "f7b0d12c-1cb8-43d4-8b5c-f600a805e8d4",
+        "380c5f9a-2173-4256-9bd7-f57dfc649feb",
+        "8d4d1f8d-4bfd-47fb-96a0-146f5b05c514",
+        "3cdaa9fc-1810-4bc2-9cb2-db085fa1c0c7",
+        "325e85a4-b6a8-4ba6-b213-283baab98998",
+        "37660482-6666-4904-b098-50e1027584ad",
+        "0e226411-d5e0-4220-88c6-f307fb4432a6",
+        "2248cccf-b648-4272-a74c-594edec85308",
+        "7bea8a6e-bcc9-4c2f-87e7-9e8c3110b70b",
+        "255337b6-3161-4c07-b493-59a958879ef3",
+        "465bbe48-9092-47ae-a508-3f382a893c4a",
+        "ca07baba-50de-412d-a666-3219428703d5",
+        "42e62069-b4d4-4db6-b801-8e1c22a835fc",
+        "58902b2f-8852-4751-8795-40ffe6cc66a1",
+        "a0852638-ee0f-4dfa-a52b-77cba11cfd9a",
+        "d3f1ffb6-0f3a-43aa-9182-7e0784db407f",
+        "3f8c9ebf-d2f2-4d52-95c6-9e4bd4bdfc6d",
+        "a373a5d7-56e6-4dc2-8b20-1168a83f9f88",
+        "07031ee4-e62f-466a-b6b9-dea1c933edac",
+        "6f07ece7-8971-4b10-a822-163f0facb645",
+        "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
+        "fcda5233-f95e-45b4-a1ab-b499a6a810f9",
+        "c70f158e-28b6-4339-af37-348710c79313",
+        "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
+        "ddf78bc2-c478-4f46-b405-877b53f9a518",
+        "5618b6c4-09dd-41c5-a869-bd4af0651883",
+        "2f74129a-8c52-8067-a3e8-e85f767ee29f"
+      ],
+      "artistIds": [
+        "3a94129a-8c52-8068-9284-edae16d44b33",
+        "3c14129a-8c52-80f5-8dd5-d000d740375b",
+        "2c94129a-8c52-8057-87bc-ffc831f9f9e8",
+        "2484129a-8c52-80aa-a88f-d8d0f31a1f16",
+        "3cf4129a-8c52-80e5-b650-d1dddc46abeb",
+        "3804129a-8c52-8076-85b8-e4f0a0484780",
+        "36a4129a-8c52-8063-b80c-f3716601c36f",
+        "3554129a-8c52-80bd-9569-dcab83a7e536",
+        "3ac4129a-8c52-80f9-945f-e19f163f717b",
+        "24f4129a-8c52-8070-96a3-c6efc6466b5b",
+        "2f44129a-8c52-801a-a932-c5640bf20d24",
+        "3724129a-8c52-80ca-810c-d2a89499a6e3",
+        "3284129a-8c52-80a4-b2de-ceb5683dc20c",
+        "3244129a-8c52-80b4-a4ee-c77b4bc59d43",
+        "3114129a-8c52-806c-abef-ebd3439f17d9",
+        "3064129a-8c52-80c6-9abe-d55fb75ac582",
+        "35f4129a-8c52-80c2-8019-d027f9424dc4",
+        "3004129a-8c52-8051-be22-f75d140a25c5",
+        "2ce4129a-8c52-80ab-9877-c80963056398",
+        "24f4129a-8c52-8034-b5f8-c86b33e20d27",
+        "24f4129a-8c52-806c-84da-d855b2fea4c7",
+        "2984129a-8c52-8079-a4e7-c7d8db50d6ad",
+        "2504129a-8c52-8005-b193-cb5c07e82375",
+        "2514129a-8c52-806a-857b-e5fbc626c9c5",
+        "2a44129a-8c52-80fa-97d2-ee9f4e925ee6",
+        "2564129a-8c52-809e-a399-e3e08521cd3c",
+        "2504129a-8c52-8083-913b-e064dd411aa7",
+        "24d4129a-8c52-8091-affd-c55a11dd4cb9",
+        "2474129a-8c52-80d0-a39b-dbe09c0ea3d9",
+        "24d4129a-8c52-803c-9c88-f5c771e85cb7",
+        "2434129a-8c52-80e0-afab-cd4282815107",
+        "2404129a-8c52-8035-a990-db8919c35959",
+        "2c84129a-8c52-801c-8122-f0394f2bb79d",
+        "2414129a-8c52-80b3-a2f6-ee548319b500",
+        "2444129a-8c52-807b-a7df-ff6a95ff852e",
+        "2444129a-8c52-8039-b3d6-cb81b4b352e4",
+        "2524129a-8c52-8054-94c6-dd49f5fa79d5",
+        "24a4129a-8c52-8045-a9e6-fc4499117557",
+        "24a4129a-8c52-80ae-8941-d631d5259c39",
+        "24a4129a-8c52-80b6-b337-d90f2e2c48bf",
+        "29f4129a-8c52-8005-b7b2-d6fe71342552",
+        "2494129a-8c52-8085-9d8a-fa473dff08d1",
+        "24a4129a-8c52-8066-9ca6-f309eecf972f",
+        "2424129a-8c52-80d1-9528-c0734ae7a166",
+        "3cf4129a-8c52-8017-8873-c0c364bcc302",
+        "24a4129a-8c52-800f-84cf-dcd344edcc05",
+        "2484129a-8c52-8083-abd4-d6fb31cff87a",
+        "24a4129a-8c52-80bf-89f9-d934c7331c80",
+        "2484129a-8c52-8088-91aa-d9d2ba8f14e4",
+        "2504129a-8c52-80c4-8b30-e63415da58b9",
+        "2514129a-8c52-8059-a6a1-db3f210c547a",
+        "24a4129a-8c52-8068-bbe4-f9031535e40b",
+        "24a4129a-8c52-8067-8325-fe4fc2194ed1",
+        "2434129a-8c52-80d0-9c2c-e023721f32bb",
+        "2504129a-8c52-8021-8b13-c2064f8ef921",
+        "2514129a-8c52-80ae-8a7f-cd94b8865a85",
+        "2754129a-8c52-809e-84f4-dc3a8655ac4c",
+        "2504129a-8c52-8066-8f76-cf547a98ca22",
+        "3cb4129a-8c52-80c8-b478-fca9935731a1",
+        "2504129a-8c52-80b4-b677-dcacc7a32f48",
+        "24e4129a-8c52-80b3-99ab-c54b19b547ce",
+        "24a4129a-8c52-80f3-895c-ecd2e64227ef",
+        "2504129a-8c52-801a-9615-d87e7f4f6464",
+        "24f4129a-8c52-801d-b2df-c419d448504c",
+        "2414129a-8c52-80d3-b4f9-efccafe58ff1",
+        "2414129a-8c52-80b9-b9d1-d0b0e427b129",
+        "24a4129a-8c52-808a-a31f-f2b297f38174",
+        "2504129a-8c52-802b-8a9b-d5ef2c868127",
+        "24a4129a-8c52-80a0-9283-e00355c89095",
+        "2444129a-8c52-804d-afaa-e16a4836cee5",
+        "2434129a-8c52-80b4-b84c-c72d6c303294",
+        "2504129a-8c52-8085-bcd0-d2b38bac0a50",
+        "2514129a-8c52-80a3-a019-c68031dac88b",
+        "24e4129a-8c52-8087-822b-f16252a50ba8",
+        "2514129a-8c52-8018-89e3-f2919a843096",
+        "2504129a-8c52-80d2-bf9b-ec30d08eb7a3",
+        "2524129a-8c52-8077-8186-d930ef80bd1c",
+        "2424129a-8c52-80e3-91a7-d3a29bffe27b",
+        "2414129a-8c52-8095-872d-ec57d79795f7",
+        "2514129a-8c52-80ea-aaf0-edbd4537847b",
+        "2504129a-8c52-80b9-9197-d97de86432fb",
+        "2514129a-8c52-8037-8b54-d4d6040bd7cc",
+        "2514129a-8c52-8069-8da7-e98832a76f45",
+        "2494129a-8c52-808d-b106-c43535d7b641",
+        "24f4129a-8c52-8084-b77c-c8d341a80eec",
+        "2504129a-8c52-8072-8d39-f69457ada8e1",
+        "2524129a-8c52-801b-be30-efe9208d7e41",
+        "24f4129a-8c52-805f-9c78-fc87abcf5f62",
+        "2514129a-8c52-807c-9dd3-f7551b8afa31",
+        "2504129a-8c52-809d-aa7d-d73a050c70b7",
+        "2494129a-8c52-8059-8ea4-cb5b8cd76974",
+        "2524129a-8c52-80e1-8076-f1ab0e2b3454",
+        "2504129a-8c52-809c-abf9-de696977b7e0",
+        "2524129a-8c52-8001-ae50-db7e6b4e9915",
+        "24f4129a-8c52-805e-a500-c4d2c68cc389",
+        "2514129a-8c52-80a6-a5a9-f3b459c54060",
+        "2524129a-8c52-80ac-8df6-e43091d38cda",
+        "2524129a-8c52-801b-820d-f48f3d34ffba",
+        "2514129a-8c52-8081-a43f-ef9abfc4c641",
+        "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
+        "2424129a-8c52-8044-b0ee-ec4e110778f1",
+        "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
+      ]
+    },
+    {
       "id": "32f4129a-8c52-80d2-9333-eff6f8ec7acf",
       "slug": "not-sorry-mom-records",
       "name": "Not Sorry Mom Records",
@@ -64831,230 +65114,6 @@
       ]
     },
     {
-      "id": "2434129a-8c52-80c6-94b5-c189d8b7405b",
-      "slug": "self-released",
-      "name": "Self-released",
-      "country": null,
-      "website": null,
-      "bandcamp": null,
-      "youtube": null,
-      "albumIds": [
-        "3a94129a-8c52-8004-87dd-f0f24534f3a6",
-        "3c14129a-8c52-80e6-b59d-c3b7827df262",
-        "3964129a-8c52-8063-a715-d68f15c5f7a0",
-        "38a4129a-8c52-80f5-9b67-ef297a32ec2a",
-        "3804129a-8c52-803c-8242-c84d37a1367b",
-        "36a4129a-8c52-80d0-a690-c4750bdd6851",
-        "3554129a-8c52-80b2-876f-ffb0375e4110",
-        "3ac4129a-8c52-8009-9756-d14e6822a848",
-        "3464129a-8c52-802e-b653-e68daa89a220",
-        "3404129a-8c52-8003-8e65-ffbe73c82305",
-        "3724129a-8c52-80e1-afc0-c879b79c40e3",
-        "3284129a-8c52-8093-9033-cfea4909f54d",
-        "3244129a-8c52-8090-b63a-d4b3d363b3a3",
-        "3114129a-8c52-809a-a104-e15c5dd7b02c",
-        "3064129a-8c52-8008-93e3-d8d9f41d3766",
-        "35f4129a-8c52-8090-83b1-cc901c1df55a",
-        "3004129a-8c52-801b-bb7b-c4c0948a637d",
-        "2ce4129a-8c52-80e8-bd4e-f5cb1152e039",
-        "2b34129a-8c52-80e4-b050-fc4065b82028",
-        "2c94129a-8c52-806d-a8cc-d3f448deae37",
-        "2974129a-8c52-8049-ae99-f48c24066677",
-        "2984129a-8c52-8087-962b-d13adf1700fd",
-        "2644129a-8c52-8060-8549-d979439840b4",
-        "25e4129a-8c52-80be-8451-e51868e4db1f",
-        "2a44129a-8c52-8040-829e-e9a76398576e",
-        "2564129a-8c52-8097-975f-c210bdd329c0",
-        "2504129a-8c52-80d1-bdb7-eb944f8d376b",
-        "24d4129a-8c52-8020-8c9d-cb244b61e67a",
-        "2474129a-8c52-8042-a3af-d22fe05f9dd6",
-        "24d4129a-8c52-80bd-be5a-c898c9f7e6a0",
-        "23e4129a-8c52-8076-9992-f64d168afdc8",
-        "23f4129a-8c52-80f4-a406-c55d85ab6f0b",
-        "2c84129a-8c52-809a-ad7e-f5a9eec6c706",
-        "2164129a-8c52-80f2-a948-dfe50918c2a6",
-        "2094129a-8c52-8004-b5e3-eb09f3dd442a",
-        "2074129a-8c52-8014-983d-fbc0cd121339",
-        "2034129a-8c52-80c7-878e-e07028c20eeb",
-        "1f64129a-8c52-80ab-a605-d99a51b462b8",
-        "2134129a-8c52-80b6-94ce-dfefb04b2bfd",
-        "1e14129a-8c52-80ce-bd27-edb9c9ca6dbf",
-        "29f4129a-8c52-8074-8861-e7d3d75958ad",
-        "1e64129a-8c52-800e-ba51-f4fee6337e53",
-        "1c64129a-8c52-805c-b909-e25236d4f886",
-        "2374129a-8c52-8036-9f55-c9fe32271637",
-        "3cf4129a-8c52-809e-8a95-d5e834e00b19",
-        "1e44129a-8c52-809f-993e-fd57e166d1f7",
-        "1984129a-8c52-804f-99a8-eeaaec4b3d4c",
-        "570bf4d9-7647-4dd8-80cb-f5256d921f4f",
-        "7ec9bf44-ad21-49d5-9a59-cae694ebfdbb",
-        "7fb3c71f-6535-4162-8e8d-eb909f0b1c18",
-        "4a8a56ec-02e2-4cb4-b1e8-83ecf7e10ed8",
-        "1b14129a-8c52-804c-93ed-d308400b284a",
-        "b9194966-b016-496e-84df-434786f1946d",
-        "8e68bc81-6693-4fdd-ac1a-6c7867a4d577",
-        "11f4129a-8c52-8063-8de9-c88d3f99941d",
-        "1184129a-8c52-806a-9576-d09fe005980f",
-        "2754129a-8c52-80e9-827a-dab9df1305d3",
-        "1054129a-8c52-8002-8f36-f9ee233d5dcd",
-        "3cb4129a-8c52-8007-a2ae-f5e81654e3ad",
-        "1014129a-8c52-801b-89c7-eb6d673cc7ce",
-        "7097f6e3-d9b8-4b92-b75f-675af5d7c5d3",
-        "1a34129a-8c52-80bc-9956-ff9b20721f00",
-        "1274129a-8c52-8054-9232-d90e83febc17",
-        "1074886d-d2aa-490d-a590-979fa7f29d36",
-        "a509baae-6d31-41f9-b07a-3690bf3b1406",
-        "1944129a-8c52-8088-9134-eaaf83eb1451",
-        "012eb997-f1ea-4a6b-a872-2cc9ab08cf6c",
-        "01755075-ae26-4b7c-a51b-c9ca82ffd983",
-        "2144129a-8c52-8039-8c65-f7d4a1f2fa65",
-        "2f44129a-8c52-8085-ad3a-da31fdc2dcb8",
-        "0a588099-193b-4ccb-8bc8-34e79c7f948b",
-        "2384129a-8c52-8033-a6ad-e2659f82457d",
-        "2014129a-8c52-804a-a476-ce200fc5dec8",
-        "98a22ec5-805d-4eb9-8ba8-6a004fa77bfd",
-        "9e6a12a4-8909-43c3-9acc-ec45b12ee95b",
-        "45f8ad70-7971-4636-8905-96a1cbfc92d6",
-        "0c3638c4-58de-45a1-a275-02ed85e75bc7",
-        "cb07ebb7-8dbd-4e8d-a515-09946692e0c7",
-        "c050e4f9-8e48-4070-89ed-f68ebc4f3bd9",
-        "77f637df-30dc-47aa-b4e9-f1e834fc9a32",
-        "230c2369-228c-4330-8361-fc423e6d251f",
-        "17977601-b0cd-45f6-8e8e-f0f9420ad7ae",
-        "bb36210e-eba2-405e-a0df-bb73b07142a0",
-        "f7b0d12c-1cb8-43d4-8b5c-f600a805e8d4",
-        "380c5f9a-2173-4256-9bd7-f57dfc649feb",
-        "8d4d1f8d-4bfd-47fb-96a0-146f5b05c514",
-        "3cdaa9fc-1810-4bc2-9cb2-db085fa1c0c7",
-        "325e85a4-b6a8-4ba6-b213-283baab98998",
-        "37660482-6666-4904-b098-50e1027584ad",
-        "0e226411-d5e0-4220-88c6-f307fb4432a6",
-        "2248cccf-b648-4272-a74c-594edec85308",
-        "7bea8a6e-bcc9-4c2f-87e7-9e8c3110b70b",
-        "255337b6-3161-4c07-b493-59a958879ef3",
-        "465bbe48-9092-47ae-a508-3f382a893c4a",
-        "ca07baba-50de-412d-a666-3219428703d5",
-        "42e62069-b4d4-4db6-b801-8e1c22a835fc",
-        "58902b2f-8852-4751-8795-40ffe6cc66a1",
-        "a0852638-ee0f-4dfa-a52b-77cba11cfd9a",
-        "d3f1ffb6-0f3a-43aa-9182-7e0784db407f",
-        "3f8c9ebf-d2f2-4d52-95c6-9e4bd4bdfc6d",
-        "a373a5d7-56e6-4dc2-8b20-1168a83f9f88",
-        "07031ee4-e62f-466a-b6b9-dea1c933edac",
-        "6f07ece7-8971-4b10-a822-163f0facb645",
-        "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
-        "fcda5233-f95e-45b4-a1ab-b499a6a810f9",
-        "c70f158e-28b6-4339-af37-348710c79313",
-        "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
-        "ddf78bc2-c478-4f46-b405-877b53f9a518",
-        "5618b6c4-09dd-41c5-a869-bd4af0651883",
-        "2f74129a-8c52-8067-a3e8-e85f767ee29f"
-      ],
-      "artistIds": [
-        "3a94129a-8c52-8068-9284-edae16d44b33",
-        "3c14129a-8c52-80f5-8dd5-d000d740375b",
-        "2c94129a-8c52-8057-87bc-ffc831f9f9e8",
-        "2484129a-8c52-80aa-a88f-d8d0f31a1f16",
-        "3804129a-8c52-8076-85b8-e4f0a0484780",
-        "36a4129a-8c52-8063-b80c-f3716601c36f",
-        "3554129a-8c52-80bd-9569-dcab83a7e536",
-        "3ac4129a-8c52-80f9-945f-e19f163f717b",
-        "24f4129a-8c52-8070-96a3-c6efc6466b5b",
-        "2f44129a-8c52-801a-a932-c5640bf20d24",
-        "3724129a-8c52-80ca-810c-d2a89499a6e3",
-        "3284129a-8c52-80a4-b2de-ceb5683dc20c",
-        "3244129a-8c52-80b4-a4ee-c77b4bc59d43",
-        "3114129a-8c52-806c-abef-ebd3439f17d9",
-        "3064129a-8c52-80c6-9abe-d55fb75ac582",
-        "35f4129a-8c52-80c2-8019-d027f9424dc4",
-        "3004129a-8c52-8051-be22-f75d140a25c5",
-        "2ce4129a-8c52-80ab-9877-c80963056398",
-        "24f4129a-8c52-8034-b5f8-c86b33e20d27",
-        "24f4129a-8c52-806c-84da-d855b2fea4c7",
-        "2984129a-8c52-8079-a4e7-c7d8db50d6ad",
-        "2504129a-8c52-8005-b193-cb5c07e82375",
-        "2514129a-8c52-806a-857b-e5fbc626c9c5",
-        "2a44129a-8c52-80fa-97d2-ee9f4e925ee6",
-        "2564129a-8c52-809e-a399-e3e08521cd3c",
-        "2504129a-8c52-8083-913b-e064dd411aa7",
-        "24d4129a-8c52-8091-affd-c55a11dd4cb9",
-        "2474129a-8c52-80d0-a39b-dbe09c0ea3d9",
-        "24d4129a-8c52-803c-9c88-f5c771e85cb7",
-        "2434129a-8c52-80e0-afab-cd4282815107",
-        "2404129a-8c52-8035-a990-db8919c35959",
-        "2c84129a-8c52-801c-8122-f0394f2bb79d",
-        "2414129a-8c52-80b3-a2f6-ee548319b500",
-        "2444129a-8c52-807b-a7df-ff6a95ff852e",
-        "2444129a-8c52-8039-b3d6-cb81b4b352e4",
-        "2524129a-8c52-8054-94c6-dd49f5fa79d5",
-        "24a4129a-8c52-8045-a9e6-fc4499117557",
-        "24a4129a-8c52-80ae-8941-d631d5259c39",
-        "24a4129a-8c52-80b6-b337-d90f2e2c48bf",
-        "29f4129a-8c52-8005-b7b2-d6fe71342552",
-        "2494129a-8c52-8085-9d8a-fa473dff08d1",
-        "24a4129a-8c52-8066-9ca6-f309eecf972f",
-        "2424129a-8c52-80d1-9528-c0734ae7a166",
-        "3cf4129a-8c52-8017-8873-c0c364bcc302",
-        "24a4129a-8c52-800f-84cf-dcd344edcc05",
-        "2484129a-8c52-8083-abd4-d6fb31cff87a",
-        "24a4129a-8c52-80bf-89f9-d934c7331c80",
-        "2484129a-8c52-8088-91aa-d9d2ba8f14e4",
-        "2504129a-8c52-80c4-8b30-e63415da58b9",
-        "2514129a-8c52-8059-a6a1-db3f210c547a",
-        "24a4129a-8c52-8068-bbe4-f9031535e40b",
-        "24a4129a-8c52-8067-8325-fe4fc2194ed1",
-        "2434129a-8c52-80d0-9c2c-e023721f32bb",
-        "2504129a-8c52-8021-8b13-c2064f8ef921",
-        "2514129a-8c52-80ae-8a7f-cd94b8865a85",
-        "2754129a-8c52-809e-84f4-dc3a8655ac4c",
-        "2504129a-8c52-8066-8f76-cf547a98ca22",
-        "3cb4129a-8c52-80c8-b478-fca9935731a1",
-        "2504129a-8c52-80b4-b677-dcacc7a32f48",
-        "24e4129a-8c52-80b3-99ab-c54b19b547ce",
-        "24a4129a-8c52-80f3-895c-ecd2e64227ef",
-        "2504129a-8c52-801a-9615-d87e7f4f6464",
-        "24f4129a-8c52-801d-b2df-c419d448504c",
-        "2414129a-8c52-80d3-b4f9-efccafe58ff1",
-        "2414129a-8c52-80b9-b9d1-d0b0e427b129",
-        "24a4129a-8c52-808a-a31f-f2b297f38174",
-        "2504129a-8c52-802b-8a9b-d5ef2c868127",
-        "24a4129a-8c52-80a0-9283-e00355c89095",
-        "2444129a-8c52-804d-afaa-e16a4836cee5",
-        "2434129a-8c52-80b4-b84c-c72d6c303294",
-        "2504129a-8c52-8085-bcd0-d2b38bac0a50",
-        "2514129a-8c52-80a3-a019-c68031dac88b",
-        "24e4129a-8c52-8087-822b-f16252a50ba8",
-        "2514129a-8c52-8018-89e3-f2919a843096",
-        "2504129a-8c52-80d2-bf9b-ec30d08eb7a3",
-        "2524129a-8c52-8077-8186-d930ef80bd1c",
-        "2424129a-8c52-80e3-91a7-d3a29bffe27b",
-        "2414129a-8c52-8095-872d-ec57d79795f7",
-        "2514129a-8c52-80ea-aaf0-edbd4537847b",
-        "2504129a-8c52-80b9-9197-d97de86432fb",
-        "2514129a-8c52-8037-8b54-d4d6040bd7cc",
-        "2514129a-8c52-8069-8da7-e98832a76f45",
-        "2494129a-8c52-808d-b106-c43535d7b641",
-        "24f4129a-8c52-8084-b77c-c8d341a80eec",
-        "2504129a-8c52-8072-8d39-f69457ada8e1",
-        "2524129a-8c52-801b-be30-efe9208d7e41",
-        "24f4129a-8c52-805f-9c78-fc87abcf5f62",
-        "2514129a-8c52-807c-9dd3-f7551b8afa31",
-        "2504129a-8c52-809d-aa7d-d73a050c70b7",
-        "2494129a-8c52-8059-8ea4-cb5b8cd76974",
-        "2524129a-8c52-80e1-8076-f1ab0e2b3454",
-        "2504129a-8c52-809c-abf9-de696977b7e0",
-        "2524129a-8c52-8001-ae50-db7e6b4e9915",
-        "24f4129a-8c52-805e-a500-c4d2c68cc389",
-        "2514129a-8c52-80a6-a5a9-f3b459c54060",
-        "2524129a-8c52-80ac-8df6-e43091d38cda",
-        "2524129a-8c52-801b-820d-f48f3d34ffba",
-        "2514129a-8c52-8081-a43f-ef9abfc4c641",
-        "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
-        "2424129a-8c52-8044-b0ee-ec4e110778f1",
-        "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
-      ]
-    },
-    {
       "id": "24f4129a-8c52-80d7-b0bc-c062125b0951",
       "slug": "sell-the-heart-records",
       "name": "Sell The Heart Records",
@@ -65956,6 +66015,21 @@
       "artistIds": [
         "3024129a-8c52-8044-85e7-f47b8d6ccba8",
         "24a4129a-8c52-8015-bf91-e526112e844f"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-80b6-a054-ff8e87311827",
+      "slug": "the-louise-harland-corporation",
+      "name": "The Louise Harland Corporation",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-801f-aa5c-f48bd1144e8b"
+      ],
+      "artistIds": [
+        "3cf4129a-8c52-80f1-813f-f28cb34d5e4e"
       ]
     },
     {

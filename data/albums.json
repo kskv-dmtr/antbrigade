@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-01T21:51:04Z",
+  "generatedAt": "2026-09-02T00:17:32Z",
   "counts": {
     "albums": 1129,
     "artists": 1010,
@@ -1712,7 +1712,7 @@
       "released": "2026-06-05",
       "year": 2026,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "3b84129a-8c52-8053-9c18-dcce0c9c1ad1"
       ],
@@ -1998,7 +1998,7 @@
       "released": "2026-05-29",
       "year": 2026,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e"
       ],
@@ -2889,7 +2889,7 @@
       "released": "2026-05-01",
       "year": 2026,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ],
@@ -8626,7 +8626,7 @@
       "released": "2025-10-17",
       "year": 2025,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "2484129a-8c52-8048-a123-d4997cec3650"
       ],
@@ -22588,7 +22588,7 @@
       "released": "2024-06-07",
       "year": 2024,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "2484129a-8c52-8048-a123-d4997cec3650"
       ],
@@ -31276,7 +31276,7 @@
       "released": "2023-02-22",
       "year": 2023,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "2484129a-8c52-8048-a123-d4997cec3650"
       ],
@@ -32434,7 +32434,7 @@
       "released": "2022-07-15",
       "year": 2022,
       "origReleased": null,
-      "featured": false,
+      "featured": true,
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
       ],

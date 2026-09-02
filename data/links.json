@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T16:37:37Z",
+  "generatedAt": "2026-09-02T19:49:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -15919,25 +15919,6 @@
       "upc": "3616559312883",
       "tracks": 12,
       "releaseDate": "2021-09-03"
-    },
-    "0b4b5631-ce80-48bb-a3ed-844b288024a0": {
-      "source": "https://album.link/bpbk5z8nd5f3h",
-      "platforms": {
-        "spotify": "https://open.spotify.com/album/4Dg2HyHpqy4TmbkkewvFOm",
-        "pandora": "https://www.pandora.com/AL:10480086",
-        "deezer": "https://www.deezer.com/album/254150032",
-        "amazonMusic": "https://music.amazon.com/albums/B09DGVCZX2",
-        "tidal": "https://listen.tidal.com/album/195128860",
-        "napster": "https://play.napster.com/album/alb.608760494",
-        "yandex": "https://music.yandex.ru/album/17670524",
-        "boomplay": "https://www.boomplay.com/albums/30593832",
-        "anghami": "https://play.anghami.com/album/1022090521?refer=linktree",
-        "bandcamp": "https://phantomisland.bandcamp.com/album/greatest-treasure",
-        "amazonStore": "https://amazon.com/dp/B09DGVCZX2"
-      },
-      "upc": "4066218054866",
-      "tracks": 7,
-      "releaseDate": "2021-08-30"
     },
     "2484129a-8c52-80bd-8a93-dd0d62dfee2f": {
       "source": "https://album.link/mm5xcrksrgdxr",

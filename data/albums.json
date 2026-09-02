@@ -1,13 +1,40 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T19:18:10Z",
+  "generatedAt": "2026-09-02T19:49:05Z",
   "counts": {
-    "albums": 1130,
-    "artists": 1010,
+    "albums": 1131,
+    "artists": 1011,
     "labels": 630,
     "videos": 84
   },
   "albums": [
+    {
+      "id": "3cf4129a-8c52-801f-aa5c-f48bd1144e8b",
+      "slug": "andrew-w-k-temptation-to-exist",
+      "artist": "Andrew W.K.",
+      "album": "Temptation to Exist",
+      "url": "https://album.link/ndkmd3ms9smbm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac33fa108-1137-463d-ae16-77c51964bfbe%3Aab67616d0000b27331edb8702ca45170cab4951b.jpg?table=block&id=3cf4129a-8c52-801f-aa5c-f48bd1144e8b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dark Jazz",
+        "Crime Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-28",
+      "year": 2026,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3cf4129a-8c52-80f1-813f-f28cb34d5e4e"
+      ],
+      "artists": [
+        "Andrew W.K."
+      ],
+      "labelIds": [],
+      "labels": []
+    },
     {
       "id": "3ca4129a-8c52-805b-8443-d671cbcf6791",
       "slug": "dinosaur-jr-there-near",
@@ -36253,6 +36280,24 @@
       "labelIds": [
         "24e4129a-8c52-80b8-a14f-e496184cb01c"
       ],
+      "videoIds": []
+    },
+    {
+      "id": "3cf4129a-8c52-80f1-813f-f28cb34d5e4e",
+      "slug": "andrew-w-k",
+      "name": "Andrew W.K.",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-801f-aa5c-f48bd1144e8b"
+      ],
+      "genres": [
+        "Dark Jazz",
+        "Crime Jazz"
+      ],
+      "labelIds": [],
       "videoIds": []
     },
     {

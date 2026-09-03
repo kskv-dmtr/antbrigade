@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T19:52:20Z",
+  "generatedAt": "2026-09-03T22:40:30Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17935,6 +17935,23 @@
       "upc": "4062548097863",
       "tracks": 2,
       "releaseDate": "2024-09-13"
+    },
+    "3d04129a-8c52-8042-9484-d7ddf7715748": {
+      "source": "https://album.link/bdxf47s7gn7fp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1C97iUJ0sJPyevPzLF6ZVA",
+        "pandora": "https://www.pandora.com/AL:38002855",
+        "deezer": "https://www.deezer.com/album/628471921",
+        "amazonMusic": "https://music.amazon.com/albums/B0DCWCW7PQ",
+        "tidal": "https://listen.tidal.com/album/380775566",
+        "boomplay": "https://www.boomplay.com/albums/95959431",
+        "anghami": "https://play.anghami.com/album/1056580169?refer=linktree",
+        "bandcamp": "https://1-800-mikey.bandcamp.com/album/digital-pet",
+        "amazonStore": "https://amazon.com/dp/B0DCWCW7PQ"
+      },
+      "upc": "198663596517",
+      "tracks": 10,
+      "releaseDate": "2024-10-18"
     }
   }
 }

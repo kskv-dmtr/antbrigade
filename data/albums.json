@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-03T19:52:08Z",
+  "generatedAt": "2026-09-03T22:37:08Z",
   "counts": {
     "albums": 1137,
-    "artists": 1016,
-    "labels": 634,
+    "artists": 1017,
+    "labels": 635,
     "videos": 85
   },
   "albums": [
@@ -18799,6 +18799,39 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-8042-9484-d7ddf7715748",
+      "slug": "1-800-mikey-digital-pet",
+      "artist": "1-800-Mikey",
+      "album": "Digital Pet",
+      "url": "https://album.link/bdxf47s7gn7fp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad9a70af1-74e9-4967-8b60-edaf70493f3c%3Aa2632323283_10.jpg?table=block&id=3d04129a-8c52-8042-9484-d7ddf7715748&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Power Pop",
+        "Garage Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-10-18",
+      "year": 2024,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21"
+      ],
+      "artists": [
+        "1-800-Mikey"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80b0-a286-f08d24913bae",
+        "3d04129a-8c52-8082-a522-fec9b191e53f"
+      ],
+      "labels": [
+        "Under The Gun Records",
+        "Erste Theke Tontraeger"
+      ]
+    },
+    {
       "id": "3bdd065d-d558-48e8-836f-aade756056b1",
       "slug": "chinese-american-bear-wah",
       "artist": "Chinese American Bear",
@@ -35764,26 +35797,6 @@
       "labels": [
         "Far Out Recordings"
       ]
-    },
-    {
-      "id": "3d04129a-8c52-8042-9484-d7ddf7715748",
-      "slug": "1-800-mikey-digital-pet",
-      "artist": "1-800-Mikey",
-      "album": "Digital Pet",
-      "url": "",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Ad9a70af1-74e9-4967-8b60-edaf70493f3c%3Aa2632323283_10.jpg?table=block&id=3d04129a-8c52-8042-9484-d7ddf7715748&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [
-        "Album"
-      ],
-      "released": null,
-      "year": null,
-      "origReleased": null,
-      "featured": false,
-      "artistIds": [],
-      "artists": [],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -35849,6 +35862,27 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d04129a-8c52-8019-9322-eec7ae7a5e21",
+      "slug": "1-800-mikey",
+      "name": "1-800-Mikey",
+      "country": "AU",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-8042-9484-d7ddf7715748"
+      ],
+      "genres": [
+        "Power Pop",
+        "Garage Punk"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80b0-a286-f08d24913bae",
+        "3d04129a-8c52-8082-a522-fec9b191e53f"
       ],
       "videoIds": []
     },
@@ -59729,6 +59763,21 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-8082-a522-fec9b191e53f",
+      "slug": "erste-theke-tontraeger",
+      "name": "Erste Theke Tontraeger",
+      "country": "DE",
+      "website": null,
+      "bandcamp": "https://erstetheketontraeger.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-8042-9484-d7ddf7715748"
+      ],
+      "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21"
+      ]
+    },
+    {
       "id": "24e4129a-8c52-806a-aa9b-d4b9ea5a8df3",
       "slug": "eskimo-recordings",
       "name": "Eskimo Recordings",
@@ -66782,9 +66831,11 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
+        "3d04129a-8c52-8042-9484-d7ddf7715748",
         "f3962709-b773-4565-b421-69b5a9ce4e00"
       ],
       "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21",
         "2504129a-8c52-80ee-83b9-e138a62ac805"
       ]
     },

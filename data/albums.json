@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-03T16:28:39Z",
+  "generatedAt": "2026-09-03T19:52:08Z",
   "counts": {
-    "albums": 1135,
-    "artists": 1015,
-    "labels": 633,
+    "albums": 1137,
+    "artists": 1016,
+    "labels": 634,
     "videos": 85
   },
   "albums": [
@@ -20255,6 +20255,36 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-80ec-92fb-fcda6e0d5afd",
+      "slug": "zenana-witches",
+      "artist": "Zenana",
+      "album": "Witches",
+      "url": "https://album.link/20gw28hpbjgjj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A975dbe22-b18b-4bd8-a951-09074b912a83%3Aa1727885097_10.jpg?table=block&id=3d04129a-8c52-80ec-92fb-fcda6e0d5afd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2024-09-13",
+      "year": 2024,
+      "origReleased": "1986-01-01",
+      "featured": false,
+      "artistIds": [
+        "3d04129a-8c52-807b-a625-f002835fd46c"
+      ],
+      "artists": [
+        "Zenana"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-8023-a82b-da1fab23c14a"
+      ],
+      "labels": [
+        "Rush Hour"
+      ]
+    },
+    {
       "id": "3cb4129a-8c52-8007-a2ae-f5e81654e3ad",
       "slug": "adult-dvd-next-day-shipping",
       "artist": "Adult DVD",
@@ -35734,6 +35764,26 @@
       "labels": [
         "Far Out Recordings"
       ]
+    },
+    {
+      "id": "3d04129a-8c52-8042-9484-d7ddf7715748",
+      "slug": "1-800-mikey-digital-pet",
+      "artist": "1-800-Mikey",
+      "album": "Digital Pet",
+      "url": "",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad9a70af1-74e9-4967-8b60-edaf70493f3c%3Aa2632323283_10.jpg?table=block&id=3d04129a-8c52-8042-9484-d7ddf7715748&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [],
+      "types": [
+        "Album"
+      ],
+      "released": null,
+      "year": null,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [],
+      "artists": [],
+      "labelIds": [],
+      "labels": []
     }
   ],
   "artists": [
@@ -56644,6 +56694,25 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-807b-a625-f002835fd46c",
+      "slug": "zenana",
+      "name": "Zenana",
+      "country": "GB",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-80ec-92fb-fcda6e0d5afd"
+      ],
+      "genres": [
+        "Synthpop"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-8023-a82b-da1fab23c14a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2494129a-8c52-8086-ae24-f014c339074b",
       "slug": "zig-zags",
       "name": "Zig Zags",
@@ -65049,6 +65118,21 @@
       ],
       "artistIds": [
         "24a4129a-8c52-80ac-879c-f146631fd8d9"
+      ]
+    },
+    {
+      "id": "3d04129a-8c52-8023-a82b-da1fab23c14a",
+      "slug": "rush-hour",
+      "name": "Rush Hour",
+      "country": "NL",
+      "website": null,
+      "bandcamp": "https://rushhourmusic.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-80ec-92fb-fcda6e0d5afd"
+      ],
+      "artistIds": [
+        "3d04129a-8c52-807b-a625-f002835fd46c"
       ]
     },
     {

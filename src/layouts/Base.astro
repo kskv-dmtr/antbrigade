@@ -188,16 +188,20 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           рамке, нажатый вывернут. Оба варианта видны сразу, и отмечен не
           тот, куда переключит, а тот, который сейчас, — как у List / Grid.
 
+          Подписи словами, без значков. Солнце с полумесяцем требуют
+          догадки: они показывают то ли текущую тему, то ли ту, куда
+          нажатие переключит, — и у каждого сайта по-своему. Слово
+          «Light» рядом со словом «Dark» этой двусмысленности не имеет,
+          а рядом с ним стоят такие же словесные сегменты List / Grid и
+          Albums / EPs. Заодно ушла подпись для экранного диктора: у
+          сегмента теперь есть свой текст.
+
           Какой сегмент вывернут, решает CSS по data-theme на <html>: он
           верен уже на первой отрисовке. Скрипт доставляет только
           aria-pressed, который стилями не задать. */}
       <div class="seg seg--theme" id="theme" role="group" aria-label="Theme">
-        <button type="button" data-theme-set="light" aria-label="Light theme">
-          <Icon name="sun-dim" class="theme__icon" />
-        </button>
-        <button type="button" data-theme-set="dark" aria-label="Dark theme">
-          <Icon name="moon" class="theme__icon" />
-        </button>
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
       </div>
     </div>
   </header>

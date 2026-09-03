@@ -4,6 +4,7 @@ import NameTile from '../../components/NameTile.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
+import MultiSelect from '../../components/MultiSelect.astro';
 import { artists, albumsOf } from '../../lib/db.js';
 import { fold } from '../../lib/fold.js';
 
@@ -46,33 +47,21 @@ const PAGE = 50;
       лейблов и жанров: и поиск, и буквы, и сортировка возвращаются на экран
       при прокрутке вверх.
 
-      Буквы и сортировка — одна строка: .filters выравнивает их по центру
-      по вертикали и разводит по краям. */}
+      Устройство то же, что на Music: поиск и всё управление — одной
+      строкой, слева направо от «что ищем» к «как показывать». Полоса из
+      двадцати восьми букв стояла отдельной строкой ниже и удалена 3
+      сентября 2026: тот же выбор делает список «All letters» в общем
+      ряду, и целая строка под него больше не нужна. */}
   <div class="sticky-bar">
     <div class="controls__top">
       <SearchField label="Search by artist name" />
-      <ViewSwitch />
-    </div>
-
-    <div class="filters">
-      {/* Первая буква — тот же сегментированный переключатель, что тип
-          релиза на Music и вид ролика на Videos: кнопка «все» и дальше по
-          кнопке на букву. Отсеивает список, а не уводит к заголовку. */}
-      <div class="seg seg--letters" id="alphabet" role="group" aria-label="First letter">
-        <button type="button" data-letter="" aria-pressed="true">All</button>
-        {ordered.map(([letter]) => (
-          <button type="button" data-letter={letter} aria-pressed="false">{letter}</button>
-        ))}
-      </div>
-
       <div class="filters__group filters__group--end">
-        {/* Первая буква списком: на узком экране полоса из двадцати восьми
-            кнопок прячется, и выбор идёт отсюда. Оба контрола держат одно
-            значение. */}
-        <Select id="letter" label="First letter" class="select--strip">
-          <option value="">All</option>
-          {ordered.map(([letter]) => <option value={letter}>{letter}</option>)}
-        </Select>
+        {/* Первая буква — такой же отбор с множественным выбором, как типы,
+            жанры и годы на Music: можно отметить сразу несколько. Полоса из
+            двадцати восьми кнопок стояла здесь до 3 сентября 2026 и занимала
+            собой целую строку ради того же выбора. */}
+        <MultiSelect id="letter" label="First letter" allLabel="All letters" manyLabel="Letters"
+                     items={ordered.map(([letter, items]) => ({ value: letter, label: letter, count: items.length }))} />
 
         <Select id="sort" label="Sorting" class="select--az">
           <option value="az">A → Z</option>
@@ -80,10 +69,13 @@ const PAGE = 50;
           <option value="releases">Most releases</option>
         </Select>
 
-        {/* Появляется, только когда есть что сбрасывать, — как на Music. */}
-        <button type="button" id="reset" class="reset" hidden>Reset</button>
+
+        {/* Переключатель вида замыкает строку, как на Music: слева то,
+            чем отбирают, справа то, как показывать. */}
+        <ViewSwitch target="list" />
       </div>
     </div>
+
   </div>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
@@ -131,10 +123,7 @@ const PAGE = 50;
   const search   = document.getElementById('search');
   const empty    = document.getElementById('empty');
   const list     = document.getElementById('list');
-  const viewsEl  = document.getElementById('views');
   const sortEl   = document.getElementById('sort');
-  const alphabet = document.getElementById('alphabet');
-  const reset    = document.getElementById('reset');
   const letterEl = document.getElementById('letter');
 
   const more = document.getElementById('more');
@@ -155,7 +144,7 @@ const PAGE = 50;
   let limit = PAGE;
 
   let query = '';
-  let letter = '';
+  let letters = [];
 
   function apply() {
     // Видимость складывается из двух условий: запись подходит под выборку
@@ -164,7 +153,7 @@ const PAGE = 50;
 
     for (const li of current) {
       const ok = (!query || li.dataset.search.includes(query)) &&
-                 (!letter || li.dataset.letter === letter);
+                 (!letters.length || letters.includes(li.dataset.letter));
       if (ok) count++;
       li.hidden = !ok || count > limit;
     }
@@ -177,7 +166,6 @@ const PAGE = 50;
 
     // Порядок A → Z — то, с чем страница открывается, поэтому он же
     // считается нетронутым состоянием.
-    reset.hidden = !(query || letter || sortEl.value !== 'az');
   }
 
   // Любая смена выборки возвращает список к первой странице.
@@ -209,52 +197,17 @@ const PAGE = 50;
 
      Списку после программной смены значения посылаем input: по нему скрипт
      компонента заново подгоняет ширину кнопки под выбранный пункт. */
-  function setLetter(value) {
-    letter = value;
-    for (const b of alphabet.children) {
-      b.setAttribute('aria-pressed', String(b.dataset.letter === value));
-    }
-    if (letterEl.value !== value) {
-      letterEl.value = value;
-      letterEl.dispatchEvent(new Event('input'));
-    }
+  /* Отбор по букве отдаёт обычное change, как отдавал список; читаем из
+     него не одно значение, а перечень отмеченных. */
+  letterEl.addEventListener('change', () => {
+    letters = [...letterEl.querySelectorAll('input:checked')].map((b) => b.value);
     rewind();
     apply();
-  }
-
-  alphabet.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (btn) setLetter(btn.dataset.letter);
   });
 
-  letterEl.addEventListener('change', () => setLetter(letterEl.value));
-
-  viewsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    list.dataset.view = btn.dataset.view;
-    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
-  });
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
-  reset.addEventListener('click', () => {
-    query = '';
-    letter = '';
-    search.value = '';
-    letterEl.value = '';
-    sortEl.value = 'az';
-    /* Значения поставлены из кода, и сами по себе событий не рождают —
-       сообщаем о смене, чтобы списки пересчитали свою ширину. */
-    for (const el of [letterEl, sortEl]) el.dispatchEvent(new Event('input'));
-    for (const [i, b] of [...alphabet.children].entries()) {
-      b.setAttribute('aria-pressed', String(i === 0));
-    }
-    sort();
-    rewind();
-    apply();
-    window.scrollTo({ top: 0 });
-  });
 
   let timer;
   search.addEventListener('input', () => {

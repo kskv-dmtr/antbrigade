@@ -4,6 +4,7 @@ import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
 import SearchField from '../components/SearchField.astro';
 import Select from '../components/Select.astro';
+import MultiSelect from '../components/MultiSelect.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
@@ -38,6 +39,9 @@ const rank = (k) => {
   return i < 0 ? KIND_LABELS.size : i;
 };
 
+const kindCounts = new Map();
+for (const v of videos) if (v.kind) kindCounts.set(v.kind, (kindCounts.get(v.kind) || 0) + 1);
+
 const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
   .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
   .map((value) => ({ value, label: KIND_LABELS.get(value.toLowerCase()) ?? value }));
@@ -68,34 +72,19 @@ const PAGE = 50;
     <p class="counter" id="counter" aria-live="polite">[{videos.length}]</p>
   </div>
 
+  {/* Полоса управления устроена как на Music: поиск, отбор, сортировка,
+      переключатель вида — всё одной строкой, слева направо. */}
   <div class="sticky-bar">
     <div class="controls__top">
       <SearchField label="Search by artist or title" />
-      <ViewSwitch />
-    </div>
-
-    {/* Вид ролика слева, сортировка справа — та же расстановка, что на
-        Music: выборка у левого края, порядок у правого. Одной группой у
-        правого края они уже стояли, и сортировка читалась приклеенной к
-        тегам, а не отдельным органом управления. */}
-    <div class="filters">
-      {/* Вид ролика показан двумя способами разом, и лишний прячет
-          медиазапрос: на широком экране полоса кнопок, на узком — список
-          рядом с сортировкой. Как тип релиза на Music. */}
-      <div class="filters__group filters__group--strip">
-        <div class="seg" id="kinds" role="group" aria-label="Video kind">
-          <button type="button" data-kind="" aria-pressed="true">All</button>
-          {kinds.map((k) => (
-            <button type="button" data-kind={k.value} aria-pressed="false">{k.label}</button>
-          ))}
-        </div>
-      </div>
 
       <div class="filters__group filters__group--end">
-        <Select id="kind" label="Video kind" class="select--strip">
-          <option value="">All</option>
-          {kinds.map((k) => <option value={k.value}>{k.label}</option>)}
-        </Select>
+        {/* Вид ролика — такой же список с множественным выбором, как тип
+            релиза на Music. Полоса кнопок стояла здесь до 3 сентября 2026 и
+            требовала второго контрола на узком экране; список один на все
+            ширины и позволяет отметить сразу несколько видов. */}
+        <MultiSelect id="kind" label="Video kind" allLabel="All types" manyLabel="Types"
+                     items={kinds.map((k) => ({ value: k.value, label: k.label, count: kindCounts.get(k.value) ?? 0 }))} />
 
         {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
             алфавиту, и у каждой оси обе стороны. По умолчанию тоже как на
@@ -110,8 +99,8 @@ const PAGE = 50;
           <option value="title-za">Titles Z → A</option>
         </Select>
 
-        {/* Появляется, только когда есть что сбрасывать, — как на Music. */}
-        <button type="button" id="reset" class="reset" hidden>Reset</button>
+
+        <ViewSwitch target="list" />
       </div>
     </div>
   </div>
@@ -149,16 +138,13 @@ const PAGE = 50;
   const counter = document.getElementById('counter');
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
-  const kindsEl = document.getElementById('kinds');
   const kindEl  = document.getElementById('kind');
-  const viewsEl = document.getElementById('views');
   const sortEl  = document.getElementById('sort');
-  const reset   = document.getElementById('reset');
   const more    = document.getElementById('more');
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', kind: '' };
+  const state = { q: '', kinds: [] };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -178,7 +164,7 @@ const PAGE = 50;
     for (const el of current) {
       const d = el.dataset;
       const ok = (!state.q || d.search.includes(state.q)) &&
-                 (!state.kind || d.kind === state.kind);
+                 (!state.kinds.length || state.kinds.includes(d.kind));
       if (ok) shown++;
       el.hidden = !ok || shown > limit;
     }
@@ -193,7 +179,6 @@ const PAGE = 50;
 
     // Порядок по исполнителю — то, с чем страница открывается, поэтому он
     // же считается нетронутым состоянием.
-    reset.hidden = !(state.q || state.kind || sortEl.value !== 'new');
   }
 
   // Любая смена выборки возвращает список к первой странице.
@@ -239,58 +224,17 @@ const PAGE = 50;
     apply();
   });
 
-  /* Вид ролика выбирают двумя контролами — полосой кнопок на широком экране
-     и списком на узком, — а значение у них одно. Смена идёт через общую
-     функцию, и второй контрол переставляется следом: человек может
-     повернуть телефон, и выбор должен пережить смену ширины.
-
-     Списку после программной смены значения посылаем input: по нему скрипт
-     компонента заново подгоняет ширину кнопки под выбранный пункт. */
-  function setKind(value) {
-    state.kind = value;
-    for (const b of kindsEl.children) {
-      b.setAttribute('aria-pressed', String(b.dataset.kind === value));
-    }
-    if (kindEl.value !== value) {
-      kindEl.value = value;
-      kindEl.dispatchEvent(new Event('input'));
-    }
+  /* Отбор по виду отдаёт обычное change, как отдавал список; читаем из
+     него не одно значение, а перечень отмеченных. */
+  kindEl.addEventListener('change', () => {
+    state.kinds = [...kindEl.querySelectorAll('input:checked')].map((b) => b.value);
     rewind();
     apply();
-  }
-
-  kindsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (btn) setKind(btn.dataset.kind);
   });
 
-  kindEl.addEventListener('change', () => setKind(kindEl.value));
-
-  viewsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    list.dataset.view = btn.dataset.view;
-    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
-  });
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
-  reset.addEventListener('click', () => {
-    Object.assign(state, { q: '', kind: '' });
-    search.value = '';
-    kindEl.value = '';
-    sortEl.value = 'new';
-    /* Значения поставлены из кода, и сами по себе событий не рождают —
-       сообщаем о смене, чтобы списки пересчитали свою ширину. */
-    for (const el of [kindEl, sortEl]) el.dispatchEvent(new Event('input'));
-    for (const [i, b] of [...kindsEl.children].entries()) {
-      b.setAttribute('aria-pressed', String(i === 0));
-    }
-    sort();
-    rewind();
-    apply();
-    window.scrollTo({ top: 0 });
-  });
 
   let timer;
   search.addEventListener('input', () => {

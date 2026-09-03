@@ -37,6 +37,9 @@ const types = [...new Set(albums.flatMap((a) => a.types))]
   .sort((a, b) => порядокТипа(a) - порядокТипа(b) || a.localeCompare(b))
   .map((value) => ({ value, label: TYPE_LABELS.get(value) ?? value }));
 
+const typeCounts = new Map();
+for (const a of albums) for (const t of a.types) typeCounts.set(t, (typeCounts.get(t) || 0) + 1);
+
 const genreCounts = new Map();
 for (const a of albums) {
   for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
@@ -64,41 +67,26 @@ const PAGE = 50;
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
       содержание, и терять её целиком было бы неправильно. */}
-  {/* Всё управление в липкой полосе: и поиск, и тип релиза, и сортировка
-      возвращаются на экран при прокрутке вверх. */}
+  {/* Всё управление в липкой полосе и в одну строку: поиск, три отбора,
+      сортировка и переключатель вида. Порядок слева направо — от «что
+      ищем» к «как показывать».
+
+      Полоса кнопок с типами релиза (Albums, EPs, Singles…) убрана 3
+      сентября 2026: тип стал таким же списком с множественным выбором, как
+      жанр и год. Полоса занимала четыреста пикселей ради пяти значений,
+      выбирать позволяла только одно и требовала второго контрола на узком
+      экране — списка, который теперь один на все ширины. */}
   <div class="sticky-bar">
     <div class="controls__top">
       <SearchField label="Search by artist or album" />
-      <ViewSwitch />
-    </div>
-
-    <div class="filters">
-      {/* Тип релиза показан двумя способами разом, и лишний прячет
-          медиазапрос: на широком экране полоса кнопок, на узком — такой же
-          выпадающий список, как жанр и год. Сайт статический, разметка одна
-          на все ширины, поэтому оба контрола лежат в ней всегда.
-
-          Значение у них общее: обработчики зовут одну setType, и что бы ни
-          нажали, второй контрол переставляется следом. */}
-      <div class="filters__group filters__group--strip">
-        <div class="seg" id="types" role="group" aria-label="Release type">
-          <button type="button" data-type="" aria-pressed="true">All</button>
-          {types.map((t) => (
-            <button type="button" data-type={t.value} aria-pressed="false">{t.label}</button>
-          ))}
-        </div>
-      </div>
 
       <div class="filters__group filters__group--end">
-        <Select id="type" label="Release type" class="select--strip">
-          <option value="">All</option>
-          {types.map((t) => <option value={t.value}>{t.label}</option>)}
-        </Select>
+        {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из
+            отмеченных», а не «все сразу»: у релиза бывает и два типа, и
+            три жанра, и пересечение почти всегда пусто. */}
+        <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
+                     items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
 
-{/* Жанр и год выбираются пачкой: у релиза жанров обычно два-три, и искать
-            их по одному было мучением. Отбор — «любой из отмеченных», а не
-            «все сразу»: пересечение почти всегда пусто, у 506 релизов из
-            1102 жанра ровно два. */}
         <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
                      items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
 
@@ -117,6 +105,7 @@ const PAGE = 50;
           <option value="album-za">Albums Z → A</option>
         </Select>
 
+        <ViewSwitch target="grid" />
       </div>
     </div>
   </div>
@@ -157,9 +146,7 @@ const PAGE = 50;
   const counter = document.getElementById('counter');
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
-  const typesEl = document.getElementById('types');
   const typeEl  = document.getElementById('type');
-  const viewsEl = document.getElementById('views');
   const genreEl = document.getElementById('genre');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
@@ -167,7 +154,7 @@ const PAGE = 50;
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', type: '', genres: [], years: [], sort: 'new' };
+  const state = { q: '', types: [], genres: [], years: [], sort: 'new' };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -196,7 +183,8 @@ const PAGE = 50;
      сама себя. */
   function passes(d, skip) {
     if (state.q && !d.search.includes(state.q)) return false;
-    if (state.type && !d.types.split('|').includes(state.type)) return false;
+    if (skip !== 'types' && state.types.length &&
+        !state.types.some((t) => d.types.split('|').includes(t))) return false;
     /* Любой из отмеченных, а не все сразу: у релиза жанров два-три, и
        пересечение трёх выбранных почти всегда пусто. */
     if (skip !== 'genres' && state.genres.length &&
@@ -212,11 +200,17 @@ const PAGE = 50;
      записях и 298 жанрах это разница между тысячей сравнений и тремястами
      тысячами. */
   function recount() {
+    const byType  = new Map();
     const byGenre = new Map();
     const byYear  = new Map();
 
     for (const el of cards) {
       const d = el.dataset;
+      if (passes(d, 'types')) {
+        for (const name of d.types.split('|')) {
+          if (name) byType.set(name, (byType.get(name) || 0) + 1);
+        }
+      }
       if (passes(d, 'genres')) {
         for (const name of d.genres.split('|')) {
           if (name) byGenre.set(name, (byGenre.get(name) || 0) + 1);
@@ -227,6 +221,7 @@ const PAGE = 50;
       }
     }
 
+    paint(typeEl, byType);
     paint(genreEl, byGenre);
     paint(yearEl, byYear);
   }
@@ -316,39 +311,6 @@ const PAGE = 50;
     }, 120);
   });
 
-  /* Тип релиза выбирают двумя контролами — полосой кнопок на широком экране
-     и списком на узком, — а значение у них одно. Поэтому смена идёт через
-     общую функцию, и второй контрол переставляется следом: человек может
-     повернуть телефон, и выбор должен пережить смену ширины.
-
-     Списку после программной смены значения посылаем input: по нему скрипт
-     компонента заново подгоняет ширину кнопки под выбранный пункт. */
-  function setType(value) {
-    state.type = value;
-    for (const b of typesEl.children) {
-      b.setAttribute('aria-pressed', String(b.dataset.type === value));
-    }
-    if (typeEl.value !== value) {
-      typeEl.value = value;
-      typeEl.dispatchEvent(new Event('input'));
-    }
-    rewind();
-    apply();
-  }
-
-  typesEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (btn) setType(btn.dataset.type);
-  });
-
-  typeEl.addEventListener('change', () => setType(typeEl.value));
-
-  viewsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    grid.dataset.view = btn.dataset.view;
-    for (const b of viewsEl.children) b.setAttribute('aria-pressed', String(b === btn));
-  });
 
   /* Ширину списков под выбранный пункт подгоняет общий скрипт компонента
      Select — здесь об этом заботиться не нужно. */
@@ -356,6 +318,7 @@ const PAGE = 50;
      не одно значение, а список отмеченных. */
   const marked = (root) => [...root.querySelectorAll('input:checked')].map((b) => b.value);
 
+  typeEl.addEventListener('change',  () => { state.types  = marked(typeEl);  rewind(); apply(); });
   genreEl.addEventListener('change', () => { state.genres = marked(genreEl); rewind(); apply(); });
   yearEl.addEventListener('change',  () => { state.years  = marked(yearEl);  rewind(); apply(); });
   sortEl.addEventListener('change',  () => {

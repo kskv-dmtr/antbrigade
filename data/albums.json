@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-02T22:40:40Z",
+  "generatedAt": "2026-09-03T01:08:11Z",
   "counts": {
-    "albums": 1132,
-    "artists": 1012,
-    "labels": 631,
+    "albums": 1134,
+    "artists": 1014,
+    "labels": 632,
     "videos": 84
   },
   "albums": [
@@ -479,6 +479,38 @@
       ],
       "labels": [
         "Deck"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-8061-aabf-c14a0d98c939",
+      "slug": "leo-cicada-burnt",
+      "artist": "Leo",
+      "album": "Cicada Burnt",
+      "url": "https://album.link/d3jhf7w8m64zv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A116bfc0d-faf6-401d-9c3c-b8ba2ed9af10%3Aa2794653984_10.jpg?table=block&id=3cf4129a-8c52-8061-aabf-c14a0d98c939&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient Dub",
+        "Ambient Techno",
+        "UK Bass"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-31",
+      "year": 2026,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3cf4129a-8c52-8001-b977-ccf02c54755e"
+      ],
+      "artists": [
+        "Leo"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-802f-b2e4-eb43a59daea4"
+      ],
+      "labels": [
+        "peak oil"
       ]
     },
     {
@@ -34631,6 +34663,39 @@
       ]
     },
     {
+      "id": "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
+      "slug": "the-sweet-enoughs-marshmallow",
+      "artist": "The Sweet Enoughs",
+      "album": "Marshmallow",
+      "url": "https://album.link/6kfng5fnhpvfr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1c5a6c76-3664-41df-a972-5bde5ff9921b%3Aa0748732680_10.jpg?table=block&id=3cf4129a-8c52-8062-9dc8-eda9f46784fd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Easy Listening",
+        "Ambient",
+        "Lounge",
+        "Exotica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-05-01",
+      "year": 2020,
+      "origReleased": null,
+      "featured": true,
+      "artistIds": [
+        "3cf4129a-8c52-803c-9e10-e57693c793c8"
+      ],
+      "artists": [
+        "The Sweet Enoughs"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd"
+      ],
+      "labels": [
+        "Wondercore Island"
+      ]
+    },
+    {
       "id": "3b14129a-8c52-8026-982c-fad5b42d3736",
       "slug": "the-sewer-rats-magic-summer",
       "artist": "The Sewer Rats",
@@ -46027,6 +46092,27 @@
       "videoIds": []
     },
     {
+      "id": "3cf4129a-8c52-8001-b977-ccf02c54755e",
+      "slug": "leo",
+      "name": "Leo",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://leoproducer.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-8061-aabf-c14a0d98c939"
+      ],
+      "genres": [
+        "Ambient Dub",
+        "Ambient Techno",
+        "UK Bass"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-802f-b2e4-eb43a59daea4"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-802c-b0ad-eec667a063bd",
       "slug": "leon-bridges",
       "name": "Leon Bridges",
@@ -54350,6 +54436,28 @@
         "3c54129a-8c52-8020-8568-e04189b20c5e",
         "3c54129a-8c52-80bf-891c-c4f566bfee76"
       ]
+    },
+    {
+      "id": "3cf4129a-8c52-803c-9e10-e57693c793c8",
+      "slug": "the-sweet-enoughs",
+      "name": "The Sweet Enoughs",
+      "country": "AU",
+      "website": null,
+      "bandcamp": "https://thesweetenoughs.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-8062-9dc8-eda9f46784fd"
+      ],
+      "genres": [
+        "Easy Listening",
+        "Ambient",
+        "Lounge",
+        "Exotica"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd"
+      ],
+      "videoIds": []
     },
     {
       "id": "24a4129a-8c52-80b5-a255-db01a2a8447d",
@@ -63685,12 +63793,14 @@
       "name": "peak oil",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://peakoil.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3cf4129a-8c52-8061-aabf-c14a0d98c939",
         "a1f8e85d-1f3b-43f9-a4f1-d1a96cdac073"
       ],
       "artistIds": [
+        "3cf4129a-8c52-8001-b977-ccf02c54755e",
         "24a4129a-8c52-80d4-a5f2-cb71df4a43ff"
       ]
     },
@@ -66947,6 +67057,21 @@
       "artistIds": [
         "2614129a-8c52-8063-9d9b-e9aa9c76b7d8",
         "24a4129a-8c52-8020-bd60-e8033ccd3136"
+      ]
+    },
+    {
+      "id": "3cf4129a-8c52-8022-bb88-e1d587754ffd",
+      "slug": "wondercore-island",
+      "name": "Wondercore Island",
+      "country": "AU",
+      "website": "https://www.wondercoreisland.com/",
+      "bandcamp": "https://wondercoreisland.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3cf4129a-8c52-8062-9dc8-eda9f46784fd"
+      ],
+      "artistIds": [
+        "3cf4129a-8c52-803c-9e10-e57693c793c8"
       ]
     },
     {

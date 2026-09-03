@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T22:40:56Z",
+  "generatedAt": "2026-09-03T01:08:27Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17871,6 +17871,38 @@
       "upc": "4069493927818",
       "tracks": 8,
       "releaseDate": "2026-06-19"
+    },
+    "3cf4129a-8c52-8061-aabf-c14a0d98c939": {
+      "source": "https://album.link/d3jhf7w8m64zv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3gmESNWa7ERBElZtFdfJgi",
+        "pandora": "https://www.pandora.com/AL:68528362",
+        "amazonMusic": "https://music.amazon.com/albums/B0H475G11Z",
+        "tidal": "https://listen.tidal.com/album/531074073",
+        "amazonStore": "https://amazon.com/dp/B0H475G11Z"
+      },
+      "upc": "820233597319",
+      "tracks": 6,
+      "releaseDate": "2026-07-31"
+    },
+    "3cf4129a-8c52-8062-9dc8-eda9f46784fd": {
+      "source": "https://album.link/6kfng5fnhpvfr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5H6AKYiSVXgvWWCHQUTmO5",
+        "pandora": "https://www.pandora.com/AL:21707553",
+        "deezer": "https://www.deezer.com/album/408724217",
+        "amazonMusic": "https://music.amazon.com/albums/B0BW44TTZK",
+        "tidal": "https://listen.tidal.com/album/277286419",
+        "napster": "https://play.napster.com/album/alb.472836282",
+        "yandex": "https://music.yandex.ru/album/10652722",
+        "boomplay": "https://www.boomplay.com/albums/11700547",
+        "anghami": "https://play.anghami.com/album/1012351677?refer=linktree",
+        "bandcamp": "https://thesweetenoughs.bandcamp.com/album/marshmallow",
+        "amazonStore": "https://amazon.com/dp/B0BW44TTZK"
+      },
+      "upc": "3616405569324",
+      "tracks": 10,
+      "releaseDate": "2020-08-05"
     }
   }
 }

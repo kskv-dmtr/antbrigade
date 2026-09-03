@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-03T01:08:11Z",
+  "generatedAt": "2026-09-03T16:28:39Z",
   "counts": {
-    "albums": 1134,
-    "artists": 1014,
-    "labels": 632,
-    "videos": 84
+    "albums": 1135,
+    "artists": 1015,
+    "labels": 633,
+    "videos": 85
   },
   "albums": [
     {
@@ -34509,6 +34509,37 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-8096-8f3b-f7561954d2ff",
+      "slug": "demae-life-works-out-usually",
+      "artist": "Demae",
+      "album": "Life Works Out... Usually",
+      "url": "https://album.link/ghvwx7jj8jqgq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8df31cf4-111f-456a-b437-321001948437%3Aa0899536217_10.jpg?table=block&id=3d04129a-8c52-8096-8f3b-f7561954d2ff&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-04",
+      "year": 2020,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d04129a-8c52-80d2-9e17-c2998be230f3"
+      ],
+      "artists": [
+        "Demae"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-801a-a165-ee79ec0df15a"
+      ],
+      "labels": [
+        "Touching Bass"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-8013-8b34-e50ee5080289",
       "slug": "parbleu-danse-cette-zik",
       "artist": "Parbleu",
@@ -40143,6 +40174,26 @@
       "videoIds": []
     },
     {
+      "id": "3d04129a-8c52-80d2-9e17-c2998be230f3",
+      "slug": "demae",
+      "name": "Demae",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://demae.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-8096-8f3b-f7561954d2ff"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-801a-a165-ee79ec0df15a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2c24129a-8c52-8048-a1de-d250b8a11d0c",
       "slug": "demo-rumodo",
       "name": "Demo Rumodo",
@@ -45300,7 +45351,7 @@
       "name": "Kinkajous",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://knkjs.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "7aa8f648-2e86-4bc2-a261-b73fb13da433"
@@ -50794,7 +50845,8 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": [
-        "2414129a-8c52-80d4-a826-dbc26f9f2c01"
+        "2414129a-8c52-80d4-a826-dbc26f9f2c01",
+        "3d04129a-8c52-8092-8f84-de75503a7985"
       ]
     },
     {
@@ -64990,7 +65042,7 @@
       "name": "Running Circle",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://runningcircle.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "7aa8f648-2e86-4bc2-a261-b73fb13da433"
@@ -66426,6 +66478,21 @@
       ],
       "artistIds": [
         "2504129a-8c52-8029-b227-e5cd6c5a0959"
+      ]
+    },
+    {
+      "id": "3d04129a-8c52-801a-a165-ee79ec0df15a",
+      "slug": "touching-bass",
+      "name": "Touching Bass",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://touching-bass.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-8096-8f3b-f7561954d2ff"
+      ],
+      "artistIds": [
+        "3d04129a-8c52-80d2-9e17-c2998be230f3"
       ]
     },
     {
@@ -67996,6 +68063,19 @@
         "2404129a-8c52-8035-a990-db8919c35959"
       ],
       "slug": "rio-kosta-it-s-starting"
+    },
+    {
+      "id": "3d04129a-8c52-8092-8f84-de75503a7985",
+      "title": "RIO KOSTA | Slowly",
+      "url": "https://youtu.be/s5ho9bDT2RE?si=SltLZVdJRODbaxyK",
+      "kind": "Official Video",
+      "released": "2026-09-03",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "2404129a-8c52-8035-a990-db8919c35959"
+      ],
+      "slug": "rio-kosta-slowly"
     },
     {
       "id": "3c54129a-8c52-80bc-8885-e006b8259e11",

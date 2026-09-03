@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T01:08:27Z",
+  "generatedAt": "2026-09-03T16:28:50Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17903,6 +17903,25 @@
       "upc": "3616405569324",
       "tracks": 10,
       "releaseDate": "2020-08-05"
+    },
+    "3d04129a-8c52-8096-8f3b-f7561954d2ff": {
+      "source": "https://album.link/ghvwx7jj8jqgq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3IOTld4FMQmIsHbCqsOCjP",
+        "pandora": "https://www.pandora.com/AL:6078561",
+        "deezer": "https://www.deezer.com/album/353133727",
+        "amazonMusic": "https://music.amazon.com/albums/B08CX43231",
+        "tidal": "https://listen.tidal.com/album/246201006",
+        "napster": "https://play.napster.com/album/alb.492299436",
+        "yandex": "https://music.yandex.ru/album/11940833",
+        "boomplay": "https://www.boomplay.com/albums/15678480",
+        "anghami": "https://play.anghami.com/album/1014461079?refer=linktree",
+        "bandcamp": "https://demae.bandcamp.com/album/life-works-out-usually",
+        "amazonStore": "https://amazon.com/dp/B08CX43231"
+      },
+      "upc": "5054526948020",
+      "tracks": 8,
+      "releaseDate": "2020-09-18"
     }
   }
 }

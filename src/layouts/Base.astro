@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import SearchField from '../components/SearchField.astro';
 
 /* cardTitle — заголовок для карточки, которая разворачивается при отправке
    ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
@@ -14,7 +15,7 @@ import Icon from '../components/Icon.astro';
    noindex — страница не для выдачи. Сейчас такая одна, 404: хостинг отдаёт
    её с кодом 404, и поисковик её и так не возьмёт, но сам файл лежит ещё и
    по адресу /404 и оттуда отвечает обычным «двухсотым». */
-const { title, description, activeSection, cardTitle, image, noindex } = Astro.props;
+const { title, description, activeSection, cardTitle, image, noindex, search } = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
    ссылка в никуда хуже отсутствующего пункта.
@@ -200,6 +201,16 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         ))}
       </nav>
 
+      {/* Поиск живёт в шапке, а не на странице: ищут по каталогу, а не по
+          тому, что сейчас открыто, и место у поля одно на весь сайт.
+          Отдаётся страницами через параметр search — там лежит подпись для
+          экранного диктора, у каждого списка своя. Нет параметра — нет и
+          поля: на странице релиза искать нечего.
+
+          Стоит левее переключателя темы: тема и меню — про сайт целиком,
+          поиск — про содержимое, и он ближе к нему. */}
+      {search && <SearchField label={search} />}
+
       {/* Переключатель темы — последним в разметке, после меню.
 
           На широком экране он встаёт справа от разделов, на узком меню
@@ -358,7 +369,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Место полосы снимается при выключенной липкости: у sticky-элемента
        getBoundingClientRect врёт ровно на то, что мы измеряем. Тот же приём
        и с той же причиной, что у липкой полосы списков ниже. */
-    const полосы = [...document.querySelectorAll('.head--sticky, .sticky-bar--flush')];
+    const полосы = [...document.querySelectorAll('.head--sticky')];
 
     if (полосы.length) {
       /* Отступ у каждой полосы свой: заголовок раздела встаёт под шапку, а
@@ -401,7 +412,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Порог в 6 пикселей нужен, чтобы полоса не дёргалась от инерционной
        прокрутки и подрагивания тачпада: без него колебание в один пиксель
        считалось бы сменой направления. */
-    const bar = document.querySelector('.sticky-bar:not(.sticky-bar--flush)');
+    const bar = document.querySelector('.sticky-bar');
 
     if (bar) {
       const STEP = 6;

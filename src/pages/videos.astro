@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import PageBar from '../components/PageBar.astro';
 import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
-import SearchField from '../components/SearchField.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
@@ -65,43 +64,37 @@ const PAGE = 50;
   title="Videos · ant brigade"
   description={`${videos.length} music videos and live sets from the collection.`}
   activeSection="videos"
+  search="Search by artist or title"
 >
   {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
       все клипы — значение в полосе совпадает с первым расчётом. */}
+  {/* Управление устроено как на Music: отбор, сортировка и вид — в правой
+      половине полосы заголовка, поиск — в шапке. */}
   <PageBar title="Videos" count={videos.length}>
-    <SearchField label="Search by artist or title" />
-  </PageBar>
+    <div class="filters__group">
+      {/* Вид ролика — такой же список с множественным выбором, как тип
+          релиза на Music. Полоса кнопок стояла здесь до 3 сентября 2026 и
+          требовала второго контрола на узком экране; список один на все
+          ширины и позволяет отметить сразу несколько видов. */}
+      <MultiSelect id="kind" label="Video kind" allLabel="All types" manyLabel="Types"
+                   items={kinds.map((k) => ({ value: k.value, label: k.label, count: kindCounts.get(k.value) ?? 0 }))} />
 
-  {/* Полоса управления устроена как на Music: поиск, отбор, сортировка,
-      переключатель вида — всё одной строкой, слева направо. */}
-  <div class="sticky-bar sticky-bar--flush">
-    <div class="controls__top">
-      <div class="filters__group">
-        {/* Вид ролика — такой же список с множественным выбором, как тип
-            релиза на Music. Полоса кнопок стояла здесь до 3 сентября 2026 и
-            требовала второго контрола на узком экране; список один на все
-            ширины и позволяет отметить сразу несколько видов. */}
-        <MultiSelect id="kind" label="Video kind" allLabel="All types" manyLabel="Types"
-                     items={kinds.map((k) => ({ value: k.value, label: k.label, count: kindCounts.get(k.value) ?? 0 }))} />
-
-        {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
-            алфавиту, и у каждой оси обе стороны. По умолчанию тоже как на
-            Music — «Newest first»: с ним страница открывается и к нему
-            возвращает Reset. */}
-        <Select id="sort" label="Sorting">
-          <option value="new" selected>Newest first</option>
-          <option value="old">Oldest first</option>
-          <option value="artist-az">Artists A → Z</option>
-          <option value="artist-za">Artists Z → A</option>
-          <option value="title-az">Titles A → Z</option>
-          <option value="title-za">Titles Z → A</option>
-        </Select>
-
-      </div>
-
-      <ViewSwitch />
+      {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
+          алфавиту, и у каждой оси обе стороны. По умолчанию тоже как на
+          Music — «Newest first»: с ним страница открывается и к нему
+          возвращает Reset. */}
+      <Select id="sort" label="Sorting">
+        <option value="new" selected>Newest first</option>
+        <option value="old">Oldest first</option>
+        <option value="artist-az">Artists A → Z</option>
+        <option value="artist-za">Artists Z → A</option>
+        <option value="title-az">Titles A → Z</option>
+        <option value="title-za">Titles Z → A</option>
+      </Select>
     </div>
-  </div>
+
+    <ViewSwitch />
+  </PageBar>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 

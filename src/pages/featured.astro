@@ -6,7 +6,6 @@ import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
-import SearchField from '../components/SearchField.astro';
 import { albums, coverSrc, plural } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
 
@@ -72,47 +71,48 @@ const PAGE = 50;
     : 'A hand-picked selection from the collection.'}
   image={coverSrc(featured.find((a) => a.cover), 800)}
   activeSection="featured"
+  search={featured.length > 0 ? 'Search by artist or album' : undefined}
 >
   {/* До выполнения скрипта видны все записи — число в полосе совпадает с
       тем, что скрипт поставит первым же расчётом. Пустая подборка обходится
       без счётчика: считать там нечего. */}
+  {/* Управление то же, что на /music: отбор, сортировка и вид — в правой
+      половине полосы заголовка, поиск — в шапке. Пустая подборка обходится
+      без них: отбирать нечего. */}
   <PageBar title="Featured" count={featured.length > 0 ? featured.length : null}>
-    {featured.length > 0 && <SearchField label="Search by artist or album" />}
+    {featured.length > 0 && (
+      <>
+        <div class="filters__group">
+          {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из
+              отмеченных», а не «все сразу»: у релиза бывает и два типа, и
+              три жанра, и пересечение почти всегда пусто. */}
+          <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
+                       items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
+
+          <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
+                       items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
+
+          <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
+                       items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
+
+          {/* У каждой оси обе стороны: и по дате, и по алфавиту. */}
+          <Select id="sort" label="Sorting">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="artist-az">Artists A → Z</option>
+            <option value="artist-za">Artists Z → A</option>
+            <option value="album-az">Albums A → Z</option>
+            <option value="album-za">Albums Z → A</option>
+          </Select>
+        </div>
+
+        <ViewSwitch />
+      </>
+    )}
   </PageBar>
 
   {featured.length > 0 ? (
     <>
-      {/* Полоса управления та же, что на /music, и в том же порядке: поиск,
-          три отбора, сортировка, переключатель вида — всё одной строкой. */}
-      <div class="sticky-bar sticky-bar--flush">
-        <div class="controls__top">
-          <div class="filters__group">
-            {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из
-                отмеченных», а не «все сразу»: у релиза бывает и два типа, и
-                три жанра, и пересечение почти всегда пусто. */}
-            <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
-                         items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
-
-            <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
-                         items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
-
-            <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
-                         items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
-
-            {/* У каждой оси обе стороны: и по дате, и по алфавиту. */}
-            <Select id="sort" label="Sorting">
-              <option value="new">Newest first</option>
-              <option value="old">Oldest first</option>
-              <option value="artist-az">Artists A → Z</option>
-              <option value="artist-za">Artists Z → A</option>
-              <option value="album-az">Albums A → Z</option>
-              <option value="album-za">Albums Z → A</option>
-            </Select>
-          </div>
-
-          <ViewSwitch />
-        </div>
-      </div>
 
       <p class="empty" id="empty" hidden>Nothing found.</p>
 

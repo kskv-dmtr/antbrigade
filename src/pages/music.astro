@@ -6,7 +6,6 @@ import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
-import SearchField from '../components/SearchField.astro';
 import { albums } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
 
@@ -57,56 +56,52 @@ const PAGE = 50;
   title="Music · ant brigade"
   description={`All ${albums.length} releases in the collection: covers, genres, labels and links to listen.`}
   activeSection="albums"
+  search="Search by artist or album"
 >
   {/* До выполнения скрипта видны все записи — число в полосе совпадает с
       тем, что скрипт поставит первым же расчётом. */}
-  <PageBar title="Music" count={albums.length}>
-    <SearchField label="Search by artist or album" />
-  </PageBar>
-
-  {/* Список строками — вид по умолчанию, как в макете. Стена обложек
-      осталась вторым видом: в каталоге пластинок обложка — это тоже
-      содержание, и терять её целиком было бы неправильно. */}
-  {/* Всё управление в липкой полосе и в одну строку: поиск, три отбора,
-      сортировка и переключатель вида. Порядок слева направо — от «что
-      ищем» к «как показывать».
+  {/* Всё управление в правой половине полосы заголовка: три отбора,
+      сортировка и вид. Поиск оттуда уехал в шапку — ищут по каталогу, а не
+      по тому, что сейчас открыто, и поле в шапке одно на весь сайт.
 
       Полоса кнопок с типами релиза (Albums, EPs, Singles…) убрана 3
       сентября 2026: тип стал таким же списком с множественным выбором, как
       жанр и год. Полоса занимала четыреста пикселей ради пяти значений,
       выбирать позволяла только одно и требовала второго контрола на узком
       экране — списка, который теперь один на все ширины. */}
-  <div class="sticky-bar sticky-bar--flush">
-    <div class="controls__top">
-      <div class="filters__group">
-        {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из
-            отмеченных», а не «все сразу»: у релиза бывает и два типа, и
-            три жанра, и пересечение почти всегда пусто. */}
-        <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
-                     items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
+  <PageBar title="Music" count={albums.length}>
+    <div class="filters__group">
+      {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из отмеченных»,
+          а не «все сразу»: у релиза бывает и два типа, и три жанра, и
+          пересечение почти всегда пусто. */}
+      <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
+                   items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
 
-        <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
-                     items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
+      <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
+                   items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
 
-        <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
-                     items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
+      <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
+                   items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
 
-        {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
-            подписи — та же, что у списков A → Z на /artists, /labels и
-            /genres, чтобы направление читалось одинаково везде. */}
-        <Select id="sort" label="Sorting">
-          <option value="new">Newest first</option>
-          <option value="old">Oldest first</option>
-          <option value="artist-az">Artists A → Z</option>
-          <option value="artist-za">Artists Z → A</option>
-          <option value="album-az">Albums A → Z</option>
-          <option value="album-za">Albums Z → A</option>
-        </Select>
-      </div>
-
-      <ViewSwitch />
+      {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
+          подписи — та же, что у списков A → Z на /artists, /labels и
+          /genres, чтобы направление читалось одинаково везде. */}
+      <Select id="sort" label="Sorting">
+        <option value="new">Newest first</option>
+        <option value="old">Oldest first</option>
+        <option value="artist-az">Artists A → Z</option>
+        <option value="artist-za">Artists Z → A</option>
+        <option value="album-az">Albums A → Z</option>
+        <option value="album-za">Albums Z → A</option>
+      </Select>
     </div>
-  </div>
+
+    <ViewSwitch />
+  </PageBar>
+
+  {/* Список строками — вид по умолчанию, как в макете. Стена обложек
+      осталась вторым видом: в каталоге пластинок обложка — это тоже
+      содержание, и терять её целиком было бы неправильно. */}
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 

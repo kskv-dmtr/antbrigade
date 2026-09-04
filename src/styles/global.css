@@ -356,8 +356,15 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 0.125rem;
   border-bottom: 1px solid transparent;
 }
-.nav a:hover,
-.nav a:focus-visible { color: var(--fg); }
+/* Наведение по всему файлу отделено от нажатия: на касании :hover
+   срабатывает от пальца и держится, пока он не тронет другое место. За
+   отклик там отвечает :active — он живёт ровно столько, сколько длится
+   касание. Подробности в [[Оформление]]. */
+@media (hover: hover) {
+  .nav a:hover { color: var(--fg); }
+}
+.nav a:focus-visible,
+.nav a:active { color: var(--fg); }
 .nav a[aria-current='page'] {
   color: var(--fg);
   border-bottom-color: var(--fg);
@@ -643,8 +650,11 @@ a { color: inherit; text-decoration: none; }
   opacity: 0;
   transition: opacity 0.12s ease;
 }
-.tile__link:hover .tile__over,
-.tile__link:focus-visible .tile__over { opacity: 1; }
+@media (hover: hover) {
+  .tile__link:hover .tile__over { opacity: 1; }
+}
+.tile__link:focus-visible .tile__over,
+.tile__link:active .tile__over { opacity: 1; }
 
 .tile__meta {
   font-family: var(--mono);
@@ -777,15 +787,25 @@ a { color: inherit; text-decoration: none; }
 
 /* Наведение выворачивает строку целиком: приглушённые колонки в этот
    момент читаются уже на светлом, поэтому им нужен свой приглушённый. */
-.row:hover, .row:focus-visible {
+@media (hover: hover) {
+  .row:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    outline: none;
+  }
+  .row:hover .row__meta,
+  .row:hover .row__num { color: var(--ink-muted); }
+}
+.row:focus-visible,
+.row:active {
   background: var(--ink);
   color: var(--ink-fg);
   outline: none;
 }
-.row:hover .row__meta,
-.row:hover .row__num,
 .row:focus-visible .row__meta,
-.row:focus-visible .row__num { color: var(--ink-muted); }
+.row:focus-visible .row__num,
+.row:active .row__meta,
+.row:active .row__num { color: var(--ink-muted); }
 
 /* Исполнитель текстовым шрифтом — как и на плитке. Цвет не задан: строка
    наследует его от .row, то есть ровно тот же, что у названия, — и вместе
@@ -1262,8 +1282,15 @@ body:has(.head--dot) .foot { margin-top: 0; }
 }
 [data-js] .view-toggle { display: inline-block; }
 
-.view-toggle:hover,
-.view-toggle:focus-visible {
+@media (hover: hover) {
+  .view-toggle:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+}
+.view-toggle:focus-visible,
+.view-toggle:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -1380,7 +1407,10 @@ body:has(.head--dot) .foot { margin-top: 0; }
   white-space: nowrap;
 }
 .seg button:last-child { border-right: 0; }
-.seg button:hover { color: var(--fg); }
+@media (hover: hover) {
+  .seg button:hover { color: var(--fg); }
+}
+.seg button:active { color: var(--fg); }
 .seg button[aria-pressed='true'] {
   background: var(--ink);
   color: var(--ink-fg);
@@ -1454,7 +1484,10 @@ select {
      «Progressive Electronic (14)» с его 250 px, — и подпись обрезалась. */
   max-width: none;
 }
-select:hover { border-color: var(--fg-muted); }
+@media (hover: hover) {
+  select:hover { border-color: var(--fg-muted); }
+}
+select:active { border-color: var(--fg-muted); }
 /* Раскрытый список рисует система, и он всегда на своём фоне: без этого
    в тёмной теме пункты остаются чёрным по чёрному в части браузеров. */
 select option { background: var(--option-bg); color: var(--fg); }
@@ -1522,7 +1555,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .multi__button::-webkit-details-marker { display: none; }
 .multi__button { position: relative; }
-.multi__button:hover { border-color: var(--fg-muted); }
+@media (hover: hover) {
+  .multi__button:hover { border-color: var(--fg-muted); }
+}
+.multi__button:active { border-color: var(--fg-muted); }
 .multi__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .multi[open] .select__chevron { transform: rotate(180deg); }
 /* Пока отбор пуст — шеврон, как у обычного списка. Как только что-то
@@ -1550,7 +1586,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   border: 1px solid var(--line);
   cursor: pointer;
 }
-.multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+@media (hover: hover) {
+  .multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+}
+.multi__clear:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 .multi__x { width: 0.6875rem; height: 0.6875rem; }
 /* Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
    панели по одной подписи «Genres [3]» не видно, что отбор включён. */
@@ -1597,7 +1636,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   color: var(--fg-muted);
   cursor: pointer;
 }
-.multi__item:hover { background: var(--ink); color: var(--ink-fg); }
+@media (hover: hover) {
+  .multi__item:hover { background: var(--ink); color: var(--ink-fg); }
+}
+.multi__item:active { background: var(--ink); color: var(--ink-fg); }
 .multi__item input {
   flex: none;
   width: 0.8125rem;
@@ -1609,7 +1651,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 /* Счёт прижат вправо и приглушён: он подсказка о размере выборки, а не
    часть названия. */
 .multi__count { margin-left: auto; padding-left: 0.5rem; color: var(--fg-dim); }
-.multi__item:hover .multi__count { color: inherit; }
+@media (hover: hover) {
+  .multi__item:hover .multi__count { color: inherit; }
+}
+.multi__item:active .multi__count { color: inherit; }
 /* Пункт с нулём прячется совсем. Приглушение остаётся для единственного
    случая, когда прятать нельзя: пункт отмечен, а под остальным отбором в нём
    нет ни одной записи — снять с него флажок иначе было бы нечем. */
@@ -1645,7 +1690,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   border: 1px solid var(--line);
   cursor: pointer;
 }
-.more:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+@media (hover: hover) {
+  .more:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+}
+.more:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
 /* Полоса первых букв — тот же сегментированный переключатель, что тип
    релиза на Music и вид ролика на Videos, вплоть до кнопки «All».
@@ -1683,8 +1731,11 @@ select option { background: var(--option-bg); color: var(--fg); }
 .crumbs a,
 .crumbs__sep { flex: none; }
 .crumbs a { color: var(--fg-muted); border-bottom: 1px solid var(--line); }
-.crumbs a:hover,
-.crumbs a:focus-visible { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+@media (hover: hover) {
+  .crumbs a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+}
+.crumbs a:focus-visible,
+.crumbs a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Кнопка «назад» — в рамке, как все кнопки на сайте: те же поля, тот же
    кегль, та же выворотка по наведению, что у Dig again, Reset и кнопок
@@ -1720,8 +1771,15 @@ select option { background: var(--option-bg); color: var(--fg); }
   margin-right: 1rem;
 }
 .crumbs__back:not([hidden]) { display: inline-flex; }
-.crumbs__back:hover,
-.crumbs__back:focus-visible {
+@media (hover: hover) {
+  .crumbs__back:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+}
+.crumbs__back:focus-visible,
+.crumbs__back:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -1925,7 +1983,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   color: var(--fg-muted);
 }
 .detail__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
-.detail__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+@media (hover: hover) {
+  .detail__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+}
+.detail__artist a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* ------------------------------- шапка релиза: две опоры и воздух
 
@@ -1973,8 +2034,12 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .detail__fact a,
 .meta-line a { border-bottom: 1px solid var(--line); }
-.detail__fact a:hover,
-.meta-line a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+@media (hover: hover) {
+  .detail__fact a:hover,
+  .meta-line a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+}
+.detail__fact a:active,
+.meta-line a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Строка с датой отделена от кнопок линейкой — той же мягкой, что разделяет
    строки индекса. Это два разных дела: сверху куда пойти слушать, снизу
@@ -2031,8 +2096,12 @@ select option { background: var(--option-bg); color: var(--fg); }
   text-transform: uppercase;
   border: 1px solid var(--line);
 }
-.listen__platform:hover,
-.profile:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+@media (hover: hover) {
+  .listen__platform:hover,
+  .profile:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+}
+.listen__platform:active,
+.profile:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
 /* Ряд ссылок наружу — сайт, Bandcamp, YouTube. Просвет и отступ снизу держит
    он, а не сами кнопки: их бывает и одна, и две, и отступ не должен от этого
@@ -2173,8 +2242,15 @@ select option { background: var(--option-bg); color: var(--fg); }
   line-height: 1.7;
 }
 .foot__note a { color: var(--fg-muted); border-bottom: 1px solid var(--line); }
-.foot__note a:hover,
-.foot__note a:focus-visible {
+@media (hover: hover) {
+  .foot__note a:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-bottom-color: transparent;
+  }
+}
+.foot__note a:focus-visible,
+.foot__note a:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-bottom-color: transparent;
@@ -2267,7 +2343,11 @@ select option { background: var(--option-bg); color: var(--fg); }
   .row__title { grid-column: 1; font-size: max(12px, 1rem); letter-spacing: -0.01em; }
   .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: max(12px, 0.625rem); }
   .row__num { grid-row: 2; grid-column: 2; font-size: max(12px, 0.625rem); }
-  .row:hover, .row:focus-visible { padding-left: 0.5rem; padding-right: 0.5rem; }
+  @media (hover: hover) {
+    .row:hover { padding-left: 0.5rem; padding-right: 0.5rem; }
+  }
+  .row:focus-visible,
+  .row:active { padding-left: 0.5rem; padding-right: 0.5rem; }
 
   /* У имени всего две ячейки, и вторая строка слева пустовала бы: счётчик
      ставим в один ряд справа от имени.

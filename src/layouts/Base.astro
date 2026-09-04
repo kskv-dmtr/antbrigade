@@ -359,14 +359,19 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Место полосы снимается при выключенной липкости: у sticky-элемента
        getBoundingClientRect врёт ровно на то, что мы измеряем. Тот же приём
        и с той же причиной, что у липкой полосы списков ниже. */
-    const полосы = [...document.querySelectorAll('.head--sticky')];
+    const полосы = [...document.querySelectorAll('.head--sticky, .sticky-bar--flush')];
 
-    if (полосы.length && masthead) {
-      let отступ = 0;
+    if (полосы.length) {
+      /* Отступ у каждой полосы свой: заголовок раздела встаёт под шапку, а
+         полоса отбора на списках — под заголовок. Берём его из самого
+         правила, а не считаем заново: в CSS он уже посчитан, и второй счёт
+         разошёлся бы с первым. Читаем до подмены на static — у статического
+         элемента top становится auto. */
+      let верх = [];
       let якоря = [];
 
       const измерить = () => {
-        отступ = Math.round(masthead.getBoundingClientRect().height);
+        верх = полосы.map((полоса) => parseFloat(getComputedStyle(полоса).top) || 0);
 
         якоря = полосы.map((полоса) => {
           const было = полоса.style.position;
@@ -379,7 +384,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
       const красить = () => {
         полосы.forEach((полоса, i) => {
-          полоса.toggleAttribute('data-stuck', scrollY + отступ > якоря[i]);
+          полоса.toggleAttribute('data-stuck', scrollY + верх[i] > якоря[i]);
         });
       };
 
@@ -397,7 +402,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Порог в 6 пикселей нужен, чтобы полоса не дёргалась от инерционной
        прокрутки и подрагивания тачпада: без него колебание в один пиксель
        считалось бы сменой направления. */
-    const bar = document.querySelector('.sticky-bar');
+    const bar = document.querySelector('.sticky-bar:not(.sticky-bar--flush)');
 
     if (bar) {
       const STEP = 6;

@@ -1034,6 +1034,80 @@ body:has(.head--dot) .foot { margin-top: 0; }
   background: var(--fg);
 }
 
+/* --------------------------------------- полоса заголовка на списках
+
+   Та же полоса, что на витрине, — --dot держит всю геометрию, — но метка
+   слева не точка, а треугольник влево, и вся левая половина работает
+   кнопкой «назад». Отдельной кнопки Back на списках больше нет: место
+   метки и место стрелки на полосе одно и то же, и заводить под них два
+   разных органа незачем.
+
+   Правая половина пуста и держит вертикальную черту ровно на середине
+   экрана — ту же, что делит полосу на витрине.
+
+   Линии сверху у полосы нет: она стоит первой под шапкой, а шапка свою
+   линию снизу уже начертила. Поля снизу тоже нет — под полосой сразу
+   идёт полоса отбора. */
+.head.head--back {
+  margin-bottom: 0;
+  /* Линии сверху нет: полоса стоит первой под шапкой, а шапка свою линию
+     снизу уже начертила. Два класса — чтобы перебить .head.head--dot. */
+  border-top: 0;
+}
+.head--back .head__lead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding-left: calc(var(--pad) + 1px);
+}
+.head--back .display {
+  padding-left: 0;
+  min-width: 0;
+}
+/* Точку убираем: её место занял треугольник у самой ссылки. */
+.head--back .display::before { content: none; }
+.head--back .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  color: inherit;
+}
+.head--back .back span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Треугольник — тот же квадрат 16 на 16 и тот же просвет до слова, что у
+   точки, только срезанный по двум диагоналям. Размер и место общие
+   нарочно: между витриной и списком метка меняет форму, но не прыгает. */
+.head--back .back::before {
+  content: '';
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--fg);
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+/* Пустая половина. Своего содержимого у неё нет, всё её дело — черта
+   посередине. Чертит её левая граница, как чертила её кнопка на витрине. */
+.head__blank { border-left: 1px solid var(--line); }
+
+/* Выворотка у ссылки-заголовка своя: заливать светлым половину полосы
+   ради наведения на слово — слишком громко. Меняется только цвет метки и
+   подписи. */
+@media (hover: hover) {
+  .head--back .back:hover { color: var(--fg-muted); }
+  .head--back .back:hover::before { background: var(--fg-muted); }
+}
+.head--back .back:focus-visible,
+.head--back .back:active { color: var(--fg-muted); }
+.head--back .back:focus-visible::before,
+.head--back .back:active::before { background: var(--fg-muted); }
+
 /* Заплата повторяет поле, а перед плитками оно 24. */
 .head--sticky:has(+ .tiles)::after { height: 1.5rem; }
 
@@ -1238,6 +1312,74 @@ body:has(.head--dot) .foot { margin-top: 0; }
 }
 /* Ровно на свою высоту: низ уходит под шапку, а та выше по z-index. */
 .sticky-bar[data-hidden] { transform: translateY(-100%); }
+
+/* Полоса отбора на переведённых списках — Music, Videos, Featured. Встаёт
+   вплотную под полосу заголовка: одной строкой в 64, во всю ширину экрана,
+   без полей сверху и снизу и без просвета до содержимого. Разделяют её
+   дивайдеры, как всё на витрине.
+
+   Сдвиг влево на пиксель тот же, что у решётки и у полосы заголовка: так
+   их левые края и внутренние поля совпадают до пикселя.
+
+   Прочие списки — артисты, лейблы, жанры — пока со старой полосой: их
+   очередь ещё не подошла. */
+.sticky-bar--flush {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  height: 4rem;
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  margin-bottom: 0;
+  padding: 0 var(--pad) 0 calc(var(--pad) + 1px);
+  /* Линию сверху чертит полоса заголовка над ней. Своей у полосы отбора
+     нет нарочно: прилипнув под шапку, она легла бы на линию шапки и в
+     стыке вышло бы два пикселя. */
+  border-bottom: 1px solid var(--line);
+}
+.sticky-bar--flush .controls__top { flex: 1; min-width: 0; }
+
+/* Список под такой полосой идёт до краёв экрана, как решётка на витрине:
+   поля кадра держат только полосы, а содержимое упирается в край. Поле
+   внутрь переезжает к самой строке, и слева оно на пиксель больше — тот же
+   сдвиг, что у решётки.
+
+   Через соседний селектор, а не классом на списке: правило описывает не
+   список сам по себе, а список под новой полосой. Артисты, лейблы и жанры
+   пока со старой и остаются как были. */
+.sticky-bar--flush ~ .releases {
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+}
+.sticky-bar--flush ~ .releases .row {
+  padding-left: calc(var(--pad) + 1px);
+  padding-right: var(--pad);
+}
+
+/* «Показать ещё» под таким списком — не кнопка в рамке посреди поля, а
+   такая же полоса во всю ширину: 64 в высоту, дивайдер сверху, подпись по
+   центру. Ровно так под сеткой обложек стоят View all и Dig again на
+   телефоне, и на витрине это единственная форма для органа, идущего
+   поперёк всей страницы.
+
+   Ширину называем явно: у кнопки width: auto — это «по содержимому», она
+   форменный элемент и меряется начинкой. */
+.sticky-bar--flush ~ .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% + var(--pad) * 2 + 1px);
+  height: 4rem;
+  margin-top: 0;
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  padding: 0;
+  font-size: max(12px, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
 /* Поле поиска — ровно два столбца сетки обложек вместе с просветом между
    ними, та же ширина, что у обложки на полосе релиза. Не растягивается:
    строка управления от этого перестаёт зависеть от того, сколько в ней
@@ -2695,6 +2837,19 @@ select option { background: var(--option-bg); color: var(--fg); }
   .sticky-bar {
     margin-inline: calc(var(--pad) * -1);
     padding-inline: var(--pad);
+  }
+
+  /* Полоса отбора на новых списках в одну строку не помещается: поиск
+     занимает всю ширину, фильтры уезжают под него вторым рядом. Высоту в 64
+     отпускаем, иначе второй ряд обрезается. Поля 16 сверху и снизу — те же,
+     что у полосы заголовка.
+
+     Мобильную вёрстку этих страниц ещё предстоит собрать целиком; пока
+     важно, чтобы на телефоне ничего не обрезало. */
+  .sticky-bar--flush {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .filters__group::-webkit-scrollbar { display: none; }
 

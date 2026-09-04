@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBar from '../components/PageBar.astro';
 import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
 import SearchField from '../components/SearchField.astro';
@@ -65,16 +66,13 @@ const PAGE = 50;
   description={`${videos.length} music videos and live sets from the collection.`}
   activeSection="videos"
 >
-  <div class="page-head">
-    <h1>Videos</h1>
-    {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
-        все клипы — значение в разметке совпадает с первым расчётом. */}
-    <p class="counter" id="counter" aria-live="polite">[{videos.length}]</p>
-  </div>
+  {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
+      все клипы — значение в полосе совпадает с первым расчётом. */}
+  <PageBar title="Videos" count={videos.length} />
 
   {/* Полоса управления устроена как на Music: поиск, отбор, сортировка,
       переключатель вида — всё одной строкой, слева направо. */}
-  <div class="sticky-bar">
+  <div class="sticky-bar sticky-bar--flush">
     <div class="controls__top">
       <SearchField label="Search by artist or title" />
 

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBar from '../components/PageBar.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
@@ -72,20 +73,16 @@ const PAGE = 50;
   image={coverSrc(featured.find((a) => a.cover), 800)}
   activeSection="featured"
 >
-  <div class="page-head">
-    <h1>Featured</h1>
-    {/* До выполнения скрипта видны все записи — число в разметке совпадает
-        с тем, что скрипт поставит первым же расчётом. */}
-    {featured.length > 0 && (
-      <p class="counter" id="counter" aria-live="polite">[{featured.length}]</p>
-    )}
-  </div>
+  {/* До выполнения скрипта видны все записи — число в полосе совпадает с
+      тем, что скрипт поставит первым же расчётом. Пустая подборка обходится
+      без счётчика: считать там нечего. */}
+  <PageBar title="Featured" count={featured.length > 0 ? featured.length : null} />
 
   {featured.length > 0 ? (
     <>
       {/* Полоса управления та же, что на /music, и в том же порядке: поиск,
           три отбора, сортировка, переключатель вида — всё одной строкой. */}
-      <div class="sticky-bar">
+      <div class="sticky-bar sticky-bar--flush">
         <div class="controls__top">
           <SearchField label="Search by artist or album" />
 

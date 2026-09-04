@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBar from '../components/PageBar.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
@@ -57,12 +58,9 @@ const PAGE = 50;
   description={`All ${albums.length} releases in the collection: covers, genres, labels and links to listen.`}
   activeSection="albums"
 >
-  <div class="page-head">
-    <h1>Music</h1>
-    {/* До выполнения скрипта видны все записи — число в разметке совпадает
-        с тем, что скрипт поставит первым же расчётом. */}
-    <p class="counter" id="counter" aria-live="polite">[{albums.length}]</p>
-  </div>
+  {/* До выполнения скрипта видны все записи — число в полосе совпадает с
+      тем, что скрипт поставит первым же расчётом. */}
+  <PageBar title="Music" count={albums.length} />
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
@@ -76,7 +74,7 @@ const PAGE = 50;
       жанр и год. Полоса занимала четыреста пикселей ради пяти значений,
       выбирать позволяла только одно и требовала второго контрола на узком
       экране — списка, который теперь один на все ширины. */}
-  <div class="sticky-bar">
+  <div class="sticky-bar sticky-bar--flush">
     <div class="controls__top">
       <SearchField label="Search by artist or album" />
 

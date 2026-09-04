@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
+import ViewSwitch from '../../components/ViewSwitch.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import { labels, albumsOf } from '../../lib/db.js';
 import { fold } from '../../lib/fold.js';
@@ -63,6 +64,8 @@ const PAGE = 50;
           <option value="za">Z → A</option>
           <option value="releases">Most releases</option>
         </Select>
+
+        <ViewSwitch />
 
       </div>
     </div>

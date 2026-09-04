@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
+import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import SearchField from '../components/SearchField.astro';
 import { albums } from '../lib/db.js';
@@ -103,6 +104,8 @@ const PAGE = 50;
           <option value="album-az">Albums A → Z</option>
           <option value="album-za">Albums Z → A</option>
         </Select>
+        <ViewSwitch />
+
       </div>
     </div>
   </div>

@@ -4,6 +4,7 @@ import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
 import SearchField from '../components/SearchField.astro';
 import Select from '../components/Select.astro';
+import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
@@ -97,6 +98,8 @@ const PAGE = 50;
           <option value="title-az">Titles A → Z</option>
           <option value="title-za">Titles Z → A</option>
         </Select>
+
+        <ViewSwitch />
 
       </div>
     </div>

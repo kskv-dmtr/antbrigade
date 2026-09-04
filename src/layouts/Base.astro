@@ -220,37 +220,15 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           data-theme на <html> — значит он верен уже на первой отрисовке,
           до всякого скрипта. Скрипт доставляет только подпись для
           экранного диктора: текста у кнопки нет, а стилями её не задать. */}
-      <div class="head-tools">
-        {/* Вид списков. Стоит в шапке, а не в полосе отбора, потому что это
-            настройка человека, а не этой страницы: выбранное применяется ко
-            всем спискам сайта и запоминается, как тема.
-
-            Отсюда и соседство: справа в шапке два значка, и оба отвечают на
-            вопрос «как я смотрю», а не «что я смотрю».
-
-            Показывается только там, где есть чем управлять, — правило с
-            :has() в стилях. Кнопка, которая на странице релиза ничего не
-            делает, хуже отсутствующей. */}
-        <button
-          class="head-btn view-toggle"
-          type="button"
-          id="view"
-          aria-label="Show grid"
-        >
-          <Icon name="squares-four" class="head-btn__icon view-toggle__icon--grid" />
-          <Icon name="rows" class="head-btn__icon view-toggle__icon--rows" />
-        </button>
-
-        <button
-          class="head-btn theme-toggle"
-          type="button"
-          id="theme"
-          aria-label="Switch theme"
-        >
-          <Icon name="sun-dim" class="head-btn__icon theme-toggle__icon--sun" />
-          <Icon name="moon" class="head-btn__icon theme-toggle__icon--moon" />
-        </button>
-      </div>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="theme"
+        aria-label="Switch theme"
+      >
+        <Icon name="sun-dim" class="theme-toggle__icon theme-toggle__icon--sun" />
+        <Icon name="moon" class="theme-toggle__icon theme-toggle__icon--moon" />
+      </button>
     </div>
   </header>
 
@@ -318,32 +296,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         document.documentElement.dataset.theme = дальше;
         try { localStorage.setItem('theme', дальше); } catch (err) {}
         paint();
-      });
-    }
-
-    /* Переключатель вида. Устроен как переключатель темы и по той же
-       причине: настройка человека, а не страницы. Какой значок показать,
-       решает CSS по data-view на <html>; скрипт делает нажатие, запоминание
-       и подпись для экранного диктора.
-
-       Списки на страницах читают тот же атрибут, поэтому переключение — это
-       одна строчка, а не обход разметки. */
-    const viewBtn = document.getElementById('view');
-
-    if (viewBtn) {
-      const paintView = () => {
-        const дальше = document.documentElement.dataset.view === 'grid' ? 'list' : 'grid';
-        viewBtn.setAttribute('aria-label', дальше === 'grid' ? 'Show grid' : 'Show list');
-      };
-
-      paintView();
-
-      viewBtn.addEventListener('click', () => {
-        const дальше = document.documentElement.dataset.view === 'grid' ? 'list' : 'grid';
-
-        document.documentElement.dataset.view = дальше;
-        try { localStorage.setItem('view', дальше); } catch (err) {}
-        paintView();
       });
     }
 

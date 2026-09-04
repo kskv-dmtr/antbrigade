@@ -5,7 +5,6 @@ import VideoRow from '../components/VideoRow.astro';
 import SearchField from '../components/SearchField.astro';
 import Select from '../components/Select.astro';
 import MultiSelect from '../components/MultiSelect.astro';
-import ViewSwitch from '../components/ViewSwitch.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
 
@@ -99,8 +98,6 @@ const PAGE = 50;
           <option value="title-za">Titles Z → A</option>
         </Select>
 
-
-        <ViewSwitch target="list" />
       </div>
     </div>
   </div>
@@ -109,7 +106,7 @@ const PAGE = 50;
 
   {/* Один <li> на клип, внутри обе разметки: строка и плитка. Видимую
       выбирает data-view на списке. */}
-  <ul class="releases videos" id="list" data-view="list">
+  <ul class="releases videos" id="list">
     {list.map((v) => (
       <li
         class="release"

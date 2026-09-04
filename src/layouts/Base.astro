@@ -59,9 +59,20 @@ const cardImage = new URL(image ?? '/icons/icon-512.png?v=2026-08-08', Astro.sit
    вторым разом читалось бы заиканием. Срезаем по умолчанию; страница может
    задать свой cardTitle, как это делает главная. */
 const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
+
+/* data-view стоит прямо на <html> в разметке, а не только в скрипте. Правила
+   переключения вида ищут этот атрибут, и без него у каждой записи были бы
+   видны обе разметки разом — и строка, и плитка: у того, кто отключил
+   скрипты, список превратился бы в кашу. Инлайновый скрипт в <head>
+   перебивает значение выбором человека до первой отрисовки.
+
+   Пояснение живёт здесь, а не комментарием над тегом: комментарий между
+   <!doctype> и <html> ломает разбор — Astro выбрасывает сам тег <html>
+   вместе с lang, и страница уезжает в выдачу без языка. Проверено на
+   сборке 4 сентября 2026. */
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-view="list">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -115,10 +126,22 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       тем, кто нажал кнопку, и с тех пор помнится. */}
   <script is:inline>
     (function () {
-      var saved = null;
-      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var тема = null, вид = null;
+      try {
+        тема = localStorage.getItem('theme');
+        вид  = localStorage.getItem('view');
+      } catch (e) {}
 
-      document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = тема === 'light' ? 'light' : 'dark';
+
+      /* Вид списков — такая же настройка человека, как тема: выбрал раз и
+         дальше весь сайт показывает списки так. Строками по умолчанию:
+         тысяча с лишним записей плитками — это про разглядывание, а
+         строками про поиск, и приходят сюда чаще искать.
+
+         Ставится здесь, до отрисовки: поставь ниже — и список успел бы
+         мигнуть строками, прежде чем стать плитками. */
+      document.documentElement.dataset.view = вид === 'grid' ? 'grid' : 'list';
     })();
   </script>
 
@@ -197,15 +220,37 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           data-theme на <html> — значит он верен уже на первой отрисовке,
           до всякого скрипта. Скрипт доставляет только подпись для
           экранного диктора: текста у кнопки нет, а стилями её не задать. */}
-      <button
-        class="theme-toggle"
-        type="button"
-        id="theme"
-        aria-label="Switch theme"
-      >
-        <Icon name="sun-dim" class="theme-toggle__icon theme-toggle__icon--sun" />
-        <Icon name="moon" class="theme-toggle__icon theme-toggle__icon--moon" />
-      </button>
+      <div class="head-tools">
+        {/* Вид списков. Стоит в шапке, а не в полосе отбора, потому что это
+            настройка человека, а не этой страницы: выбранное применяется ко
+            всем спискам сайта и запоминается, как тема.
+
+            Отсюда и соседство: справа в шапке два значка, и оба отвечают на
+            вопрос «как я смотрю», а не «что я смотрю».
+
+            Показывается только там, где есть чем управлять, — правило с
+            :has() в стилях. Кнопка, которая на странице релиза ничего не
+            делает, хуже отсутствующей. */}
+        <button
+          class="head-btn view-toggle"
+          type="button"
+          id="view"
+          aria-label="Show grid"
+        >
+          <Icon name="squares-four" class="head-btn__icon view-toggle__icon--grid" />
+          <Icon name="rows" class="head-btn__icon view-toggle__icon--rows" />
+        </button>
+
+        <button
+          class="head-btn theme-toggle"
+          type="button"
+          id="theme"
+          aria-label="Switch theme"
+        >
+          <Icon name="sun-dim" class="head-btn__icon theme-toggle__icon--sun" />
+          <Icon name="moon" class="head-btn__icon theme-toggle__icon--moon" />
+        </button>
+      </div>
     </div>
   </header>
 
@@ -273,6 +318,32 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         document.documentElement.dataset.theme = дальше;
         try { localStorage.setItem('theme', дальше); } catch (err) {}
         paint();
+      });
+    }
+
+    /* Переключатель вида. Устроен как переключатель темы и по той же
+       причине: настройка человека, а не страницы. Какой значок показать,
+       решает CSS по data-view на <html>; скрипт делает нажатие, запоминание
+       и подпись для экранного диктора.
+
+       Списки на страницах читают тот же атрибут, поэтому переключение — это
+       одна строчка, а не обход разметки. */
+    const viewBtn = document.getElementById('view');
+
+    if (viewBtn) {
+      const paintView = () => {
+        const дальше = document.documentElement.dataset.view === 'grid' ? 'list' : 'grid';
+        viewBtn.setAttribute('aria-label', дальше === 'grid' ? 'Show grid' : 'Show list');
+      };
+
+      paintView();
+
+      viewBtn.addEventListener('click', () => {
+        const дальше = document.documentElement.dataset.view === 'grid' ? 'list' : 'grid';
+
+        document.documentElement.dataset.view = дальше;
+        try { localStorage.setItem('view', дальше); } catch (err) {}
+        paintView();
       });
     }
 

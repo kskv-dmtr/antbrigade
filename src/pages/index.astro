@@ -11,9 +11,9 @@ import { albums } from '../lib/db.js';
    ряд на расчётных 1920. Прежние десять давали два ряда по пять при кадре в
    1406; кадр стал во всю ширину, ряд вырос, и десять оставляли вторую
    строку наполовину пустой. Число рядов, как и было, два. */
-const LATEST = 14;
+const LATEST = 10;
 const POOL   = 150;
-const SHOW   = 14;
+const SHOW   = 10;
 
 /* Фишер — Йетс. Не `sort(() => Math.random() - 0.5)`: та перестановка
    заметно смещённая, часть записей оседает у краёв. */
@@ -47,7 +47,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   description={`Covers, genres, labels and where to listen. ${albums.length} releases, synced hourly from Notion.`}
 >
   <section class="section">
-    <div class="head">
+    <div class="head head--bare">
       <h1 class="display display--md">Latest Releases</h1>
     </div>
     <ul class="tiles tiles--auto">
@@ -56,7 +56,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   </section>
 
   <section class="section">
-    <div class="head head--sticky">
+    <div class="head head--sticky head--bare">
       <h2 class="display display--md">Lucky Finds</h2>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}

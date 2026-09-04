@@ -4,7 +4,6 @@ import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
 import MultiSelect from '../components/MultiSelect.astro';
-import ViewSwitch from '../components/ViewSwitch.astro';
 import SearchField from '../components/SearchField.astro';
 import { albums } from '../lib/db.js';
 import { fold } from '../lib/fold.js';
@@ -104,8 +103,6 @@ const PAGE = 50;
           <option value="album-az">Albums A → Z</option>
           <option value="album-za">Albums Z → A</option>
         </Select>
-
-        <ViewSwitch target="grid" />
       </div>
     </div>
   </div>
@@ -115,7 +112,7 @@ const PAGE = 50;
   {/* Один <li> на релиз, внутри обе разметки: строка и плитка. Видимую
       выбирает data-view на списке, поэтому фильтру достаточно спрятать
       сам <li> — переключение вида его не касается. */}
-  <ul class="releases" id="grid" data-view="list">
+  <ul class="releases" id="grid">
     {albums.map((a) => (
       <li
         class="release"

@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
 import NameTile from '../../components/NameTile.astro';
-import ViewSwitch from '../../components/ViewSwitch.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
@@ -65,10 +64,6 @@ const PAGE = 50;
           <option value="releases">Most releases</option>
         </Select>
 
-
-        {/* Переключатель вида замыкает строку, как на Music: слева то,
-            чем отбирают, справа то, как показывать. */}
-        <ViewSwitch target="list" />
       </div>
     </div>
 
@@ -80,7 +75,7 @@ const PAGE = 50;
       фильтров, и заголовок над выдачей повторял бы нажатое, а в общем
       списке — резал бы его на два десятка кусков без всякой нужды.
       Группировка осталась только как порядок записей. */}
-  <ul class="names" id="list" data-view="list">
+  <ul class="names" id="list">
     {ordered.map(([letter, items]) => (
       <>
         {items.map((l) => (

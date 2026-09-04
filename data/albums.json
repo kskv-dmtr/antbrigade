@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-04T19:38:07Z",
+  "generatedAt": "2026-09-04T22:22:49Z",
   "counts": {
     "albums": 1139,
     "artists": 1018,
     "labels": 637,
-    "videos": 85
+    "videos": 86
   },
   "albums": [
     {
@@ -46310,7 +46310,9 @@
       "labelIds": [
         "2ed4129a-8c52-802b-be26-ff522b114902"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3d14129a-8c52-80c9-bac7-ca8cebb3bc00"
+      ]
     },
     {
       "id": "3cf4129a-8c52-8001-b977-ccf02c54755e",
@@ -68107,6 +68109,19 @@
       "slug": "la-lom-moonlight-over-montobello"
     },
     {
+      "id": "3d14129a-8c52-80c9-bac7-ca8cebb3bc00",
+      "title": "Leenalchi | Full Performance (Live on KEXP)",
+      "url": "https://youtu.be/8Y7oPzyIsh8?si=J4aCgemEotSwXPZe",
+      "kind": "Live Performance",
+      "released": "2026-09-04",
+      "year": 2026,
+      "origReleased": null,
+      "artistIds": [
+        "38e4129a-8c52-80d0-81fd-e5b8518c88d2"
+      ],
+      "slug": "leenalchi-full-performance-live-on-kexp"
+    },
+    {
       "id": "3c74129a-8c52-80e8-a498-dd362a63edbc",
       "title": "Los Baby Jaguars | El Fuego (Latin Funk)",
       "url": "https://youtu.be/AHux-RBJgnU?si=gCDCBZ7m5h_lYVFz",
@@ -68364,7 +68379,6 @@
       "year": 2024,
       "origReleased": null,
       "artistIds": [
-        "24f4129a-8c52-801b-b600-e0e7fd747383",
         "2524129a-8c52-801e-a64d-c337e942f8b1"
       ],
       "slug": "slomosa-battling-guns"

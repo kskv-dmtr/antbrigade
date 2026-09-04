@@ -1084,18 +1084,35 @@ body:has(.head--dot) .foot { margin-top: 0; }
 .view-all--below { display: none; }
 [data-js] .dig-again--below { display: none; }
 
-.view-all:hover,
-.view-all:focus-visible {
+/* Выворотка при наведении, отклике и нажатии.
+
+   Наведение отделено медиазапросом: на касании :hover срабатывает от
+   нажатия и держится, пока палец не тронет другое место, — кнопка остаётся
+   вывернутой уже после того, как отработала. Там за отклик отвечает
+   :active, он живёт ровно столько, сколько длится касание.
+
+   Счётчик на светлой плашке перекрашивается: --fg-dim подобран для тёмного
+   фона, на вывернутой кнопке он почти сливался. */
+@media (hover: hover) {
+  .view-all:hover,
+  .dig-again:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+  .view-all:hover .view-all__count { color: var(--ink-muted); }
+}
+
+.view-all:focus-visible,
+.view-all:active,
+.dig-again:focus-visible,
+.dig-again:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
 }
-.dig-again:hover,
-.dig-again:focus-visible {
-  background: var(--ink);
-  color: var(--ink-fg);
-  border-color: var(--ink);
-}
+.view-all:focus-visible .view-all__count,
+.view-all:active .view-all__count { color: var(--ink-muted); }
 
 .page-head {
   display: flex;
@@ -2261,7 +2278,19 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 
 @media (max-width: 640px) {
-  :root { --pad: 1rem; --gap: 1rem; --head-h: 5.25rem; }
+  :root {
+    --pad: 1rem; --gap: 1rem; --head-h: 5.25rem;
+
+    /* Высота полосы раздела: поле 16 сверху и снизу вокруг строки заголовка
+       в 20. На широком экране полоса ровно 64 — там она делится пополам с
+       кнопкой, и высота задана числом; здесь делить не с чем, и считать её
+       от поля вернее: поменяется кегль заголовка — высота поедет за ним.
+
+       Кнопка под сеткой берёт ту же высоту. Она стоит на витрине третьей
+       ступенькой после полосы и ряда обложек, и разнобой в пару пикселей
+       читался бы недосмотром. */
+    --bar-h: calc(1rem * 2 + 1.25rem);
+  }
 
   .brand { font-size: 1.25rem; }
 
@@ -2274,7 +2303,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 
   /* Полоса раздела остаётся одним заголовком во всю ширину: переход и
      «ещё» уезжают под сетку. */
-  .head.head--dot { grid-template-columns: 1fr; }
+  .head.head--dot {
+    grid-template-columns: 1fr;
+    height: var(--bar-h);
+  }
 
   .head--dot .view-all,
   [data-js] .head--dot .dig-again { display: none; }
@@ -2289,7 +2321,7 @@ select option { background: var(--option-bg); color: var(--fg); }
        Считается та же, что даёт вылет за поля: содержимое раздела плюс оба
        поля кадра и пиксель левого сдвига. */
     width: calc(100% + var(--pad) * 2 + 1px);
-    height: 4rem;
+    height: var(--bar-h);
     margin-left: calc(var(--pad) * -1 - 1px);
     margin-right: calc(var(--pad) * -1);
     padding: 0;
@@ -2308,6 +2340,32 @@ select option { background: var(--option-bg); color: var(--fg); }
   [data-js] .dig-again--below {
     position: sticky;
     bottom: 0;
+  }
+
+  /* Выворотку при нажатии задаём здесь целиком. Общее правило кнопок ниже
+     меняет фон и цвет разом, но фон у этих двух свой — .view-all--below
+     специфичнее, и от общего правила доезжал только цвет текста: подпись
+     красилась в цвет фона и пропадала. */
+  .view-all--below:active,
+  .view-all--below:focus-visible,
+  [data-js] .dig-again--below:active,
+  [data-js] .dig-again--below:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+  }
+  .view-all--below:active .view-all__count,
+  .view-all--below:focus-visible .view-all__count { color: var(--ink-muted); }
+
+  /* То же для наведения — узкое окно бывает и с мышью. Запрос вложен в
+     запрос: снаружи ширина, внутри наличие указателя. Обычный CSS, вложение
+     медиазапросов работает везде. */
+  @media (hover: hover) {
+    .view-all--below:hover,
+    [data-js] .dig-again--below:hover {
+      background: var(--ink);
+      color: var(--ink-fg);
+    }
+    .view-all--below:hover .view-all__count { color: var(--ink-muted); }
   }
 
   /* Кружок в заголовке мельче: рядом с 20 кеглем шестнадцать смотрелись бы

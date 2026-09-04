@@ -179,30 +179,33 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
       {/* Переключатель темы — последним в разметке, после меню.
 
-          На широком экране он встаёт справа от разделов и отделён от них
-          рамкой, чтобы не читаться шестым разделом. На узком меню уезжает
-          под бургер и из потока выпадает, поэтому кнопка остаётся видимой
-          и порядком встаёт перед бургером.
+          На широком экране он встаёт справа от разделов, на узком меню
+          уезжает под бургер и из потока выпадает, поэтому кнопка остаётся
+          видимой и порядком встаёт перед бургером.
 
-          Устроен как переключатель вида на списках: два сегмента в общей
-          рамке, нажатый вывернут. Оба варианта видны сразу, и отмечен не
-          тот, куда переключит, а тот, который сейчас, — как у List / Grid.
+          Одна кнопка, а не пара сегментов, — и логика ровно как у кнопки
+          вида на списках: показано то, что будет по нажатию, а не то, что
+          сейчас. В тёмной теме нарисовано солнце, потому что нажатие
+          включит светлую.
 
-          Подписи словами, без значков. Солнце с полумесяцем требуют
-          догадки: они показывают то ли текущую тему, то ли ту, куда
-          нажатие переключит, — и у каждого сайта по-своему. Слово
-          «Light» рядом со словом «Dark» этой двусмысленности не имеет,
-          а рядом с ним стоят такие же словесные сегменты List / Grid и
-          Albums / EPs. Заодно ушла подпись для экранного диктора: у
-          сегмента теперь есть свой текст.
+          Это и снимает двусмысленность, из-за которой значки в июле
+          заменяли словами: солнце с полумесяцем сами по себе не говорят,
+          текущее это состояние или будущее. Рядом стоит Show grid с той же
+          логикой, и пара читается одинаково.
 
-          Какой сегмент вывернут, решает CSS по data-theme на <html>: он
-          верен уже на первой отрисовке. Скрипт доставляет только
-          aria-pressed, который стилями не задать. */}
-      <div class="seg seg--theme" id="theme" role="group" aria-label="Theme">
-        <button type="button" data-theme-set="light">Light</button>
-        <button type="button" data-theme-set="dark">Dark</button>
-      </div>
+          Оба контура лежат в разметке всегда, видимый выбирает CSS по
+          data-theme на <html> — значит он верен уже на первой отрисовке,
+          до всякого скрипта. Скрипт доставляет только подпись для
+          экранного диктора: текста у кнопки нет, а стилями её не задать. */}
+      <button
+        class="theme-toggle"
+        type="button"
+        id="theme"
+        aria-label="Switch theme"
+      >
+        <Icon name="sun-dim" class="theme-toggle__icon theme-toggle__icon--sun" />
+        <Icon name="moon" class="theme-toggle__icon theme-toggle__icon--moon" />
+      </button>
     </div>
   </header>
 
@@ -236,22 +239,24 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
   <script>
     /* Переключатель темы. Саму тему поставил инлайновый скрипт в <head>, а
-       какой значок показать — решает медиазапрос по data-theme. Здесь
-       остаётся нажатие, запоминание и две вещи, которые стилями не задать:
-       подпись для экранного диктора и цвет полосы браузера.
+       какой контур показать — решает CSS по data-theme. Здесь остаётся
+       нажатие, запоминание и две вещи, которые стилями не задать: подпись
+       для экранного диктора и цвет полосы браузера.
 
        Цвет берём из токена --bg, а не из своего списка: держать второй
        перечень цветов в скрипте — верный способ развести их при первой же
        правке палитры. */
-    const themeSeg = document.getElementById('theme');
+    const themeBtn = document.getElementById('theme');
 
-    if (themeSeg) {
+    if (themeBtn) {
       const paint = () => {
-        const now = document.documentElement.dataset.theme;
-
-        for (const b of themeSeg.children) {
-          b.setAttribute('aria-pressed', String(b.dataset.themeSet === now));
-        }
+        // Подпись называет действие, а не состояние: у кнопки нет текста,
+        // и диктору надо сказать, что произойдёт по нажатию — ровно то же,
+        // что написано словами на кнопке вида.
+        const дальше = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        themeBtn.setAttribute('aria-label', дальше === 'light'
+          ? 'Switch to light theme'
+          : 'Switch to dark theme');
 
         const meta = document.getElementById('theme-color');
         if (meta) {
@@ -262,12 +267,11 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
       paint();
 
-      themeSeg.addEventListener('click', (e) => {
-        const btn = e.target.closest('button');
-        if (!btn) return;
+      themeBtn.addEventListener('click', () => {
+        const дальше = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
 
-        document.documentElement.dataset.theme = btn.dataset.themeSet;
-        try { localStorage.setItem('theme', btn.dataset.themeSet); } catch (err) {}
+        document.documentElement.dataset.theme = дальше;
+        try { localStorage.setItem('theme', дальше); } catch (err) {}
         paint();
       });
     }

@@ -20,11 +20,16 @@
 
    place — эта страница сама может стать местом, куда возвращаются.
    Ставится у жанра, лейбла и исполнителя; у релиза и клипа нет:
-   возвращаться «в релиз» из соседнего релиза незачем. */
+   возвращаться «в релиз» из соседнего релиза незачем.
+
+   noBack — кнопки «назад» в строке не будет. Ставится там, где над строкой
+   стоит полоса BackBar: она эту кнопку и забрала, а две подряд читались бы
+   опечаткой. Само правило «показываем, только когда пришли изнутри сайта»
+   переехало туда вместе с ней. */
 
 import Icon from './Icon.astro';
 
-const { trail = [], name, place = false } = Astro.props;
+const { trail = [], name, place = false, noBack = false } = Astro.props;
 
 /* У жанра, лейбла и исполнителя промежуточных звеньев нет, и без
    слова-раздела путь состоял бы из одного имени — того самого, что стоит
@@ -39,9 +44,11 @@ const bare = trail.length === 0;
   data-place={place ? name : undefined}
   hidden={bare}
 >
-  <button type="button" class="crumbs__back" hidden>
-    <Icon name="caret-left" class="crumbs__chevron" />Back
-  </button>
+  {!noBack && (
+    <button type="button" class="crumbs__back" hidden>
+      <Icon name="caret-left" class="crumbs__chevron" />Back
+    </button>
+  )}
 
   {/* Сам путь — одним куском, отдельно от кнопки: на узком экране он уходит
       под неё целиком, а не разрывается посередине. На широком куска нет
@@ -120,7 +127,7 @@ const bare = trail.length === 0;
     /* Кнопка «назад» — только когда возвращаться есть куда внутри сайта.
        Пришли из поиска или по ссылке из переписки — history.back() увёл бы
        с сайта совсем, а кнопка обещает обратное. */
-    if (inside) {
+    if (inside && back) {
       back.hidden = false;
       nav.hidden = false;
       back.addEventListener('click', function () { history.back(); });

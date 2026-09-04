@@ -79,7 +79,7 @@ const PAGE = 50;
   {/* Управление то же, что на /music: отбор, сортировка и вид — в правой
       половине полосы заголовка, поиск — в шапке. Пустая подборка обходится
       без них: отбирать нечего. */}
-  <PageBar title="Featured" count={featured.length > 0 ? featured.length : null}>
+  <PageBar title="Featured" count={featured.length > 0 ? featured.length : null} live>
     {featured.length > 0 && (
       <>
         <div class="filters__group">

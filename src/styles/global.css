@@ -1011,6 +1011,13 @@ body:has(.head--dot) .foot { margin-top: 0; }
    прилипнуть — ряд уезжает вверх, и низ у неё пропадает.
 
    Состояния «прилипло» в CSS нет, атрибут ставит наблюдатель в Base.astro. */
+/* На странице с полосой «назад» она прилипает первой, а полосы разделов —
+   под неё: иначе они встали бы на её место и закрыли собой. Высота полосы
+   та же, что у всех, — 64, на телефоне --bar-h. */
+body:has(.head--backbar) .head--sticky:not(.head--backbar) {
+  top: calc(var(--head-h) + 4rem);
+}
+
 .head--dot[data-stuck] { border-bottom: 1px solid var(--line); }
 
 /* У первой полосы своей линии сверху нет: её уже дала шапка сайта. */
@@ -1072,11 +1079,18 @@ body:has(.head--dot) .foot { margin-top: 0; }
    Линии сверху у полосы нет: она стоит первой под шапкой, а шапка свою
    линию снизу уже начертила. Поля снизу тоже нет — под полосой сразу идёт
    полоса отбора. */
-.head.head--page {
-  margin-bottom: 0;
-  /* Два класса — чтобы перебить линию сверху у .head.head--dot. */
-  border-top: 0;
-}
+.head.head--page { margin-bottom: 0; }
+
+/* Линии сверху нет только у первой полосы на странице: над ней шапка, и свою
+   линию снизу она уже начертила. У полос в середине страницы — у разделов на
+   странице релиза, клипа, исполнителя — линия сверху остаётся: над ними
+   содержимое, а не шапка.
+
+   Селектор с main, а не отдельный класс: «первая на странице» — это про
+   место в потоке, и знать об этом должна разметка страницы, а не каждый
+   вызов компонента. */
+main > .head--page:first-child,
+main > .head--backbar:first-child { border-top: 0; }
 .head--page .head__lead {
   display: flex;
   align-items: center;
@@ -1099,6 +1113,39 @@ body:has(.head--dot) .foot { margin-top: 0; }
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* Полоса «назад» на внутренних страницах. Геометрию держит --dot, как и у
+   полосы заголовка; своего у неё только кнопка в левой половине.
+
+   Кнопка занимает половину целиком — ровно так же, как на витрине занимает
+   свою половину View all: подпись по центру, 12 кеглем Medium, ни рамки, ни
+   полей. Правая половина пока пуста и держит черту посередине.
+
+   Без скрипта полосы нет: возвращаться по истории есть куда только когда
+   пришли изнутри сайта, и решает это скрипт компонента. */
+.back-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: max(12px, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.back-bar__caret { width: 0.5625rem; height: 0.5625rem; flex: none; }
+
+@media (hover: hover) {
+  .back-bar:hover { background: var(--ink); color: var(--ink-fg); }
+}
+.back-bar:focus-visible,
+.back-bar:active { background: var(--ink); color: var(--ink-fg); }
 
 /* Правая половина. Черту посередине чертит её левая граница — как чертила
    её кнопка на витрине. */
@@ -1348,6 +1395,13 @@ body:has(.head--dot) .foot { margin-top: 0; }
 :root[data-view='grid'] .head--page[data-stuck] {
   border-bottom: 1px solid var(--line);
 }
+
+/* Тот же счёт и над решёткой на внутренних страницах: под полосой раздела
+   там сразу ряд обложек, и его верхняя граница уже стоит на месте её линии.
+   Здесь вид ни при чём — плитки в этих разделах всегда, — поэтому смотрим
+   на соседа, а не на data-view. */
+.head--page:has(+ .tiles) { border-bottom: 0; }
+.head--page:has(+ .tiles)[data-stuck] { border-bottom: 1px solid var(--line); }
 
 /* И когда отбор ничего не нашёл: ряда обложек под полосой нет вовсе, чертить
    линию некому, а полоса без низа обрывается в пустоту. */
@@ -2900,6 +2954,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 
      Мобильную вёрстку этих страниц ещё предстоит собрать целиком; пока
      важно, чтобы на телефоне ничего не ломалось. */
+  body:has(.head--backbar) .head--sticky:not(.head--backbar) {
+    top: calc(var(--head-h) + var(--bar-h));
+  }
+
   .head.head--page { height: calc(var(--bar-h) * 2); }
   .head--page .head__lead,
   .head--page .head__side { height: var(--bar-h); }

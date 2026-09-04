@@ -5,6 +5,8 @@ import VideoCard from '../../components/VideoCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BackBar from '../../components/BackBar.astro';
+import PageBar from '../../components/PageBar.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -41,7 +43,9 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
   image={coverSrc(discography.find((a) => a.cover), 800)}
   activeSection="artists"
 >
-  <Breadcrumbs name={artist.name} place />
+  <BackBar />
+
+  <Breadcrumbs name={artist.name} place noBack />
 
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
 
@@ -106,11 +110,10 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
       дискография, а клипы есть у полутора десятков из девятисот. */}
   <section class="section">
-    <div class="head">
-      <h2 class="display display--md">Discography</h2>
-      {/* Пустой счётчик вместо «[0]»: раздел и так объясняет, что релизов нет. */}
-      {discography.length > 0 && <span class="mono">[{discography.length}]</span>}
-    </div>
+    {/* Счётчика нет вовсе, когда релизов нет: «[0]» рядом с объяснением
+        ниже читалось бы вторым сообщением о том же. */}
+    <PageBar as="h2" title="Discography"
+             count={discography.length > 0 ? discography.length : null} />
     {discography.length > 0 ? (
       <ul class="tiles tiles--auto">
         {discography.map((a) => <AlbumCard album={a} showArtist={false} />)}
@@ -122,10 +125,7 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
 
   {clipsSorted.length > 0 && (
     <section class="section">
-      <div class="head">
-        <h2 class="display display--md">Videos</h2>
-        <span class="mono">[{clipsSorted.length}]</span>
-      </div>
+      <PageBar as="h2" title="Videos" count={clipsSorted.length} />
       <ul class="tiles tiles--auto tiles--video">
         {clipsSorted.map((v) => <VideoCard video={v} />)}
       </ul>

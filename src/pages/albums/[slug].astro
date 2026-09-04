@@ -4,6 +4,8 @@ import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BackBar from '../../components/BackBar.astro';
+import PageBar from '../../components/PageBar.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
   albums, albumsOf, artistsOf, labelsOf, videosOf, coverSrc, formatDate, artistLine
@@ -65,9 +67,12 @@ const clips = [...new Map(
   image={coverSrc(album, 800)}
   activeSection="albums"
 >
+  <BackBar />
+
   <Breadcrumbs
     trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
     name={album.album}
+    noBack
   />
 
   <article class="detail">
@@ -157,13 +162,10 @@ const clips = [...new Map(
 
   {more.length > 0 && (
     <section class="section">
-      <div class="head">
-        {/* Без имени исполнителя: оно уже стоит в полосе над разделом и в
-            пути наверху — в заголовке шло бы третьим разом за один экран.
-            Так же названо и на странице клипа. */}
-        <h2 class="display display--md">More Releases</h2>
-        <span class="mono">[{more.length}]</span>
-      </div>
+      {/* Без имени исполнителя: оно уже стоит в полосе над разделом и в
+          пути наверху — в заголовке шло бы третьим разом за один экран.
+          Так же названо и на странице клипа. */}
+      <PageBar as="h2" title="More Releases" count={more.length} />
       {/* Имя показываем только у совместных релизов. У сольного все плитки
           принадлежат тому же исполнителю, что и страница, и подпись была бы
           повтором — как в дискографии на его странице. А вот у дуэта сюда
@@ -177,12 +179,9 @@ const clips = [...new Map(
 
   {clips.length > 0 && (
     <section class="section">
-      <div class="head">
-        {/* Назван так же, как раздел на странице исполнителя: это тот же
-            список, только собранный от релиза. */}
-        <h2 class="display display--md">Videos</h2>
-        <span class="mono">[{clips.length}]</span>
-      </div>
+      {/* Назван так же, как раздел на странице исполнителя: это тот же
+          список, только собранный от релиза. */}
+      <PageBar as="h2" title="Videos" count={clips.length} />
       <ul class="tiles tiles--auto tiles--video">
         {clips.map((v) => <VideoCard video={v} />)}
       </ul>

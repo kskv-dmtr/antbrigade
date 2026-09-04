@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
+import Icon from '../components/Icon.astro';
 import { albums } from '../lib/db.js';
 
 /* Главная — витрина, а не каталог: весь список живёт на /music.
@@ -55,7 +56,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         листаешь. Каждый заголовок прилипает в границах своего раздела, так
         что второй сменяет первый сам, без скрипта. */}
     <div class="head head--sticky head--bare head--dot">
-      <h1 class="display display--md">Latest Releases</h1>
+      <h1 class="display display--md"><Icon name="circle" class="mark" />Latest Releases</h1>
       {/* Весь каталог — на /music. Ссылка, а не кнопка: работает без
           скрипта и открывается в новой вкладке средним щелчком. */}
       <a class="view-all" href="/music">
@@ -78,7 +79,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
 
   <section class="section">
     <div class="head head--sticky head--bare head--dot">
-      <h2 class="display display--md">Lucky Finds</h2>
+      <h2 class="display display--md"><Icon name="circle" class="mark" />Lucky Finds</h2>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}
       <button type="button" class="dig-again">Dig again</button>

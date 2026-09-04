@@ -13,11 +13,13 @@
 
    Поле справа отдаётся слотом: подпись для диктора у каждой страницы своя,
    и знать о ней полосе незачем. */
+import Icon from './Icon.astro';
+
 const { title, count } = Astro.props;
 ---
 <div class="head head--sticky head--dot head--page">
   <div class="head__lead">
-    <h1 class="display display--md">{title}</h1>
+    <h1 class="display display--md"><Icon name="circle" class="mark" />{title}</h1>
     {count != null && (
       <p class="counter" id="counter" aria-live="polite">[{count}]</p>
     )}

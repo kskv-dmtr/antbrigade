@@ -60,7 +60,9 @@ const PAGE = 50;
 >
   {/* До выполнения скрипта видны все записи — число в полосе совпадает с
       тем, что скрипт поставит первым же расчётом. */}
-  <PageBar title="Music" count={albums.length} />
+  <PageBar title="Music" count={albums.length}>
+    <SearchField label="Search by artist or album" />
+  </PageBar>
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
@@ -76,9 +78,7 @@ const PAGE = 50;
       экране — списка, который теперь один на все ширины. */}
   <div class="sticky-bar sticky-bar--flush">
     <div class="controls__top">
-      <SearchField label="Search by artist or album" />
-
-      <div class="filters__group filters__group--end">
+      <div class="filters__group">
         {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из
             отмеченных», а не «все сразу»: у релиза бывает и два типа, и
             три жанра, и пересечение почти всегда пусто. */}
@@ -102,9 +102,9 @@ const PAGE = 50;
           <option value="album-az">Albums A → Z</option>
           <option value="album-za">Albums Z → A</option>
         </Select>
-        <ViewSwitch />
-
       </div>
+
+      <ViewSwitch />
     </div>
   </div>
 

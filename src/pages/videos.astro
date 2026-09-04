@@ -68,15 +68,15 @@ const PAGE = 50;
 >
   {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
       все клипы — значение в полосе совпадает с первым расчётом. */}
-  <PageBar title="Videos" count={videos.length} />
+  <PageBar title="Videos" count={videos.length}>
+    <SearchField label="Search by artist or title" />
+  </PageBar>
 
   {/* Полоса управления устроена как на Music: поиск, отбор, сортировка,
       переключатель вида — всё одной строкой, слева направо. */}
   <div class="sticky-bar sticky-bar--flush">
     <div class="controls__top">
-      <SearchField label="Search by artist or title" />
-
-      <div class="filters__group filters__group--end">
+      <div class="filters__group">
         {/* Вид ролика — такой же список с множественным выбором, как тип
             релиза на Music. Полоса кнопок стояла здесь до 3 сентября 2026 и
             требовала второго контрола на узком экране; список один на все
@@ -97,9 +97,9 @@ const PAGE = 50;
           <option value="title-za">Titles Z → A</option>
         </Select>
 
-        <ViewSwitch />
-
       </div>
+
+      <ViewSwitch />
     </div>
   </div>
 

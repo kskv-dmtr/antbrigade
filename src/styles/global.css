@@ -384,8 +384,19 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   cursor: pointer;
 }
-[data-js] .burger:hover,
-[data-js] .burger:focus-visible {
+/* Наведение отделено от нажатия — как у кнопок на витрине. На касании
+   :hover срабатывает от нажатия и держится, пока палец не тронет другое
+   место: бургер оставался вывернутым всё время, пока открыто меню, будто
+   палец так и лежит на нём. Подробности в [[Оформление]]. */
+@media (hover: hover) {
+  [data-js] .burger:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+}
+[data-js] .burger:focus-visible,
+[data-js] .burger:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -441,8 +452,16 @@ a { color: inherit; text-decoration: none; }
 }
 [data-js] .theme-toggle { display: inline-flex; }
 
-.theme-toggle:hover,
-.theme-toggle:focus-visible {
+/* Наведение и нажатие — как у соседа-бургера и у кнопок на витрине. */
+@media (hover: hover) {
+  .theme-toggle:hover {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+}
+.theme-toggle:focus-visible,
+.theme-toggle:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);

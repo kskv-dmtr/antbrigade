@@ -54,7 +54,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         десятков обложек, пока листаешь, должно быть видно, что именно
         листаешь. Каждый заголовок прилипает в границах своего раздела, так
         что второй сменяет первый сам, без скрипта. */}
-    <div class="head head--sticky head--bare">
+    <div class="head head--sticky head--bare head--dot">
       <h1 class="display display--md">Latest Releases</h1>
       {/* Весь каталог — на /music. Ссылка, а не кнопка: работает без
           скрипта и открывается в новой вкладке средним щелчком. */}
@@ -66,7 +66,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   </section>
 
   <section class="section">
-    <div class="head head--sticky head--bare">
+    <div class="head head--sticky head--bare head--dot">
       <h2 class="display display--md">Lucky Finds</h2>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}

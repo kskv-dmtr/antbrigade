@@ -124,7 +124,10 @@
      «autoscale»: ряд набирается сам, а не задан числом. На 1440 столбцов
      три, на 1100 два. Ниже 900 минимум опускается до 280, иначе на
      планшете в ряд встала бы одна обложка во всю ширину. */
-  --tile-min:    400px;
+  /* --tile-min удалён 4 сентября 2026: столбцы больше не набираются
+     auto-fill, их число задано --cols. Так вертикальные разделители,
+     нарисованные на самой решётке, всегда попадают на границы столбцов, а
+     не в середину обложки. */
 
   --font: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
@@ -252,7 +255,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.display--md { font-size: 34px; }
+.display--md { font-size: 32px; }
 
 .mono {
   font-family: var(--mono);
@@ -487,12 +490,29 @@ a { color: inherit; text-decoration: none; }
 :root[data-view='grid'] .names {
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
+  /* Поля снизу у решётки нет: воздух под подписями лежит внутри самих
+     ячеек, и потому одинаков во всех рядах, включая последний. Раньше эти
+     16 были полем решётки и доставались только нижнему ряду — ряды выходили
+     разной высоты. */
+
+  /* Вертикальные разделители. Рисует их фон решётки полосами через каждый
+     столбец, а не границы ячеек: фон тянется на всю высоту, включая поле
+     снизу, а граница ячейки кончается вместе с ячейкой.
+
+     Первая полоса приходится на нулевую отметку — и уходит за край экрана
+     вместе со сдвигом решётки на пиксель влево. Последней у правого края
+     нет: период кончается ровно на границе. Итог — только перемычки между
+     обложками, без рамы по бокам. */
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--line) 0 1px,
+    transparent 1px calc(100% / var(--cols))
+  );
 }
 
 .tiles--auto {
-  grid-template-columns: repeat(auto-fill, minmax(var(--tile-min), 1fr));
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
   gap: 0;
-  border-top: 1px solid var(--line);
 }
 .tiles--auto > * { grid-column: auto; }
 
@@ -500,8 +520,11 @@ a { color: inherit; text-decoration: none; }
    листом, а не россыпью карточек. Поле 16 — чтобы обложка не упиралась в
    линию; в четырёхпиксельную сетку проекта оно ложится.
 
-   Линию чертит каждая ячейка слева и снизу, а верхнюю берёт на себя
-   контейнер. Так на каждую линию приходится ровно один рисующий.
+   Линию чертит каждая ячейка слева и сверху. Верхнюю, а не нижнюю: тогда у
+   последнего ряда своей линии снизу нет, и границей блока служит линия
+   следующего — заголовка раздела или подвала. Место под последним рядом
+   остаётся свободным, и в него ложатся те 16 пикселей, на которые он выше
+   остальных.
 
    Слева, а не справа: у правого края решётки линии быть не должно, а левая
    граница первой в ряду ячейки уезжает за край экрана вместе со сдвигом
@@ -521,9 +544,10 @@ a { color: inherit; text-decoration: none; }
    ячейками, что есть. */
 .tiles--auto > .tile,
 :root[data-view='grid'] .view-tile {
-  padding: 16px;
-  border-left: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  /* Снизу вдвое: 16 — поле ячейки, ещё 16 — воздух под подписью. Так ряд
+     заканчивается не вплотную к линии, и все ряды одной высоты. */
+  padding: 16px 16px 32px;
+  border-top: 1px solid var(--line);
 }
 
 .tile__link {
@@ -607,10 +631,10 @@ a { color: inherit; text-decoration: none; }
    в строке индекса наследует от .row. Приглушать его только в сетке значило
    бы рассказывать про одно и то же поле две разные истории. */
 .tile__artist {
-  font-size: 13px;
+  font-size: 14px;
 }
 .tile__title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -780,6 +804,12 @@ a { color: inherit; text-decoration: none; }
 .section { margin: 48px 0; }
 .section:first-child { margin-top: 34px; }
 
+/* На витрине блоки стоят встык: и шапка с первым разделом, и разделы между
+   собой, и последний ряд с подвалом. Воздух даёт не просвет, а нижний ряд
+   обложек, который на 16 выше остальных. */
+.section:has(> .head--dot) { margin: 0; }
+body:has(.head--dot) .foot { margin-top: 0; }
+
 .head {
   display: flex;
   align-items: baseline;
@@ -856,6 +886,91 @@ a { color: inherit; text-decoration: none; }
   height: 16px;
   background: var(--bg);
 }
+/* Кружок перед заголовком раздела на витрине — 20 на 20.
+
+   Псевдоэлементом, а не узлом в разметке: это метка, а не содержание, и
+   экранному диктору читать её незачем — псевдоэлемент он и не прочтёт.
+
+   Заголовок ради этого становится флексом: так кружок встаёт вровень со
+   строкой сам, без подгонки vertical-align под кегль и интерлиньяж. */
+.head--dot .display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: calc(var(--pad) + 1px);
+}
+
+/* Строка заголовка на витрине — две равные половины: слева название, справа
+   переход. Кнопка занимает свою половину целиком, во всю ширину и высоту, а
+   подпись стоит в ней по центру: в макете это ячейка решётки, а не подпись,
+   приклеенная к правому краю.
+
+   Половины, а не колонки сетки обложек: на 1920 их четыре, и середина строки
+   совпадает с границей второго столбца сама. На других ширинах столбцов
+   другое число, и совпадать там не с чем — как и у прочих счётов от --cols.
+
+   Вертикальную черту между половинами чертит левая граница самой кнопки.
+   Отдельного правила для неё не нужно, а рамки по кругу у кнопки больше
+   нет: в ячейке она читалась бы коробкой внутри коробки. */
+.head.head--dot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  gap: 0;
+  height: 64px;
+  /* Полоса идёт до краёв и сдвинута на тот же пиксель, что решётка: тогда
+     её середина ложится ровно на среднюю перемычку между обложками, а не
+     рядом с ней. Поля у полосы нет вовсе — иначе половины считались бы от
+     остатка и середина уехала бы; отбивку в 16 держит сам заголовок. */
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Прилипшей полосе нужна линия снизу. Пока полоса стоит на месте, эту линию
+   чертит верхняя граница первого ряда обложек прямо под ней; стоит полосе
+   прилипнуть — ряд уезжает вверх, и низ у неё пропадает.
+
+   Состояния «прилипло» в CSS нет, атрибут ставит наблюдатель в Base.astro. */
+.head--dot[data-stuck] { border-bottom: 1px solid var(--line); }
+
+/* У первой полосы своей линии сверху нет: её уже дала шапка сайта. */
+.section:first-child .head--dot { border-top: 0; }
+
+/* И у любой прилипшей — по той же причине. Прилипнув, полоса встаёт
+   вплотную под шапку, и её собственная линия сверху ложится на линию шапки:
+   в стыке выходит два пикселя вместо одного. Замер на 1920: низ шапки 71,
+   верх полосы 71, обе границы по пикселю. */
+.head.head--dot[data-stuck] { border-top: 0; }
+
+/* Заплата под липкой строкой не нужна: просвета между ней и решёткой нет,
+   закрывать нечего. */
+.head--dot::after { display: none; }
+
+/* До обложек от полосы — ничего: линия следующего ряда и есть её низ.
+   Селектор нарочно тяжёлый: правило .head:has(+ .tiles) выше ставит 24, и
+   перебить его можно только большей специфичностью. */
+.head.head--dot:has(+ .tiles) { margin-bottom: 0; }
+
+.head--dot .view-all,
+[data-js] .head--dot .dig-again {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+}
+.head--dot .display::before {
+  content: '';
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--fg);
+}
+
 /* Заплата повторяет поле, а перед плитками оно 24. */
 .head--sticky:has(+ .tiles)::after { height: 24px; }
 
@@ -910,13 +1025,26 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
   padding: 8px 13px;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
   border: 1px solid var(--line);
   white-space: nowrap;
 }
+/* Все кнопки на сайте набраны одинаково: 12 кеглем и Medium. Раньше
+   подписи наследовали 400 от .mono, а View all успел вырасти до 16 —
+   рядом друг с другом это читалось недосмотром. */
+.dig-again,
+.view-all,
+.view-toggle,
+.multi__button,
+.crumbs__back,
+.select select {
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .view-all:hover,
 .view-all:focus-visible {
   background: var(--ink);
@@ -1994,7 +2122,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   /* Минимум столбца опущен: с четырёхсот на планшете в ряд вставала бы одна
      обложка во всю ширину экрана. С 280 их две вплоть до 641, где вступает
      узкий медиазапрос со своими 150. */
-  :root { --tile-min: 280px; }
+  :root { --cols: 2; }
 
   .tiles { grid-template-columns: repeat(2, 1fr); }
   .tiles > * { grid-column: auto; }
@@ -2083,7 +2211,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 
 @media (max-width: 640px) {
-  :root { --pad: 16px; --gap: 16px; --tile-min: 150px; --head-h: 84px; }
+  :root { --pad: 16px; --gap: 16px; --head-h: 84px; }
 
   .brand { font-size: 20px; }
 
@@ -2375,16 +2503,14 @@ select option { background: var(--option-bg); color: var(--fg); }
 :root[data-view='grid'] .releases,
 :root[data-view='grid'] .names {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--tile-min), 1fr));
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
   gap: 0;
-  border-top: 1px solid var(--line);
 }
 
-/* Клипы шире обложек: кадр 16:9 в колонке под квадрат вышел бы мелким.
-   Правило ниже общего — оно его и уточняет. */
-:root[data-view='grid'] .videos {
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-}
+/* Своей сетки у клипов больше нет: столбцы общие для всех решёток, иначе
+   вертикальные разделители, нарисованные на фоне, попадали бы мимо границ.
+   На 1920 столбец 476 — кадр 16:9 в нём получается 268 в высоту, крупнее,
+   чем было при 280. */
 @media (max-width: 640px) {
   /* Две колонки дают кадр 165×93 — это уже не картинка. */
   :root[data-view='grid'] .videos { grid-template-columns: minmax(0, 1fr); }

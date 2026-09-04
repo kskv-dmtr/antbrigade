@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T22:40:30Z",
+  "generatedAt": "2026-09-04T01:01:24Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17952,6 +17952,29 @@
       "upc": "198663596517",
       "tracks": 10,
       "releaseDate": "2024-10-18"
+    },
+    "3d04129a-8c52-804f-be67-cb44c3789f43": {
+      "source": "https://album.link/j3pc2xd34t5zg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/15qaCrgUKuENh8Wt8dQoCD"
+      },
+      "upc": "882068884071",
+      "tracks": 10,
+      "releaseDate": "2026-09-04"
+    },
+    "3d04129a-8c52-802f-a998-e062b8f69554": {
+      "source": "https://album.link/v9zbdxfh8fdgh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0vwA08n7McS173xbrwYS1N",
+        "pandora": "https://www.pandora.com/AL:9381390",
+        "amazonMusic": "https://music.amazon.com/albums/B095BYZ81T",
+        "tidal": "https://listen.tidal.com/album/184636228",
+        "yandex": "https://music.yandex.ru/album/15687583",
+        "amazonStore": "https://amazon.com/dp/B095BYZ81T"
+      },
+      "upc": "196166219803",
+      "tracks": 1,
+      "releaseDate": "2021-05-26"
     }
   }
 }

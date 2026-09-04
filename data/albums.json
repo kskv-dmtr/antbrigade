@@ -1,13 +1,46 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-03T22:37:08Z",
+  "generatedAt": "2026-09-04T01:01:00Z",
   "counts": {
-    "albums": 1137,
-    "artists": 1017,
-    "labels": 635,
+    "albums": 1139,
+    "artists": 1018,
+    "labels": 637,
     "videos": 85
   },
   "albums": [
+    {
+      "id": "3d04129a-8c52-804f-be67-cb44c3789f43",
+      "slug": "1-800-mikey-in-yun",
+      "artist": "1-800-Mikey",
+      "album": "In Yun",
+      "url": "https://album.link/j3pc2xd34t5zg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A587f4afe-516d-4207-b31e-e0f28ddf1e45%3Aa2956565840_10.jpg?table=block&id=3d04129a-8c52-804f-be67-cb44c3789f43&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Power Pop",
+        "Garage Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-04",
+      "year": 2026,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21"
+      ],
+      "artists": [
+        "1-800-Mikey"
+      ],
+      "labelIds": [
+        "2f04129a-8c52-801e-9926-e5cf15568223",
+        "3d04129a-8c52-80d5-a310-fea7e366f0ec"
+      ],
+      "labels": [
+        "Goner Records",
+        "Ragnar Records"
+      ]
+    },
     {
       "id": "3cf4129a-8c52-801f-aa5c-f48bd1144e8b",
       "slug": "andrew-w-k-temptation-to-exist",
@@ -34100,6 +34133,38 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-802f-a998-e062b8f69554",
+      "slug": "cobra-man-powered-up",
+      "artist": "Cobra Man",
+      "album": "Powered Up",
+      "url": "https://album.link/v9zbdxfh8fdgh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A45bc419b-00ba-4122-83e1-db3989a85a0d%3Aa0466911714_10.jpg?table=block&id=3d04129a-8c52-802f-a998-e062b8f69554&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Hypnagogic Pop",
+        "Electro-Disco"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2021-05-26",
+      "year": 2021,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d04129a-8c52-8044-a9f8-db170f241c0a"
+      ],
+      "artists": [
+        "Cobra Man"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-80ed-bc80-c764ed78d083"
+      ],
+      "labels": [
+        "Cool, Nice."
+      ]
+    },
+    {
       "id": "26eca379-5783-4be3-88d2-b52a28eda9b6",
       "slug": "various-artists-foundations",
       "artist": "Various Artists",
@@ -35874,6 +35939,7 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
+        "3d04129a-8c52-804f-be67-cb44c3789f43",
         "3d04129a-8c52-8042-9484-d7ddf7715748"
       ],
       "genres": [
@@ -35881,6 +35947,8 @@
         "Garage Punk"
       ],
       "labelIds": [
+        "2f04129a-8c52-801e-9926-e5cf15568223",
+        "3d04129a-8c52-80d5-a310-fea7e366f0ec",
         "2504129a-8c52-80b0-a286-f08d24913bae",
         "3d04129a-8c52-8082-a522-fec9b191e53f"
       ],
@@ -39300,6 +39368,27 @@
       ],
       "labelIds": [
         "3cc4129a-8c52-80da-9e4c-dde8e1938bda"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d04129a-8c52-8044-a9f8-db170f241c0a",
+      "slug": "cobra-man",
+      "name": "Cobra Man",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-802f-a998-e062b8f69554"
+      ],
+      "genres": [
+        "Synthpop",
+        "Hypnagogic Pop",
+        "Electro-Disco"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-80ed-bc80-c764ed78d083"
       ],
       "videoIds": []
     },
@@ -58824,6 +58913,21 @@
       ]
     },
     {
+      "id": "3d04129a-8c52-80ed-bc80-c764ed78d083",
+      "slug": "cool-nice",
+      "name": "Cool, Nice.",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-802f-a998-e062b8f69554"
+      ],
+      "artistIds": [
+        "3d04129a-8c52-8044-a9f8-db170f241c0a"
+      ]
+    },
+    {
       "id": "2524129a-8c52-806d-8120-e712150b2406",
       "slug": "coolin-by-sound",
       "name": "Coolin' By Sound",
@@ -60482,10 +60586,12 @@
       "bandcamp": "https://gonerrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3d04129a-8c52-804f-be67-cb44c3789f43",
         "2f04129a-8c52-80db-b231-dd50189bc28f",
         "3cd4129a-8c52-8086-a9a2-f4de36f49dce"
       ],
       "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21",
         "2f04129a-8c52-80f9-9ab2-df8b79b1b82e",
         "3cd4129a-8c52-802c-8745-fff257f071ee"
       ]
@@ -64590,6 +64696,21 @@
       ],
       "artistIds": [
         "2524129a-8c52-80e1-8428-c60809c8907e"
+      ]
+    },
+    {
+      "id": "3d04129a-8c52-80d5-a310-fea7e366f0ec",
+      "slug": "ragnar-records",
+      "name": "Ragnar Records",
+      "country": "AU",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d04129a-8c52-804f-be67-cb44c3789f43"
+      ],
+      "artistIds": [
+        "3d04129a-8c52-8019-9322-eec7ae7a5e21"
       ]
     },
     {

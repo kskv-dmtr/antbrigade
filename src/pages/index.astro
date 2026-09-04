@@ -58,11 +58,22 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
       <h1 class="display display--md">Latest Releases</h1>
       {/* Весь каталог — на /music. Ссылка, а не кнопка: работает без
           скрипта и открывается в новой вкладке средним щелчком. */}
-      <a class="view-all" href="/music">View all</a>
+      <a class="view-all" href="/music">
+        View all <span class="view-all__count">[{albums.length}]</span>
+      </a>
     </div>
     <ul class="tiles tiles--auto">
       {latest.map((a) => <AlbumCard album={a} />)}
     </ul>
+
+    {/* Тот же переход, но под сеткой: на телефоне он стоит там, а в полосе
+        прячется. Двойник в разметке, а не переезд стилями — перенести узел
+        из одного контейнера в другой средствами CSS нельзя, а городить скрипт
+        ради оформления не стоит. Лишний виден ровно один: второй скрыт
+        медиазапросом и в дерево доступности не попадает. */}
+    <a class="view-all view-all--below" href="/music">
+      View all <span class="view-all__count">[{albums.length}]</span>
+    </a>
   </section>
 
   <section class="section">
@@ -70,7 +81,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
       <h2 class="display display--md">Lucky Finds</h2>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}
-      <button type="button" class="dig-again" id="dig-again">Dig again</button>
+      <button type="button" class="dig-again">Dig again</button>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
@@ -79,6 +90,11 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
     <ul class="tiles tiles--auto" id="dig" data-show={SHOW}>
       {pool.map((a, i) => <AlbumCard album={a} hidden={i >= SHOW} />)}
     </ul>
+
+    {/* На телефоне кнопка стоит под подборкой и липнет к низу экрана, пока
+        этот раздел на виду: листать двадцать обложек, чтобы дотянуться до
+        «ещё», — не дело. */}
+    <button type="button" class="dig-again dig-again--below">Dig again</button>
   </section>
 </Base>
 
@@ -98,7 +114,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   const dig   = document.getElementById('dig');
   const items = Array.from(dig.children);
   const show  = Number(dig.dataset.show) || 10;
-  const again = document.getElementById('dig-again');
+  const agains = document.querySelectorAll('.dig-again');
 
   /* Неполной подборки в конце быть не должно: ряд, оборванный на середине,
      читается как недогрузившийся. Остаток пула просто ждёт следующей
@@ -138,7 +154,9 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
   shuffle();
   render();
 
-  again.addEventListener('click', () => {
+  /* Кнопок две — в полосе раздела и под подборкой; видна всегда одна, но
+     обработчик нужен обеим. */
+  for (const again of agains) again.addEventListener('click', () => {
     page += 1;
     // Пул кончился — тасуем заново, и следующий круг идёт в другом порядке.
     if (page >= pages) {

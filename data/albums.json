@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-04T22:22:49Z",
+  "generatedAt": "2026-09-05T01:00:02Z",
   "counts": {
-    "albums": 1139,
-    "artists": 1018,
-    "labels": 637,
+    "albums": 1144,
+    "artists": 1022,
+    "labels": 640,
     "videos": 86
   },
   "albums": [
@@ -39,6 +39,38 @@
       "labels": [
         "Goner Records",
         "Ragnar Records"
+      ]
+    },
+    {
+      "id": "3d14129a-8c52-800d-b2ef-e86b3b310a4e",
+      "slug": "liana-flores-and-so-it-goes",
+      "artist": "Liana Flores",
+      "album": "And So it Goes…",
+      "url": "https://album.link/tfdwmvsd275rp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A45e475ec-b0b2-4606-a7a5-36ddd60629ee%3Aa0252553399_10.jpg?table=block&id=3d14129a-8c52-800d-b2ef-e86b3b310a4e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bossa Nova",
+        "Jazz Pop",
+        "Singer-Songwriter"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-09-04",
+      "year": 2026,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d14129a-8c52-8085-97ba-c2fb41be9c56"
+      ],
+      "artists": [
+        "Liana Flores"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-80dd-9e46-d1fe1f6ac5cd"
+      ],
+      "labels": [
+        "Verve Records"
       ]
     },
     {
@@ -33232,6 +33264,38 @@
       ]
     },
     {
+      "id": "3d14129a-8c52-805e-a859-c9ec14f08386",
+      "slug": "wander-home",
+      "artist": "Wander",
+      "album": "Home",
+      "url": "https://album.link/nr2hdw9k04zcc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A59cd0f23-4c69-48ac-95e1-c6cca412b662%3Aa0643118743_10.jpg?table=block&id=3d14129a-8c52-805e-a859-c9ec14f08386&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-03-18",
+      "year": 2022,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d14129a-8c52-80e2-bdc4-f2f655ff474b"
+      ],
+      "artists": [
+        "Wander"
+      ],
+      "labelIds": [
+        "3d14129a-8c52-8064-9a44-ff765fdc5d70",
+        "3d14129a-8c52-80a7-8025-d1c73d51e6c2"
+      ],
+      "labels": [
+        "Headless Queen Records",
+        "Dunk! Records"
+      ]
+    },
+    {
       "id": "1c94129a-8c52-80a6-bd20-ddd91efdb949",
       "slug": "steroid-s-m-o-k-e-show",
       "artist": "STERÖID",
@@ -33506,6 +33570,37 @@
       ],
       "labels": [
         "Static Shock Records"
+      ]
+    },
+    {
+      "id": "3d14129a-8c52-8007-a6a2-c9299efb2e60",
+      "slug": "sgjazz-sgjazz-vol-2",
+      "artist": "SGJAZZ",
+      "album": "SGJAZZ Vol. 2",
+      "url": "https://album.link/qgkhzcvjhjtrt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3765b49c-5a4f-4a02-8a07-1ee507227463%3Aa0108813586_10.jpg?table=block&id=3d14129a-8c52-8007-a6a2-c9299efb2e60&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-26",
+      "year": 2021,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d14129a-8c52-806c-b6c8-c9a0e826a5da"
+      ],
+      "artists": [
+        "SGJAZZ"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8070-957c-db8b0104c518"
+      ],
+      "labels": [
+        "Melting Pot Music"
       ]
     },
     {
@@ -34190,6 +34285,37 @@
       ],
       "labels": [
         "Deewee"
+      ]
+    },
+    {
+      "id": "3d14129a-8c52-80eb-b6c1-f6cce5e6cfaa",
+      "slug": "betamaxx-sarajevo",
+      "artist": "Betamaxx",
+      "album": "Sarajevo",
+      "url": "https://album.link/fhwjnwdb4rspv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3b980273-b8c4-49c7-8f6c-aa9812e73d15%3Aa0531318879_10.jpg?table=block&id=3d14129a-8c52-80eb-b6c1-f6cce5e6cfaa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthwave",
+        "Progressive Electronic"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-01",
+      "year": 2021,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d14129a-8c52-80b6-848f-f8d47caf2902"
+      ],
+      "artists": [
+        "Betamaxx"
+      ],
+      "labelIds": [
+        "3d14129a-8c52-8086-884c-df743417b4e7"
+      ],
+      "labels": [
+        "Perfect View Records"
       ]
     },
     {
@@ -35041,6 +35167,37 @@
       ],
       "labels": [
         "Chicago Research"
+      ]
+    },
+    {
+      "id": "3d14129a-8c52-80c2-aac6-f47eb222712f",
+      "slug": "sgjazz-sgjazz",
+      "artist": "SGJAZZ",
+      "album": "SGJAZZ",
+      "url": "https://album.link/vfkkqwc2dhgnn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A34967160-229c-4bdd-b20a-d66a771daf6d%3Aa2162689483_10.jpg?table=block&id=3d14129a-8c52-80c2-aac6-f47eb222712f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-08-30",
+      "year": 2019,
+      "origReleased": null,
+      "featured": false,
+      "artistIds": [
+        "3d14129a-8c52-806c-b6c8-c9a0e826a5da"
+      ],
+      "artists": [
+        "SGJAZZ"
+      ],
+      "labelIds": [
+        "2524129a-8c52-808c-aa13-ce752fa0ab3c"
+      ],
+      "labels": [
+        "Jakarta Records"
       ]
     },
     {
@@ -37580,6 +37737,26 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d14129a-8c52-80b6-848f-f8d47caf2902",
+      "slug": "betamaxx",
+      "name": "Betamaxx",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://betamaxxmusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-80eb-b6c1-f6cce5e6cfaa"
+      ],
+      "genres": [
+        "Synthwave",
+        "Progressive Electronic"
+      ],
+      "labelIds": [
+        "3d14129a-8c52-8086-884c-df743417b4e7"
       ],
       "videoIds": []
     },
@@ -46460,6 +46637,27 @@
       "videoIds": []
     },
     {
+      "id": "3d14129a-8c52-8085-97ba-c2fb41be9c56",
+      "slug": "liana-flores",
+      "name": "Liana Flores",
+      "country": "GB",
+      "website": "https://www.lianaflores.com/",
+      "bandcamp": "https://lianaflores.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-800d-b2ef-e86b3b310a4e"
+      ],
+      "genres": [
+        "Bossa Nova",
+        "Jazz Pop",
+        "Singer-Songwriter"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-80dd-9e46-d1fe1f6ac5cd"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80d4-a5f2-cb71df4a43ff",
       "slug": "lifted",
       "name": "Lifted",
@@ -51800,6 +51998,28 @@
       "videoIds": []
     },
     {
+      "id": "3d14129a-8c52-806c-b6c8-c9a0e826a5da",
+      "slug": "sgjazz",
+      "name": "SGJAZZ",
+      "country": "US",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-8007-a6a2-c9299efb2e60",
+        "3d14129a-8c52-80c2-aac6-f47eb222712f"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8070-957c-db8b0104c518",
+        "2524129a-8c52-808c-aa13-ce752fa0ab3c"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80ee-a6d2-d5ce7be36f03",
       "slug": "shabaka",
       "name": "Shabaka",
@@ -56038,6 +56258,26 @@
       "videoIds": []
     },
     {
+      "id": "3d14129a-8c52-80e2-bdc4-f2f655ff474b",
+      "slug": "wander",
+      "name": "Wander",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://wanderband.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-805e-a859-c9ec14f08386"
+      ],
+      "genres": [
+        "Post-Rock"
+      ],
+      "labelIds": [
+        "3d14129a-8c52-8064-9a44-ff765fdc5d70",
+        "3d14129a-8c52-80a7-8025-d1c73d51e6c2"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3454129a-8c52-808c-a823-c75492b83f4d",
       "slug": "warbaby",
       "name": "Warbaby",
@@ -59703,6 +59943,21 @@
       ]
     },
     {
+      "id": "3d14129a-8c52-80a7-8025-d1c73d51e6c2",
+      "slug": "dunk-records",
+      "name": "Dunk! Records",
+      "country": "BE",
+      "website": null,
+      "bandcamp": "https://dunkrecords.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-805e-a859-c9ec14f08386"
+      ],
+      "artistIds": [
+        "3d14129a-8c52-80e2-bdc4-f2f655ff474b"
+      ]
+    },
+    {
       "id": "24f4129a-8c52-80a0-9b38-d045dea094c2",
       "slug": "early-reflex",
       "name": "early reflex",
@@ -60779,6 +61034,21 @@
       ]
     },
     {
+      "id": "3d14129a-8c52-8064-9a44-ff765fdc5d70",
+      "slug": "headless-queen-records",
+      "name": "Headless Queen Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://headlessqueen.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-805e-a859-c9ec14f08386"
+      ],
+      "artistIds": [
+        "3d14129a-8c52-80e2-bdc4-f2f655ff474b"
+      ]
+    },
+    {
       "id": "2504129a-8c52-80bc-af92-d147b4d2816e",
       "slug": "heavenly-recordings",
       "name": "Heavenly Recordings",
@@ -61585,13 +61855,15 @@
       "name": "Jakarta Records",
       "country": "DE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://jakartarecords-label.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "2524129a-8c52-8036-b372-f651ed89f5f7"
+        "2524129a-8c52-8036-b372-f651ed89f5f7",
+        "3d14129a-8c52-80c2-aac6-f47eb222712f"
       ],
       "artistIds": [
-        "2524129a-8c52-80e1-a63b-e906afbe3916"
+        "2524129a-8c52-80e1-a63b-e906afbe3916",
+        "3d14129a-8c52-806c-b6c8-c9a0e826a5da"
       ]
     },
     {
@@ -62602,14 +62874,16 @@
       "name": "Melting Pot Music",
       "country": "DE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://meltingpotmusic.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "83a23190-919c-481b-933e-80d827f306c5"
+        "83a23190-919c-481b-933e-80d827f306c5",
+        "3d14129a-8c52-8007-a6a2-c9299efb2e60"
       ],
       "artistIds": [
         "2524129a-8c52-80e5-8082-c14a4b715390",
-        "2524129a-8c52-80ca-8762-e430e570114b"
+        "2524129a-8c52-80ca-8762-e430e570114b",
+        "3d14129a-8c52-806c-b6c8-c9a0e826a5da"
       ]
     },
     {
@@ -64138,6 +64412,21 @@
       ],
       "artistIds": [
         "3744129a-8c52-80ef-9ebe-ec0ed9b8ee26"
+      ]
+    },
+    {
+      "id": "3d14129a-8c52-8086-884c-df743417b4e7",
+      "slug": "perfect-view-records",
+      "name": "Perfect View Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://perfectviewrecords.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d14129a-8c52-80eb-b6c1-f6cce5e6cfaa"
+      ],
+      "artistIds": [
+        "3d14129a-8c52-80b6-848f-f8d47caf2902"
       ]
     },
     {
@@ -67111,11 +67400,13 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
+        "3d14129a-8c52-800d-b2ef-e86b3b310a4e",
         "3884129a-8c52-8050-9366-eaf0dc5bb0a1",
         "8f8ff927-a9d6-4c4f-b9a3-bff1ef842366",
         "e2324bbf-ef96-4dbe-b719-a1da32f2df14"
       ],
       "artistIds": [
+        "3d14129a-8c52-8085-97ba-c2fb41be9c56",
         "3884129a-8c52-8031-a046-e736e941172d",
         "2414129a-8c52-80ba-b704-d7b64e3ae73c",
         "24e4129a-8c52-801a-892d-e7c5b78cb352"

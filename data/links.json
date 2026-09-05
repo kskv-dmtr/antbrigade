@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T01:01:24Z",
+  "generatedAt": "2026-09-05T01:00:41Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -17975,6 +17975,89 @@
       "upc": "196166219803",
       "tracks": 1,
       "releaseDate": "2021-05-26"
+    },
+    "3d14129a-8c52-800d-b2ef-e86b3b310a4e": {
+      "source": "https://album.link/tfdwmvsd275rp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2mSpwTBIVyUPFnGJ2yKME5",
+        "pandora": "https://www.pandora.com/AL:69307513",
+        "tidal": "https://listen.tidal.com/album/556256753",
+        "boomplay": "https://www.boomplay.com/albums/139515119"
+      },
+      "upc": "00881061117339",
+      "tracks": 6,
+      "releaseDate": "2026-09-04"
+    },
+    "3d14129a-8c52-805e-a859-c9ec14f08386": {
+      "source": "https://album.link/nr2hdw9k04zcc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4ifvuYnWXJfQqtbHCMqTt4",
+        "pandora": "https://www.pandora.com/AL:13798484",
+        "deezer": "https://www.deezer.com/album/297221082",
+        "amazonMusic": "https://music.amazon.com/albums/B09SY7NSJJ",
+        "tidal": "https://listen.tidal.com/album/217510454",
+        "yandex": "https://music.yandex.ru/album/21560445",
+        "boomplay": "https://www.boomplay.com/albums/41145944",
+        "anghami": "https://play.anghami.com/album/1026275966?refer=linktree",
+        "bandcamp": "https://orellana.bandcamp.com/album/home",
+        "amazonStore": "https://amazon.com/dp/B09SY7NSJJ"
+      },
+      "upc": "196777042517",
+      "tracks": 8,
+      "releaseDate": "2022-03-18"
+    },
+    "3d14129a-8c52-8007-a6a2-c9299efb2e60": {
+      "source": "https://album.link/qgkhzcvjhjtrt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2qSb34RjtmkdUso3qcd0D3",
+        "pandora": "https://www.pandora.com/AL:11573250",
+        "deezer": "https://www.deezer.com/album/319793997",
+        "amazonMusic": "https://music.amazon.com/albums/B0B35DYQ12",
+        "tidal": "https://listen.tidal.com/album/206188665",
+        "napster": "https://play.napster.com/album/alb.612368404",
+        "yandex": "https://music.yandex.ru/album/19372127",
+        "boomplay": "https://www.boomplay.com/albums/34901419",
+        "anghami": "https://play.anghami.com/album/1024043177?refer=linktree",
+        "bandcamp": "https://drdundiff.bandcamp.com/album/sgjazz-vol-2",
+        "amazonStore": "https://amazon.com/dp/B0B35DYQ12"
+      },
+      "upc": "4018939414238",
+      "tracks": 11,
+      "releaseDate": "2021-11-26"
+    },
+    "3d14129a-8c52-80eb-b6c1-f6cce5e6cfaa": {
+      "source": "https://album.link/fhwjnwdb4rspv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1VTjszXIFnycC93DI1jTkj",
+        "pandora": "https://www.pandora.com/AL:9013840",
+        "deezer": "https://www.deezer.com/album/224137342",
+        "amazonMusic": "https://music.amazon.com/albums/B092ZMV3LW",
+        "tidal": "https://listen.tidal.com/album/181233934",
+        "yandex": "https://music.yandex.ru/album/15042324",
+        "boomplay": "https://www.boomplay.com/albums/24476519",
+        "anghami": "https://play.anghami.com/album/1019421413?refer=linktree",
+        "bandcamp": "https://temperie.bandcamp.com/album/sarajevo",
+        "amazonStore": "https://amazon.com/dp/B092ZMV3LW"
+      },
+      "upc": "196165032762",
+      "tracks": 9,
+      "releaseDate": "2021-05-15"
+    },
+    "3d14129a-8c52-80c2-aac6-f47eb222712f": {
+      "source": "https://album.link/vfkkqwc2dhgnn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3Xx8Jwr5iI5GbKz9aGnb7w",
+        "pandora": "https://www.pandora.com/AL:2541017",
+        "deezer": "https://www.deezer.com/album/321002447",
+        "amazonMusic": "https://music.amazon.com/albums/B0B36SVG53",
+        "tidal": "https://listen.tidal.com/album/453622727",
+        "yandex": "https://music.yandex.ru/album/13188223",
+        "bandcamp": "https://drdundiff.bandcamp.com/album/sgjazz",
+        "amazonStore": "https://amazon.com/dp/B0B36SVG53"
+      },
+      "upc": "4018939375898",
+      "tracks": 10,
+      "releaseDate": "2019-08-30"
     }
   }
 }

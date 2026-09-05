@@ -792,6 +792,38 @@ a { color: inherit; text-decoration: none; }
   padding: 0.8125rem 0.5rem;
   border-bottom: 1px solid var(--line-soft);
 }
+/* Строка релиза раскладывается по столбцам решётки обложек: 2fr на имя,
+   1fr на название, 1fr на формат с годом — то есть половина, четверть и
+   четверть. Границы ложатся ровно на перемычки между обложками: на 1920 имя
+   кончается на 952, где решётка делится пополам, название — на 1428,5.
+
+   Поля кадра переехали с самой строки на её ячейки: будь они на строке,
+   колонки считались бы от остатка, и границы разошлись бы с решёткой на
+   шестнадцать пикселей.
+
+   Просвета между колонками нет: поля ячеек и так разводят содержимое, а
+   лишний просвет сдвинул бы границы. */
+.row--release {
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.row--release .row__artist {
+  padding-left: calc(var(--pad) + 1px);
+  padding-right: var(--pad);
+}
+.row--release .row__title {
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+/* Справка выключена вправо, к самому полю кадра. */
+.row--release .row__meta {
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+  text-align: right;
+}
+
 /* Артисты, лейблы и жанры — та же строка, но колонок две: имя и счётчик.
    Страна из списка убрана: в сетке она есть в вывернутой плашке, а в
    строке колонка из двухбуквенных кодов набиралась в столбик шума. */
@@ -1615,7 +1647,7 @@ main > .head--backbar:first-child { border-top: 0; }
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
 }
-.filters-row ~ .releases .row {
+.filters-row ~ .releases .row:not(.row--release) {
   padding-left: calc(var(--pad) + 1px);
   padding-right: var(--pad);
 }
@@ -2795,6 +2827,20 @@ select option { background: var(--option-bg); color: var(--fg); }
   .row__title { grid-column: 1; font-size: max(12px, 1rem); letter-spacing: -0.01em; }
   .row__meta { grid-row: 1; grid-column: 2; text-align: right; font-size: max(12px, 0.625rem); }
   .row__num { grid-row: 2; grid-column: 2; font-size: max(12px, 0.625rem); }
+
+  /* У релиза на телефоне колонки те же две, что и были: имя с названием
+     слева, справка справа. Поля возвращаются на строку — трёх столбцов
+     решётки здесь нет. */
+  .row--release {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.25rem 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row--release .row__artist,
+  .row--release .row__title,
+  .row--release .row__meta { padding-left: 0; padding-right: 0; }
+  .row--release .row__meta { grid-row: 1; grid-column: 2; }
   @media (hover: hover) {
     .row:hover { padding-left: 0.5rem; padding-right: 0.5rem; }
   }

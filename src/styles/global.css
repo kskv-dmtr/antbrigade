@@ -2482,6 +2482,136 @@ select option { background: var(--option-bg); color: var(--fg); }
 
 .detail { padding: 1.25rem 0 0.625rem; }
 
+/* ------------------------------------------- релиз на решётке
+
+   Обложка занимает ровно одну ячейку решётки — ту же, что заняла бы плитка
+   этого релиза на витрине, — а справа от неё ячейка с именем и справкой во
+   всю оставшуюся ширину. Приём с обложкой взят с главной целиком: поле 16
+   вокруг, штриховка под ней на случай, если файла нет, перемычки чертят
+   сами ячейки левой и нижней границей.
+
+   Отрицательные поля и минус пиксель снизу — те же, что у решётки обложек:
+   блок идёт до краёв экрана, а его нижняя линия ложится ровно на линию
+   следующего блока, а не встаёт рядом с ней. Слева поле на пиксель больше:
+   левая граница первой ячейки уезжает за край экрана.
+
+   Полоса 16:7 с обложкой в два столбца стояла здесь до 5 сентября 2026.
+   Сетки в ней не было вовсе: ширину обложке задавала своя переменная
+   --two-cols, высоту — содержимое, и с решёткой «More Releases» под ней
+   полоса не сходилась ни одной линией. */
+.release {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  margin-bottom: -1px;
+}
+.release__art,
+.release__head {
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+/* Поле со всех сторон одинаковое, без удвоенного снизу: у плитки те вторые
+   16 держат воздух под подписью, а здесь под обложкой ничего нет. */
+.release__art { padding: 1rem; }
+.release__cover {
+  aspect-ratio: 1 / 1;
+  background: var(--art);
+  overflow: hidden;
+}
+.release__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Три опоры и воздух между ними: имя с названием к верху ячейки, справка
+   посередине, кнопки площадок к низу. Ячейка эта высотой в обложку, и без
+   разведения по краям текст сбивался бы к верху, а низ пустовал. Тот же
+   счёт был у полосы, только опор в ней было две. */
+.release__head {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 0;
+  padding: 1rem 1rem 2rem;
+}
+.release__name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* Имя над названием, как на плитке. Набор и отклик у ссылки те же, что
+   были в полосе: подчёркивание волосом, выворотка по наведению. */
+.release__artist {
+  margin: 0;
+  font-size: max(12px, 1.0625rem);
+  color: var(--fg-muted);
+}
+.release__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
+@media (hover: hover) {
+  .release__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+}
+.release__artist a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+
+/* Кегль тот же, что был у заголовка в полосе. Поправки на длинное название
+   больше нет: высота ячейки идёт от содержимого, и пятая строка её просто
+   удлиняет, а не обрезает кнопки. */
+.release__title {
+  margin: 0;
+  font-size: clamp(2.125rem, 5.2vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.94;
+  overflow-wrap: anywhere;
+}
+
+/* Справка строками, как трек-лист у Warp: подпись слева, значение справа,
+   между строками мягкая черта — та же, что между строками списков. Черта
+   есть и над первой строкой: справка отделена от названия так же, как от
+   кнопок под ней.
+
+   Строки идут во всю ширину ячейки, до её полей: черта в них — граница
+   строки, а не ячейки, и упирается в поля с обеих сторон.
+
+   Подпись с двоеточием и моноширинным прописными — как имена отборов в
+   полосе и подписи счётчиков в списках. Один набор на все служебные
+   подписи сайта. */
+.release__facts { margin: 0; }
+.release__fact {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8125rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.release__fact:first-child { border-top: 1px solid var(--line-soft); }
+.release__fact dt {
+  flex: none;
+  font-family: var(--mono);
+  font-size: max(12px, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.release__fact dd {
+  margin: 0;
+  min-width: 0;
+  text-align: right;
+}
+/* Дата оригинала — уточнение к дате издания, и приглушена так же, как была
+   отдельной строкой в полосе. */
+.release__faint { color: var(--fg-dim); }
+
+/* Ряд площадок стоит последним в ячейке, своего нижнего поля ему не нужно:
+   воздух под ним держит удвоенное поле самой ячейки. */
+.release__head .listen { margin-bottom: 0; }
+
 /* Правила `.related` — подпись «Related» и жанры на одной горизонтали —
    удалены 29 августа 2026 вместе с самой строкой: под именем жанра стоят
    теперь исполнители, той же полосой во всю ширину, что состав у лейбла. */
@@ -2637,6 +2767,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    кнопками, хотя рядом такая же по смыслу ссылка на лейбл была просто
    подчёркнутой. */
 .detail__fact,
+.release__fact dd,
 .meta-line {
   margin: 0;
   font-family: var(--mono);
@@ -2646,12 +2777,15 @@ select option { background: var(--option-bg); color: var(--fg); }
   color: var(--fg-muted);
 }
 .detail__fact a,
+.release__fact dd a,
 .meta-line a { border-bottom: 1px solid var(--line); }
 @media (hover: hover) {
   .detail__fact a:hover,
+  .release__fact dd a:hover,
   .meta-line a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 }
 .detail__fact a:active,
+.release__fact dd a:active,
 .meta-line a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Строка с датой отделена от кнопок линейкой — той же мягкой, что разделяет
@@ -2927,6 +3061,12 @@ select option { background: var(--option-bg); color: var(--fg); }
    вертикальный кадр 4:5 с подписью под ним. Собираем то же самое — но
    высоту отдаём содержимому, иначе заголовок в три слова не помещается. */
 @media (max-width: 760px) {
+  /* Релиз на телефоне в один столбец: обложка сверху, справка под ней.
+     Два столбца дали бы обложку в 180 и колонку текста той же ширины —
+     в ней не встаёт ни заголовок, ни строка справки. */
+  .release { grid-template-columns: minmax(0, 1fr); }
+  .release__head { grid-column: 1; }
+
   .detail__banner {
     aspect-ratio: auto;
     flex-direction: column;

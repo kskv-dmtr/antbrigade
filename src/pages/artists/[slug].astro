@@ -31,7 +31,7 @@ const clipsSorted = clips.slice()
 
 /* Раздел ссылок наружу показываем, только когда есть что показать: поля в
    Notion заполняются руками, и у большинства записей они пустые. */
-const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
+const hasLinks = Boolean(artist.bandcamp || artist.youtube);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
@@ -66,7 +66,7 @@ const hasLinks = Boolean(artist.website || artist.bandcamp || artist.youtube);
       Просвет до имени держит поле .page-head, а свой отступ снизу — ряд
       кнопок; ниже он схлопывается с полем первого раздела. */}
   {hasLinks && (
-    <ProfileLinks website={artist.website} bandcamp={artist.bandcamp} youtube={artist.youtube} />
+    <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
   )}
 
   {/* Жанры — своим разделом, как лейблы. Стоят перед ними: на полосе

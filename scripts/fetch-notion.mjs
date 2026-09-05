@@ -20,16 +20,17 @@ const PAGE_CAP   = 900;   // за один запрос Notion отдаёт ма
 const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
                   view:       'a705673c-7ed4-4892-87c4-56efc3c496cf' };
 // bandcamp — ключ необязательного свойства со ссылкой, у каждой базы свой
+/* Ключей website здесь больше нет: колонку убрали из обеих баз 5 сентября
+   2026. Были '=Mzn' у артистов и 'H>J[' у лейблов — на случай, если
+   вернут. Ссылки стояли у трёх артистов и девяти лейблов. */
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
                   bandcamp:   'XmmI',
-                  youtube:    'drlg',
-                  website:    '=Mzn' };
+                  youtube:    'drlg' };
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
-                  youtube:    'imKP',
-                  website:    'H>J[' };
+                  youtube:    'imKP' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
 
@@ -148,6 +149,26 @@ function dateStart(value) {
     }
   }
   return null;
+}
+
+/* Год оригинального издания. Колонка Original Release Date у релизов стала
+   списком (select) 5 сентября 2026: полная дата оригинала ничего не давала
+   сверх года, а вводить её руками приходилось целиком.
+
+   Читаем оба вида. Значения, введённые после смены типа, приходят обычным
+   текстом — «1989». У строк, заполненных до неё, под тем же ключом остался
+   осиротевший date: Notion тип колонки поменял, а payload в строках нет, и
+   в интерфейсе этих значений уже не видно. Такие берём по году из даты —
+   иначе plainText вернул бы «‣», значок ссылки на дату.
+
+   Всё, что не год из четырёх цифр, отбрасываем: колонка заполняется
+   руками, и описка лучше видна пустым местом, чем строкой посреди
+   справки. */
+function yearValue(value) {
+  const дата = dateStart(value);
+  if (дата) return дата.slice(0, 4);
+  const текст = plainText(value);
+  return /^\d{4}$/.test(текст) ? текст : null;
 }
 
 /** Relation хранит id связанных страниц в декорации ["p", <pageId>, <spaceId>] */
@@ -284,15 +305,13 @@ async function directory(source, label) {
        source.<поле>: пока колонки в базе нет, ключа в описании тоже нет. */
     const bandcamp = source.bandcamp ? plainText(prop(v.properties, source.bandcamp)) : '';
     const youtube  = source.youtube  ? plainText(prop(v.properties, source.youtube))  : '';
-    const website  = source.website  ? plainText(prop(v.properties, source.website))  : '';
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
-      youtube: youtube || null,
-      website: website || null
+      youtube: youtube || null
     });
   }
 
@@ -427,12 +446,15 @@ async function main() {
     const labelIds  = relationIds(prop(props, P.label));
     const released  = dateStart(prop(props, P.date));
 
-    /* Дата оригинала — только у переизданий и допечаток. Порядок и отбор на
+    /* Год оригинала — только у переизданий и допечаток. Порядок и отбор на
        сайте держит released: это дата того издания, которое лежит в
        каталоге. Оригинал показывается на странице релиза и больше нигде —
        иначе плитка говорила бы один год, а отбор по годам находил бы
-       релиз в другом. */
-    const origReleased = dateStart(prop(props, P.origDate));
+       релиз в другом.
+
+       Полная дата стояла здесь до 5 сентября 2026, поле звалось
+       origReleased. У клипов она осталась датой: там колонка не менялась. */
+    const origYear = yearValue(prop(props, P.origDate));
 
     /* Подборки, в которые входит релиз. До 5 сентября 2026 под этим же
        ключом жил флажок «в подборке» — Notion хранил его текстом «Yes», —
@@ -457,7 +479,7 @@ async function main() {
       types: splitList(plainText(prop(props, P.type))),
       released,
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
-      origReleased,
+      origYear,
       playlists,
       featured,
       artistIds,
@@ -516,7 +538,6 @@ async function main() {
       slug: a.slug,
       name: a.name,
       country: a.country,
-      website: a.website,
       bandcamp: a.bandcamp,
       youtube: a.youtube,
       albumIds,
@@ -533,7 +554,6 @@ async function main() {
       slug: l.slug,
       name: l.name,
       country: l.country,
-      website: l.website,
       bandcamp: l.bandcamp,
       youtube: l.youtube,
       albumIds,

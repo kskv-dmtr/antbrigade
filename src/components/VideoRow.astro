@@ -1,18 +1,16 @@
 ---
 /* Строка клипа: исполнитель, название, вид с годом.
 
-   Тот же класс .row и та же раскладка, что у релизов: имя занимает первые
-   два столбца решётки, название третий, справка четвёртый по правому краю.
-   Иначе названия на /videos начинались бы не там, где на /music, и
+   Тот же класс .row и та же раскладка, что у релизов: список в два столбца,
+   строка в два ряда — исполнитель и вид ролика в первом, название и год во
+   втором. Иначе названия на /videos начинались бы не там, где на /music, и
    вертикаль, по которой их читают, съезжала бы при переходе со списка на
    список.
 
    Год у клипов есть с 29 августа 2026 — это дата ролика из Notion. Пока её
    не было, четвёртая колонка стояла пустой.
 
-   Вид и год собраны через точку, как тип и год у релиза: обе величины про
-   выпуск, и разводить их по столбцам значило бы отдать служебной справке
-   четверть ширины вместо восьмой. */
+   Вид стоит против имени, год против названия — как тип и год у релиза. */
 
 import { videoTitle, videoArtists } from '../lib/db.js';
 
@@ -20,11 +18,15 @@ const { video } = Astro.props;
 
 /* Только год: полная дата стоит на самой странице клипа, а в строке индекса
    от неё нужен порядок, а не число. Так же устроен и список релизов. */
-const год = video.released ? video.released.slice(0, 4) : '';
-const справка = [video.kind, год].filter(Boolean).join(' · ');
+const год = video.released ? video.released.slice(0, 4) : '—';
 ---
 <a class="row row--release row--video" href={`/videos/${video.slug}`}>
-  <span class="row__artist">{videoArtists(video)}</span>
-  <span class="row__title">{videoTitle(video)}</span>
-  <span class="row__meta">{справка}</span>
+  <span class="row__line">
+    <span class="row__artist">{videoArtists(video)}</span>
+    <span class="row__meta">{video.kind}</span>
+  </span>
+  <span class="row__line">
+    <span class="row__title">{videoTitle(video)}</span>
+    <span class="row__meta">{год}</span>
+  </span>
 </a>

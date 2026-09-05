@@ -36,8 +36,8 @@ const roster   = artistsOf(label.artistIds);
 
       Просвет до имени держит поле .page-head, а свой отступ снизу — ряд
       кнопок; ниже он схлопывается с полем первого раздела. */}
-  {(label.website || label.bandcamp || label.youtube) && (
-    <ProfileLinks website={label.website} bandcamp={label.bandcamp} youtube={label.youtube} />
+  {(label.bandcamp || label.youtube) && (
+    <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
   )}
 
   {/* Состав — своим разделом, как лейблы на странице исполнителя. Заголовок склоняется по числу, а счётчик

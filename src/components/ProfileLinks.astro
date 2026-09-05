@@ -8,21 +8,17 @@
    поле: две отдельные кнопки подряд разъезжались бы пробелом между строчными
    элементами, а ряду нужен общий просвет.
 
-   Собственный сайт идёт первым: это дом, а площадки — витрины. */
+   Кнопка Website стояла первой — дом впереди витрин — и удалена 5 сентября
+   2026 вслед за колонкой в Notion: ссылки на собственные сайты оттуда
+   убраны. Стояли они у трёх артистов и девяти лейблов. */
 
 import Icon from './Icon.astro';
 
-const { website, bandcamp, youtube } = Astro.props;
-const есть = Boolean(website || bandcamp || youtube);
+const { bandcamp, youtube } = Astro.props;
+const есть = Boolean(bandcamp || youtube);
 ---
 {есть && (
   <div class="profiles">
-    {website && (
-      <a class="profile" href={website} target="_blank" rel="noopener noreferrer">
-        <Icon name="globe" class="profile__icon" />
-        <span>Website</span>
-      </a>
-    )}
 
     {bandcamp && (
       <a class="profile" href={bandcamp} target="_blank" rel="noopener noreferrer">

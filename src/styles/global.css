@@ -482,19 +482,24 @@ a { color: inherit; text-decoration: none; }
 }
 [data-js] .theme-toggle { display: inline-flex; }
 
-/* Наведение и нажатие — как у соседа-бургера и у кнопок на витрине. */
+/* Отклик цветом, а не вывороткой. Рамки у кнопки нет, и заливка рисовала
+   вокруг круглого знака квадрат 34 на 34 — тот самый квадрат, который у неё
+   убрали из состояния покоя. Появляться он по наведению не должен: знак сам
+   круглый, и плашка вокруг него читается коробкой вокруг метки.
+
+   Тем же счётом отвечают на наведение списки в полосе отбора: там рамки
+   тоже нет, и отклик один — цвет.
+
+   Фокус с клавиатуры остаётся вывороткой: его надо видеть через всю
+   страницу, и цветом одного знака этого не показать. */
 @media (hover: hover) {
-  .theme-toggle:hover {
-    background: var(--ink);
-    color: var(--ink-fg);
-    border-color: var(--ink);
-  }
+  .theme-toggle:hover { color: var(--fg); }
 }
-.theme-toggle:focus-visible,
-.theme-toggle:active {
+.theme-toggle:active { color: var(--fg); }
+
+.theme-toggle:focus-visible {
   background: var(--ink);
   color: var(--ink-fg);
-  border-color: var(--ink);
 }
 
 /* Кружок у кнопки темы ровно того же размера, что метка раздела в полосе:

@@ -3,7 +3,10 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+/* Breadcrumbs со страницы релиза убран 5 сентября 2026: первый экран занят
+   обложкой во весь рост, и строка пути над ней читалась подписью к
+   картинке. Компонент остаётся в проекте — он стоит на страницах клипа,
+   артиста, лейбла и жанра. */
 import BackBar from '../../components/BackBar.astro';
 import PageBar from '../../components/PageBar.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
@@ -66,15 +69,10 @@ const clips = [...new Map(
 >
   <BackBar />
 
-  <Breadcrumbs
-    trail={artists.map((a) => ({ href: `/artists/${a.slug}`, label: a.name }))}
-    name={album.album}
-    noBack
-  />
-
-  {/* Релиз стоит на той же решётке, что каталог: обложка занимает ровно
-      одну ячейку — ту же, что заняла бы плитка этого релиза на витрине, —
-      а справа от неё ячейка с именем и справкой во всю оставшуюся ширину.
+  {/* Релиз стоит на той же решётке, что каталог: обложка занимает два
+      первых столбца, а справа от неё ячейка с именем и справкой во всю
+      оставшуюся ширину. Первый экран отдан им двоим целиком — блок высотой
+      в окно за вычетом шапки.
 
       Приём с обложкой взят с главной целиком: поле 16 вокруг, штриховка
       под ней на случай, если файла нет, перемычки чертят сами ячейки
@@ -196,7 +194,11 @@ const clips = [...new Map(
       {/* Назван так же, как раздел на странице исполнителя: это тот же
           список, только собранный от релиза. */}
       <PageBar as="h2" title="Videos" count={clips.length} />
-      <ul class="tiles tiles--auto tiles--video">
+      {/* По столбцам решётки, как список клипов плитками на /videos: четыре
+          в ряд на расчётной ширине. Своя раскладка .tiles--video набирала
+          столбцы от минимальной ширины плитки и давала их шесть — кадры
+          выходили мельче, чем на самой странице клипов. */}
+      <ul class="tiles tiles--auto">
         {clips.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>

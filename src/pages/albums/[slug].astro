@@ -83,9 +83,9 @@ const clips = [...new Map(
       5 сентября 2026. Сетки в ней не было вовсе: ширину обложке задавала
       своя переменная --two-cols, а высоту — содержимое, и с решёткой под
       ней полоса не сходилась ни одной линией. */}
-  <article class="release">
-    <div class="release__art">
-      <div class="release__cover">
+  <article class="album">
+    <div class="album__art">
+      <div class="album__cover">
         {cover && (
           <img src={cover} width="800" height="800"
                alt={`${album.album} cover`} fetchpriority="high" />
@@ -100,9 +100,9 @@ const clips = [...new Map(
         название. У полосы он был обратный — тип, название, имя, — потому
         что надстрочной строкой там стоял вид издания; теперь вид ушёл в
         справку, к остальным выходным данным, и первой строкой встало имя. */}
-    <div class="release__head">
-      <div class="release__name">
-        <p class="release__artist">
+    <div class="album__head">
+      <div class="album__name">
+        <p class="album__artist">
           {artists.length > 0
             ? artists.map((a, i) => (
                 <>
@@ -113,7 +113,7 @@ const clips = [...new Map(
             : album.artist}
         </p>
 
-        <h1 class="release__title">{album.album}</h1>
+        <h1 class="album__title">{album.album}</h1>
       </div>
 
       {/* Справка строками, как трек-лист у Warp: подпись слева, значение
@@ -124,29 +124,29 @@ const clips = [...new Map(
 
           Трек-листа у нас нет: в Notion лежат сведения об издании, а не о
           записи. Строки заняты тем, что есть, — вид, дата, лейбл, жанры. */}
-      <dl class="release__facts">
+      <dl class="album__facts">
         {album.types.length > 0 && (
-          <div class="release__fact">
+          <div class="album__fact">
             <dt>Type:</dt>
             <dd>{album.types.join(' · ')}</dd>
           </div>
         )}
 
         {dateText && (
-          <div class="release__fact">
+          <div class="album__fact">
             <dt>Released:</dt>
             {/* Дата оригинала — уточнением в той же строке, а не отдельной:
                 это одна и та же справка о выпуске, и вторая строка «Released»
                 читалась бы вторым релизом. */}
             <dd>
               {dateText}
-              {origText && <span class="release__faint"> · originally {origText}</span>}
+              {origText && <span class="album__faint"> · originally {origText}</span>}
             </dd>
           </div>
         )}
 
         {labels.length > 0 && (
-          <div class="release__fact">
+          <div class="album__fact">
             <dt>Label:</dt>
             <dd>
               {labels.map((l, i) => (
@@ -160,7 +160,7 @@ const clips = [...new Map(
         )}
 
         {album.genres.length > 0 && (
-          <div class="release__fact">
+          <div class="album__fact">
             <dt>Genres:</dt>
             <dd><GenreLinks names={album.genres} inline /></dd>
           </div>

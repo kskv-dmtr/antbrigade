@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-05T10:39:27Z",
+  "generatedAt": "2026-09-05T13:46:36Z",
   "counts": {
-    "albums": 1144,
-    "artists": 1022,
-    "labels": 640,
+    "albums": 1159,
+    "artists": 1030,
+    "labels": 646,
     "videos": 86
   },
   "albums": [
@@ -31145,6 +31145,39 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8095-9d0c-cc29873a391c",
+      "slug": "iguana-death-cult-echo-palace",
+      "artist": "Iguana Death Cult",
+      "album": "Echo Palace",
+      "url": "https://album.link/96n4vv4cq9jdg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4003a7fa-a607-4fcd-8871-af523fa77b10%3Aa1199791248_10.jpg?table=block&id=3d24129a-8c52-8095-9d0c-cc29873a391c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Garage Rock",
+        "Post-Punk",
+        "Art Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-05-12",
+      "year": 2023,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "33e4129a-8c52-807e-902c-c35426b9919e"
+      ],
+      "artists": [
+        "Iguana Death Cult"
+      ],
+      "labelIds": [
+        "2434129a-8c52-806e-9bf1-e6c265c72db3"
+      ],
+      "labels": [
+        "Innovative Leisure"
+      ]
+    },
+    {
       "id": "ca07baba-50de-412d-a666-3219428703d5",
       "slug": "yakul-outlines",
       "artist": "Yakul",
@@ -32913,6 +32946,71 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8023-9ac1-e51365e3d116",
+      "slug": "pleasure-pool-love-without-illusion",
+      "artist": "Pleasure Pool",
+      "album": "Love Without Illusion",
+      "url": "https://album.link/5vp8x0pfckpzs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af55236d6-5c95-44c8-932c-4ddfe175de6a%3Aa3568551851_10.jpg?table=block&id=3d24129a-8c52-8023-9ac1-e51365e3d116&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indietronica",
+        "Downtempo",
+        "Balearic Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-12-09",
+      "year": 2022,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-8034-9736-fec19222db57"
+      ],
+      "artists": [
+        "Pleasure Pool"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8091-b21a-ffe75126c691"
+      ],
+      "labels": [
+        "Optimo Music"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-80a7-beec-e044145e0e3b",
+      "slug": "the-smith-street-band-life-after-football",
+      "artist": "The Smith Street Band",
+      "album": "Life After Football",
+      "url": "https://album.link/nsjmmhd69jxkx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A380694c3-d9c8-4312-b53f-179891c24caf%3Aa1139824799_10.jpg?table=block&id=3d24129a-8c52-80a7-beec-e044145e0e3b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Rock",
+        "Punk Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-11-25",
+      "year": 2022,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "2b34129a-8c52-8032-b4f0-c332833541a3"
+      ],
+      "artists": [
+        "The Smith Street Band"
+      ],
+      "labelIds": [
+        "2b34129a-8c52-8032-aabe-d7ec87da0ba9"
+      ],
+      "labels": [
+        "Pool House Records"
+      ]
+    },
+    {
       "id": "3f6e905b-ce28-45af-a760-d2885d64208a",
       "slug": "tutankhamun-tutankhamun",
       "artist": "Tutankhamun",
@@ -32942,6 +33040,38 @@
       ],
       "labels": [
         "Nice Guys"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8046-aef1-e8c65667cefb",
+      "slug": "born-at-midnite-alternity",
+      "artist": "Born At Midnite",
+      "album": "Alternity",
+      "url": "https://album.link/kfgqwsq7frfdc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adcf2281c-ffdc-472f-b28b-cbfe94c03971%3Aa4079976316_10.jpg?table=block&id=3d24129a-8c52-8046-aef1-e8c65667cefb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bedroom Pop",
+        "Synth Funk"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2022-11-18",
+      "year": 2022,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "38c4129a-8c52-8019-b7b6-c96fb5e3cd3a"
+      ],
+      "artists": [
+        "Born At Midnite"
+      ],
+      "labelIds": [
+        "38c4129a-8c52-80c7-a0eb-f6e75e47f667"
+      ],
+      "labels": [
+        "Arbutus Records"
       ]
     },
     {
@@ -33399,6 +33529,39 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8085-bc87-d3abd8de2b65",
+      "slug": "alvvays-blue-rev",
+      "artist": "Alvvays",
+      "album": "Blue Rev",
+      "url": "https://album.link/h5vznbm5vdd5f",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A38cb835f-ff10-402e-a032-868c38bf44ff%3Aa0736922991_10.jpg?table=block&id=3d24129a-8c52-8085-bc87-d3abd8de2b65&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Dream Pop",
+        "Noise Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-10-07",
+      "year": 2022,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-8084-8bb3-c1ffc291372c"
+      ],
+      "artists": [
+        "Alvvays"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-802e-bbee-e55d92264c92"
+      ],
+      "labels": [
+        "Transgressive"
+      ]
+    },
+    {
       "id": "2524129a-8c52-8037-b2c4-f47fb3a2bc52",
       "slug": "say-she-she-prism",
       "artist": "Say She She",
@@ -33560,6 +33723,39 @@
       ],
       "labels": [
         "Acrophase Records"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8009-9d2b-f22f6d81afbb",
+      "slug": "zeitgeist-freedom-energy-exchange-sci-fi-jazz-directions",
+      "artist": "Zeitgeist Freedom Energy Exchange",
+      "album": "Sci-Fi Jazz Directions",
+      "url": "https://album.link/b92svmp7fmgzz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad20547bb-058e-44ea-8f9e-667bbbc15345%3Aa0810265413_10.jpg?table=block&id=3d24129a-8c52-8009-9d2b-f22f6d81afbb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Krautrock",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-09-09",
+      "year": 2022,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-80b4-ba56-fea84b2e6e6e"
+      ],
+      "artists": [
+        "Zeitgeist Freedom Energy Exchange"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-809e-993a-d1bc831a4a15"
+      ],
+      "labels": [
+        "Kryptox"
       ]
     },
     {
@@ -34737,7 +34933,7 @@
       ],
       "released": "2021-11-19",
       "year": 2021,
-      "origReleased": "1991-10-01",
+      "origReleased": null,
       "playlists": [],
       "featured": false,
       "artistIds": [
@@ -35072,6 +35268,39 @@
       ],
       "labels": [
         "Noire & Blanche"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-80e2-a325-dff5b0cb565a",
+      "slug": "lady-blackbird-black-acid-soul",
+      "artist": "Lady Blackbird",
+      "album": "Black Acid Soul",
+      "url": "https://album.link/xdxfzd95qrg5v",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9d74f13d-178f-47a1-b9d5-54a24fba0e64%3Aa3294949306_10.jpg?table=block&id=3d24129a-8c52-80e2-a325-dff5b0cb565a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Vocal Jazz",
+        "Jazz Pop",
+        "Soul Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-03",
+      "year": 2021,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-80b1-a440-c6c6862b5f26"
+      ],
+      "artists": [
+        "Lady Blackbird"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-804f-8add-dfc20476105f"
+      ],
+      "labels": [
+        "Foundation Music"
       ]
     },
     {
@@ -35460,6 +35689,38 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8007-b5d9-cbe1d9fadbf2",
+      "slug": "tor-oasis-sky",
+      "artist": "Tor",
+      "album": "Oasis Sky",
+      "url": "https://album.link/7jq8zxq8m6jbn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A285593c0-75dd-4d87-b917-5ba07b40258a%3Aa1841491640_10.jpg?table=block&id=3d24129a-8c52-8007-b5d9-cbe1d9fadbf2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Trip Hop",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-30",
+      "year": 2021,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-802d-a573-ec787633def4"
+      ],
+      "artists": [
+        "Tor"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8099-a375-f187dc8b69c0"
+      ],
+      "labels": [
+        "Eleuthera Music"
+      ]
+    },
+    {
       "id": "bace706f-ce66-4cfc-97b9-997366d1ed22",
       "slug": "mitch-murder-then-again",
       "artist": "Mitch Murder",
@@ -35557,6 +35818,70 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-802c-b880-fbfee59c112e",
+      "slug": "orions-belte-villa-amorini",
+      "artist": "Orions Belte",
+      "album": "Villa Amorini",
+      "url": "https://album.link/w55j59v75rhfc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad70c4e7c-3b80-4a8b-9fd0-db2b1513a993%3Aa2093703012_10.jpg?table=block&id=3d24129a-8c52-802c-b880-fbfee59c112e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-09",
+      "year": 2021,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "2504129a-8c52-80c6-9cda-d527bdc7fc57"
+      ],
+      "artists": [
+        "Orions Belte"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80c2-8952-d4716c46abbf"
+      ],
+      "labels": [
+        "Jansen Records"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8082-bc26-c928adf20ab2",
+      "slug": "str4ta-aspects",
+      "artist": "STR4TA",
+      "album": "Aspects",
+      "url": "https://album.link/9w8kzbvccjbdv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1ddf1b3b-056f-44c5-a7ce-c5d5bf223487%3Aa0273675758_10.jpg?table=block&id=3d24129a-8c52-8082-bc26-c928adf20ab2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-26",
+      "year": 2021,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-8009-a8c2-f0ecfaa39510"
+      ],
+      "artists": [
+        "STR4TA"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "labels": [
+        "Brownswood Recordings"
+      ]
+    },
+    {
       "id": "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6",
       "slug": "derrick-cross-never-too-much",
       "artist": "Derrick Cross",
@@ -35586,6 +35911,40 @@
       ],
       "labels": [
         "Athens of the North"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8011-96dc-d9f07d5ae793",
+      "slug": "roosevelt-polydans",
+      "artist": "Roosevelt",
+      "album": "Polydans",
+      "url": "https://album.link/hxkw30mprfdmd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A45e01603-0d38-49c4-86a3-06d822a7f420%3Aa0230148650_10.jpg?table=block&id=3d24129a-8c52-8011-96dc-d9f07d5ae793&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-02-26",
+      "year": 2021,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "2524129a-8c52-80ab-8dba-e591ca334a40"
+      ],
+      "artists": [
+        "Roosevelt"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80a1-88ab-db0ebcea8e4d",
+        "24a4129a-8c52-80c3-adc7-fb060cc7c552"
+      ],
+      "labels": [
+        "City Slang",
+        "Greco-Roman"
       ]
     },
     {
@@ -35818,6 +36177,38 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-804f-b728-e3db2b5f9a7c",
+      "slug": "nuclear-power-trio-a-clear-and-present-rager",
+      "artist": "Nuclear Power Trio",
+      "album": "A Clear and Present Rager",
+      "url": "https://album.link/rgh3gqbkxvf2w",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aec7b05a2-a05f-4441-89d5-628f10b34592%3Aa3858242953_10.jpg?table=block&id=3d24129a-8c52-804f-b728-e3db2b5f9a7c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive Metal",
+        "Funk Metal"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2020-10-30",
+      "year": 2020,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "2504129a-8c52-80d5-9119-c10b977c4903"
+      ],
+      "artists": [
+        "Nuclear Power Trio"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80f1-9c61-e9b7eeb5f749"
+      ],
+      "labels": [
+        "Metal Blade Records"
+      ]
+    },
+    {
       "id": "a608372f-55df-417b-b29f-ed8752af1898",
       "slug": "southern-shores-siena",
       "artist": "Southern Shores",
@@ -35846,6 +36237,40 @@
       ],
       "labels": [
         "Cascine"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-80c7-b2d7-de962fff7370",
+      "slug": "ginger-root-rikki",
+      "artist": "Ginger Root",
+      "album": "Rikki",
+      "url": "https://album.link/rr4kqn0vjj0gz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afba95902-b8c7-4c65-b02f-29422fb102b1%3Aa1554424432_10.jpg?table=block&id=3d24129a-8c52-80c7-b2d7-de962fff7370&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bedroom Pop",
+        "City Pop",
+        "Hypnagogic Pop",
+        "Yacht Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-10-23",
+      "year": 2020,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
+      ],
+      "artists": [
+        "Ginger Root"
+      ],
+      "labelIds": [
+        "24b4129a-8c52-80c9-bab2-f979d58a6d37"
+      ],
+      "labels": [
+        "Acrophase Records"
       ]
     },
     {
@@ -35946,6 +36371,39 @@
       ],
       "labels": [
         "Sonor Music Editions"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8005-ad03-ceca61f6d259",
+      "slug": "admas-sons-of-ethiopia",
+      "artist": "Admas",
+      "album": "Sons of Ethiopia",
+      "url": "https://album.link/q3c78g3ssvr65",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A73c95f7b-42f9-4290-ba46-4d3da4156ace%3Aa3862416650_10.jpg?table=block&id=3d24129a-8c52-8005-ad03-ceca61f6d259&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Ethio-Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-07-27",
+      "year": 2020,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-80a6-b95c-d7e85a37511f"
+      ],
+      "artists": [
+        "Admas"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8061-ae10-d239d058dd3a"
+      ],
+      "labels": [
+        "Frederiksberg Records"
       ]
     },
     {
@@ -36239,6 +36697,38 @@
       "labels": [
         "Mosher Records",
         "Firecum Records"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-808e-8524-dd51f4f0e147",
+      "slug": "piper-summer-breeze",
+      "artist": "PIPER",
+      "album": "Summer Breeze",
+      "url": "https://album.link/wftqwcwknsrgp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9472cbaa-aad8-4d8d-bb9b-a50f173ccf44%3Aa4078876735_10.jpg?table=block&id=3d24129a-8c52-808e-8524-dd51f4f0e147&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "City Pop",
+        "Synth Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-12-11",
+      "year": 2019,
+      "origReleased": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-8041-835f-d3a8984794d2"
+      ],
+      "artists": [
+        "PIPER"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
+      ],
+      "labels": [
+        "Light In The Attic Records"
       ]
     },
     {
@@ -37427,6 +37917,27 @@
       "videoIds": []
     },
     {
+      "id": "3d24129a-8c52-80a6-b95c-d7e85a37511f",
+      "slug": "admas",
+      "name": "Admas",
+      "country": "ET",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8005-ad03-ceca61f6d259"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Ethio-Jazz",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8061-ae10-d239d058dd3a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3cb4129a-8c52-80c8-b478-fca9935731a1",
       "slug": "adult-dvd",
       "name": "Adult DVD",
@@ -37739,6 +38250,27 @@
       "videoIds": [
         "1064129a-8c52-80ca-9b75-c0413cca4c86"
       ]
+    },
+    {
+      "id": "3d24129a-8c52-8084-8bb3-c1ffc291372c",
+      "slug": "alvvays",
+      "name": "Alvvays",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://alvvays.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8085-bc87-d3abd8de2b65"
+      ],
+      "genres": [
+        "Indie Pop",
+        "Dream Pop",
+        "Noise Pop"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-802e-bbee-e55d92264c92"
+      ],
+      "videoIds": []
     },
     {
       "id": "2424129a-8c52-80d3-81e6-ee184d274263",
@@ -39454,14 +39986,16 @@
       "name": "Born At Midnite",
       "country": "CA",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://bornatmidnite.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "38c4129a-8c52-80be-b81c-fe0dd4823bd7"
+        "38c4129a-8c52-80be-b81c-fe0dd4823bd7",
+        "3d24129a-8c52-8046-aef1-e8c65667cefb"
       ],
       "genres": [
         "Bedroom Pop",
-        "Synthpop"
+        "Synthpop",
+        "Synth Funk"
       ],
       "labelIds": [
         "38c4129a-8c52-80c7-a0eb-f6e75e47f667"
@@ -44192,13 +44726,16 @@
       "youtube": null,
       "albumIds": [
         "1004129a-8c52-80e5-bea3-d120b24d4d37",
-        "24b4129a-8c52-806e-8953-fe39869c70d7"
+        "24b4129a-8c52-806e-8953-fe39869c70d7",
+        "3d24129a-8c52-80c7-b2d7-de962fff7370"
       ],
       "genres": [
         "Indie Pop",
         "City Pop",
         "Soul",
-        "Bedroom Pop"
+        "Bedroom Pop",
+        "Hypnagogic Pop",
+        "Yacht Rock"
       ],
       "labelIds": [
         "2444129a-8c52-808d-bac2-ee2f428fb4bc",
@@ -45271,17 +45808,21 @@
       "name": "Iguana Death Cult",
       "country": "NL",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://iguanadeathcult.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "33e4129a-8c52-8018-b37c-cff99d4a2a09"
+        "33e4129a-8c52-8018-b37c-cff99d4a2a09",
+        "3d24129a-8c52-8095-9d0c-cc29873a391c"
       ],
       "genres": [
         "Garage Rock",
-        "Garage Punk"
+        "Garage Punk",
+        "Post-Punk",
+        "Art Punk"
       ],
       "labelIds": [
-        "33e4129a-8c52-800e-bccd-f03d9b1631aa"
+        "33e4129a-8c52-800e-bccd-f03d9b1631aa",
+        "2434129a-8c52-806e-9bf1-e6c265c72db3"
       ],
       "videoIds": []
     },
@@ -47402,6 +47943,27 @@
       "labelIds": [
         "2504129a-8c52-80f1-ac4a-cd48f3b79e53",
         "2a14129a-8c52-80f1-9717-f9723efd7e63"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d24129a-8c52-80b1-a440-c6c6862b5f26",
+      "slug": "lady-blackbird",
+      "name": "Lady Blackbird",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://iamladyblackbird.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-80e2-a325-dff5b0cb565a"
+      ],
+      "genres": [
+        "Vocal Jazz",
+        "Jazz Pop",
+        "Soul Jazz"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-804f-8add-dfc20476105f"
       ],
       "videoIds": []
     },
@@ -50174,10 +50736,11 @@
       "name": "Nuclear Power Trio",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://nuclearpowertrio.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "9afac3ea-a674-467f-b000-e290a8ed1f72"
+        "9afac3ea-a674-467f-b000-e290a8ed1f72",
+        "3d24129a-8c52-804f-b728-e3db2b5f9a7c"
       ],
       "genres": [
         "Progressive Metal",
@@ -50514,11 +51077,12 @@
       "name": "Orions Belte",
       "country": "NO",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://orionsbelte.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "26c4129a-8c52-8063-a8c1-c10d152a7446",
-        "3a9d78d4-28c3-4e3f-802d-9f2965e38a33"
+        "3a9d78d4-28c3-4e3f-802d-9f2965e38a33",
+        "3d24129a-8c52-802c-b880-fbfee59c112e"
       ],
       "genres": [
         "Neo-Psychedelia",
@@ -51333,6 +51897,26 @@
       "videoIds": []
     },
     {
+      "id": "3d24129a-8c52-8041-835f-d3a8984794d2",
+      "slug": "piper",
+      "name": "PIPER",
+      "country": "JP",
+      "website": null,
+      "bandcamp": "https://officialpiper.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-808e-8524-dd51f4f0e147"
+      ],
+      "genres": [
+        "City Pop",
+        "Synth Funk"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-80ac-8df6-e43091d38cda",
       "slug": "pisse",
       "name": "Pisse",
@@ -51454,6 +52038,27 @@
       ],
       "labelIds": [
         "2504129a-8c52-80b0-a286-f08d24913bae"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d24129a-8c52-8034-9736-fec19222db57",
+      "slug": "pleasure-pool",
+      "name": "Pleasure Pool",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://pleasure-pool.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8023-9ac1-e51365e3d116"
+      ],
+      "genres": [
+        "Indietronica",
+        "Downtempo",
+        "Balearic Beat"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8091-b21a-ffe75126c691"
       ],
       "videoIds": []
     },
@@ -52536,17 +53141,22 @@
       "name": "Roosevelt",
       "country": "DE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://iamroosevelt.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "a00e66d8-cee3-4d6a-96d3-d4aee83b6986"
+        "a00e66d8-cee3-4d6a-96d3-d4aee83b6986",
+        "3d24129a-8c52-8011-96dc-d9f07d5ae793"
       ],
       "genres": [
         "Pop",
-        "Electronic"
+        "Electronic",
+        "Synthpop",
+        "Nu-Disco"
       ],
       "labelIds": [
-        "2524129a-8c52-8031-af12-cf2d7f54302a"
+        "2524129a-8c52-8031-af12-cf2d7f54302a",
+        "24f4129a-8c52-80a1-88ab-db0ebcea8e4d",
+        "24a4129a-8c52-80c3-adc7-fb060cc7c552"
       ],
       "videoIds": []
     },
@@ -54352,6 +54962,26 @@
       "videoIds": []
     },
     {
+      "id": "3d24129a-8c52-8009-a8c2-f0ecfaa39510",
+      "slug": "str4ta",
+      "name": "STR4TA",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://str4ta.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8082-bc26-c928adf20ab2"
+      ],
+      "genres": [
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "37f4129a-8c52-80c2-8df0-e129efd28274",
       "slug": "subsonic-eye",
       "name": "Subsonic Eye",
@@ -55998,7 +56628,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "2b34129a-8c52-803f-97c6-ef0c119d1f2c"
+        "2b34129a-8c52-803f-97c6-ef0c119d1f2c",
+        "3d24129a-8c52-80a7-beec-e044145e0e3b"
       ],
       "genres": [
         "Indie Rock",
@@ -56533,6 +57164,26 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d24129a-8c52-802d-a573-ec787633def4",
+      "slug": "tor",
+      "name": "Tor",
+      "country": "CA",
+      "website": null,
+      "bandcamp": "https://tormusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8007-b5d9-cbe1d9fadbf2"
+      ],
+      "genres": [
+        "Trip Hop",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8099-a375-f187dc8b69c0"
       ],
       "videoIds": []
     },
@@ -58220,6 +58871,27 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-80b4-ba56-fea84b2e6e6e",
+      "slug": "zeitgeist-freedom-energy-exchange",
+      "name": "Zeitgeist Freedom Energy Exchange",
+      "country": "DE",
+      "website": null,
+      "bandcamp": "https://zeitgeistfreedomenergyexchange.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8009-9d2b-f22f6d81afbb"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Krautrock",
+        "Nu-Disco"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-809e-993a-d1bc831a4a15"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3d04129a-8c52-807b-a625-f002835fd46c",
       "slug": "zenana",
       "name": "Zenana",
@@ -58620,7 +59292,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "24b4129a-8c52-806e-8953-fe39869c70d7"
+        "24b4129a-8c52-806e-8953-fe39869c70d7",
+        "3d24129a-8c52-80c7-b2d7-de962fff7370"
       ],
       "artistIds": [
         "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
@@ -58914,10 +59587,11 @@
       "name": "Arbutus Records",
       "country": "CA",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://arbutusrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "38c4129a-8c52-80be-b81c-fe0dd4823bd7"
+        "38c4129a-8c52-80be-b81c-fe0dd4823bd7",
+        "3d24129a-8c52-8046-aef1-e8c65667cefb"
       ],
       "artistIds": [
         "38c4129a-8c52-8019-b7b6-c96fb5e3cd3a"
@@ -59722,17 +60396,19 @@
       "name": "Brownswood Recordings",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://brownswoodrecordings.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "2b94129a-8c52-8076-a67e-ffa417a63a52",
         "22d4129a-8c52-805e-8781-c39a9f58b4ae",
-        "a2f2559a-ecbb-4053-9d35-0eb77b4836a8"
+        "a2f2559a-ecbb-4053-9d35-0eb77b4836a8",
+        "3d24129a-8c52-8082-bc26-c928adf20ab2"
       ],
       "artistIds": [
         "2b94129a-8c52-80b7-8ac8-e58e2494e9f4",
         "2504129a-8c52-80b0-bf90-d7cc616534dc",
-        "2514129a-8c52-80d3-825b-f1ae9f5bbc1b"
+        "2514129a-8c52-80d3-825b-f1ae9f5bbc1b",
+        "3d24129a-8c52-8009-a8c2-f0ecfaa39510"
       ]
     },
     {
@@ -60039,19 +60715,21 @@
       "name": "City Slang",
       "country": "DE",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://cityslang.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "36b4129a-8c52-80d0-9ffd-c278478ecc7d",
         "1154129a-8c52-800d-8b87-e9007efdb301",
         "ec69dd71-5f14-4160-a7f9-057abb7b7413",
-        "8db38305-53df-49ab-822c-887de89fb706"
+        "8db38305-53df-49ab-822c-887de89fb706",
+        "3d24129a-8c52-8011-96dc-d9f07d5ae793"
       ],
       "artistIds": [
         "36b4129a-8c52-8096-bb83-df2db002fa73",
         "24f4129a-8c52-8099-abe4-f4deaffc03ef",
         "24f4129a-8c52-80de-ba69-f43b6a41ec4a",
-        "24f4129a-8c52-8002-90a4-d5d223d1046d"
+        "24f4129a-8c52-8002-90a4-d5d223d1046d",
+        "2524129a-8c52-80ab-8dba-e591ca334a40"
       ]
     },
     {
@@ -61234,6 +61912,21 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8099-a375-f187dc8b69c0",
+      "slug": "eleuthera-music",
+      "name": "Eleuthera Music",
+      "country": "CA",
+      "website": null,
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8007-b5d9-cbe1d9fadbf2"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-802d-a573-ec787633def4"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80ed-929c-e53c683a062a",
       "slug": "energy-exchange-records",
       "name": "Energy Exchange Records",
@@ -61717,6 +62410,21 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-804f-8add-dfc20476105f",
+      "slug": "foundation-music",
+      "name": "Foundation Music",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://foundation-music.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-80e2-a325-dff5b0cb565a"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-80b1-a440-c6c6862b5f26"
+      ]
+    },
+    {
       "id": "24f4129a-8c52-80bd-8cf6-eb56e96ee9c1",
       "slug": "four-flies-records",
       "name": "Four Flies Records",
@@ -61747,6 +62455,21 @@
       ],
       "artistIds": [
         "24a4129a-8c52-8053-9643-f6a265d582ca"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8061-ae10-d239d058dd3a",
+      "slug": "frederiksberg-records",
+      "name": "Frederiksberg Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://frederiksbergrecords.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8005-ad03-ceca61f6d259"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-80a6-b95c-d7e85a37511f"
       ]
     },
     {
@@ -62035,13 +62758,15 @@
       "name": "Greco-Roman",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://greco-roman.bandcamp.com/",
       "youtube": null,
       "albumIds": [
-        "a06a5b69-f637-44bd-88cc-788a1dac2085"
+        "a06a5b69-f637-44bd-88cc-788a1dac2085",
+        "3d24129a-8c52-8011-96dc-d9f07d5ae793"
       ],
       "artistIds": [
-        "24a4129a-8c52-803b-81b7-d2454f26db81"
+        "24a4129a-8c52-803b-81b7-d2454f26db81",
+        "2524129a-8c52-80ab-8dba-e591ca334a40"
       ]
     },
     {
@@ -62050,7 +62775,7 @@
       "name": "Greenway Records",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://greenwayrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "33e4129a-8c52-8018-b37c-cff99d4a2a09"
@@ -62748,17 +63473,19 @@
       "name": "Innovative Leisure",
       "country": "US",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://innovativeleisure.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "3694129a-8c52-8078-89fc-d97b1512a834",
         "21f4129a-8c52-80c9-8ca7-fdab8a2ddc9a",
-        "2184129a-8c52-8005-a678-eda65141f9fa"
+        "2184129a-8c52-8005-a678-eda65141f9fa",
+        "3d24129a-8c52-8095-9d0c-cc29873a391c"
       ],
       "artistIds": [
         "3694129a-8c52-800e-90e6-c72c8aa48cfd",
         "2424129a-8c52-801f-928b-cd1b28ba171c",
-        "2494129a-8c52-803f-b9f0-f187678e0388"
+        "2494129a-8c52-803f-b9f0-f187678e0388",
+        "33e4129a-8c52-807e-902c-c35426b9919e"
       ]
     },
     {
@@ -63053,12 +63780,13 @@
       "name": "Jansen Records",
       "country": "NO",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://jansenrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "26c4129a-8c52-8063-a8c1-c10d152a7446",
         "1d04129a-8c52-8076-a0a0-d7f8ec4d9b43",
-        "3a9d78d4-28c3-4e3f-802d-9f2965e38a33"
+        "3a9d78d4-28c3-4e3f-802d-9f2965e38a33",
+        "3d24129a-8c52-802c-b880-fbfee59c112e"
       ],
       "artistIds": [
         "2504129a-8c52-80c6-9cda-d527bdc7fc57",
@@ -63359,6 +64087,21 @@
       ],
       "artistIds": [
         "2444129a-8c52-8069-a68c-fbb36065e2f8"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-809e-993a-d1bc831a4a15",
+      "slug": "kryptox",
+      "name": "Kryptox",
+      "country": "DE",
+      "website": null,
+      "bandcamp": "https://kryptox-music.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8009-9d2b-f22f6d81afbb"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-80b4-ba56-fea84b2e6e6e"
       ]
     },
     {
@@ -63682,6 +64425,21 @@
       ],
       "artistIds": [
         "2c44129a-8c52-80ad-bfca-d8d7b094bb5a"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-80e5-ae5f-f83aa36ca244",
+      "slug": "light-in-the-attic-records",
+      "name": "Light In The Attic Records",
+      "country": "US",
+      "website": null,
+      "bandcamp": "https://lightintheattic.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-808e-8524-dd51f4f0e147"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-8041-835f-d3a8984794d2"
       ]
     },
     {
@@ -64112,7 +64870,8 @@
         "1d14129a-8c52-8008-a488-ed4edbdb5728",
         "e3d57929-23d4-4fe4-b6a8-54f56d87690f",
         "9afac3ea-a674-467f-b000-e290a8ed1f72",
-        "0be23842-0d79-4950-abd4-cca2b4b5e5c8"
+        "0be23842-0d79-4950-abd4-cca2b4b5e5c8",
+        "3d24129a-8c52-804f-b728-e3db2b5f9a7c"
       ],
       "artistIds": [
         "31a4129a-8c52-8084-967f-e6955077c2aa",
@@ -65296,6 +66055,21 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8091-b21a-ffe75126c691",
+      "slug": "optimo-music",
+      "name": "Optimo Music",
+      "country": "GB",
+      "website": null,
+      "bandcamp": "https://optimomusic.bandcamp.com/",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8023-9ac1-e51365e3d116"
+      ],
+      "artistIds": [
+        "3d24129a-8c52-8034-9736-fec19222db57"
+      ]
+    },
+    {
       "id": "3604129a-8c52-8008-af2f-e351d52cb1d5",
       "slug": "ostgut-ton",
       "name": "Ostgut Ton",
@@ -65902,7 +66676,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "2b34129a-8c52-803f-97c6-ef0c119d1f2c"
+        "2b34129a-8c52-803f-97c6-ef0c119d1f2c",
+        "3d24129a-8c52-80a7-beec-e044145e0e3b"
       ],
       "artistIds": [
         "2b34129a-8c52-8032-b4f0-c332833541a3"
@@ -68206,17 +68981,19 @@
       "name": "Transgressive",
       "country": "GB",
       "website": null,
-      "bandcamp": null,
+      "bandcamp": "https://transgressivehq.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "2e44129a-8c52-8070-8a37-c65ee82c7d5c",
         "5bd0016b-d6eb-4892-8a97-f83a4f1e9c28",
-        "eee95c81-4b57-42c1-aa04-141565c99615"
+        "eee95c81-4b57-42c1-aa04-141565c99615",
+        "3d24129a-8c52-8085-bc87-d3abd8de2b65"
       ],
       "artistIds": [
         "2e44129a-8c52-80c5-a919-df3fbb0636ca",
         "2524129a-8c52-8050-bf38-f961d0af463e",
-        "24e4129a-8c52-80e0-8f75-e3495031b733"
+        "24e4129a-8c52-80e0-8f75-e3495031b733",
+        "3d24129a-8c52-8084-8bb3-c1ffc291372c"
       ]
     },
     {

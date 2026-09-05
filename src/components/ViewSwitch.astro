@@ -1,39 +1,38 @@
 ---
-/* Кнопка «показать плитками / показать списком» в полосе раздела.
+/* Вид списка — четвёртым органом в ряду отбора, обычным выпадающим списком.
 
-   Значком, а не словами. Стоит она в правой половине полосы, рядом с
-   четырьмя списками отбора, и подпись словами — «Show grid» в 101 пиксель —
-   перевешивала бы их: у списков подписи короче, а веса больше. Значок в
-   квадрате 34 читается органом того же ряда, но не спорит за внимание.
+   Раньше это была кнопка: сперва с подписью «Show grid», потом значком.
+   Обе выпадали из ряда — рядом с тремя списками отбора орган другого вида
+   читался особым случаем, хотя выбирает ровно так же: одно значение из
+   двух. Приём взят у Ghostly: «View As» стоит там в той же полосе, что и
+   сам отбор.
 
    Вид общий для всего сайта: висит в data-view на <html> и запоминается в
-   localStorage, как тема. Кнопка только переключает — то, чем она
+   localStorage, как тема. Список только переключает — то, чем он
    управляет, шире одной страницы.
 
-   Оба значка лежат в разметке всегда, видимый выбирает CSS по data-view.
-   Значит он верен уже на первой отрисовке: страница, открытая с плитками,
-   не мигнёт значком, предлагающим плитки. Показан не текущий вид, а тот,
-   куда переключит нажатие, — то же правило, что было у подписей. */
+   Значение проставляет встроенный скрипт, а не сервер: сервер один на всех,
+   а вид у каждого свой. Скрипт inline и стоит сразу за списком, поэтому
+   успевает до первой отрисовки — страница, открытая с плитками, не мигнёт
+   подписью «List». */
 
-import Icon from './Icon.astro';
+import Select from './Select.astro';
 ---
-<button type="button" class="view-toggle" id="view" aria-label="Switch view">
-  <Icon name="squares-four" class="view-toggle__icon view-toggle__grid" />
-  <Icon name="rows" class="view-toggle__icon view-toggle__list" />
-</button>
+<Select id="view" label="View">
+  <option value="list">List</option>
+  <option value="grid">Grid</option>
+</Select>
 
-<script>
-  /* Скрипт собирается один раз на страницу, сколько бы кнопок на ней ни
-     стояло. Кнопка на странице одна, но это свойство Astro, а не наше
-     везение. */
-  const кнопка = document.getElementById('view');
+<script is:inline>
+  (function () {
+    var список = document.getElementById('view');
+    if (!список) return;
 
-  if (кнопка) {
-    кнопка.addEventListener('click', () => {
-      const дальше = document.documentElement.dataset.view === 'grid' ? 'list' : 'grid';
+    список.value = document.documentElement.dataset.view === 'grid' ? 'grid' : 'list';
 
-      document.documentElement.dataset.view = дальше;
-      try { localStorage.setItem('view', дальше); } catch (e) {}
+    список.addEventListener('change', function () {
+      document.documentElement.dataset.view = список.value;
+      try { localStorage.setItem('view', список.value); } catch (e) {}
     });
-  }
+  })();
 </script>

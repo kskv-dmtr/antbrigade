@@ -93,6 +93,16 @@
      не имеет вовсе и идёт до краёв экрана. */
   --pad:         1rem;
 
+  /* Высота полосы заголовка и полосы отбора под ней. Отдельной переменной,
+     а не числом: от неё отсчитывается прилипание полосы отбора, и на
+     телефоне обе разворачиваются. */
+  --page-bar-h:  4rem;
+
+  /* Высота полосы отбора. Она ниже заголовка: в ней стоят подписи и списки
+     в 34, и 64 оставляли бы вокруг них воздуха больше, чем вокруг
+     32-пиксельного заголовка этажом выше. */
+  --filters-h:   3rem;
+
   /* Высота закреплённой шапки: от неё отсчитываются липкая строка поиска
      и отступы для якорей. Меняете отступы в шапке — поправьте и здесь. */
   --head-h:      4.5rem;
@@ -1155,20 +1165,30 @@ main > .head--backbar:first-child { border-top: 0; }
   border-left: 1px solid var(--line);
 }
 
-/* Отбор стоит в правой половине: списки слева от неё, кнопка вида справа.
-   Поле поиска занимало эту половину 5 сентября 2026 несколько часов и
-   уехало в шапку — ищут по каталогу, а не по открытой странице.
+/* Поиск занимает половину целиком и своей рамки не имеет: границы ячейке
+   чертит сама полоса, и рамка внутри читалась бы коробкой в коробке.
 
-   Поля по краям половины те же шестнадцать, что держат заголовок слева.
-   Прибавлять пиксель, как слева, не нужно: там его съедает сдвиг полосы, а
-   здесь на нём стоит черта — она и есть граница половины. */
-.head__side {
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0 var(--pad);
+   Поля внутри отмерены от краёв ячейки теми же шестнадцатью, что держат
+   заголовок слева: лупа в 16 от черты, клавиша в 16 от правого края
+   экрана. Отступы у самого поля ввода — те же 16 плюс знак и просвет до
+   строки.
+
+   В шапке поле стояло 5 сентября 2026 несколько часов и вернулось сюда:
+   рядом с логотипом и меню оно читалось поиском по сайту, а ищет по
+   открытому списку. */
+.head__side .search {
+  flex: 1;
+  min-width: 0;
+  display: flex;
 }
-.head__side .filters__group { margin-left: 0; min-width: 0; }
+.head__side .search input {
+  height: 100%;
+  padding: 0 2.875rem 0 2.4375rem;
+  border: 0;
+}
+.head__side .search input:focus-visible { border: 0; }
+.head__side .search__icon { left: var(--pad); }
+.head__side .search__key { right: var(--pad); }
 
 /* Заплата повторяет поле, а перед плитками оно 24. */
 .head--sticky:has(+ .tiles)::after { height: 1.5rem; }
@@ -1236,7 +1256,6 @@ main > .head--backbar:first-child { border-top: 0; }
    рядом друг с другом это читалось недосмотром. */
 .dig-again,
 .view-all,
-.view-toggle,
 .multi__button,
 .crumbs__back,
 .select select {
@@ -1375,6 +1394,66 @@ main > .head--backbar:first-child { border-top: 0; }
 /* Ровно на свою высоту: низ уходит под шапку, а та выше по z-index. */
 .sticky-bar[data-hidden] { transform: translateY(-100%); }
 
+/* ------------------------------------------------- полоса отбора строкой
+
+   Четыре столбца по столбцам решётки обложек: та же ширина, тот же вылет
+   за поля кадра, те же вертикальные дивайдеры. На расчётных 1920 черта
+   между вторым и третьим столбцом ложится ровно на середину экрана — туда
+   же, куда делит полосу заголовка над ней.
+
+   Дивайдеры красит фон полосы, а не границы ячеек: тот же приём, что у
+   решётки. Один рисующий на линию — значит одно округление, и на дробных
+   столбцах решётка не идёт то в один волос, то в два. Сдвиг на пиксель
+   влево уводит крайнюю левую линию за край экрана.
+
+   Столбцов ровно четыре, а не var(--cols): отборов четыре, и делить строку
+   на три или два значило бы ронять их друг на друга. От 1281 и выше это
+   совпадает с решёткой, ниже — расходится; узкие экраны собираются
+   отдельно. */
+.filters-row {
+  position: sticky;
+  top: calc(var(--head-h) + var(--page-bar-h));
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: var(--filters-h);
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  background-color: var(--bg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--line) 0 1px,
+    transparent 1px 25%
+  );
+  border-bottom: 1px solid var(--line);
+}
+
+/* Столбец: слева имя отбора, справа сам список. Поля по краям те же
+   шестнадцать, что держат заголовок; слева на пиксель больше — там сдвиг
+   полосы. */
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 0 var(--pad) 0 calc(var(--pad) + 1px);
+}
+.filter:not(:first-child) { padding-left: var(--pad); }
+
+/* Имя набрано как счётчики: моноширинным, приглушённым, тем же кеглем, что
+   подписи по всему проекту. Двоеточие лежит в разметке — это часть подписи,
+   а не украшение. */
+.filter__name {
+  flex: none;
+  font-family: var(--mono);
+  font-size: max(12px, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  white-space: nowrap;
+}
+
 /* Линия под полосой заголовка. В строчном виде её чертит сама полоса: у
    строки списка есть граница снизу, но не сверху, и снизу полосы иначе не
    было бы ничего.
@@ -1391,8 +1470,8 @@ main > .head--backbar:first-child { border-top: 0; }
    часов: в ней стояли списки и кнопка вида, а поиск — в заголовке. Когда
    поиск уехал в шапку, отбор поднялся на его место, и второй полосе не
    осталось содержимого. */
-:root[data-view='grid'] .head--page { border-bottom: 0; }
-:root[data-view='grid'] .head--page[data-stuck] {
+:root[data-view='grid'] .filters-row { border-bottom: 0; }
+:root[data-view='grid'] .filters-row[data-stuck] {
   border-bottom: 1px solid var(--line);
 }
 
@@ -1405,7 +1484,7 @@ main > .head--backbar:first-child { border-top: 0; }
 
 /* И когда отбор ничего не нашёл: ряда обложек под полосой нет вовсе, чертить
    линию некому, а полоса без низа обрывается в пустоту. */
-:root[data-view='grid'] .head--page:has(+ .empty:not([hidden])) {
+:root[data-view='grid'] .filters-row:has(+ .empty:not([hidden])) {
   border-bottom: 1px solid var(--line);
 }
 
@@ -1417,11 +1496,11 @@ main > .head--backbar:first-child { border-top: 0; }
    Через соседний селектор, а не классом на списке: правило описывает не
    список сам по себе, а список под новой полосой. Артисты, лейблы и жанры
    пока со старой и остаются как были. */
-.head--page ~ .releases {
+.filters-row ~ .releases {
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
 }
-.head--page ~ .releases .row {
+.filters-row ~ .releases .row {
   padding-left: calc(var(--pad) + 1px);
   padding-right: var(--pad);
 }
@@ -1443,15 +1522,15 @@ main > .head--backbar:first-child { border-top: 0; }
    В плиточном виде сдвигать нечего: у обложек границы снизу нет, там линию
    под последним рядом чертит только полоса. Отсюда и :not — вид по
    умолчанию строчный и в атрибуте не записан. */
-:root:not([data-view='grid']) .head--page ~ .more { margin-top: -1px; }
+:root:not([data-view='grid']) .filters-row ~ .more { margin-top: -1px; }
 
 /* Та же беда у подвала, когда «показать ещё» уже нечего показывать и кнопки
    нет: граница последней строки упирается в верхнюю границу подвала. Сдвиг
    тот же. На короткой странице подвал и так отжат вниз растяжкой, и сдвиг
    там ничего не меняет. */
-:root:not([data-view='grid']) body:has(.head--page) .foot { margin-top: -1px; }
+:root:not([data-view='grid']) body:has(.filters-row) .foot { margin-top: -1px; }
 
-.head--page ~ .more {
+.filters-row ~ .more {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1495,53 +1574,14 @@ main > .head--backbar:first-child { border-top: 0; }
 
    Без скрипта кнопки нет: сервер отдаёт всем один и тот же список, и
    переключать некому. */
-/* Квадрат 34 на 34 без рамки — тот же орган, что кнопка темы в шапке.
-   Значок вместо подписи: кнопка стоит в одном ряду с четырьмя списками
-   отбора, и «Show grid» в сотню пикселей перевешивал бы их. */
-.view-toggle {
-  display: none;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 2.125rem;
-  height: 2.125rem;
-  padding: 0;
-  color: var(--fg-muted);
-  background: none;
-  border: 0;
-  /* Правое поле отрицательное по той же причине, что у кнопки темы: без
-     рамки правым краем стала краска, а она сидит в середине квадрата. */
-  margin-right: calc((2.125rem - 1.25rem) / -2);
-  cursor: pointer;
-}
-[data-js] .view-toggle { display: inline-flex; }
-.view-toggle__icon { width: 1.25rem; height: 1.25rem; }
-
-@media (hover: hover) {
-  .view-toggle:hover { color: var(--fg); }
-}
-.view-toggle:focus-visible,
-.view-toggle:active { color: var(--fg); }
-
-:root[data-view='list'] .view-toggle__list,
-:root[data-view='grid'] .view-toggle__grid { display: none; }
+/* Правила .view-toggle удалены 5 сентября 2026. Вид больше не кнопка: он
+   стал четвёртым столбцом отбора — обычным выпадающим списком, как
+   сортировка. Кнопка успела побыть подписью «Show grid» и значком, и обе
+   выпадали из ряда: рядом с тремя списками орган другого вида читался
+   особым случаем, хотя выбирает ровно так же — одно значение из двух.
+   Контуры squares-four и rows ушли из Icon.astro вместе с ней. */
 
 .search { position: relative; }
-
-/* Поле в шапке — единственное место поиска на сайте. Ширина названа числом,
-   а не долей: шапка выложена флексом с меню посередине абсолютом, и растущее
-   поле сдвигало бы кнопку темы, а меню осталось бы на месте.
-
-   Прижато к правому краю вместе с кнопкой темы: margin-left: auto стоит на
-   нём, а не на кнопке, иначе между ними не осталось бы просвета. */
-.masthead .search {
-  flex: none;
-  width: 18rem;
-  margin-left: auto;
-}
-/* Своего поля слева у кнопки темы нет: просвет до поля поиска держит общий
-   gap полосы, а лишнее поле разводило бы их на сорок с лишним. */
-.masthead .theme-toggle { margin-left: 0; }
 
 /* Поля по краям оставлены под лупу слева и клавишу справа. */
 .search input {
@@ -1901,6 +1941,32 @@ select option { background: var(--option-bg); color: var(--fg); }
    случая, когда прятать нельзя: пункт отмечен, а под остальным отбором в нём
    нет ни одной записи — снять с него флажок иначе было бы нечем. */
 .multi__item[data-empty] { color: var(--fg-dim); }
+
+/* Подзаголовок списка в панели — приём из полосы отбора Ghostly: имя оси, а
+   под ним её значения. Виден только когда списков в панели несколько: тип и
+   жанр стоят в одной, и без имён два списка подряд читались бы одним.
+
+   Набран как счётчики — моноширинным, мельче и приглушённым: это метка, а
+   не пункт, и по весу она должна уступать тому, что под ней. Поле слева то
+   же, что у пунктов, чтобы столбик не ломался. */
+.multi__head {
+  margin: 0;
+  padding: 0.625rem var(--select-pad) 0.3125rem;
+  font-family: var(--mono);
+  font-size: max(12px, 0.6875rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+/* Между списками мягкая черта — та же, что между строками индекса. У
+   первого её нет: над ним край панели. */
+.multi__group + .multi__group .multi__head {
+  margin-top: 0.3125rem;
+  padding-top: 0.625rem;
+  border-top: 1px solid var(--line-soft);
+}
 
 .multi__none {
   margin: 0;
@@ -2928,12 +2994,6 @@ select option { background: var(--option-bg); color: var(--fg); }
   .controls__top { flex-wrap: wrap; row-gap: 0.5rem; }
   .controls__top .search { flex: 1 0 100%; }
 
-  /* Кнопка вида — первой в ряду, хотя в разметке она последняя: на широком
-     экране она замыкает строку справа, а здесь ряд уезжает вбок, и
-     замыкающий элемент оказался бы за краем экрана. Она не отбор, листать
-     до неё незачем. */
-  .view-toggle { order: -1; }
-
   /* Раз ряд уезжает за поля кадра, за ними же должен лежать и фон липкой
      полосы. Иначе по шестнадцать пикселей у каждого края остаются
      непокрытыми, и сквозь них при прокрутке едут обложки — фон полосы
@@ -2958,6 +3018,20 @@ select option { background: var(--option-bg); color: var(--fg); }
     top: calc(var(--head-h) + var(--bar-h));
   }
 
+  /* Полоса отбора на телефоне разворачивается в четыре строки: в 375 её
+     столбцы выходят по 94, и в такой не влезает ни подпись, ни список.
+     Дивайдеры при этом из вертикальных становятся горизонтальными.
+
+     Как и всё мобильное на этих страницах — до отдельного захода. */
+  .filters-row {
+    top: calc(var(--head-h) + var(--bar-h) * 2);
+    grid-template-columns: 1fr;
+    height: auto;
+    background-image: none;
+  }
+  .filter { height: var(--filters-h); }
+  .filter + .filter { border-top: 1px solid var(--line); }
+
   .head.head--page { height: calc(var(--bar-h) * 2); }
   .head--page .head__lead,
   .head--page .head__side { height: var(--bar-h); }
@@ -2976,14 +3050,6 @@ select option { background: var(--option-bg); color: var(--fg); }
     padding-inline: var(--pad);
   }
 
-  /* Поиск в шапке занимает свою строку целиком: в одну строку с логотипом,
-     темой и бургером он не встаёт — на 375 им втроём остаётся сотня. Порядок
-     последний, поэтому строка выходит второй. */
-  .masthead .search {
-    order: 3;
-    width: 100%;
-    margin-left: 0;
-  }
 
   .filters__group::-webkit-scrollbar { display: none; }
 

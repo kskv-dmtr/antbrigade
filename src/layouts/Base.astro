@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
-import SearchField from '../components/SearchField.astro';
 
 /* cardTitle — заголовок для карточки, которая разворачивается при отправке
    ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
@@ -15,7 +14,7 @@ import SearchField from '../components/SearchField.astro';
    noindex — страница не для выдачи. Сейчас такая одна, 404: хостинг отдаёт
    её с кодом 404, и поисковик её и так не возьмёт, но сам файл лежит ещё и
    по адресу /404 и оттуда отвечает обычным «двухсотым». */
-const { title, description, activeSection, cardTitle, image, noindex, search } = Astro.props;
+const { title, description, activeSection, cardTitle, image, noindex } = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
    ссылка в никуда хуже отсутствующего пункта.
@@ -200,16 +199,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           </a>
         ))}
       </nav>
-
-      {/* Поиск живёт в шапке, а не на странице: ищут по каталогу, а не по
-          тому, что сейчас открыто, и место у поля одно на весь сайт.
-          Отдаётся страницами через параметр search — там лежит подпись для
-          экранного диктора, у каждого списка своя. Нет параметра — нет и
-          поля: на странице релиза искать нечего.
-
-          Стоит левее переключателя темы: тема и меню — про сайт целиком,
-          поиск — про содержимое, и он ближе к нему. */}
-      {search && <SearchField label={search} />}
 
       {/* Переключатель темы — последним в разметке, после меню.
 

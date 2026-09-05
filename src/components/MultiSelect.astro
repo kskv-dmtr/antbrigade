@@ -19,8 +19,15 @@ const {
   label,        // для screen reader: «Genre»
   allLabel,     // подпись, когда не выбрано ничего: «All genres»
   manyLabel,    // подпись, когда выбрано несколько: «Genres»
-  items = []    // [{ value, label, count }]
+  items = [],   // [{ value, label, count }] — один список без подзаголовка
+  axis,         // имя оси отбора для такого списка
+  groups        // [{ label, axis, items }] — несколько списков с подзаголовками
 } = Astro.props;
+
+/* Одиночный список и есть частный случай группы — без подзаголовка. Так в
+   разметке всегда .multi__group, и скрипту страницы не нужно знать, какой
+   из двух видов перед ним. */
+const блоки = groups ?? [{ label: null, axis, items }];
 ---
 <details class="multi" id={id} data-all={allLabel} data-many={manyLabel}>
   <summary class="multi__button" aria-label={label}>
@@ -42,14 +49,26 @@ const {
 
   <div class="multi__panel">
     <div class="multi__list">
-      {items.map((item) => (
-        <label class="multi__item">
-          <input type="checkbox" value={item.value} />
-          <span class="multi__name">{item.label}</span>
-          {/* Счёт отдельным узлом: страница пересчитывает его при каждой
-              смене отбора, а имя не трогает. */}
-          <span class="multi__count">({item.count})</span>
-        </label>
+      {блоки.map((блок) => (
+        <div class="multi__group">
+          {/* Подзаголовок — как колонки отбора у Ghostly: «Type:», «Genre:».
+              Нужен только когда списков в панели несколько; у одиночного
+              его нет, и лишней строки в панели не появляется. */}
+          {блок.label && <p class="multi__head">{блок.label}</p>}
+
+          {блок.items.map((item) => (
+            <label class="multi__item">
+              {/* Ось пишем на самом флажке: панель одна, а отбирают по ней
+                  два разных признака, и странице надо знать, какой из них
+                  человек тронул. */}
+              <input type="checkbox" value={item.value} data-axis={блок.axis} />
+              <span class="multi__name">{item.label}</span>
+              {/* Счёт отдельным узлом: страница пересчитывает его при каждой
+                  смене отбора, а имя не трогает. */}
+              <span class="multi__count">({item.count})</span>
+            </label>
+          ))}
+        </div>
       ))}
 
       {/* Видно, когда под текущий отбор не подходит ни один пункт: пустая

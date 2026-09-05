@@ -4,6 +4,9 @@ import PageBar from '../components/PageBar.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
+import SearchField from '../components/SearchField.astro';
+import FilterBar from '../components/FilterBar.astro';
+import FilterCell from '../components/FilterCell.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import { albums } from '../lib/db.js';
@@ -56,7 +59,6 @@ const PAGE = 50;
   title="Music · ant brigade"
   description={`All ${albums.length} releases in the collection: covers, genres, labels and links to listen.`}
   activeSection="albums"
-  search="Search by artist or album"
 >
   {/* До выполнения скрипта видны все записи — число в полосе совпадает с
       тем, что скрипт поставит первым же расчётом. */}
@@ -70,22 +72,35 @@ const PAGE = 50;
       выбирать позволяла только одно и требовала второго контрола на узком
       экране — списка, который теперь один на все ширины. */}
   <PageBar title="Music" count={albums.length} live>
-    <div class="filters__group">
-      {/* Тип, жанр и год выбираются пачкой. Отбор — «любой из отмеченных»,
-          а не «все сразу»: у релиза бывает и два типа, и три жанра, и
-          пересечение почти всегда пусто. */}
-      <MultiSelect id="type" label="Release type" allLabel="All types" manyLabel="Types"
-                   items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
+    <SearchField label="Search by artist or album" />
+  </PageBar>
 
-      <MultiSelect id="genre" label="Genre" allLabel="All genres" manyLabel="Genres"
-                   items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
+  {/* Отбор — отдельной строкой в четыре столбца, по столбцам решётки. */}
+  <FilterBar>
+    {/* Тип и жанр — одной панелью в двух списках с подзаголовками: оба
+        отвечают на «что это за музыка», а год — на «когда вышло». Отбор
+        внутри — «любой из отмеченных», а не «все сразу»: у релиза бывает и
+        два типа, и три жанра, и пересечение почти всегда пусто. */}
+    <FilterCell name="Type and genre:">
+      <MultiSelect id="tg" label="Type and genre"
+                   allLabel="All" manyLabel="Chosen"
+                   groups={[
+                     { label: 'Type', axis: 'type',
+                       items: types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 })) },
+                     { label: 'Genre', axis: 'genre',
+                       items: genres.map(([g, n]) => ({ value: g, label: g, count: n })) }
+                   ]} />
+    </FilterCell>
 
-      <MultiSelect id="year" label="Year" allLabel="All years" manyLabel="Years"
+    <FilterCell name="Year:">
+      <MultiSelect id="year" label="Year" allLabel="All" manyLabel="Chosen" axis="year"
                    items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
+    </FilterCell>
 
-      {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
-          подписи — та же, что у списков A → Z на /artists, /labels и
-          /genres, чтобы направление читалось одинаково везде. */}
+    {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
+        подписи — та же, что у списков A → Z на /artists, /labels и
+        /genres, чтобы направление читалось одинаково везде. */}
+    <FilterCell name="Sort by:">
       <Select id="sort" label="Sorting">
         <option value="new">Newest first</option>
         <option value="old">Oldest first</option>
@@ -94,10 +109,10 @@ const PAGE = 50;
         <option value="album-az">Albums A → Z</option>
         <option value="album-za">Albums Z → A</option>
       </Select>
-    </div>
+    </FilterCell>
 
-    <ViewSwitch />
-  </PageBar>
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
+  </FilterBar>
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
       осталась вторым видом: в каталоге пластинок обложка — это тоже
@@ -139,8 +154,9 @@ const PAGE = 50;
   const counter = document.getElementById('counter');
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
-  const typeEl  = document.getElementById('type');
-  const genreEl = document.getElementById('genre');
+  /* Тип и жанр живут в одной панели, поэтому элемент один, а осей в нём
+     две: различает их data-axis на флажке. */
+  const tgEl    = document.getElementById('tg');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
   const more    = document.getElementById('more');
@@ -214,27 +230,38 @@ const PAGE = 50;
       }
     }
 
-    paint(typeEl, byType);
-    paint(genreEl, byGenre);
-    paint(yearEl, byYear);
+    paint(tgEl, { type: byType, genre: byGenre });
+    paint(yearEl, { year: byYear });
   }
 
-  function paint(root, counts) {
+  /* Панель может держать несколько списков — тип и жанр стоят в одной. Счёт
+     каждому берём по его оси: карты приходят пачкой, ключ в ней — та же
+     ось, что записана на флажке. */
+  function paint(root, карты) {
     let shown = 0;
 
-    for (const item of root.querySelectorAll('.multi__item')) {
-      const box = item.querySelector('input');
-      const n = counts.get(box.value) || 0;
-      item.querySelector('.multi__count').textContent = `(${n})`;
+    for (const group of root.querySelectorAll('.multi__group')) {
+      let видно = 0;
 
-      /* Пункт с нулём прячем — выбирать в нём нечего. Но только пока он не
-         отмечен: отмеченный с нулём случается (отметили год, потом жанр,
-         которого в том году нет), и, спрятав его, мы отняли бы
-         единственный способ снять флажок. Такой остаётся видимым и
-         приглушается. */
-      item.hidden = n === 0 && !box.checked;
-      if (!item.hidden) shown++;
-      if (n) delete item.dataset.empty; else item.dataset.empty = 'yes';
+      for (const item of group.querySelectorAll('.multi__item')) {
+        const box = item.querySelector('input');
+        const n = карты[box.dataset.axis]?.get(box.value) || 0;
+        item.querySelector('.multi__count').textContent = `(${n})`;
+
+        /* Пункт с нулём прячем — выбирать в нём нечего. Но только пока он не
+           отмечен: отмеченный с нулём случается (отметили год, потом жанр,
+           которого в том году нет), и, спрятав его, мы отняли бы
+           единственный способ снять флажок. Такой остаётся видимым и
+           приглушается. */
+        item.hidden = n === 0 && !box.checked;
+        if (!item.hidden) видно++;
+        if (n) delete item.dataset.empty; else item.dataset.empty = 'yes';
+      }
+
+      /* Список, в котором не осталось ни одного пункта, прячем вместе с
+         подзаголовком: заголовок над пустотой читается поломкой. */
+      group.hidden = видно === 0;
+      shown += видно;
     }
 
     root.querySelector('.multi__none').hidden = shown > 0;
@@ -309,11 +336,15 @@ const PAGE = 50;
      Select — здесь об этом заботиться не нужно. */
   /* Блоки отбора отдают обычное change, как отдавал <select>; читаем из них
      не одно значение, а список отмеченных. */
-  const marked = (root) => [...root.querySelectorAll('input:checked')].map((b) => b.value);
+  const marked = (root, axis) =>
+    [...root.querySelectorAll(`input[data-axis="${axis}"]:checked`)].map((b) => b.value);
 
-  typeEl.addEventListener('change',  () => { state.types  = marked(typeEl);  rewind(); apply(); });
-  genreEl.addEventListener('change', () => { state.genres = marked(genreEl); rewind(); apply(); });
-  yearEl.addEventListener('change',  () => { state.years  = marked(yearEl);  rewind(); apply(); });
+  tgEl.addEventListener('change', () => {
+    state.types  = marked(tgEl, 'type');
+    state.genres = marked(tgEl, 'genre');
+    rewind(); apply();
+  });
+  yearEl.addEventListener('change', () => { state.years = marked(yearEl, 'year'); rewind(); apply(); });
   sortEl.addEventListener('change',  () => {
     state.sort = sortEl.value;
     sort(); rewind(); apply();

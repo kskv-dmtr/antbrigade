@@ -4,6 +4,9 @@ import PageBar from '../components/PageBar.astro';
 import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
 import Select from '../components/Select.astro';
+import SearchField from '../components/SearchField.astro';
+import FilterBar from '../components/FilterBar.astro';
+import FilterCell from '../components/FilterCell.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
@@ -42,6 +45,12 @@ const rank = (k) => {
 const kindCounts = new Map();
 for (const v of videos) if (v.kind) kindCounts.set(v.kind, (kindCounts.get(v.kind) || 0) + 1);
 
+/* Год — четвёртый столбец отбора, как на Music. Годов у клипов немного, и
+   список в панели выходит короче, чем у релизов. */
+const yearCounts = new Map();
+for (const v of videos) if (v.year) yearCounts.set(v.year, (yearCounts.get(v.year) || 0) + 1);
+const years = [...yearCounts.keys()].sort((a, b) => b - a);
+
 const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
   .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
   .map((value) => ({ value, label: KIND_LABELS.get(value.toLowerCase()) ?? value }));
@@ -64,25 +73,29 @@ const PAGE = 50;
   title="Videos · ant brigade"
   description={`${videos.length} music videos and live sets from the collection.`}
   activeSection="videos"
-  search="Search by artist or title"
 >
   {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
       все клипы — значение в полосе совпадает с первым расчётом. */}
-  {/* Управление устроено как на Music: отбор, сортировка и вид — в правой
-      половине полосы заголовка, поиск — в шапке. */}
   <PageBar title="Videos" count={videos.length} live>
-    <div class="filters__group">
-      {/* Вид ролика — такой же список с множественным выбором, как тип
-          релиза на Music. Полоса кнопок стояла здесь до 3 сентября 2026 и
-          требовала второго контрола на узком экране; список один на все
-          ширины и позволяет отметить сразу несколько видов. */}
-      <MultiSelect id="kind" label="Video kind" allLabel="All types" manyLabel="Types"
-                   items={kinds.map((k) => ({ value: k.value, label: k.label, count: kindCounts.get(k.value) ?? 0 }))} />
+    <SearchField label="Search by artist or title" />
+  </PageBar>
 
-      {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
-          алфавиту, и у каждой оси обе стороны. По умолчанию тоже как на
-          Music — «Newest first»: с ним страница открывается и к нему
-          возвращает Reset. */}
+  {/* Отбор устроен как на Music, только вместо типа с жанром — вид ролика:
+      жанров у клипов нет. */}
+  <FilterBar>
+    <FilterCell name="Type:">
+      <MultiSelect id="kind" label="Video kind" allLabel="All" manyLabel="Chosen" axis="kind"
+                   items={kinds.map((k) => ({ value: k.value, label: k.label, count: kindCounts.get(k.value) ?? 0 }))} />
+    </FilterCell>
+
+    <FilterCell name="Year:">
+      <MultiSelect id="year" label="Year" allLabel="All" manyLabel="Chosen" axis="year"
+                   items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
+    </FilterCell>
+
+    {/* Порядок пунктов тот же, что на Music: сначала по дате, потом по
+        алфавиту, и у каждой оси обе стороны. */}
+    <FilterCell name="Sort by:">
       <Select id="sort" label="Sorting">
         <option value="new" selected>Newest first</option>
         <option value="old">Oldest first</option>
@@ -91,10 +104,10 @@ const PAGE = 50;
         <option value="title-az">Titles A → Z</option>
         <option value="title-za">Titles Z → A</option>
       </Select>
-    </div>
+    </FilterCell>
 
-    <ViewSwitch />
-  </PageBar>
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
+  </FilterBar>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
@@ -106,6 +119,7 @@ const PAGE = 50;
         class="release"
         data-search={fold(`${videoArtists(v)} ${videoTitle(v)}`)}
         data-kind={v.kind ?? ''}
+        data-year={v.year ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
         data-title={videoTitle(v).toLowerCase()}
         data-released={v.released ?? ''}
@@ -130,12 +144,13 @@ const PAGE = 50;
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
   const kindEl  = document.getElementById('kind');
+  const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
   const more    = document.getElementById('more');
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', kinds: [] };
+  const state = { q: '', kinds: [], years: [] };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -155,7 +170,8 @@ const PAGE = 50;
     for (const el of current) {
       const d = el.dataset;
       const ok = (!state.q || d.search.includes(state.q)) &&
-                 (!state.kinds.length || state.kinds.includes(d.kind));
+                 (!state.kinds.length || state.kinds.includes(d.kind)) &&
+                 (!state.years.length || state.years.includes(d.year));
       if (ok) shown++;
       el.hidden = !ok || shown > limit;
     }
@@ -217,11 +233,11 @@ const PAGE = 50;
 
   /* Отбор по виду отдаёт обычное change, как отдавал список; читаем из
      него не одно значение, а перечень отмеченных. */
-  kindEl.addEventListener('change', () => {
-    state.kinds = [...kindEl.querySelectorAll('input:checked')].map((b) => b.value);
-    rewind();
-    apply();
-  });
+  const marked = (root, axis) =>
+    [...root.querySelectorAll(`input[data-axis="${axis}"]:checked`)].map((b) => b.value);
+
+  kindEl.addEventListener('change', () => { state.kinds = marked(kindEl, 'kind'); rewind(); apply(); });
+  yearEl.addEventListener('change', () => { state.years = marked(yearEl, 'year'); rewind(); apply(); });
 
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });

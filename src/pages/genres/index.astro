@@ -87,14 +87,16 @@ const PAGE = 50;
             data-count={genre.count}
             data-letter={letter}
           >
-            {/* Раскладка та же, что у артистов, но столбцов занято два:
-                страны у жанра нет, клипов и исполнителей тоже — считается
-                только число релизов. Четвёртый столбец остаётся пустым. */}
+            {/* Раскладка та же, что у артистов, но считать у жанра нечего,
+                кроме релизов, — и счётчик занимает оба оставшихся столбца:
+                подпись у третьей перемычки, число у правого края экрана.
+                Пустой четвёртый столбец рядом с занятым третьим читался бы
+                недосмотром. */}
             <a class="row row--index" href={`/genres/${genre.slug}`}>
               <span class="row__lead">
                 <span class="row__title">{genre.name}</span>
               </span>
-              <span class="row__meta">
+              <span class="row__meta row__meta--wide">
                 <span class="row__key">releases:</span>
                 <span class="row__val">[{genre.count}]</span>
               </span>

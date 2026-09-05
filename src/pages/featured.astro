@@ -64,8 +64,9 @@ const yearCounts = new Map();
 for (const a of featured) if (a.year) yearCounts.set(a.year, (yearCounts.get(a.year) || 0) + 1);
 const years = [...yearCounts.keys()].sort((a, b) => b - a);
 
-// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
-const PAGE = 50;
+/* Столько же, сколько на Music: сорок восемь делится на любое число
+   столбцов решётки. */
+const PAGE = 48;
 ---
 <Base
   title="Featured · ant brigade"

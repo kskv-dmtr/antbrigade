@@ -1,38 +1,33 @@
 ---
-/* Вид списка — четвёртым органом в ряду отбора, обычным выпадающим списком.
+/* Вид списка — парой через косую черту, как «View As: Grid/List» у Ghostly.
 
-   Раньше это была кнопка: сперва с подписью «Show grid», потом значком.
-   Обе выпадали из ряда — рядом с тремя списками отбора орган другого вида
-   читался особым случаем, хотя выбирает ровно так же: одно значение из
-   двух. Приём взят у Ghostly: «View As» стоит там в той же полосе, что и
-   сам отбор.
+   Не выпадающим списком: значений всего два, и прятать одно из них под
+   раскрытие — лишнее движение ради выбора, который делается взглядом. Оба
+   стоят на виду, текущее выделено цветом, второе приглушено и нажимается.
+
+   Список был здесь 5 сентября 2026 несколько часов, до него — кнопка со
+   значком, а до неё кнопка с подписью «Show grid». Все три прятали половину
+   выбора.
 
    Вид общий для всего сайта: висит в data-view на <html> и запоминается в
-   localStorage, как тема. Список только переключает — то, чем он
-   управляет, шире одной страницы.
-
-   Значение проставляет встроенный скрипт, а не сервер: сервер один на всех,
-   а вид у каждого свой. Скрипт inline и стоит сразу за списком, поэтому
-   успевает до первой отрисовки — страница, открытая с плитками, не мигнёт
-   подписью «List». */
-
-import Select from './Select.astro';
+   localStorage, как тема. Какой сейчас — решает CSS по тому же атрибуту,
+   поэтому подсветка верна уже на первой отрисовке, до всякого скрипта. */
 ---
-<Select id="view" label="View">
-  <option value="list">List</option>
-  <option value="grid">Grid</option>
-</Select>
+<span class="view-pick">
+  <button type="button" class="view-pick__opt" data-view-opt="grid">Grid</button>
+  <span class="view-pick__slash" aria-hidden="true">/</span>
+  <button type="button" class="view-pick__opt" data-view-opt="list">List</button>
+</span>
 
-<script is:inline>
-  (function () {
-    var список = document.getElementById('view');
-    if (!список) return;
+<script>
+  /* Скрипт собирается один раз на страницу, сколько бы таких пар на ней ни
+     стояло. */
+  for (const кнопка of document.querySelectorAll('.view-pick__opt')) {
+    кнопка.addEventListener('click', () => {
+      const вид = кнопка.dataset.viewOpt;
 
-    список.value = document.documentElement.dataset.view === 'grid' ? 'grid' : 'list';
-
-    список.addEventListener('change', function () {
-      document.documentElement.dataset.view = список.value;
-      try { localStorage.setItem('view', список.value); } catch (e) {}
+      document.documentElement.dataset.view = вид;
+      try { localStorage.setItem('view', вид); } catch (e) {}
     });
-  })();
+  }
 </script>

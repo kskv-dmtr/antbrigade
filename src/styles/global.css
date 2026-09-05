@@ -1208,7 +1208,8 @@ main > .head--backbar:first-child { border-top: 0; }
 }
 .head__side .search input:focus-visible { border: 0; }
 .head__side .search__icon { left: var(--pad); }
-.head__side .search__key { right: var(--pad); }
+.head__side .search__key,
+.head__side .search__clear { right: var(--pad); }
 
 /* Заплата повторяет поле, а перед плитками оно 24. */
 .head--sticky:has(+ .tiles)::after { height: 1.5rem; }
@@ -1430,7 +1431,16 @@ main > .head--backbar:first-child { border-top: 0; }
   z-index: 10;
   display: flex;
   align-items: stretch;
-  height: var(--filters-h);
+
+  /* Переносом, а не прокруткой: пяти отборам со словом слева нужно около
+     восьмисот, и на 780 ряд уезжал за край экрана вместе со страницей.
+     Прокрутка внутри полосы обрезала бы раскрытую панель отбора — она
+     лежит в потоке полосы, — а перенос просто отдаёт ряду вторую строку.
+     Высота тогда 96 вместо 48; полоса в потоке, и содержимое под ней
+     сдвигается само. */
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  min-height: var(--filters-h);
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
   background: var(--bg);
@@ -1442,7 +1452,11 @@ main > .head--backbar:first-child { border-top: 0; }
    тому, что она отбирает. Поле слева на пиксель больше — там сдвиг полосы. */
 .filters-row__name {
   flex: none;
-  align-self: center;
+  display: flex;
+  align-items: center;
+  /* Минус линия снизу: полоса считается по границе, и без вычета строка
+     выходила на пиксель выше сорока восьми. */
+  min-height: calc(var(--filters-h) - 1px);
   padding-left: calc(var(--pad) + 1px);
   font-family: var(--mono);
   font-size: max(12px, 0.75rem);
@@ -1460,6 +1474,7 @@ main > .head--backbar:first-child { border-top: 0; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  min-height: calc(var(--filters-h) - 1px);
   margin-left: auto;
   padding-right: var(--pad);
 }
@@ -1471,6 +1486,48 @@ main > .head--backbar:first-child { border-top: 0; }
   gap: 0.5rem;
   min-width: 0;
 }
+
+/* Вид — парой через косую черту. Просвет вокруг черты в четыре пикселя:
+   вплотную «Grid/List» слипалось в одно слово, а на общих восьми пара
+   распадалась на три отдельных надписи. Текущее значение цветом основного
+   текста, второе приглушено — как выбранный и невыбранный пункт в панели
+   отбора. */
+.view-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--mono);
+  font-size: max(12px, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.view-pick__opt {
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.view-pick__slash { color: var(--fg-dim); }
+
+/* Текущий вид выделен. Без скрипта атрибута на <html> нет, и выделенным
+   остаётся список — тот самый вид, с которым страница и приходит. */
+:root[data-view='grid'] .view-pick__opt[data-view-opt='grid'],
+:root:not([data-view='grid']) .view-pick__opt[data-view-opt='list'] {
+  color: var(--fg);
+  cursor: default;
+}
+
+@media (hover: hover) {
+  .view-pick__opt:hover { color: var(--fg); }
+}
+.view-pick__opt:focus-visible,
+.view-pick__opt:active { color: var(--fg); }
 
 /* Имя набрано как счётчики: моноширинным, приглушённым, тем же кеглем, что
    подписи по всему проекту. Двоеточие лежит в разметке — это часть подписи,
@@ -1665,7 +1722,8 @@ main > .head--backbar:first-child { border-top: 0; }
 /* Лупа слева, клавиша справа. pointer-events: none у обеих — чтобы клик по
    ним попадал в поле, а не в саму метку. */
 .search__icon,
-.search__key {
+.search__key,
+.search__clear {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1683,8 +1741,13 @@ main > .head--backbar:first-child { border-top: 0; }
 
    Поле справа равно полю сверху и снизу: высота поля 34, квадрат 22, и по
    вертикали остаётся ровно по шесть — столько же отмеряем справа. Прежние
-   десять читались как разные отступы у одного и того же знака. */
-.search__key {
+   десять читались как разные отступы у одного и того же знака.
+
+   Подсказка «Type / to search» вместо простого «Search» простояла в поле
+   5 сентября 2026 около часа и убрана: строка вышла длинной, а клавиша в
+   середине фразы читалась частью текста, а не отдельным знаком. */
+.search__key,
+.search__clear {
   right: 0.375rem;
   display: flex;
   align-items: center;
@@ -1693,6 +1756,30 @@ main > .head--backbar:first-child { border-top: 0; }
   height: 1.375rem;
   border: 1px solid var(--line);
 }
+
+/* Крестик и клавиша занимают один угол и меняются: пока поле пусто —
+   клавиша, как только набрано — крестик, и он же сбрасывает. Тот же приём,
+   что у списков отбора.
+
+   Без скрипта крестика нет: сбрасывать некому, да и сам отбор без скрипта
+   не работает. */
+.search__clear {
+  display: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.search__x { width: 0.6875rem; height: 0.6875rem; }
+
+[data-js] .search input:not(:placeholder-shown) ~ .search__clear { display: flex; }
+.search input:not(:placeholder-shown) ~ .search__key { display: none; }
+
+@media (hover: hover) {
+  .search__clear:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+}
+.search__clear:focus-visible,
+.search__clear:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
 .search:focus-within .search__icon { color: var(--fg-muted); }
 

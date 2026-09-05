@@ -1,11 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
-import NameTile from '../../components/NameTile.astro';
 import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
-import ViewSwitch from '../../components/ViewSwitch.astro';
+import PageBar from '../../components/PageBar.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
-import { artists, albumsOf } from '../../lib/db.js';
+import { artists } from '../../lib/db.js';
 import { fold } from '../../lib/fold.js';
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
@@ -36,12 +37,13 @@ const PAGE = 50;
   description={`${artists.length} artists in the collection.`}
   activeSection="artists"
 >
-  <div class="page-head">
-    {/* Счётчика в шапке нет намеренно: числа на этой странице живут в самих
-        строках — сколько релизов у артиста. Ещё одно число рядом с фильтрами
-        считало бы другое и о том же. */}
-    <h1>Artists</h1>
-  </div>
+  {/* Счётчик в полосе — тот же, что на Music: пока ничего не отсеяно, одно
+      число, дальше «сколько из скольких». Прежде его здесь не было: числа
+      живут и в самих строках, — но там счёт другой, релизов, а этот про то,
+      сколько имён осталось после отбора. */}
+  <PageBar title="Artists" count={artists.length} live>
+    <SearchField label="Search by artist name" />
+  </PageBar>
 
   {/* Всё управление в липкой полосе, одинаково на списках релизов, артистов,
       лейблов и жанров: и поиск, и буквы, и сортировка возвращаются на экран
@@ -52,29 +54,28 @@ const PAGE = 50;
       двадцати восьми букв стояла отдельной строкой ниже и удалена 3
       сентября 2026: тот же выбор делает список «All letters» в общем
       ряду, и целая строка под него больше не нужна. */}
-  <div class="sticky-bar">
-    <div class="controls__top">
-      <SearchField label="Search by artist name" />
-      <div class="filters__group filters__group--end">
-        {/* Первая буква — такой же отбор с множественным выбором, как типы,
-            жанры и годы на Music: можно отметить сразу несколько. Полоса из
-            двадцати восьми кнопок стояла здесь до 3 сентября 2026 и занимала
-            собой целую строку ради того же выбора. */}
-        <MultiSelect id="letter" label="First letter" allLabel="All letters" manyLabel="Letters"
-                     items={ordered.map(([letter, items]) => ({ value: letter, label: letter, count: items.length }))} />
+  {/* Отбора по виду здесь нет: имена показываются только списком. Плитки с
+      именем и обложками релизов стояли вторым видом до 5 сентября 2026 —
+      в них не было ничего, чего нет в строке, а места они занимали вчетверо
+      больше. */}
+  <FilterBar>
+    {/* Первая буква — такой же отбор с множественным выбором, как тип, жанр
+        и год на Music: можно отметить сразу несколько. Полоса из двадцати
+        восьми кнопок стояла здесь до 3 сентября 2026 и занимала собой целую
+        строку ради того же выбора. */}
+    <FilterCell name="Letter:">
+      <MultiSelect id="letter" label="First letter" allLabel="All" manyLabel="Chosen" axis="letter"
+                   items={ordered.map(([letter, items]) => ({ value: letter, label: letter, count: items.length }))} />
+    </FilterCell>
 
-        <Select id="sort" label="Sorting" class="select--az">
-          <option value="az">A → Z</option>
-          <option value="za">Z → A</option>
-          <option value="releases">Most releases</option>
-        </Select>
-
-        <ViewSwitch />
-
-      </div>
-    </div>
-
-  </div>
+    <FilterCell name="Sort by:">
+      <Select id="sort" label="Sorting" class="select--az">
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+        <option value="releases">Most releases</option>
+      </Select>
+    </FilterCell>
+  </FilterBar>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>
 
@@ -93,17 +94,27 @@ const PAGE = 50;
             data-count={a.albumIds.length}
             data-letter={letter}
           >
-            <a class="row row--name view-row" href={`/artists/${a.slug}`}>
-              <span class="row__title">{a.name}</span>
-              <span class="row__num">{a.albumIds.length ? `[${a.albumIds.length}]` : ''}</span>
+            {/* Строка стоит по столбцам решётки, как на Music: имя занимает
+                первые два, счёт релизов третий, счёт клипов четвёртый. В
+                каждом счётчике подпись слева, число справа — по краям
+                своего столбца.
+
+                Страна из строки убрана: код из двух букв ничего не говорил
+                о самом исполнителе и висел посреди строки третьим родом
+                сведений. Она осталась на странице артиста. */}
+            <a class="row row--index" href={`/artists/${a.slug}`}>
+              <span class="row__lead">
+                <span class="row__title">{a.name}</span>
+              </span>
+              <span class="row__meta">
+                <span class="row__key">releases:</span>
+                <span class="row__val">[{a.albumIds.length}]</span>
+              </span>
+              <span class="row__num">
+                <span class="row__key">videos:</span>
+                <span class="row__val">[{a.videoIds.length}]</span>
+              </span>
             </a>
-            <NameTile
-              class="view-tile"
-              href={`/artists/${a.slug}`}
-              name={a.name}
-              country={a.country}
-              releases={albumsOf(a.albumIds)}
-            />
           </li>
         ))}
       </>
@@ -124,6 +135,7 @@ const PAGE = 50;
   const sortEl   = document.getElementById('sort');
   const letterEl = document.getElementById('letter');
 
+  const counter = document.getElementById('counter');
   const more = document.getElementById('more');
 
   const items = Array.from(list.querySelectorAll('.names__item'));
@@ -157,6 +169,10 @@ const PAGE = 50;
     }
 
     empty.hidden = count > 0;
+
+    /* Как на Music: пока ничего не отсеяно — одно число, дальше «сколько из
+       скольких». */
+    counter.textContent = count === items.length ? `[${count}]` : `[${count} / ${items.length}]`;
 
     const rest = count - limit;
     more.hidden = rest <= 0;

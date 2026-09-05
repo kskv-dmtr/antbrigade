@@ -566,8 +566,7 @@ a { color: inherit; text-decoration: none; }
    уводит её за край экрана. Влево, а не вправо, потому что вылет за левый
    край полосу прокрутки не создаёт, а за правый — создал бы. */
 .tiles--auto,
-:root[data-view='grid'] .releases,
-:root[data-view='grid'] .names {
+:root[data-view='grid'] .releases {
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
   /* Поля снизу у решётки нет: воздух под подписями лежит внутри самих
@@ -609,8 +608,7 @@ a { color: inherit; text-decoration: none; }
    неполном ряду это поле ни на что не влияет — высоту ряда держит
    обложка. */
 .tiles--auto::after,
-:root[data-view='grid'] .releases::after,
-:root[data-view='grid'] .names::after {
+:root[data-view='grid'] .releases::after {
   content: '';
   grid-column: auto / -1;
   margin-bottom: -1px;
@@ -856,10 +854,49 @@ a { color: inherit; text-decoration: none; }
   text-align: right;
 }
 
-/* Артисты, лейблы и жанры — та же строка, но колонок две: имя и счётчик.
-   Страна из списка убрана: в сетке она есть в вывернутой плашке, а в
-   строке колонка из двухбуквенных кодов набиралась в столбик шума. */
-.row--name { grid-template-columns: minmax(0, 1fr) 4.375rem; }
+/* Строка индекса — артисты, лейблы, жанры. Столбцы те же, что у релиза:
+   имя со страной занимают первые два, дальше два счётчика. Так все четыре
+   списка сайта читаются на одних вертикалях.
+
+   Страна прижата к правому краю своей половины — туда, где на Music
+   кончается имя исполнителя. В отдельную колонку её не выносили: двухбуквенные
+   коды столбиком набирались шумом, а рядом с именем читаются пометкой.
+
+   Правило .row--name с двумя колонками стояло здесь до 5 сентября 2026. */
+.row--index {
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.row--index .row__lead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+  padding-left: calc(var(--pad) + 1px);
+  padding-right: var(--pad);
+}
+/* Счётчик в столбце: подпись слева, число справа — по краям своего
+   столбца, как имя и список в полосе отбора. Двоеточие лежит в разметке:
+   это часть подписи, а не украшение. */
+.row--index .row__meta,
+.row--index .row__num {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+.row__key { color: var(--fg-dim); }
+.row__val { flex: none; }
+
+/* Правило .row__country удалено 5 сентября 2026 вместе с кодом страны в
+   строке индекса: две буквы посреди строки не говорили об исполнителе
+   ничего и висели третьим родом сведений. Страна осталась на его
+   странице. */
 
 /* Своей сетки у клипов больше нет: они носят тот же .row--release, что и
    релизы, и раскладываются по тем же столбцам решётки. Правило со своими
@@ -1672,10 +1709,12 @@ main > .head--backbar:first-child { border-top: 0; }
    Через соседний селектор, а не классом на списке: правило описывает не
    список сам по себе, а список под новой полосой. Артисты, лейблы и жанры
    пока со старой и остаются как были. */
+.filters-row ~ .names,
 .filters-row ~ .releases {
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
 }
+.filters-row ~ .names .row:not(.row--index),
 .filters-row ~ .releases .row:not(.row--release) {
   padding-left: calc(var(--pad) + 1px);
   padding-right: var(--pad);
@@ -1699,6 +1738,7 @@ main > .head--backbar:first-child { border-top: 0; }
    под последним рядом чертит только полоса. Отсюда и :not — вид по
    умолчанию строчный и в атрибуте не записан. */
 :root:not([data-view='grid']) .filters-row ~ .more { margin-top: -1px; }
+.filters-row ~ .names ~ .more { margin-top: -1px; }
 
 /* Та же беда у подвала, когда «показать ещё» уже нечего показывать и кнопки
    нет: граница последней строки упирается в верхнюю границу подвала. Сдвиг
@@ -2860,6 +2900,22 @@ select option { background: var(--option-bg); color: var(--fg); }
   /* У релиза на телефоне колонки те же две, что и были: имя с названием
      слева, справка справа. Поля возвращаются на строку — трёх столбцов
      решётки здесь нет. */
+  .row--index {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.25rem 0.75rem;
+    padding-left: calc(var(--pad) + 1px);
+    padding-right: var(--pad);
+  }
+  .row--index .row__lead { padding-left: 0; padding-right: 0; }
+  .row--index .row__meta,
+  .row--index .row__num {
+    grid-column: 2;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    font-size: max(12px, 0.625rem);
+  }
+
   .row--release {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.25rem 0.75rem;
@@ -3343,12 +3399,16 @@ select option { background: var(--option-bg); color: var(--fg); }
 :root[data-view='list'] .view-tile { display: none; }
 :root[data-view='grid'] .view-row  { display: none; }
 
-:root[data-view='grid'] .releases,
-:root[data-view='grid'] .names {
+:root[data-view='grid'] .releases {
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
   gap: 0;
 }
+
+/* Правила решётки имён удалены 5 сентября 2026 вместе с плитками артистов,
+   лейблов и жанров: в плитке не было ничего, чего нет в строке, а места она
+   занимала вчетверо больше. Индексы показываются только списком, и вида у
+   них теперь нет вовсе — переключатель ушёл из их полосы отбора. */
 
 /* Своей сетки у клипов больше нет: столбцы общие для всех решёток, иначе
    вертикальные разделители, нарисованные на фоне, попадали бы мимо границ.

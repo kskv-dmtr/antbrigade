@@ -1365,7 +1365,9 @@ body:has(.head--dot) .foot { margin-top: 0; }
    Селектор с main, а не отдельный класс: «первая на странице» — это про
    место в потоке, и знать об этом должна разметка страницы, а не каждый
    вызов компонента. */
-main > .head--page:first-child,
+main > .head--page:first-child { border-top: 0; }
+
+/* Левая половина полосы: кружок, название, счётчик. */
 .head--page .head__lead {
   display: flex;
   align-items: center;

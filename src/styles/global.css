@@ -1298,9 +1298,7 @@ body:has(.head--backbar) .head--sticky:not(.head--backbar) {
    и решает это скрипт компонента, снимая hidden. Когда она есть, экрана
    под содержимое остаётся на её высоту меньше. */
 body:has(.head--backbar:not([hidden])) {
-  /* Вычитаем и поле под полосой: у всех полос .head под ними отбивка в 16, и
-     содержимое начинается ниже на неё. */
-  --screen-rest: calc(100dvh - var(--head-h) - var(--filters-h) - 1rem);
+  --screen-rest: calc(100dvh - var(--head-h) - var(--filters-h));
 }
 
 /* У первой полосы своей линии сверху нет: её уже дала шапка сайта. */
@@ -1414,7 +1412,13 @@ main > .head--backbar:first-child { border-top: 0; }
    разделов. В полосе «назад» стоит одна подпись в 12, и 64 оставляли бы
    вокруг неё воздуха вдвое больше, чем вокруг заголовка в 32 этажом выше.
    Тот же счёт, по которому полоса отбора ниже полосы заголовка. */
-.head.head--backbar { height: var(--filters-h); }
+/* Поля под полосой нет: под ней сразу содержимое страницы, и просвет в 16
+   разрывал бы линию — низ полосы и верх содержимого должны быть одной
+   чертой. Замер до правки: от кнопки до обложки релиза 16 пустоты. */
+.head.head--backbar {
+  height: var(--filters-h);
+  margin-bottom: 0;
+}
 
 .back-bar {
   display: flex;
@@ -1473,12 +1477,18 @@ main > .head--backbar:first-child { border-top: 0; }
 }
 /* Пустое состояние: ссылки в базе нет, и на её месте стоит временная
    пометка. Не ссылка и не кнопка — вести некуда, — поэтому и набор тише:
-   приглушённый цвет и строчные, как в тексте пометки. */
-.view-all--empty {
+   приглушённый цвет и строчные, как в тексте пометки.
+
+   На наведение не отзывается вовсе: выворотка обещала бы нажатие, а нажимать
+   нечего — общие правила отклика её обходят через :not. */
+/* Двойной класс ради силы: базовое правило .view-all стоит ниже и задаёт
+   свой цвет, а при равной силе решает порядок в файле. */
+.view-all.view-all--empty {
   color: var(--fg-dim);
   text-transform: none;
   cursor: default;
 }
+
 
 /* Поиск занимает половину целиком и своей рамки не имеет: границы ячейке
    чертит сама полоса, и рамка внутри читалась бы коробкой в коробке.
@@ -1614,8 +1624,12 @@ main > .head--backbar:first-child { border-top: 0; }
 
    Счётчик на светлой плашке перекрашивается: --fg-dim подобран для тёмного
    фона, на вывернутой кнопке он почти сливался. */
+/* Пустая пометка на месте кнопки из отклика исключена: вести ей некуда, и
+   выворотка обещала бы нажатие. Через :not, а не отдельным правилом ниже:
+   сила у селекторов одинаковая, и решал бы порядок в файле — правило пометки
+   стоит выше и проигрывало бы. */
 @media (hover: hover) {
-  .view-all:hover,
+  .view-all:not(.view-all--empty):hover,
   .dig-again:hover {
     background: var(--ink);
     color: var(--ink-fg);
@@ -1624,8 +1638,8 @@ main > .head--backbar:first-child { border-top: 0; }
   .view-all:hover .view-all__count { color: var(--ink-muted); }
 }
 
-.view-all:focus-visible,
-.view-all:active,
+.view-all:not(.view-all--empty):focus-visible,
+.view-all:not(.view-all--empty):active,
 .dig-again:focus-visible,
 .dig-again:active {
   background: var(--ink);
@@ -2622,7 +2636,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 
 .detail { padding: 1.25rem 0 0.625rem; }
 
-/* ------------------------------------------- релиз на решётке
+/* ------------------------------ первый блок релиза и клипа
 
    Обложка занимает два первых столбца решётки, справа от неё ячейка с именем
    и справкой во всю оставшуюся ширину: на расчётной ширине это ровно
@@ -2640,17 +2654,18 @@ select option { background: var(--option-bg); color: var(--fg); }
    следующего блока, а не встаёт рядом с ней. Слева поле на пиксель больше:
    левая граница первой ячейки уезжает за край экрана.
 
-   Блок назван по альбому, а не по релизу: класс .release уже занят — его
-   носит <li> каталога на страницах Music, Videos и Featured, тот самый, что
-   держит в себе и строку, и плитку. Разложенный на решётку .release накрыл
-   собой все три списка разом: строки уезжали за края кадра на 13 и 12
-   пикселей и ломались по высоте.
+   Имя у блока нейтральное: он один на две страницы — релиза и клипа, — и
+   называть его по альбому было бы неверно. .release занять нельзя: этот
+   класс носит <li> каталога на страницах Music, Videos и Featured, тот самый,
+   что держит в себе и строку, и плитку; разложенный на решётку .release
+   накрыл собой все три списка разом — строки уезжали за края кадра на 13 и 12
+   пикселей и ломались по высоте. Класс .album прожил день, 5 сентября 2026.
 
    Полоса 16:7 с обложкой в два столбца стояла здесь до 5 сентября 2026.
    Сетки в ней не было вовсе: ширину обложке задавала своя переменная
    --two-cols, высоту — содержимое, и с решёткой «More Releases» под ней
    полоса не сходилась ни одной линией. */
-.album {
+.item {
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
 
@@ -2666,9 +2681,9 @@ select option { background: var(--option-bg); color: var(--fg); }
 /* Два первых столбца под обложку, остальные под справку. При трёх столбцах
    (ниже 1280) справке достаётся один, при двух (ниже 900) обложка занимает
    ряд целиком, а справка встаёт под ней. */
-.album__art { grid-column: span 2; }
-.album__art,
-.album__head {
+.item__art { grid-column: span 2; }
+.item__art,
+.item__head {
   border-bottom: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -2680,13 +2695,30 @@ select option { background: var(--option-bg); color: var(--fg); }
    тогда ложится вокруг неё поровну со всех сторон, а не собирается с
    одной. Ровно одинаковым он выходит там, где ячейка квадратная; в
    остальных случаях поровну сверху и снизу, поровну слева и справа. */
-.album__art {
+.item__art {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
-.album__cover {
+/* Кадр клипа — 16:9 вместо квадрата, и высоту блока задаёт он: правило
+   «первый экран во весь рост» на странице клипа снято. Кадр вдвое ниже
+   обложки, и растягивать под него экран не за чем — под ним сразу пошли бы
+   пустые полкадра.
+
+   Поле вокруг кадра ровно 16 со всех сторон: ширину он занимает всю, а
+   высота ячейки от него же и считается. */
+.item--video { min-height: 0; }
+.item--video .item__cover {
+  aspect-ratio: 16 / 9;
+
+  /* Во всю ширину ячейки: потолок по остатку экрана нужен только квадрату
+     обложки, который иначе выше окна. Кадр вдвое ниже, и упираться ему не во
+     что — поля выходят ровно 16 со всех сторон. */
+  width: 100%;
+}
+
+.item__cover {
   aspect-ratio: 1 / 1;
 
   /* Сторона квадрата — меньшее из двух: ширина ячейки в два столбца и то,
@@ -2705,7 +2737,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   background: var(--art);
   overflow: hidden;
 }
-.album__cover img {
+.item__cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2716,7 +2748,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    посередине, кнопки площадок к низу. Ячейка эта высотой в обложку, и без
    разведения по краям текст сбивался бы к верху, а низ пустовал. Тот же
    счёт был у полосы, только опор в ней было две. */
-.album__head {
+.item__head {
   grid-column: 3 / -1;
   display: flex;
   flex-direction: column;
@@ -2725,30 +2757,30 @@ select option { background: var(--option-bg); color: var(--fg); }
   min-width: 0;
   padding: 1rem 1rem 2rem;
 }
-.album__name {
+.item__name {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 /* Имя над названием, как на плитке. Набор и отклик у ссылки те же, что
    были в полосе: подчёркивание волосом, выворотка по наведению. */
-.album__artist {
+.item__artist {
   margin: 0;
   /* Те же 14, что у имени в плитке и в строке: имя исполнителя набрано
      одинаково везде, где стоит подписью при названии. Было 17. */
   font-size: max(14px, 0.875rem);
   color: var(--fg-muted);
 }
-.album__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
+.item__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
 @media (hover: hover) {
-  .album__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+  .item__artist a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 }
-.album__artist a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+.item__artist a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Кегль тот же, что был у заголовка в полосе. Поправки на длинное название
    больше нет: высота ячейки идёт от содержимого, и пятая строка её просто
    удлиняет, а не обрезает кнопки. */
-.album__title {
+.item__title {
   margin: 0;
   font-size: clamp(2.125rem, 5.2vw, 4.5rem);
   font-weight: 800;
@@ -2768,8 +2800,8 @@ select option { background: var(--option-bg); color: var(--fg); }
    Подпись с двоеточием и моноширинным прописными — как имена отборов в
    полосе и подписи счётчиков в списках. Один набор на все служебные
    подписи сайта. */
-.album__facts { margin: 0; }
-.album__fact {
+.item__facts { margin: 0; }
+.item__fact {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -2777,8 +2809,8 @@ select option { background: var(--option-bg); color: var(--fg); }
   padding: 0.8125rem 0;
   border-bottom: 1px solid var(--line-soft);
 }
-.album__fact:first-child { border-top: 1px solid var(--line-soft); }
-.album__fact dt {
+.item__fact:first-child { border-top: 1px solid var(--line-soft); }
+.item__fact dt {
   flex: none;
   font-family: var(--mono);
   font-size: max(12px, 0.75rem);
@@ -2786,18 +2818,18 @@ select option { background: var(--option-bg); color: var(--fg); }
   text-transform: uppercase;
   color: var(--fg-dim);
 }
-.album__fact dd {
+.item__fact dd {
   margin: 0;
   min-width: 0;
   text-align: right;
 }
 /* Дата оригинала — уточнение к дате издания, и приглушена так же, как была
    отдельной строкой в полосе. */
-.album__faint { color: var(--fg-dim); }
+.item__faint { color: var(--fg-dim); }
 
 /* Ряд площадок стоит последним в ячейке, своего нижнего поля ему не нужно:
    воздух под ним держит удвоенное поле самой ячейки. */
-.album__head .listen { margin-bottom: 0; }
+.item__head .listen { margin-bottom: 0; }
 
 /* Правила `.related` — подпись «Related» и жанры на одной горизонтали —
    удалены 29 августа 2026 вместе с самой строкой: под именем жанра стоят
@@ -2909,7 +2941,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .detail__title--long { font-size: clamp(1.875rem, 3.8vw, 3.25rem); }
 .detail__artist {
   margin: 0;
-  /* Те же 14, что везде: см. .album__artist. */
+  /* Те же 14, что везде: см. .item__artist. */
   font-size: max(14px, 0.875rem);
   color: var(--fg-muted);
 }
@@ -2955,7 +2987,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    кнопками, хотя рядом такая же по смыслу ссылка на лейбл была просто
    подчёркнутой. */
 .detail__fact,
-.album__fact dd,
+.item__fact dd,
 .meta-line {
   margin: 0;
   font-family: var(--mono);
@@ -2965,15 +2997,15 @@ select option { background: var(--option-bg); color: var(--fg); }
   color: var(--fg-muted);
 }
 .detail__fact a,
-.album__fact dd a,
+.item__fact dd a,
 .meta-line a { border-bottom: 1px solid var(--line); }
 @media (hover: hover) {
   .detail__fact a:hover,
-  .album__fact dd a:hover,
+  .item__fact dd a:hover,
   .meta-line a:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 }
 .detail__fact a:active,
-.album__fact dd a:active,
+.item__fact dd a:active,
 .meta-line a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Строка с датой отделена от кнопок линейкой — той же мягкой, что разделяет
@@ -3224,6 +3256,22 @@ select option { background: var(--option-bg); color: var(--fg); }
   .tiles { grid-template-columns: repeat(2, 1fr); }
   .tiles > * { grid-column: auto; }
 
+  /* Релиз и клип в один столбец: обложка сверху, справка под ней. Столбцов
+     решётки здесь два, и «первые два» — это вся ширина; справке не осталось
+     бы места. Прежде правило стояло ниже 760, а между 760 и 900 обложка
+     сжималась в 167 пикселей: она занимала оба столбца, а справка своим
+     grid-column: 3 заводила третий, неявный, и он забирал ширину по
+     содержимому.
+
+     Экран во весь рост здесь ни к чему: обложка во всю ширину и так занимает
+     его почти целиком, а справка тогда уезжала бы за край вся. */
+  .item {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+  .item__art { grid-column: 1; }
+  .item__head { grid-column: 1; }
+
   /* Меню встаёт в поток и делит строку с логотипом и переключателем.
 
      Центрирование по середине полосы держится, пока меню уже свободного
@@ -3249,19 +3297,6 @@ select option { background: var(--option-bg); color: var(--fg); }
    вертикальный кадр 4:5 с подписью под ним. Собираем то же самое — но
    высоту отдаём содержимому, иначе заголовок в три слова не помещается. */
 @media (max-width: 760px) {
-  /* Релиз на телефоне в один столбец: обложка сверху, справка под ней.
-     Два столбца дали бы обложку в 180 и колонку текста той же ширины —
-     в ней не встаёт ни заголовок, ни строка справки.
-
-     Экран во весь рост здесь ни к чему: обложка во всю ширину и так
-     занимает его почти целиком, а справка под ней тогда уезжала бы за край
-     вся. */
-  .album {
-    grid-template-columns: minmax(0, 1fr);
-    min-height: 0;
-  }
-  .album__art { grid-column: 1; }
-  .album__head { grid-column: 1; }
 
   .detail__banner {
     aspect-ratio: auto;

@@ -52,7 +52,7 @@ const rest = [...new Map(
 /* Релизы тех же исполнителей — тем же приёмом и в том же порядке, что
    «More Releases» на странице релиза: через Map от повторов у совместных
    работ, от свежих к старым. */
-const discography = [...new Map(
+const releases = [...new Map(
   artists.flatMap((a) => albumsOf(a.albumIds)).map((a) => [a.id, a])
 ).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
 ---
@@ -70,60 +70,71 @@ const discography = [...new Map(
     noBack
   />
 
-  <article class="detail">
-    <div class="detail__banner detail__banner--video">
+  {/* Клип стоит на той же решётке и в том же блоке, что релиз: кадр в двух
+      первых столбцах, справа ячейка с именем и справкой во всю оставшуюся
+      ширину. Разница одна — кадр 16:9 вместо квадрата, и высоту блока
+      задаёт он сам: правило «первый экран во весь рост» здесь не нужно,
+      кадр вдвое ниже обложки и растягивать под него экран не за чем.
+
+      Полоса 16:7 с кадром в 58% ширины стояла здесь до 6 сентября 2026. */}
+  <article class="item item--video">
+    <div class="item__art">
       {/* Без кадра на его месте остаётся заштрихованная заготовка тех же
-          пропорций: полоса не должна складываться в одну колонку из-за
-          недокачанного файла. Сейчас кадры есть у всех 78. */}
-      {thumb ? (
-        <img class="detail__art detail__art--video" src={thumb} width="960" height="540"
-             alt={`${title} still`} fetchpriority="high" />
-      ) : (
-        <div class="detail__art detail__art--video detail__art--empty" aria-hidden="true"></div>
-      )}
-      {/* Две опоры и воздух между ними, как на странице релиза: вид ролика,
-          название и имя прижаты к верху полосы, кнопка — к низу, и обе
-          колонки заканчиваются на одной линии.
+          пропорций: блок не должен складываться из-за недокачанного файла.
+          Сейчас кадры есть у всех. */}
+      <div class="item__cover">
+        {thumb && (
+          <img src={thumb} width="960" height="540"
+               alt={`${title} still`} fetchpriority="high" />
+        )}
+      </div>
+    </div>
 
-          Внизу дата выхода — та же строка, что «дата · лейбл» у релиза, но
-          без лейбла: его в записи клипа нет. Жанров тоже нет, поэтому
-          линейка одна, перед кнопкой, а не две. */}
-      <div class="detail__head">
-        <div class="detail__name">
-          {video.kind && <p class="detail__kicker">{video.kind}</p>}
-          <h1 class="detail__title detail__title--video">{title}</h1>
-          <p class="detail__artist">
-            {artists.map((a, i) => (
-              <>
-                {i > 0 && <span class="sep"> · </span>}
-                <a href={`/artists/${a.slug}`}>{a.name}</a>
-              </>
-            ))}
-          </p>
-        </div>
+    {/* Три опоры и воздух между ними, как у релиза: имя с названием к верху,
+        справка посередине, кнопка к низу. */}
+    <div class="item__head">
+      <div class="item__name">
+        <p class="item__artist">
+          {artists.map((a, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={`/artists/${a.slug}`}>{a.name}</a>
+            </>
+          ))}
+        </p>
 
-        <div class="detail__meta">
-          {/* Тот же ряд, что «где послушать» у релиза: название площадки без
-              пояснений и без стрелки — на странице релиза кнопки набраны так
-              же, и «Watch on» рядом с ними выглядело бы объяснением
-              очевидного. Ряд переехал из этажа под полосой внутрь неё, туда
-              же, где кнопки площадок у релиза, и стоит так же — над линейкой,
-              а дата под ней. */}
-          <div class="listen">
-            <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
-              <Icon name="youtube-logo" class="listen__icon" />
-              <span>YouTube</span>
-            </a>
+        <h1 class="item__title">{title}</h1>
+      </div>
+
+      {/* Справка строками, как у релиза. Лейбла и жанров у клипа нет, вид
+          ролика стоит на месте типа издания. */}
+      <dl class="item__facts">
+        {video.kind && (
+          <div class="item__fact">
+            <dt>Type:</dt>
+            <dd>{video.kind}</dd>
           </div>
+        )}
 
-          <div class="detail__dates">
-            {dateText && <p class="detail__fact">{dateText}</p>}
-
-            {origText && (
-              <p class="detail__fact detail__fact--faint">Originally released {origText}</p>
-            )}
+        {dateText && (
+          <div class="item__fact">
+            <dt>Released:</dt>
+            <dd>
+              {dateText}
+              {origText && <span class="item__faint"> · originally {origText}</span>}
+            </dd>
           </div>
-        </div>
+        )}
+      </dl>
+
+      {/* Тот же ряд, что «где послушать» у релиза: название площадки без
+          пояснений и без стрелки — «Watch on» рядом с ним выглядело бы
+          объяснением очевидного. */}
+      <div class="listen">
+        <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
+          <Icon name="youtube-logo" class="listen__icon" />
+          <span>YouTube</span>
+        </a>
       </div>
     </div>
   </article>
@@ -139,17 +150,17 @@ const discography = [...new Map(
     </section>
   )}
 
-  {discography.length > 0 && (
+  {releases.length > 0 && (
     <section class="section">
       {/* Назван так же, как раздел на странице исполнителя: это тот же
           список, только собранный от клипа. */}
-      <PageBar as="h2" title="Discography" count={discography.length} />
+      <PageBar as="h2" title="Releases" count={releases.length} />
       {/* Имя на плитках — только у совместных клипов, по тому же доводу,
-          что у «More Releases» на странице релиза: у сольного все плитки
+          что у «Releases» на странице релиза: у сольного все плитки
           принадлежат тому же исполнителю, а у дуэта сюда попадают и сольные
           работы каждого. */}
       <ul class="tiles tiles--auto">
-        {discography.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
       </ul>
     </section>
   )}

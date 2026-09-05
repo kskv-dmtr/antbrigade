@@ -14,7 +14,7 @@ export function getStaticPaths() {
 }
 
 const { artist } = Astro.props;
-const discography = albumsOf(artist.albumIds);
+const releases = albumsOf(artist.albumIds);
 const labels = labelsOf(artist.labelIds);
 const clips  = videosOf(artist.videoIds);
 
@@ -35,12 +35,12 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
-  description={`${artist.name}: ${plural(discography.length, 'release', 'releases')} in the collection${
+  description={`${artist.name}: ${plural(releases.length, 'release', 'releases')} in the collection${
     artist.genres.length ? `, ${artist.genres.slice(0, 4).join(', ')}` : ''
   }.`}
   {/* В карточке ссылки — обложка самого свежего релиза: своей картинки у
       артиста нет, а плитка в сетке берёт ту же. */}
-  image={coverSrc(discography.find((a) => a.cover), 800)}
+  image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="artists"
 >
   <BackBar />
@@ -112,11 +112,11 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   <section class="section">
     {/* Счётчика нет вовсе, когда релизов нет: «[0]» рядом с объяснением
         ниже читалось бы вторым сообщением о том же. */}
-    <PageBar as="h2" title="Discography"
-             count={discography.length > 0 ? discography.length : null} />
-    {discography.length > 0 ? (
+    <PageBar as="h2" title="Releases"
+             count={releases.length > 0 ? releases.length : null} />
+    {releases.length > 0 ? (
       <ul class="tiles tiles--auto">
-        {discography.map((a) => <AlbumCard album={a} showArtist={false} />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={false} />)}
       </ul>
     ) : (
       <p class="empty">No releases by this artist yet.</p>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T19:04:05Z",
+  "generatedAt": "2026-09-05T21:17:58Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -18365,6 +18365,67 @@
       "upc": "193483986876",
       "tracks": 11,
       "releaseDate": "2019-06-21"
+    },
+    "3d24129a-8c52-80f0-a6da-ebbd643a0cd5": {
+      "source": "https://album.link/qnmj0jmm9ck8t",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5L4HUwPtyxAoW27leVlZql",
+        "pandora": "https://www.pandora.com/AL:68471369",
+        "tidal": "https://listen.tidal.com/album/530604926",
+        "yandex": "https://music.yandex.ru/album/43213580",
+        "boomplay": "https://www.boomplay.com/albums/136351316"
+      },
+      "upc": "191404166253",
+      "tracks": 16,
+      "releaseDate": "2026-07-31"
+    },
+    "3d24129a-8c52-80f6-92f2-c44e54d7991d": {
+      "source": "https://album.link/fqh0jg9bsp38v",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6kIFB5AK2zH6SpsJoinpsZ",
+        "pandora": "https://www.pandora.com/AL:9010163",
+        "deezer": "https://www.deezer.com/album/224357172",
+        "amazonMusic": "https://music.amazon.com/albums/B0932FJ75D",
+        "tidal": "https://listen.tidal.com/album/181196296",
+        "napster": "https://play.napster.com/album/alb.576025547",
+        "yandex": "https://music.yandex.ru/album/15036755",
+        "anghami": "https://play.anghami.com/album/1022643442?refer=linktree",
+        "bandcamp": "https://bruxasdekmantel.bandcamp.com/album/muscle-memory",
+        "amazonStore": "https://amazon.com/dp/B0932FJ75D"
+      },
+      "upc": "8720246791570",
+      "tracks": 9,
+      "releaseDate": "2021-05-21"
+    },
+    "3d24129a-8c52-8085-89e4-cdc5ca4c29de": {
+      "source": "https://album.link/whc3br7ms9cgc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4jH5VMBiLa3LqYASv9QQWK",
+        "pandora": "https://www.pandora.com/AL:3013290",
+        "deezer": "https://www.deezer.com/album/118632442",
+        "amazonMusic": "https://music.amazon.com/albums/B081CWVBD8",
+        "tidal": "https://listen.tidal.com/album/122408738",
+        "napster": "https://play.napster.com/album/alb.421942277",
+        "yandex": "https://music.yandex.ru/album/9183518",
+        "boomplay": "https://www.boomplay.com/albums/79537970",
+        "anghami": "https://play.anghami.com/album/1009253396?refer=linktree",
+        "bandcamp": "https://yinyin.bandcamp.com/album/the-rabbit-that-hunts-tigers",
+        "amazonStore": "https://amazon.com/dp/B081CWVBD8"
+      },
+      "upc": "3663729106094",
+      "tracks": 13,
+      "releaseDate": "2019-10-18"
+    },
+    "3d24129a-8c52-802c-ac48-f4d6c46d8330": {
+      "source": "https://album.link/8tm0wcwdhrtxf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2sAaqTkiaPpJc7bqBdXTUW",
+        "tidal": "https://listen.tidal.com/album/145333645",
+        "bandcamp": "https://orientaltapes.bandcamp.com/album/planetary-exploration"
+      },
+      "upc": "195396853887",
+      "tracks": 11,
+      "releaseDate": "2020-06-15"
     }
   }
 }

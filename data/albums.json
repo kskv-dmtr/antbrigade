@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-05T20:38:29Z",
+  "generatedAt": "2026-09-05T21:17:31Z",
   "counts": {
-    "albums": 1162,
-    "artists": 1032,
-    "labels": 646,
+    "albums": 1165,
+    "artists": 1033,
+    "labels": 647,
     "videos": 86
   },
   "albums": [
@@ -6505,8 +6505,8 @@
         "Neo-Psychedelia",
         "Psychedelic Rock",
         "Groove",
-        "Disco",
-        "Exotica"
+        "Exotica",
+        "Nu-Disco"
       ],
       "types": [
         "Album"
@@ -28003,11 +28003,11 @@
       "url": "https://album.link/3qgghhhmk4vvf",
       "cover": "https://antbrigade.notion.site/image/attachment%3A03366ce5-096a-4ad7-a800-c0b9b041479e%3Aphoto_2025-08-16_15-02-58.jpg?table=block&id=b66631d5-24ba-47c9-ab70-c9e4a4f42dc2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Disco",
         "Funk",
         "Neo-Psychedelia",
         "Psychedelic Rock",
-        "Mutant Disco"
+        "Mutant Disco",
+        "Nu-Disco"
       ],
       "types": [
         "Album"
@@ -35628,6 +35628,38 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-80f6-92f2-c44e54d7991d",
+      "slug": "bruxas-muscle-memory",
+      "artist": "Bruxas",
+      "album": "Muscle Memory",
+      "url": "https://album.link/fqh0jg9bsp38v",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2da854be-bd3a-4997-9435-307c5d57fca8%3Aa2076429274_10.jpg?table=block&id=3d24129a-8c52-80f6-92f2-c44e54d7991d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Balearic Beat",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-21",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-80ba-8019-f2bfb5f1ddd4"
+      ],
+      "artists": [
+        "Bruxas"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-802a-83c0-e7232cfbaa33"
+      ],
+      "labels": [
+        "Dekmantel Records"
+      ]
+    },
+    {
       "id": "26eca379-5783-4be3-88d2-b52a28eda9b6",
       "slug": "various-artists-foundations",
       "artist": "Various Artists",
@@ -36864,6 +36896,40 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8085-89e4-cdc5ca4c29de",
+      "slug": "yin-yin-the-rabbit-that-hunts-tigers",
+      "artist": "YĪN YĪN",
+      "album": "The Rabbit That Hunts Tigers",
+      "url": "https://album.link/whc3br7ms9cgc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1c8778c3-6a85-4ddb-86f1-35defdb93607%3Aa2791914862_10.jpg?table=block&id=3d24129a-8c52-8085-89e4-cdc5ca4c29de&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Rock",
+        "Exotica",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-10-18",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "2414129a-8c52-8012-9a94-e8afd5875a12"
+      ],
+      "artists": [
+        "YĪN YĪN"
+      ],
+      "labelIds": [
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+      ],
+      "labels": [
+        "Les Disques Bongo Joe"
+      ]
+    },
+    {
       "id": "3d14129a-8c52-80c2-aac6-f47eb222712f",
       "slug": "sgjazz-sgjazz",
       "artist": "SGJAZZ",
@@ -36989,6 +37055,41 @@
       ],
       "labels": [
         "Church"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-802c-ac48-f4d6c46d8330",
+      "slug": "ogawa-tokoro-planetary-exploration",
+      "artist": "Ogawa & Tokoro",
+      "album": "Planetary Exploration",
+      "url": "https://album.link/8tm0wcwdhrtxf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af3617a62-5fff-4aae-a208-450d40c9f210%3Aa3668787293_10.jpg?table=block&id=3d24129a-8c52-802c-ac48-f4d6c46d8330&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synth Funk",
+        "Downtempo",
+        "Funktronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-05-14",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [
+        "Featured"
+      ],
+      "featured": true,
+      "artistIds": [
+        "2504129a-8c52-8065-8180-c4f2b59fd996"
+      ],
+      "artists": [
+        "Ogawa & Tokoro"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-8045-a627-f4cfa95164e4"
+      ],
+      "labels": [
+        "Oriental Tapes"
       ]
     },
     {
@@ -40241,6 +40342,25 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d24129a-8c52-80ba-8019-f2bfb5f1ddd4",
+      "slug": "bruxas",
+      "name": "Bruxas",
+      "country": "NL",
+      "bandcamp": "https://bruxasdekmantel.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-80f6-92f2-c44e54d7991d"
+      ],
+      "genres": [
+        "Balearic Beat",
+        "Nu-Disco"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-802a-83c0-e7232cfbaa33"
       ],
       "videoIds": []
     },
@@ -50329,14 +50449,18 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "27f4b611-970e-442f-96dd-bba5de8cd97b"
+        "27f4b611-970e-442f-96dd-bba5de8cd97b",
+        "3d24129a-8c52-802c-ac48-f4d6c46d8330"
       ],
       "genres": [
         "Downtempo",
-        "Balearic Beat"
+        "Balearic Beat",
+        "Synth Funk",
+        "Funktronica"
       ],
       "labelIds": [
-        "2504129a-8c52-80f1-b85f-f351c95e4fce"
+        "2504129a-8c52-80f1-b85f-f351c95e4fce",
+        "3d24129a-8c52-8045-a627-f4cfa95164e4"
       ],
       "videoIds": []
     },
@@ -57852,23 +57976,25 @@
       "slug": "yin-yin",
       "name": "YĪN YĪN",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://yinyin.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2f14129a-8c52-80f6-9983-e35e491f7d65",
-        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2"
+        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2",
+        "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
       ],
       "genres": [
         "Neo-Psychedelia",
         "Psychedelic Rock",
         "Groove",
-        "Disco",
         "Exotica",
+        "Nu-Disco",
         "Funk",
         "Mutant Disco"
       ],
       "labelIds": [
-        "24a4129a-8c52-8093-8156-f94f7507964c"
+        "24a4129a-8c52-8093-8156-f94f7507964c",
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
       ],
       "videoIds": [
         "2814129a-8c52-80d2-8cb1-fcd73eb80eb6"
@@ -60529,20 +60655,22 @@
       "slug": "dekmantel-records",
       "name": "Dekmantel Records",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://dekmantel.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "2d64129a-8c52-8094-ac14-ffa8a7f52020",
         "2574129a-8c52-80b0-a5f0-ef564bce3273",
         "1dc4129a-8c52-80dd-a053-ffc13cd626ce",
-        "a36a1469-6bc7-4330-aa52-bba779acce85"
+        "a36a1469-6bc7-4330-aa52-bba779acce85",
+        "3d24129a-8c52-80f6-92f2-c44e54d7991d"
       ],
       "artistIds": [
         "2d64129a-8c52-8058-a0ca-ccbc0d6b5ddf",
         "2514129a-8c52-8035-b4a8-da1658729319",
         "24a4129a-8c52-80ea-8dd7-eed48f4fb7cc",
-        "2414129a-8c52-8020-b53b-c21aa6f6c6ec"
+        "2414129a-8c52-8020-b53b-c21aa6f6c6ec",
+        "3d24129a-8c52-80ba-8019-f2bfb5f1ddd4"
       ]
     },
     {
@@ -61769,7 +61897,7 @@
       "slug": "glitterbeat-records",
       "name": "Glitterbeat Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://glitterbeat.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63504,20 +63632,22 @@
       "slug": "les-disques-bongo-joe",
       "name": "Les Disques Bongo Joe",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://lesdisquesbongojoe.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "2e54129a-8c52-8094-9ec6-d0d06d618318",
         "b23aa992-2aac-4165-beb5-080416c13dce",
         "8efa65f4-09df-4006-8089-2869aee41410",
-        "1164129a-8c52-8088-b6e3-f4cb42cdcafd"
+        "1164129a-8c52-8088-b6e3-f4cb42cdcafd",
+        "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
       ],
       "artistIds": [
         "2e54129a-8c52-804c-9844-d53ba15f3c0d",
         "2424129a-8c52-80d3-81e6-ee184d274263",
         "24a4129a-8c52-8032-bc8e-fd1c9173c69a",
-        "24f4129a-8c52-80c4-b1d8-cffe7bd29def"
+        "24f4129a-8c52-80c4-b1d8-cffe7bd29def",
+        "2414129a-8c52-8012-9a94-e8afd5875a12"
       ]
     },
     {
@@ -65175,6 +65305,21 @@
       ],
       "artistIds": [
         "3d24129a-8c52-8034-9736-fec19222db57"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8045-a627-f4cfa95164e4",
+      "slug": "oriental-tapes",
+      "name": "Oriental Tapes",
+      "country": "JP",
+      "bandcamp": "https://orientaltapes.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-802c-ac48-f4d6c46d8330"
+      ],
+      "artistIds": [
+        "2504129a-8c52-8065-8180-c4f2b59fd996"
       ]
     },
     {

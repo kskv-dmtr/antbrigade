@@ -1537,15 +1537,9 @@ main > .head--page:first-child { border-top: 0; }
   font-weight: 500;
 }
 
-/* Счёт релизов рядом с подписью — тем же приглушённым, что счётчики над
-   списками. Число берётся на сборке: оно меняется раз в час вместе с
-   выгрузкой, и считать его в браузере незачем. */
-.view-all__count {
-  /* Отбивка полем, а не пробелом в разметке: кнопка выложена флексом, а он
-     съедает пробел между подписью и числом — они склеивались в «VIEW ALL[1139]». */
-  margin-left: 0.5em;
-  color: var(--fg-dim);
-}
+/* Правило .view-all__count — счёт релизов внутри кнопки — удалено 6 сентября
+   2026 вместе с самим числом: на витрине оно спорило с подписью раздела
+   рядом, а на подборках стоит при имени, у самой черты. */
 
 /* Двойники кнопок под сеткой. Видны только на телефоне: там переход и
    «ещё» стоят под обложками, а из полосы раздела уходят. */
@@ -1568,7 +1562,6 @@ main > .head--page:first-child { border-top: 0; }
     color: var(--ink-fg);
     border-color: var(--ink);
   }
-  .view-all:hover .view-all__count { color: var(--ink-muted); }
 }
 
 .view-all:focus-visible,
@@ -1579,8 +1572,6 @@ main > .head--page:first-child { border-top: 0; }
   color: var(--ink-fg);
   border-color: var(--ink);
 }
-.view-all:focus-visible .view-all__count,
-.view-all:active .view-all__count { color: var(--ink-muted); }
 
 .page-head {
   display: flex;
@@ -3263,8 +3254,6 @@ select option { background: var(--option-bg); color: var(--fg); }
     background: var(--ink);
     color: var(--ink-fg);
   }
-  .view-all--below:active .view-all__count,
-  .view-all--below:focus-visible .view-all__count { color: var(--ink-muted); }
 
   /* То же для наведения — узкое окно бывает и с мышью. Запрос вложен в
      запрос: снаружи ширина, внутри наличие указателя. Обычный CSS, вложение
@@ -3275,7 +3264,6 @@ select option { background: var(--option-bg); color: var(--fg); }
       background: var(--ink);
       color: var(--ink-fg);
     }
-    .view-all--below:hover .view-all__count { color: var(--ink-muted); }
   }
 
   /* Кружок в заголовке мельче: рядом с 20 кеглем шестнадцать смотрелись бы

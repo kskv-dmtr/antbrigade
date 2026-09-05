@@ -1,0 +1,30 @@
+---
+/* Страница одной подборки: полоса с именем и счётчиком, под ней вся
+   подборка решёткой. Устроена как раздел витрины, только без «View all» —
+   идти дальше некуда, здесь и есть всё.
+
+   Адреса берутся из имён подборок в Notion: заведут вторую — страница
+   появится сама. */
+
+import Base from '../../layouts/Base.astro';
+import AlbumCard from '../../components/AlbumCard.astro';
+import PageBar from '../../components/PageBar.astro';
+import { playlists, coverSrc, plural } from '../../lib/db.js';
+
+export function getStaticPaths() {
+  return playlists.map((playlist) => ({ params: { slug: playlist.slug }, props: { playlist } }));
+}
+
+const { playlist } = Astro.props;
+---
+<Base
+  title={`${playlist.name} · ant brigade`}
+  description={`${playlist.name}: ${plural(playlist.count, 'release', 'releases')} from the collection.`}
+  image={coverSrc(playlist.albums.find((a) => a.cover), 800)}
+  activeSection="playlists"
+>
+  <PageBar title={playlist.name} count={playlist.count} />
+  <ul class="tiles tiles--auto">
+    {playlist.albums.map((a) => <AlbumCard album={a} />)}
+  </ul>
+</Base>

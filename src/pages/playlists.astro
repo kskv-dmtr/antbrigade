@@ -1,37 +1,28 @@
 ---
-/* Подборки: раздел на каждую подборку из Notion, в разделе — обложки.
+/* Подборки: раздел на каждую, устроен как раздел витрины — двенадцать
+   обложек и переход на страницу подборки.
+
+   Двенадцать, а не всё: подборка растёт, и страница со всеми подборками
+   целиком превратилась бы в ленту без начала и конца. На витрине тот же
+   счёт и то же число — три полных ряда по четыре на расчётной ширине.
+
+   У каждой подборки своя страница, /playlists/<адрес>: заведут в Notion
+   вторую — появится и раздел здесь, и страница под ним, без правок в коде.
 
    Страница звалась /featured и была устроена как /music: полоса отбора,
    поиск, вид, «показать ещё». Полторы дюжины обложек всего этого не стоили,
-   и 6 сентября 2026 страница пересобрана по витрине: полоса раздела и
-   решётка под ней, больше ничего.
-
-   Разделов столько, сколько подборок в базе, и имена берутся из самих
-   записей, а не из кода: подборку переименуют в Notion — переименуется и
-   раздел. Сейчас подборка одна, Favorites; до 6 сентября 2026 она звалась
-   Featured, и её имя стояло в выгрузке отдельной константой. */
+   и 6 сентября 2026 она пересобрана по витрине. */
 
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
-import PageBar from '../components/PageBar.astro';
-import { albums, coverSrc, plural } from '../lib/db.js';
+import Icon from '../components/Icon.astro';
+import { playlists, coverSrc, plural } from '../lib/db.js';
 
-/* Порядок подборок — от большой к малой; внутри — от свежих к старым, как
-   везде на сайте по умолчанию. */
-const подборки = new Map();
-for (const a of albums) {
-  for (const имя of a.playlists ?? []) {
-    if (!подборки.has(имя)) подборки.set(имя, []);
-    подборки.get(имя).push(a);
-  }
-}
-for (const список of подборки.values()) {
-  список.sort((x, y) => (y.released ?? '').localeCompare(x.released ?? ''));
-}
-const ряды = [...подборки.entries()].sort((a, b) => b[1].length - a[1].length);
-const всего = ряды.reduce((n, [, список]) => n + список.length, 0);
+/* Столько же, сколько на витрине: три полных ряда по четыре. */
+const SHOW = 12;
 
-const первая = ряды[0]?.[1]?.find((a) => a.cover);
+const всего = playlists.reduce((n, p) => n + p.count, 0);
+const первая = playlists[0]?.albums.find((a) => a.cover);
 ---
 <Base
   title="Playlists · ant brigade"
@@ -39,12 +30,30 @@ const первая = ряды[0]?.[1]?.find((a) => a.cover);
   image={coverSrc(первая, 800)}
   activeSection="playlists"
 >
-  {ряды.map(([имя, список], i) => (
+  {playlists.map((подборка, i) => (
     <section class="section">
-      <PageBar as={i === 0 ? 'h1' : 'h2'} title={имя} count={список.length} />
+      {/* Полоса та же, что у разделов витрины: кружок с именем слева,
+          переход в последнем столбце. Счётчик при имени, у самой черты, —
+          там же, где на списках, и там же, где подписи разделов витрины.
+          У кнопки числа нет: на витрине его тоже нет. */}
+      <div class="head head--sticky head--bare head--dot">
+        <div class="head__lead">
+          {i === 0
+            ? <h1 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h1>
+            : <h2 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h2>}
+          <p class="counter">[{подборка.count}]</p>
+        </div>
+        <a class="view-all" href={`/playlists/${подборка.slug}`}>View all</a>
+      </div>
+
       <ul class="tiles tiles--auto">
-        {список.map((a) => <AlbumCard album={a} />)}
+        {подборка.albums.slice(0, SHOW).map((a) => <AlbumCard album={a} />)}
       </ul>
+
+      {/* Тот же переход под сеткой — для телефона, где в полосе он спрятан.
+          Двойник в разметке, а не переезд стилями: перенести узел из одного
+          контейнера в другой средствами CSS нельзя. */}
+      <a class="view-all view-all--below" href={`/playlists/${подборка.slug}`}>View all</a>
     </section>
   ))}
 </Base>

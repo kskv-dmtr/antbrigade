@@ -159,6 +159,37 @@ export const genres = [...genreIndex.values()].sort(
 
 export const genreBySlug = new Map(genres.map((g) => [g.slug, g]));
 
+/* ---------------------------------------------------------- подборки
+
+   Подборка — тоже multi-select в Notion, и своей базы у неё нет: собираем
+   так же, как жанры. Регистр не сводим: подборок единицы, заводит их
+   владелец руками и пишет одинаково, а «Favorites» и «favorites» рядом
+   означали бы описку, которую лучше видеть, чем молча склеивать.
+
+   Порядок — от большой к малой, внутри — от свежих к старым, как везде на
+   сайте по умолчанию. */
+const playlistIndex = new Map();
+for (const album of albums) {
+  for (const name of album.playlists ?? []) {
+    let list = playlistIndex.get(name);
+    if (!list) {
+      list = { name, slug: slugify(name) || 'playlist', albums: [] };
+      playlistIndex.set(name, list);
+    }
+    list.albums.push(album);
+  }
+}
+for (const list of playlistIndex.values()) {
+  list.albums.sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
+  list.count = list.albums.length;
+}
+
+export const playlists = [...playlistIndex.values()].sort(
+  (a, b) => b.count - a.count || a.name.localeCompare(b.name)
+);
+
+export const playlistBySlug = new Map(playlists.map((p) => [p.slug, p]));
+
 /** Жанр по любому написанию — чтобы ссылка с карточки вела куда надо. */
 export function genreFor(name) {
   return genreIndex.get(String(name).toLowerCase()) ?? null;

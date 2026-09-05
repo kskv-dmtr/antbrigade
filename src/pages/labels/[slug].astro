@@ -2,8 +2,12 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+/* Breadcrumbs убран со всех страниц 6 сентября 2026: путь дублировал то, что
+   и так стоит на странице — имя исполнителя ссылкой, название раздела в
+   шапке, — а возвращаться есть чем, полосой «назад». Компонент остаётся в
+   проекте: понадобится — вернуть недолго. */
 import PageBar from '../../components/PageBar.astro';
+import BackBar from '../../components/BackBar.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -20,7 +24,11 @@ const roster   = artistsOf(label.artistIds);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="labels"
 >
-  <Breadcrumbs name={label.name} place />
+  {/* Полоса «назад» стоит на всех внутренних страницах одинаково: релиза,
+      клипа, исполнителя, лейбла и жанра. На лейбле и жанре её не было до
+      6 сентября 2026 — возвращаться оттуда было нечем, кроме браузерной
+      стрелки. */}
+  <BackBar />
 
   {/* Устройство то же, что на странице исполнителя: счёт релизов только в
       заголовке раздела ниже, а страна — справа от имени, по нижней его

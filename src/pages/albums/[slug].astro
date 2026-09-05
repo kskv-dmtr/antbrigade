@@ -3,10 +3,10 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
-/* Breadcrumbs со страницы релиза убран 5 сентября 2026: первый экран занят
-   обложкой во весь рост, и строка пути над ней читалась подписью к
-   картинке. Компонент остаётся в проекте — он стоит на страницах клипа,
-   артиста, лейбла и жанра. */
+/* Breadcrumbs убран со всех страниц 6 сентября 2026: путь дублировал то, что
+   и так стоит на странице — имя исполнителя ссылкой, название раздела в
+   шапке, — а возвращаться есть чем, полосой «назад». Компонент остаётся в
+   проекте: понадобится — вернуть недолго. */
 import BackBar from '../../components/BackBar.astro';
 import PageBar from '../../components/PageBar.astro';
 import ListenLinks from '../../components/ListenLinks.astro';

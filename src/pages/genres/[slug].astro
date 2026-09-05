@@ -1,8 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+/* Breadcrumbs убран со всех страниц 6 сентября 2026: путь дублировал то, что
+   и так стоит на странице — имя исполнителя ссылкой, название раздела в
+   шапке, — а возвращаться есть чем, полосой «назад». Компонент остаётся в
+   проекте: понадобится — вернуть недолго. */
 import PageBar from '../../components/PageBar.astro';
+import BackBar from '../../components/BackBar.astro';
 import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
 
 
@@ -30,7 +34,8 @@ const roster = [...new Map(
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="genres"
 >
-  <Breadcrumbs name={genre.name} place />
+  {/* Полоса «назад» — как на остальных внутренних страницах. */}
+  <BackBar />
 
   {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
       Так же собраны страницы исполнителя и лейбла. */}

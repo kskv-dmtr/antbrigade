@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-05T01:00:02Z",
+  "generatedAt": "2026-09-05T05:47:34Z",
   "counts": {
     "albums": 1144,
     "artists": 1022,
@@ -9581,7 +9581,6 @@
         "M. Sage"
       ],
       "labelIds": [
-        "28b4129a-8c52-800f-a112-e28be0a4875f",
         "3874129a-8c52-800b-a9e0-de74b3ac45ba"
       ],
       "labels": [
@@ -22075,7 +22074,6 @@
       "origReleased": null,
       "featured": false,
       "artistIds": [
-        "2524129a-8c52-80d7-89ff-faec7147a471",
         "24f4129a-8c52-80c6-9c57-fff4c89e5c46"
       ],
       "artists": [
@@ -36744,7 +36742,7 @@
       "id": "3b74129a-8c52-804f-8451-dc610a180e8c",
       "slug": "andrew-wasylyk",
       "name": "Andrew Wasylyk",
-      "country": null,
+      "country": "GB",
       "website": null,
       "bandcamp": "https://andrewwasylyk.bandcamp.com/music",
       "youtube": null,
@@ -47083,7 +47081,6 @@
         "Electroacoustic"
       ],
       "labelIds": [
-        "28b4129a-8c52-800f-a112-e28be0a4875f",
         "3874129a-8c52-800b-a9e0-de74b3ac45ba"
       ],
       "videoIds": []
@@ -61615,8 +61612,7 @@
         "24f4129a-8c52-80c6-9c57-fff4c89e5c46",
         "2a84129a-8c52-8096-a1e1-c16aa79b51db",
         "2494129a-8c52-806b-8e1b-ce690fd7abb9",
-        "2494129a-8c52-8037-9eb0-ca85128b0fa8",
-        "2524129a-8c52-80d7-89ff-faec7147a471"
+        "2494129a-8c52-8037-9eb0-ca85128b0fa8"
       ]
     },
     {

@@ -9,11 +9,10 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
-/* Breadcrumbs убран со всех страниц 6 сентября 2026: путь дублировал то, что
-   и так стоит на странице — имя исполнителя ссылкой, название раздела в
-   шапке, — а возвращаться есть чем, полосой «назад». Компонент остаётся в
-   проекте: понадобится — вернуть недолго. */
-import BackBar from '../../components/BackBar.astro';
+/* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
+   компонентами BackBar и Breadcrumbs. Путь дублировал то, что и так стоит на
+   странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
+   полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
 import Icon from '../../components/Icon.astro';
 import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
@@ -65,8 +64,6 @@ const releases = [...new Map(
   image={thumb}
   activeSection="videos"
 >
-  <BackBar />
-
   {/* Клип стоит на той же решётке и в том же блоке, что релиз: кадр в двух
       первых столбцах, справа ячейка с именем и справкой во всю оставшуюся
       ширину. Разница одна — кадр 16:9 вместо квадрата, и высоту блока

@@ -2,12 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
-/* Breadcrumbs убран со всех страниц 6 сентября 2026: путь дублировал то, что
-   и так стоит на странице — имя исполнителя ссылкой, название раздела в
-   шапке, — а возвращаться есть чем, полосой «назад». Компонент остаётся в
-   проекте: понадобится — вернуть недолго. */
+/* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
+   компонентами BackBar и Breadcrumbs. Путь дублировал то, что и так стоит на
+   странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
+   полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
-import BackBar from '../../components/BackBar.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -28,8 +27,6 @@ const roster   = artistsOf(label.artistIds);
       клипа, исполнителя, лейбла и жанра. На лейбле и жанре её не было до
       6 сентября 2026 — возвращаться оттуда было нечем, кроме браузерной
       стрелки. */}
-  <BackBar />
-
   {/* Первый блок — тот же, что у исполнителя: слева имя, справа справка
       строками. */}
   <article class="item item--page">

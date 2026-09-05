@@ -21,8 +21,15 @@ import Icon from './Icon.astro';
    тег заголовка здесь как раз подставляется. Кириллическое имя компилятор
    принимает за обычный элемент разметки и падает на сборке. */
 const { title, count, as: Tag = 'h1', live = false } = Astro.props;
+
+/* Правая половина заводится, только если в неё что-то кладут: на списках это
+   поиск, на странице релиза — переход наружу. У разделов внутренних страниц
+   класть нечего, и половина стояла пустой ячейкой с чертой посередине —
+   полполосы ни за чем. Без неё полоса занимает все четыре столбца решётки
+   одной ячейкой. */
+const есть = Astro.slots.has('default');
 ---
-<div class="head head--sticky head--dot head--page">
+<div class:list={['head head--sticky head--dot head--page', !есть && 'head--wide']}>
   <div class="head__lead">
     <Tag class="display display--md"><Icon name="circle" class="mark" />{title}</Tag>
     {count != null && (
@@ -31,5 +38,5 @@ const { title, count, as: Tag = 'h1', live = false } = Astro.props;
         : <p class="counter">[{count}]</p>
     )}
   </div>
-  <div class="head__side"><slot /></div>
+  {есть && <div class="head__side"><slot /></div>}
 </div>

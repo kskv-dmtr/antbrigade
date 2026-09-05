@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-05T18:32:10Z",
+  "generatedAt": "2026-09-05T19:03:45Z",
   "counts": {
-    "albums": 1159,
-    "artists": 1030,
+    "albums": 1161,
+    "artists": 1031,
     "labels": 646,
     "videos": 86
   },
@@ -35850,6 +35850,38 @@
       ]
     },
     {
+      "id": "3d24129a-8c52-8053-bc95-fef3d8493129",
+      "slug": "whatitdo-archive-group-the-black-stone-affair",
+      "artist": "Whatitdo Archive Group",
+      "album": "The Black Stone Affair",
+      "url": "https://album.link/70dxqtkvqrmnm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad19113c5-bb14-4027-aad9-262223a1297d%3Aa0567144801_10.jpg?table=block&id=3d24129a-8c52-8053-bc95-fef3d8493129&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cinematic Soul",
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-09",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "3d24129a-8c52-804d-a6e0-dccc7afd1227"
+      ],
+      "artists": [
+        "Whatitdo Archive Group"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "labels": [
+        "Record Kicks"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-8082-bc26-c928adf20ab2",
       "slug": "str4ta-aspects",
       "artist": "STR4TA",
@@ -36860,6 +36892,37 @@
       ],
       "labels": [
         "Chicago Research"
+      ]
+    },
+    {
+      "id": "3d24129a-8c52-8044-8e68-ce0ec02844de",
+      "slug": "elephant-gym-angle",
+      "artist": "Elephant Gym",
+      "album": "Angle",
+      "url": "https://album.link/x5x0fkz2s4j56",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3bf7fbd3-b17c-4621-b42e-936f3f6b1015%3Aa3943514642_10.jpg?table=block&id=3d24129a-8c52-8044-8e68-ce0ec02844de&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-06-21",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "featured": false,
+      "artistIds": [
+        "24f4129a-8c52-80d2-8e22-e53ac6c89cc1"
+      ],
+      "artists": [
+        "Elephant Gym"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80be-a165-d669139458b6"
+      ],
+      "labels": [
+        "Topshelf Records"
       ]
     },
     {
@@ -42906,11 +42969,12 @@
       "slug": "elephant-gym",
       "name": "Elephant Gym",
       "country": "TW",
-      "bandcamp": null,
+      "bandcamp": "https://elephant-gym.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "b8dd052d-9e97-4993-a620-1304ed328b45",
-        "2524129a-8c52-805f-9615-f2986a9c075e"
+        "2524129a-8c52-805f-9615-f2986a9c075e",
+        "3d24129a-8c52-8044-8e68-ce0ec02844de"
       ],
       "genres": [
         "Math Rock"
@@ -57371,6 +57435,25 @@
       "videoIds": []
     },
     {
+      "id": "3d24129a-8c52-804d-a6e0-dccc7afd1227",
+      "slug": "whatitdo-archive-group",
+      "name": "Whatitdo Archive Group",
+      "country": "US",
+      "bandcamp": "https://whatitdoarchivegroup.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d24129a-8c52-8053-bc95-fef3d8493129"
+      ],
+      "genres": [
+        "Cinematic Soul",
+        "Funk"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3824129a-8c52-8049-af49-c82a0888234b",
       "slug": "whodamanny",
       "name": "Whodamanny",
@@ -65532,18 +65615,20 @@
       "slug": "record-kicks",
       "name": "Record Kicks",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://recordkicks.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "1274129a-8c52-80d3-ad97-c95838079c7a",
         "81a99f6f-36e8-44ea-b025-8311a1765979",
-        "af3f144a-a677-4a9c-9517-25b192645772"
+        "af3f144a-a677-4a9c-9517-25b192645772",
+        "3d24129a-8c52-8053-bc95-fef3d8493129"
       ],
       "artistIds": [
         "24a4129a-8c52-80eb-9990-da60a745bb8b",
         "2524129a-8c52-809b-8e94-c0c0a267d91f",
         "2524129a-8c52-80c5-9f02-e97888bd8274",
-        "2524129a-8c52-8043-a12b-d1f6cb12e9ee"
+        "2524129a-8c52-8043-a12b-d1f6cb12e9ee",
+        "3d24129a-8c52-804d-a6e0-dccc7afd1227"
       ]
     },
     {
@@ -67276,14 +67361,15 @@
       "slug": "topshelf-records",
       "name": "Topshelf Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://topshelfrecords.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "37f4129a-8c52-8081-aa57-f06bd83ab5af",
         "f391209e-839a-4cb9-b5b6-087aa367ca5d",
         "981cae80-e067-4c47-b75d-ff3319a3c647",
         "b8dd052d-9e97-4993-a620-1304ed328b45",
-        "2524129a-8c52-805f-9615-f2986a9c075e"
+        "2524129a-8c52-805f-9615-f2986a9c075e",
+        "3d24129a-8c52-8044-8e68-ce0ec02844de"
       ],
       "artistIds": [
         "37f4129a-8c52-80c2-8df0-e129efd28274",

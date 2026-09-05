@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T13:47:53Z",
+  "generatedAt": "2026-09-05T19:04:05Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -18336,6 +18336,35 @@
       "upc": "194491790165",
       "tracks": 10,
       "releaseDate": "1983-05-01"
+    },
+    "3d24129a-8c52-8053-bc95-fef3d8493129": {
+      "source": "https://album.link/70dxqtkvqrmnm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5EFN2PLtgFkIuPPZBhKfuE",
+        "pandora": "https://www.pandora.com/AL:8598227",
+        "deezer": "https://www.deezer.com/album/778389311",
+        "amazonMusic": "https://music.amazon.com/albums/B0FFK795F6",
+        "tidal": "https://listen.tidal.com/album/442421565",
+        "napster": "https://play.napster.com/album/alb.552555860",
+        "yandex": "https://music.yandex.ru/album/13988530",
+        "boomplay": "https://www.boomplay.com/albums/21446347",
+        "anghami": "https://play.anghami.com/album/1018635950?refer=linktree",
+        "bandcamp": "https://whatitdoarchivegroup.bandcamp.com/album/the-black-stone-affair",
+        "amazonStore": "https://amazon.com/dp/B0FFK795F6"
+      },
+      "upc": "5050580749894",
+      "tracks": 11,
+      "releaseDate": "2021-04-09"
+    },
+    "3d24129a-8c52-8044-8e68-ce0ec02844de": {
+      "source": "https://album.link/x5x0fkz2s4j56",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1OMqt3O8pPJiXf30zhqiLo",
+        "pandora": "https://www.pandora.com/AL:29124709"
+      },
+      "upc": "193483986876",
+      "tracks": 11,
+      "releaseDate": "2019-06-21"
     }
   }
 }

@@ -33,6 +33,16 @@ const cover   = coverSrc(album, 800);
    просто переносится. */
 const dateText = formatDate(album.released);
 
+/* Переходы наружу в полосах разделов: дискография — на Bandcamp
+   исполнителя, клипы — на его канал YouTube. У релиза своих таких ссылок
+   нет: album.link и площадки ведут на сам альбом и стоят кнопками выше.
+
+   Берём первую заполненную: у совместного релиза двое исполнителей, и
+   вести куда-то надо одному. Поля заполняются вручную и чаще пусты —
+   тогда на месте кнопки стоит временная пометка. */
+const bandcamp = artists.find((a) => a.bandcamp)?.bandcamp ?? null;
+const youtube  = artists.find((a) => a.youtube)?.youtube ?? null;
+
 /* Год оригинала есть только у переизданий и допечаток. Показываем его здесь
    и больше нигде: порядок, отбор по годам и подпись на плитке держит дата
    издания, иначе плитка говорила бы один год, а отбор находил бы другой.
@@ -174,10 +184,17 @@ const clips = [...new Map(
 
   {more.length > 0 && (
     <section class="section">
-      {/* Без имени исполнителя: оно уже стоит в полосе над разделом и в
-          пути наверху — в заголовке шло бы третьим разом за один экран.
-          Так же названо и на странице клипа. */}
-      <PageBar as="h2" title="More Releases" count={more.length} />
+      {/* Просто «Releases»: «More» стояло здесь, пока раздел был единственным
+          продолжением страницы. Теперь в правой половине полосы стоит переход
+          «More on Bandcamp», и слово «ещё» звучало бы дважды за одну строку.
+
+          Без имени исполнителя: оно уже стоит на обложке над разделом — в
+          заголовке шло бы вторым разом за один экран. */}
+      <PageBar as="h2" title="Releases" count={more.length}>
+        {bandcamp
+          ? <a class="view-all" href={bandcamp} target="_blank" rel="noopener noreferrer">More on Bandcamp</a>
+          : <span class="view-all view-all--empty">[bandcamp link temporary empty]</span>}
+      </PageBar>
       {/* Имя показываем только у совместных релизов. У сольного все плитки
           принадлежат тому же исполнителю, что и страница, и подпись была бы
           повтором — как в дискографии на его странице. А вот у дуэта сюда
@@ -193,7 +210,11 @@ const clips = [...new Map(
     <section class="section">
       {/* Назван так же, как раздел на странице исполнителя: это тот же
           список, только собранный от релиза. */}
-      <PageBar as="h2" title="Videos" count={clips.length} />
+      <PageBar as="h2" title="Videos" count={clips.length}>
+        {youtube
+          ? <a class="view-all" href={youtube} target="_blank" rel="noopener noreferrer">More on YouTube</a>
+          : <span class="view-all view-all--empty">[youtube link temporary empty]</span>}
+      </PageBar>
       {/* По столбцам решётки, как список клипов плитками на /videos: четыре
           в ряд на расчётной ширине. Своя раскладка .tiles--video набирала
           столбцы от минимальной ширины плитки и давала их шесть — кадры

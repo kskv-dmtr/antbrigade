@@ -1149,7 +1149,16 @@ main > .head--backbar:first-child { border-top: 0; }
   border: 0;
   cursor: pointer;
 }
-.back-bar__caret { width: 0.5625rem; height: 0.5625rem; flex: none; }
+/* Треугольник влево — тот же приём, что у указателя списков: обрезанный
+   прямоугольник, а не контур. Ширина меньше высоты по той же причине, по
+   которой у списков наоборот: указывает он вбок. */
+.back-bar__caret {
+  flex: none;
+  width: 0.375rem;
+  height: 0.5625rem;
+  background: currentColor;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
 
 @media (hover: hover) {
   .back-bar:hover { background: var(--ink); color: var(--ink-fg); }
@@ -1176,6 +1185,17 @@ main > .head--backbar:first-child { border-top: 0; }
    В шапке поле стояло 5 сентября 2026 несколько часов и вернулось сюда:
    рядом с логотипом и меню оно читалось поиском по сайту, а ищет по
    открытому списку. */
+/* Правее поиска стоит выбор вида: он про то, как показывать список, и
+   место ему рядом с полем, которое этот список отбирает. */
+.head__side {
+  /* Растяжкой, а не по центру: поле поиска должно занимать половину во всю
+     высоту — щелчок мимо строки, но внутри ячейки, обязан попадать в поле.
+     Выбор вида рядом центрируется сам. */
+  align-items: stretch;
+  gap: 1rem;
+  padding-right: var(--pad);
+}
+.head__side .select { align-self: center; }
 .head__side .search {
   flex: 1;
   min-width: 0;
@@ -1444,6 +1464,21 @@ main > .head--backbar:first-child { border-top: 0; }
 /* Имя набрано как счётчики: моноширинным, приглушённым, тем же кеглем, что
    подписи по всему проекту. Двоеточие лежит в разметке — это часть подписи,
    а не украшение. */
+/* Список прижат к правому краю столбца ровно на поле кадра — 16 от черты.
+   Своих боковых полей у него в этой полосе нет: слева его отодвигает имя
+   отбора, справа отмеряет сам столбец, а собственные складывались бы с
+   ними и уводили указатель к середине ячейки.
+
+   Правое поле у поля ввода остаётся — в нём стоит треугольник и просвет
+   перед ним. */
+.filter .select select,
+.filter .multi__button {
+  padding-left: 0;
+  padding-right: calc(var(--chevron) + var(--select-gap));
+}
+.filter .select__chevron,
+.filter .multi__clear { right: 0; }
+
 .filter__name {
   flex: none;
   font-family: var(--mono);
@@ -1728,7 +1763,10 @@ select {
   text-transform: uppercase;
   color: var(--fg);
   background: transparent;
-  border: 1px solid var(--line);
+  /* Рамки нет: список стоит в ячейке полосы отбора, и её границы уже
+     очерчены дивайдерами. Рамка внутри читалась бы коробкой в коробке —
+     тем же счётом, по которому её лишились поиск, кнопка темы и бургер. */
+  border: 0;
   border-radius: 0;
   max-width: 15rem;
   cursor: pointer;
@@ -1766,23 +1804,31 @@ select {
      «Progressive Electronic (14)» с его 250 px, — и подпись обрезалась. */
   max-width: none;
 }
+/* Отклик теперь цветом, а не рамкой: рамки нет. */
 @media (hover: hover) {
-  select:hover { border-color: var(--fg-muted); }
+  select:hover { color: var(--fg-muted); }
 }
-select:active { border-color: var(--fg-muted); }
+select:active { color: var(--fg-muted); }
 /* Раскрытый список рисует система, и он всегда на своём фоне: без этого
    в тёмной теме пункты остаются чёрным по чёрному в части браузеров. */
 select option { background: var(--option-bg); color: var(--fg); }
 
+/* Треугольник вниз — не значок, а обрезанный прямоугольник: фигура из трёх
+   точек контура не требует, и подключать ради неё Phosphor незачем. Тот же
+   приём, что у метки раздела в полосах.
+
+   Высота меньше ширины: равносторонний в этом месте читался стрелкой вниз,
+   а нужен указатель на список. */
 .select__chevron {
   position: absolute;
   top: 50%;
   right: var(--select-pad);
   width: var(--chevron);
-  height: var(--chevron);
-  margin-top: calc(var(--chevron) / -2);
+  height: calc(var(--chevron) * 0.625);
+  margin-top: calc(var(--chevron) * -0.3125);
   pointer-events: none;
-  color: var(--fg-muted);
+  background: var(--fg-muted);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
   transition: transform 0.12s ease;
 }
 .select[data-open] .select__chevron { transform: rotate(180deg); }
@@ -1830,17 +1876,19 @@ select option { background: var(--option-bg); color: var(--fg); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg);
-  border: 1px solid var(--line);
+  /* Рамки нет — по той же причине, что у обычного списка рядом. */
+  border: 0;
   cursor: pointer;
-  /* Треугольник, который браузер рисует у summary, убираем: шеврон свой. */
+  /* Треугольник, который браузер рисует у summary, убираем: свой стоит
+     справа. */
   list-style: none;
 }
 .multi__button::-webkit-details-marker { display: none; }
 .multi__button { position: relative; }
 @media (hover: hover) {
-  .multi__button:hover { border-color: var(--fg-muted); }
+  .multi__button:hover { color: var(--fg-muted); }
 }
-.multi__button:active { border-color: var(--fg-muted); }
+.multi__button:active { color: var(--fg-muted); }
 .multi__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .multi[open] .select__chevron { transform: rotate(180deg); }
 /* Пока отбор пуст — шеврон, как у обычного списка. Как только что-то
@@ -1875,7 +1923,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .multi__x { width: 0.6875rem; height: 0.6875rem; }
 /* Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
    панели по одной подписи «Genres [3]» не видно, что отбор включён. */
-.multi[data-chosen] .multi__button { border-color: var(--fg-muted); color: var(--fg); }
+.multi[data-chosen] .multi__button { color: var(--fg); }
 
 .multi__panel {
   position: absolute;
@@ -1942,31 +1990,11 @@ select option { background: var(--option-bg); color: var(--fg); }
    нет ни одной записи — снять с него флажок иначе было бы нечем. */
 .multi__item[data-empty] { color: var(--fg-dim); }
 
-/* Подзаголовок списка в панели — приём из полосы отбора Ghostly: имя оси, а
-   под ним её значения. Виден только когда списков в панели несколько: тип и
-   жанр стоят в одной, и без имён два списка подряд читались бы одним.
-
-   Набран как счётчики — моноширинным, мельче и приглушённым: это метка, а
-   не пункт, и по весу она должна уступать тому, что под ней. Поле слева то
-   же, что у пунктов, чтобы столбик не ломался. */
-.multi__head {
-  margin: 0;
-  padding: 0.625rem var(--select-pad) 0.3125rem;
-  font-family: var(--mono);
-  font-size: max(12px, 0.6875rem);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
-
-/* Между списками мягкая черта — та же, что между строками индекса. У
-   первого её нет: над ним край панели. */
-.multi__group + .multi__group .multi__head {
-  margin-top: 0.3125rem;
-  padding-top: 0.625rem;
-  border-top: 1px solid var(--line-soft);
-}
+/* Правила .multi__head удалены 5 сентября 2026 вместе с общей панелью типа
+   и жанра: оба разъехались по своим столбцам полосы отбора, и подзаголовок
+   внутри панели стало нечему называть. Сама возможность держать в панели
+   несколько списков осталась в разметке — .multi__group, — по ней скрипт
+   страницы прячет список, в котором не осталось пунктов.
 
 .multi__none {
   margin: 0;
@@ -2092,8 +2120,14 @@ select option { background: var(--option-bg); color: var(--fg); }
   color: var(--ink-fg);
   border-color: var(--ink);
 }
-/* Тот же кегль, что у шеврона в списках фильтров. */
-.crumbs__chevron { width: 0.5625rem; height: 0.5625rem; flex: none; }
+/* Тот же треугольник, что у кнопки «назад» в полосе. */
+.crumbs__chevron {
+  flex: none;
+  width: 0.375rem;
+  height: 0.5625rem;
+  background: currentColor;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
 
 /* Путь всегда в одну строку, длинное обрезается многоточием. Переносом он
    разрастался до трёх строк — «Alma's Cove EP Full Live Performance (Live in

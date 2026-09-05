@@ -8,8 +8,6 @@
    Раньше он был нарисован через clip-path; теперь это caret-down из
    Phosphor, как и остальные значки в проекте. */
 
-import Icon from './Icon.astro';
-
 /* narrow — для списков, у которых пункты длиннее собственной подписи.
    Ширину закрытой кнопки браузер берёт по самому длинному пункту, и такой
    список раздувается рядом с соседями. */
@@ -19,7 +17,9 @@ const { id, label, narrow = false, class: extra } = Astro.props;
   <select id={id} aria-label={label}>
     <slot />
   </select>
-  <Icon name="caret-down" class="select__chevron" />
+  {/* Треугольник, а не значок: сплошная фигура из трёх точек не требует
+      контура, и рисует её сам CSS обрезкой прямоугольника. */}
+  <span class="select__chevron" aria-hidden="true"></span>
 </span>
 
 <script>

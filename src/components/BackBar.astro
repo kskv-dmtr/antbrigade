@@ -13,12 +13,10 @@
    переписки — history.back() увёл бы с сайта совсем, а кнопка обещает
    обратное; полоса тогда не показывается вовсе. Ровно то же правило, что
    было у кнопки в строке пути, откуда она сюда и переехала. */
-
-import Icon from './Icon.astro';
 ---
 <div class="head head--sticky head--dot head--backbar" hidden>
   <button type="button" class="back-bar">
-    <Icon name="caret-left" class="back-bar__caret" />Back
+    <span class="back-bar__caret" aria-hidden="true"></span>Back
   </button>
   <div class="head__side" aria-hidden="true"></div>
 </div>

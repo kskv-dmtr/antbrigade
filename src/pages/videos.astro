@@ -78,6 +78,7 @@ const PAGE = 50;
       все клипы — значение в полосе совпадает с первым расчётом. */}
   <PageBar title="Videos" count={videos.length} live>
     <SearchField label="Search by artist or title" />
+    <ViewSwitch />
   </PageBar>
 
   {/* Отбор устроен как на Music, только вместо типа с жанром — вид ролика:
@@ -106,7 +107,8 @@ const PAGE = 50;
       </Select>
     </FilterCell>
 
-    <FilterCell name="View:"><ViewSwitch /></FilterCell>
+    {/* Четвёртый столбец пуст: жанров у клипов нет, а ломать строку под
+        три отбора значило бы разойтись со столбцами решётки. */}
   </FilterBar>
 
   <p class="empty" id="empty" hidden>Nothing found.</p>

@@ -73,23 +73,21 @@ const PAGE = 50;
       экране — списка, который теперь один на все ширины. */}
   <PageBar title="Music" count={albums.length} live>
     <SearchField label="Search by artist or album" />
+    <ViewSwitch />
   </PageBar>
 
   {/* Отбор — отдельной строкой в четыре столбца, по столбцам решётки. */}
   <FilterBar>
-    {/* Тип и жанр — одной панелью в двух списках с подзаголовками: оба
-        отвечают на «что это за музыка», а год — на «когда вышло». Отбор
-        внутри — «любой из отмеченных», а не «все сразу»: у релиза бывает и
+    {/* Отбор — «любой из отмеченных», а не «все сразу»: у релиза бывает и
         два типа, и три жанра, и пересечение почти всегда пусто. */}
-    <FilterCell name="Type and genre:">
-      <MultiSelect id="tg" label="Type and genre"
-                   allLabel="All" manyLabel="Chosen"
-                   groups={[
-                     { label: 'Type', axis: 'type',
-                       items: types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 })) },
-                     { label: 'Genre', axis: 'genre',
-                       items: genres.map(([g, n]) => ({ value: g, label: g, count: n })) }
-                   ]} />
+    <FilterCell name="Type:">
+      <MultiSelect id="type" label="Release type" allLabel="All" manyLabel="Chosen" axis="type"
+                   items={types.map((t) => ({ value: t.value, label: t.label, count: typeCounts.get(t.value) ?? 0 }))} />
+    </FilterCell>
+
+    <FilterCell name="Genre:">
+      <MultiSelect id="genre" label="Genre" allLabel="All" manyLabel="Chosen" axis="genre"
+                   items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
     </FilterCell>
 
     <FilterCell name="Year:">
@@ -111,7 +109,6 @@ const PAGE = 50;
       </Select>
     </FilterCell>
 
-    <FilterCell name="View:"><ViewSwitch /></FilterCell>
   </FilterBar>
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек
@@ -154,9 +151,8 @@ const PAGE = 50;
   const counter = document.getElementById('counter');
   const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
-  /* Тип и жанр живут в одной панели, поэтому элемент один, а осей в нём
-     две: различает их data-axis на флажке. */
-  const tgEl    = document.getElementById('tg');
+  const typeEl  = document.getElementById('type');
+  const genreEl = document.getElementById('genre');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
   const more    = document.getElementById('more');
@@ -230,7 +226,8 @@ const PAGE = 50;
       }
     }
 
-    paint(tgEl, { type: byType, genre: byGenre });
+    paint(typeEl, { type: byType });
+    paint(genreEl, { genre: byGenre });
     paint(yearEl, { year: byYear });
   }
 
@@ -339,12 +336,9 @@ const PAGE = 50;
   const marked = (root, axis) =>
     [...root.querySelectorAll(`input[data-axis="${axis}"]:checked`)].map((b) => b.value);
 
-  tgEl.addEventListener('change', () => {
-    state.types  = marked(tgEl, 'type');
-    state.genres = marked(tgEl, 'genre');
-    rewind(); apply();
-  });
-  yearEl.addEventListener('change', () => { state.years = marked(yearEl, 'year'); rewind(); apply(); });
+  typeEl.addEventListener('change',  () => { state.types  = marked(typeEl, 'type');   rewind(); apply(); });
+  genreEl.addEventListener('change', () => { state.genres = marked(genreEl, 'genre'); rewind(); apply(); });
+  yearEl.addEventListener('change',  () => { state.years  = marked(yearEl, 'year');   rewind(); apply(); });
   sortEl.addEventListener('change',  () => {
     state.sort = sortEl.value;
     sort(); rewind(); apply();

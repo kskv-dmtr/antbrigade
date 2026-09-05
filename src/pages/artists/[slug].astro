@@ -48,59 +48,60 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
 >
   <BackBar />
 
-  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
+  {/* Первый блок — тот же, что на страницах релиза и клипа: слева половина
+      решётки, справа половина. Слева только имя, справа справка строками —
+      страна, жанры, лейблы, переходы наружу.
 
-      Страна стоит справа от имени, по нижней его линии, и набрана тем же,
-      чем счётчики на списках: скобки на сайте означают служебное число или
-      пометку, и страна здесь именно пометка. Выключку даёт сам .page-head —
-      он для того и собран, на списках так же стоит счётчик. */}
-  <div class="page-head page-head--country">
-    <h1>{artist.name}</h1>
-    {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
-  </div>
+      Счёт релизов сюда не идёт: он стоит в полосе раздела ниже. */}
+  <article class="item item--page">
+    <div class="item__lead">
+      <h1 class="item__title">{artist.name}</h1>
+    </div>
 
+    <div class="item__head">
+      <dl class="item__facts">
+        {artist.country && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{countryName(artist.country)}</dd>
+          </div>
+        )}
 
-  {/* Жанры и лейблы — строками справки, теми же, что на странице релиза:
-      подпись с двоеточием слева, перечень у правого края. Полосой с кружком
-      они простояли несколько часов 6 сентября 2026: полоса — это раздел, а
-      жанры с лейблами не раздел, а справка о самом исполнителе, и стоять ей
-      рядом с именем, а не в ряду с дискографией.
+        {/* Жанры перед лейблами: в справке релиза они идут в том же
+            порядке. */}
+        {artist.genres.length > 0 && (
+          <div class="item__fact">
+            <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
+            <dd><GenreLinks names={artist.genres} inline /></dd>
+          </div>
+        )}
 
-      Жанры перед лейблами: в справке релиза они идут в том же порядке. */}
-  {(artist.genres.length > 0 || labels.length > 0 || hasLinks) && (
-    <dl class="item__facts facts--page">
-      {artist.genres.length > 0 && (
-        <div class="item__fact">
-          <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
-          <dd><GenreLinks names={artist.genres} inline /></dd>
-        </div>
-      )}
+        {labels.length > 0 && (
+          <div class="item__fact">
+            <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
+            <dd>
+              {labels.map((l, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/labels/${l.slug}`}>{l.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
 
-      {labels.length > 0 && (
-        <div class="item__fact">
-          <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
-          <dd>
-            {labels.map((l, i) => (
-              <>
-                {i > 0 && <span class="sep"> · </span>}
-                <a href={`/labels/${l.slug}`}>{l.name}</a>
-              </>
-            ))}
-          </dd>
-        </div>
-      )}
-
-      {/* Переходы наружу — последней строкой: сперва про самого
-          исполнителя, потом куда пойти дальше. Тот же счёт, что на
-          странице релиза, где кнопки площадок стоят под справкой. */}
-      {hasLinks && (
-        <div class="item__fact">
-          <dt>Links:</dt>
-          <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
-        </div>
-      )}
-    </dl>
-  )}
+        {/* Переходы наружу — последней строкой: сперва про самого
+            исполнителя, потом куда пойти дальше. Тот же счёт, что на
+            странице релиза, где кнопки площадок стоят под справкой. */}
+        {hasLinks && (
+          <div class="item__fact">
+            <dt>Links:</dt>
+            <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
+          </div>
+        )}
+      </dl>
+    </div>
+  </article>
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
       дискография, а клипы есть у полутора десятков из девятисот. */}
@@ -121,7 +122,7 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   {clipsSorted.length > 0 && (
     <section class="section">
       <PageBar as="h2" title="Videos" count={clipsSorted.length} />
-      <ul class="tiles tiles--auto tiles--video">
+      <ul class="tiles tiles--auto">
         {clipsSorted.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>

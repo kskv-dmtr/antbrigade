@@ -30,41 +30,45 @@ const roster   = artistsOf(label.artistIds);
       стрелки. */}
   <BackBar />
 
-  {/* Устройство то же, что на странице исполнителя: счёт релизов только в
-      заголовке раздела ниже, а страна — справа от имени, по нижней его
-      линии, тем же набором, что счётчики на списках. */}
-  <div class="page-head page-head--country">
-    <h1>{label.name}</h1>
-    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
-  </div>
+  {/* Первый блок — тот же, что у исполнителя: слева имя, справа справка
+      строками. */}
+  <article class="item item--page">
+    <div class="item__lead">
+      <h1 class="item__title">{label.name}</h1>
+    </div>
 
+    <div class="item__head">
+      <dl class="item__facts">
+        {label.country && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{countryName(label.country)}</dd>
+          </div>
+        )}
 
-  {/* Состав — строкой справки, как жанры и лейблы на странице исполнителя:
-      подпись с двоеточием слева, имена у правого края. */}
-  {(roster.length > 0 || label.bandcamp || label.youtube) && (
-    <dl class="item__facts facts--page">
-      {roster.length > 0 && (
-        <div class="item__fact">
-          <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-          <dd>
-            {roster.map((a, i) => (
-              <>
-                {i > 0 && <span class="sep"> · </span>}
-                <a href={`/artists/${a.slug}`}>{a.name}</a>
-              </>
-            ))}
-          </dd>
-        </div>
-      )}
+        {roster.length > 0 && (
+          <div class="item__fact">
+            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+            <dd>
+              {roster.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
 
-      {(label.bandcamp || label.youtube) && (
-        <div class="item__fact">
-          <dt>Links:</dt>
-          <dd><ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} /></dd>
-        </div>
-      )}
-    </dl>
-  )}
+        {(label.bandcamp || label.youtube) && (
+          <div class="item__fact">
+            <dt>Links:</dt>
+            <dd><ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} /></dd>
+          </div>
+        )}
+      </dl>
+    </div>
+  </article>
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />

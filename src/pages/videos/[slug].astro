@@ -141,7 +141,7 @@ const releases = [...new Map(
       {/* Без имени исполнителя: оно уже стоит в полосе над разделом, и
           в заголовке повторялось бы третий раз за экран. */}
       <PageBar as="h2" title="More Videos" count={rest.length} />
-      <ul class="tiles tiles--auto tiles--video">
+      <ul class="tiles tiles--auto">
         {rest.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>

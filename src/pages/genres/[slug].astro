@@ -9,7 +9,6 @@ import PageBar from '../../components/PageBar.astro';
 import BackBar from '../../components/BackBar.astro';
 import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
 
-
 export function getStaticPaths() {
   return genres.map((genre) => ({ params: { slug: genre.slug }, props: { genre } }));
 }
@@ -37,28 +36,31 @@ const roster = [...new Map(
   {/* Полоса «назад» — как на остальных внутренних страницах. */}
   <BackBar />
 
-  {/* Счёт релизов только в заголовке раздела ниже — здесь он дублировался.
-      Так же собраны страницы исполнителя и лейбла. */}
-  <div class="page-head">
-    <h1>{genre.name}</h1>
-  </div>
+  {/* Первый блок — тот же, что у исполнителя и лейбла: слева имя, справа
+      справка строками. У жанра справки всего одна — исполнители. */}
+  <article class="item item--page">
+    <div class="item__lead">
+      <h1 class="item__title">{genre.name}</h1>
+    </div>
 
-  {/* Исполнители — строкой справки, как состав на странице лейбла. */}
-  {roster.length > 0 && (
-    <dl class="item__facts facts--page">
-      <div class="item__fact">
-        <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-        <dd>
-          {roster.map((a, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/artists/${a.slug}`}>{a.name}</a>
-            </>
-          ))}
-        </dd>
-      </div>
-    </dl>
-  )}
+    <div class="item__head">
+      <dl class="item__facts">
+        {roster.length > 0 && (
+          <div class="item__fact">
+            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+            <dd>
+              {roster.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+      </dl>
+    </div>
+  </article>
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />

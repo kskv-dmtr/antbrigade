@@ -358,7 +358,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Место полосы снимается при выключенной липкости: у sticky-элемента
        getBoundingClientRect врёт ровно на то, что мы измеряем. Тот же приём
        и с той же причиной, что у липкой полосы списков ниже. */
-    const полосы = [...document.querySelectorAll('.head--sticky')];
+    const полосы = [...document.querySelectorAll('.head--sticky, .filters-row')];
 
     if (полосы.length) {
       /* Отступ у каждой полосы свой: заголовок раздела встаёт под шапку, а

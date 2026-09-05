@@ -82,12 +82,7 @@ const PAGE = 50;
       половине полосы заголовка, поиск — в шапке. Пустая подборка обходится
       без них: отбирать нечего. */}
   <PageBar title="Featured" count={featured.length > 0 ? featured.length : null} live>
-    {featured.length > 0 && (
-      <>
-        <SearchField label="Search by artist or album" />
-        <ViewSwitch />
-      </>
-    )}
+    {featured.length > 0 && <SearchField label="Search by artist or album" />}
   </PageBar>
 
   {/* Отбор тот же, что на /music. Пустая подборка обходится без него:
@@ -121,6 +116,7 @@ const PAGE = 50;
         </Select>
       </FilterCell>
 
+      <FilterCell name="View:"><ViewSwitch /></FilterCell>
     </FilterBar>
   )}
 

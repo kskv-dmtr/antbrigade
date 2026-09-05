@@ -54,6 +54,7 @@ const years = [...yearCounts.keys()].sort((a, b) => b - a);
 
 // Сколько строк показывать сразу и сколько добавлять по нажатию.
 const PAGE = 50;
+
 ---
 <Base
   title="Music · ant brigade"
@@ -73,7 +74,6 @@ const PAGE = 50;
       экране — списка, который теперь один на все ширины. */}
   <PageBar title="Music" count={albums.length} live>
     <SearchField label="Search by artist or album" />
-    <ViewSwitch />
   </PageBar>
 
   {/* Отбор — отдельной строкой в четыре столбца, по столбцам решётки. */}
@@ -109,6 +109,7 @@ const PAGE = 50;
       </Select>
     </FilterCell>
 
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
   </FilterBar>
 
   {/* Список строками — вид по умолчанию, как в макете. Стена обложек

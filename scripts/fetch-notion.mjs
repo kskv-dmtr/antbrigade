@@ -36,7 +36,12 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
              url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ',
-             featured: 'Hfn}' };
+             playlists: 'Hfn}' };
+
+/* Подборка, попадание в которую показывает /featured. Имя лежит здесь, а не
+   в разметке страницы: в Notion это одно из значений колонки Playlists, и
+   переименуют его там, а не в коде. */
+const FEATURED = 'Featured';
 /* Ключи свойств в таблице клипов. Ключ даты здесь свой, LStn: колонка
    «Release Date» заведена заново 29 августа 2026, и прежний ключ она не
    унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
@@ -429,10 +434,17 @@ async function main() {
        релиз в другом. */
     const origReleased = dateStart(prop(props, P.origDate));
 
-    /* Флажок «в подборке». Notion хранит его текстом «Yes» и только у
-       отмеченных строк: у снятого флажка свойства в записи нет вовсе —
-       поэтому сверяем значение, а не наличие ключа. */
-    const featured = plainText(prop(props, P.featured)) === 'Yes';
+    /* Подборки, в которые входит релиз. До 5 сентября 2026 под этим же
+       ключом жил флажок «в подборке» — Notion хранил его текстом «Yes», —
+       а теперь это колонка Playlists с множественным выбором, и значений в
+       ней может быть сколько угодно. Разбираем её так же, как жанры и типы:
+       имена через запятую.
+
+       featured остаётся отдельным полем: страница /featured и витрина знают
+       про одну подборку, а не про весь список, и им незачем каждый раз
+       искать имя в массиве. */
+    const playlists = splitList(plainText(prop(props, P.playlists)));
+    const featured = playlists.includes(FEATURED);
 
     albums.push({
       id: v.id,
@@ -446,6 +458,7 @@ async function main() {
       released,
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
       origReleased,
+      playlists,
       featured,
       artistIds,
       artists: artistIds.map((id) => artistsDir.get(id)?.name).filter(Boolean),

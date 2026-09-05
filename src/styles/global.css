@@ -2829,6 +2829,23 @@ select option { background: var(--option-bg); color: var(--fg); }
    полосе и подписи счётчиков в списках. Один набор на все служебные
    подписи сайта. */
 .item__facts { margin: 0; }
+
+/* Те же строки справки на страницах исполнителя, лейбла и жанра — жанры,
+   лейблы, состав. Разница одна: там они лежат в ячейке блока и берут её
+   поля, а здесь идут во всю ширину кадра, до самых краёв экрана, как
+   полосы и списки вокруг.
+
+   Поле слева на пиксель больше: своей левой границы у строки нет, а блок
+   сдвинут на пиксель влево, как всё, что идёт до краёв. */
+.facts--page {
+  margin-left: calc(var(--pad) * -1 - 1px);
+  margin-right: calc(var(--pad) * -1);
+  margin-bottom: -1px;
+}
+.facts--page .item__fact {
+  padding-left: calc(var(--pad) + 1px);
+  padding-right: var(--pad);
+}
 .item__fact {
   display: flex;
   align-items: baseline;
@@ -3073,8 +3090,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   flex-wrap: wrap;
   margin: 0 0 2rem;
 }
-.listen__platform,
-.profile {
+.listen__platform {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -3092,25 +3108,14 @@ select option { background: var(--option-bg); color: var(--fg); }
   border: 1px solid var(--line);
 }
 @media (hover: hover) {
-  .listen__platform:hover,
-  .profile:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+  .listen__platform:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 }
-.listen__platform:active,
-.profile:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+.listen__platform:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 
-/* Ряд ссылок наружу — сайт, Bandcamp, YouTube. Просвет и отступ снизу держит
-   он, а не сами кнопки: их бывает и одна, и две, и отступ не должен от этого
-   зависеть.
-
-   Своё поле снизу — те же 20; видно его не бывает, поле первого раздела (46)
-   всегда больше и схлопывает его в себя. Оставлено на случай, когда под
-   кнопками окажется не раздел. */
-.profiles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
+/* Правила ряда кнопок наружу (`.profiles`, `.profile`) удалены 6 сентября
+   2026: Bandcamp и YouTube стали значением строки справки `Links:` на
+   страницах исполнителя и лейбла — обычными ссылками через точку, как жанры
+   и лейблы рядом. Ряд кнопок в рамках весил больше, чем сам переход. */
 
 /* Полоса под именем (`.profile-bar`) удалена 31 августа 2026 вместе с
    последним употреблением. Несла она справку под именем — сперва жанры с
@@ -3136,7 +3141,6 @@ select option { background: var(--option-bg); color: var(--fg); }
    строки шли через кегль при высоте прописной в две трети — перечисление
    читалось сплошной плашкой. */
 .section > .meta-line { line-height: 1.5rem; }
-.profile__icon,
 .listen__icon { width: 1rem; height: 1rem; fill: currentColor; flex: none; }
 
 /* Список определений `.facts` — подпись слева, значение справа — удалён 29

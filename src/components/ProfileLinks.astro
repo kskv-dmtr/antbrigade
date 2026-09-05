@@ -1,37 +1,20 @@
 ---
-/* Ряд ссылок на страницы исполнителя или лейбла вне сайта.
-   Поля в Notion заполняются вручную и у большинства записей пустые, поэтому
-   проверки живут здесь: страницы подключают компонент безусловно, а он сам
-   ничего не выводит, когда выводить нечего.
+/* Ссылки наружу — Bandcamp и YouTube — перечнем через точку. Значение
+   строки справки `Links:` на страницах исполнителя и лейбла.
 
-   Пришёл на смену BandcampLink, когда у исполнителей появилось второе такое
-   поле: две отдельные кнопки подряд разъезжались бы пробелом между строчными
-   элементами, а ряду нужен общий просвет.
+   Кнопками в рамках они стояли до 6 сентября 2026: отдельным рядом под
+   именем, со значками площадок. Ряд весил больше, чем сам переход, и стоял
+   поперёк страницы, ни к чему не относясь; строкой справки он встал рядом с
+   жанрами и лейблами — туда же, где остальное об исполнителе.
 
-   Кнопка Website стояла первой — дом впереди витрин — и удалена 5 сентября
-   2026 вслед за колонкой в Notion: ссылки на собственные сайты оттуда
-   убраны. Стояли они у трёх артистов и девяти лейблов. */
+   Проверки живут здесь: поля в Notion заполняются вручную и у большинства
+   записей пусты, а страницы подключают компонент безусловно.
 
-import Icon from './Icon.astro';
+   Кнопка `Website` стояла первой и удалена 5 сентября 2026 вслед за
+   колонкой в Notion. */
 
 const { bandcamp, youtube } = Astro.props;
-const есть = Boolean(bandcamp || youtube);
 ---
-{есть && (
-  <div class="profiles">
-
-    {bandcamp && (
-      <a class="profile" href={bandcamp} target="_blank" rel="noopener noreferrer">
-        <Icon name="bandcamp" class="profile__icon" />
-        <span>Bandcamp</span>
-      </a>
-    )}
-
-    {youtube && (
-      <a class="profile" href={youtube} target="_blank" rel="noopener noreferrer">
-        <Icon name="youtube-logo" class="profile__icon" />
-        <span>YouTube</span>
-      </a>
-    )}
-  </div>
-)}
+{bandcamp && <a href={bandcamp} target="_blank" rel="noopener noreferrer">Bandcamp</a>}
+{bandcamp && youtube && <span class="sep"> · </span>}
+{youtube && <a href={youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}

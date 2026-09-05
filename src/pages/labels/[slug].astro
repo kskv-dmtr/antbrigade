@@ -38,37 +38,32 @@ const roster   = artistsOf(label.artistIds);
     {label.country && <p class="counter">[{countryName(label.country)}]</p>}
   </div>
 
-  {/* Ссылки наружу стоят прямо под именем, без заголовка и линейки — как и
-      у исполнителя: заголовок «Links» с чертой во всю ширину ради одной-двух
-      кнопок весил больше, чем сами кнопки, а рядом такие же заголовки ведут
-      к спискам и сеткам.
 
-      Просвет до имени держит поле .page-head, а свой отступ снизу — ряд
-      кнопок; ниже он схлопывается с полем первого раздела. */}
-  {(label.bandcamp || label.youtube) && (
-    <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
-  )}
+  {/* Состав — строкой справки, как жанры и лейблы на странице исполнителя:
+      подпись с двоеточием слева, имена у правого края. */}
+  {(roster.length > 0 || label.bandcamp || label.youtube) && (
+    <dl class="item__facts facts--page">
+      {roster.length > 0 && (
+        <div class="item__fact">
+          <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+          <dd>
+            {roster.map((a, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${a.slug}`}>{a.name}</a>
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
 
-  {/* Состав — той же полосой, что разделы с плитками: кружок, название,
-      счётчик слева, перечень имён в правой половине. Так же собраны жанры и
-      лейблы на странице исполнителя.
-
-      Имена набраны и подчёркнуты так же, как жанры у исполнителя и лейбл
-      в справке релиза: ссылка на страницу списка везде выглядит
-      одинаково. */}
-  {roster.length > 0 && (
-    <section class="section">
-      <PageBar as="h2" title={roster.length > 1 ? 'Artists' : 'Artist'} count={roster.length}>
-        <p class="meta-line">
-          {roster.map((a, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/artists/${a.slug}`}>{a.name}</a>
-            </>
-          ))}
-        </p>
-      </PageBar>
-    </section>
+      {(label.bandcamp || label.youtube) && (
+        <div class="item__fact">
+          <dt>Links:</dt>
+          <dd><ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} /></dd>
+        </div>
+      )}
+    </dl>
   )}
 
   <section class="section">

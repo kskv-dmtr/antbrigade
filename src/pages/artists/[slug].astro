@@ -59,53 +59,47 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
     {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
   </div>
 
-  {/* Ссылки наружу стоят прямо под именем, без заголовка и линейки. Раздела
-      им больше не отведено: заголовок «Links» с чертой во всю ширину ради
-      одной-двух кнопок весил больше, чем сами кнопки, а рядом такие же
-      заголовки ведут к спискам и сеткам.
 
-      Просвет до имени держит поле .page-head, а свой отступ снизу — ряд
-      кнопок; ниже он схлопывается с полем первого раздела. */}
-  {hasLinks && (
-    <ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} />
-  )}
+  {/* Жанры и лейблы — строками справки, теми же, что на странице релиза:
+      подпись с двоеточием слева, перечень у правого края. Полосой с кружком
+      они простояли несколько часов 6 сентября 2026: полоса — это раздел, а
+      жанры с лейблами не раздел, а справка о самом исполнителе, и стоять ей
+      рядом с именем, а не в ряду с дискографией.
 
-  {/* Жанры — своим разделом, как лейблы. Стоят перед ними: на полосе
-      релиза жанры тоже идут выше строки с лейблом.
+      Жанры перед лейблами: в справке релиза они идут в том же порядке. */}
+  {(artist.genres.length > 0 || labels.length > 0 || hasLinks) && (
+    <dl class="item__facts facts--page">
+      {artist.genres.length > 0 && (
+        <div class="item__fact">
+          <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
+          <dd><GenreLinks names={artist.genres} inline /></dd>
+        </div>
+      )}
 
-      Полоса та же, что у разделов с плитками: кружок, название, счётчик
-      слева, а сам перечень — в правой половине. Раньше заголовок стоял
-      обычной строкой, а имена шли абзацем под ним: два этажа ради одной
-      строки, и ни один не сходился с решёткой. */}
-  {artist.genres.length > 0 && (
-    <section class="section">
-      <PageBar as="h2" title={artist.genres.length > 1 ? 'Genres' : 'Genre'}
-               count={artist.genres.length}>
-        <p class="meta-line">
-          <GenreLinks names={artist.genres} inline />
-        </p>
-      </PageBar>
-    </section>
-  )}
+      {labels.length > 0 && (
+        <div class="item__fact">
+          <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
+          <dd>
+            {labels.map((l, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/labels/${l.slug}`}>{l.name}</a>
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
 
-  {/* Лейблы — тем же устройством, что жанры выше: полоса с кружком слева,
-      перечень в правой половине.
-
-      Имена набраны и разделены точкой так же, как состав на странице лейбла
-      и жанры выше: ссылка на страницу списка везде выглядит одинаково. */}
-  {labels.length > 0 && (
-    <section class="section">
-      <PageBar as="h2" title={labels.length > 1 ? 'Labels' : 'Label'} count={labels.length}>
-        <p class="meta-line">
-          {labels.map((l, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/labels/${l.slug}`}>{l.name}</a>
-            </>
-          ))}
-        </p>
-      </PageBar>
-    </section>
+      {/* Переходы наружу — последней строкой: сперва про самого
+          исполнителя, потом куда пойти дальше. Тот же счёт, что на
+          странице релиза, где кнопки площадок стоят под справкой. */}
+      {hasLinks && (
+        <div class="item__fact">
+          <dt>Links:</dt>
+          <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
+        </div>
+      )}
+    </dl>
   )}
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его

@@ -78,7 +78,7 @@ const PAGE = 50;
       фильтров, и заголовок над выдачей повторял бы нажатое, а в общем
       списке — резал бы его на два десятка кусков без всякой нужды.
       Группировка осталась только как порядок записей. */}
-  <ul class="names" id="list">
+  <ul class="names names--two" id="list">
     {ordered.map(([letter, items]) => (
       <>
         {items.map((l) => (
@@ -89,21 +89,14 @@ const PAGE = 50;
             data-count={l.albumIds.length}
             data-letter={letter}
           >
-            {/* Раскладка та же, что у артистов, включая отсутствие страны; в
-                четвёртом столбце вместо клипов — число исполнителей: клипов
-                у лейбла не бывает. */}
-            <a class="row row--index" href={`/labels/${l.slug}`}>
-              <span class="row__lead">
-                <span class="row__title">{l.name}</span>
-              </span>
-              <span class="row__meta">
-                <span class="row__key">releases:</span>
-                <span class="row__val">[{l.albumIds.length}]</span>
-              </span>
-              <span class="row__num">
-                <span class="row__key">artists:</span>
-                <span class="row__val">[{l.artistIds.length}]</span>
-              </span>
+            {/* Как у жанров: сведений о лейбле — имя да число релизов, и
+                строка во всю ширину оставляла бы половину экрана пустой.
+                Число исполнителей из строки убрано: у лейбла оно почти
+                всегда повторяет число релизов, а спорит за место с ним.
+                Оно осталось на странице самого лейбла. */}
+            <a class="row row--brief" href={`/labels/${l.slug}`}>
+              <span class="row__title">{l.name}</span>
+              <span class="row__val">[{l.albumIds.length}]</span>
             </a>
           </li>
         ))}

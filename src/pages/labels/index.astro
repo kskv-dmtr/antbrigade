@@ -72,8 +72,6 @@ const PAGE = 50;
     </FilterCell>
   </FilterBar>
 
-  <p class="empty" id="empty" hidden>Nothing found.</p>
-
   {/* Заголовков с буквами в списке нет: буква выбирается кнопкой в полосе
       фильтров, и заголовок над выдачей повторял бы нажатое, а в общем
       списке — резал бы его на два десятка кусков без всякой нужды.
@@ -113,7 +111,6 @@ const PAGE = 50;
   import { fold } from '../../lib/fold.js';
 
   const search   = document.getElementById('search');
-  const empty    = document.getElementById('empty');
   const list     = document.getElementById('list');
   const sortEl   = document.getElementById('sort');
   const letterEl = document.getElementById('letter');
@@ -149,8 +146,6 @@ const PAGE = 50;
       if (ok) count++;
       li.hidden = !ok || count > limit;
     }
-
-    empty.hidden = count > 0;
 
     const rest = count - limit;
     more.hidden = rest <= 0;

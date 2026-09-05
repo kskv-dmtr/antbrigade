@@ -1,0 +1,50 @@
+---
+/* Подборки: раздел на каждую подборку из Notion, в разделе — обложки.
+
+   Страница звалась /featured и была устроена как /music: полоса отбора,
+   поиск, вид, «показать ещё». Полторы дюжины обложек всего этого не стоили,
+   и 6 сентября 2026 страница пересобрана по витрине: полоса раздела и
+   решётка под ней, больше ничего.
+
+   Разделов столько, сколько подборок в базе, и имена берутся из самих
+   записей, а не из кода: подборку переименуют в Notion — переименуется и
+   раздел. Сейчас подборка одна, Favorites; до 6 сентября 2026 она звалась
+   Featured, и её имя стояло в выгрузке отдельной константой. */
+
+import Base from '../layouts/Base.astro';
+import AlbumCard from '../components/AlbumCard.astro';
+import PageBar from '../components/PageBar.astro';
+import { albums, coverSrc, plural } from '../lib/db.js';
+
+/* Порядок подборок — от большой к малой; внутри — от свежих к старым, как
+   везде на сайте по умолчанию. */
+const подборки = new Map();
+for (const a of albums) {
+  for (const имя of a.playlists ?? []) {
+    if (!подборки.has(имя)) подборки.set(имя, []);
+    подборки.get(имя).push(a);
+  }
+}
+for (const список of подборки.values()) {
+  список.sort((x, y) => (y.released ?? '').localeCompare(x.released ?? ''));
+}
+const ряды = [...подборки.entries()].sort((a, b) => b[1].length - a[1].length);
+const всего = ряды.reduce((n, [, список]) => n + список.length, 0);
+
+const первая = ряды[0]?.[1]?.find((a) => a.cover);
+---
+<Base
+  title="Playlists · ant brigade"
+  description={`${plural(всего, 'release', 'releases')} in hand-picked playlists.`}
+  image={coverSrc(первая, 800)}
+  activeSection="playlists"
+>
+  {ряды.map(([имя, список], i) => (
+    <section class="section">
+      <PageBar as={i === 0 ? 'h1' : 'h2'} title={имя} count={список.length} />
+      <ul class="tiles tiles--auto">
+        {список.map((a) => <AlbumCard album={a} />)}
+      </ul>
+    </section>
+  ))}
+</Base>

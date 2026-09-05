@@ -7,7 +7,9 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/releases", "destination": "/music", "permanent": true },
-    { "source": "/releases.html", "destination": "/music", "permanent": true }
+    { "source": "/releases.html", "destination": "/music", "permanent": true },
+    { "source": "/featured", "destination": "/playlists", "permanent": true },
+    { "source": "/featured.html", "destination": "/playlists", "permanent": true }
   ],
   "headers": [
     {

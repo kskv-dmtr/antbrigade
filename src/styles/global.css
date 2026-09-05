@@ -1370,8 +1370,9 @@ body:has(.head--dot) .foot { margin-top: 0; }
    вызов компонента. */
 main > .head--page:first-child { border-top: 0; }
 
-/* Левая половина полосы: кружок, название, счётчик. */
-.head--page .head__lead {
+/* Левая ячейка полосы: кружок, название, подпись. Правило общее для всех
+   полос с кружком — и на списках, и на витрине. */
+.head--dot .head__lead {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1383,10 +1384,10 @@ main > .head--page:first-child { border-top: 0; }
 /* Счётчик прижат к правому краю половины, к самой черте. Рядом с
    названием он читался частью заголовка; у черты — служебной пометкой,
    чем и является. По вертикали посередине, как всё в полосе. */
-.head--page .counter { margin-left: auto; }
+.head--dot .counter { margin-left: auto; }
 /* Поле у половины уже есть, своё .display не нужно; точку рисует общее
    правило --dot. */
-.head--page .display {
+.head--dot .head__lead .display {
   padding-left: 0;
   min-width: 0;
   overflow: hidden;
@@ -2956,15 +2957,9 @@ select option { background: var(--option-bg); color: var(--fg); }
   line-height: 1.5;
 }
 
-.empty {
-  padding: 3.75rem var(--pad);
-  text-align: center;
-  font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
+/* Правило .empty — сообщение «ничего не найдено» посреди пустого места —
+   удалено 6 сентября 2026 вместе с самими сообщениями: пустое место под
+   полосой говорит то же самое и не занимает экран служебной строкой. */
 
 /* ---------------------------------------------------------- подвал
 

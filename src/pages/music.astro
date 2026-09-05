@@ -119,8 +119,6 @@ const PAGE = 48;
       осталась вторым видом: в каталоге пластинок обложка — это тоже
       содержание, и терять её целиком было бы неправильно. */}
 
-  <p class="empty" id="empty" hidden>Nothing found.</p>
-
   {/* Один <li> на релиз, внутри обе разметки: строка и плитка. Видимую
       выбирает data-view на списке, поэтому фильтру достаточно спрятать
       сам <li> — переключение вида его не касается. */}
@@ -153,7 +151,6 @@ const PAGE = 48;
   const grid    = document.getElementById('grid');
   const cards   = Array.from(grid.children);
   const counter = document.getElementById('counter');
-  const empty   = document.getElementById('empty');
   const search  = document.getElementById('search');
   const typeEl  = document.getElementById('type');
   const genreEl = document.getElementById('genre');
@@ -280,8 +277,6 @@ const PAGE = 48;
       if (ok) matched++;
       el.hidden = !ok || matched > limit;
     }
-
-    empty.hidden = matched > 0;
     counter.textContent = label(matched);
     recount();
 

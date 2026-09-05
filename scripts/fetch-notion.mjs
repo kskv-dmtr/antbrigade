@@ -43,10 +43,11 @@ const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
              url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ',
              playlists: 'Hfn}' };
 
-/* Подборка, попадание в которую показывает /featured. Имя лежит здесь, а не
-   в разметке страницы: в Notion это одно из значений колонки Playlists, и
-   переименуют его там, а не в коде. */
-const FEATURED = 'Featured';
+/* Имени подборки в коде больше нет: страница /playlists строит разделы по
+   тому, что лежит в колонке Playlists, и знать наперёд, как их зовут, ей
+   незачем. Константа FEATURED со значением «Featured» стояла здесь до
+   6 сентября 2026 — в Notion эту подборку переименовали в «Favorites», и
+   всякое имя в коде пришлось бы править следом. */
 /* Ключи свойств в таблице клипов. Ключ даты здесь свой, LStn: колонка
    «Release Date» заведена заново 29 августа 2026, и прежний ключ она не
    унаследовала. Читать вместо неё P.date нельзя — под тем ключом в строках
@@ -473,11 +474,10 @@ async function main() {
        ней может быть сколько угодно. Разбираем её так же, как жанры и типы:
        имена через запятую.
 
-       featured остаётся отдельным полем: страница /featured и витрина знают
-       про одну подборку, а не про весь список, и им незачем каждый раз
-       искать имя в массиве. */
+       Поле featured — булево «входит в подборку Featured» — удалено
+       6 сентября 2026 вместе со страницей /featured: разделы на /playlists
+       строятся по самому массиву. */
     const playlists = splitList(plainText(prop(props, P.playlists)));
-    const featured = playlists.includes(FEATURED);
 
     albums.push({
       id: v.id,
@@ -492,7 +492,6 @@ async function main() {
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
       origYear,
       playlists,
-      featured,
       artistIds,
       artists: artistIds.map((id) => artistsDir.get(id)?.name).filter(Boolean),
       labelIds,

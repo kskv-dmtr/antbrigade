@@ -57,12 +57,22 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         листаешь. Каждый заголовок прилипает в границах своего раздела, так
         что второй сменяет первый сам, без скрипта. */}
     <div class="head head--sticky head--bare head--dot">
-      <h1 class="display display--md"><Icon name="circle" class="mark" />Latest Releases</h1>
+      {/* Заголовок и подпись — в общей левой ячейке, как на списках: иначе
+          в решётке из двух ячеек подпись заняла бы вторую, а кнопка
+          перескочила бы на второй ряд. */}
+      <div class="head__lead">
+        <h1 class="display display--md"><Icon name="circle" class="mark" />Latest Releases</h1>
+        {/* Подпись в скобках на месте счётчика: сколько всего релизов, сказано
+            на /music, а здесь важнее, что это за подборка. Скобки на сайте
+            означают служебную пометку — то же, что у счётчиков. */}
+        <p class="counter">[what's new]</p>
+      </div>
       {/* Весь каталог — на /music. Ссылка, а не кнопка: работает без
-          скрипта и открывается в новой вкладке средним щелчком. */}
-      <a class="view-all" href="/music">
-        View all <span class="view-all__count">[{albums.length}]</span>
-      </a>
+          скрипта и открывается в новой вкладке средним щелчком.
+
+          Счётчика у кнопки больше нет: число стоит в полосе на самой
+          /music, а на витрине оно спорило с подписью раздела рядом. */}
+      <a class="view-all" href="/music">View all</a>
     </div>
     <ul class="tiles tiles--auto">
       {latest.map((a) => <AlbumCard album={a} />)}
@@ -73,14 +83,15 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         из одного контейнера в другой средствами CSS нельзя, а городить скрипт
         ради оформления не стоит. Лишний виден ровно один: второй скрыт
         медиазапросом и в дерево доступности не попадает. */}
-    <a class="view-all view-all--below" href="/music">
-      View all <span class="view-all__count">[{albums.length}]</span>
-    </a>
+    <a class="view-all view-all--below" href="/music">View all</a>
   </section>
 
   <section class="section">
     <div class="head head--sticky head--bare head--dot">
-      <h2 class="display display--md"><Icon name="circle" class="mark" />Lucky Finds</h2>
+      <div class="head__lead">
+        <h2 class="display display--md"><Icon name="circle" class="mark" />Lucky Finds</h2>
+        <p class="counter">[more to discover]</p>
+      </div>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}
       <button type="button" class="dig-again">Dig again</button>

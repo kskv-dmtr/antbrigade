@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageBar from '../../components/PageBar.astro';
 import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
 
 
@@ -37,30 +38,25 @@ const roster = [...new Map(
     <h1>{genre.name}</h1>
   </div>
 
-  {/* Исполнители — своим разделом, как состав на странице лейбла. Заголовок
-      склоняется по числу, счётчик стоит справа всегда — как у соседей. */}
+  {/* Исполнители — той же полосой, что состав на странице лейбла: кружок,
+      название, счётчик слева, перечень имён в правой половине. */}
   {roster.length > 0 && (
     <section class="section">
-      <div class="head">
-        <h2 class="display display--md">{roster.length > 1 ? 'Artists' : 'Artist'}</h2>
-        <span class="mono">[{roster.length}]</span>
-      </div>
-      <p class="meta-line">
-        {roster.map((a, i) => (
-          <>
-            {i > 0 && <span class="sep"> · </span>}
-            <a href={`/artists/${a.slug}`}>{a.name}</a>
-          </>
-        ))}
-      </p>
+      <PageBar as="h2" title={roster.length > 1 ? 'Artists' : 'Artist'} count={roster.length}>
+        <p class="meta-line">
+          {roster.map((a, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={`/artists/${a.slug}`}>{a.name}</a>
+            </>
+          ))}
+        </p>
+      </PageBar>
     </section>
   )}
 
   <section class="section">
-    <div class="head">
-      <h2 class="display display--md">Releases</h2>
-      <span class="mono">[{releases.length}]</span>
-    </div>
+    <PageBar as="h2" title="Releases" count={releases.length} />
     <ul class="tiles tiles--auto">
       {releases.map((album) => <AlbumCard album={album} />)}
     </ul>

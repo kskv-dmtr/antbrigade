@@ -72,38 +72,38 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   {/* Жанры — своим разделом, как лейблы. Стоят перед ними: на полосе
       релиза жанры тоже идут выше строки с лейблом.
 
-      Заголовок склоняется по числу, счётчик справа всегда — как у соседей. */}
+      Полоса та же, что у разделов с плитками: кружок, название, счётчик
+      слева, а сам перечень — в правой половине. Раньше заголовок стоял
+      обычной строкой, а имена шли абзацем под ним: два этажа ради одной
+      строки, и ни один не сходился с решёткой. */}
   {artist.genres.length > 0 && (
     <section class="section">
-      <div class="head">
-        <h2 class="display display--md">{artist.genres.length > 1 ? 'Genres' : 'Genre'}</h2>
-        <span class="mono">[{artist.genres.length}]</span>
-      </div>
-      <p class="meta-line">
-        <GenreLinks names={artist.genres} inline />
-      </p>
+      <PageBar as="h2" title={artist.genres.length > 1 ? 'Genres' : 'Genre'}
+               count={artist.genres.length}>
+        <p class="meta-line">
+          <GenreLinks names={artist.genres} inline />
+        </p>
+      </PageBar>
     </section>
   )}
 
-  {/* Лейблы — своим разделом, как ссылки наружу. Заголовок склоняется по
-      числу, а счётчик стоит справа всегда — как у соседних разделов.
+  {/* Лейблы — тем же устройством, что жанры выше: полоса с кружком слева,
+      перечень в правой половине.
 
       Имена набраны и разделены точкой так же, как состав на странице лейбла
-      и жанры в шапке: ссылка на страницу списка везде выглядит одинаково. */}
+      и жанры выше: ссылка на страницу списка везде выглядит одинаково. */}
   {labels.length > 0 && (
     <section class="section">
-      <div class="head">
-        <h2 class="display display--md">{labels.length > 1 ? 'Labels' : 'Label'}</h2>
-        <span class="mono">[{labels.length}]</span>
-      </div>
-      <p class="meta-line">
-        {labels.map((l, i) => (
-          <>
-            {i > 0 && <span class="sep"> · </span>}
-            <a href={`/labels/${l.slug}`}>{l.name}</a>
-          </>
-        ))}
-      </p>
+      <PageBar as="h2" title={labels.length > 1 ? 'Labels' : 'Label'} count={labels.length}>
+        <p class="meta-line">
+          {labels.map((l, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={`/labels/${l.slug}`}>{l.name}</a>
+            </>
+          ))}
+        </p>
+      </PageBar>
     </section>
   )}
 

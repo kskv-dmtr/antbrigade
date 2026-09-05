@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageBar from '../../components/PageBar.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -40,34 +41,30 @@ const roster   = artistsOf(label.artistIds);
     <ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} />
   )}
 
-  {/* Состав — своим разделом, как лейблы на странице исполнителя. Заголовок склоняется по числу, а счётчик
-      стоит справа всегда — как у соседних разделов.
+  {/* Состав — той же полосой, что разделы с плитками: кружок, название,
+      счётчик слева, перечень имён в правой половине. Так же собраны жанры и
+      лейблы на странице исполнителя.
 
       Имена набраны и подчёркнуты так же, как жанры у исполнителя и лейбл
-      внизу полосы релиза: ссылка на страницу списка везде выглядит
+      в справке релиза: ссылка на страницу списка везде выглядит
       одинаково. */}
   {roster.length > 0 && (
     <section class="section">
-      <div class="head">
-        <h2 class="display display--md">{roster.length > 1 ? 'Artists' : 'Artist'}</h2>
-        <span class="mono">[{roster.length}]</span>
-      </div>
-      <p class="meta-line">
-        {roster.map((a, i) => (
-          <>
-            {i > 0 && <span class="sep"> · </span>}
-            <a href={`/artists/${a.slug}`}>{a.name}</a>
-          </>
-        ))}
-      </p>
+      <PageBar as="h2" title={roster.length > 1 ? 'Artists' : 'Artist'} count={roster.length}>
+        <p class="meta-line">
+          {roster.map((a, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={`/artists/${a.slug}`}>{a.name}</a>
+            </>
+          ))}
+        </p>
+      </PageBar>
     </section>
   )}
 
   <section class="section">
-    <div class="head">
-      <h2 class="display display--md">Releases</h2>
-      <span class="mono">[{releases.length}]</span>
-    </div>
+    <PageBar as="h2" title="Releases" count={releases.length} />
     <ul class="tiles tiles--auto">
       {releases.map((a) => <AlbumCard album={a} />)}
     </ul>

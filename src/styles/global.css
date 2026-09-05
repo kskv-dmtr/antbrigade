@@ -921,12 +921,53 @@ a { color: inherit; text-decoration: none; }
 .row--index .row__meta,
 .row--index .row__num { border-left: 1px solid var(--line); }
 
-/* Счётчик во всю оставшуюся ширину: третий и четвёртый столбцы разом. Так
-   сделан единственный счётчик жанра — считать у него больше нечего. */
-.row--index .row__meta--wide { grid-column: 2 / span 2; }
 
+/* Список жанров в два столбца. Имя слева, счётчик справа — то же, что было
+   в строке во всю ширину, только вдвое короче.
+
+   Перемычку между столбцами чертит левая граница ячейки, как в решётке
+   обложек: у ячейки первого столбца она приходится на левый край и уезжает
+   за экран вместе со сдвигом списка на пиксель. Какая ячейка окажется
+   первой в ряду, решает отбор — и решать это через nth-child было бы
+   нельзя: скрытые элементы сбивают чётность, а границе всё равно, она
+   всегда на левом краю своей ячейки.
+
+   Горизонталь мягкая, как между строками остальных списков: это список
+   имён, а не решётка обложек. */
+.names--two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.names--two .names__item { display: flex; }
+
+.row--genre {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+  padding: 0.8125rem var(--pad);
+  border-bottom: 1px solid var(--line-soft);
+  border-left: 1px solid var(--line);
+}
+
+/* Затычка чертит перемычку справа от последнего имени, если ряд неполон, —
+   тот же приём, что в решётке обложек. */
+.names--two::after {
+  content: '';
+  border-left: 1px solid var(--line);
+}
+
+/* Подпись счётчика тише числа, а число тише имени: имя — то, что ищут
+   глазами, счёт при нём справка. Основным цветом число спорило с именем за
+   внимание, особенно в двух столбцах у жанров, где на экране их три
+   десятка. */
 .row__key { color: var(--fg-dim); }
-.row__val { flex: none; }
+.row__val {
+  flex: none;
+  color: var(--fg-muted);
+}
 
 /* Правило .row__country удалено 5 сентября 2026 вместе с кодом страны в
    строке индекса: две буквы посреди строки не говорили об исполнителе
@@ -952,7 +993,8 @@ a { color: inherit; text-decoration: none; }
     outline: none;
   }
   .row:hover .row__meta,
-  .row:hover .row__num { color: var(--ink-muted); }
+  .row:hover .row__num,
+  .row:hover .row__val { color: var(--ink-muted); }
 }
 .row:focus-visible,
 .row:active {
@@ -962,8 +1004,10 @@ a { color: inherit; text-decoration: none; }
 }
 .row:focus-visible .row__meta,
 .row:focus-visible .row__num,
+.row:focus-visible .row__val,
 .row:active .row__meta,
-.row:active .row__num { color: var(--ink-muted); }
+.row:active .row__num,
+.row:active .row__val { color: var(--ink-muted); }
 
 /* Исполнитель текстовым шрифтом — как и на плитке. Цвет не задан: строка
    наследует его от .row, то есть ровно тот же, что у названия, — и вместе
@@ -2934,6 +2978,11 @@ select option { background: var(--option-bg); color: var(--fg); }
   }
   /* Поля возвращаются на строку, перемычек нет: столбцов решётки на телефоне
      тоже нет, и вертикальные линии делить нечего. */
+  /* Жанры на телефоне в один столбец: два имени со счётчиками в 375 не
+     встают. Перемычка тогда ни к чему — делить нечего. */
+  .names--two { grid-template-columns: minmax(0, 1fr); }
+  .row--genre { border-left: 0; }
+
   .row--index { padding-top: 0.75rem; padding-bottom: 0.75rem; }
   .row--index > * { padding-top: 0; padding-bottom: 0; }
   .row--index .row__lead { padding-left: 0; padding-right: 0; }

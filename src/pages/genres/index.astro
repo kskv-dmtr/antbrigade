@@ -76,7 +76,7 @@ const PAGE = 50;
       фильтров, и заголовок над выдачей повторял бы нажатое, а в общем
       списке — резал бы его на два десятка кусков без всякой нужды.
       Группировка осталась только как порядок записей. */}
-  <ul class="names" id="list">
+  <ul class="names names--two" id="list">
     {ordered.map(([letter, items]) => (
       <>
         {items.map((genre) => (
@@ -87,19 +87,14 @@ const PAGE = 50;
             data-count={genre.count}
             data-letter={letter}
           >
-            {/* Раскладка та же, что у артистов, но считать у жанра нечего,
-                кроме релизов, — и счётчик занимает оба оставшихся столбца:
-                подпись у третьей перемычки, число у правого края экрана.
-                Пустой четвёртый столбец рядом с занятым третьим читался бы
-                недосмотром. */}
-            <a class="row row--index" href={`/genres/${genre.slug}`}>
-              <span class="row__lead">
-                <span class="row__title">{genre.name}</span>
-              </span>
-              <span class="row__meta row__meta--wide">
-                <span class="row__key">releases:</span>
-                <span class="row__val">[{genre.count}]</span>
-              </span>
+            {/* Жанров триста, а сведений о каждом — имя да число релизов:
+                строка во всю ширину оставляла бы половину экрана пустой,
+                и список растягивался бы вдвое длиннее нужного. Поэтому
+                два столбца, и в каждом то же, что было в строке: имя
+                слева, счётчик справа. */}
+            <a class="row row--genre" href={`/genres/${genre.slug}`}>
+              <span class="row__title">{genre.name}</span>
+              <span class="row__val">[{genre.count}]</span>
             </a>
           </li>
         ))}

@@ -42,11 +42,10 @@ const PAGE = 50;
   description={`${labels.length} labels in the collection.`}
   activeSection="labels"
 >
-  {/* Счётчик в полосе — тот же, что на Music: пока ничего не отсеяно, одно
-      число, дальше «сколько из скольких». Прежде его здесь не было: числа
-      живут и в самих строках, — но там счёт другой, релизов, а этот про то,
-      сколько имён осталось после отбора. */}
-  <PageBar title="Labels" count={labels.length} live>
+  {/* Счётчика в полосе нет: число уже стоит в каждой строке — сколько
+      релизов у лейбла, — и второе число рядом с заголовком считало бы
+      другое и о том же. Он простоял здесь 5 сентября 2026 около часа. */}
+  <PageBar title="Labels">
     <SearchField label="Search by label name" />
   </PageBar>
 
@@ -126,7 +125,6 @@ const PAGE = 50;
   const sortEl   = document.getElementById('sort');
   const letterEl = document.getElementById('letter');
 
-  const counter = document.getElementById('counter');
   const more = document.getElementById('more');
 
   const items = Array.from(list.querySelectorAll('.names__item'));
@@ -160,10 +158,6 @@ const PAGE = 50;
     }
 
     empty.hidden = count > 0;
-
-    /* Как на Music: пока ничего не отсеяно — одно число, дальше «сколько из
-       скольких». */
-    counter.textContent = count === items.length ? `[${count}]` : `[${count} / ${items.length}]`;
 
     const rest = count - limit;
     more.hidden = rest <= 0;

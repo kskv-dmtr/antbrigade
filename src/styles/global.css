@@ -966,6 +966,14 @@ a { color: inherit; text-decoration: none; }
 .row__key { color: var(--fg-dim); }
 .row__val {
   flex: none;
+
+  /* Моноширинный 12 — общий набор всех счётчиков проекта: числа над списками,
+     счёт релизов у кнопки View all, счёт пунктов в панелях отбора. В строке
+     жанра число стоит рядом с именем, набранным основным шрифтом в 22, и без
+     своего набора читалось бы частью имени. */
+  font-family: var(--mono);
+  font-size: max(12px, 0.75rem);
+  letter-spacing: 0.08em;
   color: var(--fg-muted);
 }
 

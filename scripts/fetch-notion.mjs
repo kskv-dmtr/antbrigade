@@ -385,10 +385,14 @@ async function main() {
     const title = plainText(prop(v.properties, 'title'));
     if (!title) continue;
     const released = dateStart(prop(v.properties, PV.date));
-    /* Дата оригинала — у роликов, выложенных на YouTube много позже съёмки.
-       Сверить её не с чем: YouTube отдаёт только дату загрузки, она же
-       лежит в released. Держится на знании владельца. */
-    const origReleased = dateStart(prop(v.properties, PV.origDate));
+    /* Год оригинала — у роликов, выложенных на YouTube много позже съёмки.
+       Сверить его не с чем: YouTube отдаёт только дату загрузки, она же
+       лежит в released. Держится на знании владельца.
+
+       Колонка стала списком годов 5 сентября 2026, вслед за такой же у
+       релизов, и разбирается тем же yearValue: новые значения приходят
+       текстом, у старых строк под ключом остался осиротевший date. */
+    const origYear = yearValue(prop(v.properties, PV.origDate));
 
     videos.push({
       id: v.id,
@@ -397,7 +401,7 @@ async function main() {
       kind: plainText(prop(v.properties, PV.type)),
       released,
       year: released ? Number(released.slice(0, 4)) : null,
-      origReleased,
+      origYear,
       artistIds: relationIds(prop(v.properties, PV.artist))
     });
   }
@@ -453,7 +457,8 @@ async function main() {
        релиз в другом.
 
        Полная дата стояла здесь до 5 сентября 2026, поле звалось
-       origReleased. У клипов она осталась датой: там колонка не менялась. */
+       origReleased. У клипов колонку поменяли в тот же день, и разбирается
+       она тем же yearValue. */
     const origYear = yearValue(prop(props, P.origDate));
 
     /* Подборки, в которые входит релиз. До 5 сентября 2026 под этим же

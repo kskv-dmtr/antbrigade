@@ -57,10 +57,10 @@ const roster   = artistsOf(label.artistIds);
           </div>
         )}
 
-        {(label.bandcamp || label.youtube) && (
+        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
           <div class="item__fact">
             <dt>Links:</dt>
-            <dd><ProfileLinks bandcamp={label.bandcamp} youtube={label.youtube} /></dd>
+            <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
           </div>
         )}
       </dl>

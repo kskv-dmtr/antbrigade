@@ -27,9 +27,13 @@ const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
                   bandcamp:   'XmmI',
                   youtube:    'drlg' };
+/* У лейбла две колонки Bandcamp: «Bandcamp [1]» и «Bandcamp [2]». Вторая
+   заведена 6 сентября 2026 — у части лейблов страниц на площадке две, как у
+   XL Recordings: xlrecordings и xlrecordingsuk. У артистов колонка одна. */
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
+                  bandcamp2:  ']Ze:',
                   youtube:    'imKP' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
@@ -303,14 +307,16 @@ async function directory(source, label) {
        каждой базы свои: у одной и той же по имени колонки они разные, и
        брать чужой нельзя — свойство просто не найдётся. Отсюда проверка
        source.<поле>: пока колонки в базе нет, ключа в описании тоже нет. */
-    const bandcamp = source.bandcamp ? plainText(prop(v.properties, source.bandcamp)) : '';
-    const youtube  = source.youtube  ? plainText(prop(v.properties, source.youtube))  : '';
+    const bandcamp  = source.bandcamp  ? plainText(prop(v.properties, source.bandcamp))  : '';
+    const bandcamp2 = source.bandcamp2 ? plainText(prop(v.properties, source.bandcamp2)) : '';
+    const youtube   = source.youtube   ? plainText(prop(v.properties, source.youtube))   : '';
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
+      bandcamp2: bandcamp2 || null,
       youtube: youtube || null
     });
   }
@@ -560,6 +566,7 @@ async function main() {
       name: l.name,
       country: l.country,
       bandcamp: l.bandcamp,
+      bandcamp2: l.bandcamp2,
       youtube: l.youtube,
       albumIds,
       artistIds: uniqueFrom(albumIds, 'artistIds')

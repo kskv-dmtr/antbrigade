@@ -2,6 +2,12 @@
 /* Ссылки наружу — Bandcamp и YouTube — перечнем через точку. Значение
    строки справки `Links:` на страницах исполнителя и лейбла.
 
+   Bandcamp у лейбла бывает два: в Notion под это заведены две колонки, и у
+   XL Recordings, например, страницы xlrecordings и xlrecordingsuk. Второй
+   подписан «Bandcamp 2» — цифра, а не имя поддомена: имена у площадок
+   произвольные, и «xlrecordingsuk» рядом с «Bandcamp» читалось бы
+   другой площадкой, а не второй страницей той же.
+
    Кнопками в рамках они стояли до 6 сентября 2026: отдельным рядом под
    именем, со значками площадок. Ряд весил больше, чем сам переход, и стоял
    поперёк страницы, ни к чему не относясь; строкой справки он встал рядом с
@@ -13,8 +19,19 @@
    Кнопка `Website` стояла первой и удалена 5 сентября 2026 вслед за
    колонкой в Notion. */
 
-const { bandcamp, youtube } = Astro.props;
+const { bandcamp, bandcamp2, youtube } = Astro.props;
+
+/* Собираем перечень заранее: точку ставим только между соседями, а какие из
+   трёх ссылок заполнены — заранее не известно. */
+const ссылки = [
+  bandcamp  && { label: bandcamp2 ? 'Bandcamp 1' : 'Bandcamp', href: bandcamp },
+  bandcamp2 && { label: 'Bandcamp 2', href: bandcamp2 },
+  youtube   && { label: 'YouTube', href: youtube }
+].filter(Boolean);
 ---
-{bandcamp && <a href={bandcamp} target="_blank" rel="noopener noreferrer">Bandcamp</a>}
-{bandcamp && youtube && <span class="sep"> · </span>}
-{youtube && <a href={youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}
+{ссылки.map((с, i) => (
+  <>
+    {i > 0 && <span class="sep"> · </span>}
+    <a href={с.href} target="_blank" rel="noopener noreferrer">{с.label}</a>
+  </>
+))}

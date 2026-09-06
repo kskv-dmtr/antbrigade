@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
+import GenreLinks from '../../components/GenreLinks.astro';
 /* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
    компонентами BackBar и Breadcrumbs. Путь дублировал то, что и так стоит на
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
@@ -16,6 +17,19 @@ export function getStaticPaths() {
 const { label } = Astro.props;
 const releases = albumsOf(label.albumIds);
 const roster   = artistsOf(label.artistIds);
+
+/* Жанры лейбла — из его релизов: своего поля жанров у лейбла в Notion нет,
+   да и не нужно, оно повторяло бы то же самое руками. Порядок по частоте:
+   чем больше релизов лейбла в жанре, тем вернее он говорит, чем лейбл
+   занимается. Одинаково частые — по алфавиту, чтобы порядок не плавал от
+   сборки к сборке. */
+const genreCounts = new Map();
+for (const a of releases) {
+  for (const g of a.genres ?? []) genreCounts.set(g, (genreCounts.get(g) ?? 0) + 1);
+}
+const genres = [...genreCounts.entries()]
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .map(([g]) => g);
 ---
 <Base
   title={`${label.name} · ant brigade`}
@@ -31,14 +45,12 @@ const roster   = artistsOf(label.artistIds);
       «Info», справка в два блока по два столбца. У лейбла справка одна —
       состав, и стоит она в левом блоке. */}
   <div class="lead">
-    <div class="lead__name">
-      <h1 class="item__title">{label.name}</h1>
-      {label.country && <p class="counter">[{countryName(label.country)}]</p>}
-    </div>
+    <h1 class="item__title">{label.name}</h1>
+    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
 
     {(label.bandcamp || label.bandcamp2 || label.youtube) && (
       <dl class="item__facts">
-        <div class="item__fact">
+        <div class="item__fact item__fact--tight">
           <dt>Links:</dt>
           <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
         </div>
@@ -62,6 +74,17 @@ const roster   = artistsOf(label.artistIds);
                 </>
               ))}
             </dd>
+          </div>
+        )}
+      </dl>
+
+      {/* Жанры — из релизов лейбла, а не из его собственного поля: такого
+          поля в Notion нет. Ссылки те же, что у жанров исполнителя. */}
+      <dl class="item__facts">
+        {genres.length > 0 && (
+          <div class="item__fact">
+            <dt>{genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
+            <dd><GenreLinks names={genres} inline /></dd>
           </div>
         )}
       </dl>

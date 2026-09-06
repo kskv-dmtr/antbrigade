@@ -60,14 +60,12 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
       справа. В каждом подпись у левого края своего блока, перечень у
       правого. Разделителя между блоками пока нет. */}
   <div class="lead">
-    <div class="lead__name">
-      <h1 class="item__title">{artist.name}</h1>
-      {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
-    </div>
+    <h1 class="item__title">{artist.name}</h1>
+    {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
 
     {hasLinks && (
       <dl class="item__facts">
-        <div class="item__fact">
+        <div class="item__fact item__fact--tight">
           <dt>Links:</dt>
           <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
         </div>

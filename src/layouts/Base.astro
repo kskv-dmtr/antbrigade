@@ -35,13 +35,17 @@ const { title, description, activeSection, cardTitle, image, noindex } = Astro.p
    витриной со свежим и случайным. Прежний адрес /releases переправляется
    сюда постоянным редиректом — на него уже ведут внешние ссылки. */
 const nav = [
-  { href: '/',        label: 'Home',     key: 'home' },
-  { href: '/music',   label: 'Music',    key: 'albums' },
-  { href: '/videos',   label: 'Videos',   key: 'videos' },
-  { href: '/artists', label: 'Artists',  key: 'artists' },
-  { href: '/labels',  label: 'Labels',   key: 'labels' },
-  { href: '/genres',  label: 'Genres',   key: 'genres' },
-  { href: '/playlists', label: 'Playlists', key: 'playlists' }
+  { href: '/',          label: 'Home',      key: 'home' },
+  { href: '/music',     label: 'Music',     key: 'albums' },
+  { href: '/artists',   label: 'Artists',   key: 'artists' },
+  { href: '/labels',    label: 'Labels',    key: 'labels' },
+  { href: '/genres',    label: 'Genres',    key: 'genres' },
+  { href: '/playlists', label: 'Playlists', key: 'playlists' },
+
+  /* Клипы последними: их 87 против 1167 релизов, и раздел этот — приложение
+     к каталогу, а не его часть. Вторым пунктом, сразу за Music, они стояли до
+     7 сентября 2026. */
+  { href: '/videos',    label: 'Videos',    key: 'videos' }
 ];
 
 /* Год в знаке охраны — от времени сборки, а не вписанный руками: сайт

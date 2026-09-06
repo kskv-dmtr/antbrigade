@@ -7,6 +7,11 @@
  * пути назад. При трёх тысячах адресов и недавнем переезде каталога с
  * /releases на /music это не редкий случай.
  *
+ * Собрана как остальные внутренние страницы — с 7 сентября 2026: имя в
+ * первой строке, справка строками под ним, дальше раздел с полосой. До
+ * этого у неё была своя шапка (.page-head) и свой абзац прозой (.lost) —
+ * два элемента, которых больше нигде на сайте нет.
+ *
  * Ряда кнопок с разделами здесь нет намеренно: он повторял бы меню в
  * шапке. Выход из тупика — само меню и находки ниже.
  *
@@ -17,6 +22,7 @@
 
 import Base from '../layouts/Base.astro';
 import AlbumCard from '../components/AlbumCard.astro';
+import Icon from '../components/Icon.astro';
 import { albums } from '../lib/db.js';
 
 /* Показываем столько же, сколько на главной: при пяти колонках десятка
@@ -50,25 +56,37 @@ const pool = shuffle(albums).slice(0, POOL);
   description={`No page at this address. The collection is where it was: ${albums.length} releases, covers, genres, labels.`}
   noindex
 >
-  {/* Счёт в квадратных скобках — та же строка, что показывает число
-      релизов на списках. Здесь в ней код ответа: место одно и то же,
-      и читается оно сразу. */}
-  <div class="page-head">
-    <h1>Page not found</h1>
-    <p class="counter">[404]</p>
+  {/* Первая строка — как у исполнителя, лейбла и жанра: имя во всю ширину
+      кадра, под ним справка строками. Код ответа и объяснение идут теми же
+      строками с подписью через двоеточие, что страна и переходы наружу:
+      других способов сказать служебное на сайте нет. */}
+  <div class="lead">
+    <h1 class="item__title">Page not found</h1>
+
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Status:</dt>
+        <dd>404</dd>
+      </div>
+
+      <div class="item__fact">
+        <dt>Reason:</dt>
+        <dd>The address was renamed, or the link lost a piece on the way here.</dd>
+      </div>
+    </dl>
   </div>
 
-  <p class="lost">
-    There is no page at this address — it was renamed, or the link lost a
-    piece on the way here.
-  </p>
-
+  {/* Полоса раздела — та же, что у находок на главной: кружок с именем
+      слева, «Dig again» в последнем столбце. Линия сверху у неё своя: под
+      ней стоит первая строка, а не решётка, и стыковать нечего. */}
   <section class="section">
-    <div class="head head--center">
-      <h2 class="display display--md">Lucky Finds</h2>
+    <div class="head head--sticky head--bare head--dot">
+      <div class="head__lead">
+        <h2 class="display display--md"><Icon name="circle" class="mark" />Lucky Finds</h2>
+      </div>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}
-      <button type="button" class="dig-again" id="dig-again">Dig again</button>
+      <button type="button" class="dig-again" id="dig-again"><span class="btn-label">Dig again</span></button>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
@@ -77,6 +95,10 @@ const pool = shuffle(albums).slice(0, POOL);
     <ul class="tiles tiles--auto" id="dig" data-show={SHOW}>
       {pool.map((a, i) => <AlbumCard album={a} hidden={i >= SHOW} />)}
     </ul>
+
+    {/* Тот же двойник кнопки, что на главной: на телефоне она стоит под
+        подборкой и липнет к низу экрана, пока раздел на виду. */}
+    <button type="button" class="dig-again dig-again--below" id="dig-again-below"><span class="btn-label">Dig again</span></button>
   </section>
 </Base>
 
@@ -91,7 +113,7 @@ const pool = shuffle(albums).slice(0, POOL);
   const dig   = document.getElementById('dig');
   const items = Array.from(dig.children);
   const show  = Number(dig.dataset.show) || 10;
-  const again = document.getElementById('dig-again');
+  const agains = document.querySelectorAll('.dig-again');
 
   /* Неполной подборки в конце быть не должно: ряд, оборванный на середине,
      читается как недогрузившийся. Остаток пула ждёт следующей тасовки. */
@@ -128,13 +150,16 @@ const pool = shuffle(albums).slice(0, POOL);
   shuffle();
   render();
 
-  again.addEventListener('click', () => {
-    page += 1;
-    // Пул кончился — тасуем заново, и следующий круг идёт в другом порядке.
-    if (page >= pages) {
-      shuffle();
-      page = 0;
-    }
-    render();
-  });
+  /* Обе кнопки — в полосе и под сеткой — делают одно и то же. */
+  for (const again of agains) {
+    again.addEventListener('click', () => {
+      page += 1;
+      // Пул кончился — тасуем заново, и следующий круг идёт в другом порядке.
+      if (page >= pages) {
+        shuffle();
+        page = 0;
+      }
+      render();
+    });
+  }
 </script>

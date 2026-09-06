@@ -47,6 +47,10 @@ const roster = [...new Map(
       Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
       вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
       её при первом заходе не за чем. */}
+  {/* Раздел появляется, только если справке есть что сказать. Пустая полоса
+      «Info» с двумя пустыми блоками под ней обещала бы сведения, которых
+      нет: то же правило, что у разделов Releases и Videos. */}
+  {(roster.length > 0) && (
   <section class="section">
     <details class="fold" open>
       <summary class="fold__head">
@@ -77,6 +81,7 @@ const roster = [...new Map(
       </div>
     </details>
   </section>
+  )}
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />

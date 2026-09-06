@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
 
+import geist from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+import geistMono from '@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2?url';
+import grotesk from '@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url';
+
 /* cardTitle — заголовок для карточки, которая разворачивается при отправке
    ссылки. Обычно задавать не нужно: по умолчанию берётся заголовок вкладки
    без приписки с именем сайта. Главная — исключение: во вкладке у неё
@@ -61,6 +65,14 @@ const canonical = new URL(
    ради них вторую копию каждой обложки в jpeg не стоит того. */
 const cardImage = new URL(image ?? '/icons/icon-512.png?v=2026-08-08', Astro.site);
 
+/* Три файла, которыми набрана вся страница на латинице: основной, моноширинный
+   и шрифт логотипа. Остальные одиннадцать начертаний пакета — кириллица,
+   вьетнамский, символы — браузер берёт сам и только если они на странице
+   понадобились: у каждого лица свой unicode-range.
+
+   Адреса берём у сборщика через ?url: в имени файла стоит отпечаток
+   содержимого, и написать его руками нельзя. */
+
 /* Во вкладке к заголовку приписано имя сайта — там ему неоткуда взяться
    иначе. В карточке оно уже стоит отдельной строкой в og:site_name, и
    вторым разом читалось бы заиканием. Срезаем по умолчанию; страница может
@@ -85,8 +97,30 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
-  {/* color-scheme задаётся в стилях и переключается вместе с темой; здесь
-      он был бы вторым источником правды и половину времени врал бы. */}
+  {/* Фон и color-scheme — прямо в разметке, до внешней таблицы стилей.
+
+      Холст у браузера белый, пока таблица не разобрана, и на тёмном сайте
+      каждый переход по ссылке начинался белой вспышкой. Таблица блокирует
+      отрисовку, но сам холст она красит только когда доедет; эти две строки
+      доезжают вместе с разметкой.
+
+      Значения повторяют --bg обеих тем. Это единственное место, где цвет
+      написан числом дважды: подставить сюда переменную нельзя — она живёт в
+      той самой таблице, которой ещё нет. Меняете --bg — поправьте и здесь.
+
+      Атрибут data-theme к этому времени уже стоит: скрипт ниже выполняется
+      раньше первой отрисовки. */}
+  <style is:inline>
+    :root { color-scheme: dark; background: #0c0c0b; }
+    :root[data-theme='light'] { color-scheme: light; background: #fbfaf8; }
+  </style>
+
+  {/* Шрифты просим заранее: иначе браузер узнаёт о них только разобрав
+      таблицу стилей, и первые кадры страница набрана системным шрифтом, а
+      потом перебирается заново — то самое мерцание при загрузке. */}
+  <link rel="preload" href={geist} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={geistMono} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={grotesk} as="font" type="font/woff2" crossorigin />
 
   {/* Каноническая ссылка — только у страниц, которым место в выдаче.
       Ставить её на noindex значит говорить две вещи разом: «не бери» и
@@ -149,6 +183,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
          Ставится здесь, до отрисовки: поставь ниже — и список успел бы
          мигнуть строками, прежде чем стать плитками. */
       document.documentElement.dataset.view = вид === 'grid' ? 'grid' : 'list';
+
+      /* Метка «скрипты работают». По ней мобильная шапка складывается в одну
+         строку, а меню уезжает под бургер. Стояла она до 6 сентября 2026 в
+         теле, сразу за шапкой, и на телефоне меню успевало моргнуть
+         развёрнутым: семь строк появлялись и пропадали. Здесь она стоит до
+         первой отрисовки, как тема и вид. */
+      document.documentElement.dataset.js = '';
     })();
   </script>
 
@@ -238,11 +279,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       </button>
     </div>
   </header>
-
-  {/* Метка ставится до отрисовки страницы, а не из модуля внизу: тот
-      выполняется после разбора разметки, и меню успело бы моргнуть
-      развёрнутым. Она же переводит мобильную шапку на одну строку. */}
-  <script is:inline>document.documentElement.dataset.js = '';</script>
 
   <main id="main" class="shell">
     <slot />

@@ -81,6 +81,10 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
       Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
       вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
       её при первом заходе не за чем. */}
+  {/* Раздел появляется, только если справке есть что сказать. Пустая полоса
+      «Info» с двумя пустыми блоками под ней обещала бы сведения, которых
+      нет: то же правило, что у разделов Releases и Videos. */}
+  {(artist.genres.length > 0 || labels.length > 0) && (
   <section class="section">
     <details class="fold" open>
       <summary class="fold__head">
@@ -122,6 +126,7 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
       </div>
     </details>
   </section>
+  )}
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
       дискография, а клипы есть у полутора десятков из девятисот.

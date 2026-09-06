@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-05T23:13:24Z",
+  "generatedAt": "2026-09-06T13:41:37Z",
   "counts": {
-    "albums": 1166,
+    "albums": 1167,
     "artists": 1034,
     "labels": 648,
-    "videos": 87
+    "videos": 88
   },
   "albums": [
     {
@@ -36484,6 +36484,39 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-80b8-a693-e3a62aff7ae6",
+      "slug": "various-artists-wheedle-s-groove-seattle-funk-modern-soul-bo",
+      "artist": "Various Artists",
+      "album": "Wheedle's Groove: Seattle Funk, Modern Soul & Boogie Volume II 1972-1987",
+      "url": "https://album.link/rxvt8tcj9mczv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1bad3b39-a36e-4a0c-a16a-e4381b27470e%3Aa4288896481_10.jpg?table=block&id=3d34129a-8c52-80b8-a693-e3a62aff7ae6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco",
+        "Funk",
+        "Boogie",
+        "Soul"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2014-05-20",
+      "year": 2014,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
+      ],
+      "labels": [
+        "Light In The Attic Records"
+      ]
+    },
+    {
       "id": "2f74129a-8c52-8067-a3e8-e85f767ee29f",
       "slug": "clever-girl-no-drum-and-bass-in-the-jazz-room",
       "artist": "Clever Girl",
@@ -54102,7 +54135,8 @@
         "2484129a-8c52-80b7-82f2-dbaef7be8b87"
       ],
       "videoIds": [
-        "2734129a-8c52-8038-996a-d4e951a8fdfc"
+        "2734129a-8c52-8038-996a-d4e951a8fdfc",
+        "3d34129a-8c52-80a0-aa6f-f821da5543d9"
       ]
     },
     {
@@ -55981,7 +56015,8 @@
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
-        "3b74129a-8c52-806e-a3d9-c82dacea2e97"
+        "3b74129a-8c52-806e-a3d9-c82dacea2e97",
+        "3d34129a-8c52-80b8-a693-e3a62aff7ae6"
       ],
       "genres": [
         "City Pop",
@@ -55995,7 +56030,8 @@
         "Funk",
         "Bossa Nova",
         "Lovers Rock",
-        "Smooth Soul"
+        "Smooth Soul",
+        "Soul"
       ],
       "labelIds": [
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
@@ -56003,7 +56039,8 @@
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
         "2524129a-8c52-8064-ac08-c6bb33bff5df",
-        "3b74129a-8c52-8060-af6b-ece8a3271488"
+        "3b74129a-8c52-8060-af6b-ece8a3271488",
+        "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
       ],
       "videoIds": []
     },
@@ -62574,10 +62611,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3d24129a-8c52-808e-8524-dd51f4f0e147"
+        "3d24129a-8c52-808e-8524-dd51f4f0e147",
+        "3d34129a-8c52-80b8-a693-e3a62aff7ae6"
       ],
       "artistIds": [
-        "3d24129a-8c52-8041-835f-d3a8984794d2"
+        "3d24129a-8c52-8041-835f-d3a8984794d2",
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
     {
@@ -65003,7 +65042,7 @@
       "country": "US",
       "bandcamp": null,
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@PureNoiseRecs",
       "albumIds": [
         "3434129a-8c52-800c-bb8d-fdb8337ba58e",
         "358f844a-a69c-4ba1-a687-3455348f8d89",
@@ -68889,6 +68928,19 @@
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
       ],
       "slug": "the-bouncing-souls-power"
+    },
+    {
+      "id": "3d34129a-8c52-80a0-aa6f-f821da5543d9",
+      "title": "The Bouncing Souls | Ten Stories High",
+      "url": "https://youtu.be/_9Mc8PpPdyU?si=uNN_5hm8jV4BY3qh",
+      "kind": "Official Video",
+      "released": "2023-01-18",
+      "year": 2023,
+      "origYear": null,
+      "artistIds": [
+        "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
+      ],
+      "slug": "the-bouncing-souls-ten-stories-high"
     },
     {
       "id": "3c54129a-8c52-8020-8568-e04189b20c5e",

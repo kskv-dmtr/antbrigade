@@ -9,6 +9,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import Icon from '../../components/Icon.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -73,37 +74,53 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
     )}
   </div>
 
+  {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не
+      кнопка со скриптом: работает без него, состояние помнит сам браузер, и
+      найти текст поиском по странице он тоже умеет.
+
+      Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
+      вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
+      её при первом заходе не за чем. */}
   <section class="section">
-    <PageBar as="p" title="Info" />
-
-    <div class="info">
-      {/* Жанры перед лейблами: в справке релиза они идут в том же
-          порядке. */}
-      <dl class="item__facts">
-        {artist.genres.length > 0 && (
-          <div class="item__fact">
-            <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
-            <dd><GenreLinks names={artist.genres} inline /></dd>
+    <details class="fold" open>
+      <summary class="fold__head">
+        <div class="head head--sticky head--dot head--page head--wide">
+          <div class="head__lead">
+            <p class="display display--md"><Icon name="circle" class="mark" />Info</p>
+            <span class="select__chevron fold__mark" aria-hidden="true"></span>
           </div>
-        )}
-      </dl>
+        </div>
+      </summary>
 
-      <dl class="item__facts">
-        {labels.length > 0 && (
-          <div class="item__fact">
-            <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
-            <dd>
-              {labels.map((l, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/labels/${l.slug}`}>{l.name}</a>
-                </>
-              ))}
-            </dd>
-          </div>
-        )}
-      </dl>
-    </div>
+      <div class="info">
+        {/* Жанры перед лейблами: в справке релиза они идут в том же
+            порядке. */}
+        <dl class="item__facts">
+          {artist.genres.length > 0 && (
+            <div class="item__fact">
+              <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
+              <dd><GenreLinks names={artist.genres} inline /></dd>
+            </div>
+          )}
+        </dl>
+
+        <dl class="item__facts">
+          {labels.length > 0 && (
+            <div class="item__fact">
+              <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
+              <dd>
+                {labels.map((l, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/labels/${l.slug}`}>{l.name}</a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </details>
   </section>
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его

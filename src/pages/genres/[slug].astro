@@ -6,6 +6,7 @@ import AlbumCard from '../../components/AlbumCard.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import Icon from '../../components/Icon.astro';
 import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -39,26 +40,42 @@ const roster = [...new Map(
     <h1 class="item__title">{genre.name}</h1>
   </div>
 
-  <section class="section">
-    <PageBar as="p" title="Info" />
+  {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не
+      кнопка со скриптом: работает без него, состояние помнит сам браузер, и
+      найти текст поиском по странице он тоже умеет.
 
-    <div class="info">
-      <dl class="item__facts">
-        {roster.length > 0 && (
-          <div class="item__fact">
-            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-            <dd>
-              {roster.map((a, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}>{a.name}</a>
-                </>
-              ))}
-            </dd>
+      Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
+      вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
+      её при первом заходе не за чем. */}
+  <section class="section">
+    <details class="fold" open>
+      <summary class="fold__head">
+        <div class="head head--sticky head--dot head--page head--wide">
+          <div class="head__lead">
+            <p class="display display--md"><Icon name="circle" class="mark" />Info</p>
+            <span class="select__chevron fold__mark" aria-hidden="true"></span>
           </div>
-        )}
-      </dl>
-    </div>
+        </div>
+      </summary>
+
+      <div class="info">
+        <dl class="item__facts">
+          {roster.length > 0 && (
+            <div class="item__fact">
+              <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+              <dd>
+                {roster.map((a, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${a.slug}`}>{a.name}</a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </details>
   </section>
 
   <section class="section">

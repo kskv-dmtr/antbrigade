@@ -62,14 +62,26 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
       правого. Разделителя между блоками пока нет. */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={artist.name} /></h1>
-    {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
 
-    {hasLinks && (
+    {/* Страна и переходы наружу — строками одной справки, с подписью через
+        двоеточие. В квадратных скобках страна стояла до 7 сентября 2026 и
+        читалась пометкой вроде счётчика, хотя рядом, строкой ниже, точно
+        такое же сведение было названо словом. */}
+    {(artist.country || hasLinks) && (
       <dl class="item__facts">
-        <div class="item__fact item__fact--tight">
-          <dt>Links:</dt>
-          <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
-        </div>
+        {artist.country && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{countryName(artist.country)}</dd>
+          </div>
+        )}
+
+        {hasLinks && (
+          <div class="item__fact">
+            <dt>Links:</dt>
+            <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
+          </div>
+        )}
       </dl>
     )}
   </div>

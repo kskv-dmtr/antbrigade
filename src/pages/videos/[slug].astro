@@ -15,7 +15,6 @@ import VideoCard from '../../components/VideoCard.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
-import Icon from '../../components/Icon.astro';
 import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -87,6 +86,12 @@ const releases = [...new Map(
     {/* Три опоры и воздух между ними, как у релиза: имя с названием к верху,
         справка посередине, кнопка к низу. */}
     <div class="item__head">
+      {/* Имя, название и справка — одним липким блоком: при прокрутке он
+          стоит под шапкой и съезжает вниз вместе с ячейкой, пока не упрётся
+          в ряд кнопок снизу. Останов держит нижнее поле блока: липкий
+          элемент считается по внешним полям, и поле в высоту ряда плюс
+          шестнадцать оставляет ровно этот просвет. */}
+      <div class="item__top">
       <div class="item__name">
         <p class="item__artist">
           {artists.map((a, i) => (
@@ -120,15 +125,12 @@ const releases = [...new Map(
           </div>
         )}
       </dl>
+      </div>
 
       {/* Тот же ряд, что «где послушать» у релиза: название площадки без
-          пояснений и без стрелки — «Watch on» рядом с ним выглядело бы
-          объяснением очевидного. */}
+          пояснений, без стрелки и без логотипа. */}
       <div class="listen">
-        <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">
-          <Icon name="youtube-logo" class="listen__icon" />
-          <span>YouTube</span>
-        </a>
+        <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
     </div>
   </article>

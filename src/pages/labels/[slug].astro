@@ -47,14 +47,23 @@ const genres = [...genreCounts.entries()]
       состав, и стоит она в левом блоке. */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={label.name} /></h1>
-    {label.country && <p class="counter">[{countryName(label.country)}]</p>}
 
-    {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+    {/* Страна и переходы наружу — строками одной справки, как у исполнителя. */}
+    {(label.country || label.bandcamp || label.bandcamp2 || label.youtube) && (
       <dl class="item__facts">
-        <div class="item__fact item__fact--tight">
-          <dt>Links:</dt>
-          <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
-        </div>
+        {label.country && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{countryName(label.country)}</dd>
+          </div>
+        )}
+
+        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+          <div class="item__fact">
+            <dt>Links:</dt>
+            <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
+          </div>
+        )}
       </dl>
     )}
   </div>

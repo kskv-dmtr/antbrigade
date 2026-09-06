@@ -200,10 +200,12 @@ export function genreFor(name) {
 // Показываем не всё, что отдаёт Odesli, а только то, чем реально пользуются.
 // Apple Music и YouTube в списке отсутствуют не по нашей воле: Odesli их для
 // этого каталога не отдаёт — проверено и через страницу, и через её API.
+//
+// Yandex Music убран 6 сентября 2026. Ссылки на него Odesli по-прежнему
+// отдаёт и они лежат в выгрузке — показывать перестали.
 const SHOWN_PLATFORMS = [
   { key: 'spotify',  label: 'Spotify' },
-  { key: 'bandcamp', label: 'Bandcamp' },
-  { key: 'yandex',   label: 'Yandex Music' }
+  { key: 'bandcamp', label: 'Bandcamp' }
 ];
 
 /** Прямые ссылки на площадки для релиза, в заданном порядке. */

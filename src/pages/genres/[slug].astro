@@ -8,7 +8,7 @@ import AlbumCard from '../../components/AlbumCard.astro';
 import PageBar from '../../components/PageBar.astro';
 import WholeWords from '../../components/WholeWords.astro';
 import Icon from '../../components/Icon.astro';
-import { genres, albumsOf, artistsOf, plural, coverSrc } from '../../lib/db.js';
+import { genres, albumsOf, artistsOf, labelsOf, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return genres.map((genre) => ({ params: { slug: genre.slug }, props: { genre } }));
@@ -27,6 +27,20 @@ const releases = albumsOf(genre.albumIds);
 const roster = [...new Map(
   releases.flatMap((a) => artistsOf(a.artistIds)).map((a) => [a.id, a])
 ).values()].sort((a, b) => a.name.localeCompare(b.name));
+
+/* Лейблы жанра — тоже из его релизов, как жанры лейбла на соседней странице.
+   Порядок по частоте: чем больше релизов жанра выпустил лейбл, тем вернее он
+   говорит, кто этот жанр издаёт. Одинаково частые — по алфавиту, чтобы
+   порядок не плавал от сборки к сборке. */
+const labelCounts = new Map();
+for (const a of releases) {
+  for (const l of labelsOf(a.labelIds)) {
+    labelCounts.set(l, (labelCounts.get(l) ?? 0) + 1);
+  }
+}
+const labels = [...labelCounts.entries()]
+  .sort((a, b) => b[1] - a[1] || a[0].name.localeCompare(b[0].name))
+  .map(([l]) => l);
 ---
 <Base
   title={`${genre.name} · ant brigade`}
@@ -34,8 +48,9 @@ const roster = [...new Map(
   image={coverSrc(releases.find((a) => a.cover), 800)}
 >
   {/* Полоса «назад» — как на остальных внутренних страницах. */}
-  {/* Три строки, как у исполнителя: имя, полоса «Info», справка. У жанра
-      ни страны, ни переходов наружу нет, а справка одна — исполнители. */}
+  {/* Три строки, как у исполнителя: имя, полоса «Info», справка. У жанра ни
+      страны, ни переходов наружу нет; справки две — исполнители слева, лейблы
+      справа, и обе собраны из его релизов. */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={genre.name} /></h1>
   </div>
@@ -50,7 +65,7 @@ const roster = [...new Map(
   {/* Раздел появляется, только если справке есть что сказать. Пустая полоса
       «Info» с двумя пустыми блоками под ней обещала бы сведения, которых
       нет: то же правило, что у разделов Releases и Videos. */}
-  {(roster.length > 0) && (
+  {(roster.length > 0 || labels.length > 0) && (
   <section class="section">
     <details class="fold" open>
       <summary class="fold__head">
@@ -72,6 +87,24 @@ const roster = [...new Map(
                   <>
                     {i > 0 && <span class="sep"> · </span>}
                     <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
+
+        {/* Лейблы — из релизов жанра, а не из своего поля: такого поля в
+            Notion нет. Тот же блок, что жанры у лейбла, только наоборот. */}
+        <dl class="item__facts">
+          {labels.length > 0 && (
+            <div class="item__fact">
+              <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
+              <dd>
+                {labels.map((l, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
                   </>
                 ))}
               </dd>

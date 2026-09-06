@@ -34,6 +34,13 @@ const { title, description, activeSection, cardTitle, image, noindex } = Astro.p
    «Music» указывает на /music: каталог живёт там, а главная осталась
    витриной со свежим и случайным. Прежний адрес /releases переправляется
    сюда постоянным редиректом — на него уже ведут внешние ссылки. */
+/* Тема на сайте одна — светлая, с 7 сентября 2026. Тёмная никуда не делась:
+   её набор токенов лежит в global.css, кнопка с половинкой кружка — в
+   разметке ниже, значок — в Icon.astro. Флаг снимает кнопку из шапки и
+   заставляет скрипт ставить светлую всем, не спрашивая localStorage;
+   поставить обратно true — вернуть переключатель как был. */
+const ТЕМА_ПЕРЕКЛЮЧАЕТСЯ = false;
+
 const nav = [
   { href: '/',          label: 'Home',      key: 'home' },
   { href: '/music',     label: 'Music',     key: 'albums' },
@@ -116,8 +123,8 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       Атрибут data-theme к этому времени уже стоит: скрипт ниже выполняется
       раньше первой отрисовки. */}
   <style is:inline>
-    :root { color-scheme: dark; background: #0c0c0b; }
-    :root[data-theme='light'] { color-scheme: light; background: #fbfaf8; }
+    :root { color-scheme: light; background: #fbfaf8; }
+    :root[data-theme='dark'] { color-scheme: dark; background: #0c0c0b; }
   </style>
 
   {/* Шрифты просим заранее: иначе браузер узнаёт о них только разобрав
@@ -158,27 +165,24 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       из требований к установке, а кэширование добавим отдельно. */}
   <link rel="manifest" href="/manifest.webmanifest" />
 
-  {/* Цвет полосы браузера идёт за темой: скрипт ниже переписывает его при
-      переключении. В разметке стоит тёмный — он же исходный. */}
-  <meta name="theme-color" content="#0c0c0b" id="theme-color" />
+  {/* Цвет полосы браузера — светлый, как фон единственной темы. Пока был
+      переключатель, его переписывал скрипт при каждом нажатии. */}
+  <meta name="theme-color" content="#fbfaf8" id="theme-color" />
 
   {/* Тема ставится здесь, в <head>, до того как отрисуется хоть что-то:
-      поставь её ниже — и страница успела бы мигнуть тёмной, прежде чем
-      стать светлой.
+      поставь её ниже — и страница успела бы мигнуть чужим цветом.
 
-      По умолчанию тёмная, системную настройку не спрашиваем. Сайт задуман
-      тёмным, и светлая — выбор, а не обстоятельство: у пришедшего со
-      светлой системой он бы этот выбор не делал. Светлая включается только
-      тем, кто нажал кнопку, и с тех пор помнится. */}
+      Тема одна, светлая: выбора нет, localStorage не спрашивается. Пока
+      переключатель выключен флагом, значение проставляется всем одинаковое —
+      набор тёмной темы при этом остаётся в стилях нетронутым. */}
   <script is:inline>
     (function () {
-      var тема = null, вид = null;
+      var вид = null;
       try {
-        тема = localStorage.getItem('theme');
-        вид  = localStorage.getItem('view');
+        вид = localStorage.getItem('view');
       } catch (e) {}
 
-      document.documentElement.dataset.theme = тема === 'light' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = 'light';
 
       /* Вид списков — такая же настройка человека, как тема: выбрал раз и
          дальше весь сайт показывает списки так. Строками по умолчанию:
@@ -263,7 +267,9 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           списка, где искало только по открытому списку. */}
       <SearchField />
 
-      {/* Переключатель темы — последним в разметке, после меню.
+      {/* Переключатель темы — последним в разметке, после меню. Выключен
+          флагом с 7 сентября 2026: тема на сайте одна.
+
 
           На широком экране он встаёт справа от разделов, на узком меню
           уезжает под бургер и из потока выпадает, поэтому кнопка остаётся
@@ -283,14 +289,16 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           data-theme на <html> — значит он верен уже на первой отрисовке,
           до всякого скрипта. Скрипт доставляет только подпись для
           экранного диктора: текста у кнопки нет, а стилями её не задать. */}
-      <button
-        class="theme-toggle"
-        type="button"
-        id="theme"
-        aria-label="Switch theme"
-      >
-        <Icon name="circle-half" class="theme-toggle__icon" />
-      </button>
+      {ТЕМА_ПЕРЕКЛЮЧАЕТСЯ && (
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme"
+          aria-label="Switch theme"
+        >
+          <Icon name="circle-half" class="theme-toggle__icon" />
+        </button>
+      )}
     </div>
   </header>
 

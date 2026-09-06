@@ -1298,6 +1298,11 @@ body:has(.head--dot) .foot { margin-top: 0; }
    и решётку разделять нечем, там линию снизу чертит последний ряд. */
 .section:has(> .head--dot:only-child) + .section > .head--dot { border-top: 0; }
 
+/* Свёрнутый блок — тот же случай: у полосы «Info» остаётся низ, а под ней
+   сразу полоса следующего раздела со своим верхом. Замер до правки на
+   странице артиста: обе линии на 300,7, в стыке два пикселя вместо одного. */
+.section:has(.fold:not([open])) + .section > .head--dot { border-top: 0; }
+
 /* У первой полосы своей линии сверху нет: её уже дала шапка сайта. */
 .section:first-child .head--dot { border-top: 0; }
 
@@ -2512,6 +2517,15 @@ select option { background: var(--option-bg); color: var(--fg); }
 .fold__head {
   list-style: none;
   cursor: pointer;
+
+  /* Липкость держит сам <summary>, а не полоса внутри него: у полосы
+     контейнером стал бы <summary>, а он ровно её высоты — прилипать негде.
+     У <summary> контейнер — весь <details>, и полоса стоит на виду, пока
+     виден блок под ней, ровно как полосы остальных разделов. */
+  position: sticky;
+  top: var(--head-h);
+  z-index: 10;
+  background: var(--bg);
 }
 .fold__head::-webkit-details-marker { display: none; }
 
@@ -2524,10 +2538,11 @@ select option { background: var(--option-bg); color: var(--fg); }
   margin: 0 0 0 auto;
 
   /* Размер называем сами: у дропдаунов он берётся из --chevron, а та
-     переменная объявлена на самом .select и сюда не достаёт. Числа те же —
-     9 на 5,6, треугольник в полосе и в отборе один. */
-  width: 0.5625rem;
-  height: 0.3516rem;
+     переменная объявлена на самом .select и сюда не достаёт. Здесь он
+     крупнее, 12 на 7,5 против 9 на 5,6: в полосе высотой 64 рядом с
+     названием в 32 маленький указатель терялся. */
+  width: 0.75rem;
+  height: 0.4688rem;
   transform: rotate(-90deg);
 }
 .fold[open] .fold__mark { transform: rotate(0deg); }

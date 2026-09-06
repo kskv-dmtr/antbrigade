@@ -32,6 +32,9 @@ const thumb = thumbSrc(video, 960);
    строка условная: без даты внизу остаётся одна кнопка. */
 const dateText = formatDate(video.released);
 
+/* Вид ролика и год одной строкой под названием: «Official Video · 2023». */
+const выпуск = [video.kind, video.year].filter(Boolean).join(' · ');
+
 /* Год оригинала — у роликов, выложенных много позже съёмки. Показывается
    только здесь: порядок в списках держит released, как и у релиза.
 
@@ -114,18 +117,14 @@ const releases = [...new Map(
           </p>
 
           <h1 class="item__title">{title}</h1>
+
+          {/* Вид ролика и год под названием, как тип и год у релиза. */}
+          {выпуск && <p class="item__meta">{выпуск}</p>}
         </div>
 
         {/* Справка строками, как у релиза. Лейбла и жанров у клипа нет, вид
             ролика стоит на месте типа издания. */}
         <dl class="item__facts">
-          {video.kind && (
-            <div class="item__fact">
-              <dt>Type:</dt>
-              <dd>{video.kind}</dd>
-            </div>
-          )}
-
           {dateText && (
             <div class="item__fact">
               <dt>Released:</dt>

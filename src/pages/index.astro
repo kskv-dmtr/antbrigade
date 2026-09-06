@@ -71,7 +71,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
 
           Счётчика у кнопки больше нет: число стоит в полосе на самой
           /music, а на витрине оно спорило с подписью раздела рядом. */}
-      <a class="view-all" href="/music">View all</a>
+      <a class="view-all" href="/music"><span class="btn-label">View all</span></a>
     </div>
     <ul class="tiles tiles--auto">
       {latest.map((a) => <AlbumCard album={a} />)}
@@ -82,7 +82,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         из одного контейнера в другой средствами CSS нельзя, а городить скрипт
         ради оформления не стоит. Лишний виден ровно один: второй скрыт
         медиазапросом и в дерево доступности не попадает. */}
-    <a class="view-all view-all--below" href="/music">View all</a>
+    <a class="view-all view-all--below" href="/music"><span class="btn-label">View all</span></a>
   </section>
 
   <section class="section">
@@ -92,7 +92,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
       </div>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}
-      <button type="button" class="dig-again">Dig again</button>
+      <button type="button" class="dig-again"><span class="btn-label">Dig again</span></button>
     </div>
 
     {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
@@ -105,7 +105,7 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
     {/* На телефоне кнопка стоит под подборкой и липнет к низу экрана, пока
         этот раздел на виду: листать двадцать обложек, чтобы дотянуться до
         «ещё», — не дело. */}
-    <button type="button" class="dig-again dig-again--below">Dig again</button>
+    <button type="button" class="dig-again dig-again--below"><span class="btn-label">Dig again</span></button>
   </section>
 </Base>
 

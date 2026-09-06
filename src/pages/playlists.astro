@@ -43,7 +43,7 @@ const первая = playlists[0]?.albums.find((a) => a.cover);
             : <h2 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h2>}
           <p class="counter">[{подборка.count}]</p>
         </div>
-        <a class="view-all" href={`/playlists/${подборка.slug}`}>View all</a>
+        <a class="view-all" href={`/playlists/${подборка.slug}`}><span class="btn-label">View all</span></a>
       </div>
 
       <ul class="tiles tiles--auto">
@@ -53,7 +53,7 @@ const первая = playlists[0]?.albums.find((a) => a.cover);
       {/* Тот же переход под сеткой — для телефона, где в полосе он спрятан.
           Двойник в разметке, а не переезд стилями: перенести узел из одного
           контейнера в другой средствами CSS нельзя. */}
-      <a class="view-all view-all--below" href={`/playlists/${подборка.slug}`}>View all</a>
+      <a class="view-all view-all--below" href={`/playlists/${подборка.slug}`}><span class="btn-label">View all</span></a>
     </section>
   ))}
 </Base>

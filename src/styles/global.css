@@ -1552,7 +1552,7 @@ main > .head--page:first-child { border-top: 0; }
   text-transform: uppercase;
   color: var(--fg-muted);
   background: none;
-  border: 1px solid var(--line);
+  border: 0;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -1576,9 +1576,18 @@ main > .head--page:first-child { border-top: 0; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
-  border: 1px solid var(--line);
   white-space: nowrap;
 }
+
+/* Подпись подчёркнута волосом и выворачивается по наведению — тот же набор,
+   что у ссылок на жанры и лейблы. Подчёркивание висит на самой подписи, а не
+   на кнопке: кнопка тут — ячейка полосы во всю её четверть, и линия под ней
+   читалась бы не подчёркиванием, а ещё одной чертой решётки.
+
+   В рамке обе кнопки стояли до 7 сентября 2026; в полосе раздела рамку с них
+   сняли ещё 5-го, и там они были ячейкой, которая выворачивается целиком —
+   органом другого рода, чем всё остальное на витрине. */
+.btn-label { border-bottom: 1px solid var(--line); }
 /* Все кнопки на сайте набраны одинаково: 12 кеглем и Medium. Раньше
    подписи наследовали 400 от .mono, а View all успел вырасти до 16 —
    рядом друг с другом это читалось недосмотром. */
@@ -1609,21 +1618,21 @@ main > .head--page:first-child { border-top: 0; }
    Счётчик на светлой плашке перекрашивается: --fg-dim подобран для тёмного
    фона, на вывернутой кнопке он почти сливался. */
 @media (hover: hover) {
-  .view-all:hover,
-  .dig-again:hover {
+  .view-all:hover .btn-label,
+  .dig-again:hover .btn-label {
     background: var(--ink);
     color: var(--ink-fg);
-    border-color: var(--ink);
+    border-bottom-color: transparent;
   }
 }
 
-.view-all:focus-visible,
-.view-all:active,
-.dig-again:focus-visible,
-.dig-again:active {
+.view-all:focus-visible .btn-label,
+.view-all:active .btn-label,
+.dig-again:focus-visible .btn-label,
+.dig-again:active .btn-label {
   background: var(--ink);
   color: var(--ink-fg);
-  border-color: var(--ink);
+  border-bottom-color: transparent;
 }
 
 .page-head {
@@ -2627,16 +2636,15 @@ select option { background: var(--option-bg); color: var(--fg); }
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
 
-  /* Поле ячеек этого блока — своё, в полтора раза шире общего --pad: 24 на
-     расчётной ширине против шестнадцати. Здесь в ячейке всего по одному
-     предмету — обложка слева, текст справа, — и поле кадра, отмеренное под
-     решётку плиток, оставляло их впритык к линиям. Общим --pad поле стояло
-     до 7 сентября 2026.
+  /* Поле ячеек этого блока названо своей переменной, а не берётся из общего
+     --pad: от неё считаются и поле обложки, и поле текста, и отступ липкого
+     блока от полосы, и потолок стороны квадрата — менять их порознь значило бы
+     разводить.
 
-     Одной переменной, а не числом в пяти местах: от неё считаются и поле
-     обложки, и поле текста, и отрицательные поля полосы площадок, и потолок
-     стороны квадрата. */
-  --item-pad: 1.5rem;
+     Значение то же, что у полей кадра: 16 на расчётной ширине. В полтора раза
+     шире, 24, оно простояло 7 сентября 2026 — проверяли, не станет ли блок
+     дышать свободнее; воздуха вышло больше, чем нужно. */
+  --item-pad: 1rem;
 
   /* Ровно то, что осталось от экрана под шапкой и полосой «назад».
      Минимум, а не высота: пусть блок растёт, если содержимое справа выше
@@ -3616,22 +3624,24 @@ select option { background: var(--option-bg); color: var(--fg); }
      меняет фон и цвет разом, но фон у этих двух свой — .view-all--below
      специфичнее, и от общего правила доезжал только цвет текста: подпись
      красилась в цвет фона и пропадала. */
-  .view-all--below:active,
-  .view-all--below:focus-visible,
-  [data-js] .dig-again--below:active,
-  [data-js] .dig-again--below:focus-visible {
+  .view-all--below:active .btn-label,
+  .view-all--below:focus-visible .btn-label,
+  [data-js] .dig-again--below:active .btn-label,
+  [data-js] .dig-again--below:focus-visible .btn-label {
     background: var(--ink);
     color: var(--ink-fg);
+    border-bottom-color: transparent;
   }
 
   /* То же для наведения — узкое окно бывает и с мышью. Запрос вложен в
      запрос: снаружи ширина, внутри наличие указателя. Обычный CSS, вложение
      медиазапросов работает везде. */
   @media (hover: hover) {
-    .view-all--below:hover,
-    [data-js] .dig-again--below:hover {
+    .view-all--below:hover .btn-label,
+    [data-js] .dig-again--below:hover .btn-label {
       background: var(--ink);
       color: var(--ink-fg);
+      border-bottom-color: transparent;
     }
   }
 

@@ -2943,7 +2943,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   font-size: max(12px, 0.75rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg-dim);
+
+  /* Приглушённым, но на ступень светлее уточнения внутри: «originally 1989»
+     идёт --fg-dim, и на одинаковом цвете оговорка переставала быть оговоркой. */
+  color: var(--fg-muted);
 }
 
 /* Крупный заголовок один на весь сайт: название релиза, название клипа, имя

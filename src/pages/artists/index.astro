@@ -1,13 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import PageBar from '../../components/PageBar.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import { artists } from '../../lib/db.js';
-import { fold } from '../../lib/fold.js';
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
@@ -40,9 +38,7 @@ const PAGE = 50;
   {/* Счётчика в полосе нет: число уже стоит в каждой строке — сколько
       релизов у артиста, — и второе число рядом с заголовком считало бы
       другое и о том же. Он простоял здесь 5 сентября 2026 около часа. */}
-  <PageBar title="Artists">
-    <SearchField label="Search by artist name" />
-  </PageBar>
+  <PageBar title="Artists" />
 
   {/* Всё управление в липкой полосе, одинаково на списках релизов, артистов,
       лейблов и жанров: и поиск, и буквы, и сортировка возвращаются на экран
@@ -86,7 +82,6 @@ const PAGE = 50;
         {items.map((a) => (
           <li
             class="names__item"
-            data-search={fold(a.name)}
             data-name={a.name.toLowerCase()}
             data-count={a.albumIds.length}
             data-letter={letter}
@@ -119,9 +114,6 @@ const PAGE = 50;
 </Base>
 
 <script>
-  import { fold } from '../../lib/fold.js';
-
-  const search   = document.getElementById('search');
   const list     = document.getElementById('list');
   const sortEl   = document.getElementById('sort');
   const letterEl = document.getElementById('letter');
@@ -143,7 +135,6 @@ const PAGE = 50;
   // Сколько записей показано. Сбрасывается при любой смене выборки.
   let limit = PAGE;
 
-  let query = '';
   let letters = [];
 
   function apply() {
@@ -152,8 +143,7 @@ const PAGE = 50;
     let count = 0;
 
     for (const li of current) {
-      const ok = (!query || li.dataset.search.includes(query)) &&
-                 (!letters.length || letters.includes(li.dataset.letter));
+      const ok = (!letters.length || letters.includes(li.dataset.letter));
       if (ok) count++;
       li.hidden = !ok || count > limit;
     }
@@ -206,16 +196,6 @@ const PAGE = 50;
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
-
-  let timer;
-  search.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      query = fold(search.value.trim());
-      rewind();
-      apply();
-    }, 120);
-  });
 
   /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами. */
   for (const wrap of document.querySelectorAll('.select')) {

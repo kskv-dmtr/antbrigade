@@ -1,5 +1,5 @@
 ---
-/* Поле поиска. Одно на список — стоит в правой половине полосы заголовка.
+/* Поиск по всему каталогу. Одно поле на весь сайт, стоит в шапке.
 
    Раскладка как на shikimori: лупа слева, клавиша в квадрате справа.
 
@@ -8,21 +8,18 @@
    что это <kbd>, и по смыслу правильнее: показываем именно ту клавишу,
    которую надо нажать.
 
-   Как только в поле что-то набрано, на месте клавиши встаёт крестик — он же
-   и сбрасывает. Тот же приём, что у списков отбора: подсказка и сброс
-   занимают один угол и одновременно не показываются. Пока поле пусто,
-   сбрасывать нечего, а подсказка нужна; набрали — наоборот.
+   Находки выпадают панелью под полем — приём взят у Spotify: там поиск тоже
+   один на всё и отвечает вперемешку исполнителями, альбомами и треками, у
+   каждой находки подписан её род. Наши роды: artist, release, video, label,
+   genre.
 
-   Подсказка в поле одна и та же везде, поэтому лежит здесь, а не в
-   параметрах. А вот aria-label у каждой страницы свой: экранный диктор
-   должен сказать, по чему именно ищут, — «search» ему ничего не объясняет.
-   Про горячую клавишу теперь говорит только значок справа. */
+   Строка находки набрана как строка списка на /music: два ряда, в каждом
+   слева своё, справа служебное. Сверху имя и род, снизу подпись и число —
+   год у релиза и клипа, счёт релизов у остальных. */
 
 import Icon from './Icon.astro';
-
-const { label } = Astro.props;
 ---
-<div class="search">
+<div class="search" id="search-box">
   <Icon name="magnifying-glass" class="search__icon" />
   <input
     type="search"
@@ -30,25 +27,212 @@ const { label } = Astro.props;
     placeholder="Search"
     autocomplete="off"
     spellcheck="false"
-    aria-label={label}
+    role="combobox"
+    aria-expanded="false"
+    aria-controls="search-found"
+    aria-autocomplete="list"
+    aria-label="Search artists, releases, videos, labels and genres"
   />
   <kbd class="search__key mono mono--sm" aria-hidden="true">/</kbd>
   <button type="button" class="search__clear" aria-label="Clear search">
     <Icon name="x" class="search__x" />
   </button>
+
+  {/* Панель пустой не показывается: состояний «ничего не найдено» на сайте
+      нет нигде, и заводить одно ради поиска не за чем. */}
+  <div class="search__found" id="search-found" role="listbox" aria-label="Search results" hidden></div>
 </div>
 
 <script>
-  /* Крестик сбрасывает поле и сообщает об этом странице тем же событием,
-     что и набор с клавиатуры: отбор слушает input и пересчитывается сам. */
-  const поле = document.getElementById('search');
-  const сброс = document.querySelector('.search__clear');
+  /* Поиск по сводному указателю /search.json.
 
-  if (поле && сброс) {
-    сброс.addEventListener('click', () => {
-      поле.value = '';
-      поле.dispatchEvent(new Event('input', { bubbles: true }));
-      поле.focus();
+     Указатель грузится по первому касанию поля, а не вместе со страницей: он
+     весит вдвое больше самой тяжёлой страницы сайта, а искать заходят не все.
+     Запрашивается один раз за загрузку страницы. */
+
+  import { fold } from '../lib/fold.js';
+
+  const поле   = document.getElementById('search');
+  const панель = document.getElementById('search-found');
+  const короб  = document.getElementById('search-box');
+
+  if (поле && панель && короб) {
+    /* Свод тот же, что у отбора на списках: общая функция на весь сайт,
+       иначе «bjork» находил бы «Björk» в одном месте и не находил в другом. */
+
+    const РОД = { a: 'artist', r: 'release', v: 'video', l: 'label', g: 'genre' };
+
+    /* Порядок при равном совпадении: исполнитель важнее одноимённого релиза,
+       релиз важнее клипа. */
+    const ВЕС = { a: 0, r: 1, v: 2, l: 3, g: 4 };
+
+    const СКОЛЬКО = 12;
+
+    let указатель = null;
+    let грузим = null;
+    let выбран = -1;
+
+    const загрузить = () => {
+      if (указатель) return Promise.resolve(указатель);
+
+      if (!грузим) {
+        грузим = fetch('/search.json')
+          .then((r) => r.json())
+          .then((строки) => {
+            /* Свёрнутые формы считаем здесь, один раз на загрузку страницы: в
+               самом файле они удвоили бы вес. Три с лишним тысячи строк —
+               работа на несколько миллисекунд. */
+            указатель = строки.map((з) => [...з, fold(з[1]), fold(з[3] || '')]);
+            return указатель;
+          })
+          .catch(() => (указатель = []));
+      }
+
+      return грузим;
+    };
+
+    /* Чем раньше совпало, тем выше находка: точное имя, начало имени, начало
+       слова внутри имени, любое вхождение. Совпадение по подписи — ступенью
+       ниже любого совпадения по имени: набравший имя исполнителя ждёт сперва
+       его самого, а потом уже его релизы. */
+    const оценить = (имя, подпись, q) => {
+      if (имя === q) return 0;
+      if (имя.startsWith(q)) return 1;
+      if (имя.includes(' ' + q)) return 2;
+      if (имя.includes(q)) return 3;
+      if (подпись.startsWith(q)) return 4;
+      if (подпись.includes(q)) return 5;
+      return -1;
+    };
+
+    const найти = (q) => {
+      const счёт = [];
+
+      for (const з of указатель) {
+        const о = оценить(з[5], з[6], q);
+        if (о >= 0) счёт.push([о, ВЕС[з[0]], з[1].length, з]);
+      }
+
+      счёт.sort((x, y) => x[0] - y[0] || x[1] - y[1] || x[2] - y[2]);
+      return счёт.slice(0, СКОЛЬКО).map((x) => x[3]);
+    };
+
+    const закрыть = () => {
+      панель.hidden = true;
+      панель.replaceChildren();
+      поле.setAttribute('aria-expanded', 'false');
+      поле.removeAttribute('aria-activedescendant');
+      выбран = -1;
+    };
+
+    const отметить = (i) => {
+      const строки = [...панель.children];
+      if (!строки.length) return;
+
+      выбран = (i + строки.length) % строки.length;
+      строки.forEach((с, n) => с.toggleAttribute('data-active', n === выбран));
+      строки[выбран].scrollIntoView({ block: 'nearest' });
+      поле.setAttribute('aria-activedescendant', строки[выбран].id);
+    };
+
+    const ряд = (слева, справа, клСлева, клСправа) => {
+      const р = document.createElement('span');
+      р.className = 'found__line';
+
+      const л = document.createElement('span');
+      л.className = клСлева;
+      л.textContent = слева;
+
+      const п = document.createElement('span');
+      п.className = клСправа;
+      п.textContent = справа;
+
+      р.append(л, п);
+      return р;
+    };
+
+    const нарисовать = (находки) => {
+      if (!находки.length) return закрыть();
+
+      панель.replaceChildren(...находки.map((з, i) => {
+        const [тип, имя, адрес, подпись, число] = з;
+
+        const строка = document.createElement('a');
+        строка.className = 'found';
+        строка.href = адрес;
+        строка.id = 'found-' + i;
+        строка.setAttribute('role', 'option');
+        строка.append(ряд(имя, РОД[тип], 'found__name', 'found__type'));
+
+        /* Второй ряд только когда есть что в нём написать: у жанра нет ни
+           подписи, ни года, и пустой ряд задирал бы строку вдвое. */
+        if (подпись || число) строка.append(ряд(подпись, число, 'found__sub', 'found__note'));
+
+        return строка;
+      }));
+
+      панель.hidden = false;
+      поле.setAttribute('aria-expanded', 'true');
+      выбран = -1;
+    };
+
+    const набрано = () => fold(поле.value.trim());
+
+    const показать = async () => {
+      const q = набрано();
+
+      /* По одной букве отвечать нечем: совпадёт треть каталога, и панель
+         показала бы случайные двенадцать из тысячи. */
+      if (q.length < 2) return закрыть();
+
+      await загрузить();
+      if (набрано() !== q) return;          // пока грузили, набрали другое
+      нарисовать(найти(q));
+    };
+
+    /* Крестик сбрасывает поле и закрывает панель. Событие input шлём тем же,
+       что и набор с клавиатуры: обработчик выше один на оба случая. */
+    const сброс = короб.querySelector('.search__clear');
+
+    if (сброс) {
+      сброс.addEventListener('click', () => {
+        поле.value = '';
+        закрыть();
+        поле.focus();
+      });
+    }
+
+    let таймер;
+
+    поле.addEventListener('input', () => {
+      clearTimeout(таймер);
+      таймер = setTimeout(показать, 120);
+    });
+
+    // По возвращении в поле с набранным текстом панель открывается снова.
+    поле.addEventListener('focus', () => { загрузить(); показать(); });
+
+    поле.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); отметить(выбран + 1); return; }
+      if (e.key === 'ArrowUp')   { e.preventDefault(); отметить(выбран - 1); return; }
+
+      if (e.key === 'Enter') {
+        const строка = панель.children[выбран];
+        if (строка) { e.preventDefault(); location.href = строка.href; }
+        return;
+      }
+
+      /* Escape закрывает панель, но фокус оставляет: набранное человек ещё
+         может править. Второе нажатие отпускает поле — этим занят общий
+         обработчик в Base. */
+      if (e.key === 'Escape' && !панель.hidden) { e.stopPropagation(); закрыть(); }
+    });
+
+    /* Закрываем по нажатию мимо, а не по потере фокуса: щелчок по находке сам
+       начинается с потери фокуса, и по blur панель исчезала бы раньше, чем
+       переход успевал случиться. */
+    addEventListener('pointerdown', (e) => {
+      if (!короб.contains(e.target)) закрыть();
     });
   }
 </script>

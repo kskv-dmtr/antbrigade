@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import SearchField from '../components/SearchField.astro';
 
 import geist from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
 import geistMono from '@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2?url';
@@ -248,6 +249,15 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
         ))}
       </nav>
+
+      {/* Поиск живёт в шапке, а не на странице: ищут по каталогу целиком, а
+          не по тому, что сейчас открыто, и место у поля одно на весь сайт.
+          Стоит левее переключателя темы: тема и меню — про сайт целиком,
+          поиск — про содержимое, и он ближе к нему.
+
+          Так было и 5 сентября 2026; на день поле уезжало в полосу заголовка
+          списка, где искало только по открытому списку. */}
+      <SearchField />
 
       {/* Переключатель темы — последним в разметке, после меню.
 

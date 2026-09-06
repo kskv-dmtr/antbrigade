@@ -1,13 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SearchField from '../../components/SearchField.astro';
 import Select from '../../components/Select.astro';
 import PageBar from '../../components/PageBar.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import { genres } from '../../lib/db.js';
-import { fold } from '../../lib/fold.js';
 
 /* Раскладка та же, что у артистов и лейблов: по первой букве, порядок
    алфавитный. Прежний, «сначала крупные жанры», остался в сортировке под
@@ -42,9 +40,7 @@ const PAGE = 50;
   {/* Счётчика в полосе нет: число уже стоит в каждой строке — сколько
       релизов у жанра, — и второе число рядом с заголовком считало бы
       другое и о том же. Он простоял здесь 5 сентября 2026 около часа. */}
-  <PageBar title="Genres">
-    <SearchField label="Search by genre name" />
-  </PageBar>
+  <PageBar title="Genres" />
 
   {/* Отбора по виду здесь нет: имена показываются только списком. Плитки с
       именем и обложками релизов стояли вторым видом до 5 сентября 2026 —
@@ -79,7 +75,6 @@ const PAGE = 50;
         {items.map((genre) => (
           <li
             class="names__item"
-            data-search={fold(genre.name)}
             data-name={genre.name.toLowerCase()}
             data-count={genre.count}
             data-letter={letter}
@@ -105,9 +100,6 @@ const PAGE = 50;
 </Base>
 
 <script>
-  import { fold } from '../../lib/fold.js';
-
-  const search  = document.getElementById('search');
   const list     = document.getElementById('list');
   const sortEl   = document.getElementById('sort');
   const letterEl = document.getElementById('letter');
@@ -129,7 +121,6 @@ const PAGE = 50;
   // Сколько записей показано. Сбрасывается при любой смене выборки.
   let limit = PAGE;
 
-  let query = '';
   let letters = [];
 
   function apply() {
@@ -138,8 +129,7 @@ const PAGE = 50;
     let count = 0;
 
     for (const li of current) {
-      const ok = (!query || li.dataset.search.includes(query)) &&
-                 (!letters.length || letters.includes(li.dataset.letter));
+      const ok = (!letters.length || letters.includes(li.dataset.letter));
       if (ok) count++;
       li.hidden = !ok || count > limit;
     }
@@ -192,16 +182,6 @@ const PAGE = 50;
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
-
-  let timer;
-  search.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      query = fold(search.value.trim());
-      rewind();
-      apply();
-    }, 120);
-  });
 
   for (const wrap of document.querySelectorAll('.select')) {
     const field = wrap.querySelector('select');

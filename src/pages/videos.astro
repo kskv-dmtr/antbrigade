@@ -4,13 +4,11 @@ import PageBar from '../components/PageBar.astro';
 import VideoCard from '../components/VideoCard.astro';
 import VideoRow from '../components/VideoRow.astro';
 import Select from '../components/Select.astro';
-import SearchField from '../components/SearchField.astro';
 import FilterBar from '../components/FilterBar.astro';
 import FilterCell from '../components/FilterCell.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import { videos, videoTitle, videoArtists } from '../lib/db.js';
-import { fold } from '../lib/fold.js';
 
 /* Клипы были разбросаны по страницам артистов, и увидеть их все было негде.
    Здесь они собраны в один список — тем же устройством, что релизы: строка
@@ -79,9 +77,7 @@ const PAGE = 48;
 >
   {/* Число в квадратных скобках, как на Music. До выполнения скрипта видны
       все клипы — значение в полосе совпадает с первым расчётом. */}
-  <PageBar title="Videos" count={videos.length} live>
-    <SearchField label="Search by artist or title" />
-  </PageBar>
+  <PageBar title="Videos" count={videos.length} live />
 
   {/* Отбор устроен как на Music, только вместо типа с жанром — вид ролика:
       жанров у клипов нет. */}
@@ -118,7 +114,6 @@ const PAGE = 48;
     {list.map((v) => (
       <li
         class="release"
-        data-search={fold(`${videoArtists(v)} ${videoTitle(v)}`)}
         data-kind={v.kind ?? ''}
         data-year={v.year ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
@@ -137,12 +132,9 @@ const PAGE = 48;
 </Base>
 
 <script>
-  import { fold } from '../lib/fold.js';
-
   const list    = document.getElementById('list');
   const cards   = Array.from(list.children);
   const counter = document.getElementById('counter');
-  const search  = document.getElementById('search');
   const kindEl  = document.getElementById('kind');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
@@ -150,7 +142,7 @@ const PAGE = 48;
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', kinds: [], years: [] };
+  const state = { kinds: [], years: [] };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -169,8 +161,7 @@ const PAGE = 48;
     let shown = 0;
     for (const el of current) {
       const d = el.dataset;
-      const ok = (!state.q || d.search.includes(state.q)) &&
-                 (!state.kinds.length || state.kinds.includes(d.kind)) &&
+      const ok = (!state.kinds.length || state.kinds.includes(d.kind)) &&
                  (!state.years.length || state.years.includes(d.year));
       if (ok) shown++;
       el.hidden = !ok || shown > limit;
@@ -241,16 +232,6 @@ const PAGE = 48;
 
   sortEl.addEventListener('change', () => { sort(); rewind(); apply(); });
 
-
-  let timer;
-  search.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      state.q = fold(search.value.trim());
-      rewind();
-      apply();
-    }, 120);
-  });
 
   /* У <select> нет состояния «раскрыт» в CSS, поэтому отмечаем его сами. */
   for (const wrap of document.querySelectorAll('.select')) {

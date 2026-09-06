@@ -4,13 +4,11 @@ import PageBar from '../components/PageBar.astro';
 import AlbumCard from '../components/AlbumCard.astro';
 import ReleaseRow from '../components/ReleaseRow.astro';
 import Select from '../components/Select.astro';
-import SearchField from '../components/SearchField.astro';
 import FilterBar from '../components/FilterBar.astro';
 import FilterCell from '../components/FilterCell.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
 import { albums } from '../lib/db.js';
-import { fold } from '../lib/fold.js';
 
 // Карточки рендерятся на сервере все сразу: так страница работает без JS
 // и её видят поисковики. Фильтры лишь прячут лишнее.
@@ -75,9 +73,7 @@ const PAGE = 48;
       жанр и год. Полоса занимала четыреста пикселей ради пяти значений,
       выбирать позволяла только одно и требовала второго контрола на узком
       экране — списка, который теперь один на все ширины. */}
-  <PageBar title="Music" count={albums.length} live>
-    <SearchField label="Search by artist or album" />
-  </PageBar>
+  <PageBar title="Music" count={albums.length} live />
 
   {/* Отбор — отдельной строкой в четыре столбца, по столбцам решётки. */}
   <FilterBar>
@@ -126,7 +122,6 @@ const PAGE = 48;
     {albums.map((a) => (
       <li
         class="release"
-        data-search={fold(`${a.artist} ${a.album}`)}
         data-genres={a.genres.join('|')}
         data-types={a.types.join('|')}
         data-year={a.year ?? ''}
@@ -146,12 +141,9 @@ const PAGE = 48;
 </Base>
 
 <script>
-  import { fold } from '../lib/fold.js';
-
   const grid    = document.getElementById('grid');
   const cards   = Array.from(grid.children);
   const counter = document.getElementById('counter');
-  const search  = document.getElementById('search');
   const typeEl  = document.getElementById('type');
   const genreEl = document.getElementById('genre');
   const yearEl  = document.getElementById('year');
@@ -160,7 +152,7 @@ const PAGE = 48;
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { q: '', types: [], genres: [], years: [], sort: 'new' };
+  const state = { types: [], genres: [], years: [], sort: 'new' };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -188,7 +180,6 @@ const PAGE = 48;
      увидели бы нули. Это обычное правило фасетного отбора: ось не отбирает
      сама себя. */
   function passes(d, skip) {
-    if (state.q && !d.search.includes(state.q)) return false;
     if (skip !== 'types' && state.types.length &&
         !state.types.some((t) => d.types.split('|').includes(t))) return false;
     /* Любой из отмеченных, а не все сразу: у релиза жанров два-три, и
@@ -315,16 +306,6 @@ const PAGE = 48;
   more.addEventListener('click', () => {
     limit += PAGE;
     apply();
-  });
-
-  let timer;
-  search.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      state.q = fold(search.value.trim());
-      rewind();
-      apply();
-    }, 120);
   });
 
 

@@ -15,11 +15,7 @@
    откуда недоступен pages.dev.
    ------------------------------------------------------------------ */
 
-@import '@fontsource-variable/geist/wght.css';
-@import '@fontsource-variable/geist-mono/wght.css';
-/* Логотип. Начертание одно, Bold, поэтому переменная ось берётся целиком —
-   отдельного файла под 700 у Fontsource для неё нет. */
-@import '@fontsource-variable/space-grotesk/wght.css';
+@import './fonts.css';
 
 :root {
   /* Пропорциональное масштабирование, по образцу auto-scale у Tilda.

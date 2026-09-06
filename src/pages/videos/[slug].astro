@@ -135,21 +135,18 @@ const releases = [...new Map(
               </dd>
             </div>
           )}
-        </dl>
-        </div>
 
-      </div>
-
-      {/* Тот же ряд решётки, что «где послушать» у релиза, только площадка
-          одна: подпись через двоеточие, значение ссылкой. */}
-      <div class="listen">
-        <dl class="item__facts">
+          {/* Где смотреть — последней строкой той же справки, как площадки у
+              релиза. */}
           <div class="item__fact">
             <dt>Where to watch:</dt>
             <dd><a href={video.url} target="_blank" rel="noopener noreferrer">YouTube</a></dd>
           </div>
         </dl>
+        </div>
+
       </div>
+
     </article>
   </section>
 

@@ -9,6 +9,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import Icon from '../../components/Icon.astro';
 import ListenLinks from '../../components/ListenLinks.astro';
 import {
   albums, albumsOf, artistsOf, labelsOf, videosOf, coverSrc, formatDate, artistLine
@@ -87,100 +88,118 @@ const clips = [...new Map(
       5 сентября 2026. Сетки в ней не было вовсе: ширину обложке задавала
       своя переменная --two-cols, а высоту — содержимое, и с решёткой под
       ней полоса не сходилась ни одной линией. */}
-  <article class="item">
-    <div class="item__art">
-      <div class="item__cover">
-        {cover && (
-          <img src={cover} width="800" height="800"
-               alt={`${album.album} cover`} fetchpriority="high" />
-        )}
+  {/* Первой строкой — полоса «Info», та же, что на страницах исполнителя,
+      лейбла и жанра: кружок, название, треугольник. Она называет блок под
+      собой и ставит его в один ряд с разделами ниже — до неё блок висел под
+      шапкой сам по себе. Сворачивается тем же родным <details>. */}
+  <section class="section">
+    <details class="fold" open>
+      <summary class="fold__head">
+        <div class="head head--sticky head--dot head--page head--wide">
+          <div class="head__lead">
+            <p class="display display--md"><Icon name="circle" class="mark" />Info</p>
+            <span class="select__chevron fold__mark" aria-hidden="true"></span>
+          </div>
+        </div>
+      </summary>
+    <article class="item">
+      <div class="item__art">
+        <div class="item__cover">
+          {cover && (
+            <img src={cover} width="800" height="800"
+                 alt={`${album.album} cover`} fetchpriority="high" />
+          )}
+        </div>
       </div>
-    </div>
-    {/* Три опоры и воздух между ними: имя с названием к верху ячейки,
-        справка посередине, кнопки площадок к низу. Так низ ячейки с текстом
-        приходится на низ обложки, а не обрывается посреди неё.
+      {/* Три опоры и воздух между ними: имя с названием к верху ячейки,
+          справка посередине, кнопки площадок к низу. Так низ ячейки с текстом
+          приходится на низ обложки, а не обрывается посреди неё.
 
-        Порядок сверху вниз тот же, что у плитки на витрине: имя, потом
-        название. У полосы он был обратный — тип, название, имя, — потому
-        что надстрочной строкой там стоял вид издания; теперь вид ушёл в
-        справку, к остальным выходным данным, и первой строкой встало имя. */}
-    <div class="item__head">
-      {/* Имя, название и справка — одним липким блоком: при прокрутке он
-          стоит под шапкой и съезжает вниз вместе с ячейкой, пока не упрётся
-          в ряд кнопок снизу. Останов держит нижнее поле блока: липкий
-          элемент считается по внешним полям, и поле в высоту ряда плюс
-          шестнадцать оставляет ровно этот просвет. */}
-      <div class="item__top">
-      <div class="item__name">
-        <p class="item__artist">
-          {artists.length > 0
-            ? artists.map((a, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
-                </>
-              ))
-            : album.artist}
-        </p>
+          Порядок сверху вниз тот же, что у плитки на витрине: имя, потом
+          название. У полосы он был обратный — тип, название, имя, — потому
+          что надстрочной строкой там стоял вид издания; теперь вид ушёл в
+          справку, к остальным выходным данным, и первой строкой встало имя. */}
+      <div class="item__head">
+        {/* Имя, название и справка — одним липким блоком: при прокрутке он
+            стоит под шапкой и съезжает вниз вместе с ячейкой, пока не упрётся
+            в ряд кнопок снизу. Останов держит нижнее поле блока: липкий
+            элемент считается по внешним полям, и поле в высоту ряда плюс
+            шестнадцать оставляет ровно этот просвет. */}
+        <div class="item__top">
+        <div class="item__name">
+          <p class="item__artist">
+            {artists.length > 0
+              ? artists.map((a, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+                  </>
+                ))
+              : album.artist}
+          </p>
 
-        <h1 class="item__title">{album.album}</h1>
+          <h1 class="item__title">{album.album}</h1>
+        </div>
+
+        {/* Справка строками, как трек-лист у Warp: подпись слева, значение
+            справа, между строками мягкая черта. Это те же строки, что в
+            списках артистов и жанров, — подпись моноширинным с двоеточием,
+            как имена отборов в полосе, — и читаются они одинаково на всём
+            сайте.
+
+            Трек-листа у нас нет: в Notion лежат сведения об издании, а не о
+            записи. Строки заняты тем, что есть, — вид, дата, лейбл, жанры. */}
+        <dl class="item__facts">
+          {album.types.length > 0 && (
+            <div class="item__fact">
+              <dt>Type:</dt>
+              <dd>{album.types.join(' · ')}</dd>
+            </div>
+          )}
+
+          {dateText && (
+            <div class="item__fact">
+              <dt>Released:</dt>
+              {/* Дата оригинала — уточнением в той же строке, а не отдельной:
+                  это одна и та же справка о выпуске, и вторая строка «Released»
+                  читалась бы вторым релизом. */}
+              <dd>
+                {dateText}
+                {origText && <span class="item__faint"> · originally {origText}</span>}
+              </dd>
+            </div>
+          )}
+
+          {labels.length > 0 && (
+            <div class="item__fact">
+              <dt>Label:</dt>
+              <dd>
+                {labels.map((l, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+
+          {album.genres.length > 0 && (
+            <div class="item__fact">
+              <dt>Genres:</dt>
+              <dd><GenreLinks names={album.genres} inline /></dd>
+            </div>
+          )}
+        </dl>
+        </div>
       </div>
 
-      {/* Справка строками, как трек-лист у Warp: подпись слева, значение
-          справа, между строками мягкая черта. Это те же строки, что в
-          списках артистов и жанров, — подпись моноширинным с двоеточием,
-          как имена отборов в полосе, — и читаются они одинаково на всём
-          сайте.
-
-          Трек-листа у нас нет: в Notion лежат сведения об издании, а не о
-          записи. Строки заняты тем, что есть, — вид, дата, лейбл, жанры. */}
-      <dl class="item__facts">
-        {album.types.length > 0 && (
-          <div class="item__fact">
-            <dt>Type:</dt>
-            <dd>{album.types.join(' · ')}</dd>
-          </div>
-        )}
-
-        {dateText && (
-          <div class="item__fact">
-            <dt>Released:</dt>
-            {/* Дата оригинала — уточнением в той же строке, а не отдельной:
-                это одна и та же справка о выпуске, и вторая строка «Released»
-                читалась бы вторым релизом. */}
-            <dd>
-              {dateText}
-              {origText && <span class="item__faint"> · originally {origText}</span>}
-            </dd>
-          </div>
-        )}
-
-        {labels.length > 0 && (
-          <div class="item__fact">
-            <dt>Label:</dt>
-            <dd>
-              {labels.map((l, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
-                </>
-              ))}
-            </dd>
-          </div>
-        )}
-
-        {album.genres.length > 0 && (
-          <div class="item__fact">
-            <dt>Genres:</dt>
-            <dd><GenreLinks names={album.genres} inline /></dd>
-          </div>
-        )}
-      </dl>
-      </div>
-
+      {/* Ряд площадок — отдельный ряд решётки под обложкой и справкой:
+          подпись в двух первых столбцах, кнопки в третьем и четвёртом. */}
       <ListenLinks album={album} />
-    </div>
-  </article>
+    </article>
+    </details>
+  </section>
 
   {more.length > 0 && (
     <section class="section">

@@ -15,6 +15,7 @@ import VideoCard from '../../components/VideoCard.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import Icon from '../../components/Icon.astro';
 import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
 export function getStaticPaths() {
@@ -70,70 +71,91 @@ const releases = [...new Map(
       кадр вдвое ниже обложки и растягивать под него экран не за чем.
 
       Полоса 16:7 с кадром в 58% ширины стояла здесь до 6 сентября 2026. */}
-  <article class="item item--video">
-    <div class="item__art">
-      {/* Без кадра на его месте остаётся заштрихованная заготовка тех же
-          пропорций: блок не должен складываться из-за недокачанного файла.
-          Сейчас кадры есть у всех. */}
-      <div class="item__cover">
-        {thumb && (
-          <img src={thumb} width="960" height="540"
-               alt={`${title} still`} fetchpriority="high" />
-        )}
-      </div>
-    </div>
-
-    {/* Три опоры и воздух между ними, как у релиза: имя с названием к верху,
-        справка посередине, кнопка к низу. */}
-    <div class="item__head">
-      {/* Имя, название и справка — одним липким блоком: при прокрутке он
-          стоит под шапкой и съезжает вниз вместе с ячейкой, пока не упрётся
-          в ряд кнопок снизу. Останов держит нижнее поле блока: липкий
-          элемент считается по внешним полям, и поле в высоту ряда плюс
-          шестнадцать оставляет ровно этот просвет. */}
-      <div class="item__top">
-      <div class="item__name">
-        <p class="item__artist">
-          {artists.map((a, i) => (
-            <>
-              {i > 0 && <span class="sep"> · </span>}
-              <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
-            </>
-          ))}
-        </p>
-
-        <h1 class="item__title">{title}</h1>
-      </div>
-
-      {/* Справка строками, как у релиза. Лейбла и жанров у клипа нет, вид
-          ролика стоит на месте типа издания. */}
-      <dl class="item__facts">
-        {video.kind && (
-          <div class="item__fact">
-            <dt>Type:</dt>
-            <dd>{video.kind}</dd>
+  {/* Первой строкой — полоса «Info», та же, что на страницах исполнителя,
+      лейбла и жанра: кружок, название, треугольник. Она называет блок под
+      собой и ставит его в один ряд с разделами ниже — до неё блок висел под
+      шапкой сам по себе. Сворачивается тем же родным <details>. */}
+  <section class="section">
+    <details class="fold" open>
+      <summary class="fold__head">
+        <div class="head head--sticky head--dot head--page head--wide">
+          <div class="head__lead">
+            <p class="display display--md"><Icon name="circle" class="mark" />Info</p>
+            <span class="select__chevron fold__mark" aria-hidden="true"></span>
           </div>
-        )}
-
-        {dateText && (
-          <div class="item__fact">
-            <dt>Released:</dt>
-            <dd>
-              {dateText}
-              {origText && <span class="item__faint"> · originally {origText}</span>}
-            </dd>
-          </div>
-        )}
-      </dl>
+        </div>
+      </summary>
+    <article class="item item--video">
+      <div class="item__art">
+        {/* Без кадра на его месте остаётся заштрихованная заготовка тех же
+            пропорций: блок не должен складываться из-за недокачанного файла.
+            Сейчас кадры есть у всех. */}
+        <div class="item__cover">
+          {thumb && (
+            <img src={thumb} width="960" height="540"
+                 alt={`${title} still`} fetchpriority="high" />
+          )}
+        </div>
       </div>
 
-      {/* Тот же ряд, что «где послушать» у релиза: название площадки без
-          пояснений, без стрелки и без логотипа. */}
+      {/* Три опоры и воздух между ними, как у релиза: имя с названием к верху,
+          справка посередине, кнопка к низу. */}
+      <div class="item__head">
+        {/* Имя, название и справка — одним липким блоком: при прокрутке он
+            стоит под шапкой и съезжает вниз вместе с ячейкой, пока не упрётся
+            в ряд кнопок снизу. Останов держит нижнее поле блока: липкий
+            элемент считается по внешним полям, и поле в высоту ряда плюс
+            шестнадцать оставляет ровно этот просвет. */}
+        <div class="item__top">
+        <div class="item__name">
+          <p class="item__artist">
+            {artists.map((a, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+              </>
+            ))}
+          </p>
+
+          <h1 class="item__title">{title}</h1>
+        </div>
+
+        {/* Справка строками, как у релиза. Лейбла и жанров у клипа нет, вид
+            ролика стоит на месте типа издания. */}
+        <dl class="item__facts">
+          {video.kind && (
+            <div class="item__fact">
+              <dt>Type:</dt>
+              <dd>{video.kind}</dd>
+            </div>
+          )}
+
+          {dateText && (
+            <div class="item__fact">
+              <dt>Released:</dt>
+              <dd>
+                {dateText}
+                {origText && <span class="item__faint"> · originally {origText}</span>}
+              </dd>
+            </div>
+          )}
+        </dl>
+        </div>
+
+      </div>
+
+      {/* Тот же ряд решётки, что «где послушать» у релиза: подпись в двух
+          первых столбцах, площадка в третьем и четвёртом. */}
       <div class="listen">
-        <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">YouTube</a>
+        <p class="listen__name display display--md"><Icon name="circle" class="mark" />Where to watch</p>
+
+        <div class="listen__row">
+          <a class="listen__platform" href={video.url} target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+    </details>
+  </section>
 
   {rest.length > 0 && (
     <section class="section">

@@ -1,15 +1,19 @@
 ---
-/* Где послушать: прямые ссылки на площадки и переход на album.link — одним
-   рядом.
+/* Где послушать: отдельный ряд решётки под первым блоком. Слева, в двух
+   первых столбцах — подпись с кружком, как у разделов; справа, в третьем и
+   четвёртом — прямые ссылки на площадки и переход на album.link.
 
-   Значков у кнопок нет. Логотипы Spotify, Bandcamp, YouTube и звено цепи у
-   album.link стояли здесь до 6 сентября 2026: чужие знаки шли каждый своей
-   плотностью и весом, набор из них не читался набором, а рядом с подписью
-   капителью логотип оказывался единственным пятном на весь блок. Название
-   площадки словом говорит ровно то же.
+   Ряд стоит на тех же вертикалях, что обложка и текст над ним: подпись
+   приходится под обложку, кнопки — под справку.
 
-   Yandex Music из списка тоже ушёл — см. SHOWN_PLATFORMS в db.js. */
+   Площадки названы словами, а не значками: логотипы Spotify, Bandcamp,
+   YouTube и звено цепи у album.link стояли здесь до 6 сентября 2026 — чужие
+   знаки шли каждый своей плотностью и весом, и рядом с подписью капителью
+   логотип оказывался единственным пятном на весь блок.
 
+   Yandex Music из списка ушёл там же — см. SHOWN_PLATFORMS в db.js. */
+
+import Icon from './Icon.astro';
 import { listenLinks } from '../lib/db.js';
 
 const { album } = Astro.props;
@@ -17,12 +21,16 @@ const links = listenLinks(album);
 ---
 {(links.length > 0 || album.url) && (
   <div class="listen">
-    {links.map((link) => (
-      <a class="listen__platform" href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
-    ))}
+    <p class="listen__name display display--md"><Icon name="circle" class="mark" />Where to listen</p>
 
-    {album.url && (
-      <a class="listen__platform" href={album.url} target="_blank" rel="noopener noreferrer">album.link</a>
-    )}
+    <div class="listen__row">
+      {links.map((link) => (
+        <a class="listen__platform" href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      ))}
+
+      {album.url && (
+        <a class="listen__platform" href={album.url} target="_blank" rel="noopener noreferrer">album.link</a>
+      )}
+    </div>
   </div>
 )}

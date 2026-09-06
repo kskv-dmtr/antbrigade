@@ -1396,7 +1396,11 @@ body:has(.head--dot) .foot { margin-top: 0; }
    В контуре кружок занимает 208 из 256 коробки, тринадцать шестнадцатых.
    Коробку поэтому считаем от нужного размера кружка, а не наоборот: видимый
    кружок остаётся ровно тем же, каким был у точки, — 16. */
-.head--dot .mark {
+/* Кружок-метка: размер один и тот же, где бы он ни стоял — в полосе раздела
+   и в полосе площадок на странице релиза. Правило было привязано к .head--dot,
+   и метка вне полосы раздела растягивалась во всю строку: замер 115 на 115
+   вместо шестнадцати. */
+.mark {
   flex: none;
   width: calc(1rem * 16 / 13);
   height: calc(1rem * 16 / 13);
@@ -2637,7 +2641,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   /* Ровно то, что осталось от экрана под шапкой и полосой «назад».
      Минимум, а не высота: пусть блок растёт, если содержимое справа выше
      обложки. */
-  min-height: var(--screen-rest);
+  /* Ровно то, что осталось от экрана под шапкой и полосой «Info» над блоком.
+     Минимум, а не высота: пусть блок растёт, если содержимое справа выше
+     обложки. */
+  min-height: calc(var(--screen-rest) - var(--page-bar-h));
 
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
@@ -2850,7 +2857,7 @@ select option { background: var(--option-bg); color: var(--fg); }
      целиком, как и задумано. Разница видна только там, где иначе она бы не
      поместилась: воздух вокруг квадрата тогда шире, но лежит поровну со
      всех сторон — ячейка центрирует его. */
-  width: min(100%, calc(var(--screen-rest) - var(--item-pad) * 2));
+  width: min(100%, calc(var(--screen-rest) - var(--page-bar-h) * 2 - var(--item-pad) * 2));
   flex: none;
 
   background: var(--art);
@@ -2876,23 +2883,20 @@ select option { background: var(--option-bg); color: var(--fg); }
   flex-direction: column;
   justify-content: flex-start;
   min-width: 0;
-  padding: var(--item-pad) var(--item-pad) 0;
+  padding: var(--item-pad);
 }
 
-/* Имя со справкой липнут под шапку и съезжают вниз вместе с ячейкой, пока
-   не упрутся в ряд кнопок. Останов держит нижнее поле: липкий элемент
-   считается по внешним полям, и поле в высоту ряда (64) плюс шестнадцать
-   оставляет между ними ровно 16.
+/* Имя со справкой липнут под полосу «Info» и съезжают вниз вместе с ячейкой,
+   пока не упрутся в её нижнее поле — а сразу под ним идёт ряд площадок.
 
-   Отступ сверху — те же 16 от шапки, что поле ячейки от её верха: прилипнув,
-   имя встаёт на ту же горизонталь, на которой стояло до прокрутки. */
+   Отступ сверху — то же поле, что у ячейки от её верха: прилипнув, имя встаёт
+   на ту же горизонталь, на которой стояло до прокрутки. */
 .item__top {
   position: sticky;
-  top: calc(var(--head-h) + var(--item-pad));
+  top: calc(var(--head-h) + var(--page-bar-h) + var(--item-pad));
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: calc(var(--page-bar-h) + 1rem);
 }
 .item__name {
   display: flex;
@@ -3211,13 +3215,14 @@ select option { background: var(--option-bg); color: var(--fg); }
    auto): у «Spotify» и «Bandcamp» надписи разной длины, и одинаковые доли
    оставляли бы у короткой вдвое больше пустоты. */
 .listen {
-  display: flex;
-  align-items: stretch;
-  margin: auto calc(var(--item-pad) * -1) 0;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
   position: sticky;
   bottom: 0;
   background: var(--bg);
 }
+.listen__row { grid-column: 3 / -1; display: flex; }
 .listen__platform {
   flex: 1 1 auto;
   display: inline-flex;
@@ -3239,7 +3244,26 @@ select option { background: var(--option-bg); color: var(--fg); }
   border-left: 1px solid var(--line);
 }
 /* У первой кнопки левая линия совпала бы с линией самой ячейки. */
-.listen__platform:first-child { border-left: 0; }
+/* Подпись слева — та же, что у разделов: кружок и название дисплейным. Она
+   называет ряд справа от себя, и без неё кнопки висели полосой без имени,
+   тогда как всё прочее на странице своё имя имеет.
+
+   Ширину берёт по содержимому, остаток отдаёт кнопкам. Поле слева — то же
+   поле ячейки плюс пиксель на её границу, как у полос разделов. */
+.listen__name {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  height: var(--page-bar-h);
+  padding-left: calc(var(--item-pad) + 1px);
+  padding-right: var(--item-pad);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+/* Левую линию чертят все кнопки: первая отделяется ею от подписи слева. */
 @media (hover: hover) {
   .listen__platform:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 }
@@ -3474,6 +3498,26 @@ select option { background: var(--option-bg); color: var(--fg); }
   .item__art { grid-column: 1; }
   .item__head { grid-column: 1; }
 
+  /* Ряд площадок в один столбец: подпись строкой, кнопки строкой под ней.
+     В решётке из двух столбцов третьего для кнопок просто нет.
+
+     Липнет к низу окна только ряд кнопок, а не весь блок: вдвоём они занимают
+     128 — треть экрана телефона, — и висели бы поверх справки, пока её не
+     долистаешь. Подпись уезжает вместе со страницей, кнопки остаются.
+
+     Сам ряд при этом перестаёт быть боксом: липкий элемент не может уйти выше
+     своего контейнера, и внутри .listen кнопки упирались в его же верх — обе
+     строки оказывались одна на другой. Через display: contents контейнером
+     становится весь блок, и кнопкам есть куда всплывать. */
+  .listen { display: contents; }
+  .listen__name { grid-column: 1; }
+  .listen__row {
+    grid-column: 1;
+    position: sticky;
+    bottom: 0;
+    background: var(--bg);
+  }
+
   /* Меню встаёт в поток и делит строку с логотипом и переключателем.
 
      Центрирование по середине полосы держится, пока меню уже свободного
@@ -3684,7 +3728,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 
   /* Кружок в заголовке мельче: рядом с 20 кеглем шестнадцать смотрелись бы
      маркером списка, а не меткой раздела. */
-  .head--dot .mark {
+  .mark {
     width: calc(0.75rem * 16 / 13);
     height: calc(0.75rem * 16 / 13);
     margin-inline: calc(0.75rem * -1.5 / 13);

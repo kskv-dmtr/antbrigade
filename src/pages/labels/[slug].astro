@@ -27,55 +27,45 @@ const roster   = artistsOf(label.artistIds);
       клипа, исполнителя, лейбла и жанра. На лейбле и жанре её не было до
       6 сентября 2026 — возвращаться оттуда было нечем, кроме браузерной
       стрелки. */}
-  {/* Первый блок — тот же, что у исполнителя: слева имя, справа справка
-      строками. */}
-  {/* Первый блок — свой раздел, с такой же полосой, как у Releases и Videos
-      ниже: кружок и название. Полоса называет, что в блоке, и ставит его в
-      один ряд с остальными разделами страницы — до неё блок висел под шапкой
-      сам по себе.
+  {/* Три строки, как у исполнителя: имя со страной и переходами, полоса
+      «Info», справка в два блока по два столбца. У лейбла справка одна —
+      состав, и стоит она в левом блоке. */}
+  <div class="lead">
+    <div class="lead__name">
+      <h1 class="item__title">{label.name}</h1>
+      {label.country && <p class="counter">[{countryName(label.country)}]</p>}
+    </div>
 
-      Подпись не заголовок, а строка: заголовок страницы — имя, и оно стоит
-      внутри блока. Второй заголовок над ним, да ещё раньше по разметке,
-      сбивал бы порядок уровней. */}
+    {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+      <dl class="item__facts">
+        <div class="item__fact">
+          <dt>Links:</dt>
+          <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
+        </div>
+      </dl>
+    )}
+  </div>
+
   <section class="section">
     <PageBar as="p" title="Info" />
-    <article class="item item--page">
-      <div class="item__lead">
-        <h1 class="item__title">{label.name}</h1>
-      </div>
 
-      <div class="item__head">
-        <dl class="item__facts">
-          {label.country && (
-            <div class="item__fact">
-              <dt>Country:</dt>
-              <dd>{countryName(label.country)}</dd>
-            </div>
-          )}
-
-          {roster.length > 0 && (
-            <div class="item__fact">
-              <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-              <dd>
-                {roster.map((a, i) => (
-                  <>
-                    {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/artists/${a.slug}`}>{a.name}</a>
-                  </>
-                ))}
-              </dd>
-            </div>
-          )}
-
-          {(label.bandcamp || label.bandcamp2 || label.youtube) && (
-            <div class="item__fact">
-              <dt>Links:</dt>
-              <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
-            </div>
-          )}
-          </dl>
-        </div>
-    </article>
+    <div class="info">
+      <dl class="item__facts">
+        {roster.length > 0 && (
+          <div class="item__fact">
+            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+            <dd>
+              {roster.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+      </dl>
+    </div>
   </section>
 
   <section class="section">

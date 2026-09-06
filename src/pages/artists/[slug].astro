@@ -45,70 +45,67 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   image={coverSrc(releases.find((a) => a.cover), 800)}
   activeSection="artists"
 >
-  {/* Первый блок — тот же, что на страницах релиза и клипа: слева половина
-      решётки, справа половина. Слева только имя, справа справка строками —
-      страна, жанры, лейблы, переходы наружу.
+  {/* Три строки, одна под другой.
 
-      Счёт релизов сюда не идёт: он стоит в полосе раздела ниже. */}
-  {/* Первый блок — свой раздел, с такой же полосой, как у Releases и Videos
-      ниже: кружок и название. Полоса называет, что в блоке, и ставит его в
-      один ряд с остальными разделами страницы — до неё блок висел под шапкой
-      сам по себе.
+      Первая — имя во всю ширину кадра, страна у правого края той же
+      строкой, под ними переходы наружу. Имя — заголовок страницы, и
+      место ему первое: до полосы «Info», а не под ней.
 
-      Подпись не заголовок, а строка: заголовок страницы — имя, и оно стоит
-      внутри блока. Второй заголовок над ним, да ещё раньше по разметке,
-      сбивал бы порядок уровней. */}
+      Вторая — полоса «Info», такая же, как у Releases и Videos ниже:
+      кружок и название во всю ширину. Подпись в ней строка, а не
+      заголовок: заголовок страницы уже стоит выше, и второй сбивал бы
+      порядок уровней.
+
+      Третья — справка в два блока по два столбца: жанры слева, лейблы
+      справа. В каждом подпись у левого края своего блока, перечень у
+      правого. Разделителя между блоками пока нет. */}
+  <div class="lead">
+    <div class="lead__name">
+      <h1 class="item__title">{artist.name}</h1>
+      {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
+    </div>
+
+    {hasLinks && (
+      <dl class="item__facts">
+        <div class="item__fact">
+          <dt>Links:</dt>
+          <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
+        </div>
+      </dl>
+    )}
+  </div>
+
   <section class="section">
     <PageBar as="p" title="Info" />
-    <article class="item item--page">
-      <div class="item__lead">
-        <h1 class="item__title">{artist.name}</h1>
-      </div>
 
-      <div class="item__head">
-        <dl class="item__facts">
-          {artist.country && (
-            <div class="item__fact">
-              <dt>Country:</dt>
-              <dd>{countryName(artist.country)}</dd>
-            </div>
-          )}
+    <div class="info">
+      {/* Жанры перед лейблами: в справке релиза они идут в том же
+          порядке. */}
+      <dl class="item__facts">
+        {artist.genres.length > 0 && (
+          <div class="item__fact">
+            <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
+            <dd><GenreLinks names={artist.genres} inline /></dd>
+          </div>
+        )}
+      </dl>
 
-          {/* Жанры перед лейблами: в справке релиза они идут в том же
-              порядке. */}
-          {artist.genres.length > 0 && (
-            <div class="item__fact">
-              <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
-              <dd><GenreLinks names={artist.genres} inline /></dd>
-            </div>
-          )}
-
-          {labels.length > 0 && (
-            <div class="item__fact">
-              <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
-              <dd>
-                {labels.map((l, i) => (
-                  <>
-                    {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/labels/${l.slug}`}>{l.name}</a>
-                  </>
-                ))}
-              </dd>
-            </div>
-          )}
-
-          {/* Переходы наружу — последней строкой: сперва про самого
-              исполнителя, потом куда пойти дальше. Тот же счёт, что на
-              странице релиза, где кнопки площадок стоят под справкой. */}
-          {hasLinks && (
-            <div class="item__fact">
-              <dt>Links:</dt>
-              <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
-            </div>
-          )}
-          </dl>
-        </div>
-    </article>
+      <dl class="item__facts">
+        {labels.length > 0 && (
+          <div class="item__fact">
+            <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
+            <dd>
+              {labels.map((l, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/labels/${l.slug}`}>{l.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+      </dl>
+    </div>
   </section>
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его

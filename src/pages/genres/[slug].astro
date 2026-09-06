@@ -33,41 +33,34 @@ const roster = [...new Map(
   activeSection="genres"
 >
   {/* Полоса «назад» — как на остальных внутренних страницах. */}
-  {/* Первый блок — тот же, что у исполнителя и лейбла: слева имя, справа
-      справка строками. У жанра справки всего одна — исполнители. */}
-  {/* Первый блок — свой раздел, с такой же полосой, как у Releases и Videos
-      ниже: кружок и название. Полоса называет, что в блоке, и ставит его в
-      один ряд с остальными разделами страницы — до неё блок висел под шапкой
-      сам по себе.
+  {/* Три строки, как у исполнителя: имя, полоса «Info», справка. У жанра
+      ни страны, ни переходов наружу нет, а справка одна — исполнители. */}
+  <div class="lead">
+    <div class="lead__name">
+      <h1 class="item__title">{genre.name}</h1>
+    </div>
+  </div>
 
-      Подпись не заголовок, а строка: заголовок страницы — имя, и оно стоит
-      внутри блока. Второй заголовок над ним, да ещё раньше по разметке,
-      сбивал бы порядок уровней. */}
   <section class="section">
     <PageBar as="p" title="Info" />
-    <article class="item item--page">
-      <div class="item__lead">
-        <h1 class="item__title">{genre.name}</h1>
-      </div>
 
-      <div class="item__head">
-        <dl class="item__facts">
-          {roster.length > 0 && (
-            <div class="item__fact">
-              <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-              <dd>
-                {roster.map((a, i) => (
-                  <>
-                    {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/artists/${a.slug}`}>{a.name}</a>
-                  </>
-                ))}
-              </dd>
-            </div>
-          )}
-          </dl>
-        </div>
-    </article>
+    <div class="info">
+      <dl class="item__facts">
+        {roster.length > 0 && (
+          <div class="item__fact">
+            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+            <dd>
+              {roster.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+      </dl>
+    </div>
   </section>
 
   <section class="section">

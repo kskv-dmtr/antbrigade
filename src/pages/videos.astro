@@ -110,10 +110,18 @@ const PAGE = 48;
 
   {/* Один <li> на клип, внутри обе разметки: строка и плитка. Видимую
       выбирает data-view на списке. */}
-  <ul class="releases videos" id="list">
-    {list.map((v) => (
+  {/* Первые PAGE записей сервер отдаёт видимыми, остальные метит data-over,
+      и прячет их CSS — только при работающем скрипте: без него список показан
+      целиком, как и был. До 7 сентября 2026 сервер отдавал видимыми все, а
+      прятал их первый расчёт скрипта — уже после первой отрисовки: страница
+      успевала нарисоваться во всю длину и тут же схлопывалась. Полоса
+      прокрутки при этом перескакивала, а вместе с ней дёргались липкие полосы
+      заголовка и отбора. */}
+  <ul class="releases videos" id="list" data-first>
+    {list.map((v, i) => (
       <li
         class="release"
+        data-over={i >= PAGE ? '' : undefined}
         data-kind={v.kind ?? ''}
         data-year={v.year ?? ''}
         data-artist={videoArtists(v).toLowerCase()}
@@ -128,7 +136,7 @@ const PAGE = 48;
 
   {/* Кнопка появляется только со скриптом: без него показаны все записи,
       и «показать ещё» было бы нечего делать. */}
-  <button type="button" id="more" class="more" data-page={PAGE} hidden></button>
+  <button type="button" id="more" class="more" data-page={PAGE} hidden={list.length <= PAGE}>Show more [{Math.min(PAGE, list.length - PAGE)}]</button>
 </Base>
 
 <script>
@@ -248,4 +256,5 @@ const PAGE = 48;
   /* Первый расчёт: до него в разметке видны все записи — так страница
      работает без скрипта и целиком достаётся поисковикам. */
   apply();
+  list.removeAttribute('data-first');
 </script>

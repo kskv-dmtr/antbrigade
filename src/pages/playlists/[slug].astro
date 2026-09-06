@@ -21,7 +21,6 @@ const { playlist } = Astro.props;
   title={`${playlist.name} · ant brigade`}
   description={`${playlist.name}: ${plural(playlist.count, 'release', 'releases')} from the collection.`}
   image={coverSrc(playlist.albums.find((a) => a.cover), 800)}
-  activeSection="playlists"
 >
   <PageBar title={playlist.name} count={playlist.count} />
   <ul class="tiles tiles--auto">

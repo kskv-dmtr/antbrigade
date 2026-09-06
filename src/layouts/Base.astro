@@ -199,11 +199,12 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         <Icon name="x" class="burger__icon burger__icon--close" />
       </button>
 
+      {/* Подпись вплотную к тегу, без переноса строки: пробелы по краям
+          попадают в ссылку, и подчёркивание с вывороткой вылезали бы за букву
+          на пробел с каждой стороны. */}
       <nav class="nav" id="nav">
         {nav.map((item) => (
-          <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>
-            {item.label}
-          </a>
+          <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
         ))}
       </nav>
 

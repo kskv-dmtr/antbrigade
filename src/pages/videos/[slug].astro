@@ -7,6 +7,7 @@
    серая дыра. Поэтому кадр свой, скачанный, а смотреть уводим ссылкой. */
 
 import Base from '../../layouts/Base.astro';
+import WholeWords from '../../components/WholeWords.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 /* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
@@ -62,7 +63,6 @@ const releases = [...new Map(
   title={`${title} · ant brigade`}
   description={`${artists.map((a) => a.name).join(' · ')} — ${title}${video.kind ? `. ${video.kind}.` : '.'}`}
   image={thumb}
-  activeSection="videos"
 >
   {/* Клип стоит на той же решётке и в том же блоке, что релиз: кадр в двух
       первых столбцах, справа ячейка с именем и справкой во всю оставшуюся
@@ -92,7 +92,7 @@ const releases = [...new Map(
           {artists.map((a, i) => (
             <>
               {i > 0 && <span class="sep"> · </span>}
-              <a href={`/artists/${a.slug}`}>{a.name}</a>
+              <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
             </>
           ))}
         </p>

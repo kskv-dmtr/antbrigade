@@ -9,6 +9,7 @@
    выглядеть одинаково. */
 
 import { genreFor } from '../lib/db.js';
+import WholeWords from '../components/WholeWords.astro';
 
 /* inline — отдать только ссылки, без своего <p>: на странице исполнителя
    жанры стоят в общей строке со страной, и второй абзац там не нужен. */
@@ -19,7 +20,7 @@ const items = names.map((name) => genreFor(name)).filter(Boolean);
   items.map((genre, i) => (
     <>
       {i > 0 && <span class="sep"> · </span>}
-      <a href={`/genres/${genre.slug}`}>{genre.name}</a>
+      <a href={`/genres/${genre.slug}`}><WholeWords text={genre.name} /></a>
     </>
   ))
 ) : (
@@ -27,7 +28,7 @@ const items = names.map((name) => genreFor(name)).filter(Boolean);
     {items.map((genre, i) => (
       <>
         {i > 0 && <span class="sep"> · </span>}
-        <a href={`/genres/${genre.slug}`}>{genre.name}</a>
+        <a href={`/genres/${genre.slug}`}><WholeWords text={genre.name} /></a>
       </>
     ))}
   </p>

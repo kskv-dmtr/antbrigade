@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import WholeWords from '../../components/WholeWords.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
@@ -70,7 +71,6 @@ const clips = [...new Map(
   title={`${title} · ant brigade`}
   description={`${title}${album.year ? `, ${album.year}` : ''}. ${album.genres.join(', ')}.`}
   image={coverSrc(album, 800)}
-  activeSection="albums"
 >
   {/* Релиз стоит на той же решётке, что каталог: обложка занимает два
       первых столбца, а справа от неё ячейка с именем и справкой во всю
@@ -111,7 +111,7 @@ const clips = [...new Map(
             ? artists.map((a, i) => (
                 <>
                   {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}>{a.name}</a>
+                  <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
                 </>
               ))
             : album.artist}
@@ -156,7 +156,7 @@ const clips = [...new Map(
               {labels.map((l, i) => (
                 <>
                   {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/labels/${l.slug}`}>{l.name}</a>
+                  <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
                 </>
               ))}
             </dd>

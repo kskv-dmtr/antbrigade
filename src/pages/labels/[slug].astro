@@ -8,6 +8,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import WholeWords from '../../components/WholeWords.astro';
 import Icon from '../../components/Icon.astro';
 import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
@@ -36,7 +37,6 @@ const genres = [...genreCounts.entries()]
   title={`${label.name} · ant brigade`}
   description={`${label.name}: ${plural(releases.length, 'release', 'releases')} in the collection.`}
   image={coverSrc(releases.find((a) => a.cover), 800)}
-  activeSection="labels"
 >
   {/* Полоса «назад» стоит на всех внутренних страницах одинаково: релиза,
       клипа, исполнителя, лейбла и жанра. На лейбле и жанре её не было до
@@ -46,7 +46,7 @@ const genres = [...genreCounts.entries()]
       «Info», справка в два блока по два столбца. У лейбла справка одна —
       состав, и стоит она в левом блоке. */}
   <div class="lead">
-    <h1 class="item__title">{label.name}</h1>
+    <h1 class="item__title"><WholeWords text={label.name} /></h1>
     {label.country && <p class="counter">[{countryName(label.country)}]</p>}
 
     {(label.bandcamp || label.bandcamp2 || label.youtube) && (
@@ -86,7 +86,7 @@ const genres = [...genreCounts.entries()]
                 {roster.map((a, i) => (
                   <>
                     {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/artists/${a.slug}`}>{a.name}</a>
+                    <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
                   </>
                 ))}
               </dd>

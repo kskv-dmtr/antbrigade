@@ -9,6 +9,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
+import WholeWords from '../../components/WholeWords.astro';
 import Icon from '../../components/Icon.astro';
 import { artists, albumsOf, labelsOf, videosOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
@@ -44,7 +45,6 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   {/* В карточке ссылки — обложка самого свежего релиза: своей картинки у
       артиста нет, а плитка в сетке берёт ту же. */}
   image={coverSrc(releases.find((a) => a.cover), 800)}
-  activeSection="artists"
 >
   {/* Три строки, одна под другой.
 
@@ -61,7 +61,7 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
       справа. В каждом подпись у левого края своего блока, перечень у
       правого. Разделителя между блоками пока нет. */}
   <div class="lead">
-    <h1 class="item__title">{artist.name}</h1>
+    <h1 class="item__title"><WholeWords text={artist.name} /></h1>
     {artist.country && <p class="counter">[{countryName(artist.country)}]</p>}
 
     {hasLinks && (
@@ -112,7 +112,7 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
                 {labels.map((l, i) => (
                   <>
                     {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/labels/${l.slug}`}>{l.name}</a>
+                    <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
                   </>
                 ))}
               </dd>

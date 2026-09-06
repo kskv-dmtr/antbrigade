@@ -2623,6 +2623,17 @@ select option { background: var(--option-bg); color: var(--fg); }
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
 
+  /* Поле ячеек этого блока — своё, в полтора раза шире общего --pad: 24 на
+     расчётной ширине против шестнадцати. Здесь в ячейке всего по одному
+     предмету — обложка слева, текст справа, — и поле кадра, отмеренное под
+     решётку плиток, оставляло их впритык к линиям. Общим --pad поле стояло
+     до 7 сентября 2026.
+
+     Одной переменной, а не числом в пяти местах: от неё считаются и поле
+     обложки, и поле текста, и отрицательные поля полосы площадок, и потолок
+     стороны квадрата. */
+  --item-pad: 1.5rem;
+
   /* Ровно то, что осталось от экрана под шапкой и полосой «назад».
      Минимум, а не высота: пусть блок растёт, если содержимое справа выше
      обложки. */
@@ -2653,7 +2664,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: var(--item-pad);
 }
 /* Первая строка страниц исполнителя, лейбла и жанра: имя во всю ширину
    кадра, страна у правого края, под ними переходы наружу.
@@ -2839,7 +2850,7 @@ select option { background: var(--option-bg); color: var(--fg); }
      целиком, как и задумано. Разница видна только там, где иначе она бы не
      поместилась: воздух вокруг квадрата тогда шире, но лежит поровну со
      всех сторон — ячейка центрирует его. */
-  width: min(100%, calc(var(--screen-rest) - 2rem));
+  width: min(100%, calc(var(--screen-rest) - var(--item-pad) * 2));
   flex: none;
 
   background: var(--art);
@@ -2865,7 +2876,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   flex-direction: column;
   justify-content: flex-start;
   min-width: 0;
-  padding: 1rem 1rem 0;
+  padding: var(--item-pad) var(--item-pad) 0;
 }
 
 /* Имя со справкой липнут под шапку и съезжают вниз вместе с ячейкой, пока
@@ -2877,7 +2888,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    имя встаёт на ту же горизонталь, на которой стояло до прокрутки. */
 .item__top {
   position: sticky;
-  top: calc(var(--head-h) + 1rem);
+  top: calc(var(--head-h) + var(--item-pad));
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -3202,7 +3213,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .listen {
   display: flex;
   align-items: stretch;
-  margin: auto calc(var(--pad) * -1) 0;
+  margin: auto calc(var(--item-pad) * -1) 0;
   position: sticky;
   bottom: 0;
   background: var(--bg);

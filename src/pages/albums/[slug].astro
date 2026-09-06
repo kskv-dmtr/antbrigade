@@ -88,20 +88,16 @@ const clips = [...new Map(
       5 сентября 2026. Сетки в ней не было вовсе: ширину обложке задавала
       своя переменная --two-cols, а высоту — содержимое, и с решёткой под
       ней полоса не сходилась ни одной линией. */}
-  {/* Первой строкой — полоса «Info», та же, что на страницах исполнителя,
-      лейбла и жанра: кружок, название, треугольник. Она называет блок под
-      собой и ставит его в один ряд с разделами ниже — до неё блок висел под
-      шапкой сам по себе. Сворачивается тем же родным <details>. */}
+  {/* Первой строкой — полоса «Info»: кружок и название, как у разделов ниже.
+      Она называет блок под собой и ставит его в один ряд с ними — до неё блок
+      висел под шапкой сам по себе.
+
+      Не сворачивается, в отличие от такой же полосы у исполнителя, лейбла и
+      жанра: там под ней справка в две строки, а здесь — обложка и всё, ради
+      чего страницу открыли. Треугольника поэтому нет. */}
   <section class="section">
-    <details class="fold" open>
-      <summary class="fold__head">
-        <div class="head head--sticky head--dot head--page head--wide">
-          <div class="head__lead">
-            <p class="display display--md"><Icon name="circle" class="mark" />Info</p>
-            <span class="select__chevron fold__mark" aria-hidden="true"></span>
-          </div>
-        </div>
-      </summary>
+    <PageBar as="p" title="Info" />
+
     <article class="item">
       <div class="item__art">
         <div class="item__cover">
@@ -198,7 +194,6 @@ const clips = [...new Map(
           подпись в двух первых столбцах, кнопки в третьем и четвёртом. */}
       <ListenLinks album={album} />
     </article>
-    </details>
   </section>
 
   {more.length > 0 && (

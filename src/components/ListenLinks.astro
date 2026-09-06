@@ -1,36 +1,42 @@
 ---
-/* Где послушать: отдельный ряд решётки под первым блоком. Слева, в двух
-   первых столбцах — подпись с кружком, как у разделов; справа, в третьем и
-   четвёртом — прямые ссылки на площадки и переход на album.link.
+/* Где послушать: строка справки в отдельном ряду решётки под первым блоком.
 
-   Ряд стоит на тех же вертикалях, что обложка и текст над ним: подпись
-   приходится под обложку, кнопки — под справку.
+   Набрана как блок жанров на странице исполнителя — подпись через двоеточие,
+   значения ссылками через точку. Кнопками в рамках площадки стояли до
+   7 сентября 2026, полосой в 64 с дисплейной подписью — полдня того же дня:
+   и то и другое было органом другого веса, чем всё вокруг, хотя ведёт ровно
+   туда же, куда лейбл и жанр строкой выше.
 
-   Площадки названы словами, а не значками: логотипы Spotify, Bandcamp,
-   YouTube и звено цепи у album.link стояли здесь до 6 сентября 2026 — чужие
-   знаки шли каждый своей плотностью и весом, и рядом с подписью капителью
-   логотип оказывался единственным пятном на весь блок.
+   Занимает два первых столбца — те же, что обложка над ним. Правую половину
+   ряда держит затычка в стилях: без неё линия ряда обрывалась бы посередине.
 
-   Yandex Music из списка ушёл там же — см. SHOWN_PLATFORMS в db.js. */
+   Логотипы площадок и Yandex Music убраны 6 сентября 2026 — см. Icon.astro и
+   SHOWN_PLATFORMS в db.js. */
 
-import Icon from './Icon.astro';
 import { listenLinks } from '../lib/db.js';
 
 const { album } = Astro.props;
 const links = listenLinks(album);
+
+/* album.link — не площадка, а сборник ссылок на них, и место ему последнее.
+   В общий перечень он попадает наравне с прочими: разделять их нечем, все
+   уводят слушать. */
+const all = [...links, ...(album.url ? [{ label: 'album.link', url: album.url }] : [])];
 ---
-{(links.length > 0 || album.url) && (
+{all.length > 0 && (
   <div class="listen">
-    <p class="listen__name display display--md"><Icon name="circle" class="mark" />Where to listen</p>
-
-    <div class="listen__row">
-      {links.map((link) => (
-        <a class="listen__platform" href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
-      ))}
-
-      {album.url && (
-        <a class="listen__platform" href={album.url} target="_blank" rel="noopener noreferrer">album.link</a>
-      )}
-    </div>
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Where to listen:</dt>
+        <dd>
+          {all.map((link, i) => (
+            <>
+              {i > 0 && <span class="sep"> · </span>}
+              <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+            </>
+          ))}
+        </dd>
+      </div>
+    </dl>
   </div>
 )}

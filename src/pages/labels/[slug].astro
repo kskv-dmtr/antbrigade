@@ -29,43 +29,54 @@ const roster   = artistsOf(label.artistIds);
       стрелки. */}
   {/* Первый блок — тот же, что у исполнителя: слева имя, справа справка
       строками. */}
-  <article class="item item--page">
-    <div class="item__lead">
-      <h1 class="item__title">{label.name}</h1>
-    </div>
+  {/* Первый блок — свой раздел, с такой же полосой, как у Releases и Videos
+      ниже: кружок и название. Полоса называет, что в блоке, и ставит его в
+      один ряд с остальными разделами страницы — до неё блок висел под шапкой
+      сам по себе.
 
-    <div class="item__head">
-      <dl class="item__facts">
-        {label.country && (
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{countryName(label.country)}</dd>
-          </div>
-        )}
+      Подпись не заголовок, а строка: заголовок страницы — имя, и оно стоит
+      внутри блока. Второй заголовок над ним, да ещё раньше по разметке,
+      сбивал бы порядок уровней. */}
+  <section class="section">
+    <PageBar as="p" title="Info" />
+    <article class="item item--page">
+      <div class="item__lead">
+        <h1 class="item__title">{label.name}</h1>
+      </div>
 
-        {roster.length > 0 && (
-          <div class="item__fact">
-            <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
-            <dd>
-              {roster.map((a, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}>{a.name}</a>
-                </>
-              ))}
-            </dd>
-          </div>
-        )}
+      <div class="item__head">
+        <dl class="item__facts">
+          {label.country && (
+            <div class="item__fact">
+              <dt>Country:</dt>
+              <dd>{countryName(label.country)}</dd>
+            </div>
+          )}
 
-        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
-          <div class="item__fact">
-            <dt>Links:</dt>
-            <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
-          </div>
-        )}
-      </dl>
-    </div>
-  </article>
+          {roster.length > 0 && (
+            <div class="item__fact">
+              <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
+              <dd>
+                {roster.map((a, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${a.slug}`}>{a.name}</a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+
+          {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+            <div class="item__fact">
+              <dt>Links:</dt>
+              <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
+            </div>
+          )}
+          </dl>
+        </div>
+    </article>
+  </section>
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />

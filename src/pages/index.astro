@@ -65,7 +65,6 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
         {/* Подпись в скобках на месте счётчика: сколько всего релизов, сказано
             на /music, а здесь важнее, что это за подборка. Скобки на сайте
             означают служебную пометку — то же, что у счётчиков. */}
-        <p class="counter">[what's new]</p>
       </div>
       {/* Весь каталог — на /music. Ссылка, а не кнопка: работает без
           скрипта и открывается в новой вкладке средним щелчком.
@@ -90,7 +89,6 @@ const pool = shuffle(albums.slice(LATEST)).slice(0, POOL);
     <div class="head head--sticky head--bare head--dot">
       <div class="head__lead">
         <h2 class="display display--md"><Icon name="circle" class="mark" />Lucky Finds</h2>
-        <p class="counter">[more to discover]</p>
       </div>
       {/* Без скрипта кнопки не видно: подборку меняет он, а сервер отдаёт
           всем один и тот же HTML. */}

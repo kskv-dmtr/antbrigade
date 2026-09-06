@@ -278,7 +278,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
-  font-size: max(12px, 0.9375rem);
+  font-size: max(16px, 1rem);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
@@ -334,12 +334,12 @@ a { color: inherit; text-decoration: none; }
 
 .mono {
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.mono--sm { font-size: max(12px, 0.75rem); }
+.mono--sm { font-size: max(13px, 0.8125rem); }
 
 /* --------------------------------------------------------------- шапка
 
@@ -379,7 +379,11 @@ a { color: inherit; text-decoration: none; }
    общему, а трекинг — к тому, что задан макетом для слова в шапке. */
 .brand {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+
+  /* Пол в пикселях, как у остальных названных кеглей: без него логотип
+     сжимался вместе с масштабом и на 1440 выходил 18 при 24 на расчётной
+     ширине. */
+  font-size: max(24px, 1.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   /* Строчными и с пробелом — «ant brigade». Регистр не трогаем ни здесь,
@@ -392,7 +396,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   gap: 1.5rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -801,7 +805,10 @@ a { color: inherit; text-decoration: none; }
   padding: 0.875rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  /* Подпись одна — тип и год, — и стоит она вверху. Разведение по краям
+     держало вторую, «Open», и ушло вместе с ней 7 сентября 2026. */
+  justify-content: flex-start;
   background: var(--ink);
   color: var(--ink-fg);
   opacity: 0;
@@ -815,23 +822,18 @@ a { color: inherit; text-decoration: none; }
 
 .tile__meta {
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
-/* Подпись при наведении — одно слово без значка. Стрелка рядом с ним стояла
-   до 31 августа 2026: сперва уголком, потом в квадрате, потом убрана совсем.
-   Вместе с ней ушли просвет под неё и правила `.icon-arrow`, задававшие ей
-   размер от кегля подписи. */
-.tile__cta {
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.625rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-}
+/* Правила `.tile__cta` удалены 7 сентября 2026 вместе с подписью «Open» на
+   вывороте плитки: слово называло то, что и так делает щелчок по обложке, и
+   было единственным местом с кеглем 26 — величиной, которой на сайте больше
+   нет нигде. На вывороте остались тип и год.
+
+   Стрелка рядом с подписью стояла до 31 августа 2026: сперва уголком, потом
+   в квадрате, потом убрана совсем. */
 
 /* Имя исполнителя — текстовым шрифтом: это имя собственное, а не служебная
    подпись. Прописные и широкая разрядка ушли вместе с моноширинным: они
@@ -850,9 +852,9 @@ a { color: inherit; text-decoration: none; }
    20 — то есть на широком экране подписи читались мельче, чем на узком.
    Пол это снимает: от 900 до 1920 кегль ровно тот, что назван, а выше
    растёт вместе со всем остальным. Тот же приём, что у счётчиков с их
-   max(12px, 0.75rem). */
+   max(13px, 0.8125rem). */
 .tile__artist {
-  font-size: max(14px, 0.875rem);
+  font-size: max(16px, 1rem);
 }
 .tile__title {
   font-size: max(20px, 1.25rem);
@@ -1084,7 +1086,7 @@ a { color: inherit; text-decoration: none; }
      В строке величина стоит рядом с именем, набранным основным шрифтом в 22,
      и без своего набора читалась бы частью имени. */
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   color: var(--fg-muted);
 }
@@ -1132,7 +1134,7 @@ a { color: inherit; text-decoration: none; }
 /* Исполнитель текстовым шрифтом — как и на плитке. Цвет не задан: строка
    наследует его от .row, то есть ровно тот же, что у названия, — и вместе
    с ним выворачивается при наведении. */
-.row__artist { font-size: max(14px, 0.875rem); }
+.row__artist { font-size: max(16px, 1rem); }
 .row__title {
   font-size: max(20px, 1.25rem);
   font-weight: 600;
@@ -1142,12 +1144,12 @@ a { color: inherit; text-decoration: none; }
    число релизов. Роль одна, поэтому и классы общие. */
 .row__meta {
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   color: var(--fg-muted);
 }
 .row__num {
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   text-align: right;
   color: var(--fg-muted);
 }
@@ -1547,7 +1549,7 @@ main > .head--page:first-child { border-top: 0; }
   display: none;
   padding: 0.5rem 0.8125rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -1595,7 +1597,7 @@ main > .head--page:first-child { border-top: 0; }
 .view-all,
 .multi__button,
 .select select {
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 500;
 }
 
@@ -1652,7 +1654,11 @@ main > .head--page:first-child { border-top: 0; }
 
 .page-head h1 {
   margin: 0;
-  font-size: clamp(1.875rem, 4.4vw, 3.25rem);
+
+  /* Тот же кегль, что у всех крупных заголовков сайта: 72 с потолком в
+     десятую экрана. Плавающим от ширины он стоял до 7 сентября 2026 и на
+     1920 давал 52 — единственная страница, где заголовок был мельче прочих. */
+  font-size: min(max(72px, 4.5rem), 10vw);
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 0.95;
@@ -1661,7 +1667,7 @@ main > .head--page:first-child { border-top: 0; }
 .counter {
   margin: 0;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-dim);
@@ -1765,7 +1771,7 @@ main > .head--page:first-child { border-top: 0; }
   min-height: calc(var(--filters-h) - 1px);
   padding-left: calc(var(--pad) + 1px);
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-dim);
@@ -1803,7 +1809,7 @@ main > .head--page:first-child { border-top: 0; }
   align-items: center;
   gap: 0.25rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1868,7 +1874,7 @@ main > .head--page:first-child { border-top: 0; }
 .filter__name {
   flex: none;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-dim);
@@ -1956,7 +1962,7 @@ main > .head--page:first-child { border-top: 0; }
   margin-left: calc(var(--pad) * -1 - 1px);
   margin-right: calc(var(--pad) * -1);
   padding: 0;
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 500;
   letter-spacing: 0.08em;
   border: 0;
@@ -2014,7 +2020,7 @@ main > .head--page:first-child { border-top: 0; }
      прежними: под лупой 40, под клавишей 44. */
   padding: 0.5rem 2.75rem 0.5rem 2.5rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.06em;
   color: var(--fg);
   background: transparent;
@@ -2165,7 +2171,7 @@ main > .head--page:first-child { border-top: 0; }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: max(14px, 0.875rem);
+  font-size: max(13px, 0.8125rem);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -2249,7 +2255,7 @@ main > .head--page:first-child { border-top: 0; }
 .seg button {
   padding: 0.5rem 0.8125rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -2293,7 +2299,7 @@ select {
      правым. */
   padding: 0.5rem calc(var(--select-gap) + var(--chevron) + var(--select-pad)) 0.5rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg);
@@ -2413,7 +2419,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   max-width: 16.25rem;
   padding: 0.5rem calc(var(--select-gap) + var(--chevron) + var(--select-pad)) 0.5rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
 
   /* Межстрочный задан числом, хотя у соседей по полосе его нет. Кнопка —
      единственный флексовый контейнер среди них: подпись внутри становится
@@ -2508,7 +2514,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   gap: 0.5625rem;
   padding: 0.4375rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -2542,13 +2548,14 @@ select option { background: var(--option-bg); color: var(--fg); }
    и жанра: оба разъехались по своим столбцам полосы отбора, и подзаголовок
    внутри панели стало нечему называть. Сама возможность держать в панели
    несколько списков осталась в разметке — .multi__group, — по ней скрипт
-   страницы прячет список, в котором не осталось пунктов.
+   страницы прячет список, в котором не осталось пунктов. */
 
+/* Строка «ничего не подошло» внутри раскрытой панели отбора. */
 .multi__none {
   margin: 0;
   padding: 0.5625rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-dim);
@@ -2566,7 +2573,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   margin-top: 1.25rem;
   padding: 1rem;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -2833,6 +2840,10 @@ select option { background: var(--option-bg); color: var(--fg); }
    имён на прежних страницах: строки тогда читаются списком, а не абзацем.
    По умолчанию у моноширинного 12 выходило 17, и восемь строк жанров
    слипались в плашку. */
+/* Межстрочный держим и на подписи: при кегле 14 своя строка у неё выходит на
+   две единицы выше перечня, и блок в одну строку перерастал полосу раздела —
+   замер на 1440: 50 при 48. */
+.info .item__fact,
 .info .item__fact dd { line-height: 1.5rem; }
 
 /* Кадр клипа — 16:9 вместо квадрата, и высоту блока задаёт он: правило
@@ -2940,7 +2951,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .item__meta {
   margin: 0;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
@@ -3001,7 +3012,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .item__fact dt {
   flex: none;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-dim);
@@ -3106,7 +3117,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .detail__kicker {
   margin: 0;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -3134,7 +3145,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .detail__artist {
   margin: 0;
   /* Те же 14, что везде: см. .item__artist. */
-  font-size: max(14px, 0.875rem);
+  font-size: max(13px, 0.8125rem);
   color: var(--fg-muted);
 }
 .detail__artist a { color: var(--fg); border-bottom: 1px solid var(--line); }
@@ -3183,7 +3194,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 .meta-line {
   margin: 0;
   font-family: var(--mono);
-  font-size: max(12px, 0.75rem);
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -3382,14 +3393,14 @@ select option { background: var(--option-bg); color: var(--fg); }
 
 /* Меню уходит из абсолютного центра в поток раньше, чем сужается решётка:
    справа от него стоит поле поиска, и оно подходит к центру страницы вплотную.
-   Замер: поле 216 при меню 459 встречаются на 1023 — на 950 меню налезало на
+   Замер: поле 216 при меню 517 встречаются на 1081 — на 950 меню налезало на
    поле на 27 пикселей. В потоке наезжать некуда: флекс разводит четверых по
    строке, и меню встаёт по центру остатка, а не страницы.
 
    Просвет между пунктами вдвое меньше: 127 логотипа, 34 переключателя и 486
    меню с просветами по 24 дают 695 при 609 доступных на 641 — там, где меню
    ещё не ушло под бургер. С просветом 12 выходит 599. */
-@media (max-width: 1080px) {
+@media (max-width: 1160px) {
   .nav {
     position: static;
     left: auto;
@@ -3412,7 +3423,7 @@ select option { background: var(--option-bg); color: var(--fg); }
        под ними. Замер на 820 и на 721 — 113. Число запасное, точную высоту
        ставит скрипт; без него липкие полосы стояли бы на сорок пикселей выше
        места. Ниже 640 меню уезжает под бургер, и там своё значение. */
-    --head-h: 7.0625rem;
+    --head-h: 7.125rem;
   }
 
   /* Шапка переносится: поле поиска уходит на вторую строку. Без переноса оно
@@ -3513,7 +3524,7 @@ select option { background: var(--option-bg); color: var(--fg); }
     gap: 0.25rem 0.75rem;
     padding: 0.75rem 0;
   }
-  .row__artist { font-size: max(12px, 0.75rem); }
+  .row__artist { font-size: max(14px, 0.875rem); }
   /* white-space здесь больше не задаём: название переносится и на широком
      экране, эта строка только меняла бы кегль и место в сетке. */
   .row__title { grid-column: 1; font-size: max(12px, 1rem); letter-spacing: -0.01em; }
@@ -3746,7 +3757,7 @@ select option { background: var(--option-bg); color: var(--fg); }
      пикселей с рамкой, выше бургера, и строка выросла на восемь. Было 63,
      пока поиск не вернулся в шапку: на телефоне поле занимает вторую строку
      целиком, и шапка выросла до 105 — замер на 375 и на 320. */
-  [data-js] { --head-h: 6.5625rem; }
+  [data-js] { --head-h: 6.625rem; }
 
   /* Меню выпадает из-под шапки поверх содержимого, а не раздвигает её:
      от --head-h отсчитывается положение липкой полосы, и раздвинутая шапка

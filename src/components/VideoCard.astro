@@ -50,7 +50,6 @@ const meta = [video.kind, video.year].filter(Boolean).join(' · ');
       )}
       <div class="tile__over" aria-hidden="true">
         <span class="tile__meta">{meta}</span>
-        <span class="tile__cta">Open</span>
       </div>
     </div>
     {showArtist && <span class="tile__artist">{videoArtists(video)}</span>}

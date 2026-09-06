@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-06T13:41:37Z",
+  "generatedAt": "2026-09-06T23:57:31Z",
   "counts": {
-    "albums": 1167,
-    "artists": 1034,
-    "labels": 648,
+    "albums": 1176,
+    "artists": 1037,
+    "labels": 652,
     "videos": 88
   },
   "albums": [
@@ -5384,8 +5384,8 @@
     },
     {
       "id": "30d4129a-8c52-8040-b2e3-f4d2e5be5ac8",
-      "slug": "altin-gun-garip",
-      "artist": "Altin Gün",
+      "slug": "alt-n-gun-garip",
+      "artist": "Altın Gün",
       "album": "Garip",
       "url": "https://album.link/h6dqjddjqkcxx",
       "cover": "https://antbrigade.notion.site/image/attachment%3A8d765967-d58f-4726-a9bb-94ed4553754a%3Aa2074507449_10.jpg?table=block&id=30d4129a-8c52-8040-b2e3-f4d2e5be5ac8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
@@ -5405,7 +5405,7 @@
         "30d4129a-8c52-80f6-aee3-e10fcc5392fb"
       ],
       "artists": [
-        "Altin Gün"
+        "Altın Gün"
       ],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
@@ -34500,6 +34500,69 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-808a-a5e3-f9f5e1756283",
+      "slug": "flamingo-pier-flamingo-pier",
+      "artist": "Flamingo Pier",
+      "album": "Flamingo Pier",
+      "url": "https://album.link/fghjp3knfqqgz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa198531f-dbf1-4d08-8c97-3dcf205d5112%3Aa2399557799_10.jpg?table=block&id=3d34129a-8c52-808a-a5e3-f9f5e1756283&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "House",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80ef-9572-ca292af6944c"
+      ],
+      "artists": [
+        "Flamingo Pier"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
+      ],
+      "labels": [
+        "Soundway Records"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-807e-8d26-f6ac544c1627",
+      "slug": "takeshi-s-cashew-humans-in-a-pool",
+      "artist": "Takeshi’s Cashew",
+      "album": "Humans in a Pool",
+      "url": "https://album.link/qjr9fmqfb4jdd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1625927a-8d05-4f9b-91bd-8349962335dd%3Aa0172822361_10.jpg?table=block&id=3d34129a-8c52-807e-8d26-f6ac544c1627&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Rock",
+        "Exotica",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-8093-b38e-c7ec94393cf4"
+      ],
+      "artists": [
+        "Takeshi’s Cashew"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80be-9856-f7341f8d5188"
+      ],
+      "labels": [
+        "Laut & Luise"
+      ]
+    },
+    {
       "id": "3d04129a-8c52-802f-a998-e062b8f69554",
       "slug": "cobra-man-powered-up",
       "artist": "Cobra Man",
@@ -34870,6 +34933,38 @@
       ],
       "labels": [
         "Brownswood Recordings"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-8033-966f-d5e482a40d7c",
+      "slug": "alt-n-gun-yol",
+      "artist": "Altın Gün",
+      "album": "Yol",
+      "url": "https://album.link/xwrtrprxrs3dr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A38ef3258-051d-4110-bf73-797454c09ae5%3Aa3851300909_10.jpg?table=block&id=3d34129a-8c52-8033-966f-d5e482a40d7c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Anatolian Rock",
+        "Synthpop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-02-26",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "30d4129a-8c52-80f6-aee3-e10fcc5392fb"
+      ],
+      "artists": [
+        "Altın Gün"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8093-8156-f94f7507964c"
+      ],
+      "labels": [
+        "Glitterbeat Records"
       ]
     },
     {
@@ -35413,6 +35508,39 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-806d-8e83-f14478dfedaa",
+      "slug": "khruangbin-mordechai",
+      "artist": "Khruangbin",
+      "album": "Mordechai",
+      "url": "https://album.link/qgdmz8jf2mqzm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A74854edd-d60e-4909-bba4-1f107bbad293%3Aa0911513519_10.jpg?table=block&id=3d34129a-8c52-806d-8e83-f14478dfedaa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Rock",
+        "Neo-Psychedelia",
+        "Exotica",
+        "Psychedelic Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-06-26",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80bf-a971-fdbdd67732a4"
+      ],
+      "artists": [
+        "Khruangbin"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8022-abd2-d0c412936e59"
+      ],
+      "labels": [
+        "Dead Oceans"
+      ]
+    },
+    {
       "id": "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
       "slug": "various-artists-tchic-tchic-french-bossa-nova",
       "artist": "Various Artists",
@@ -35570,6 +35698,36 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-8066-841d-f2534098ee13",
+      "slug": "maajo-kuru-kuru",
+      "artist": "Maajo",
+      "album": "Kuru Kuru",
+      "url": "https://album.link/ptrk2ztgwmgsr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2b55e1e7-77fa-4cfb-9925-a6caa6b3dbca%3Aa2369821682_10.jpg?table=block&id=3d34129a-8c52-8066-841d-f2534098ee13&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-04-10",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2524129a-8c52-8027-b6db-e8a339d4bd1b"
+      ],
+      "artists": [
+        "Maajo"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-80fb-8aa4-f8549cfd9aae"
+      ],
+      "labels": [
+        "Queen Nanny"
+      ]
+    },
+    {
       "id": "c70f158e-28b6-4339-af37-348710c79313",
       "slug": "traveler-termination-shock",
       "artist": "Traveler",
@@ -35630,6 +35788,36 @@
       ],
       "labels": [
         "Athens of the North"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-8023-ac81-e482e874c257",
+      "slug": "onipa-we-no-be-machine",
+      "artist": "Onipa",
+      "album": "We No Be Machine",
+      "url": "https://album.link/jkhtr9mgdmmcr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af270f7f0-b202-45c3-b936-d338a1b7db6d%3Aa1311381430_10.jpg?table=block&id=3d34129a-8c52-8023-ac81-e482e874c257&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-03-20",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d34129a-8c52-8030-88e6-c1c492893403"
+      ],
+      "artists": [
+        "Onipa"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-981f-ddfb3704cd77"
+      ],
+      "labels": [
+        "Strut"
       ]
     },
     {
@@ -36198,6 +36386,38 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-800f-bae3-fddaa48e488a",
+      "slug": "isla-de-caras-chango",
+      "artist": "Isla de Caras",
+      "album": "Chango",
+      "url": "https://album.link/nmsjcxbrggsqw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aced2ea88-bfa2-4ade-bdac-bd6bc4bc6757%3Aa2317603721_10.jpg?table=block&id=3d34129a-8c52-800f-bae3-fddaa48e488a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bedroom Pop",
+        "Indie Pop",
+        "Sophisti-Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-09-21",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80b9-9197-d97de86432fb"
+      ],
+      "artists": [
+        "Isla de Caras"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-80e0-9c09-c4d017b77edd"
+      ],
+      "labels": [
+        "Estamos Felices"
+      ]
+    },
+    {
       "id": "24772b18-8565-47c0-b190-53df4e56cb7d",
       "slug": "pig-destroyer-head-cage",
       "artist": "Pig Destroyer",
@@ -36352,6 +36572,38 @@
       ],
       "labels": [
         "Kame'a Music"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-80d1-836d-f886e7030ecb",
+      "slug": "basa-basa-homowo",
+      "artist": "Basa Basa",
+      "album": "Homowo",
+      "url": "https://album.link/ch3mx5vs9df5b",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9010f5c1-a6c9-4587-bc0c-05cb9ba932c1%3Aa3225251246_10.jpg?table=block&id=3d34129a-8c52-80d1-836d-f886e7030ecb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Highlife",
+        "Afrobeat",
+        "Afro-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-02-13",
+      "year": 2018,
+      "origYear": "1979",
+      "playlists": [],
+      "artistIds": [
+        "3d34129a-8c52-80fb-8b0b-cffeb997a19f"
+      ],
+      "artists": [
+        "Basa Basa"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-8000-80ac-fa00b2e6eca2"
+      ],
+      "labels": [
+        "Vintage Voudou"
       ]
     },
     {
@@ -36608,6 +36860,36 @@
       ],
       "labels": [
         "Hells Headbangers Records"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-8099-8820-d416958a2ffc",
+      "slug": "sola-sola",
+      "artist": "Sola",
+      "album": "Sola",
+      "url": "https://album.link/xcddjkzhk4xr2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A813325c7-7139-44ba-a136-0e4079e108be%3Aab67616d0000b273f79bd7f7765eba9567b12e86.jpg?table=block&id=3d34129a-8c52-8099-8820-d416958a2ffc&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2006-06-23",
+      "year": 2006,
+      "origYear": "1973",
+      "playlists": [],
+      "artistIds": [
+        "3d34129a-8c52-806e-90c7-e106aee01363"
+      ],
+      "artists": [
+        "Sola"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-8085-8cae-ee10ac495c56"
+      ],
+      "labels": [
+        "Sony Music Mexico"
       ]
     },
     {
@@ -37298,18 +37580,20 @@
     },
     {
       "id": "30d4129a-8c52-80f6-aee3-e10fcc5392fb",
-      "slug": "altin-gun",
-      "name": "Altin Gün",
+      "slug": "alt-n-gun",
+      "name": "Altın Gün",
       "country": "NL",
       "bandcamp": "https://altingun.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "30d4129a-8c52-8040-b2e3-f4d2e5be5ac8"
+        "30d4129a-8c52-8040-b2e3-f4d2e5be5ac8",
+        "3d34129a-8c52-8033-966f-d5e482a40d7c"
       ],
       "genres": [
         "Psychedelic Rock",
         "Neo-Psychedelia",
-        "Anatolian Rock"
+        "Anatolian Rock",
+        "Synthpop"
       ],
       "labelIds": [
         "24a4129a-8c52-8093-8156-f94f7507964c"
@@ -38274,6 +38558,26 @@
       ],
       "labelIds": [
         "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d34129a-8c52-80fb-8b0b-cffeb997a19f",
+      "slug": "basa-basa",
+      "name": "Basa Basa",
+      "country": "GH",
+      "bandcamp": "https://basabasa.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-80d1-836d-f886e7030ecb"
+      ],
+      "genres": [
+        "Highlife",
+        "Afrobeat",
+        "Afro-Funk"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-8000-80ac-fa00b2e6eca2"
       ],
       "videoIds": []
     },
@@ -42801,11 +43105,12 @@
       "slug": "flamingo-pier",
       "name": "Flamingo Pier",
       "country": "NZ",
-      "bandcamp": null,
+      "bandcamp": "https://flamingopier.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "54265483-5302-4e01-8f38-123740075942",
-        "6547c515-1d27-4384-ac69-d9fc93caa1a4"
+        "6547c515-1d27-4384-ac69-d9fc93caa1a4",
+        "3d34129a-8c52-808a-a5e3-f9f5e1756283"
       ],
       "genres": [
         "House",
@@ -44888,16 +45193,20 @@
       "slug": "isla-de-caras",
       "name": "Isla de Caras",
       "country": "AR",
-      "bandcamp": null,
+      "bandcamp": "https://isladecaras.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "bb36210e-eba2-405e-a0df-bb73b07142a0"
+        "bb36210e-eba2-405e-a0df-bb73b07142a0",
+        "3d34129a-8c52-800f-bae3-fddaa48e488a"
       ],
       "genres": [
-        "Indie Pop"
+        "Indie Pop",
+        "Bedroom Pop",
+        "Sophisti-Pop"
       ],
       "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3d34129a-8c52-80e0-9c09-c4d017b77edd"
       ],
       "videoIds": []
     },
@@ -45980,14 +46289,17 @@
       "slug": "khruangbin",
       "name": "Khruangbin",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://khruangbin.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "54d2749c-617d-48af-8ca1-83a8f06b65aa"
+        "54d2749c-617d-48af-8ca1-83a8f06b65aa",
+        "3d34129a-8c52-806d-8e83-f14478dfedaa"
       ],
       "genres": [
         "Neo-Psychedelia",
-        "Exotica"
+        "Exotica",
+        "Psychedelic Rock",
+        "Psychedelic Soul"
       ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
@@ -47459,16 +47771,18 @@
       "slug": "maajo",
       "name": "Maajo",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://maajo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "2524129a-8c52-80a1-9c3c-d10c118b50ad"
+        "2524129a-8c52-80a1-9c3c-d10c118b50ad",
+        "3d34129a-8c52-8066-841d-f2534098ee13"
       ],
       "genres": [
         "Afrobeat"
       ],
       "labelIds": [
-        "2484129a-8c52-80d3-bc9e-e6cb7b9e77e2"
+        "2484129a-8c52-80d3-bc9e-e6cb7b9e77e2",
+        "3d34129a-8c52-80fb-8aa4-f8549cfd9aae"
       ],
       "videoIds": []
     },
@@ -49522,6 +49836,24 @@
       ],
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d34129a-8c52-8030-88e6-c1c492893403",
+      "slug": "onipa",
+      "name": "Onipa",
+      "country": "GB",
+      "bandcamp": "https://onipa.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-8023-ac81-e482e874c257"
+      ],
+      "genres": [
+        "Afrobeat"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-981f-ddfb3704cd77"
       ],
       "videoIds": []
     },
@@ -52718,6 +53050,24 @@
       "videoIds": []
     },
     {
+      "id": "3d34129a-8c52-806e-90c7-e106aee01363",
+      "slug": "sola",
+      "name": "Sola",
+      "country": "MX",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-8099-8820-d416958a2ffc"
+      ],
+      "genres": [
+        "Psychedelic Soul"
+      ],
+      "labelIds": [
+        "3d34129a-8c52-8085-8cae-ee10ac495c56"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3c44129a-8c52-800c-9c6d-c5409c2c1d9b",
       "slug": "sondre-lerche",
       "name": "Sondre Lerche",
@@ -53596,11 +53946,14 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "803efcd0-ac64-4c38-92f7-9420b3381362"
+        "803efcd0-ac64-4c38-92f7-9420b3381362",
+        "3d34129a-8c52-807e-8d26-f6ac544c1627"
       ],
       "genres": [
         "Neo-Psychedelia",
-        "Psychedelic Rock"
+        "Psychedelic Rock",
+        "Exotica",
+        "Jazz Fusion"
       ],
       "labelIds": [
         "2434129a-8c52-80be-9856-f7341f8d5188"
@@ -59468,7 +59821,7 @@
       "slug": "dead-oceans",
       "name": "Dead Oceans",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://deadoceans.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59476,7 +59829,8 @@
         "d1f8f0c0-940d-48c7-b346-52903f2613c7",
         "4a81bf5b-0f55-4bf6-857e-12bfabba6bf1",
         "54d2749c-617d-48af-8ca1-83a8f06b65aa",
-        "5e8a1076-5502-44f7-a1c4-56ac067a5b32"
+        "5e8a1076-5502-44f7-a1c4-56ac067a5b32",
+        "3d34129a-8c52-806d-8e83-f14478dfedaa"
       ],
       "artistIds": [
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
@@ -60181,6 +60535,21 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-80e0-9c09-c4d017b77edd",
+      "slug": "estamos-felices",
+      "name": "Estamos Felices",
+      "country": "AR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-800f-bae3-fddaa48e488a"
+      ],
+      "artistIds": [
+        "2504129a-8c52-80b9-9197-d97de86432fb"
+      ]
+    },
+    {
       "id": "2c04129a-8c52-803e-a8b4-fa1adbf4bd84",
       "slug": "every-star-records",
       "name": "Every Star Records",
@@ -60843,7 +61212,8 @@
         "2ae4129a-8c52-803d-a623-e1913797ae6f",
         "1d64129a-8c52-8059-86e6-c63d403790d8",
         "1bb4129a-8c52-80d9-8d15-e3f784fe7fb8",
-        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2"
+        "b66631d5-24ba-47c9-ab70-c9e4a4f42dc2",
+        "3d34129a-8c52-8033-966f-d5e482a40d7c"
       ],
       "artistIds": [
         "30d4129a-8c52-80f6-aee3-e10fcc5392fb",
@@ -62477,12 +62847,13 @@
       "slug": "laut-luise",
       "name": "Laut & Luise",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://lautluise.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "803efcd0-ac64-4c38-92f7-9420b3381362",
-        "0e6365df-e315-4c88-acc7-076a85bce47f"
+        "0e6365df-e315-4c88-acc7-076a85bce47f",
+        "3d34129a-8c52-807e-8d26-f6ac544c1627"
       ],
       "artistIds": [
         "2434129a-8c52-8093-b38e-c7ec94393cf4",
@@ -65087,6 +65458,21 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-80fb-8aa4-f8549cfd9aae",
+      "slug": "queen-nanny",
+      "name": "Queen Nanny",
+      "country": "DE",
+      "bandcamp": "https://queennanny.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-8066-841d-f2534098ee13"
+      ],
+      "artistIds": [
+        "2524129a-8c52-8027-b6db-e8a339d4bd1b"
+      ]
+    },
+    {
       "id": "2b04129a-8c52-8056-b315-f21fc034932c",
       "slug": "quintessentials",
       "name": "Quintessentials",
@@ -66272,6 +66658,21 @@
       ]
     },
     {
+      "id": "3d34129a-8c52-8085-8cae-ee10ac495c56",
+      "slug": "sony-music-mexico",
+      "name": "Sony Music Mexico",
+      "country": "MX",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-8099-8820-d416958a2ffc"
+      ],
+      "artistIds": [
+        "3d34129a-8c52-806e-90c7-e106aee01363"
+      ]
+    },
+    {
       "id": "2504129a-8c52-8085-b434-c5477fbe9133",
       "slug": "sorry-state-records",
       "name": "Sorry State Records",
@@ -66331,7 +66732,8 @@
         "11e4129a-8c52-8066-9e30-f39be953cae4",
         "54265483-5302-4e01-8f38-123740075942",
         "3be4129a-8c52-80cf-a767-ebbf7937068b",
-        "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5"
+        "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5",
+        "3d34129a-8c52-808a-a5e3-f9f5e1756283"
       ],
       "artistIds": [
         "2404129a-8c52-80de-8eb6-d488b844473e",
@@ -66599,19 +67001,21 @@
       "slug": "strut",
       "name": "Strut",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://strut.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "32b4129a-8c52-802f-a3ab-fc33a50db83d",
         "3084129a-8c52-80ed-a33a-cfbfcdfd6633",
         "2eb4129a-8c52-80a7-a8da-e4617954080c",
-        "34582e93-1697-4cca-ad7e-5966c5526f95"
+        "34582e93-1697-4cca-ad7e-5966c5526f95",
+        "3d34129a-8c52-8023-ac81-e482e874c257"
       ],
       "artistIds": [
         "2504129a-8c52-80d0-871d-facc70e9243f",
         "3084129a-8c52-8092-a434-ee93208741e3",
-        "2eb4129a-8c52-8012-8a93-fb743a5040e3"
+        "2eb4129a-8c52-8012-8a93-fb743a5040e3",
+        "3d34129a-8c52-8030-88e6-c1c492893403"
       ]
     },
     {
@@ -67576,6 +67980,21 @@
       ],
       "artistIds": [
         "2fa4129a-8c52-8020-902a-d8787173164c"
+      ]
+    },
+    {
+      "id": "3d34129a-8c52-8000-80ac-fa00b2e6eca2",
+      "slug": "vintage-voudou",
+      "name": "Vintage Voudou",
+      "country": "NL",
+      "bandcamp": "https://vintagevoudou.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d34129a-8c52-80d1-836d-f886e7030ecb"
+      ],
+      "artistIds": [
+        "3d34129a-8c52-80fb-8b0b-cffeb997a19f"
       ]
     },
     {

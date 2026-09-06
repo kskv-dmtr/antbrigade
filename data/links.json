@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T13:41:49Z",
+  "generatedAt": "2026-09-06T23:58:21Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -18449,6 +18449,154 @@
       "upc": "826853010825",
       "tracks": 18,
       "releaseDate": "2014-05-20"
+    },
+    "3d34129a-8c52-808a-a5e3-f9f5e1756283": {
+      "source": "https://album.link/fghjp3knfqqgz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0HaxwJR68fAlH8R0LUbtcS",
+        "pandora": "https://www.pandora.com/AL:8450108",
+        "deezer": "https://www.deezer.com/album/211986702",
+        "amazonMusic": "https://music.amazon.com/albums/B09T9C91QZ",
+        "tidal": "https://listen.tidal.com/album/175735430",
+        "napster": "https://play.napster.com/album/alb.565987552",
+        "amazonStore": "https://amazon.com/dp/B09T9C91QZ"
+      },
+      "upc": "5060571361257",
+      "tracks": 8,
+      "releaseDate": "2021-06-04"
+    },
+    "3d34129a-8c52-807e-8d26-f6ac544c1627": {
+      "source": "https://album.link/qjr9fmqfb4jdd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/33KfzSanRdMefeMLLLzBgP",
+        "pandora": "https://www.pandora.com/AL:8963137",
+        "deezer": "https://www.deezer.com/album/223003812",
+        "amazonMusic": "https://music.amazon.com/albums/B092M7YGTT",
+        "tidal": "https://listen.tidal.com/album/180748020",
+        "napster": "https://play.napster.com/album/alb.586980934",
+        "yandex": "https://music.yandex.ru/album/15939812",
+        "bandcamp": "https://lautluise.bandcamp.com/album/humans-in-a-pool-2",
+        "amazonStore": "https://amazon.com/dp/B092M7YGTT"
+      },
+      "upc": "4250101426094",
+      "tracks": 7,
+      "releaseDate": "2021-06-04"
+    },
+    "3d34129a-8c52-8033-966f-d5e482a40d7c": {
+      "source": "https://album.link/xwrtrprxrs3dr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2KWjneqCyMbvEvp7QayR2l",
+        "pandora": "https://www.pandora.com/AL:8301089",
+        "deezer": "https://www.deezer.com/album/191949542",
+        "amazonMusic": "https://music.amazon.com/albums/B08W1P49W6",
+        "tidal": "https://listen.tidal.com/album/165491316",
+        "napster": "https://play.napster.com/album/alb.537946863",
+        "yandex": "https://music.yandex.ru/album/13035644",
+        "boomplay": "https://www.boomplay.com/albums/18972790",
+        "anghami": "https://play.anghami.com/album/1016497173?refer=linktree",
+        "bandcamp": "https://altingun.bandcamp.com/album/yol",
+        "amazonStore": "https://amazon.com/dp/B08W1P49W6"
+      },
+      "upc": "4030433610374",
+      "tracks": 12,
+      "releaseDate": "2021-02-26"
+    },
+    "3d34129a-8c52-806d-8e83-f14478dfedaa": {
+      "source": "https://album.link/qgdmz8jf2mqzm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/06814vxpRbL5CPMk1CTvOk",
+        "pandora": "https://www.pandora.com/AL:4948182",
+        "deezer": "https://www.deezer.com/album/135203602",
+        "amazonMusic": "https://music.amazon.com/albums/B085LSMSZ6",
+        "tidal": "https://listen.tidal.com/album/133533188",
+        "napster": "https://play.napster.com/album/alb.451335313",
+        "yandex": "https://music.yandex.ru/album/10158734",
+        "boomplay": "https://www.boomplay.com/albums/8666683",
+        "anghami": "https://play.anghami.com/album/1011222430?refer=linktree",
+        "bandcamp": "https://khruangbin.bandcamp.com/album/mordechai",
+        "amazonStore": "https://amazon.com/dp/B085LSMSZ6"
+      },
+      "upc": "656605149363",
+      "tracks": 10,
+      "releaseDate": "2020-06-26"
+    },
+    "3d34129a-8c52-8066-841d-f2534098ee13": {
+      "source": "https://album.link/ptrk2ztgwmgsr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1VtknfjcZGa4thCJt9bcaP",
+        "pandora": "https://www.pandora.com/AL:4980813",
+        "deezer": "https://www.deezer.com/album/420131157",
+        "amazonMusic": "https://music.amazon.com/albums/B0BZ57XTVV",
+        "tidal": "https://listen.tidal.com/album/283888163",
+        "bandcamp": "https://maajo.bandcamp.com/album/kuru-kuru-2",
+        "amazonStore": "https://amazon.com/dp/B0BZ57XTVV"
+      },
+      "upc": "5060731227096",
+      "tracks": 11,
+      "releaseDate": "2020-04-10"
+    },
+    "3d34129a-8c52-8023-ac81-e482e874c257": {
+      "source": "https://album.link/jkhtr9mgdmmcr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5RpzU4WuACFhGOcN7vn1K9",
+        "pandora": "https://www.pandora.com/AL:4536252",
+        "deezer": "https://www.deezer.com/album/125812522",
+        "amazonMusic": "https://music.amazon.com/albums/B083LB2QTQ",
+        "tidal": "https://listen.tidal.com/album/184824581",
+        "napster": "https://play.napster.com/album/alb.434790677",
+        "yandex": "https://music.yandex.ru/album/9589134",
+        "boomplay": "https://www.boomplay.com/albums/9554454",
+        "bandcamp": "https://onipa.bandcamp.com/album/we-no-be-machine",
+        "amazonStore": "https://amazon.com/dp/B083LB2QTQ"
+      },
+      "upc": "4062548006889",
+      "tracks": 19,
+      "releaseDate": "2020-03-20"
+    },
+    "3d34129a-8c52-800f-bae3-fddaa48e488a": {
+      "source": "https://album.link/nmsjcxbrggsqw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7AzXtthlLZjuqonhrl0Wwa",
+        "pandora": "https://www.pandora.com/AL:1584894",
+        "deezer": "https://www.deezer.com/album/490485965",
+        "amazonMusic": "https://music.amazon.com/albums/B0CJFXY95R",
+        "tidal": "https://listen.tidal.com/album/317356439",
+        "napster": "https://play.napster.com/album/alb.326520472",
+        "yandex": "https://music.yandex.ru/album/5698504",
+        "boomplay": "https://www.boomplay.com/albums/10374968",
+        "anghami": "https://play.anghami.com/album/4986715?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0CJFXY95R"
+      },
+      "upc": "192562879429",
+      "tracks": 9,
+      "releaseDate": "2018-09-21"
+    },
+    "3d34129a-8c52-80d1-836d-f886e7030ecb": {
+      "source": "https://album.link/ch3mx5vs9df5b",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4eK9uta9LmaxMUcBFbTbS2",
+        "pandora": "https://www.pandora.com/AL:1230640",
+        "deezer": "https://www.deezer.com/album/55484232",
+        "amazonMusic": "https://music.amazon.com/albums/B0796J611F",
+        "tidal": "https://listen.tidal.com/album/83701584",
+        "bandcamp": "https://basabasa.bandcamp.com/album/homowo",
+        "amazonStore": "https://amazon.com/dp/B0796J611F"
+      },
+      "upc": "840093605016",
+      "tracks": 8,
+      "releaseDate": "2018-02-13"
+    },
+    "3d34129a-8c52-8099-8820-d416958a2ffc": {
+      "source": "https://album.link/xcddjkzhk4xr2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/688MeN08VNjM1EOdGrbeVC",
+        "pandora": "https://www.pandora.com/AL:803745",
+        "deezer": "https://www.deezer.com/album/6727746",
+        "tidal": "https://listen.tidal.com/album/5096392"
+      },
+      "upc": "828768711521",
+      "tracks": 10,
+      "releaseDate": "2006-06-23"
     }
   }
 }

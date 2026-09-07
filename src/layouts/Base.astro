@@ -411,7 +411,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
     addEventListener('pointerover', (e) => {
       const карта = e.target instanceof Element
-        ? e.target.closest('a, .more, .dig-again')
+        ? e.target.closest('a, .more, .dig-again, .view-pick__opt')
         : null;
 
       if (карта === подсвечена) return;

@@ -116,9 +116,27 @@ const блоки = [{ axis, items }];
 
     function place(root) {
       const panel = root.querySelector('.multi__panel');
-      if (wide()) { panel.style.top = ''; return; }
-      const bar = root.closest('.filters') ?? root;
-      panel.style.top = `${Math.round(bar.getBoundingClientRect().bottom + 6)}px`;
+
+      if (!wide()) {
+        delete root.dataset.flip;
+        const bar = root.closest('.filters') ?? root;
+        panel.style.top = `${Math.round(bar.getBoundingClientRect().bottom + 6)}px`;
+        return;
+      }
+
+      panel.style.top = '';
+
+      /* Панель раскрывается вправо от кнопки, и у правого края кадра она
+         уезжала за экран: замер на 1920 — отбор букв на /genres выходил за
+         край на 30 пикселей. Метка переворачивает её правым краем по кнопке;
+         сам переворот — правилом в global.css.
+
+         Сперва метку снимаем, иначе меряли бы уже перевёрнутую и она
+         осталась бы такой навсегда: с той стороны места всегда хватает. */
+      delete root.dataset.flip;
+      if (panel.getBoundingClientRect().right > document.documentElement.clientWidth) {
+        root.dataset.flip = '';
+      }
     }
 
     for (const root of blocks) {

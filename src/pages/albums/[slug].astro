@@ -186,7 +186,9 @@ const clips = [...new Map(
         <dl class="item__facts">
           {labels.length > 0 && (
             <div class="item__fact">
-              <dt>Label:</dt>
+              {/* Число подписи идёт за числом значений: у релиза чаще один
+                  лейбл, и «Labels:» над одним именем читалось опиской. */}
+              <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
               <dd>
                 {labels.map((l, i) => (
                   <>
@@ -200,17 +202,22 @@ const clips = [...new Map(
 
           {album.genres.length > 0 && (
             <div class="item__fact">
-              <dt>Genres:</dt>
+              <dt>{album.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
               <dd><GenreLinks names={album.genres} inline /></dd>
             </div>
           )}
 
           {/* Сборник ссылок — последней строкой справки, на месте прежней
               «Where to listen»: сами площадки ушли в ряд кнопок под справкой,
-              а он ведёт не слушать, а к списку, и остался строкой. */}
+              а он ведёт не слушать, а к списку, и остался строкой.
+
+              «All links» подпись звалась несколько часов 7 сентября 2026,
+              «More links» — несколько минут после: первое обещало все ссылки
+              разом, включая те, что уже стоят кнопками ниже, второе обещало
+              продолжение списка. Голое «Links» не обещает ничего. */}
           {album.url && (
             <div class="item__fact">
-              <dt>All links:</dt>
+              <dt>Links:</dt>
               <dd>
                 <a href={album.url} target="_blank" rel="noopener noreferrer">album.link</a>
               </dd>

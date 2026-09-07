@@ -60,7 +60,7 @@ let выведено = 0;
         и год на Music: можно отметить сразу несколько. Полоса из двадцати
         восьми кнопок стояла здесь до 3 сентября 2026 и занимала собой целую
         строку ради того же выбора. */}
-    <FilterCell name="Letter:">
+    <FilterCell name="Letters:">
       <MultiSelect id="letter" label="First letter" allLabel="All" manyLabel="Chosen" axis="letter"
                    items={ordered.map(([letter, items]) => ({ value: letter, label: letter, count: items.length }))} />
     </FilterCell>

@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T10:23:00Z",
+  "generatedAt": "2026-09-07T16:29:47Z",
   "counts": {
-    "albums": 1177,
-    "artists": 1037,
+    "albums": 1178,
+    "artists": 1038,
     "labels": 652,
-    "videos": 88
+    "videos": 89
   },
   "albums": [
     {
@@ -6494,7 +6494,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Adbd9e172-36b4-443f-a868-b770f09071c2%3Aa2779410666_10.jpg?table=block&id=3824129a-8c52-802d-86ba-fbe30a38629a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Nu-Disco",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "types": [
         "Album"
@@ -6928,7 +6928,7 @@
       "url": "https://album.link/bvvg2wzbdfpzj",
       "cover": "https://antbrigade.notion.site/image/attachment%3A0b6cdb92-9384-4c86-8d7e-6ad8c27f0918%3A1203370.jpg?table=block&id=2c74129a-8c52-80c0-b1ab-e03509aa485d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Italo Disco",
+        "Italo-Disco",
         "Boogie",
         "Funk"
       ],
@@ -13558,7 +13558,7 @@
         "Nu-Disco",
         "Boogie",
         "Synthpop",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "types": [
         "Album"
@@ -22367,7 +22367,7 @@
       "genres": [
         "Funk",
         "Disco",
-        "Italo Disco",
+        "Italo-Disco",
         "Balearic Beat"
       ],
       "types": [
@@ -32698,7 +32698,7 @@
       "genres": [
         "Nu-Disco",
         "Boogie",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "types": [
         "Album"
@@ -34195,7 +34195,7 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A650e28dc-165a-4557-8501-702ec889da1b%3Aa0557530438_10.jpg?table=block&id=3b34129a-8c52-806c-990c-fb09b3b99b2e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Nu-Disco",
-        "Italo Disco",
+        "Italo-Disco",
         "World Music"
       ],
       "types": [
@@ -35453,7 +35453,7 @@
       "genres": [
         "Nu-Disco",
         "Balearic Beat",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "types": [
         "Album"
@@ -35849,6 +35849,39 @@
       ],
       "labels": [
         "Strut"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-804a-a4f3-e76fcbde8433",
+      "slug": "chromatics-famous-monsters",
+      "artist": "Chromatics",
+      "album": "Famous Monsters",
+      "url": "https://album.link/7nczppvn07jq4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6a6b6fdb-f71d-43a2-967d-fd2f81e9514d%3Aab67616d0000b2738d8ddd488d9f65869545c906.jpg?table=block&id=3d44129a-8c52-804a-a4f3-e76fcbde8433&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Nu-Disco",
+        "Italo-Disco",
+        "Deep House"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2020-03-06",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-808d-a4e5-dd33e35e1474"
+      ],
+      "artists": [
+        "Chromatics"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80fc-aa2c-ce2726dfd1e5"
+      ],
+      "labels": [
+        "Italians Do It Better"
       ]
     },
     {
@@ -40256,6 +40289,29 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-808d-a4e5-dd33e35e1474",
+      "slug": "chromatics",
+      "name": "Chromatics",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-804a-a4f3-e76fcbde8433"
+      ],
+      "genres": [
+        "Synthpop",
+        "Nu-Disco",
+        "Italo-Disco",
+        "Deep House"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80fc-aa2c-ce2726dfd1e5"
+      ],
+      "videoIds": [
+        "3d44129a-8c52-8054-9fab-ce03623aa5b2"
+      ]
+    },
+    {
       "id": "24f4129a-8c52-8091-99c1-f8e3adc649b5",
       "slug": "chromeo",
       "name": "Chromeo",
@@ -42652,7 +42708,7 @@
       "genres": [
         "Funk",
         "Disco",
-        "Italo Disco",
+        "Italo-Disco",
         "Balearic Beat"
       ],
       "labelIds": [
@@ -43911,7 +43967,7 @@
         "Nu-Disco",
         "Boogie",
         "Synthpop",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "labelIds": [
         "2494129a-8c52-800f-a012-e43d8d5242f6"
@@ -45849,7 +45905,7 @@
       ],
       "genres": [
         "Nu-Disco",
-        "Italo Disco",
+        "Italo-Disco",
         "World Music"
       ],
       "labelIds": [
@@ -48232,7 +48288,7 @@
       "genres": [
         "Nu-Disco",
         "Boogie",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "labelIds": [
         "2494129a-8c52-800b-92dc-e0c48b04def1"
@@ -50309,7 +50365,7 @@
         "Disco",
         "Nu-Disco",
         "Balearic Beat",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "labelIds": [
         "24a4129a-8c52-80df-8da6-d54309d919db",
@@ -54766,7 +54822,7 @@
         "2c74129a-8c52-80c0-b1ab-e03509aa485d"
       ],
       "genres": [
-        "Italo Disco",
+        "Italo-Disco",
         "Boogie",
         "Funk"
       ],
@@ -56953,7 +57009,7 @@
       ],
       "genres": [
         "Nu-Disco",
-        "Italo Disco"
+        "Italo-Disco"
       ],
       "labelIds": [
         "24a4129a-8c52-80df-8da6-d54309d919db"
@@ -62293,12 +62349,14 @@
       "country": "US",
       "bandcamp": null,
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@ItaliansDoItBetterMusic/",
       "albumIds": [
-        "35e2d63b-bddb-43bf-9864-02a675a7047a"
+        "35e2d63b-bddb-43bf-9864-02a675a7047a",
+        "3d44129a-8c52-804a-a4f3-e76fcbde8433"
       ],
       "artistIds": [
-        "24a4129a-8c52-8046-8240-c5902fe9e7e8"
+        "24a4129a-8c52-8046-8240-c5902fe9e7e8",
+        "3d44129a-8c52-808d-a4e5-dd33e35e1474"
       ]
     },
     {
@@ -68670,6 +68728,19 @@
         "3c54129a-8c52-8092-a0f7-e31cfc8e52e5"
       ],
       "slug": "choir-boy-i-ll-always-let-you-down"
+    },
+    {
+      "id": "3d44129a-8c52-8054-9fab-ce03623aa5b2",
+      "title": "Chromatics | Blue Girl",
+      "url": "https://youtu.be/jiJpfeeCEcg?si=K70MpFClrIidBbVX",
+      "kind": "Official Video",
+      "released": "2018-06-12",
+      "year": 2018,
+      "origYear": null,
+      "artistIds": [
+        "3d44129a-8c52-808d-a4e5-dd33e35e1474"
+      ],
+      "slug": "chromatics-blue-girl"
     },
     {
       "id": "1064129a-8c52-801a-8799-f6af489f2c14",

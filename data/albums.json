@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-06T23:57:31Z",
+  "generatedAt": "2026-09-07T04:47:06Z",
   "counts": {
-    "albums": 1176,
+    "albums": 1177,
     "artists": 1037,
     "labels": 652,
     "videos": 88
@@ -15592,6 +15592,38 @@
       ],
       "labels": [
         "Mute"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-8072-a478-e30d19a775f0",
+      "slug": "various-artists-horse-meat-disco-presents-disco-boogie-from",
+      "artist": "Various Artists",
+      "album": "Horse Meat Disco Presents Disco & Boogie from Brazil Vol. 1",
+      "url": "https://album.link/n25zxdd9vschg",
+      "cover": null,
+      "genres": [
+        "MPB",
+        "Disco",
+        "Boogie"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2025-03-21",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "2494129a-8c52-800b-92dc-e0c48b04def1"
+      ],
+      "labels": [
+        "Mr Bongo"
       ]
     },
     {
@@ -56365,6 +56397,7 @@
       "albumIds": [
         "3674129a-8c52-8082-90ca-cc85795b72e4",
         "24e4129a-8c52-80c4-864d-ef35463b5b9f",
+        "3d44129a-8c52-8072-a478-e30d19a775f0",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
@@ -56379,6 +56412,7 @@
         "Synthpop",
         "Minimal Synth",
         "New Wave",
+        "MPB",
         "Disco",
         "Funk",
         "Bossa Nova",
@@ -56389,6 +56423,7 @@
       "labelIds": [
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
         "24e4129a-8c52-807a-920f-fb0794ae2606",
+        "2494129a-8c52-800b-92dc-e0c48b04def1",
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
         "2524129a-8c52-8064-ac08-c6bb33bff5df",
@@ -63759,6 +63794,7 @@
       "albumIds": [
         "3b14129a-8c52-804e-a43d-cd077303ef86",
         "1f74129a-8c52-80b2-894b-c6bf3ee75702",
+        "3d44129a-8c52-8072-a478-e30d19a775f0",
         "8c9b1ce9-dd61-4ec5-94b8-115d77e5f360",
         "3b24129a-8c52-806f-a7df-cb62930091ce",
         "5e04c907-733a-43d6-a0fb-8e2b5944bc16"
@@ -63766,6 +63802,7 @@
       "artistIds": [
         "3b14129a-8c52-8080-8d31-f9dc6e5cc00c",
         "2494129a-8c52-808a-b73c-e4d4aed979e2",
+        "24e4129a-8c52-8076-995a-f0732e8c76e2",
         "2504129a-8c52-80ed-b5ad-fe1f3b9d0fb7",
         "3b24129a-8c52-80ad-aef6-fc4b135332f3",
         "24a4129a-8c52-8054-baf2-c62b51135036"

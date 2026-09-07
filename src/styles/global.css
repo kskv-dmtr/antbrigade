@@ -1446,15 +1446,41 @@ body:has(.head--dot) .foot { margin-top: 0; }
    ряд обложек, и своей верхней границы у него больше нет. */
 .head--dot:has(+ .tiles) { border-bottom: 1px solid var(--line); }
 
+/* Кнопка в полосе раздела — той же формы, что кнопки площадок на странице
+   релиза: рамка в пиксель линией решётки, заливка случайным цветом по
+   наведению. Набор у неё и так был тот же — моноширинный прописными в 13.
+
+   Высоту кнопке задаёт полоса, а не своё число: полоса остаётся ровно в 64,
+   как все полосы разделов, и кнопка занимает её за вычетом полей — 32 на
+   расчётной ширине. В 64, как площадки, кнопка простояла несколько минут
+   7 сентября 2026 и растила полосу до 96.
+
+   Поля разные по осям: с боков общее поле кадра, сверху и снизу вдвое
+   меньше. От поля кадра по всем четырём сторонам кнопке оставалось 22 из 48
+   на 1440 — набор в 13 внутри рамки читался зажатым. Теперь 36 из 48 и 48 из
+   64 — те же три четверти полосы, что у площадок от их девяноста шести.
+
+   Перемычки между половинами полосы больше нет: её чертила левая граница
+   этой самой кнопки, а рамка вокруг неё сказала бы то же самое дважды.
+
+   Ячейкой полосы во всю её четверть, с подчёркнутой подписью и вывороткой
+   по наведению, кнопки стояли до вечера 7 сентября 2026. */
 .head--dot .view-all,
 [data-js] .head--dot .dig-again {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem var(--pad);
   padding: 0;
-  border: 0;
-  border-left: 1px solid var(--line);
+  color: var(--fg);
+  border: 1px solid var(--line);
 }
+
+/* Подпись внутри рамки не подчёркивается: линия под словом внутри рамки
+   читалась бы второй рамкой. У двойников под сеткой — тех, что на
+   телефоне, — подчёркивание остаётся: там кнопка во всю ширину и своей
+   рамки не имеет. */
+.head--dot .btn-label { border-bottom: 0; }
 /* Метка раздела — кружок Phosphor заливкой. Знаком, а не border-radius:
    рядом в шапке стоит половинка того же кружка на кнопке темы, и обе метки
    должны приходить из одного набора — поменяется начертание, поменяются обе.
@@ -1684,22 +1710,44 @@ main > .head--page:first-child { border-top: 0; }
 
    Выворачивается сама подпись, а не ячейка полосы: ячейка тут во всю её
    четверть, и залитая целиком читалась бы кнопкой, а не ссылкой. */
+/* Выворотка подписи осталась двойникам под сеткой: они без рамки, и
+   заливать у них нечего, кроме самого слова. Кнопкам в полосе с 7 сентября
+   2026 достаётся цвет из общей жеребьёвки — правило ниже. */
 @media (hover: hover) {
-  .view-all:hover .btn-label,
-  .dig-again:hover .btn-label {
+  .view-all--below:hover .btn-label,
+  .dig-again--below:hover .btn-label {
     background: var(--ink);
     color: var(--ink-fg);
     border-bottom-color: transparent;
   }
 }
 
-.view-all:focus-visible .btn-label,
-.view-all:active .btn-label,
-.dig-again:focus-visible .btn-label,
-.dig-again:active .btn-label {
+.view-all--below:focus-visible .btn-label,
+.view-all--below:active .btn-label,
+.dig-again--below:focus-visible .btn-label,
+.dig-again--below:active .btn-label {
   background: var(--ink);
   color: var(--ink-fg);
   border-bottom-color: transparent;
+}
+
+/* Кнопка в полосе заливается целиком — цветом по наведению, чёрным по
+   нажатию и с клавиатуры: цвет выпадает только под указателем, а отклик на
+   нажатие нужен и без него. */
+@media (hover: hover) {
+  .head--dot .view-all[data-hot]:hover,
+  .head--dot .dig-again[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+  }
+}
+
+.head--dot .view-all:focus-visible,
+.head--dot .view-all:active,
+.head--dot .dig-again:focus-visible,
+.head--dot .dig-again:active {
+  background: var(--ink);
+  color: var(--ink-fg);
 }
 
 /* Правила `.page-head` и `.page-head h1` удалены 7 сентября 2026 вместе с

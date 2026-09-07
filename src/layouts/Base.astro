@@ -400,11 +400,30 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        запасными — они работают до выполнения скрипта и остаются
        единственными, если он отключён.
 
+       Ставим значение, только если запасное разошлось с настоящим больше чем
+       на пиксель. Иначе скрипт двигал липкие полосы на доли пикселя сразу
+       после первой отрисовки: замер на 1440 — запасные 62 против настоящих
+       61,6, и обе полосы, заголовка и отбора, вздрагивали вместе со всеми
+       подписями в них. Щель в полпикселя не видна, а движение видно.
+
+       Сравнение работает только потому, что --head-h объявлена через @property
+       в global.css: незаявленную переменную getComputedStyle отдал бы строкой
+       «max(62px, 4.5rem)», parseFloat выдал бы NaN, и порог не сработал бы ни
+       разу.
+
        Пересчитываем при смене размера окна и после загрузки шрифтов: до неё
        строку меряет запасной шрифт, и высота выходит другая. */
     if (masthead) {
-      const setHeadHeight = () => document.documentElement.style.setProperty(
-        '--head-h', masthead.getBoundingClientRect().height + 'px');
+      const setHeadHeight = () => {
+        const измерено = masthead.getBoundingClientRect().height;
+        const сейчас = parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue('--head-h')
+        );
+
+        if (!(Math.abs(измерено - сейчас) <= 1)) {
+          document.documentElement.style.setProperty('--head-h', измерено + 'px');
+        }
+      };
 
       setHeadHeight();
       addEventListener('resize', setHeadHeight, { passive: true });

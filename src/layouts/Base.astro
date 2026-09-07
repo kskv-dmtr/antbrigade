@@ -315,28 +315,31 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       ряду, тот становился шире кадра на 12 и страница ехала вбок. */}
   <footer class="foot">
     <div class="foot__in">
-      {/* Слева — четыре строки о самом архиве, слово в слово те же, что
-          стояли в подвале раньше. Подпись «made for fun by» пришла сюда из
-          правой колонки: там теперь кнопки каналов, и деться ей больше
-          некуда. */}
+      {/* Слева, от края кадра, — что это за сайт и кто его собрал. */}
       <div class="foot__note mono mono--sm">
         a personal music archive<br />
-        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        new releases · old favorites · strange finds<br />
-        © {year} · 1723 · 1312
+        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a>
       </div>
 
-      {/* Справа — каналы, кнопками того же вида, что площадки на странице
-          релиза: рамка в пиксель, моноширинный прописными, заливка
-          случайным цветом по наведению. Строками со ссылками они стояли до
-          того же вечера. */}
-      <div class="foot__links">
-        <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">
-          @antbrigade
-        </a>
-        <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">
-          @antbrigade_rar
-        </a>
+      {/* Правая половина подвала: каналы от центральной линии, справка о
+          наполнении — у правого края. Обёртка нужна, чтобы у обеих был общий
+          отсчёт: половина начинается ровно на средней вертикали решётки, и
+          каналы встают на ту же линию, что текст в ячейке справки на странице
+          релиза. */}
+      <div class="foot__side">
+        <div class="foot__links">
+          <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">
+            @antbrigade
+          </a>
+          <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">
+            @antbrigade_rar
+          </a>
+        </div>
+
+        <div class="foot__note foot__note--end mono mono--sm">
+          new releases · old favorites · strange finds<br />
+          © {year} · 1723 · 1312
+        </div>
       </div>
     </div>
   </footer>

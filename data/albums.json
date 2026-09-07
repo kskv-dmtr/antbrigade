@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T20:36:12Z",
+  "generatedAt": "2026-09-07T23:31:47Z",
   "counts": {
-    "albums": 1181,
-    "artists": 1041,
-    "labels": 653,
+    "albums": 1188,
+    "artists": 1044,
+    "labels": 655,
     "videos": 91
   },
   "albums": [
@@ -34064,6 +34064,38 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-80e7-9142-e97167674f42",
+      "slug": "vanishing-twin-ookii-gekkou",
+      "artist": "Vanishing Twin",
+      "album": "Ookii Gekkou",
+      "url": "https://album.link/p3mnrrxzdxnkt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1ecaf5b3-11d4-40a4-a631-cc677cd14dda%3Aa0084253713_10.jpg?table=block&id=3d44129a-8c52-80e7-9142-e97167674f42&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Pop",
+        "Indietronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-15",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-80c6-9770-d5e6a96e6bc3"
+      ],
+      "artists": [
+        "Vanishing Twin"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80fe-9de3-d9a026a4b0b8"
+      ],
+      "labels": [
+        "Fire Records"
+      ]
+    },
+    {
       "id": "04c888c4-f11f-401c-aa22-82e3e5449d81",
       "slug": "telemakus-the-new-heritage",
       "artist": "Telemakus",
@@ -34091,6 +34123,36 @@
       ],
       "labels": [
         "Radio Juicy"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-8021-9dd9-c3a34aa53852",
+      "slug": "dina-ogon-dina-ogon",
+      "artist": "Dina Ögon",
+      "album": "Dina Ögon",
+      "url": "https://album.link/7kktp5gxtxxbt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A08beb7c3-3371-490f-8834-b1eabc14220a%3Aa3251515020_10.jpg?table=block&id=3d44129a-8c52-8021-9dd9-c3a34aa53852&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-08",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-80d1-bb55-dbd3497a53e4"
+      ],
+      "artists": [
+        "Dina Ögon"
+      ],
+      "labelIds": [
+        "3d44129a-8c52-80ac-a537-dcf9c517fe99"
+      ],
+      "labels": [
+        "Sing a Song Fighter"
       ]
     },
     {
@@ -34469,6 +34531,38 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-8038-ae59-d5d055eddfd0",
+      "slug": "mega-bog-life-and-another",
+      "artist": "Mega Bog",
+      "album": "Life, and Another",
+      "url": "https://album.link/35fr7fj4583vf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aadd34cd7-ed57-4953-b2ed-0604f55f1332%3Aa4283287262_10.jpg?table=block&id=3d44129a-8c52-8038-ae59-d5d055eddfd0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Art Pop",
+        "Sophisti-Pop",
+        "Neo-Psychedelia"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-23",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-80cb-9599-dd133bba9d17"
+      ],
+      "artists": [
+        "Mega Bog"
+      ],
+      "labelIds": [
+        "3d44129a-8c52-8032-af77-ed69eee3ee6b"
+      ],
+      "labels": [
+        "Paradise of Bachelors"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-8077-989c-fc65f76bbc11",
       "slug": "eleven-76-occhio-occhio",
       "artist": "Eleven 76",
@@ -34498,6 +34592,38 @@
       ],
       "labels": [
         "Golden Rules"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-80c7-9687-da7f32d44da0",
+      "slug": "orchestre-tout-puissant-marcel-duchamp-we-re-ok-but-we-re-lo",
+      "artist": "Orchestre Tout Puissant Marcel Duchamp",
+      "album": "We're OK. But We're Lost Anyway.",
+      "url": "https://album.link/rdwd2srt6bxgh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abfc82bad-df65-44ea-8e60-8222357c5490%3Aa3057907115_10.jpg?table=block&id=3d44129a-8c52-80c7-9687-da7f32d44da0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Art Rock",
+        "Jazz-Rock",
+        "Krautrock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-02",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-8032-bc8e-fd1c9173c69a"
+      ],
+      "artists": [
+        "Orchestre Tout Puissant Marcel Duchamp"
+      ],
+      "labelIds": [
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+      ],
+      "labels": [
+        "Les Disques Bongo Joe"
       ]
     },
     {
@@ -34717,6 +34843,36 @@
       ],
       "labels": [
         "Dekmantel Records"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-809d-bb9f-cbad5ee12ddc",
+      "slug": "otooto-this-love-is-for-you",
+      "artist": "OTOOTO",
+      "album": "This Love is for You",
+      "url": "https://album.link/dw2tfptk5qsfc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0d5a5962-11c4-4fe1-881e-4a0353507c0b%3Aa4158429248_10.jpg?table=block&id=3d44129a-8c52-809d-bb9f-cbad5ee12ddc&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-21",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2484129a-8c52-80cc-80b4-e71630bcf136"
+      ],
+      "artists": [
+        "OTOOTO"
+      ],
+      "labelIds": [
+        "2484129a-8c52-806c-b6d5-c85c001d2265"
+      ],
+      "labels": [
+        "April Records"
       ]
     },
     {
@@ -36608,6 +36764,37 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-80c9-b944-fe31e731236d",
+      "slug": "dorian-concept-the-nature-of-imitation",
+      "artist": "Dorian Concept",
+      "album": "The Nature of Imitation",
+      "url": "https://album.link/f0chs9smtgsfk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac73c0e03-149f-49f4-9d84-eee93529d824%3Aa2945277908_10.jpg?table=block&id=3d44129a-8c52-80c9-b944-fe31e731236d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Glitch Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-08-03",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-8089-8f87-fcb443e386d3"
+      ],
+      "artists": [
+        "Dorian Concept"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80b1-9280-e0a822d8e98b"
+      ],
+      "labels": [
+        "Brainfeeder"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-80c3-bf4c-e8acc85552f1",
       "slug": "ben-hauke-only-old",
       "artist": "Ben Hauke",
@@ -36827,6 +37014,39 @@
       ],
       "labels": [
         "Between The Days Records"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-80b1-b3ca-fcde4b35d52a",
+      "slug": "yussef-kamaal-black-focus",
+      "artist": "Yussef Kamaal",
+      "album": "Black Focus",
+      "url": "https://album.link/xps6mxjtsjgcd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af9beb78a-f9ea-414d-9f42-822bb17bdac5%3Aa2077159990_10.jpg?table=block&id=3d44129a-8c52-80b1-b3ca-fcde4b35d52a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Jazz-Funk",
+        "Broken Beat"
+      ],
+      "types": [
+        "Album",
+        "Compilation"
+      ],
+      "released": "2016-11-04",
+      "year": 2016,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-807b-9a9a-ec9877a6985c"
+      ],
+      "artists": [
+        "Yussef Kamaal"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "labels": [
+        "Brownswood Recordings"
       ]
     },
     {
@@ -41849,14 +42069,16 @@
       "youtube": null,
       "albumIds": [
         "4b2ce229-c620-4bf6-ad56-10933a9d457e",
-        "2524129a-8c52-802b-9ae3-ee0488b1b553"
+        "2524129a-8c52-802b-9ae3-ee0488b1b553",
+        "3d44129a-8c52-8021-9dd9-c3a34aa53852"
       ],
       "genres": [
         "Indie Pop",
         "Psychedelic Pop"
       ],
       "labelIds": [
-        "24a4129a-8c52-8018-9de3-f5dcf290eee6"
+        "24a4129a-8c52-8018-9de3-f5dcf290eee6",
+        "3d44129a-8c52-80ac-a537-dcf9c517fe99"
       ],
       "videoIds": []
     },
@@ -42098,15 +42320,19 @@
       "bandcamp": "https://dorianconcept.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "e7d1ce8c-7e04-4e85-b636-e8afe12ea28b"
+        "e7d1ce8c-7e04-4e85-b636-e8afe12ea28b",
+        "3d44129a-8c52-80c9-b944-fe31e731236d"
       ],
       "genres": [
         "Experimental",
         "IDM",
-        "Electronica"
+        "Electronica",
+        "Nu Jazz",
+        "Glitch Hop"
       ],
       "labelIds": [
-        "24a4129a-8c52-809f-98a6-cd2ccbfef3e9"
+        "24a4129a-8c52-809f-98a6-cd2ccbfef3e9",
+        "2504129a-8c52-80b1-9280-e0a822d8e98b"
       ],
       "videoIds": []
     },
@@ -48630,6 +48856,26 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-80cb-9599-dd133bba9d17",
+      "slug": "mega-bog",
+      "name": "Mega Bog",
+      "country": "US",
+      "bandcamp": "https://megabog.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-8038-ae59-d5d055eddfd0"
+      ],
+      "genres": [
+        "Art Pop",
+        "Sophisti-Pop",
+        "Neo-Psychedelia"
+      ],
+      "labelIds": [
+        "3d44129a-8c52-8032-af77-ed69eee3ee6b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-802f-8818-cfdec398dd98",
       "slug": "mega-cat",
       "name": "mega cat",
@@ -50083,16 +50329,18 @@
       "slug": "orchestre-tout-puissant-marcel-duchamp",
       "name": "Orchestre Tout Puissant Marcel Duchamp",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://otpmd.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "8efa65f4-09df-4006-8089-2869aee41410"
+        "8efa65f4-09df-4006-8089-2869aee41410",
+        "3d44129a-8c52-80c7-9687-da7f32d44da0"
       ],
       "genres": [
         "Krautrock",
         "Post-Punk",
         "Art Rock",
-        "Folk"
+        "Folk",
+        "Jazz-Rock"
       ],
       "labelIds": [
         "2484129a-8c52-802a-8143-cdf34ee2a02a"
@@ -50212,7 +50460,8 @@
       "youtube": null,
       "albumIds": [
         "d4cc4a98-ef67-4960-b4d8-9caea62ccbfc",
-        "fcb661a9-c7d5-4168-ab2e-960993c3bf4a"
+        "fcb661a9-c7d5-4168-ab2e-960993c3bf4a",
+        "3d44129a-8c52-809d-bb9f-cbad5ee12ddc"
       ],
       "genres": [
         "Jazz",
@@ -56580,6 +56829,26 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-80c6-9770-d5e6a96e6bc3",
+      "slug": "vanishing-twin",
+      "name": "Vanishing Twin",
+      "country": "GB",
+      "bandcamp": "https://vanishingtwinmusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-80e7-9142-e97167674f42"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Pop",
+        "Indietronica"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80fe-9de3-d9a026a4b0b8"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24e4129a-8c52-8076-995a-f0732e8c76e2",
       "slug": "various-artists",
       "name": "Various Artists",
@@ -57616,6 +57885,26 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-807b-9a9a-ec9877a6985c",
+      "slug": "yussef-kamaal",
+      "name": "Yussef Kamaal",
+      "country": "GB",
+      "bandcamp": "https://yussefkamaal.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-80b1-b3ca-fcde4b35d52a"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Jazz-Funk",
+        "Broken Beat"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2414129a-8c52-805e-b11f-d3d452c6e3a2",
       "slug": "yuuf",
       "name": "Yuuf",
@@ -58330,7 +58619,8 @@
       "albumIds": [
         "d4cc4a98-ef67-4960-b4d8-9caea62ccbfc",
         "2524129a-8c52-80ab-a7e5-fbbf9ba1bc75",
-        "fcb661a9-c7d5-4168-ab2e-960993c3bf4a"
+        "fcb661a9-c7d5-4168-ab2e-960993c3bf4a",
+        "3d44129a-8c52-809d-bb9f-cbad5ee12ddc"
       ],
       "artistIds": [
         "2484129a-8c52-80cc-80b4-e71630bcf136",
@@ -59097,7 +59387,7 @@
       "slug": "brainfeeder",
       "name": "Brainfeeder",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brainfeeder.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59105,14 +59395,16 @@
         "3214129a-8c52-8076-b6f1-e870ac9634d4",
         "10e4129a-8c52-80ab-9fdf-fbf5f32a5ec2",
         "9bff9a88-d667-49c8-a530-e0b6126ac65c",
-        "0e0887f0-ed77-4021-93cb-b28035e0c8b5"
+        "0e0887f0-ed77-4021-93cb-b28035e0c8b5",
+        "3d44129a-8c52-80c9-b944-fe31e731236d"
       ],
       "artistIds": [
         "2754129a-8c52-8003-9d6c-dbf229cd455f",
         "3214129a-8c52-808d-b4d6-c5754cff39c9",
         "2504129a-8c52-801e-b505-d6f1b0c606cb",
         "2504129a-8c52-8078-9813-d79e9a8594ff",
-        "2524129a-8c52-80c8-98bc-ec096ef876fd"
+        "2524129a-8c52-80c8-98bc-ec096ef876fd",
+        "24a4129a-8c52-8089-8f87-fcb443e386d3"
       ]
     },
     {
@@ -59173,13 +59465,15 @@
         "2b94129a-8c52-8076-a67e-ffa417a63a52",
         "22d4129a-8c52-805e-8781-c39a9f58b4ae",
         "a2f2559a-ecbb-4053-9d35-0eb77b4836a8",
-        "3d24129a-8c52-8082-bc26-c928adf20ab2"
+        "3d24129a-8c52-8082-bc26-c928adf20ab2",
+        "3d44129a-8c52-80b1-b3ca-fcde4b35d52a"
       ],
       "artistIds": [
         "2b94129a-8c52-80b7-8ac8-e58e2494e9f4",
         "2504129a-8c52-80b0-bf90-d7cc616534dc",
         "2514129a-8c52-80d3-825b-f1ae9f5bbc1b",
-        "3d24129a-8c52-8009-a8c2-f0ecfaa39510"
+        "3d24129a-8c52-8009-a8c2-f0ecfaa39510",
+        "3d44129a-8c52-807b-9a9a-ec9877a6985c"
       ]
     },
     {
@@ -61018,18 +61312,20 @@
       "slug": "fire-records",
       "name": "Fire Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://firerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "3584129a-8c52-8046-993a-d61f1c5328c9",
         "2f84129a-8c52-8021-9da4-e86203bf245b",
-        "1c04129a-8c52-8077-bc27-e99f5b0e295b"
+        "1c04129a-8c52-8077-bc27-e99f5b0e295b",
+        "3d44129a-8c52-80e7-9142-e97167674f42"
       ],
       "artistIds": [
         "3584129a-8c52-80bb-bc5e-ef1acd2659a1",
         "2f84129a-8c52-808e-8aea-f2de50524915",
-        "24a4129a-8c52-804a-97d6-d79bd1e48241"
+        "24a4129a-8c52-804a-97d6-d79bd1e48241",
+        "3d44129a-8c52-80c6-9770-d5e6a96e6bc3"
       ]
     },
     {
@@ -63198,6 +63494,7 @@
         "b23aa992-2aac-4165-beb5-080416c13dce",
         "8efa65f4-09df-4006-8089-2869aee41410",
         "1164129a-8c52-8088-b6e3-f4cb42cdcafd",
+        "3d44129a-8c52-80c7-9687-da7f32d44da0",
         "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
       ],
       "artistIds": [
@@ -65007,6 +65304,21 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-8032-af77-ed69eee3ee6b",
+      "slug": "paradise-of-bachelors",
+      "name": "Paradise of Bachelors",
+      "country": "US",
+      "bandcamp": "https://paradiseofbachelors.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-8038-ae59-d5d055eddfd0"
+      ],
+      "artistIds": [
+        "3d44129a-8c52-80cb-9599-dd133bba9d17"
+      ]
+    },
+    {
       "id": "2494129a-8c52-8044-b7c3-ea463332e3a6",
       "slug": "parapente",
       "name": "Parapente",
@@ -66740,6 +67052,21 @@
       ],
       "artistIds": [
         "2444129a-8c52-8025-b06a-dcf1670c3eba"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-80ac-a537-dcf9c517fe99",
+      "slug": "sing-a-song-fighter",
+      "name": "Sing a Song Fighter",
+      "country": "SE",
+      "bandcamp": "https://singasongfighter.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-8021-9dd9-c3a34aa53852"
+      ],
+      "artistIds": [
+        "24a4129a-8c52-80d1-bb55-dbd3497a53e4"
       ]
     },
     {

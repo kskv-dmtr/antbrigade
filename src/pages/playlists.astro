@@ -30,7 +30,15 @@ const первая = playlists[0]?.albums.find((a) => a.cover);
   image={coverSrc(первая, 800)}
   activeSection="playlists"
 >
-  {playlists.map((подборка, i) => (
+  {/* Имя страницы — первой строкой и в тот же кегль, что имя исполнителя,
+      лейбла и жанра: страница подборок им ровня, а до 7 сентября 2026
+      заголовком ей служило имя первой подборки в полосе — «Favorites»,
+      набранное в 32. Читалось так, будто открыли саму подборку. */}
+  <div class="lead">
+    <h1 class="item__title">Playlists</h1>
+  </div>
+
+  {playlists.map((подборка) => (
     <section class="section">
       {/* Полоса та же, что у разделов витрины: кружок с именем слева,
           переход в последнем столбце. Счётчик при имени, у самой черты, —
@@ -38,10 +46,13 @@ const первая = playlists[0]?.albums.find((a) => a.cover);
           У кнопки числа нет: на витрине его тоже нет. */}
       <div class="head head--sticky head--bare head--dot">
         <div class="head__lead">
-          {i === 0
-            ? <h1 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h1>
-            : <h2 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h2>}
-          <p class="counter">[{подборка.count}]</p>
+          {/* Все подборки — h2: заголовок страницы теперь свой, выше.
+
+              Счётчика при имени нет с 7 сентября 2026: он считал всю
+              подборку, а под полосой показаны первые двенадцать, и число
+              рядом с ними обещало ряды, которых на этой странице не
+              будет. Полный счёт стоит на самой странице подборки. */}
+          <h2 class="display display--md"><Icon name="circle" class="mark" />{подборка.name}</h2>
         </div>
         <a class="view-all" href={`/playlists/${подборка.slug}`}><span class="btn-label">View all</span></a>
       </div>

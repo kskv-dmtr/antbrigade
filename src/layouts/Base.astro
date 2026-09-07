@@ -311,16 +311,28 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       одним взглядом, а не разбираться. */}
   <footer class="foot">
     <div class="foot__in shell">
+      {/* Слева — четыре строки о самом архиве. «old favorites · strange
+          finds» при первой строке, «made for fun by Dmitriy Kuskov» со
+          ссылкой на автора и числа «1723 · 1312» при знаке копирайта
+          стояли здесь до вечера 7 сентября 2026. */}
       <div class="foot__note mono mono--sm">
         a personal music archive<br />
-        new releases · old favorites · strange finds<br />
-        © {year} · 1723 · 1312
+        made for fun<br />
+        new releases<br />
+        © {year}
       </div>
 
-      <div class="foot__note foot__note--end mono mono--sm">
-        made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">tg: @antbrigade</a><br />
-        <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">tg: @antbrigade_rar</a>
+      {/* Справа — каналы, кнопками того же вида, что площадки на странице
+          релиза: рамка в пиксель, моноширинный прописными, заливка
+          случайным цветом по наведению. Строками со ссылками они стояли до
+          того же вечера. */}
+      <div class="foot__links">
+        <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">
+          @antbrigade
+        </a>
+        <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">
+          @antbrigade_rar
+        </a>
       </div>
     </div>
   </footer>
@@ -395,7 +407,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
     addEventListener('pointerover', (e) => {
       const карта = e.target instanceof Element
-        ? e.target.closest('.row, .tile__link, .listen__btn, .view-all, .dig-again, .more')
+        ? e.target.closest('.row, .tile__link, .listen__btn, .foot__btn, .view-all, .dig-again, .more')
         : null;
 
       if (карта === подсвечена) return;

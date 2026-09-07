@@ -3535,17 +3535,34 @@ html:not([data-js]) .more { display: none; }
    обе колонки набраны той же служебной строкой, что и прочие подписи.    */
 
 .foot { border-top: 1px solid var(--line); margin-top: 3.75rem; }
-/* По первой строке, а не по нижнему краю: baseline ставит «made for fun by»
-   ровно на ту же строку, что и название слева. Колонки разной высоты, и по
-   нижнему краю они разъехались бы. */
+/* Колонки тянутся по высоте: справа теперь кнопки, и они занимают всю
+   высоту подвала за вычетом его полей — 16 сверху и 16 снизу. Высоту самого
+   подвала задаёт левая колонка: четыре строки моноширинным на межстрочном
+   1,7 плюс те же поля.
+
+   По первой строке (baseline) колонки равнялись до вечера 7 сентября 2026,
+   пока справа стояли такие же строки текста. */
 .foot__in {
   display: flex;
-  align-items: baseline;
+  align-items: stretch;
   justify-content: space-between;
   gap: 1rem 2rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.5rem;
+  padding-top: max(16px, 1rem);
+  padding-bottom: max(16px, 1rem);
 }
+
+/* Просвет между кнопками — те же шестнадцать, что вокруг них. */
+.foot__links {
+  display: flex;
+  align-items: stretch;
+  gap: max(16px, 1rem);
+}
+
+/* Ширина названа минимумом: подписи разной длины, и без него кнопки выходят
+   111 и 147 — рядом это читается не парой, а огрызком и кнопкой. Селектор с
+   двумя классами нарочно: общее правило кнопок лежит ниже по файлу и своим
+   min-width: 0 перебило бы одиночный .foot__btn. */
+.foot__links .foot__btn { min-width: max(180px, 11.25rem); }
 
 /* Правая колонка выключена по правому краю: иначе её левая граница висит
    в случайном месте — ширина у строк разная, и общей вертикали не
@@ -3586,7 +3603,7 @@ html:not([data-js]) .more { display: none; }
     padding-left: max(var(--pad), env(safe-area-inset-left));
     padding-right: max(var(--pad), env(safe-area-inset-right));
   }
-  .foot__in { padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); }
+  .foot__in { padding-bottom: max(16px, 1rem, env(safe-area-inset-bottom)); }
 }
 
 /* ---------------------------------------------------------- мобилка */
@@ -4014,8 +4031,12 @@ html:not([data-js]) .more { display: none; }
      оттеснили бы вниз то, ради чего подвал читают. Выключку по правому
      краю тоже снимаем — прижимать текст к правому краю экрана незачем,
      когда колонка одна. */
-  .foot__in { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-  .foot__note--end { text-align: left; }
+  .foot__in { flex-direction: column; align-items: stretch; gap: 1.25rem; }
+
+  /* На телефоне кнопки идут в строку и делят её пополам: столбиком две
+     кнопки по 64 съедали бы пол-экрана подвала. */
+  .foot__links { width: 100%; }
+  .foot__btn { flex: 1; min-width: 0; height: max(64px, 4rem); }
 
   /* Правило .page-head--country удалено 6 сентября 2026: страна у артиста и
      лейбла стала строкой справки Country: в первом блоке, и справа от имени
@@ -4343,8 +4364,13 @@ html:not([data-js]) .more { display: none; }
 
 /* Каждой кнопке свой край: стоят они порознь, и без контура на месте кнопки
    до наведения виден только набор в шестнадцати пикселях пустоты. Линия та
-   же, что чертит решётку. */
-.listen__btn {
+   же, что чертит решётку.
+
+   Тем же правилом набраны кнопки каналов в подвале: вид у них общий, и
+   разводить его по двум спискам объявлений значило бы развести при первой
+   же правке. Отличается только высота — там её задаёт сам подвал. */
+.listen__btn,
+.foot__btn {
   border: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -4368,7 +4394,8 @@ html:not([data-js]) .more { display: none; }
 /* Цвет по наведению — из той же жеребьёвки, что у карточек: скрипт в
    Base.astro ставит --hot и --hot-fg на то, над чем курсор. */
 @media (hover: hover) {
-  .listen__btn[data-hot]:hover {
+  .listen__btn[data-hot]:hover,
+  .foot__btn[data-hot]:hover {
     background: var(--hot);
     color: var(--hot-fg);
   }

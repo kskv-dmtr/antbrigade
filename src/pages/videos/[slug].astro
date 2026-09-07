@@ -18,11 +18,19 @@ import PageBar from '../../components/PageBar.astro';
 import Icon from '../../components/Icon.astro';
 import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
+/* Номер записи в базе — тот, что стоит в полосе заголовка справа. Считается
+   на сборке: порядковое место в том же перечне, из которого собираются все
+   страницы. Место это не вечное — пополнилась база, и номер уехал, — но он и
+   не адрес: адрес у страницы свой, в нём slug. Номер здесь говорит «столько
+   всего, и вот где мы среди них», как счётчик отбора в списках. */
 export function getStaticPaths() {
-  return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
+  return videos.map((video, i) => ({
+    params: { slug: video.slug },
+    props: { video, номер: i + 1 }
+  }));
 }
 
-const { video } = Astro.props;
+const { video, номер } = Astro.props;
 const artists = artistsOf(video.artistIds);
 const title = videoTitle(video);
 const thumb = thumbSrc(video, 960);
@@ -75,15 +83,18 @@ const releases = [...new Map(
       кадр вдвое ниже обложки и растягивать под него экран не за чем.
 
       Полоса 16:7 с кадром в 58% ширины стояла здесь до 6 сентября 2026. */}
-  {/* Первой строкой — полоса «Info»: кружок и название, как у разделов ниже.
-      Она называет блок под собой и ставит его в один ряд с ними — до неё блок
-      висел под шапкой сам по себе.
+  {/* Первой строкой — полоса «Video»: кружок, название и номер, как у разделов
+      ниже. Она называет блок под собой и ставит его в один ряд с ними — до неё
+      блок висел под шапкой сам по себе.
+
+      «Info» полоса звалась до 7 сентября 2026: слово называло не то, на что
+      смотришь, а род сведений — и повторялось на трёх страницах подряд.
 
       Не сворачивается, в отличие от такой же полосы у исполнителя, лейбла и
       жанра: там под ней справка в две строки, а здесь — обложка и всё, ради
       чего страницу открыли. Треугольника поэтому нет. */}
   <section class="section">
-    <PageBar as="p" title="Info" />
+    <PageBar as="p" title="Video" count={`${номер} / ${videos.length}`} />
 
     <article class="item item--video">
       <div class="item__art">

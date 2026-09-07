@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T17:49:29Z",
+  "generatedAt": "2026-09-07T20:36:28Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -18645,6 +18645,36 @@
       "upc": "193483223407",
       "tracks": 10,
       "releaseDate": "2018-12-07"
+    },
+    "3d44129a-8c52-8059-ae4f-ca7fac9df27e": {
+      "source": "https://album.link/rvxfvm0nmmd8g",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6sB6Bm2KkI8QjW0y7934ry",
+        "pandora": "https://www.pandora.com/AL:66115620",
+        "tidal": "https://listen.tidal.com/album/521333043"
+      },
+      "upc": "634457256040",
+      "tracks": 10,
+      "releaseDate": "2026-08-28"
+    },
+    "3d44129a-8c52-8018-885e-de7b735dec1e": {
+      "source": "https://album.link/cvpv6p2jdqdmb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7cj9GeDDwhl4o4iAZ7OECO",
+        "pandora": "https://www.pandora.com/AL:10038932",
+        "deezer": "https://www.deezer.com/album/244637102",
+        "amazonMusic": "https://music.amazon.com/albums/B099KQCGKY",
+        "tidal": "https://listen.tidal.com/album/191076778",
+        "napster": "https://play.napster.com/album/alb.597998781",
+        "yandex": "https://music.yandex.ru/album/16874214",
+        "boomplay": "https://www.boomplay.com/albums/28391811",
+        "anghami": "https://play.anghami.com/album/1021254653?refer=linktree",
+        "bandcamp": "https://velstrio.bandcamp.com/album/celestial-greens",
+        "amazonStore": "https://amazon.com/dp/B099KQCGKY"
+      },
+      "upc": "4062548029734",
+      "tracks": 11,
+      "releaseDate": "2021-10-29"
     }
   }
 }

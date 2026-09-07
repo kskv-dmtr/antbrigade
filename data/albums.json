@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T17:49:17Z",
+  "generatedAt": "2026-09-07T20:36:12Z",
   "counts": {
-    "albums": 1179,
-    "artists": 1039,
-    "labels": 652,
-    "videos": 89
+    "albums": 1181,
+    "artists": 1041,
+    "labels": 653,
+    "videos": 91
   },
   "albums": [
     {
@@ -133,6 +133,37 @@
       ],
       "labels": [
         "Jagjaguwar"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-8059-ae4f-ca7fac9df27e",
+      "slug": "le-ren-don-t-be-funny-without-me",
+      "artist": "Le Ren",
+      "album": "Don’t Be Funny Without Me",
+      "url": "https://album.link/rvxfvm0nmmd8g",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adb321359-e91e-4769-9975-716ecf952a8b%3Aa1095322684_10.jpg?table=block&id=3d44129a-8c52-8059-ae4f-ca7fac9df27e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Folk",
+        "Singer-Songwriter"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-08-28",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-80fc-9e34-fb32baaffd96"
+      ],
+      "artists": [
+        "Le Ren"
+      ],
+      "labelIds": [
+        "3d44129a-8c52-8056-b781-e87a2b488a19"
+      ],
+      "labels": [
+        "Royal Mountain Records"
       ]
     },
     {
@@ -33939,6 +33970,38 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-8018-885e-de7b735dec1e",
+      "slug": "vels-trio-celestial-greens",
+      "artist": "Vels Trio",
+      "album": "Celestial Greens",
+      "url": "https://album.link/cvpv6p2jdqdmb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9d0e6f54-4982-4f44-b4ce-2bccd117b81c%3Aab67616d0000b273633e17fb59dce693c3012ab2.jpg?table=block&id=3d44129a-8c52-8018-885e-de7b735dec1e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Nu Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-29",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-8064-a4fa-d56530035337"
+      ],
+      "artists": [
+        "Vels Trio"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-803e-8014-f5b45e0d69b1"
+      ],
+      "labels": [
+        "Rhythm Section International"
+      ]
+    },
+    {
       "id": "3bf4129a-8c52-80d2-9e2b-cef6a86e2b4e",
       "slug": "jungle-by-night-algorhythm",
       "artist": "Jungle by Night",
@@ -47260,6 +47323,25 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-80fc-9e34-fb32baaffd96",
+      "slug": "le-ren",
+      "name": "Le Ren",
+      "country": "CA",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-8059-ae4f-ca7fac9df27e"
+      ],
+      "genres": [
+        "Indie Folk",
+        "Singer-Songwriter"
+      ],
+      "labelIds": [
+        "3d44129a-8c52-8056-b781-e87a2b488a19"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-8048-818d-c1de2402b733",
       "slug": "le-roi-angus",
       "name": "Le Roi Angus",
@@ -50899,7 +50981,10 @@
         "2514129a-8c52-80d0-9997-d70a46aa1a26",
         "2514129a-8c52-8096-9062-dd4b41909973"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3d44129a-8c52-802e-95f6-d1342ebd8332",
+        "3d44129a-8c52-80a6-a2f8-d8eb5171d726"
+      ]
     },
     {
       "id": "3604129a-8c52-8001-9806-f49f832b24c0",
@@ -56578,6 +56663,26 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-8064-a4fa-d56530035337",
+      "slug": "vels-trio",
+      "name": "Vels Trio",
+      "country": "GB",
+      "bandcamp": "https://velstrio.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-8018-885e-de7b735dec1e"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Nu Jazz",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-803e-8014-f5b45e0d69b1"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-80d3-8a87-f9738b446198",
       "slug": "vetle-n-r",
       "name": "Vetle Nærø",
@@ -60233,9 +60338,9 @@
       "slug": "dine-alone-records",
       "name": "Dine Alone Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://dinealonerecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@DineAloneRecords",
       "albumIds": [
         "8369e90b-521b-4256-8496-8aa618d87c6c"
       ],
@@ -65956,19 +66061,21 @@
       "slug": "rhythm-section-international",
       "name": "Rhythm Section International",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://wearerhythmsection.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "1b54129a-8c52-8001-9365-df82f81a3696",
         "25a4129a-8c52-80f2-afb9-cc6da0869d07",
         "d88aa9a9-32f4-4e30-a037-4cfc0a73ff50",
-        "6c881698-8747-4df8-9a18-ca0a55de151e"
+        "6c881698-8747-4df8-9a18-ca0a55de151e",
+        "3d44129a-8c52-8018-885e-de7b735dec1e"
       ],
       "artistIds": [
         "24a4129a-8c52-8036-9d53-f2db7bf30e9d",
         "25a4129a-8c52-8077-8401-f64246cace7c",
-        "24a4129a-8c52-808d-bf22-f6462773d922"
+        "24a4129a-8c52-808d-bf22-f6462773d922",
+        "3d44129a-8c52-8064-a4fa-d56530035337"
       ]
     },
     {
@@ -66181,6 +66288,21 @@
       ],
       "artistIds": [
         "24a4129a-8c52-80c1-9676-f010bbf73862"
+      ]
+    },
+    {
+      "id": "3d44129a-8c52-8056-b781-e87a2b488a19",
+      "slug": "royal-mountain-records",
+      "name": "Royal Mountain Records",
+      "country": "CA",
+      "bandcamp": "https://royalmountainrecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@RoyalMountainRecordsOfficial",
+      "albumIds": [
+        "3d44129a-8c52-8059-ae4f-ca7fac9df27e"
+      ],
+      "artistIds": [
+        "3d44129a-8c52-80fc-9e34-fb32baaffd96"
       ]
     },
     {
@@ -69336,6 +69458,32 @@
         "2514129a-8c52-803d-a508-c3aa9d1e29f0"
       ],
       "slug": "pig-destroyer-mt-skull"
+    },
+    {
+      "id": "3d44129a-8c52-802e-95f6-d1342ebd8332",
+      "title": "Pkew Pkew Pkew | 65 Nickels",
+      "url": "https://youtu.be/EkJcKVh5pcQ?si=n7J5zTdCFnjbw_jq",
+      "kind": "Official Video",
+      "released": "2018-11-28",
+      "year": 2018,
+      "origYear": null,
+      "artistIds": [
+        "2514129a-8c52-800f-8b31-c05fbab3f1b6"
+      ],
+      "slug": "pkew-pkew-pkew-65-nickels"
+    },
+    {
+      "id": "3d44129a-8c52-80a6-a2f8-d8eb5171d726",
+      "title": "Pkew Pkew Pkew | Mid 20’s Skateboarder / Bloodclot",
+      "url": "https://youtu.be/7kecW5p0b5I?si=E8Lh33aBJYke6qX-",
+      "kind": "Official Video",
+      "released": "2016-06-03",
+      "year": 2016,
+      "origYear": null,
+      "artistIds": [
+        "2514129a-8c52-800f-8b31-c05fbab3f1b6"
+      ],
+      "slug": "pkew-pkew-pkew-mid-20-s-skateboarder-bloodclot"
     },
     {
       "id": "2414129a-8c52-80d4-a826-dbc26f9f2c01",

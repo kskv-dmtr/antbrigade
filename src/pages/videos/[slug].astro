@@ -139,19 +139,19 @@ const releases = [...new Map(
           )}
         </div>
 
-        {/* Справка строками, как у релиза. Лейбла и жанров у клипа нет, вид
-            ролика стоит на месте типа издания. */}
-        <dl class="item__facts">
-
-          {/* Где смотреть — последней строкой той же справки, как площадки у
-              релиза. */}
-          <div class="item__fact">
-            <dt>Where to watch:</dt>
-            <dd><a href={video.url} target="_blank" rel="noopener noreferrer">YouTube</a></dd>
-          </div>
-        </dl>
+        {/* Справки строками у клипа не осталось: лейбла и жанров у него нет,
+            вид ролика и дата стоят под названием, а площадка ушла кнопкой
+            вниз. Пустой <dl> убран вместе со строкой «Where to watch:». */}
         </div>
 
+        {/* Площадка — кнопкой по низу ячейки, как у релиза: это выход со
+            страницы, а не выходные данные. Кнопка одна, и она занимает ряд
+            целиком. */}
+        <div class="listen">
+          <a class="listen__btn" href={video.url} target="_blank" rel="noopener noreferrer">
+            YouTube
+          </a>
+        </div>
       </div>
 
     </article>

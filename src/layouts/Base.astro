@@ -321,7 +321,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           некуда. */}
       <div class="foot__note mono mono--sm">
         a personal music archive<br />
-        made for fun by <a href="https://kskv.dmtr.name" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
+        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
         new releases · old favorites · strange finds<br />
         © {year} · 1723 · 1312
       </div>
@@ -411,7 +411,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
     addEventListener('pointerover', (e) => {
       const карта = e.target instanceof Element
-        ? e.target.closest('.row, .tile__link, .listen__btn, .foot__btn, .view-all, .dig-again, .more')
+        ? e.target.closest('a, .more, .dig-again')
         : null;
 
       if (карта === подсвечена) return;

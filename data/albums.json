@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T04:47:06Z",
+  "generatedAt": "2026-09-07T10:23:00Z",
   "counts": {
     "albums": 1177,
     "artists": 1037,
@@ -12057,8 +12057,7 @@
       "origYear": null,
       "playlists": [],
       "artistIds": [
-        "2414129a-8c52-803f-84bf-e1d9f7fb7397",
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8"
+        "2414129a-8c52-803f-84bf-e1d9f7fb7397"
       ],
       "artists": [
         "Durand Jones & The Indications"
@@ -59869,7 +59868,6 @@
       ],
       "artistIds": [
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8",
         "2404129a-8c52-800a-826f-dd385decf385",
         "2504129a-8c52-808d-830d-e728519fd865",
         "2504129a-8c52-80bf-a971-fdbdd67732a4"
@@ -68776,8 +68774,7 @@
       "year": 2025,
       "origYear": null,
       "artistIds": [
-        "2414129a-8c52-803f-84bf-e1d9f7fb7397",
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8"
+        "2414129a-8c52-803f-84bf-e1d9f7fb7397"
       ],
       "slug": "durand-jones-the-indications-been-so-long"
     },
@@ -68790,7 +68787,6 @@
       "year": 2025,
       "origYear": null,
       "artistIds": [
-        "2414129a-8c52-805f-b3ca-dc3408e30cf8",
         "2414129a-8c52-803f-84bf-e1d9f7fb7397"
       ],
       "slug": "durand-jones-the-indications-flower-moon"

@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T16:29:47Z",
+  "generatedAt": "2026-09-07T17:49:17Z",
   "counts": {
-    "albums": 1178,
-    "artists": 1038,
+    "albums": 1179,
+    "artists": 1039,
     "labels": 652,
     "videos": 89
   },
@@ -15599,7 +15599,7 @@
       "artist": "Various Artists",
       "album": "Horse Meat Disco Presents Disco & Boogie from Brazil Vol. 1",
       "url": "https://album.link/n25zxdd9vschg",
-      "cover": null,
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6f001e4b-32e1-4e1b-a645-14d3d88ee4d7%3Aa0925661947_10.jpg?table=block&id=3d44129a-8c52-8072-a478-e30d19a775f0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "MPB",
         "Disco",
@@ -36419,6 +36419,38 @@
       ]
     },
     {
+      "id": "3d44129a-8c52-80eb-9fc9-d015c5a1f434",
+      "slug": "the-daktaris-soul-explosion",
+      "artist": "The Daktaris",
+      "album": "Soul Explosion",
+      "url": "https://album.link/z0w7szzkn5nth",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A84297c11-fcfe-4945-86c2-6d85ff57251a%3Aab67616d0000b273dc5616eea5f2ea8c20106d75.jpg?table=block&id=3d44129a-8c52-80eb-9fc9-d015c5a1f434&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Afro-Funk",
+        "Deep Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-12-07",
+      "year": 2018,
+      "origYear": "1998",
+      "playlists": [],
+      "artistIds": [
+        "3d44129a-8c52-801e-8db6-ccff99ffb342"
+      ],
+      "artists": [
+        "The Daktaris"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80eb-8df6-e3a43ad40f12"
+      ],
+      "labels": [
+        "Daptone Records"
+      ]
+    },
+    {
       "id": "3cd4129a-8c52-8086-a9a2-f4de36f49dce",
       "slug": "boss-steel-box-i-m-the-dog-you-re-the-ball",
       "artist": "Boss",
@@ -54716,6 +54748,26 @@
       "videoIds": []
     },
     {
+      "id": "3d44129a-8c52-801e-8db6-ccff99ffb342",
+      "slug": "the-daktaris",
+      "name": "The Daktaris",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d44129a-8c52-80eb-9fc9-d015c5a1f434"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Afro-Funk",
+        "Deep Funk"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80eb-8df6-e3a43ad40f12"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-8043-a12b-d1f6cb12e9ee",
       "slug": "the-diasonics",
       "name": "The Diasonics",
@@ -59886,7 +59938,7 @@
       "slug": "daptone-records",
       "name": "Daptone Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://daptonerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59896,14 +59948,16 @@
         "2994129a-8c52-8097-859d-d324a16ea80a",
         "1144129a-8c52-80b6-89b2-cc2b6b138f8a",
         "1105d9d1-9043-404f-8b11-58098827b35b",
-        "28c3520e-0b40-4860-8330-75725a79b2b6"
+        "28c3520e-0b40-4860-8330-75725a79b2b6",
+        "3d44129a-8c52-80eb-9fc9-d015c5a1f434"
       ],
       "artistIds": [
         "2504129a-8c52-80a0-8b21-f8ddf39dce47",
         "2504129a-8c52-80e2-8d5f-ff98ff79183e",
         "30a4129a-8c52-80ae-8b55-ebcb60162853",
         "2994129a-8c52-8068-8cd4-e72a945ee58f",
-        "2434129a-8c52-80c9-8833-e0c8f133cde3"
+        "2434129a-8c52-80c9-8833-e0c8f133cde3",
+        "3d44129a-8c52-801e-8db6-ccff99ffb342"
       ]
     },
     {

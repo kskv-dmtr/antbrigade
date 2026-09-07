@@ -7,7 +7,9 @@
    серая дыра. Поэтому кадр свой, скачанный, а смотреть уводим ссылкой. */
 
 import Base from '../../layouts/Base.astro';
-import WholeWords from '../../components/WholeWords.astro';
+/* WholeWords здесь больше не нужен: перенос по целым словам держал имя
+   исполнителя в строке над названием, а имя ушло в общую строку под ним и
+   набрано моноширинным в 13 — там ломаться нечему. */
 import AlbumCard from '../../components/AlbumCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 /* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
@@ -119,24 +121,22 @@ const releases = [...new Map(
             шестнадцать оставляет ровно этот просвет. */}
         <div class="item__top">
         <div class="item__name">
-          <p class="item__artist">
+          <h1 class="item__title">{title}</h1>
+
+          {/* Имя, вид ролика и дата — одной строкой под названием, как у
+              релиза. Отдельной строкой в 24 имя стояло над названием до
+              вечера 7 сентября 2026. */}
+          <p class="item__meta">
             {artists.map((a, i) => (
               <>
                 {i > 0 && <span class="sep"> · </span>}
-                <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+                <a href={`/artists/${a.slug}`}>{a.name}</a>
               </>
             ))}
+
+            {выпуск && <>{' · '}{выпуск}</>}
+            {origText && <span class="item__faint"> · originally {origText}</span>}
           </p>
-
-          <h1 class="item__title">{title}</h1>
-
-          {/* Вид ролика и год под названием, как тип и год у релиза. */}
-          {выпуск && (
-            <p class="item__meta">
-              {выпуск}
-              {origText && <span class="item__faint"> · originally {origText}</span>}
-            </p>
-          )}
         </div>
 
         {/* Справки строками у клипа не осталось: лейбла и жанров у него нет,

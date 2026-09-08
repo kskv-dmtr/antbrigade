@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-08T18:43:27Z",
+  "generatedAt": "2026-09-08T21:53:19Z",
   "counts": {
-    "albums": 1191,
-    "artists": 1046,
-    "labels": 657,
+    "albums": 1210,
+    "artists": 1064,
+    "labels": 666,
     "videos": 91
   },
   "albums": [
@@ -835,6 +835,37 @@
       ],
       "labels": [
         "Concord Jazz"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80b2-94da-cabdd83a7e1e",
+      "slug": "cherub-chains-blight-on-pure-existence",
+      "artist": "Cherub Chains",
+      "album": "Blight on Pure Existence",
+      "url": "https://album.link/pq8ksgwmndzht",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A655cd8a8-8515-4307-84ca-329be4f3e024%3Aa2924807452_10.jpg?table=block&id=3d54129a-8c52-80b2-94da-cabdd83a7e1e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Metalcore",
+        "Hardcore"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-07-23",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80b5-a985-f16a97227c99"
+      ],
+      "artists": [
+        "Cherub Chains"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80fb-b239-d9ae4ea8bbc9"
+      ],
+      "labels": [
+        "Brain Floss Records"
       ]
     },
     {
@@ -34003,6 +34034,68 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8066-b36d-c0eb37568d9c",
+      "slug": "l-eclair-confusions",
+      "artist": "L’Eclair",
+      "album": "Confusions",
+      "url": "https://album.link/xkf0hqfh8jxxt",
+      "cover": "https://antbrigade.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fpublic.notion-static.com%2F2c5ca4ed-4eb5-4569-8225-199554545545%2Fa2077251539_10.jpg?table=block&id=3d54129a-8c52-8066-b36d-c0eb37568d9c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-12",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2494129a-8c52-803f-b9f0-f187678e0388"
+      ],
+      "artists": [
+        "L’Eclair"
+      ],
+      "labelIds": [
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+      ],
+      "labels": [
+        "Les Disques Bongo Joe"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-803b-acbb-e113d5226bb6",
+      "slug": "the-grease-traps-solid-ground",
+      "artist": "The Grease Traps",
+      "album": "Solid Ground",
+      "url": "https://album.link/rcnmqfhhsrvrc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Acd8706f8-7e51-4af2-a913-c33238a4bc17%3Aa2744848953_10.jpg?table=block&id=3d54129a-8c52-803b-acbb-e113d5226bb6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8065-9aeb-f3d081fabbae"
+      ],
+      "artists": [
+        "The Grease Traps"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "labels": [
+        "Record Kicks"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-8018-885e-de7b735dec1e",
       "slug": "vels-trio-celestial-greens",
       "artist": "Vels Trio",
@@ -34064,6 +34157,40 @@
       ],
       "labels": [
         "V2 Records"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80d8-9b03-d872e13cc2f9",
+      "slug": "quantic-nidia-gongora-almas-conectadas",
+      "artist": "Quantic / Nidia Góngora",
+      "album": "Almas Conectadas",
+      "url": "https://album.link/zdwgbspbpsprr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4559fcfd-86a4-4d40-94f3-09923654f2f6%3Aa1138336443_10.jpg?table=block&id=3d54129a-8c52-80d8-9b03-d872e13cc2f9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cumbia",
+        "Latin Soul"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2021-10-22",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8058-865d-c83a7fe422c4",
+        "3d54129a-8c52-80a1-aa0c-f5a65f969ab6"
+      ],
+      "artists": [
+        "Quantic",
+        "Nidia Góngora"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "labels": [
+        "Tru Thoughts Recordings"
       ]
     },
     {
@@ -34186,6 +34313,69 @@
       ],
       "labels": [
         "Sing a Song Fighter"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8083-b159-ef4db9cb2692",
+      "slug": "mf-robots-break-the-wall",
+      "artist": "MF Robots",
+      "album": "Break the Wall",
+      "url": "https://album.link/dvxqmd0tt4swr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A26c34685-1e61-4087-87b4-980b38b43c89%3Aa3454826934_10.jpg?table=block&id=3d54129a-8c52-8083-b159-ef4db9cb2692&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Acid Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-08",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80bd-a97a-c769a63fab47"
+      ],
+      "artists": [
+        "MF Robots"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d6-8c06-c1cbd6bec0e2"
+      ],
+      "labels": [
+        "BBE Music"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80ac-9deb-f399f4f3455f",
+      "slug": "roland-bocquet-paradia",
+      "artist": "Roland Bocquet",
+      "album": "Paradia",
+      "url": "https://album.link/0vn9njfxm0hq7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae9cbf90f-228e-4b7e-a830-ed8df6f0e8f3%3Aa3871766345_10.jpg?table=block&id=3d54129a-8c52-80ac-9deb-f399f4f3455f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive Electronic",
+        "Jazz Fusion",
+        "Library Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-01",
+      "year": 2021,
+      "origYear": "1977",
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-805b-be3d-f68b5212a2a5"
+      ],
+      "artists": [
+        "Roland Bocquet"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80ef-98d9-f0426aa14300"
+      ],
+      "labels": [
+        "WRWTFWW Records"
       ]
     },
     {
@@ -34564,6 +34754,36 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-80fa-acb5-d9fc2c751df6",
+      "slug": "mocky-overtones-for-the-omniverse",
+      "artist": "Mocky",
+      "album": "Overtones for the Omniverse",
+      "url": "https://album.link/zm08jj0q9s8tn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5bb22ed2-a7cf-4fb3-8899-4ca126ab31ff%3Aa2709333765_10.jpg?table=block&id=3d54129a-8c52-80fa-acb5-d9fc2c751df6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-30",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80e1-94b0-eede351f3088"
+      ],
+      "artists": [
+        "Mocky"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8022-8b19-d19cb3b0f091"
+      ],
+      "labels": [
+        "Heavy Sheet"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-8038-ae59-d5d055eddfd0",
       "slug": "mega-bog-life-and-another",
       "artist": "Mega Bog",
@@ -34625,6 +34845,36 @@
       ],
       "labels": [
         "Golden Rules"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-801c-be35-d86669478134",
+      "slug": "stimulator-jones-low-budget-environments-striving-for-perfec",
+      "artist": "Stimulator Jones",
+      "album": "Low Budget Environments Striving for Perfection",
+      "url": "https://album.link/0bqjvbpfmnf5t",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8ea6684c-b01b-4ffb-902d-b504dae11738%3Aa4129832730_10.jpg?table=block&id=3d54129a-8c52-801c-be35-d86669478134&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-16",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8004-99bb-e966d894a4e8"
+      ],
+      "artists": [
+        "Stimulator Jones"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
       ]
     },
     {
@@ -34906,6 +35156,37 @@
       ],
       "labels": [
         "April Records"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-803a-87fc-d184f1dfeedb",
+      "slug": "combo-lulo-neotropic-dream",
+      "artist": "Combo Lulo",
+      "album": "Neotropic Dream",
+      "url": "https://album.link/2jsmgtsdr3grh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A23e9f8c7-4099-42d6-a932-297309b31879%3Aa0275552231_10.jpg?table=block&id=3d54129a-8c52-803a-87fc-d184f1dfeedb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cumbia",
+        "Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-07",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8020-89e1-cb33c16fd17a"
+      ],
+      "artists": [
+        "Combo Lulo"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80dd-99f3-db0643d16710"
+      ],
+      "labels": [
+        "Names You Can Trust"
       ]
     },
     {
@@ -35216,6 +35497,37 @@
       ],
       "labels": [
         "Brownswood Recordings"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80c5-804d-cb604aaf813f",
+      "slug": "fyi-chris-earth-scum",
+      "artist": "FYI Chris",
+      "album": "Earth Scum",
+      "url": "https://album.link/phdkn7rfxdcxc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A62df55b4-31c0-4db3-9828-5278121f5b03%3Aa0093859548_10.jpg?table=block&id=3d54129a-8c52-80c5-804d-cb604aaf813f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Outsider House",
+        "Breakbeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80a5-9062-f1b74ca49304"
+      ],
+      "artists": [
+        "FYI Chris"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8085-be80-d1d2a570ba9c"
+      ],
+      "labels": [
+        "Black Acre Records"
       ]
     },
     {
@@ -35631,6 +35943,37 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-80cb-b737-e7737cd29daf",
+      "slug": "high-pulp-bad-juice",
+      "artist": "High Pulp",
+      "album": "Bad Juice",
+      "url": "https://album.link/kb6fjxmdnrpfr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3130be51-92ee-4491-bc0a-ca1b2f718e4f%3Aa3077824556_10.jpg?table=block&id=3d54129a-8c52-80cb-b737-e7737cd29daf&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-10-23",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2524129a-8c52-8030-88f6-fcdfc869266c"
+      ],
+      "artists": [
+        "High Pulp"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8062-ab48-c86f2f060d00"
+      ],
+      "labels": [
+        "KingUnderground"
+      ]
+    },
+    {
       "id": "3bf4129a-8c52-801b-94bc-d1638b65a839",
       "slug": "pellegrino-zodyaco-morphe",
       "artist": "Pellegrino / Zodyaco",
@@ -35662,6 +36005,37 @@
       ],
       "labels": [
         "Early Sounds Recordings"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8055-80dd-e819cb1da3a1",
+      "slug": "sola-rosa-chasing-the-sun",
+      "artist": "Sola Rosa",
+      "album": "Chasing the Sun",
+      "url": "https://album.link/5xkgz9bnwjvx9",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A035dc17c-b9b5-4e9b-b22d-8b71d068e6cb%3Aa3033664816_10.jpg?table=block&id=3d54129a-8c52-8055-80dd-e819cb1da3a1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-25",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80b4-9cc5-df75edd3c2b6"
+      ],
+      "artists": [
+        "Sola Rosa"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-802d-a167-d342b5e4a774"
+      ],
+      "labels": [
+        "Way Up Recordings"
       ]
     },
     {
@@ -35824,6 +36198,38 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8032-8bd9-deb817ced100",
+      "slug": "sofie-cult-survivor",
+      "artist": "Sofie",
+      "album": "Cult Survivor",
+      "url": "https://album.link/bj52wnkkd0kks",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A07357f92-d3a8-4ed5-93e6-6a236f4e6d6b%3Aa0772371002_10.jpg?table=block&id=3d54129a-8c52-8032-8bd9-deb817ced100&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bedroom Pop",
+        "Psychedelic Pop",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-06-26",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-802a-aba1-c5c83b7b398d"
+      ],
+      "artists": [
+        "Sofie"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
+      ]
+    },
+    {
       "id": "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
       "slug": "various-artists-tchic-tchic-french-bossa-nova",
       "artist": "Various Artists",
@@ -35979,6 +36385,37 @@
       ],
       "labels": [
         "Wondercore Island"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80bd-a188-ebf7997ac569",
+      "slug": "kusht-master",
+      "artist": "Kusht",
+      "album": "Master",
+      "url": "https://album.link/2s4dpkf97zv6r",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afcf4bdb4-e7f4-46cb-b788-cd0fa51f65e6%3Aa1761844246_10.jpg?table=block&id=3d54129a-8c52-80bd-a188-ebf7997ac569&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Electronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-04-30",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8066-903a-cc8590eb5d35"
+      ],
+      "artists": [
+        "Kusht"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-809f-ba2c-d7df7f89af33"
+      ],
+      "labels": [
+        "Frente Bolivarista"
       ]
     },
     {
@@ -36330,6 +36767,37 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-807f-8131-ecc057a34812",
+      "slug": "ayyuka-maslak-halay",
+      "artist": "Ayyuka",
+      "album": "Maslak Halayı",
+      "url": "https://album.link/ntc6v95cwpnrz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afa795322-31d4-4826-8dc9-706e419a0ef5%3Aa1904198517_10.jpg?table=block&id=3d54129a-8c52-807f-8131-ecc057a34812&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Anatolian Rock",
+        "Psychedelic Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-10-04",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80b6-b6d0-d9eebfeeef77"
+      ],
+      "artists": [
+        "Ayyuka"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80d8-a705-dfbf58c53d69"
+      ],
+      "labels": [
+        "Tantana Records"
+      ]
+    },
+    {
       "id": "3d14129a-8c52-80c2-aac6-f47eb222712f",
       "slug": "sgjazz-sgjazz",
       "artist": "SGJAZZ",
@@ -36673,6 +37141,36 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8058-b425-ce91e6f33700",
+      "slug": "the-motet-death-or-devotion",
+      "artist": "The Motet",
+      "album": "Death or Devotion",
+      "url": "https://album.link/3mhn7jgvrkzq5",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A00d20150-eeb0-46ea-89b7-b2e95db745a5%3Aa3268361008_10.jpg?table=block&id=3d54129a-8c52-8058-b425-ce91e6f33700&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-01-25",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-808c-b929-ccc677a9cd2c"
+      ],
+      "artists": [
+        "The Motet"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "8578eb95-cffd-4289-b806-b06ab1117433",
       "slug": "power-face-face-the-power",
       "artist": "Power Face",
@@ -36763,6 +37261,37 @@
       ],
       "labels": [
         "Goner Records"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80ee-ac90-f6c304188c0a",
+      "slug": "selling-on-reflection",
+      "artist": "Selling",
+      "album": "On Reflection",
+      "url": "https://album.link/qgcdvm5q8pk3d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A699c99c1-3dea-4355-ab60-be4061ae98f2%3Aa0885354223_10.jpg?table=block&id=3d54129a-8c52-80ee-ac90-f6c304188c0a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient House",
+        "Microhouse"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-10-10",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80e6-bfd6-dcbb494345fc"
+      ],
+      "artists": [
+        "Selling"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
+      ],
+      "labels": [
+        "City Slang"
       ]
     },
     {
@@ -36919,6 +37448,38 @@
       ],
       "labels": [
         "Lazy Days Recordings"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8059-814d-ca6b8af8ec16",
+      "slug": "kadhja-bonet-childqueen",
+      "artist": "Kadhja Bonet",
+      "album": "Childqueen",
+      "url": "https://album.link/d0zkpkx5jrdzw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3513c52f-eb3d-49b4-b0b7-3259bd7794d2%3Aa1785948099_10.jpg?table=block&id=3d54129a-8c52-8059-814d-ca6b8af8ec16&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Psychedelic Soul",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-06-08",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80dd-80f8-f38de87b0119"
+      ],
+      "artists": [
+        "Kadhja Bonet"
+      ],
+      "labelIds": [
+        "2ad4129a-8c52-8007-8018-e7024fea8c95"
+      ],
+      "labels": [
+        "Fat Possum Records"
       ]
     },
     {
@@ -37364,6 +37925,37 @@
       ],
       "labels": [
         "Sony Music Mexico"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8000-a738-c1c131a5b728",
+      "slug": "sons-and-daughters-of-lite-let-the-sun-shine-in",
+      "artist": "Sons and Daughters of Lite",
+      "album": "Let the Sun Shine In",
+      "url": "https://album.link/scf46nzs7mjgg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abf49e879-e885-44ee-9888-84f9115ace75%3Aa2857435707_10.jpg?table=block&id=3d54129a-8c52-8000-a738-c1c131a5b728&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2000-01-18",
+      "year": 2000,
+      "origYear": "1978",
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8094-b111-ebb1afdf91f5"
+      ],
+      "artists": [
+        "Sons and Daughters of Lite"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
+      ],
+      "labels": [
+        "Ubiquity Records"
       ]
     },
     {
@@ -38679,7 +39271,7 @@
       "name": "Aura Safari",
       "country": "IT",
       "bandcamp": "https://aurasafari.bandcamp.com/music",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@aurasafari",
       "albumIds": [
         "fc78c0ac-aa0e-4cd2-a6a8-aa9847df46c4",
         "bd329a54-ba1b-436e-9bd9-53b2e8f0defc",
@@ -38771,6 +39363,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80fa-9e2c-da9e04d6fbdd"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80b6-b6d0-d9eebfeeef77",
+      "slug": "ayyuka",
+      "name": "Ayyuka",
+      "country": "TR",
+      "bandcamp": "https://ayyuka.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-807f-8131-ecc057a34812"
+      ],
+      "genres": [
+        "Anatolian Rock",
+        "Psychedelic Rock"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80d8-a705-dfbf58c53d69"
       ],
       "videoIds": []
     },
@@ -40569,6 +41180,25 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-80b5-a985-f16a97227c99",
+      "slug": "cherub-chains",
+      "name": "Cherub Chains",
+      "country": "US",
+      "bandcamp": "https://cherubchains.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80b2-94da-cabdd83a7e1e"
+      ],
+      "genres": [
+        "Metalcore",
+        "Hardcore"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80fb-b239-d9ae4ea8bbc9"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24f4129a-8c52-80fd-a66b-db9988144240",
       "slug": "chiare",
       "name": "Chiaré",
@@ -41164,6 +41794,25 @@
       ],
       "labelIds": [
         "2474129a-8c52-8074-b77a-dcc08eef834e"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-8020-89e1-cb33c16fd17a",
+      "slug": "combo-lulo",
+      "name": "Combo Lulo",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-803a-87fc-d184f1dfeedb"
+      ],
+      "genres": [
+        "Cumbia",
+        "Dub"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80dd-99f3-db0643d16710"
       ],
       "videoIds": []
     },
@@ -43504,7 +44153,7 @@
       "slug": "felipe-gordon",
       "name": "Felipe Gordon",
       "country": "CO",
-      "bandcamp": null,
+      "bandcamp": "https://felipegordon.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3854129a-8c52-80ef-9d06-f49b0fe64f87",
@@ -44090,6 +44739,25 @@
       ],
       "labelIds": [
         "2524129a-8c52-8003-9138-ca1f9204d545"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80a5-9062-f1b74ca49304",
+      "slug": "fyi-chris",
+      "name": "FYI Chris",
+      "country": "GB",
+      "bandcamp": "https://fyichris.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80c5-804d-cb604aaf813f"
+      ],
+      "genres": [
+        "Outsider House",
+        "Breakbeat"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8085-be80-d1d2a570ba9c"
       ],
       "videoIds": []
     },
@@ -45097,17 +45765,20 @@
       "slug": "high-pulp",
       "name": "High Pulp",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://highpulpmusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "17a8a90b-067e-4b84-948f-5b5cdb6693ff"
+        "17a8a90b-067e-4b84-948f-5b5cdb6693ff",
+        "3d54129a-8c52-80cb-b737-e7737cd29daf"
       ],
       "genres": [
         "Jazz",
-        "Jazz Fusion"
+        "Jazz Fusion",
+        "Nu Jazz"
       ],
       "labelIds": [
-        "2474129a-8c52-8074-b77a-dcc08eef834e"
+        "2474129a-8c52-8074-b77a-dcc08eef834e",
+        "3d54129a-8c52-8062-ab48-c86f2f060d00"
       ],
       "videoIds": []
     },
@@ -46588,6 +47259,26 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-80dd-80f8-f38de87b0119",
+      "slug": "kadhja-bonet",
+      "name": "Kadhja Bonet",
+      "country": "US",
+      "bandcamp": "https://kadhjabonet.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8059-814d-ca6b8af8ec16"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Psychedelic Soul",
+        "Smooth Soul"
+      ],
+      "labelIds": [
+        "2ad4129a-8c52-8007-8018-e7024fea8c95"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2d34129a-8c52-8043-abea-f1d8c26e8186",
       "slug": "kaitlyn-aurelia-smith",
       "name": "Kaitlyn Aurelia Smith",
@@ -47194,6 +47885,25 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-8066-903a-cc8590eb5d35",
+      "slug": "kusht",
+      "name": "Kusht",
+      "country": "GB",
+      "bandcamp": "https://kusht.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80bd-a188-ebf7997ac569"
+      ],
+      "genres": [
+        "Downtempo",
+        "Electronica"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-809f-ba2c-d7df7f89af33"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-8088-9708-c36b3aa141a7",
       "slug": "kuunatic",
       "name": "Kuunatic",
@@ -47235,18 +47945,21 @@
       "slug": "l-eclair",
       "name": "L’Eclair",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://leclairband.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "2184129a-8c52-8005-a678-eda65141f9fa"
+        "2184129a-8c52-8005-a678-eda65141f9fa",
+        "3d54129a-8c52-8066-b36d-c0eb37568d9c"
       ],
       "genres": [
         "Neo-Psychedelia",
         "Nu Jazz",
-        "Funk"
+        "Funk",
+        "Jazz Fusion"
       ],
       "labelIds": [
-        "2434129a-8c52-806e-9bf1-e6c265c72db3"
+        "2434129a-8c52-806e-9bf1-e6c265c72db3",
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
       ],
       "videoIds": []
     },
@@ -47300,7 +48013,7 @@
       "slug": "la-elite",
       "name": "LA ÉLITE",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://laelite.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "44fd9a66-7860-463a-aaa1-d81cec3817a4",
@@ -49228,6 +49941,25 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-80bd-a97a-c769a63fab47",
+      "slug": "mf-robots",
+      "name": "MF Robots",
+      "country": "GB",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8083-b159-ef4db9cb2692"
+      ],
+      "genres": [
+        "Jazz-Funk",
+        "Acid Jazz"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d6-8c06-c1cbd6bec0e2"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3cc4129a-8c52-8023-a25e-d2ff5e69f082",
       "slug": "mia",
       "name": "MIA",
@@ -49252,7 +49984,7 @@
       "slug": "midnight",
       "name": "Midnight",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://midnight-ohio.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2084129a-8c52-8006-b585-eeb64fb63c4a",
@@ -49421,6 +50153,24 @@
       ],
       "labelIds": [
         "3934129a-8c52-808b-ad43-fd34c10c4f75"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80e1-94b0-eede351f3088",
+      "slug": "mocky",
+      "name": "Mocky",
+      "country": "CA",
+      "bandcamp": "https://mocky.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80fa-acb5-d9fc2c751df6"
+      ],
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8022-8b19-d19cb3b0f091"
       ],
       "videoIds": []
     },
@@ -49962,6 +50712,25 @@
       ],
       "labelIds": [
         "2444129a-8c52-80df-ba79-cb4ae603ac45"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80a1-aa0c-f5a65f969ab6",
+      "slug": "nidia-gongora",
+      "name": "Nidia Góngora",
+      "country": "CO",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80d8-9b03-d872e13cc2f9"
+      ],
+      "genres": [
+        "Cumbia",
+        "Latin Soul"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
       ],
       "videoIds": []
     },
@@ -50893,7 +51662,7 @@
       "slug": "patche",
       "name": "Patche",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://patchemtl.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "28f4129a-8c52-8034-880d-e178c6e424a9",
@@ -51839,6 +52608,25 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-8058-865d-c83a7fe422c4",
+      "slug": "quantic",
+      "name": "Quantic",
+      "country": "GB",
+      "bandcamp": "https://quanticmusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80d8-9b03-d872e13cc2f9"
+      ],
+      "genres": [
+        "Cumbia",
+        "Latin Soul"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-8036-a68d-efcc5e1702d9",
       "slug": "quivers",
       "name": "Quivers",
@@ -52470,6 +53258,26 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-805b-be3d-f68b5212a2a5",
+      "slug": "roland-bocquet",
+      "name": "Roland Bocquet",
+      "country": "FR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80ac-9deb-f399f4f3455f"
+      ],
+      "genres": [
+        "Progressive Electronic",
+        "Jazz Fusion",
+        "Library Music"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80ef-98d9-f0426aa14300"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-80ab-8dba-e591ca334a40",
       "slug": "roosevelt",
       "name": "Roosevelt",
@@ -52998,6 +53806,25 @@
       ],
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80e6-bfd6-dcbb494345fc",
+      "slug": "selling",
+      "name": "Selling",
+      "country": "GB",
+      "bandcamp": "https://selling.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80ee-ac90-f6c304188c0a"
+      ],
+      "genres": [
+        "Ambient House",
+        "Microhouse"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
       ],
       "videoIds": []
     },
@@ -53636,6 +54463,26 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-802a-aba1-c5c83b7b398d",
+      "slug": "sofie",
+      "name": "Sofie",
+      "country": "AT",
+      "bandcamp": "https://sofieroyer.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8032-8bd9-deb817ced100"
+      ],
+      "genres": [
+        "Bedroom Pop",
+        "Psychedelic Pop",
+        "Dream Pop"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3d34129a-8c52-806e-90c7-e106aee01363",
       "slug": "sola",
       "name": "Sola",
@@ -53650,6 +54497,25 @@
       ],
       "labelIds": [
         "3d34129a-8c52-8085-8cae-ee10ac495c56"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-80b4-9cc5-df75edd3c2b6",
+      "slug": "sola-rosa",
+      "name": "Sola Rosa",
+      "country": "NZ",
+      "bandcamp": "https://solarosa.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8055-80dd-e819cb1da3a1"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-802d-a167-d342b5e4a774"
       ],
       "videoIds": []
     },
@@ -53689,6 +54555,25 @@
       ],
       "labelIds": [
         "24e4129a-8c52-802e-bbee-e55d92264c92"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-8094-b111-ebb1afdf91f5",
+      "slug": "sons-and-daughters-of-lite",
+      "name": "Sons and Daughters of Lite",
+      "country": "US",
+      "bandcamp": "https://sonsanddaughtersoflite.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8000-a738-c1c131a5b728"
+      ],
+      "genres": [
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
       ],
       "videoIds": []
     },
@@ -54202,6 +55087,24 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-8004-99bb-e966d894a4e8",
+      "slug": "stimulator-jones",
+      "name": "Stimulator Jones",
+      "country": "US",
+      "bandcamp": "https://stimulatorjones.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-801c-be35-d86669478134"
+      ],
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
       ],
       "videoIds": []
     },
@@ -55371,6 +56274,25 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-8065-9aeb-f3d081fabbae",
+      "slug": "the-grease-traps",
+      "name": "The Grease Traps",
+      "country": "US",
+      "bandcamp": "https://greasetraps.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-803b-acbb-e113d5226bb6"
+      ],
+      "genres": [
+        "Funk",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-803f-b0be-d73d1fbb2181",
       "slug": "the-jesus-lizard",
       "name": "The Jesus Lizard",
@@ -55463,6 +56385,24 @@
       ],
       "labelIds": [
         "2854129a-8c52-8008-91c9-de9574d7153f"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-808c-b929-ccc677a9cd2c",
+      "slug": "the-motet",
+      "name": "The Motet",
+      "country": "US",
+      "bandcamp": "https://themotet.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8058-b425-ce91e6f33700"
+      ],
+      "genres": [
+        "Funk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": []
     },
@@ -59121,14 +60061,16 @@
       "slug": "bbe-music",
       "name": "BBE Music",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://bbemusic.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2024129a-8c52-803c-96df-dfc23bbec423"
+        "2024129a-8c52-803c-96df-dfc23bbec423",
+        "3d54129a-8c52-8083-b159-ef4db9cb2692"
       ],
       "artistIds": [
-        "2504129a-8c52-80ea-afdd-c278e24181e1"
+        "2504129a-8c52-80ea-afdd-c278e24181e1",
+        "3d54129a-8c52-80bd-a97a-c769a63fab47"
       ]
     },
     {
@@ -59307,6 +60249,21 @@
       ],
       "artistIds": [
         "2494129a-8c52-8004-9c27-d7122dab91b5"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8085-be80-d1d2a570ba9c",
+      "slug": "black-acre-records",
+      "name": "Black Acre Records",
+      "country": "GB",
+      "bandcamp": "https://blackacrerecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80c5-804d-cb604aaf813f"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80a5-9062-f1b74ca49304"
       ]
     },
     {
@@ -59516,6 +60473,21 @@
       ],
       "artistIds": [
         "24f4129a-8c52-805b-9d0b-d5d1d1c8c461"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80fb-b239-d9ae4ea8bbc9",
+      "slug": "brain-floss-records",
+      "name": "Brain Floss Records",
+      "country": "US",
+      "bandcamp": "https://brainfloss.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80b2-94da-cabdd83a7e1e"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80b5-a985-f16a97227c99"
       ]
     },
     {
@@ -59923,14 +60895,16 @@
         "1154129a-8c52-800d-8b87-e9007efdb301",
         "ec69dd71-5f14-4160-a7f9-057abb7b7413",
         "8db38305-53df-49ab-822c-887de89fb706",
-        "3d24129a-8c52-8011-96dc-d9f07d5ae793"
+        "3d24129a-8c52-8011-96dc-d9f07d5ae793",
+        "3d54129a-8c52-80ee-ac90-f6c304188c0a"
       ],
       "artistIds": [
         "36b4129a-8c52-8096-bb83-df2db002fa73",
         "24f4129a-8c52-8099-abe4-f4deaffc03ef",
         "24f4129a-8c52-80de-ba69-f43b6a41ec4a",
         "24f4129a-8c52-8002-90a4-d5d223d1046d",
-        "2524129a-8c52-80ab-8dba-e591ca334a40"
+        "2524129a-8c52-80ab-8dba-e591ca334a40",
+        "3d54129a-8c52-80e6-bfd6-dcbb494345fc"
       ]
     },
     {
@@ -61326,14 +62300,16 @@
       "slug": "fat-possum-records",
       "name": "Fat Possum Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://fatpossumrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2ad4129a-8c52-8002-b9a4-df00d2817434"
+        "2ad4129a-8c52-8002-b9a4-df00d2817434",
+        "3d54129a-8c52-8059-814d-ca6b8af8ec16"
       ],
       "artistIds": [
-        "2ad4129a-8c52-8002-a0e8-c02d87c13937"
+        "2ad4129a-8c52-8002-a0e8-c02d87c13937",
+        "3d54129a-8c52-80dd-80f8-f38de87b0119"
       ]
     },
     {
@@ -61722,6 +62698,21 @@
       ],
       "artistIds": [
         "2484129a-8c52-808a-ac1b-ed859e33f197"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-809f-ba2c-d7df7f89af33",
+      "slug": "frente-bolivarista",
+      "name": "Frente Bolivarista",
+      "country": "NL",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80bd-a188-ebf7997ac569"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-8066-903a-cc8590eb5d35"
       ]
     },
     {
@@ -62221,6 +63212,21 @@
       ],
       "artistIds": [
         "3784129a-8c52-8085-bb4f-fe9f2d26b917"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-8022-8b19-d19cb3b0f091",
+      "slug": "heavy-sheet",
+      "name": "Heavy Sheet",
+      "country": "CA",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80fa-acb5-d9fc2c751df6"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80e1-94b0-eede351f3088"
       ]
     },
     {
@@ -63300,6 +64306,21 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8062-ab48-c86f2f060d00",
+      "slug": "kingunderground",
+      "name": "KingUnderground",
+      "country": "GB",
+      "bandcamp": "https://kingunderground.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80cb-b737-e7737cd29daf"
+      ],
+      "artistIds": [
+        "2524129a-8c52-8030-88f6-fcdfc869266c"
+      ]
+    },
+    {
       "id": "3494129a-8c52-80e1-921b-d2cdf2b96640",
       "slug": "kitchen-label",
       "name": "KITCHEN. LABEL",
@@ -63660,6 +64681,7 @@
         "b23aa992-2aac-4165-beb5-080416c13dce",
         "8efa65f4-09df-4006-8089-2869aee41410",
         "1164129a-8c52-8088-b6e3-f4cb42cdcafd",
+        "3d54129a-8c52-8066-b36d-c0eb37568d9c",
         "3d44129a-8c52-80c7-9687-da7f32d44da0",
         "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
       ],
@@ -63668,6 +64690,7 @@
         "2424129a-8c52-80d3-81e6-ee184d274263",
         "24a4129a-8c52-8032-bc8e-fd1c9173c69a",
         "24f4129a-8c52-80c4-b1d8-cffe7bd29def",
+        "2494129a-8c52-803f-b9f0-f187678e0388",
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ]
     },
@@ -64631,6 +65654,21 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-80dd-99f3-db0643d16710",
+      "slug": "names-you-can-trust",
+      "name": "Names You Can Trust",
+      "country": "US",
+      "bandcamp": "https://nyctrust.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-803a-87fc-d184f1dfeedb"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-8020-89e1-cb33c16fd17a"
+      ]
+    },
+    {
       "id": "2494129a-8c52-80a8-b7dc-c6a6520d02c4",
       "slug": "napalm-records",
       "name": "Napalm Records",
@@ -65062,6 +66100,7 @@
         "c70f158e-28b6-4339-af37-348710c79313",
         "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
         "ddf78bc2-c478-4f46-b405-877b53f9a518",
+        "3d54129a-8c52-8058-b425-ce91e6f33700",
         "5618b6c4-09dd-41c5-a869-bd4af0651883",
         "2f74129a-8c52-8067-a3e8-e85f767ee29f"
       ],
@@ -65166,6 +66205,7 @@
         "2524129a-8c52-801b-820d-f48f3d34ffba",
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
         "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
+        "3d54129a-8c52-808c-b929-ccc677a9cd2c",
         "2424129a-8c52-8044-b0ee-ec4e110778f1",
         "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
       ]
@@ -66356,6 +67396,7 @@
         "1274129a-8c52-80d3-ad97-c95838079c7a",
         "81a99f6f-36e8-44ea-b025-8311a1765979",
         "af3f144a-a677-4a9c-9517-25b192645772",
+        "3d54129a-8c52-803b-acbb-e113d5226bb6",
         "3d24129a-8c52-8053-bc95-fef3d8493129"
       ],
       "artistIds": [
@@ -66363,6 +67404,7 @@
         "2524129a-8c52-809b-8e94-c0c0a267d91f",
         "2524129a-8c52-80c5-9f02-e97888bd8274",
         "2524129a-8c52-8043-a12b-d1f6cb12e9ee",
+        "3d54129a-8c52-8065-9aeb-f3d081fabbae",
         "3d24129a-8c52-804d-a6e0-dccc7afd1227"
       ]
     },
@@ -67713,7 +68755,9 @@
         "99819fb7-ac5f-4c92-8841-4dc224175724",
         "98f3ef0b-d6d2-4480-a9d9-8a8ff89a4c24",
         "2534129a-8c52-8046-8e24-e9d131ffb2ca",
-        "df562743-4b65-4dc9-a438-4e4a04e2ee7e"
+        "3d54129a-8c52-801c-be35-d86669478134",
+        "df562743-4b65-4dc9-a438-4e4a04e2ee7e",
+        "3d54129a-8c52-8032-8bd9-deb817ced100"
       ],
       "artistIds": [
         "2434129a-8c52-8013-b879-daddf61fdb34",
@@ -67724,7 +68768,9 @@
         "24e4129a-8c52-8034-ab27-f6c45f88055d",
         "2524129a-8c52-808c-b4df-fe623e34d332",
         "2504129a-8c52-80b4-b5f1-eb77006e9d3b",
-        "2534129a-8c52-806b-863e-f2bd6a4239a9"
+        "2534129a-8c52-806b-863e-f2bd6a4239a9",
+        "3d54129a-8c52-8004-99bb-e966d894a4e8",
+        "3d54129a-8c52-802a-aba1-c5c83b7b398d"
       ]
     },
     {
@@ -67932,6 +68978,21 @@
       ],
       "artistIds": [
         "2524129a-8c52-80da-827a-eabfe35d59ea"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80d8-a705-dfbf58c53d69",
+      "slug": "tantana-records",
+      "name": "Tantana Records",
+      "country": "GB",
+      "bandcamp": "https://tantana.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-807f-8131-ecc057a34812"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80b6-b6d0-d9eebfeeef77"
       ]
     },
     {
@@ -68398,18 +69459,21 @@
       "slug": "tru-thoughts-recordings",
       "name": "Tru Thoughts Recordings",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://tru-thoughts.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "3104129a-8c52-8078-869b-d440ac20c617",
         "2664129a-8c52-8056-a76e-eb43ef492297",
-        "cc75744c-6671-4db9-8bdf-487423d10089"
+        "cc75744c-6671-4db9-8bdf-487423d10089",
+        "3d54129a-8c52-80d8-9b03-d872e13cc2f9"
       ],
       "artistIds": [
         "3104129a-8c52-8044-b0b6-f9c4ec38e9d9",
         "2664129a-8c52-80d9-9fa3-e0da2bc3dbff",
-        "24f4129a-8c52-8051-8577-f8f08711cd36"
+        "24f4129a-8c52-8051-8577-f8f08711cd36",
+        "3d54129a-8c52-8058-865d-c83a7fe422c4",
+        "3d54129a-8c52-80a1-aa0c-f5a65f969ab6"
       ]
     },
     {
@@ -68478,14 +69542,16 @@
       "slug": "ubiquity-records",
       "name": "Ubiquity Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://ubiquityrecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "9f61a1f2-265a-4893-bb66-b90e8fcfd29f"
+        "9f61a1f2-265a-4893-bb66-b90e8fcfd29f",
+        "3d54129a-8c52-8000-a738-c1c131a5b728"
       ],
       "artistIds": [
-        "2494129a-8c52-8033-90f8-cdea31e793d0"
+        "2494129a-8c52-8033-90f8-cdea31e793d0",
+        "3d54129a-8c52-8094-b111-ebb1afdf91f5"
       ]
     },
     {
@@ -68859,6 +69925,21 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-802d-a167-d342b5e4a774",
+      "slug": "way-up-recordings",
+      "name": "Way Up Recordings",
+      "country": "NZ",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8055-80dd-e819cb1da3a1"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80b4-9cc5-df75edd3c2b6"
+      ]
+    },
+    {
       "id": "2504129a-8c52-8048-aa04-f1bf705a0aa8",
       "slug": "we-are-busy-bodies",
       "name": "We Are Busy Bodies",
@@ -69056,6 +70137,21 @@
       ],
       "artistIds": [
         "3a44129a-8c52-80b4-be6d-d7a2e0cb1786"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80ef-98d9-f0426aa14300",
+      "slug": "wrwtfww-records",
+      "name": "WRWTFWW Records",
+      "country": "CH",
+      "bandcamp": "https://wereleasewhateverthefuckwewantrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80ac-9deb-f399f4f3455f"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-805b-be3d-f68b5212a2a5"
       ]
     },
     {

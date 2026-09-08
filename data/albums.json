@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-07T23:31:47Z",
+  "generatedAt": "2026-09-08T18:43:27Z",
   "counts": {
-    "albums": 1188,
-    "artists": 1044,
-    "labels": 655,
+    "albums": 1191,
+    "artists": 1046,
+    "labels": 657,
     "videos": 91
   },
   "albums": [
@@ -33908,6 +33908,39 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8008-9bea-d4a9fbce6046",
+      "slug": "various-artists-ritmo-fantasia-balearic-spanish-synth-pop-bo",
+      "artist": "Various Artists",
+      "album": "Ritmo Fantasía: Balearic Spanish Synth-Pop, Boogie And House (1982-1992)",
+      "url": "https://album.link/f33mjv0nxcktx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A83a712b6-57a9-4235-94d6-abc67199fe35%3Aa2185755300_10.jpg?table=block&id=3d54129a-8c52-8008-9bea-d4a9fbce6046&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Boogie",
+        "Balearic Beat",
+        "Dance-Pop"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-11-26",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
+      ],
+      "labels": [
+        "Soundway Records"
+      ]
+    },
+    {
       "id": "3b84129a-8c52-80c2-a7a7-ef38d586db6c",
       "slug": "aldorande-deux",
       "artist": "Aldorande",
@@ -35882,6 +35915,38 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8033-9442-cd6c1a32b016",
+      "slug": "red-axes-red-axes",
+      "artist": "Red Axes",
+      "album": "Red Axes",
+      "url": "https://album.link/xcqk7m7gndqsj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4c6a306a-adac-4acd-8934-ac3557763226%3Aa3893448647_10.jpg?table=block&id=3d54129a-8c52-8033-9442-cd6c1a32b016&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dark Disco",
+        "Electroclash",
+        "Electro House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-05-08",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-80a0-a4a1-f7f358c0d827"
+      ],
+      "artists": [
+        "Red Axes"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8083-96a9-f07765790e6f"
+      ],
+      "labels": [
+        "Dark Entries Records"
+      ]
+    },
+    {
       "id": "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
       "slug": "the-sweet-enoughs-marshmallow",
       "artist": "The Sweet Enoughs",
@@ -36827,6 +36892,36 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-80bf-bc60-da9d4c7a2695",
+      "slug": "fred-everything-long-way-home",
+      "artist": "Fred Everything",
+      "album": "Long Way Home",
+      "url": "https://album.link/xwxzqp5zhqcvc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A576845f9-eb27-4fae-ab34-5042187ed2c6%3Aa2262772232_10.jpg?table=block&id=3d54129a-8c52-80bf-bc60-da9d4c7a2695&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-06-22",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-800b-9864-ec94b039048e"
+      ],
+      "artists": [
+        "Fred Everything"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80d6-9940-e5027d40ac07"
+      ],
+      "labels": [
+        "Lazy Days Recordings"
+      ]
+    },
+    {
       "id": "1232e5c2-48d8-496e-aa9e-7f82a50f22c1",
       "slug": "yadava-it-rains-here",
       "artist": "Yadava",
@@ -37030,7 +37125,7 @@
       ],
       "types": [
         "Album",
-        "Compilation"
+        "Collaboration"
       ],
       "released": "2016-11-04",
       "year": 2016,
@@ -43843,6 +43938,24 @@
       ],
       "labelIds": [
         "2484129a-8c52-8053-9a67-cfd3b9aa2dd9"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d54129a-8c52-800b-9864-ec94b039048e",
+      "slug": "fred-everything",
+      "name": "Fred Everything",
+      "country": "CA",
+      "bandcamp": "https://fredeverything.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80bf-bc60-da9d4c7a2695"
+      ],
+      "genres": [
+        "Deep House"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80d6-9940-e5027d40ac07"
       ],
       "videoIds": []
     },
@@ -51925,6 +52038,26 @@
       "videoIds": []
     },
     {
+      "id": "3d54129a-8c52-80a0-a4a1-f7f358c0d827",
+      "slug": "red-axes",
+      "name": "Red Axes",
+      "country": "IL",
+      "bandcamp": "https://red-axes.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8033-9442-cd6c1a32b016"
+      ],
+      "genres": [
+        "Dark Disco",
+        "Electroclash",
+        "Electro House"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-8083-96a9-f07765790e6f"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-800c-a8cb-dca5406353ce",
       "slug": "red-snapper",
       "name": "Red Snapper",
@@ -56860,6 +56993,7 @@
         "24e4129a-8c52-80c4-864d-ef35463b5b9f",
         "3d44129a-8c52-8072-a478-e30d19a775f0",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
+        "3d54129a-8c52-8008-9bea-d4a9fbce6046",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97",
@@ -56876,6 +57010,8 @@
         "MPB",
         "Disco",
         "Funk",
+        "Balearic Beat",
+        "Dance-Pop",
         "Bossa Nova",
         "Lovers Rock",
         "Smooth Soul",
@@ -60360,6 +60496,21 @@
       ]
     },
     {
+      "id": "3d54129a-8c52-8083-96a9-f07765790e6f",
+      "slug": "dark-entries-records",
+      "name": "Dark Entries Records",
+      "country": "US",
+      "bandcamp": "https://darkentriesrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-8033-9442-cd6c1a32b016"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-80a0-a4a1-f7f358c0d827"
+      ]
+    },
+    {
       "id": "2434129a-8c52-8022-abd2-d0c412936e59",
       "slug": "dead-oceans",
       "name": "Dead Oceans",
@@ -63419,6 +63570,21 @@
       ],
       "artistIds": [
         "2504129a-8c52-803b-adf8-f81702f69fa6"
+      ]
+    },
+    {
+      "id": "3d54129a-8c52-80d6-9940-e5027d40ac07",
+      "slug": "lazy-days-recordings",
+      "name": "Lazy Days Recordings",
+      "country": "CA",
+      "bandcamp": "https://lazydaysrecordings.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d54129a-8c52-80bf-bc60-da9d4c7a2695"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-800b-9864-ec94b039048e"
       ]
     },
     {
@@ -67329,6 +67495,7 @@
         "54265483-5302-4e01-8f38-123740075942",
         "3be4129a-8c52-80cf-a767-ebbf7937068b",
         "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5",
+        "3d54129a-8c52-8008-9bea-d4a9fbce6046",
         "3d34129a-8c52-808a-a5e3-f9f5e1756283"
       ],
       "artistIds": [

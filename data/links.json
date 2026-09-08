@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T23:32:26Z",
+  "generatedAt": "2026-09-08T18:43:53Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -18805,6 +18805,58 @@
       "upc": "3614970930488",
       "tracks": 10,
       "releaseDate": "2016-11-04"
+    },
+    "3d54129a-8c52-8008-9bea-d4a9fbce6046": {
+      "source": "https://album.link/f33mjv0nxcktx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4B7UU67dZAfv7cEYK08XWU",
+        "pandora": "https://www.pandora.com/AL:10750830",
+        "deezer": "https://www.deezer.com/album/298151202",
+        "amazonMusic": "https://music.amazon.com/albums/B09G7KXBYM",
+        "tidal": "https://listen.tidal.com/album/218640676",
+        "napster": "https://play.napster.com/album/alb.651337682",
+        "yandex": "https://music.yandex.ru/album/18135616",
+        "boomplay": "https://www.boomplay.com/albums/31732746",
+        "anghami": "https://play.anghami.com/album/1026442016?refer=linktree",
+        "bandcamp": "https://soundwayrecords.bandcamp.com/album/ritmo-fantas-a-balearic-spanish-synth-pop-boogie-and-house-1982-1992-compiled-by-dj-trujillo",
+        "amazonStore": "https://amazon.com/dp/B09G7KXBYM"
+      },
+      "upc": "5060571361271",
+      "tracks": 21,
+      "releaseDate": "2021-11-26"
+    },
+    "3d54129a-8c52-8033-9442-cd6c1a32b016": {
+      "source": "https://album.link/xcqk7m7gndqsj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2XWxTnbxhF3BrU3YtfSgzo",
+        "pandora": "https://www.pandora.com/AL:4987233",
+        "deezer": "https://www.deezer.com/album/137432412",
+        "amazonMusic": "https://music.amazon.com/albums/B08669QTC1",
+        "tidal": "https://listen.tidal.com/album/134928030",
+        "napster": "https://play.napster.com/album/alb.457356572",
+        "yandex": "https://music.yandex.ru/album/10211030",
+        "boomplay": "https://www.boomplay.com/albums/8952083",
+        "anghami": "https://play.anghami.com/album/1011366411?refer=linktree",
+        "bandcamp": "https://red-axes.bandcamp.com/album/red-axes",
+        "amazonStore": "https://amazon.com/dp/B08669QTC1"
+      },
+      "upc": "192641467738",
+      "tracks": 11,
+      "releaseDate": "2020-05-08"
+    },
+    "3d54129a-8c52-80bf-bc60-da9d4c7a2695": {
+      "source": "https://album.link/xwxzqp5zhqcvc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/49IVyeI0DXiqRGafDF1350",
+        "pandora": "https://www.pandora.com/AL:1393406",
+        "tidal": "https://listen.tidal.com/album/89828905",
+        "yandex": "https://music.yandex.ru/album/6984542",
+        "boomplay": "https://www.boomplay.com/albums/9223675",
+        "bandcamp": "https://fredeverything.bandcamp.com/album/long-way-home"
+      },
+      "upc": "4251490716438",
+      "tracks": 12,
+      "releaseDate": "2018-06-22"
     }
   }
 }

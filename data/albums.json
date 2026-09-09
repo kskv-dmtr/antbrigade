@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-08T21:53:19Z",
+  "generatedAt": "2026-09-09T00:17:54Z",
   "counts": {
     "albums": 1210,
     "artists": 1064,
@@ -726,7 +726,8 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "Favorites"
+        "Favorites",
+        "[JUL 26]"
       ],
       "artistIds": [
         "3b14129a-8c52-8080-8d31-f9dc6e5cc00c"
@@ -3344,7 +3345,9 @@
       "released": "2026-04-30",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[APR 26]"
+      ],
       "artistIds": [
         "3ce4129a-8c52-8013-97af-fb1917597747"
       ],
@@ -38188,7 +38191,7 @@
       "slug": "1-800-mikey",
       "name": "1-800-Mikey",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://1-800-mikey.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3d04129a-8c52-804f-be67-cb44c3789f43",
@@ -38492,7 +38495,7 @@
       "slug": "akusmi",
       "name": "Akusmi",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://akusmi.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "39a4129a-8c52-8031-b220-d12550b432b3",
@@ -38929,7 +38932,7 @@
       "slug": "angine-de-poitrine",
       "name": "Angine de Poitrine",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://anginedepoitrine.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3404129a-8c52-8003-8e65-ffbe73c82305",
@@ -38992,7 +38995,7 @@
       "slug": "another-taste",
       "name": "Another Taste",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://another-taste.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "34d4129a-8c52-8014-a0aa-d45c1e185f78",
@@ -39073,7 +39076,7 @@
       "slug": "apifera",
       "name": "Apifera",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://apifera.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "a34f0120-4547-494d-a4a5-0d574b910212",
@@ -39294,7 +39297,7 @@
       "slug": "austin-tv",
       "name": "Austin TV",
       "country": "MX",
-      "bandcamp": null,
+      "bandcamp": "https://austin-tv.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1fe4129a-8c52-8088-abab-f6841d3d1c85",
@@ -39525,7 +39528,7 @@
       "slug": "balthvs",
       "name": "BALTHVS",
       "country": "CO",
-      "bandcamp": null,
+      "bandcamp": "https://balthvs.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "0505b721-816c-4941-bbc0-46a89c8e65fb",
@@ -39630,7 +39633,7 @@
       "slug": "barry-can-t-swim",
       "name": "Barry Can’t Swim",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://barrycantswim.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "22e4129a-8c52-802b-91d4-f0f4622ba4ca",
@@ -40102,7 +40105,7 @@
       "slug": "b-oto",
       "name": "Błoto",
       "country": "PL",
-      "bandcamp": null,
+      "bandcamp": "https://bloto.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2154129a-8c52-80de-872a-d777d46481c4",
@@ -40225,7 +40228,7 @@
       "slug": "body-maintenance",
       "name": "Body Maintenance",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://bodymaintenance.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2114129a-8c52-8076-ad91-e41cfb1e213a",
@@ -40595,7 +40598,7 @@
       "slug": "brijean",
       "name": "Brijean",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brijean.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "068a5bff-aab1-4dca-af05-b65f9e71496b",
@@ -40714,7 +40717,7 @@
       "slug": "c-a-r",
       "name": "C.A.R.",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://thisiscar.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1b34129a-8c52-805a-b09f-fe907d530978",
@@ -41088,7 +41091,7 @@
       "slug": "chain-whip",
       "name": "Chain Whip",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://chainwhip.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "4fe80a6e-2fd5-4cc5-a20f-ff6fd93f47eb",
@@ -53729,7 +53732,7 @@
       "slug": "say-she-she",
       "name": "Say She She",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://saysheshe.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2864129a-8c52-80b0-a763-db5eba532393",
@@ -56430,7 +56433,7 @@
       "slug": "the-natural-yogurt-band",
       "name": "The Natural Yogurt Band",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://thenaturalyogurtband.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2d54129a-8c52-803f-abd4-d0548299cf21",
@@ -57451,7 +57454,7 @@
       "slug": "traveler",
       "name": "Traveler",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://travelermetal.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "687435c6-aea3-4960-9b76-efc06be4c4af",
@@ -58442,7 +58445,7 @@
       "slug": "weval",
       "name": "Weval",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://weval.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2664129a-8c52-80ef-bcd9-d631d47bdddb",
@@ -59634,7 +59637,7 @@
       "slug": "anti-records",
       "name": "Anti- Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://antirecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59873,7 +59876,7 @@
       "slug": "ato-records",
       "name": "ATO Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://atorecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60348,7 +60351,7 @@
       "slug": "bmm-records",
       "name": "BMM Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://bmmrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65144,7 +65147,7 @@
       "slug": "metal-blade-records",
       "name": "Metal Blade Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://metalblade.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66275,7 +66278,7 @@
       "slug": "nuclear-blast",
       "name": "Nuclear Blast",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://nuclearblast.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68026,7 +68029,7 @@
       "slug": "sdban-records",
       "name": "Sdban Records",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://sdbanrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68651,7 +68654,7 @@
       "slug": "static-shock-records",
       "name": "Static Shock Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://staticshockrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-09T11:28:17Z",
+  "generatedAt": "2026-09-09T13:27:26Z",
   "counts": {
     "albums": 1210,
     "artists": 1064,
@@ -36927,9 +36927,7 @@
       "released": "2019-05-14",
       "year": 2019,
       "origYear": null,
-      "playlists": [
-        "Favorites"
-      ],
+      "playlists": [],
       "artistIds": [
         "2504129a-8c52-8065-8180-c4f2b59fd996"
       ],
@@ -37742,9 +37740,7 @@
       "released": "2015-02-24",
       "year": 2015,
       "origYear": null,
-      "playlists": [
-        "Favorites"
-      ],
+      "playlists": [],
       "artistIds": [
         "3cf4129a-8c52-8066-9d85-c9c4d78042df"
       ],

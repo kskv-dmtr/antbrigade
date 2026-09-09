@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T21:55:36Z",
+  "generatedAt": "2026-09-09T22:35:50Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19187,6 +19187,89 @@
       "upc": "00889176079405",
       "tracks": 6,
       "releaseDate": "2000-01-18"
+    },
+    "3d64129a-8c52-805c-b611-e68c5f514ff8": {
+      "source": "https://album.link/tpnfpkphxrgzf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0Sj5TrXyDjUMXRAhswL7o2",
+        "pandora": "https://www.pandora.com/AL:59550778",
+        "tidal": "https://listen.tidal.com/album/489240566",
+        "boomplay": "https://www.boomplay.com/albums/125148732"
+      },
+      "upc": "659457252236",
+      "tracks": 12,
+      "releaseDate": "2026-04-03"
+    },
+    "3d64129a-8c52-80ef-aaf4-eff0c684ea9b": {
+      "source": "https://album.link/mxzdg9kg697jb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1s1gdlBmOOWfiyt0Pye90s",
+        "pandora": "https://www.pandora.com/AL:9823414",
+        "deezer": "https://www.deezer.com/album/240032832",
+        "amazonMusic": "https://music.amazon.com/albums/B097YPWLTY",
+        "tidal": "https://listen.tidal.com/album/189044411",
+        "yandex": "https://music.yandex.ru/album/16491197",
+        "boomplay": "https://www.boomplay.com/albums/27493635",
+        "anghami": "https://play.anghami.com/album/1022137020?refer=linktree",
+        "bandcamp": "https://scrimshire.bandcamp.com/album/nothing-feels-like-everything",
+        "amazonStore": "https://amazon.com/dp/B097YPWLTY"
+      },
+      "upc": "3616557117206",
+      "tracks": 9,
+      "releaseDate": "2021-10-15"
+    },
+    "3d64129a-8c52-80d8-8696-e0853a660a3f": {
+      "source": "https://album.link/gthcpkjtwdnxn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5RxQEvJ84KKVe7zebyDjgv",
+        "pandora": "https://www.pandora.com/AL:14505896",
+        "deezer": "https://www.deezer.com/album/240528762",
+        "amazonMusic": "https://music.amazon.com/albums/B0984GYN4H",
+        "tidal": "https://listen.tidal.com/album/189241570",
+        "yandex": "https://music.yandex.ru/album/16537588",
+        "amazonStore": "https://amazon.com/dp/B0984GYN4H"
+      },
+      "upc": "3760179356533",
+      "tracks": 8,
+      "releaseDate": "2021-10-08"
+    },
+    "3d64129a-8c52-8051-8572-ee10275dfaca": {
+      "source": "https://album.link/dctpb02rgbdbk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2fT7HHrCOOp0MrMtFb28QF",
+        "pandora": "https://www.pandora.com/AL:7881619",
+        "deezer": "https://www.deezer.com/album/200539212",
+        "amazonMusic": "https://music.amazon.com/albums/B08T65QNCR",
+        "tidal": "https://listen.tidal.com/album/169776008",
+        "napster": "https://play.napster.com/album/alb.553561846",
+        "yandex": "https://music.yandex.ru/album/13503808",
+        "boomplay": "https://www.boomplay.com/albums/20387934",
+        "anghami": "https://play.anghami.com/album/1017281647?refer=linktree",
+        "bandcamp": "https://felipegordon.bandcamp.com/album/a-landscape-onomatopeya-lp",
+        "amazonStore": "https://amazon.com/dp/B08T65QNCR"
+      },
+      "upc": "5056467305559",
+      "tracks": 11,
+      "releaseDate": "2021-04-02"
+    },
+    "3d64129a-8c52-80ef-b59e-f879829967c2": {
+      "source": "https://album.link/8kn40qmq2mxq2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1cbxV2dZzbuu0eKURuDzJ2",
+        "pandora": "https://www.pandora.com/AL:5989518",
+        "deezer": "https://www.deezer.com/album/347529557",
+        "amazonMusic": "https://music.amazon.com/albums/B0B9ZZNSN1",
+        "tidal": "https://listen.tidal.com/album/243643035",
+        "napster": "https://play.napster.com/album/alb.488373667",
+        "yandex": "https://music.yandex.ru/album/11289384",
+        "boomplay": "https://www.boomplay.com/albums/13722347",
+        "anghami": "https://play.anghami.com/album/1013429468?refer=linktree",
+        "bandcamp": "https://freshselects.bandcamp.com/album/ordeal-erasure",
+        "amazonStore": "https://amazon.com/dp/B0B9ZZNSN1"
+      },
+      "upc": "3616406879583",
+      "tracks": 11,
+      "releaseDate": "2020-07-23"
     }
   }
 }

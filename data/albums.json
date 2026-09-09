@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-09T19:47:44Z",
+  "generatedAt": "2026-09-09T22:35:03Z",
   "counts": {
-    "albums": 1210,
-    "artists": 1064,
-    "labels": 666,
+    "albums": 1215,
+    "artists": 1067,
+    "labels": 669,
     "videos": 91
   },
   "albums": [
@@ -4163,6 +4163,38 @@
       ],
       "labels": [
         "College Of Knowledge Records"
+      ]
+    },
+    {
+      "id": "3d64129a-8c52-805c-b611-e68c5f514ff8",
+      "slug": "los-retros-odisea",
+      "artist": "Los Retros",
+      "album": "Odisea",
+      "url": "https://album.link/tpnfpkphxrgzf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A37521125-7549-4ba2-b941-f62c6c4d8b57%3Aa1294965842_10.jpg?table=block&id=3d64129a-8c52-805c-b611-e68c5f514ff8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Bedroom Pop",
+        "City Pop",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-03",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d64129a-8c52-8051-ad18-ced3b545e998"
+      ],
+      "artists": [
+        "Los Retros"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
       ]
     },
     {
@@ -22009,10 +22041,12 @@
         "Armor"
       ],
       "labelIds": [
-        "24e4129a-8c52-8004-a6a0-cdae56d44b61"
+        "24e4129a-8c52-8004-a6a0-cdae56d44b61",
+        "3d64129a-8c52-8028-ba64-e1fa11937946"
       ],
       "labels": [
-        "11PM Records"
+        "11PM Records",
+        "Gone Blind Records"
       ]
     },
     {
@@ -29633,10 +29667,12 @@
         "Skeleten"
       ],
       "labelIds": [
-        "2434129a-8c52-8067-992a-ef333ce2f77e"
+        "2434129a-8c52-8067-992a-ef333ce2f77e",
+        "3d64129a-8c52-8048-b717-f09ca71ca83c"
       ],
       "labels": [
-        "Astral People Recordings"
+        "Astral People Recordings",
+        "2MR"
       ]
     },
     {
@@ -34224,6 +34260,37 @@
       ]
     },
     {
+      "id": "3d64129a-8c52-80ef-aaf4-eff0c684ea9b",
+      "slug": "scrimshire-nothing-feels-like-everything",
+      "artist": "Scrimshire",
+      "album": "Nothing Feels Like Everything",
+      "url": "https://album.link/mxzdg9kg697jb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7be7f30b-f1d6-4e99-86a6-bb22a5252436%3Aa1564281728_10.jpg?table=block&id=3d64129a-8c52-80ef-aaf4-eff0c684ea9b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "New Age"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-15",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d64129a-8c52-806f-acab-c5fdfaec1a57"
+      ],
+      "artists": [
+        "Scrimshire"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8036-930d-f6635b80b570"
+      ],
+      "labels": [
+        "Albert’s Favourites"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-80e7-9142-e97167674f42",
       "slug": "vanishing-twin-ookii-gekkou",
       "artist": "Vanishing Twin",
@@ -34344,6 +34411,38 @@
       ],
       "labels": [
         "BBE Music"
+      ]
+    },
+    {
+      "id": "3d64129a-8c52-80d8-8696-e0853a660a3f",
+      "slug": "various-records-disco-reggae-vol-4",
+      "artist": "Various Records",
+      "album": "Disco Reggae Vol. 4",
+      "url": "https://album.link/gthcpkjtwdnxn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa484a504-e9ef-4edc-ae47-d2744bfc1c7f%3Aa2298785374_10.jpg?table=block&id=3d64129a-8c52-80d8-8696-e0853a660a3f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco",
+        "Reggae",
+        "Boogie"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-10-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3d64129a-8c52-80f1-84dc-cf4ddf3dcc13"
+      ],
+      "labels": [
+        "Stix Records"
       ]
     },
     {
@@ -35469,6 +35568,37 @@
       ]
     },
     {
+      "id": "3d64129a-8c52-8051-8572-ee10275dfaca",
+      "slug": "felipe-gordon-a-landscape-onomatopeya",
+      "artist": "Felipe Gordon  A Landscape Onomatopeya",
+      "album": "",
+      "url": "https://album.link/dctpb02rgbdbk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ada686050-c5dd-4009-b470-b532ee5b9722%3Aa3114450979_10.jpg?table=block&id=3d64129a-8c52-8051-8572-ee10275dfaca&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Funky House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-02",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-804e-88f4-ce5819e39e45"
+      ],
+      "artists": [
+        "Felipe Gordon"
+      ],
+      "labelIds": [
+        "3854129a-8c52-80e4-9ed5-cbc6f9cd3340"
+      ],
+      "labels": [
+        "Shall Not Fade"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-8082-bc26-c928adf20ab2",
       "slug": "str4ta-aspects",
       "artist": "STR4TA",
@@ -36131,6 +36261,37 @@
       ],
       "labels": [
         "Frederiksberg Records"
+      ]
+    },
+    {
+      "id": "3d64129a-8c52-80ef-b59e-f879829967c2",
+      "slug": "mirror-gazer-ordeal-erasure",
+      "artist": "Mirror Gazer",
+      "album": "Ordeal Erasure",
+      "url": "https://album.link/8kn40qmq2mxq2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad94316f1-d21b-4585-917f-8f0add1602f9%3Aa1277202274_10.jpg?table=block&id=3d64129a-8c52-80ef-b59e-f879829967c2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Rock",
+        "Psychedelic Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-07-23",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d64129a-8c52-806d-a89e-cf6cd20c48a6"
+      ],
+      "artists": [
+        "Mirror Gazer"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
+      ],
+      "labels": [
+        "Fresh Selects"
       ]
     },
     {
@@ -39138,7 +39299,8 @@
         "Hardcore Punk"
       ],
       "labelIds": [
-        "24e4129a-8c52-8004-a6a0-cdae56d44b61"
+        "24e4129a-8c52-8004-a6a0-cdae56d44b61",
+        "3d64129a-8c52-8028-ba64-e1fa11937946"
       ],
       "videoIds": []
     },
@@ -40969,7 +41131,7 @@
       "slug": "cavolo-nero",
       "name": "Cavolo Nero",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://cavolonero.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2974129a-8c52-8049-ae99-f48c24066677",
@@ -44152,13 +44314,15 @@
       "albumIds": [
         "3854129a-8c52-80ef-9d06-f49b0fe64f87",
         "16bfa06d-1366-46fb-9d44-81e563d986e7",
-        "dd99ea2d-c281-4e4f-92bf-e64abfb941f6"
+        "dd99ea2d-c281-4e4f-92bf-e64abfb941f6",
+        "3d64129a-8c52-8051-8572-ee10275dfaca"
       ],
       "genres": [
         "Deep House",
         "Jazzy House",
         "Downtempo",
-        "Electronic"
+        "Electronic",
+        "Funky House"
       ],
       "labelIds": [
         "3854129a-8c52-80e4-9ed5-cbc6f9cd3340",
@@ -46882,7 +47046,7 @@
       "slug": "jnbo",
       "name": "Jnbo",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://jnbo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "34f4129a-8c52-808a-9008-c4cd90d7f914"
@@ -47017,7 +47181,7 @@
       "slug": "jonathan-personne",
       "name": "Jonathan Personne",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://jonathanpersonne.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1bc4129a-8c52-80d3-8ec2-ef4ad07d406f"
@@ -48841,6 +49005,26 @@
       "videoIds": []
     },
     {
+      "id": "3d64129a-8c52-8051-ad18-ced3b545e998",
+      "slug": "los-retros",
+      "name": "Los Retros",
+      "country": "US",
+      "bandcamp": "https://losretros.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d64129a-8c52-805c-b611-e68c5f514ff8"
+      ],
+      "genres": [
+        "Bedroom Pop",
+        "City Pop",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24a4129a-8c52-803b-81b7-d2454f26db81",
       "slug": "lou-hayter",
       "name": "Lou Hayter",
@@ -50091,6 +50275,25 @@
       "labelIds": [
         "24e4129a-8c52-80f1-8c1b-c1fe2c458448",
         "24e4129a-8c52-801a-b9b9-cc9eabe7be17"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d64129a-8c52-806d-a89e-cf6cd20c48a6",
+      "slug": "mirror-gazer",
+      "name": "Mirror Gazer",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d64129a-8c52-80ef-b59e-f879829967c2"
+      ],
+      "genres": [
+        "Indie Rock",
+        "Psychedelic Rock"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
       ],
       "videoIds": []
     },
@@ -53763,6 +53966,25 @@
       "videoIds": []
     },
     {
+      "id": "3d64129a-8c52-806f-acab-c5fdfaec1a57",
+      "slug": "scrimshire",
+      "name": "Scrimshire",
+      "country": "GB",
+      "bandcamp": "https://scrimshire.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d64129a-8c52-80ef-aaf4-eff0c684ea9b"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "New Age"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8036-930d-f6635b80b570"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-80da-91c6-e87e63da7afa",
       "slug": "scumbag-millionaire",
       "name": "Scumbag Millionaire",
@@ -54178,7 +54400,8 @@
         "Dream Pop"
       ],
       "labelIds": [
-        "2434129a-8c52-8067-992a-ef333ce2f77e"
+        "2434129a-8c52-8067-992a-ef333ce2f77e",
+        "3d64129a-8c52-8048-b717-f09ca71ca83c"
       ],
       "videoIds": []
     },
@@ -57928,6 +58151,7 @@
         "3d44129a-8c52-8072-a478-e30d19a775f0",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "3d54129a-8c52-8008-9bea-d4a9fbce6046",
+        "3d64129a-8c52-80d8-8696-e0853a660a3f",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97",
@@ -57946,6 +58170,7 @@
         "Funk",
         "Balearic Beat",
         "Dance-Pop",
+        "Reggae",
         "Bossa Nova",
         "Lovers Rock",
         "Smooth Soul",
@@ -57956,6 +58181,7 @@
         "24e4129a-8c52-807a-920f-fb0794ae2606",
         "2494129a-8c52-800b-92dc-e0c48b04def1",
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
+        "3d64129a-8c52-80f1-84dc-cf4ddf3dcc13",
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
         "2524129a-8c52-8064-ac08-c6bb33bff5df",
         "3b74129a-8c52-8060-af6b-ece8a3271488",
@@ -59279,7 +59505,7 @@
       "slug": "11pm-records",
       "name": "11PM Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://11pmrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59304,6 +59530,21 @@
       ],
       "artistIds": [
         "39b4129a-8c52-805a-a891-cb2844cc1afd"
+      ]
+    },
+    {
+      "id": "3d64129a-8c52-8048-b717-f09ca71ca83c",
+      "slug": "2mr",
+      "name": "2MR",
+      "country": "US",
+      "bandcamp": "https://2mrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "b3cc47df-4f9d-4973-8459-2ea0d74f920c"
+      ],
+      "artistIds": [
+        "2484129a-8c52-80b9-a5e3-f7332c1af7b5"
       ]
     },
     {
@@ -59403,7 +59644,7 @@
       "slug": "acrophase-records",
       "name": "Acrophase Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://acrophaserecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59475,12 +59716,14 @@
         "3cd4129a-8c52-80ce-8b61-e332a50937ab",
         "cd65a8e1-4854-4000-8a38-e854f706fadb",
         "5b47f2c2-5fd0-4374-ac74-48f897a1e32a",
-        "c2a57a30-242f-4a51-beb2-cf27cdd9d022"
+        "c2a57a30-242f-4a51-beb2-cf27cdd9d022",
+        "3d64129a-8c52-80ef-aaf4-eff0c684ea9b"
       ],
       "artistIds": [
         "2504129a-8c52-805e-bba4-cb0169d5bcae",
         "3cd4129a-8c52-8012-9bde-f05c804df769",
-        "2434129a-8c52-8011-b9fc-e62b618d726d"
+        "2434129a-8c52-8011-b9fc-e62b618d726d",
+        "3d64129a-8c52-806f-acab-c5fdfaec1a57"
       ]
     },
     {
@@ -59488,7 +59731,7 @@
       "slug": "alien-snatch-records",
       "name": "Alien Snatch! Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://aliensnatch.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59718,7 +59961,7 @@
       "slug": "artoffact-records",
       "name": "Artoffact Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://artoffactrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -59981,7 +60224,7 @@
       "slug": "balmat",
       "name": "Balmat",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://balmat.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60039,7 +60282,7 @@
       "slug": "bayonet-records",
       "name": "Bayonet Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bayonetrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60072,7 +60315,7 @@
       "slug": "beach-impediment-records",
       "name": "Beach Impediment Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://beachimpedimentrecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60380,7 +60623,7 @@
       "slug": "bonsound-records",
       "name": "Bonsound Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://bonsound.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61008,7 +61251,7 @@
       "slug": "college-of-knowledge-records",
       "name": "College Of Knowledge Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://collegeofknowledgerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61781,7 +62024,7 @@
       "slug": "dirtnap-records",
       "name": "Dirtnap Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dirtnaprecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61815,7 +62058,7 @@
       "slug": "discos-gele",
       "name": "DISCOS GELE",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://discosgele.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61877,8 +62120,8 @@
       "slug": "domino-recording-company",
       "name": "Domino Recording Company",
       "country": "GB",
-      "bandcamp": null,
-      "bandcamp2": null,
+      "bandcamp": "https://dominoeurope.bandcamp.com/",
+      "bandcamp2": "https://dominorecordco.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "29d4129a-8c52-8081-8023-cea9aae8d67b",
@@ -62024,7 +62267,7 @@
       "slug": "easy-eye-sound",
       "name": "Easy Eye Sound",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://easyeyesound.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62134,7 +62377,7 @@
       "slug": "epitaph",
       "name": "Epitaph",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://epitaph.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62636,7 +62879,7 @@
       "slug": "four-flies-records",
       "name": "Four Flies Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://fourfliesrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62714,14 +62957,16 @@
       "slug": "fresh-selects",
       "name": "Fresh Selects",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://freshselects.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "aa6fbb76-1dae-4af7-ac95-03c5c52010fe"
+        "aa6fbb76-1dae-4af7-ac95-03c5c52010fe",
+        "3d64129a-8c52-80ef-b59e-f879829967c2"
       ],
       "artistIds": [
-        "2504129a-8c52-80bc-8d2f-d86951a2cda2"
+        "2504129a-8c52-80bc-8d2f-d86951a2cda2",
+        "3d64129a-8c52-806d-a89e-cf6cd20c48a6"
       ]
     },
     {
@@ -62942,6 +63187,21 @@
       ]
     },
     {
+      "id": "3d64129a-8c52-8028-ba64-e1fa11937946",
+      "slug": "gone-blind-records",
+      "name": "Gone Blind Records",
+      "country": "ID",
+      "bandcamp": "https://goneblindrecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "52f872bc-af86-4bfc-80d9-9786fa294e5c"
+      ],
+      "artistIds": [
+        "24e4129a-8c52-80aa-a63e-d716111561b7"
+      ]
+    },
+    {
       "id": "2f04129a-8c52-801e-9926-e5cf15568223",
       "slug": "goner-records",
       "name": "Goner Records",
@@ -63057,7 +63317,7 @@
       "slug": "guruguru-brain",
       "name": "Guruguru Brain",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://gurugurubrain.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -64959,7 +65219,7 @@
       "slug": "mandatory-music",
       "name": "Mandatory Music",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://mandatorymusic.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65007,7 +65267,7 @@
       "slug": "matador-records",
       "name": "Matador Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://matadorrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65388,7 +65648,7 @@
       "slug": "mood-hut",
       "name": "Mood Hut",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://moodhut.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65539,7 +65799,7 @@
       "slug": "music-from-memory",
       "name": "Music From Memory",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://music-from-memory.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65573,7 +65833,7 @@
       "slug": "mute",
       "name": "Mute",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://muterecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65684,7 +65944,7 @@
       "slug": "neon-taste-records",
       "name": "Neon Taste Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://neontasterecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65702,7 +65962,7 @@
       "slug": "nettwerk",
       "name": "Nettwerk",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://nettwerk.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66539,7 +66799,7 @@
       "slug": "partisan-records",
       "name": "Partisan Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://partisanrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66699,7 +66959,7 @@
       "slug": "periodica-records",
       "name": "Periodica Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://periodicarecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66718,7 +66978,7 @@
       "slug": "permanent-vacation",
       "name": "Permanent Vacation",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://perm-vac.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66827,7 +67087,7 @@
       "slug": "pirates-press-records",
       "name": "Pirates Press Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://piratespressrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -67175,7 +67435,7 @@
       "slug": "pure-noise-records",
       "name": "Pure Noise Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://purenoise.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@PureNoiseRecs",
       "albumIds": [
@@ -67316,7 +67576,7 @@
       "slug": "raw-tapes-records",
       "name": "Raw Tapes Records",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://rawtapes.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68074,7 +68334,7 @@
       "slug": "secret-city-records",
       "name": "Secret City Records",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://secretcityrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68184,11 +68444,12 @@
       "slug": "shall-not-fade",
       "name": "Shall Not Fade",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://shallnotfade.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3854129a-8c52-80ef-9d06-f49b0fe64f87"
+        "3854129a-8c52-80ef-9d06-f49b0fe64f87",
+        "3d64129a-8c52-8051-8572-ee10275dfaca"
       ],
       "artistIds": [
         "2504129a-8c52-804e-88f4-ce5819e39e45"
@@ -68698,6 +68959,21 @@
       ]
     },
     {
+      "id": "3d64129a-8c52-80f1-84dc-cf4ddf3dcc13",
+      "slug": "stix-records",
+      "name": "Stix Records",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d64129a-8c52-80d8-8696-e0853a660a3f"
+      ],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ]
+    },
+    {
       "id": "2514129a-8c52-80d0-9997-d70a46aa1a26",
       "slug": "stomp-records",
       "name": "Stomp Records",
@@ -68740,6 +69016,7 @@
       "youtube": "https://www.youtube.com/@stonesthrow",
       "albumIds": [
         "3914129a-8c52-80e6-b3d2-ddf2259a9530",
+        "3d64129a-8c52-805c-b611-e68c5f514ff8",
         "2e04129a-8c52-808d-b82c-ef5bbd1e5d0c",
         "25d4129a-8c52-8027-baab-d5961aa3df9e",
         "20b4129a-8c52-801d-9ab6-e7aea1ffec46",
@@ -68755,6 +69032,7 @@
       ],
       "artistIds": [
         "2434129a-8c52-8013-b879-daddf61fdb34",
+        "3d64129a-8c52-8051-ad18-ced3b545e998",
         "2e04129a-8c52-806d-a05c-ff159cb2a3d0",
         "25d4129a-8c52-80af-8d99-d6a03f331ae1",
         "2444129a-8c52-807f-8d62-cecfc27a6f7e",
@@ -69140,7 +69418,7 @@
       "slug": "third-man-records",
       "name": "Third Man Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://thirdmanrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69434,7 +69712,7 @@
       "slug": "trouble-in-mind-records",
       "name": "Trouble In Mind Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://troubleinmindrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69953,7 +70231,7 @@
       "slug": "welfare-sounds-records",
       "name": "Welfare Sounds & Records",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://welfaresounds.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -70084,7 +70362,7 @@
       "slug": "wonderwheel-recordings",
       "name": "Wonderwheel Recordings",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://wonderwheelrecordings.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

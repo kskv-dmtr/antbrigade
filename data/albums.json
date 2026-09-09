@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-09T13:27:26Z",
+  "generatedAt": "2026-09-09T16:41:28Z",
   "counts": {
     "albums": 1210,
     "artists": 1064,
@@ -726,7 +726,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[JUL 26]"
+        "[July 26]"
       ],
       "artistIds": [
         "3b14129a-8c52-8080-8d31-f9dc6e5cc00c"
@@ -1267,7 +1267,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[JUL 26]"
+        "[July 26]"
       ],
       "artistIds": [
         "3c14129a-8c52-80f5-8dd5-d000d740375b"
@@ -1971,7 +1971,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[JUN 26]"
+        "[June 26]"
       ],
       "artistIds": [
         "3b84129a-8c52-8053-9c18-dcce0c9c1ad1"
@@ -2259,7 +2259,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[MAY 26]"
+        "[May 26]"
       ],
       "artistIds": [
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e"
@@ -3152,7 +3152,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[MAY 26]"
+        "[May 26]"
       ],
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
@@ -3345,7 +3345,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[APR 26]"
+        "[April 26]"
       ],
       "artistIds": [
         "3ce4129a-8c52-8013-97af-fb1917597747"
@@ -60125,7 +60125,7 @@
       "slug": "bella-union",
       "name": "Bella Union",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://bellaunion.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60896,7 +60896,7 @@
       "slug": "closed-casket-activities",
       "name": "Closed Casket Activities",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://closedcasketactivities.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -60977,7 +60977,7 @@
       "slug": "colemine-records",
       "name": "Colemine Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://coleminerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61543,7 +61543,7 @@
       "slug": "deewee",
       "name": "Deewee",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://deewee.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61934,7 +61934,7 @@
       "slug": "drunken-sailor-records",
       "name": "Drunken Sailor Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://drunkensailorrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62913,7 +62913,7 @@
       "slug": "gondwana-records",
       "name": "Gondwana Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://gondwanarecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -65169,7 +65169,7 @@
       "slug": "mexican-summer",
       "name": "Mexican Summer",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://mexicansummer.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69001,7 +69001,7 @@
       "slug": "technicolour",
       "name": "Technicolour",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://technicolourrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

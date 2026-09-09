@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-09T16:41:28Z",
+  "generatedAt": "2026-09-09T19:47:44Z",
   "counts": {
     "albums": 1210,
     "artists": 1064,
@@ -726,7 +726,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[July 26]"
+        "[July '26]"
       ],
       "artistIds": [
         "3b14129a-8c52-8080-8d31-f9dc6e5cc00c"
@@ -1140,7 +1140,9 @@
       "released": "2026-07-10",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[July '26]"
+      ],
       "artistIds": [
         "3ae4129a-8c52-808c-9c06-d2927dc7bae0"
       ],
@@ -1171,7 +1173,9 @@
       "released": "2026-07-10",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[July '26]"
+      ],
       "artistIds": [
         "2dc4129a-8c52-8066-8257-e3d6a3c4ea18"
       ],
@@ -1267,7 +1271,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[July 26]"
+        "[July '26]"
       ],
       "artistIds": [
         "3c14129a-8c52-80f5-8dd5-d000d740375b"
@@ -1430,7 +1434,9 @@
       "released": "2026-06-26",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[June '26]"
+      ],
       "artistIds": [
         "38c4129a-8c52-8019-b7b6-c96fb5e3cd3a"
       ],
@@ -1939,7 +1945,9 @@
       "released": "2026-06-09",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[June '26]"
+      ],
       "artistIds": [
         "3944129a-8c52-8043-a7ae-c6bc715ad30b"
       ],
@@ -1971,7 +1979,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[June 26]"
+        "[June '26]"
       ],
       "artistIds": [
         "3b84129a-8c52-8053-9c18-dcce0c9c1ad1"
@@ -2066,7 +2074,9 @@
       "released": "2026-06-05",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "[June '26]"
+      ],
       "artistIds": [
         "2504129a-8c52-80e2-8d5f-ff98ff79183e"
       ],
@@ -2259,7 +2269,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[May 26]"
+        "[May '26]"
       ],
       "artistIds": [
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e"
@@ -3152,7 +3162,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[May 26]"
+        "[May '26]"
       ],
       "artistIds": [
         "2404129a-8c52-8020-b165-edcb1d5c21f7"
@@ -3345,7 +3355,7 @@
       "year": 2026,
       "origYear": null,
       "playlists": [
-        "[April 26]"
+        "[April '26]"
       ],
       "artistIds": [
         "3ce4129a-8c52-8013-97af-fb1917597747"

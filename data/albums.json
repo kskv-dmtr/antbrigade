@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-10T19:44:38Z",
+  "generatedAt": "2026-09-10T22:37:19Z",
   "counts": {
     "albums": 1232,
     "artists": 1078,
     "labels": 676,
-    "videos": 92
+    "videos": 93
   },
   "albums": [
     {
@@ -41294,7 +41294,7 @@
       "name": "Brian Fallon",
       "country": "US",
       "bandcamp": "https://brianfallon.bandcamp.com/music",
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@BrianFallonMusic",
       "albumIds": [
         "3d74129a-8c52-803c-b478-fd8eec98bbd6"
       ],
@@ -41305,7 +41305,9 @@
       "labelIds": [
         "3d74129a-8c52-80b2-81c1-eed19c5b85de"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3d74129a-8c52-80f9-bc52-f4743aabf53b"
+      ]
     },
     {
       "id": "2434129a-8c52-804d-a48f-c699f3901480",
@@ -71617,6 +71619,19 @@
         "2894129a-8c52-80d7-a3d3-cf8d088ad296"
       ],
       "slug": "blue-earth-sound-half-half"
+    },
+    {
+      "id": "3d74129a-8c52-80f9-bc52-f4743aabf53b",
+      "title": "Brian Fallon | Not Bad for New Jersey",
+      "url": "https://youtu.be/1uyTONAlPm8?si=Jtgu4etxfX3iGI0s",
+      "kind": "Official Visualizer",
+      "released": "2026-05-13",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "3d74129a-8c52-80c7-b00c-d54859c5dc38"
+      ],
+      "slug": "brian-fallon-not-bad-for-new-jersey"
     },
     {
       "id": "24b4129a-8c52-8059-8fe4-ce3745e38d05",

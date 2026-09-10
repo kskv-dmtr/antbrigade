@@ -7,19 +7,12 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { genres, albumById, plural } from '../../lib/db.js';
+import { genres, plural } from '../../lib/db.js';
 
-/* Сколько исполнителей в жанре — считаем по его же релизам: своего поля
-   у жанра в Notion нет, он и сам собирается из релизов. Через Set: у
-   релиза бывает двое исполнителей, и один исполнитель обычно значится в
-   жанре не раз. Тот же счёт, что и в блоке Info на странице жанра. */
-const исполнителей = new Map(genres.map((g) => {
-  const свои = new Set();
-  for (const id of g.albumIds) {
-    for (const artistId of albumById.get(id)?.artistIds ?? []) свои.add(artistId);
-  }
-  return [g.slug, свои.size];
-}));
+/* Счёт исполнителей в жанре — по его же релизам, через Set — считался здесь
+   несколько часов 11 сентября 2026 и стоял второй величиной в карточке.
+   Убран: в карточке считается то, ради чего запись открывают, а это релизы.
+   Число исполнителей у жанра осталось на его собственной странице. */
 
 /* Раскладка та же, что у артистов и лейблов: по первой букве, порядок
    алфавитный. Прежний, «сначала крупные жанры», остался в сортировке под
@@ -134,7 +127,6 @@ let выведено = 0;
               href={`/genres/${genre.slug}`}
               name={genre.name}
               left={plural(genre.count, 'release', 'releases')}
-              right={plural(исполнителей.get(genre.slug) ?? 0, 'artist', 'artists')}
             />
           </li>
         ))}

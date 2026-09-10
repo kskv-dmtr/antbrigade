@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:35:50Z",
+  "generatedAt": "2026-09-10T11:24:58Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19270,6 +19270,80 @@
       "upc": "3616406879583",
       "tracks": 11,
       "releaseDate": "2020-07-23"
+    },
+    "3d74129a-8c52-8002-913b-e260cc2515e3": {
+      "source": "https://album.link/gnj5xw72p2w0g",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0msliOKoJh1aYmcpuEoBn2",
+        "pandora": "https://www.pandora.com/AL:11191067",
+        "deezer": "https://www.deezer.com/album/247979822",
+        "amazonMusic": "https://music.amazon.com/albums/B09BDM7WSN",
+        "tidal": "https://listen.tidal.com/album/192495520",
+        "napster": "https://play.napster.com/album/alb.620580350",
+        "yandex": "https://music.yandex.ru/album/18915161",
+        "boomplay": "https://www.boomplay.com/albums/33693358",
+        "anghami": "https://play.anghami.com/album/1023412562?refer=linktree",
+        "bandcamp": "https://curtisharding.bandcamp.com/album/if-words-were-flowers",
+        "amazonStore": "https://amazon.com/dp/B09BDM7WSN"
+      },
+      "upc": "0045778769162",
+      "tracks": 11,
+      "releaseDate": "2021-11-05"
+    },
+    "3d74129a-8c52-8020-8094-f9fa6846c2ac": {
+      "source": "https://album.link/nrbzfpbf0s3zv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/58jh2fv0ZWkGTNzQ1O7Tsq",
+        "pandora": "https://www.pandora.com/AL:11205240",
+        "deezer": "https://www.deezer.com/album/267898502",
+        "amazonMusic": "https://music.amazon.com/albums/B09F6F7QJL",
+        "tidal": "https://listen.tidal.com/album/202394823",
+        "napster": "https://play.napster.com/album/alb.620886306",
+        "yandex": "https://music.yandex.ru/album/18946625",
+        "boomplay": "https://www.boomplay.com/albums/33784010",
+        "bandcamp": "https://nightmaresonwax.bandcamp.com/album/shout-out-to-freedom",
+        "amazonStore": "https://amazon.com/dp/B09F6F7QJL"
+      },
+      "upc": "0801061032135",
+      "tracks": 15,
+      "releaseDate": "2021-10-29"
+    },
+    "3d74129a-8c52-8054-8807-c819298cfa1e": {
+      "source": "https://album.link/s9mz3q5t8g0bn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1Hn7OT8gETuVzXTtRmB6yY",
+        "pandora": "https://www.pandora.com/AL:8868560",
+        "deezer": "https://www.deezer.com/album/221099482",
+        "amazonMusic": "https://music.amazon.com/albums/B092249TJ7",
+        "tidal": "https://listen.tidal.com/album/184699568",
+        "napster": "https://play.napster.com/album/alb.573588293",
+        "yandex": "https://music.yandex.ru/album/14749589",
+        "boomplay": "https://www.boomplay.com/albums/23911499",
+        "anghami": "https://play.anghami.com/album/1019171342?refer=linktree",
+        "bandcamp": "https://kalitarecords.bandcamp.com/album/doing-our-thing-with-pride",
+        "amazonStore": "https://amazon.com/dp/B092249TJ7"
+      },
+      "upc": "4062548026443",
+      "tracks": 9,
+      "releaseDate": "2021-09-03"
+    },
+    "3d74129a-8c52-8087-bd14-db677311f1aa": {
+      "source": "https://album.link/tvkmqr3gpkfcv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3QgVqYQMvphI7by7Lqf9dg",
+        "pandora": "https://www.pandora.com/AL:7951814",
+        "deezer": "https://www.deezer.com/album/201801912",
+        "amazonMusic": "https://music.amazon.com/albums/B08TPN95PD",
+        "tidal": "https://listen.tidal.com/album/490465857",
+        "napster": "https://play.napster.com/album/alb.553842633",
+        "yandex": "https://music.yandex.ru/album/13585204",
+        "anghami": "https://play.anghami.com/album/1017416900?refer=linktree",
+        "bandcamp": "https://lumierenoirerecords.bandcamp.com/album/destiino",
+        "amazonStore": "https://amazon.com/dp/B08TPN95PD"
+      },
+      "upc": "4062548021493",
+      "tracks": 9,
+      "releaseDate": "2021-04-16"
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-09T22:35:03Z",
+  "generatedAt": "2026-09-10T11:24:26Z",
   "counts": {
-    "albums": 1215,
-    "artists": 1067,
-    "labels": 669,
+    "albums": 1219,
+    "artists": 1069,
+    "labels": 670,
     "videos": 91
   },
   "albums": [
@@ -34101,6 +34101,37 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-8002-913b-e260cc2515e3",
+      "slug": "curtis-harding-if-words-were-flowers",
+      "artist": "Curtis Harding",
+      "album": "If Words Were Flowers",
+      "url": "https://album.link/gnj5xw72p2w0g",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac4842151-0ef1-44dd-b01c-1537ed8cea1d%3Aa1887513502_10.jpg?table=block&id=3d74129a-8c52-8002-913b-e260cc2515e3&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul",
+        "Chicago Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2714129a-8c52-807b-979f-eac3669bf78d"
+      ],
+      "artists": [
+        "Curtis Harding"
+      ],
+      "labelIds": [
+        "2474129a-8c52-8074-b77a-dcc08eef834e"
+      ],
+      "labels": [
+        "Anti- Records"
+      ]
+    },
+    {
       "id": "3d54129a-8c52-803b-acbb-e113d5226bb6",
       "slug": "the-grease-traps-solid-ground",
       "artist": "The Grease Traps",
@@ -34129,6 +34160,38 @@
       ],
       "labels": [
         "Record Kicks"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8020-8094-f9fa6846c2ac",
+      "slug": "nightmares-on-wax-shout-out-to-freedom",
+      "artist": "Nightmares On Wax",
+      "album": "Shout Out! To Freedom…",
+      "url": "https://album.link/nrbzfpbf0s3zv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9dd2712b-a101-435b-afd3-20e9fc3bddd2%3Aa1991936559_10.jpg?table=block&id=3d74129a-8c52-8020-8094-f9fa6846c2ac&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Nu Jazz",
+        "Trip Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-29",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80bd-ac45-fd11be135ce6"
+      ],
+      "artists": [
+        "Nightmare On Wax"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "labels": [
+        "Warp Records"
       ]
     },
     {
@@ -34694,6 +34757,40 @@
       ],
       "labels": [
         "Noire & Blanche"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8054-8807-c819298cfa1e",
+      "slug": "al-dos-band-doing-our-thing-with-pride",
+      "artist": "Al-Dos Band",
+      "album": "Doing Our Thing with Pride",
+      "url": "https://album.link/s9mz3q5t8g0bn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af680f7b7-c3d2-4bd2-b5f4-e53ac6a0d5c3%3Aa2129719508_10.jpg?table=block&id=3d74129a-8c52-8054-8807-c819298cfa1e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soul",
+        "Funk",
+        "Gospel",
+        "Psychedelic Soul",
+        "Boogie"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-03",
+      "year": 2021,
+      "origYear": "1976",
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-8002-a5c5-c10c0d7ef238"
+      ],
+      "artists": [
+        "Al-Dos Band"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80ab-bb7a-d60857006110"
+      ],
+      "labels": [
+        "Kalita Records"
       ]
     },
     {
@@ -38273,6 +38370,30 @@
       "labels": [
         "Far Out Recordings"
       ]
+    },
+    {
+      "id": "3d74129a-8c52-8087-bd14-db677311f1aa",
+      "slug": "destiino-destiino",
+      "artist": "DESTIINO",
+      "album": "Destiino",
+      "url": "https://album.link/tvkmqr3gpkfcv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8668a904-f257-48e0-9faf-1f08fc99bd26%3Aa3306685948_10.jpg?table=block&id=3d74129a-8c52-8087-bd14-db677311f1aa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [],
+      "types": [
+        "Album"
+      ],
+      "released": null,
+      "year": null,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-801a-9d58-de788393c15d"
+      ],
+      "artists": [
+        "DESTIINO"
+      ],
+      "labelIds": [],
+      "labels": []
     }
   ],
   "artists": [
@@ -38663,6 +38784,28 @@
       ],
       "labelIds": [
         "2484129a-8c52-80c8-8032-e9b7714f0c41"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-8002-a5c5-c10c0d7ef238",
+      "slug": "al-dos-band",
+      "name": "Al-Dos Band",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8054-8807-c819298cfa1e"
+      ],
+      "genres": [
+        "Soul",
+        "Funk",
+        "Gospel",
+        "Psychedelic Soul",
+        "Boogie"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80ab-bb7a-d60857006110"
       ],
       "videoIds": []
     },
@@ -42271,14 +42414,16 @@
       "slug": "curtis-harding",
       "name": "Curtis Harding",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://curtisharding.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "2714129a-8c52-808c-835e-da9e6ddb3cca"
+        "2714129a-8c52-808c-835e-da9e6ddb3cca",
+        "3d74129a-8c52-8002-913b-e260cc2515e3"
       ],
       "genres": [
         "Soul",
-        "Psychedelic Soul"
+        "Psychedelic Soul",
+        "Chicago Soul"
       ],
       "labelIds": [
         "2474129a-8c52-8074-b77a-dcc08eef834e"
@@ -42890,7 +43035,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "1b04129a-8c52-806e-bae5-eb80cacb8ea3"
+        "1b04129a-8c52-806e-bae5-eb80cacb8ea3",
+        "3d74129a-8c52-8087-bd14-db677311f1aa"
       ],
       "genres": [
         "Electronic",
@@ -50949,6 +51095,26 @@
       ],
       "labelIds": [
         "2494129a-8c52-8016-8b53-f215dcae8a98"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-80bd-ac45-fd11be135ce6",
+      "slug": "nightmare-on-wax",
+      "name": "Nightmare On Wax",
+      "country": "GB",
+      "bandcamp": "https://nightmaresonwax.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8020-8094-f9fa6846c2ac"
+      ],
+      "genres": [
+        "Downtempo",
+        "Nu Jazz",
+        "Trip Hop"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175"
       ],
       "videoIds": []
     },
@@ -59880,7 +60046,8 @@
         "2e14129a-8c52-80a7-b109-f9ad89b9f574",
         "17a8a90b-067e-4b84-948f-5b5cdb6693ff",
         "74c7049c-a7ad-4e4f-9249-42882e976288",
-        "19c4129a-8c52-8092-b61e-c8635a25808d"
+        "19c4129a-8c52-8092-b61e-c8635a25808d",
+        "3d74129a-8c52-8002-913b-e260cc2515e3"
       ],
       "artistIds": [
         "2714129a-8c52-807b-979f-eac3669bf78d",
@@ -64415,6 +64582,21 @@
       ],
       "artistIds": [
         "2504129a-8c52-8065-8180-c4f2b59fd996"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-80ab-bb7a-d60857006110",
+      "slug": "kalita-records",
+      "name": "Kalita Records",
+      "country": "GB",
+      "bandcamp": "https://kalitarecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8054-8807-c819298cfa1e"
+      ],
+      "artistIds": [
+        "3d74129a-8c52-8002-a5c5-c10c0d7ef238"
       ]
     },
     {
@@ -70165,7 +70347,8 @@
         "9ce5386a-a495-4db4-a832-c09c853fa2da",
         "1084129a-8c52-80fe-a77c-fd829ae34aef",
         "4f9a192a-958c-4e87-84d0-12547b6c7a1b",
-        "e3823968-38cb-474f-b01f-ae7f222f4ae1"
+        "e3823968-38cb-474f-b01f-ae7f222f4ae1",
+        "3d74129a-8c52-8020-8094-f9fa6846c2ac"
       ],
       "artistIds": [
         "3ae4129a-8c52-808c-9c06-d2927dc7bae0",
@@ -70178,7 +70361,8 @@
         "24a4129a-8c52-8049-886f-d7ff8518b523",
         "2514129a-8c52-8087-968d-cbacaad81947",
         "2504129a-8c52-804c-a693-dc85640a23de",
-        "2414129a-8c52-8011-be30-ca3659f3e880"
+        "2414129a-8c52-8011-be30-ca3659f3e880",
+        "3d74129a-8c52-80bd-ac45-fd11be135ce6"
       ]
     },
     {

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import TilesMore from '../../components/TilesMore.astro';
 /* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
    компонентами BackBar и Breadcrumbs. Путь дублировал то, что и так стоит на
    странице, а кнопка «назад» повторяла кнопку браузера — и занимала целую
@@ -118,8 +119,9 @@ const labels = [...labelCounts.entries()]
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />
-    <ul class="tiles tiles--auto">
+    {/* Первые 48, дальше по кнопке — как на Music. */}
+    <TilesMore count={releases.length}>
       {releases.map((album) => <AlbumCard album={album} />)}
-    </ul>
+    </TilesMore>
   </section>
 </Base>

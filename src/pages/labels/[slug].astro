@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import TilesMore from '../../components/TilesMore.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
 /* Полоса «назад» и строка пути удалены из проекта 6 сентября 2026 вместе с
@@ -124,8 +125,9 @@ const genres = [...genreCounts.entries()]
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />
-    <ul class="tiles tiles--auto">
+    {/* Первые 48, дальше по кнопке — как на Music. */}
+    <TilesMore count={releases.length}>
       {releases.map((a) => <AlbumCard album={a} />)}
-    </ul>
+    </TilesMore>
   </section>
 </Base>

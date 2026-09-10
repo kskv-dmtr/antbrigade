@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AlbumCard from '../../components/AlbumCard.astro';
+import TilesMore from '../../components/TilesMore.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
 import GenreLinks from '../../components/GenreLinks.astro';
@@ -151,18 +152,19 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
   {releases.length > 0 && (
     <section class="section">
       <PageBar as="h2" title="Releases" count={releases.length} />
-      <ul class="tiles tiles--auto">
+      {/* Первые 48, дальше по кнопке — как на Music. */}
+      <TilesMore count={releases.length}>
         {releases.map((a) => <AlbumCard album={a} showArtist={false} />)}
-      </ul>
+      </TilesMore>
     </section>
   )}
 
   {clipsSorted.length > 0 && (
     <section class="section">
       <PageBar as="h2" title="Videos" count={clipsSorted.length} />
-      <ul class="tiles tiles--auto">
+      <TilesMore count={clipsSorted.length}>
         {clipsSorted.map((v) => <VideoCard video={v} />)}
-      </ul>
+      </TilesMore>
     </section>
   )}
 </Base>

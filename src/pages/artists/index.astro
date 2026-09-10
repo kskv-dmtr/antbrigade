@@ -5,7 +5,9 @@ import PageBar from '../../components/PageBar.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
-import { artists } from '../../lib/db.js';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import BriefCard from '../../components/BriefCard.astro';
+import { artists, plural } from '../../lib/db.js';
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
@@ -30,8 +32,11 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
    ещё» и с каким числом. */
 const всего = ordered.reduce((n, [, items]) => n + items.length, 0);
 
-// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
-const PAGE = 50;
+/* Сколько записей показывать сразу и сколько добавлять по нажатию — как на
+   Music. Сорок восемь, а не пятьдесят: с 11 сентября 2026 у указателей есть
+   плиточный вид, и 48 делится и на четыре столбца, и на три, и на два, а 50
+   оставляло последний ряд первого разворота наполовину пустым. */
+const PAGE = 48;
 
 /* Сколько строк уже вывели: список сгруппирован по буквам, и сквозного
    номера у записи внутри группы нет. Считаем сами — по нему сервер метит
@@ -79,6 +84,9 @@ let выведено = 0;
         <option value="releases">Most releases</option>
       </Select>
     </FilterCell>
+
+    {/* Вид общий для всего сайта: тот же переключатель, что на Music. */}
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
   </FilterBar>
 
   {/* Заголовков с буквами в списке нет: буква выбирается кнопкой в полосе
@@ -114,10 +122,26 @@ let выведено = 0;
 
                 Если страны нет, место остаётся пустым: пустые скобки
                 читались бы нулём. Такой в базе один — Various Artists. */}
-            <a class="row row--brief" href={`/artists/${a.slug}`}>
-              <span class="row__title">{a.name}</span>
-              {a.country && <span class="row__val">[{a.country}]</span>}
-            </a>
+            {/* В строке при имени стоит счёт релизов: по нему список и
+                сортируется («Most releases»), и он же — то, ради чего
+                исполнителя открывают. Страна стояла тут до 11 сентября
+                2026 и переехала в карточку, где для неё есть место. */}
+            <div class="view-row">
+              <a class="row row--brief" href={`/artists/${a.slug}`}>
+                <span class="row__title">{a.name}</span>
+                <span class="row__val">[{a.albumIds.length}]</span>
+              </a>
+            </div>
+
+            {/* Пустых скобок у страны не бывает: если её нет, пометки нет
+                вовсе. Такой в базе один — Various Artists. */}
+            <BriefCard
+              href={`/artists/${a.slug}`}
+              name={a.name}
+              note={a.country ? `[${a.country}]` : null}
+              left={plural(a.albumIds.length, 'release', 'releases')}
+              right={plural(a.videoIds.length, 'video', 'videos')}
+            />
           </li>
         ))}
       </>

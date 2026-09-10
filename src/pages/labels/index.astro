@@ -5,7 +5,9 @@ import PageBar from '../../components/PageBar.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
-import { labels } from '../../lib/db.js';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import BriefCard from '../../components/BriefCard.astro';
+import { labels, plural } from '../../lib/db.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -36,8 +38,11 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
    ещё» и с каким числом. */
 const всего = ordered.reduce((n, [, items]) => n + items.length, 0);
 
-// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
-const PAGE = 50;
+/* Сколько записей показывать сразу и сколько добавлять по нажатию — как на
+   Music. Сорок восемь, а не пятьдесят: с 11 сентября 2026 у указателей есть
+   плиточный вид, и 48 делится и на четыре столбца, и на три, и на два, а 50
+   оставляло последний ряд первого разворота наполовину пустым. */
+const PAGE = 48;
 
 /* Сколько строк уже вывели: список сгруппирован по буквам, и сквозного
    номера у записи внутри группы нет. Считаем сами — по нему сервер метит
@@ -75,6 +80,9 @@ let выведено = 0;
         <option value="releases">Most releases</option>
       </Select>
     </FilterCell>
+
+    {/* Вид общий для всего сайта: тот же переключатель, что на Music. */}
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
   </FilterBar>
 
   {/* Заголовков с буквами в списке нет: буква выбирается кнопкой в полосе
@@ -103,10 +111,20 @@ let выведено = 0;
                 Число исполнителей из строки убрано: у лейбла оно почти
                 всегда повторяет число релизов, а спорит за место с ним.
                 Оно осталось на странице самого лейбла. */}
-            <a class="row row--brief" href={`/labels/${l.slug}`}>
-              <span class="row__title">{l.name}</span>
-              <span class="row__val">[{l.albumIds.length}]</span>
-            </a>
+            <div class="view-row">
+              <a class="row row--brief" href={`/labels/${l.slug}`}>
+                <span class="row__title">{l.name}</span>
+                <span class="row__val">[{l.albumIds.length}]</span>
+              </a>
+            </div>
+
+            <BriefCard
+              href={`/labels/${l.slug}`}
+              name={l.name}
+              note={l.country ? `[${l.country}]` : null}
+              left={plural(l.albumIds.length, 'release', 'releases')}
+              right={plural(l.artistIds.length, 'artist', 'artists')}
+            />
           </li>
         ))}
       </>

@@ -5,7 +5,21 @@ import PageBar from '../../components/PageBar.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
-import { genres } from '../../lib/db.js';
+import ViewSwitch from '../../components/ViewSwitch.astro';
+import BriefCard from '../../components/BriefCard.astro';
+import { genres, albumById, plural } from '../../lib/db.js';
+
+/* Сколько исполнителей в жанре — считаем по его же релизам: своего поля
+   у жанра в Notion нет, он и сам собирается из релизов. Через Set: у
+   релиза бывает двое исполнителей, и один исполнитель обычно значится в
+   жанре не раз. Тот же счёт, что и в блоке Info на странице жанра. */
+const исполнителей = new Map(genres.map((g) => {
+  const свои = new Set();
+  for (const id of g.albumIds) {
+    for (const artistId of albumById.get(id)?.artistIds ?? []) свои.add(artistId);
+  }
+  return [g.slug, свои.size];
+}));
 
 /* Раскладка та же, что у артистов и лейблов: по первой букве, порядок
    алфавитный. Прежний, «сначала крупные жанры», остался в сортировке под
@@ -33,8 +47,11 @@ const ordered = [...groups.entries()].sort(([a], [b]) => {
    ещё» и с каким числом. */
 const всего = ordered.reduce((n, [, items]) => n + items.length, 0);
 
-// Сколько строк показывать сразу и сколько добавлять по нажатию — как на Music.
-const PAGE = 50;
+/* Сколько записей показывать сразу и сколько добавлять по нажатию — как на
+   Music. Сорок восемь, а не пятьдесят: с 11 сентября 2026 у указателей есть
+   плиточный вид, и 48 делится и на четыре столбца, и на три, и на два, а 50
+   оставляло последний ряд первого разворота наполовину пустым. */
+const PAGE = 48;
 
 /* Сколько строк уже вывели: список сгруппирован по буквам, и сквозного
    номера у записи внутри группы нет. Считаем сами — по нему сервер метит
@@ -72,6 +89,9 @@ let выведено = 0;
         <option value="releases">Most releases</option>
       </Select>
     </FilterCell>
+
+    {/* Вид общий для всего сайта: тот же переключатель, что на Music. */}
+    <FilterCell name="View:"><ViewSwitch /></FilterCell>
   </FilterBar>
 
   {/* Заголовков с буквами в списке нет: буква выбирается кнопкой в полосе
@@ -100,10 +120,21 @@ let выведено = 0;
                 и список растягивался бы вдвое длиннее нужного. Поэтому
                 два столбца, и в каждом то же, что было в строке: имя
                 слева, счётчик справа. */}
-            <a class="row row--brief" href={`/genres/${genre.slug}`}>
-              <span class="row__title">{genre.name}</span>
-              <span class="row__val">[{genre.count}]</span>
-            </a>
+            <div class="view-row">
+              <a class="row row--brief" href={`/genres/${genre.slug}`}>
+                <span class="row__title">{genre.name}</span>
+                <span class="row__val">[{genre.count}]</span>
+              </a>
+            </div>
+
+            {/* Второй величины во втором ряду у жанра нет: считать в нём
+                нечего, кроме исполнителей. Место справа остаётся пустым. */}
+            <BriefCard
+              href={`/genres/${genre.slug}`}
+              name={genre.name}
+              note={`[${genre.count}]`}
+              left={plural(исполнителей.get(genre.slug) ?? 0, 'artist', 'artists')}
+            />
           </li>
         ))}
       </>

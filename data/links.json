@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T16:28:12Z",
+  "generatedAt": "2026-09-10T19:45:19Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19467,6 +19467,106 @@
       "upc": "5054429121285",
       "tracks": 11,
       "releaseDate": "2017-12-01"
+    },
+    "3d74129a-8c52-803c-b478-fd8eec98bbd6": {
+      "source": "https://album.link/hfzgtpjhkp66j",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1LVj9ljlwsn2DOsXkRDOeI",
+        "pandora": "https://www.pandora.com/AL:66261826",
+        "bandcamp": "https://brianfallon.bandcamp.com/album/not-bad-for-new-jersey"
+      },
+      "upc": "820200993069",
+      "tracks": 11,
+      "releaseDate": "2026-09-10"
+    },
+    "3d74129a-8c52-80a2-bd89-e7e6a91e53c9": {
+      "source": "https://album.link/fmhs3wbhb5zrb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5w4jILMK3xVgqy0dsKGhtm",
+        "pandora": "https://www.pandora.com/AL:10616596",
+        "deezer": "https://www.deezer.com/album/369453147",
+        "amazonMusic": "https://music.amazon.com/albums/B0BKC8HP2Y",
+        "tidal": "https://listen.tidal.com/album/256079587",
+        "napster": "https://play.napster.com/album/alb.609971139",
+        "yandex": "https://music.yandex.ru/album/17868229",
+        "boomplay": "https://www.boomplay.com/albums/31156759",
+        "anghami": "https://play.anghami.com/album/1031293739?refer=linktree",
+        "bandcamp": "https://kerokerobonito.bandcamp.com/album/civilisation",
+        "amazonStore": "https://amazon.com/dp/B0BKC8HP2Y"
+      },
+      "upc": "5056495352181",
+      "tracks": 7,
+      "releaseDate": "2021-09-10"
+    },
+    "3d74129a-8c52-80d3-97b1-c6a5125f46f8": {
+      "source": "https://album.link/swncgq2hfzqcw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5f79DdWuTLniSwLEFzT1WK",
+        "pandora": "https://www.pandora.com/AL:8483101",
+        "deezer": "https://www.deezer.com/album/212642642",
+        "amazonMusic": "https://music.amazon.com/albums/B08Z7LQ949",
+        "tidal": "https://listen.tidal.com/album/176092339",
+        "napster": "https://play.napster.com/album/alb.565922999",
+        "yandex": "https://music.yandex.ru/album/14339274",
+        "boomplay": "https://www.boomplay.com/albums/22376096",
+        "anghami": "https://play.anghami.com/album/1021168843?refer=linktree",
+        "bandcamp": "https://ishmaelensemble.bandcamp.com/album/visions-of-light",
+        "amazonStore": "https://amazon.com/dp/B08Z7LQ949"
+      },
+      "upc": "3616553871089",
+      "tracks": 10,
+      "releaseDate": "2021-08-06"
+    },
+    "3d74129a-8c52-80f2-ba12-d60a6e49cd0a": {
+      "source": "https://album.link/5fztrfppksmg6",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0om2uDCVIfzZDpWSqZGqyp",
+        "pandora": "https://www.pandora.com/AL:5129599",
+        "deezer": "https://www.deezer.com/album/141087792",
+        "amazonMusic": "https://music.amazon.com/albums/B086Y9D5V3",
+        "tidal": "https://listen.tidal.com/album/137117584",
+        "napster": "https://play.napster.com/album/alb.465136796",
+        "yandex": "https://music.yandex.ru/album/10404550",
+        "anghami": "https://play.anghami.com/album/1011831350?refer=linktree",
+        "bandcamp": "https://karateboogaloo.bandcamp.com/album/carn-the-boogers",
+        "amazonStore": "https://amazon.com/dp/B086Y9D5V3"
+      },
+      "upc": "5050580734524",
+      "tracks": 12,
+      "releaseDate": "2020-05-01"
+    },
+    "3d74129a-8c52-80f6-913a-f76809b12e8f": {
+      "source": "https://album.link/snqwhzgqrjjbn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5qi4aoHpcDfsoTbVsjPXwI",
+        "pandora": "https://www.pandora.com/AL:5104302",
+        "deezer": "https://www.deezer.com/album/127298732",
+        "amazonMusic": "https://music.amazon.com/albums/B083ZCWJPP",
+        "tidal": "https://listen.tidal.com/album/251572752",
+        "napster": "https://play.napster.com/album/alb.465467310",
+        "bandcamp": "https://inwards.bandcamp.com/album/bright-serpent",
+        "amazonStore": "https://amazon.com/dp/B083ZCWJPP"
+      },
+      "upc": "5053760056812",
+      "tracks": 10,
+      "releaseDate": "2020-04-10"
+    },
+    "3d74129a-8c52-8045-84af-d31906495899": {
+      "source": "https://album.link/hkrfzcq4pjth6",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1jxF2oJOAr5zR9d1PQnR8Y",
+        "pandora": "https://www.pandora.com/AL:1058689",
+        "deezer": "https://www.deezer.com/album/275180082",
+        "amazonMusic": "https://music.amazon.com/albums/B06XTJBZ37",
+        "tidal": "https://listen.tidal.com/album/72012668",
+        "yandex": "https://music.yandex.ru/album/4240454",
+        "anghami": "https://play.anghami.com/album/2409636?refer=linktree",
+        "bandcamp": "https://gaussiancurvemusic.bandcamp.com/album/the-distance",
+        "amazonStore": "https://amazon.com/dp/B06XTJBZ37"
+      },
+      "upc": "0670579631044",
+      "tracks": 8,
+      "releaseDate": "2017-04-17"
     }
   }
 }

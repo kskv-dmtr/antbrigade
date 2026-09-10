@@ -1,13 +1,44 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-10T16:27:15Z",
+  "generatedAt": "2026-09-10T19:44:38Z",
   "counts": {
-    "albums": 1226,
-    "artists": 1075,
-    "labels": 673,
+    "albums": 1232,
+    "artists": 1078,
+    "labels": 676,
     "videos": 92
   },
   "albums": [
+    {
+      "id": "3d74129a-8c52-803c-b478-fd8eec98bbd6",
+      "slug": "brian-fallon-not-bad-for-new-jersey",
+      "artist": "Brian Fallon",
+      "album": "Not Bad for New Jersey",
+      "url": "https://album.link/hfzgtpjhkp66j",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad66039e5-accb-47d6-9c8c-a257da40960d%3Aa0473593168_10.jpg?table=block&id=3d74129a-8c52-803c-b478-fd8eec98bbd6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Singer-Songwriter",
+        "Heartland Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-10",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80c7-b00c-d54859c5dc38"
+      ],
+      "artists": [
+        "Brian Fallon"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80b2-81c1-eed19c5b85de"
+      ],
+      "labels": [
+        "Lesser Known Records"
+      ]
+    },
     {
       "id": "3d04129a-8c52-804f-be67-cb44c3789f43",
       "slug": "1-800-mikey-in-yun",
@@ -34793,6 +34824,39 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-80a2-bd89-e7e6a91e53c9",
+      "slug": "kero-kero-bonito-civilisation",
+      "artist": "Kero Kero Bonito",
+      "album": "Civilisation",
+      "url": "https://album.link/fmhs3wbhb5zrb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3fdb8ec6-00d4-4c5d-9077-f02db02ab068%3Aa1472130432_10.jpg?table=block&id=3d74129a-8c52-80a2-bd89-e7e6a91e53c9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indietronica",
+        "Synthpop",
+        "Bitpop",
+        "Electropop"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-09-10",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80dd-bafb-d0fb5fc423be"
+      ],
+      "artists": [
+        "Kero Kero Bonito"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8032-99e9-cc6ed27f0944"
+      ],
+      "labels": [
+        "Polyvinyl Records"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-8007-a29e-c92b6745eb40",
       "slug": "pool-boy-all-inclusive",
       "artist": "Pool Boy",
@@ -34980,6 +35044,39 @@
       ],
       "labels": [
         "Phantom Island"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-80d3-97b1-c6a5125f46f8",
+      "slug": "ishmael-ensemble-visions-of-light",
+      "artist": "Ishmael Ensemble",
+      "album": "Visions of Light",
+      "url": "https://album.link/swncgq2hfzqcw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A263092e5-0fea-4c2d-9d60-536c4c611412%3Aa1055844862_10.jpg?table=block&id=3d74129a-8c52-80d3-97b1-c6a5125f46f8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Contemporary Jazz",
+        "Avant-Garde Jazz",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-08-06",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-803a-8126-e9f4ec190015"
+      ],
+      "artists": [
+        "Ishmael Ensemble"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-8057-a9ed-d884ccb33f6f"
+      ],
+      "labels": [
+        "Severn Songs"
       ]
     },
     {
@@ -36800,6 +36897,37 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-80f2-ba12-d60a6e49cd0a",
+      "slug": "karate-boogaloo",
+      "artist": "Karate Boogaloo |",
+      "album": "",
+      "url": "https://album.link/5fztrfppksmg6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A37a8c503-130b-43a0-bc75-44de3822e4a6%3Aa0522915360_10.jpg?table=block&id=3d74129a-8c52-80f2-ba12-d60a6e49cd0a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-05-01",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80eb-87d3-f9a282182569"
+      ],
+      "artists": [
+        "Karate Boogaloo"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-808b-be0a-e44fd95c24c9"
+      ],
+      "labels": [
+        "College Of Knowledge Records"
+      ]
+    },
+    {
       "id": "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
       "slug": "the-sweet-enoughs-marshmallow",
       "artist": "The Sweet Enoughs",
@@ -36892,6 +37020,37 @@
       ],
       "labels": [
         "Uncle M Music"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-80f6-913a-f76809b12e8f",
+      "slug": "inwards-bright-serpent",
+      "artist": "Inwards",
+      "album": "Bright Serpent",
+      "url": "https://album.link/snqwhzgqrjjbn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A35f07bf2-e0fa-4af5-9335-3d881034682b%3Aa1613285122_10.jpg?table=block&id=3d74129a-8c52-80f6-913a-f76809b12e8f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "Microhouse"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-04-10",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2444129a-8c52-8039-b3d6-cb81b4b352e4"
+      ],
+      "artists": [
+        "Inwards"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80b7-99e9-c14ac79f9eaa"
+      ],
+      "labels": [
+        "Small Pond Recordings"
       ]
     },
     {
@@ -38145,6 +38304,38 @@
       "labels": [
         "Static Shock Records",
         "540 Records"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8045-84af-d31906495899",
+      "slug": "gaussian-curve-the-distance",
+      "artist": "Gaussian Curve",
+      "album": "The Distance",
+      "url": "https://album.link/hkrfzcq4pjth6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad8c57f5d-19a8-4ddb-8d13-ff3dd9eaeebe%3Aa1397134441_10.jpg?table=block&id=3d74129a-8c52-8045-84af-d31906495899&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Ambient",
+        "Progressive Electronic"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-04-17",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-803e-aa07-f1c125a2e0b4"
+      ],
+      "artists": [
+        "Gaussian Curve"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
+      ],
+      "labels": [
+        "Music From Memory"
       ]
     },
     {
@@ -41094,6 +41285,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-808b-be0a-e44fd95c24c9"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-80c7-b00c-d54859c5dc38",
+      "slug": "brian-fallon",
+      "name": "Brian Fallon",
+      "country": "US",
+      "bandcamp": "https://brianfallon.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-803c-b478-fd8eec98bbd6"
+      ],
+      "genres": [
+        "Singer-Songwriter",
+        "Heartland Rock"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80b2-81c1-eed19c5b85de"
       ],
       "videoIds": []
     },
@@ -45451,6 +45661,26 @@
       "videoIds": []
     },
     {
+      "id": "3d74129a-8c52-803e-aa07-f1c125a2e0b4",
+      "slug": "gaussian-curve",
+      "name": "Gaussian Curve",
+      "country": "NL",
+      "bandcamp": "https://gaussiancurvemusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8045-84af-d31906495899"
+      ],
+      "genres": [
+        "Downtempo",
+        "Ambient",
+        "Progressive Electronic"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "24f4129a-8c52-8055-ac67-eaa7094a6e2f",
       "slug": "gavin-rossdale",
       "name": "Gavin Rossdale",
@@ -46804,20 +47034,23 @@
       "slug": "inwards",
       "name": "Inwards",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://inwards.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2dc4129a-8c52-8037-afe7-d7157e904b1a",
-        "2074129a-8c52-8014-983d-fbc0cd121339"
+        "2074129a-8c52-8014-983d-fbc0cd121339",
+        "3d74129a-8c52-80f6-913a-f76809b12e8f"
       ],
       "genres": [
         "IDM",
         "Leftfield",
-        "Electronic"
+        "Electronic",
+        "Microhouse"
       ],
       "labelIds": [
         "2dd4129a-8c52-8076-86ba-e3e88127cae3",
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3d74129a-8c52-80b7-99e9-c14ac79f9eaa"
       ],
       "videoIds": []
     },
@@ -46920,18 +47153,23 @@
       "slug": "ishmael-ensemble",
       "name": "Ishmael Ensemble",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ishmaelensemble.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "1174129a-8c52-806b-b696-d8e9e15bb238"
+        "1174129a-8c52-806b-b696-d8e9e15bb238",
+        "3d74129a-8c52-80d3-97b1-c6a5125f46f8"
       ],
       "genres": [
         "Electronic",
         "Jazz",
-        "Avant-Garde Jazz"
+        "Avant-Garde Jazz",
+        "Nu Jazz",
+        "Contemporary Jazz",
+        "Jazz Fusion"
       ],
       "labelIds": [
-        "2504129a-8c52-80a4-9639-d9d7c3a01185"
+        "2504129a-8c52-80a4-9639-d9d7c3a01185",
+        "3d74129a-8c52-8057-a9ed-d884ccb33f6f"
       ],
       "videoIds": []
     },
@@ -47639,8 +47877,8 @@
       "slug": "jordan-rakei",
       "name": "Jordan Rakei",
       "country": "NZ",
-      "bandcamp": null,
-      "youtube": null,
+      "bandcamp": "https://jordanrakei.bandcamp.com/music",
+      "youtube": "https://www.youtube.com/@jrakz",
       "albumIds": [
         "34c4129a-8c52-8079-8c55-de3b53b24a04",
         "ec73a747-0b6f-43c9-95f1-2e71687666ae"
@@ -47899,17 +48137,21 @@
       "slug": "karate-boogaloo",
       "name": "Karate Boogaloo",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://karateboogaloo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "182c8511-a817-4a80-a2ed-a555f5fe18fd"
+        "182c8511-a817-4a80-a2ed-a555f5fe18fd",
+        "3d74129a-8c52-80f2-ba12-d60a6e49cd0a"
       ],
       "genres": [
         "Instrumental",
-        "Soul"
+        "Soul",
+        "Jazz-Funk",
+        "Jazz Fusion"
       ],
       "labelIds": [
-        "24f4129a-8c52-809f-b04c-e94b3d66798e"
+        "24f4129a-8c52-809f-b04c-e94b3d66798e",
+        "24a4129a-8c52-808b-be0a-e44fd95c24c9"
       ],
       "videoIds": []
     },
@@ -48009,6 +48251,27 @@
       ],
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-80dd-bafb-d0fb5fc423be",
+      "slug": "kero-kero-bonito",
+      "name": "Kero Kero Bonito",
+      "country": "GB",
+      "bandcamp": "https://kerokerobonito.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80a2-bd89-e7e6a91e53c9"
+      ],
+      "genres": [
+        "Indietronica",
+        "Synthpop",
+        "Bitpop",
+        "Electropop"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8032-99e9-cc6ed27f0944"
       ],
       "videoIds": []
     },
@@ -61777,12 +62040,14 @@
       "albumIds": [
         "34f4129a-8c52-808a-9008-c4cd90d7f914",
         "39e4129a-8c52-8096-a934-cc1c553f0d16",
-        "45a5a7e5-459f-47fa-b109-ca9fe744de06"
+        "45a5a7e5-459f-47fa-b109-ca9fe744de06",
+        "3d74129a-8c52-80f2-ba12-d60a6e49cd0a"
       ],
       "artistIds": [
         "34f4129a-8c52-80f5-87d0-f712b201814d",
         "39e4129a-8c52-8018-8208-d3dd89116111",
-        "24a4129a-8c52-8054-baf2-c62b51135036"
+        "24a4129a-8c52-8054-baf2-c62b51135036",
+        "2504129a-8c52-80eb-87d3-f9a282182569"
       ]
     },
     {
@@ -65499,6 +65764,21 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-80b2-81c1-eed19c5b85de",
+      "slug": "lesser-known-records",
+      "name": "Lesser Known Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-803c-b478-fd8eec98bbd6"
+      ],
+      "artistIds": [
+        "3d74129a-8c52-80c7-b00c-d54859c5dc38"
+      ]
+    },
+    {
       "id": "2c44129a-8c52-80d6-bdb8-eee1c669a5f5",
       "slug": "lettuce-records",
       "name": "Lettuce Records",
@@ -66356,12 +66636,14 @@
       "albumIds": [
         "32f4129a-8c52-80cc-9baa-e0213b383a89",
         "f730e5dc-5065-40fc-92dc-989df83ef50a",
-        "3b84129a-8c52-809a-be36-cd8cb4b143c9"
+        "3b84129a-8c52-809a-be36-cd8cb4b143c9",
+        "3d74129a-8c52-8045-84af-d31906495899"
       ],
       "artistIds": [
         "32f4129a-8c52-80b7-8f80-c162b0c0cad7",
         "24a4129a-8c52-8016-9c11-e4831dfb97e4",
-        "3b84129a-8c52-8048-b65a-fdc7e5e673f1"
+        "3b84129a-8c52-8048-b65a-fdc7e5e673f1",
+        "3d74129a-8c52-803e-aa07-f1c125a2e0b4"
       ]
     },
     {
@@ -67812,14 +68094,16 @@
       "slug": "polyvinyl-records",
       "name": "Polyvinyl Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://polyvinylrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2494129a-8c52-8073-917b-f7f0ac1bda78"
+        "2494129a-8c52-8073-917b-f7f0ac1bda78",
+        "3d74129a-8c52-80a2-bd89-e7e6a91e53c9"
       ],
       "artistIds": [
-        "2494129a-8c52-80fd-905f-d7c6bcee8268"
+        "2494129a-8c52-80fd-905f-d7c6bcee8268",
+        "3d74129a-8c52-80dd-bafb-d0fb5fc423be"
       ]
     },
     {
@@ -69009,6 +69293,21 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-8057-a9ed-d884ccb33f6f",
+      "slug": "severn-songs-2",
+      "name": "Severn Songs",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80d3-97b1-c6a5125f46f8"
+      ],
+      "artistIds": [
+        "2504129a-8c52-803a-8126-e9f4ec190015"
+      ]
+    },
+    {
       "id": "24f4129a-8c52-802d-a4fa-f64d0ba30f8c",
       "slug": "shadow-kingdom-records",
       "name": "Shadow Kingdom Records",
@@ -69160,6 +69459,21 @@
       ],
       "artistIds": [
         "2444129a-8c52-805f-bddd-f88098633684"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-80b7-99e9-c14ac79f9eaa",
+      "slug": "small-pond-recordings",
+      "name": "Small Pond Recordings",
+      "country": "GB",
+      "bandcamp": "https://smallpond.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80f6-913a-f76809b12e8f"
+      ],
+      "artistIds": [
+        "2444129a-8c52-8039-b3d6-cb81b4b352e4"
       ]
     },
     {

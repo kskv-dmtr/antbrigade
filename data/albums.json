@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-10T11:24:26Z",
+  "generatedAt": "2026-09-10T16:27:15Z",
   "counts": {
-    "albums": 1219,
-    "artists": 1069,
-    "labels": 670,
-    "videos": 91
+    "albums": 1226,
+    "artists": 1075,
+    "labels": 673,
+    "videos": 92
   },
   "albums": [
     {
@@ -4324,6 +4324,38 @@
       ],
       "labels": [
         "Brainfeeder"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8073-a4d3-dffe5ec43736",
+      "slug": "yamasuki-le-monde-fabouleux-des-yamasuki",
+      "artist": "Yamasuki",
+      "album": "Le Monde Fabouleux Des Yamasuki",
+      "url": "https://album.link/mncfmkvxtxb9v",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A859798be-15ea-4b8b-aace-fe27b2aee2c8%3Aa2844518526_10.jpg?table=block&id=3d74129a-8c52-8073-a4d3-dffe5ec43736&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Pop",
+        "Progressive Pop",
+        "Vocal Group"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-03",
+      "year": 2026,
+      "origYear": "1971",
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80bd-97bc-ff968eaf7e48"
+      ],
+      "artists": [
+        "Yamasuki"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "labels": [
+        "Sdban Records"
       ]
     },
     {
@@ -11720,7 +11752,6 @@
         "Posthuman"
       ],
       "labelIds": [
-        "2cf4129a-8c52-8084-802d-e0f8843ce148",
         "3b94129a-8c52-8048-ac9a-ccf44aa8ea97"
       ],
       "labels": [
@@ -16166,7 +16197,7 @@
         "24a4129a-8c52-8027-8178-d2574680bc36"
       ],
       "labels": [
-        "Lumière Noire"
+        "Lumière Noire Records"
       ]
     },
     {
@@ -34300,7 +34331,9 @@
       "url": "https://album.link/cj8zqhbnmkhkv",
       "cover": "https://antbrigade.notion.site/image/attachment%3Afe46d610-ab35-4038-a78b-a28114d325c8%3Aa0751377172_10.jpg?table=block&id=0e0887f0-ed77-4021-93cb-b28035e0c8b5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Electronic"
+        "Future Garage",
+        "Outsider House",
+        "IDM"
       ],
       "types": [
         "Album"
@@ -34320,6 +34353,37 @@
       ],
       "labels": [
         "Brainfeeder"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-805c-8d9f-c58f81f25d15",
+      "slug": "secret-night-gang-secret-night-gang",
+      "artist": "Secret Night Gang",
+      "album": "Secret Night Gang",
+      "url": "https://album.link/ckxwdq9xnnc4d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A523a35c2-8f1c-46a6-99bb-f13f327b88c6%3Aa3522811037_10.jpg?table=block&id=3d74129a-8c52-805c-8d9f-c58f81f25d15&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-10-22",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-8080-91bd-fe7e92f3a013"
+      ],
+      "artists": [
+        "Secret Night Gang"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "labels": [
+        "Brownswood Recordings"
       ]
     },
     {
@@ -35106,6 +35170,38 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-8049-8f33-eeb2bd7b0648",
+      "slug": "the-luvmenauts-in-space",
+      "artist": "The Luvmenauts",
+      "album": "In Space",
+      "url": "https://album.link/hsjwckp9bcbnv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adc1a458e-60ff-42b0-9cfc-77921daa5a8e%3Aa2609605108_10.jpg?table=block&id=3d74129a-8c52-8049-8f33-eeb2bd7b0648&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Cinematic Soul",
+        "Library Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-02",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-8043-af2e-f1616c458aec"
+      ],
+      "artists": [
+        "The Luvmenauts"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-8044-bb0d-f7f0502dcb01"
+      ],
+      "labels": [
+        "Do Right Music"
+      ]
+    },
+    {
       "id": "2484129a-8c52-80bd-8a93-dd0d62dfee2f",
       "slug": "chain-whip-two-step-to-hell",
       "artist": "Chain Whip",
@@ -35166,6 +35262,37 @@
       ],
       "labels": [
         "Research Records"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-80ca-9327-d4e8ddca5814",
+      "slug": "athletic-progression-cloud-high-in-dreams-but-heavy-in-the-a",
+      "artist": "Athletic Progression",
+      "album": "cloud high in dreams, but heavy in the air",
+      "url": "https://album.link/rm302xzh63rbp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6799d3f5-0214-4a46-b7d0-fd6aefc6c6f9%3Aa3886069172_10.jpg?table=block&id=3d74129a-8c52-80ca-9327-d4e8ddca5814&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Instrumental Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-18",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-8048-a44d-d940b0874abf"
+      ],
+      "artists": [
+        "Athletic Progression"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-801a-a165-ee79ec0df15a"
+      ],
+      "labels": [
+        "Touching Bass"
       ]
     },
     {
@@ -35386,6 +35513,37 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-80ff-833b-d16c3793b559",
+      "slug": "the-bamboos-hard-up",
+      "artist": "The Bamboos",
+      "album": "Hard Up",
+      "url": "https://album.link/zqgzm0cbrr5fs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0974805e-c8d7-424c-a412-a953c960133e%3Aa1342134189_10.jpg?table=block&id=3d74129a-8c52-80ff-833b-d16c3793b559&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-07",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80c2-b98e-cba3d884f770"
+      ],
+      "artists": [
+        "The Bamboos"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-8084-941e-fa8806c26272"
+      ],
+      "labels": [
+        "Pacific Theatre Records"
+      ]
+    },
+    {
       "id": "26eca379-5783-4be3-88d2-b52a28eda9b6",
       "slug": "various-artists-foundations",
       "artist": "Various Artists",
@@ -35567,6 +35725,37 @@
       ],
       "labels": [
         "Kardinian Records"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8087-bd14-db677311f1aa",
+      "slug": "destiino-destiino",
+      "artist": "DESTIINO",
+      "album": "Destiino",
+      "url": "https://album.link/tvkmqr3gpkfcv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8668a904-f257-48e0-9faf-1f08fc99bd26%3Aa3306685948_10.jpg?table=block&id=3d74129a-8c52-8087-bd14-db677311f1aa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient House",
+        "Dark Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-16",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-801a-9d58-de788393c15d"
+      ],
+      "artists": [
+        "DESTIINO"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8027-8178-d2574680bc36"
+      ],
+      "labels": [
+        "Lumière Noire Records"
       ]
     },
     {
@@ -37612,6 +37801,38 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-805c-9837-c48c7fc84bed",
+      "slug": "djrum-portrait-with-firewood",
+      "artist": "DjRUM",
+      "album": "Portrait with Firewood",
+      "url": "https://album.link/jjx4fr2qjwhsx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af38046c5-8437-44d1-a6cb-f3b9e9ad8344%3Aa1924727225_10.jpg?table=block&id=3d74129a-8c52-805c-9837-c48c7fc84bed&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient",
+        "UK Bass",
+        "Ambient Techno"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-08-17",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-80e9-b904-cbd378ae2edc"
+      ],
+      "artists": [
+        "DjRUM"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80f4-86e2-c564f65889a8"
+      ],
+      "labels": [
+        "R&S Records"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-80c9-b944-fe31e731236d",
       "slug": "dorian-concept-the-nature-of-imitation",
       "artist": "Dorian Concept",
@@ -37860,6 +38081,37 @@
       ],
       "labels": [
         "Vintage Voudou"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8081-80f2-e978ac05ac21",
+      "slug": "nabihah-iqbal-weighing-of-the-heart",
+      "artist": "Nabihah Iqbal",
+      "album": "Weighing of the Heart",
+      "url": "https://album.link/t904q4gnxccsz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8a041a45-e32a-41d9-8d5b-844d9053e61f%3Aa1696087304_10.jpg?table=block&id=3d74129a-8c52-8081-80f2-e978ac05ac21&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dream Pop",
+        "Indietronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-12-01",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d74129a-8c52-80d3-a032-f35a88fe18f1"
+      ],
+      "artists": [
+        "Nabihah Iqbal"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "labels": [
+        "Ninja Tune"
       ]
     },
     {
@@ -38370,30 +38622,6 @@
       "labels": [
         "Far Out Recordings"
       ]
-    },
-    {
-      "id": "3d74129a-8c52-8087-bd14-db677311f1aa",
-      "slug": "destiino-destiino",
-      "artist": "DESTIINO",
-      "album": "Destiino",
-      "url": "https://album.link/tvkmqr3gpkfcv",
-      "cover": "https://antbrigade.notion.site/image/attachment%3A8668a904-f257-48e0-9faf-1f08fc99bd26%3Aa3306685948_10.jpg?table=block&id=3d74129a-8c52-8087-bd14-db677311f1aa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [
-        "Album"
-      ],
-      "released": null,
-      "year": null,
-      "origYear": null,
-      "playlists": [],
-      "artistIds": [
-        "24a4129a-8c52-801a-9d58-de788393c15d"
-      ],
-      "artists": [
-        "DESTIINO"
-      ],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -39540,6 +39768,25 @@
       ],
       "labelIds": [
         "3384129a-8c52-8036-bf0f-d7b218a95082"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-8048-a44d-d940b0874abf",
+      "slug": "athletic-progression",
+      "name": "Athletic Progression",
+      "country": "DK",
+      "bandcamp": "https://athleticprogression.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80ca-9327-d4e8ddca5814"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Instrumental Hip-Hop"
+      ],
+      "labelIds": [
+        "3d04129a-8c52-801a-a165-ee79ec0df15a"
       ],
       "videoIds": []
     },
@@ -41407,7 +41654,7 @@
       "slug": "chalk",
       "name": "Chalk",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://chalkbelfast.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3234129a-8c52-80b0-b768-f935761d66b7",
@@ -41868,7 +42115,7 @@
       "slug": "close-counters",
       "name": "Close Counters",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://closecounters.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1984129a-8c52-804f-99a8-eeaaec4b3d4c",
@@ -42000,7 +42247,7 @@
       "slug": "cocobolo",
       "name": "Cocobolo",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://cocobolo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3464129a-8c52-802e-b653-e68daa89a220",
@@ -42214,7 +42461,7 @@
       "slug": "cousin-kula",
       "name": "Cousin Kula",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://cousinkula.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1b54129a-8c52-8001-9365-df82f81a3696",
@@ -42314,7 +42561,7 @@
       "slug": "cruel-force",
       "name": "Cruel Force",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://cruelforce.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3304129a-8c52-80f1-9043-f52b07ee6523",
@@ -43159,16 +43406,20 @@
       "albumIds": [
         "3bc4129a-8c52-804a-bf1d-d6d5782a7a05",
         "1e84129a-8c52-8014-bdce-d1d1980263fc",
-        "70113a81-ec11-4ef7-bfb1-502abb89fd1d"
+        "70113a81-ec11-4ef7-bfb1-502abb89fd1d",
+        "3d74129a-8c52-805c-9837-c48c7fc84bed"
       ],
       "genres": [
         "IDM",
         "UK Bass",
         "Electronic",
-        "Techno"
+        "Techno",
+        "Ambient",
+        "Ambient Techno"
       ],
       "labelIds": [
-        "24a4129a-8c52-802c-b962-df1ad609c858"
+        "24a4129a-8c52-802c-b962-df1ad609c858",
+        "3d74129a-8c52-80f4-86e2-c564f65889a8"
       ],
       "videoIds": []
     },
@@ -50812,6 +51063,25 @@
       "videoIds": []
     },
     {
+      "id": "3d74129a-8c52-80d3-a032-f35a88fe18f1",
+      "slug": "nabihah-iqbal",
+      "name": "Nabihah Iqbal",
+      "country": "GB",
+      "bandcamp": "https://nabihahiqbal.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8081-80f2-e978ac05ac21"
+      ],
+      "genres": [
+        "Dream Pop",
+        "Indietronica"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "3564129a-8c52-8073-a9dc-e497ef5d7f21",
       "slug": "nadia-struiwigh",
       "name": "Nadia Struiwigh",
@@ -52737,7 +53007,6 @@
         "Ambient Techno"
       ],
       "labelIds": [
-        "2cf4129a-8c52-8084-802d-e0f8843ce148",
         "3b94129a-8c52-8048-ac9a-ccf44aa8ea97"
       ],
       "videoIds": []
@@ -53709,13 +53978,15 @@
       "slug": "ross-from-friends",
       "name": "Ross From Friends",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://rossfromfriends.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "0e0887f0-ed77-4021-93cb-b28035e0c8b5"
       ],
       "genres": [
-        "Electronic"
+        "Future Garage",
+        "Outsider House",
+        "IDM"
       ],
       "labelIds": [
         "2504129a-8c52-80b1-9280-e0a822d8e98b"
@@ -54166,6 +54437,25 @@
       ],
       "labelIds": [
         "2524129a-8c52-808f-bae0-fa37685d9f59"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-8080-91bd-fe7e92f3a013",
+      "slug": "secret-night-gang",
+      "name": "Secret Night Gang",
+      "country": "GB",
+      "bandcamp": "https://secretnightgang.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-805c-8d9f-c58f81f25d15"
+      ],
+      "genres": [
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
       ],
       "videoIds": []
     },
@@ -56209,6 +56499,25 @@
       "videoIds": []
     },
     {
+      "id": "3d74129a-8c52-80c2-b98e-cba3d884f770",
+      "slug": "the-bamboos",
+      "name": "The Bamboos",
+      "country": "AU",
+      "bandcamp": "https://thebamboos.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80ff-833b-d16c3793b559"
+      ],
+      "genres": [
+        "Funk",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-8084-941e-fa8806c26272"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-80ae-8a7f-cd94b8865a85",
       "slug": "the-barbarians-of-california",
       "name": "The Barbarians of California",
@@ -56710,6 +57019,26 @@
       ],
       "labelIds": [
         "3cd4129a-8c52-8086-86e8-c55f5bf69a17"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d74129a-8c52-8043-af2e-f1616c458aec",
+      "slug": "the-luvmenauts",
+      "name": "The Luvmenauts",
+      "country": "CA",
+      "bandcamp": "https://theluvmenauts.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8049-8f33-eeb2bd7b0648"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Cinematic Soul",
+        "Library Music"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-8044-bb0d-f7f0502dcb01"
       ],
       "videoIds": []
     },
@@ -59182,6 +59511,26 @@
       "videoIds": []
     },
     {
+      "id": "3d74129a-8c52-80bd-97bc-ff968eaf7e48",
+      "slug": "yamasuki",
+      "name": "Yamasuki",
+      "country": "FR",
+      "bandcamp": "https://yamasuki-singers.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8073-a4d3-dffe5ec43736"
+      ],
+      "genres": [
+        "Psychedelic Pop",
+        "Progressive Pop",
+        "Vocal Group"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2514129a-8c52-8081-a0f0-cb72b11271a1",
       "slug": "yard-act",
       "name": "Yard Act",
@@ -59576,7 +59925,7 @@
       "name": "落日飛車 Sunset Rollercoaster",
       "country": "TW",
       "bandcamp": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@SunsetRollercoaster",
       "albumIds": [
         "24b4129a-8c52-80f2-b0e9-e4d30f89ab45"
       ],
@@ -59587,7 +59936,9 @@
       "labelIds": [
         "24b4129a-8c52-8081-ba6a-de22998430a9"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3d74129a-8c52-809f-90bf-c3dbcdf2db0f"
+      ]
     }
   ],
   "labels": [
@@ -60977,6 +61328,7 @@
         "2b94129a-8c52-8076-a67e-ffa417a63a52",
         "22d4129a-8c52-805e-8781-c39a9f58b4ae",
         "a2f2559a-ecbb-4053-9d35-0eb77b4836a8",
+        "3d74129a-8c52-805c-8d9f-c58f81f25d15",
         "3d24129a-8c52-8082-bc26-c928adf20ab2",
         "3d44129a-8c52-80b1-b3ca-fcde4b35d52a"
       ],
@@ -60984,6 +61336,7 @@
         "2b94129a-8c52-80b7-8ac8-e58e2494e9f4",
         "2504129a-8c52-80b0-bf90-d7cc616534dc",
         "2514129a-8c52-80d3-825b-f1ae9f5bbc1b",
+        "3d74129a-8c52-8080-91bd-fe7e92f3a013",
         "3d24129a-8c52-8009-a8c2-f0ecfaa39510",
         "3d44129a-8c52-807b-9a9a-ec9877a6985c"
       ]
@@ -62280,6 +62633,21 @@
       ],
       "artistIds": [
         "2504129a-8c52-80df-bc5f-d533cd79defb"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8044-bb0d-f7f0502dcb01",
+      "slug": "do-right-music",
+      "name": "Do Right Music",
+      "country": "CA",
+      "bandcamp": "https://dorightmusic.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-8049-8f33-eeb2bd7b0648"
+      ],
+      "artistIds": [
+        "3d74129a-8c52-8043-af2e-f1616c458aec"
       ]
     },
     {
@@ -65273,14 +65641,15 @@
     },
     {
       "id": "24a4129a-8c52-8027-8178-d2574680bc36",
-      "slug": "lumiere-noire",
-      "name": "Lumière Noire",
+      "slug": "lumiere-noire-records",
+      "name": "Lumière Noire Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://lumierenoirerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "1b04129a-8c52-806e-bae5-eb80cacb8ea3"
+        "1b04129a-8c52-806e-bae5-eb80cacb8ea3",
+        "3d74129a-8c52-8087-bd14-db677311f1aa"
       ],
       "artistIds": [
         "24a4129a-8c52-801a-9d58-de788393c15d"
@@ -66256,7 +66625,7 @@
       "slug": "nice-swan-records",
       "name": "Nice Swan Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://niceswanrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66305,7 +66674,8 @@
         "c91c2431-05fb-486b-9180-eafa668a823b",
         "444ef6a3-70f1-4e27-97cc-956455529943",
         "1c64129a-8c52-80c3-905c-ff5838aefafa",
-        "2675302d-32db-4c2f-9aee-16afd9646d6e"
+        "2675302d-32db-4c2f-9aee-16afd9646d6e",
+        "3d74129a-8c52-8081-80f2-e978ac05ac21"
       ],
       "artistIds": [
         "24a4129a-8c52-80f9-b775-db08e934426c",
@@ -66319,7 +66689,8 @@
         "2504129a-8c52-80d6-8371-d256c7a9cd57",
         "2434129a-8c52-8062-8072-d25aba1f3aab",
         "24a4129a-8c52-8087-8499-e9327e6745b6",
-        "2514129a-8c52-8030-b194-e5e3e260fced"
+        "2514129a-8c52-8030-b194-e5e3e260fced",
+        "3d74129a-8c52-80d3-a032-f35a88fe18f1"
       ]
     },
     {
@@ -66898,6 +67269,21 @@
       ],
       "artistIds": [
         "3b84129a-8c52-80d9-95f0-d73ba4a3f2d3"
+      ]
+    },
+    {
+      "id": "3d74129a-8c52-8084-941e-fa8806c26272",
+      "slug": "pacific-theatre-records",
+      "name": "Pacific Theatre Records",
+      "country": "AU",
+      "bandcamp": "https://pacifictheatrerecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-80ff-833b-d16c3793b559"
+      ],
+      "artistIds": [
+        "3d74129a-8c52-80c2-b98e-cba3d884f770"
       ]
     },
     {
@@ -67694,6 +68080,21 @@
       ]
     },
     {
+      "id": "3d74129a-8c52-80f4-86e2-c564f65889a8",
+      "slug": "r-s-records",
+      "name": "R&S Records",
+      "country": "GB",
+      "bandcamp": "https://randsrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d74129a-8c52-805c-9837-c48c7fc84bed"
+      ],
+      "artistIds": [
+        "24a4129a-8c52-80e9-b904-cbd378ae2edc"
+      ]
+    },
+    {
       "id": "2524129a-8c52-8030-8322-e79b5f2739b6",
       "slug": "radio-juicy",
       "name": "Radio Juicy",
@@ -68466,6 +68867,7 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3d74129a-8c52-8073-a4d3-dffe5ec43736",
         "31b4129a-8c52-8040-b086-d3202d68f8d9",
         "2774129a-8c52-8074-b3aa-d14bafd0e0d7",
         "20d4129a-8c52-8091-9498-d46c43482d4d",
@@ -68474,6 +68876,7 @@
         "487091ad-df98-497b-a247-aa7b6526d6ae"
       ],
       "artistIds": [
+        "3d74129a-8c52-80bd-97bc-ff968eaf7e48",
         "31b4129a-8c52-800b-bc40-df6074fc5686",
         "2774129a-8c52-806c-b312-cc4cf5871d3d",
         "2444129a-8c52-8013-8b19-c0c5caec3998",
@@ -68610,7 +69013,7 @@
       "slug": "shadow-kingdom-records",
       "name": "Shadow Kingdom Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://shadowkingdomrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69846,9 +70249,11 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3d74129a-8c52-80ca-9327-d4e8ddca5814",
         "3d04129a-8c52-8096-8f3b-f7561954d2ff"
       ],
       "artistIds": [
+        "3d74129a-8c52-8048-a44d-d940b0874abf",
         "3d04129a-8c52-80d2-9e17-c2998be230f3"
       ]
     },
@@ -71922,6 +72327,19 @@
         "24a4129a-8c52-8082-8335-e14604efa91e"
       ],
       "slug": "tella-up-and-away"
+    },
+    {
+      "id": "3d74129a-8c52-809f-90bf-c3dbcdf2db0f",
+      "title": "落日飛車 Sunset Rollercoaster | Believe U",
+      "url": "https://youtu.be/nXSGLcdlc24?si=MaFDJdXH82tpeEG4",
+      "kind": "Official Video",
+      "released": "2026-09-10",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "24b4129a-8c52-80cd-825d-dab2b96110d0"
+      ],
+      "slug": "sunset-rollercoaster-believe-u"
     }
   ]
 }

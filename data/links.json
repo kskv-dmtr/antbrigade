@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T19:45:19Z",
+  "generatedAt": "2026-09-11T11:26:42Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19567,6 +19567,21 @@
       "upc": "0670579631044",
       "tracks": 8,
       "releaseDate": "2017-04-17"
+    },
+    "3d84129a-8c52-80bb-a4dd-cdabd5a26222": {
+      "source": "https://album.link/bzqjfmhpscw0r",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7cTQCfQtWh2vHkXuGrdRQT",
+        "pandora": "https://www.pandora.com/AL:859570",
+        "amazonMusic": "https://music.amazon.com/albums/B01LYII9Z3",
+        "tidal": "https://listen.tidal.com/album/2276006",
+        "yandex": "https://music.yandex.ru/album/720042",
+        "boomplay": "https://www.boomplay.com/albums/20623188",
+        "amazonStore": "https://amazon.com/dp/B01LYII9Z3"
+      },
+      "upc": "744861049968",
+      "tracks": 15,
+      "releaseDate": "2001-09-11"
     }
   }
 }

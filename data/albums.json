@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-11T22:05:57Z",
+  "generatedAt": "2026-09-11T22:37:30Z",
   "counts": {
     "albums": 1242,
     "artists": 1085,
     "labels": 680,
-    "videos": 95
+    "videos": 96
   },
   "albums": [
     {
@@ -43667,6 +43667,7 @@
         "3ce4129a-8c52-803d-85b8-c2370343ed0b"
       ],
       "videoIds": [
+        "3d84129a-8c52-801c-8793-eb9bc2796118",
         "3b94129a-8c52-804f-97d7-fcc0f7eea16d"
       ]
     },
@@ -72279,6 +72280,19 @@
         "2434129a-8c52-80d5-88d2-cc1cbf65f233"
       ],
       "slug": "dance-with-the-dead-shaun-phillips-cold-as-hell"
+    },
+    {
+      "id": "3d84129a-8c52-801c-8793-eb9bc2796118",
+      "title": "DeeCRACKS | Hell Today",
+      "url": "https://youtu.be/SVCb3KeFTX4?si=0Gu_YU0BeK0NwR50",
+      "kind": "Official Video",
+      "released": "2026-09-11",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "2524129a-8c52-80d8-960b-edb32e8a4eaf"
+      ],
+      "slug": "deecracks-hell-today"
     },
     {
       "id": "3b94129a-8c52-804f-97d7-fcc0f7eea16d",

@@ -35,22 +35,24 @@ const { title, description, activeSection, cardTitle, image, noindex } = Astro.p
    2026 есть собственный заголовок, и меню называет её так же, как она
    называет себя. Остальные пункты и так зовутся именами своих страниц.
 
-   «Listen» указывает на /music: каталог живёт там, а главная осталась
+   «Music» указывает на /music: каталог живёт там, а главная осталась
    витриной со свежим и случайным. Прежний адрес /releases переправляется
    сюда постоянным редиректом — на него уже ведут внешние ссылки.
 
-   Пунктов пять, а не семь, с 11 сентября 2026. Названы они делом, а не
-   содержимым: «Listen» вместо «Music», «Watch» вместо «Videos». Три
-   указателя — исполнители, лейблы и жанры — сложены под «Explore», где лежат
-   свёрнутыми списками: каждый из них не раздел каталога, а способ в него
-   войти, и семь слов подряд читались перечнем всего, что есть, а не выбором
-   из нескольких дел. Сами страницы /artists, /labels и /genres на месте — со
-   своим отбором, сортировкой и видом; отдельного пункта в меню на них больше
-   нет, и отмечается на них «Explore».
+   Пунктов четыре, а не семь, с 12 сентября 2026: витрина, каталог, клипы и
+   «Explore». Последний ничего не открывает сам — он раскрывает четыре
+   указателя: исполнителей, лейблы, жанры и подборки. Ни один из них не
+   раздел каталога, все четыре — способы в него войти, и семью словами подряд
+   меню перечисляло всё, что есть, вместо того чтобы предложить выбор.
+
+   11 сентября 2026 те же четыре указателя полдня жили отдельной страницей
+   /explore со свёрнутыми списками. Страница удалена: ради выбора из четырёх
+   слов человек делал лишний переход, а сами списки на ней повторяли
+   указатели — и весили 358 КБ разметки.
 
    Клипы вторым пунктом, сразу за Music, стояли до 7 сентября 2026, потом
-   последними — их 87 против 1167 релизов. С Explore порядок снова свой:
-   сперва два дела (слушать, смотреть), потом два способа найти. */
+   последними — их 87 против 1167 релизов. Теперь порядок снова свой: сперва
+   то, ради чего приходят, потом способ найти. */
 /* Тема на сайте одна — светлая, с 7 сентября 2026. Тёмная никуда не делась:
    её набор токенов лежит в global.css, кнопка с половинкой кружка — в
    разметке ниже, значок — в Icon.astro. Флаг снимает кнопку из шапки и
@@ -58,12 +60,22 @@ const { title, description, activeSection, cardTitle, image, noindex } = Astro.p
    поставить обратно true — вернуть переключатель как был. */
 const ТЕМА_ПЕРЕКЛЮЧАЕТСЯ = false;
 
+/* У последнего пункта вместо адреса — свои пункты: он ничего не открывает
+   сам, а раскрывает четыре указателя. Отмечается он, когда открыт любой из
+   них. */
 const nav = [
-  { href: '/',          label: 'Lucky Finds', key: 'home' },
-  { href: '/music',     label: 'Listen',      key: 'albums' },
-  { href: '/videos',    label: 'Watch',       key: 'videos' },
-  { href: '/explore',   label: 'Explore',     key: 'explore' },
-  { href: '/playlists', label: 'Playlists',   key: 'playlists' }
+  { href: '/',       label: 'Lucky Finds', key: 'home' },
+  { href: '/music',  label: 'Music',       key: 'albums' },
+  { href: '/videos', label: 'Video',       key: 'videos' },
+  {
+    label: 'Explore',
+    items: [
+      { href: '/artists',   label: 'Artists',   key: 'artists' },
+      { href: '/labels',    label: 'Labels',    key: 'labels' },
+      { href: '/genres',    label: 'Genres',    key: 'genres' },
+      { href: '/playlists', label: 'Playlists', key: 'playlists' }
+    ]
+  }
 ];
 
 /* Год в знаке охраны — от времени сборки, а не вписанный руками: сайт
@@ -264,8 +276,33 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           попадают в ссылку, и подчёркивание с вывороткой вылезали бы за букву
           на пробел с каждой стороны. */}
       <nav class="nav" id="nav">
-        {nav.map((item) => (
-          <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
+        {nav.map((item) => (item.items
+          /* Раскрывающийся пункт — родное <details>, как свёрнутый блок
+             «Info» на странице исполнителя: работает без скрипта, состояние
+             помнит браузер. Скрипт ниже только закрывает список по Escape и
+             по нажатию мимо — без него он закрывался бы лишь повторным
+             нажатием на само слово.
+
+             Отметка текущего раздела — на самом пункте (он ведёт себя как
+             ссылка на четыре страницы сразу) и на строке внутри списка.
+             aria-current остаётся при ссылке: у <summary> его читать
+             нечему. */
+          ? (
+            <details class="nav__drop" data-here={item.items.some((s) => s.key === activeSection) ? '' : undefined}>
+              <summary class="nav__sum">
+                {item.label}
+                <span class="select__chevron nav__mark" aria-hidden="true"></span>
+              </summary>
+
+              <div class="nav__panel">
+                {item.items.map((sub) => (
+                  <a href={sub.href} aria-current={activeSection === sub.key ? 'page' : undefined}>{sub.label}</a>
+                ))}
+              </div>
+            </details>
+          ) : (
+            <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
+          )
         ))}
       </nav>
 
@@ -425,7 +462,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
 
     addEventListener('pointerover', (e) => {
       const карта = e.target instanceof Element
-        ? e.target.closest('a, .more, .dig-again, .view-pick__opt')
+        ? e.target.closest('a, .more, .dig-again, .view-pick__opt, .nav__sum')
         : null;
 
       if (карта === подсвечена) return;
@@ -447,6 +484,32 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       карта.style.setProperty('--hot-fg', ЦВЕТА[n][1]);
       карта.dataset.hot = '';
     }, { passive: true });
+
+    /* Раскрывающийся пункт меню закрывается сам: по нажатию мимо и по
+       Escape. Само <details> так не умеет — закрыть его можно только
+       повторным нажатием на слово, а открытый список посреди страницы
+       читается зависшим.
+
+       Фокус по Escape возвращаем на слово: иначе он остался бы в закрытом
+       списке. Тот же приём, что у бургера ниже. */
+    const выпадающие = document.querySelectorAll('.nav__drop');
+
+    if (выпадающие.length) {
+      addEventListener('click', (e) => {
+        for (const пункт of выпадающие) {
+          if (пункт.open && !пункт.contains(e.target)) пункт.open = false;
+        }
+      });
+
+      addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        for (const пункт of выпадающие) {
+          if (!пункт.open) continue;
+          пункт.open = false;
+          пункт.querySelector('summary')?.focus();
+        }
+      });
+    }
 
     /* Бургер. Меню закрывается по Escape, по касанию мимо шапки и при
        переходе на широкий экран: там пункты снова стоят в строке, и

@@ -283,14 +283,24 @@ const cmp = (a, b) => collator.compare(a, b);
    Берём тем же запросом в обратном порядке и складываем: тысяча с начала
    плюс тысяча с конца перекрывают всё, пока в справочнике меньше двух
    тысяч строк. Дальше середина снова начнёт теряться, поэтому ниже стоит
-   проверка — она не даст этому случиться тихо. */
+   проверка — она не даст этому случиться тихо.
+
+   Порядок обоим заходам назван явно — по имени, вверх и вниз. Первый заход
+   шёл без сортировки, то есть в порядке самого представления, и второй был
+   обратным не ему, а имени: два окна по тысяче ложились на список со
+   сдвигом и оставляли между собой дыру. 11 сентября 2026 артистов стало
+   1085, дыра шириной ровно в одну запись пришлась на 1009-ю строку, и
+   часовая синхронизация встала совсем — проверка ниже её и остановила.
+   Замер после правки: 1000 сверху, 1000 снизу, в объединении все 1085. */
 async function fullCollection(source) {
-  const res = await queryCollection(source);
+  const по_имени = (direction) => [{ property: 'title', direction }];
+
+  const res = await queryCollection(source, null, по_имени('ascending'));
   const store = new Map();
   collect(store, res.blocks, source.collection);
 
   if (store.size < res.ids.length) {
-    const назад = await queryCollection(source, null, [{ property: 'title', direction: 'descending' }]);
+    const назад = await queryCollection(source, null, по_имени('descending'));
     collect(store, назад.blocks, source.collection);
   }
   return { store, total: res.ids.length };

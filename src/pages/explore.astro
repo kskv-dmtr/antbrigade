@@ -1,0 +1,106 @@
+---
+/* Explore — три указателя одной страницей: исполнители, лейблы, жанры.
+
+   Заведена 11 сентября 2026 вместе с новым порядком меню. До того каждый из
+   трёх стоял в шапке своим пунктом, и меню из семи слов занимало середину
+   полосы целиком; теперь их четыре, а три указателя лежат под одним словом.
+
+   Каждый — свёрнутый блок: полоса с именем, под ней список. Свёрнуты все
+   три, и страница открывается тремя строками, а не тремя тысячами имён —
+   выбирают тут, куда пойти, а не читают подряд.
+
+   Отбора по букве, сортировки и переключателя вида здесь нет: это витрина
+   указателей, а не сам указатель. Всё это осталось на /artists, /labels и
+   /genres — страницы никуда не делись, просто в меню на них больше не
+   ведёт отдельного пункта. */
+
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import NamesMore from '../components/NamesMore.astro';
+import { artists, labels, genres } from '../lib/db.js';
+
+/* Порядок внутри каждого списка алфавитный — тот же, с которым открываются
+   сами указатели. Жанры в базе лежат по убыванию числа релизов (этот порядок
+   у них в отборе зовётся Most releases), поэтому сортируем сами. */
+const поимённо = (список) =>
+  список.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+/* Величина при имени — число релизов, как в строке у всех трёх указателей.
+   Страна и счёт клипов есть в карточках на самих указателях; в половину
+   строки две величины не встают. */
+const списки = [
+  {
+    имя: 'Artists',
+    записи: поимённо(artists).map((a) => ({
+      name: a.name,
+      href: `/artists/${a.slug}`,
+      count: a.albumIds.length
+    }))
+  },
+  {
+    имя: 'Labels',
+    записи: поимённо(labels).map((l) => ({
+      name: l.name,
+      href: `/labels/${l.slug}`,
+      count: l.albumIds.length
+    }))
+  },
+  {
+    имя: 'Genres',
+    записи: поимённо(genres).map((g) => ({
+      name: g.name,
+      href: `/genres/${g.slug}`,
+      count: g.count
+    }))
+  }
+];
+---
+<Base
+  title="Explore · ant brigade"
+  description={`${artists.length} artists, ${labels.length} labels and ${genres.length} genres in the collection.`}
+  activeSection="explore"
+>
+  {/* Имя страницы — первой строкой и в тот же кегль 72, что у витрины,
+      Music, подборок и страниц исполнителя. */}
+  <div class="lead">
+    <h1 class="item__title">Explore</h1>
+  </div>
+
+  {списки.map(({ имя, записи }) => (
+    <section class="section">
+      {/* Полоса сворачивает список под собой. Родное <details>, а не кнопка
+          со скриптом: работает без него, состояние помнит сам браузер, и
+          найти имя поиском по странице он тоже умеет.
+
+          Треугольник тот же, что у дропдаунов отбора и у блока «Info» на
+          странице исполнителя, и поворачивается так же — вниз, когда
+          раскрыто. Закрыто по умолчанию, в отличие от «Info»: там под
+          полосой две строки справки, здесь — тысяча имён.
+
+          Счётчика в полосе нет — как и на самих указателях: число при каждом
+          имени уже стоит, и второе число рядом с заголовком считало бы
+          другое и о том же. */}
+      <details class="fold">
+        <summary class="fold__head">
+          <div class="head head--sticky head--dot head--page head--wide">
+            <div class="head__lead">
+              <h2 class="display display--md"><Icon name="circle" class="mark" />{имя}</h2>
+              <span class="select__chevron fold__mark" aria-hidden="true"></span>
+            </div>
+          </div>
+        </summary>
+
+        <NamesMore count={записи.length}>
+          {записи.map((з) => (
+            <li class="names__item">
+              <a class="row row--brief" href={з.href}>
+                <span class="row__title">{з.name}</span>
+                <span class="row__val">[{з.count}]</span>
+              </a>
+            </li>
+          ))}
+        </NamesMore>
+      </details>
+    </section>
+  ))}
+</Base>

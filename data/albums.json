@@ -1,13 +1,44 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-11T11:26:24Z",
+  "generatedAt": "2026-09-11T22:05:57Z",
   "counts": {
-    "albums": 1233,
-    "artists": 1079,
-    "labels": 676,
-    "videos": 94
+    "albums": 1242,
+    "artists": 1085,
+    "labels": 680,
+    "videos": 95
   },
   "albums": [
+    {
+      "id": "3d84129a-8c52-80c4-9e32-c56514ff6e2e",
+      "slug": "jack-wyllie-eternal-spring",
+      "artist": "Jack Wyllie",
+      "album": "Eternal Spring",
+      "url": "https://album.link/b9hcvnh74jm3b",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A65210294-0b51-4673-96fe-707e138d4b74%3Aa3761729023_10.jpg?table=block&id=3d84129a-8c52-80c4-9e32-c56514ff6e2e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Contemporary Jazz",
+        "Ambient"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-11",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-80bf-ad47-eec219ddbdf7"
+      ],
+      "artists": [
+        "Jack Wyllie"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8005-b74c-c0b34a570bed"
+      ],
+      "labels": [
+        "Gondwana Records"
+      ]
+    },
     {
       "id": "3d74129a-8c52-803c-b478-fd8eec98bbd6",
       "slug": "brian-fallon-not-bad-for-new-jersey",
@@ -4512,6 +4543,38 @@
       ],
       "labels": [
         "Ninja Tune"
+      ]
+    },
+    {
+      "id": "3d84129a-8c52-80bc-ad5a-fb2f3efa0d72",
+      "slug": "louis-fontane-the-proper-place",
+      "artist": "Louis Fontane",
+      "album": "The Proper Place",
+      "url": "https://album.link/r5crw7w8jcd4q",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2d8e52a5-6eab-4fa5-ade9-b1ee74d1fe89%3Aa4238385304_10.jpg?table=block&id=3d84129a-8c52-80bc-ad5a-fb2f3efa0d72&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Pop",
+        "Neo-Psychedelia",
+        "Library Music"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-03-27",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-80de-9aa0-e08feb2a4cab"
+      ],
+      "artists": [
+        "Louis Fontane"
+      ],
+      "labelIds": [
+        "2514129a-8c52-801c-a743-d2e5f934136a"
+      ],
+      "labels": [
+        "Broc Recordz"
       ]
     },
     {
@@ -35173,6 +35236,37 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-800b-b910-da5a8b798ac4",
+      "slug": "orgone-moonshadows",
+      "artist": "Orgone",
+      "album": "Moonshadows",
+      "url": "https://album.link/6fnkt235grg4s",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A678bee5e-0da3-4468-89e8-3f0797b1014f%3Aa1930071383_10.jpg?table=block&id=3d84129a-8c52-800b-b910-da5a8b798ac4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Deep Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-23",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-8068-b236-faca8dae515c"
+      ],
+      "artists": [
+        "Orgone"
+      ],
+      "labelIds": [
+        "3d84129a-8c52-8030-97a2-f70761fdbf12"
+      ],
+      "labels": [
+        "3 Palm Records"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-8077-989c-fc65f76bbc11",
       "slug": "eleven-76-occhio-occhio",
       "artist": "Eleven 76",
@@ -36234,6 +36328,37 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-803d-87a0-cedd0ec48a31",
+      "slug": "william-stuckey-love-of-mine",
+      "artist": "William Stuckey",
+      "album": "Love of Mine",
+      "url": "https://album.link/89rkx2rgdx7s2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3f3e099d-aa21-47ce-b09b-d01847dd5450%3Aa3128208335_10.jpg?table=block&id=3d84129a-8c52-803d-87a0-cedd0ec48a31&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Smooth Soul",
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-01-29",
+      "year": 2021,
+      "origYear": "1979",
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-80b6-b163-f4664ec2ddf4"
+      ],
+      "artists": [
+        "William Stuckey"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
+      ],
+      "labels": [
+        "Athens of the North"
+      ]
+    },
+    {
       "id": "df562743-4b65-4dc9-a438-4e4a04e2ee7e",
       "slug": "apifera-overstand",
       "artist": "Apifera",
@@ -36359,6 +36484,37 @@
       ],
       "labels": [
         "Defected Records"
+      ]
+    },
+    {
+      "id": "3d84129a-8c52-807f-824e-cc99b753823b",
+      "slug": "eabs-discipline-of-sun-ra",
+      "artist": "EABS",
+      "album": "Discipline of Sun Ra",
+      "url": "https://album.link/s42vp7xbgrgpx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adb35a063-1416-4b46-99bd-d004998f90ef%3Aa4077001170_10.jpg?table=block&id=3d84129a-8c52-807f-824e-cc99b753823b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Spiritual Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-10-30",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-80cd-881a-dd488e479cb3"
+      ],
+      "artists": [
+        "EABS"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80b8-ba92-e97678ff94f4"
+      ],
+      "labels": [
+        "Astigmatic Records"
       ]
     },
     {
@@ -37306,6 +37462,37 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-80eb-8a5c-ed99c67ed646",
+      "slug": "brainstory-buck",
+      "artist": "Brainstory",
+      "album": "Buck",
+      "url": "https://album.link/pb9h6dpdhnvxk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af11ae90d-4940-4e12-abcf-78005ddcddd0%3Aa1767724926_10.jpg?table=block&id=3d84129a-8c52-80eb-8a5c-ed99c67ed646&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul",
+        "Neo-Psychedelia"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-11-15",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24f4129a-8c52-80f5-bbfb-ea312113ce36"
+      ],
+      "artists": [
+        "Brainstory"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80b5-a601-f724bcf55f84"
+      ],
+      "labels": [
+        "Big Crown Records"
+      ]
+    },
+    {
       "id": "3cc4129a-8c52-806d-aba1-d5e0911705c8",
       "slug": "club-music-club-music-vol-ii",
       "artist": "Club Music",
@@ -37743,6 +37930,38 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-8045-9b0d-f91da6aa7170",
+      "slug": "nicola-cruz-siku",
+      "artist": "Nicola Cruz",
+      "album": "Siku",
+      "url": "https://album.link/vcqpntnnrv6xh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A489608c0-51cb-4865-981e-e871958a0f4f%3Aa4099083217_10.jpg?table=block&id=3d84129a-8c52-8045-9b0d-f91da6aa7170&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Folktronica",
+        "Digital Cumbia",
+        "Latin Electronic"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-01-25",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2444129a-8c52-8069-a68c-fbb36065e2f8"
+      ],
+      "artists": [
+        "Nicola Cruz"
+      ],
+      "labelIds": [
+        "3d84129a-8c52-80b7-b82f-f19116698736"
+      ],
+      "labels": [
+        "ZZK Records"
+      ]
+    },
+    {
       "id": "3d54129a-8c52-8058-b425-ce91e6f33700",
       "slug": "the-motet-death-or-devotion",
       "artist": "The Motet",
@@ -38177,6 +38396,40 @@
       ],
       "labels": [
         "Coastal Haze"
+      ]
+    },
+    {
+      "id": "3d84129a-8c52-8040-a055-e9a9a96422c8",
+      "slug": "the-maghreban-01deas",
+      "artist": "The Maghreban",
+      "album": "01DEAS",
+      "url": "https://album.link/zpgh9vqnwcwpz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9efb5962-6410-4837-8b09-d798f59480f4%3Aa4016273020_10.jpg?table=block&id=3d84129a-8c52-8040-a055-e9a9a96422c8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Microhouse",
+        "Tech House",
+        "Ambient House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-03-23",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-8024-ad09-fe687d6a05f2"
+      ],
+      "artists": [
+        "The Maghreban"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80f4-86e2-c564f65889a8",
+        "3d84129a-8c52-80ca-8a01-cacb23ca1322"
+      ],
+      "labels": [
+        "R&S Records",
+        "Zoot Records"
       ]
     },
     {
@@ -38817,6 +39070,36 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-802f-b563-eeb85969919e",
+      "slug": "frantique-frantique",
+      "artist": "Frantique",
+      "album": "Frantique",
+      "url": "https://album.link/hqkcbstd8rczz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9df8f2c6-70b9-4635-9c88-9416258aaf25%3Aab67616d0000b273784d8fa1f4872303d4bf9dc9.jpg?table=block&id=3d84129a-8c52-802f-b563-eeb85969919e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "1979-08-01",
+      "year": 1979,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d84129a-8c52-80a2-b322-e0cbed347df4"
+      ],
+      "artists": [
+        "Frantique"
+      ],
+      "labelIds": [
+        "3d84129a-8c52-80d2-b91f-e5339a0b887e"
+      ],
+      "labels": [
+        "Philadelphia International Records"
+      ]
+    },
+    {
       "id": "3b84129a-8c52-80e6-85c6-e80656072383",
       "slug": "ana-mazzotti-ninguem-vai-me-segurar",
       "artist": "Ana Mazzotti",
@@ -38897,7 +39180,7 @@
       "slug": "3c14129a",
       "name": "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://00000ooooo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3c14129a-8c52-80e6-b59d-c3b7827df262"
@@ -41271,13 +41554,16 @@
       "slug": "brainstory",
       "name": "Brainstory",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brainstory1.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "6ab27855-1303-46f0-8629-28c5138847fe"
+        "6ab27855-1303-46f0-8629-28c5138847fe",
+        "3d84129a-8c52-80eb-8a5c-ed99c67ed646"
       ],
       "genres": [
-        "Soul"
+        "Soul",
+        "Psychedelic Soul",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
         "2494129a-8c52-80b5-a601-f724bcf55f84"
@@ -44104,13 +44390,15 @@
       "bandcamp": "https://eabs.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "d73f2bc3-1137-417d-a4f9-bd5df904aece"
+        "d73f2bc3-1137-417d-a4f9-bd5df904aece",
+        "3d84129a-8c52-807f-824e-cc99b753823b"
       ],
       "genres": [
         "Jazz",
         "Electronic",
         "Jazz Fusion",
-        "Ambient"
+        "Ambient",
+        "Spiritual Jazz"
       ],
       "labelIds": [
         "2434129a-8c52-80b8-ba92-e97678ff94f4"
@@ -44416,7 +44704,7 @@
       "slug": "enforced",
       "name": "Enforced",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://enforced.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "12b4129a-8c52-802f-b98f-e66068687e98"
@@ -45369,6 +45657,24 @@
       ],
       "labelIds": [
         "2494129a-8c52-80ce-87ff-d6e23281786f"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d84129a-8c52-80a2-b322-e0cbed347df4",
+      "slug": "frantique",
+      "name": "Frantique",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-802f-b563-eeb85969919e"
+      ],
+      "genres": [
+        "Disco"
+      ],
+      "labelIds": [
+        "3d84129a-8c52-80d2-b91f-e5339a0b887e"
       ],
       "videoIds": []
     },
@@ -47307,6 +47613,25 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80d7-bfc8-eb6744309e44"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d84129a-8c52-80bf-ad47-eec219ddbdf7",
+      "slug": "jack-wyllie",
+      "name": "Jack Wyllie",
+      "country": "GB",
+      "bandcamp": "https://jackwyllie.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-80c4-9e32-c56514ff6e2e"
+      ],
+      "genres": [
+        "Contemporary Jazz",
+        "Ambient"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8005-b74c-c0b34a570bed"
       ],
       "videoIds": []
     },
@@ -49741,6 +50066,26 @@
       "videoIds": []
     },
     {
+      "id": "3d84129a-8c52-80de-9aa0-e08feb2a4cab",
+      "slug": "louis-fontane",
+      "name": "Louis Fontane",
+      "country": "IT",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-80bc-ad5a-fb2f3efa0d72"
+      ],
+      "genres": [
+        "Psychedelic Pop",
+        "Neo-Psychedelia",
+        "Library Music"
+      ],
+      "labelIds": [
+        "2514129a-8c52-801c-a743-d2e5f934136a"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2504129a-8c52-8029-b227-e5cd6c5a0959",
       "slug": "lovetempo",
       "name": "lovetempo",
@@ -51613,17 +51958,22 @@
       "slug": "nicola-cruz",
       "name": "Nicola Cruz",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://nicolacruz.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "5e9943fb-89f6-4c9f-bde0-4b169cc6dd57"
+        "5e9943fb-89f6-4c9f-bde0-4b169cc6dd57",
+        "3d84129a-8c52-8045-9b0d-f91da6aa7170"
       ],
       "genres": [
         "Electro",
-        "House"
+        "House",
+        "Folktronica",
+        "Digital Cumbia",
+        "Latin Electronic"
       ],
       "labelIds": [
-        "2444129a-8c52-80df-ba79-cb4ae603ac45"
+        "2444129a-8c52-80df-ba79-cb4ae603ac45",
+        "3d84129a-8c52-80b7-b82f-f19116698736"
       ],
       "videoIds": []
     },
@@ -52178,6 +52528,25 @@
       ],
       "labelIds": [
         "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d84129a-8c52-8068-b236-faca8dae515c",
+      "slug": "orgone",
+      "name": "Orgone",
+      "country": "US",
+      "bandcamp": "https://orgonemusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-800b-b910-da5a8b798ac4"
+      ],
+      "genres": [
+        "Jazz-Funk",
+        "Deep Funk"
+      ],
+      "labelIds": [
+        "3d84129a-8c52-8030-97a2-f70761fdbf12"
       ],
       "videoIds": []
     },
@@ -54680,7 +55049,9 @@
         "2864129a-8c52-80cb-9223-fe406c7f1133",
         "2504129a-8c52-8043-bbf7-dccba6159cb1"
       ],
-      "videoIds": []
+      "videoIds": [
+        "3d84129a-8c52-8083-8cf4-f011cf2d2d6a"
+      ]
     },
     {
       "id": "2414129a-8c52-8018-875e-e5cb6beef380",
@@ -55638,7 +56009,7 @@
       "slug": "southern-shores",
       "name": "Southern Shores",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://southernshores.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "9d765a2b-301e-4e51-bd1a-290af5ea2a81",
@@ -57362,6 +57733,27 @@
       ],
       "labelIds": [
         "3d74129a-8c52-8044-bb0d-f7f0502dcb01"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d84129a-8c52-8024-ad09-fe687d6a05f2",
+      "slug": "the-maghreban",
+      "name": "The Maghreban",
+      "country": "GB",
+      "bandcamp": "https://maghreban.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-8040-a055-e9a9a96422c8"
+      ],
+      "genres": [
+        "Microhouse",
+        "Tech House",
+        "Ambient House"
+      ],
+      "labelIds": [
+        "3d74129a-8c52-80f4-86e2-c564f65889a8",
+        "3d84129a-8c52-80ca-8a01-cacb23ca1322"
       ],
       "videoIds": []
     },
@@ -59596,6 +59988,25 @@
       "videoIds": []
     },
     {
+      "id": "3d84129a-8c52-80b6-b163-f4664ec2ddf4",
+      "slug": "william-stuckey",
+      "name": "William Stuckey",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-803d-87a0-cedd0ec48a31"
+      ],
+      "genres": [
+        "Smooth Soul",
+        "Funk"
+      ],
+      "labelIds": [
+        "3b74129a-8c52-8060-af6b-ece8a3271488"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2b84129a-8c52-8075-b899-d62dbadb260f",
       "slug": "wilson-tanner",
       "name": "Wilson Tanner",
@@ -60388,6 +60799,21 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-8030-97a2-f70761fdbf12",
+      "slug": "3-palm-records",
+      "name": "3 Palm Records",
+      "country": "US",
+      "bandcamp": "https://3palmrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-800b-b910-da5a8b798ac4"
+      ],
+      "artistIds": [
+        "3d84129a-8c52-8068-b236-faca8dae515c"
+      ]
+    },
+    {
       "id": "3b84129a-8c52-80ec-98d8-cee5db19ba72",
       "slug": "40-miles",
       "name": "40 MILES",
@@ -60826,7 +61252,8 @@
         "2154129a-8c52-80de-872a-d777d46481c4",
         "11b4129a-8c52-80a7-bd9c-eb44ebfe2867",
         "d73f2bc3-1137-417d-a4f9-bd5df904aece",
-        "0e69c201-f7a2-4037-a4d2-a53b22044168"
+        "0e69c201-f7a2-4037-a4d2-a53b22044168",
+        "3d84129a-8c52-807f-824e-cc99b753823b"
       ],
       "artistIds": [
         "2cc4129a-8c52-8018-864a-d85adaa92404",
@@ -60923,11 +61350,13 @@
       "albumIds": [
         "3b74129a-8c52-8073-a9d7-f8e698d2df22",
         "3cc4129a-8c52-80a2-91c7-fdbe4a9685a6",
+        "3d84129a-8c52-803d-87a0-cedd0ec48a31",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97"
       ],
       "artistIds": [
         "3b74129a-8c52-804f-8451-dc610a180e8c",
         "3cc4129a-8c52-8088-8f16-c667c5af0498",
+        "3d84129a-8c52-80b6-b163-f4664ec2ddf4",
         "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
@@ -61285,7 +61714,8 @@
         "46fffbcf-55b8-4c8f-becf-f15ca1ae1cff",
         "2534129a-8c52-80f8-8577-f0c3643e8f78",
         "3b54129a-8c52-809a-bdda-e20666bff91b",
-        "3b34129a-8c52-80bb-a119-e6705706332a"
+        "3b34129a-8c52-80bb-a119-e6705706332a",
+        "3d84129a-8c52-80eb-8a5c-ed99c67ed646"
       ],
       "artistIds": [
         "2514129a-8c52-8025-9293-c077b77155f3",
@@ -61632,10 +62062,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3d84129a-8c52-80bc-ad5a-fb2f3efa0d72",
         "2f83d70f-9a87-456e-a8e3-a827de958d5f",
         "1094129a-8c52-80e7-a8a2-f21720948537"
       ],
       "artistIds": [
+        "3d84129a-8c52-80de-9aa0-e08feb2a4cab",
         "2434129a-8c52-8094-a9b2-d0e782bedeee"
       ]
     },
@@ -61778,7 +62210,7 @@
       "slug": "cascine",
       "name": "Cascine",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cascine.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61824,7 +62256,7 @@
       "slug": "century-media-records",
       "name": "Century Media Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://centurymedia.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62075,7 +62507,7 @@
       "country": "US",
       "bandcamp": "https://coleminerecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@ColemineRecords",
       "albumIds": [
         "33d4129a-8c52-80aa-8368-e099d4725c25",
         "e1018018-9a65-4b69-b7c3-ce1e5ed15af7",
@@ -64032,6 +64464,7 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3d84129a-8c52-80c4-9e32-c56514ff6e2e",
         "2704129a-8c52-8049-bd10-ec2aa2a96c72",
         "1c54129a-8c52-8069-80bb-d6d78f97a17a",
         "1224129a-8c52-8079-934b-c68a02170a2c",
@@ -64039,6 +64472,7 @@
         "2bf4129a-8c52-806e-922a-fdc691cfbe4a"
       ],
       "artistIds": [
+        "3d84129a-8c52-80bf-ad47-eec219ddbdf7",
         "2704129a-8c52-80d5-859f-f877e86dc119",
         "24a4129a-8c52-805b-aa35-d3493ceb26ab",
         "2484129a-8c52-8057-ab25-d8f52215badb",
@@ -67950,6 +68384,21 @@
       ]
     },
     {
+      "id": "3d84129a-8c52-80d2-b91f-e5339a0b887e",
+      "slug": "philadelphia-international-records",
+      "name": "Philadelphia International Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-802f-b563-eeb85969919e"
+      ],
+      "artistIds": [
+        "3d84129a-8c52-80a2-b322-e0cbed347df4"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80b1-880b-d518b207e07a",
       "slug": "piano-and-coffee-records",
       "name": "piano and coffee records",
@@ -68434,10 +68883,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3d74129a-8c52-805c-9837-c48c7fc84bed"
+        "3d74129a-8c52-805c-9837-c48c7fc84bed",
+        "3d84129a-8c52-8040-a055-e9a9a96422c8"
       ],
       "artistIds": [
-        "24a4129a-8c52-80e9-b904-cbd378ae2edc"
+        "24a4129a-8c52-80e9-b904-cbd378ae2edc",
+        "3d84129a-8c52-8024-ad09-fe687d6a05f2"
       ]
     },
     {
@@ -71508,6 +71959,36 @@
       "artistIds": [
         "2514129a-8c52-8011-b2dc-f796a318ca37"
       ]
+    },
+    {
+      "id": "3d84129a-8c52-80ca-8a01-cacb23ca1322",
+      "slug": "zoot-records",
+      "name": "Zoot Records",
+      "country": "GB",
+      "bandcamp": "https://zootrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-8040-a055-e9a9a96422c8"
+      ],
+      "artistIds": [
+        "3d84129a-8c52-8024-ad09-fe687d6a05f2"
+      ]
+    },
+    {
+      "id": "3d84129a-8c52-80b7-b82f-f19116698736",
+      "slug": "zzk-records",
+      "name": "ZZK Records",
+      "country": "US",
+      "bandcamp": "https://zzkrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d84129a-8c52-8045-9b0d-f91da6aa7170"
+      ],
+      "artistIds": [
+        "2444129a-8c52-8069-a68c-fbb36065e2f8"
+      ]
     }
   ],
   "videos": [
@@ -72376,6 +72857,19 @@
         "3cd4129a-8c52-80e6-a380-f60243ce3d97"
       ],
       "slug": "russian-circles-empath"
+    },
+    {
+      "id": "3d84129a-8c52-8083-8cf4-f011cf2d2d6a",
+      "title": "Say She She | Fortune Teller",
+      "url": "https://youtu.be/d5UH4CKRt1I?si=T5E_6IV6vA2EgCWp",
+      "kind": "Official Video",
+      "released": "2022-10-25",
+      "year": 2022,
+      "origYear": null,
+      "artistIds": [
+        "2524129a-8c52-80a2-a04a-eecaf9f47a55"
+      ],
+      "slug": "say-she-she-fortune-teller"
     },
     {
       "id": "8a4709eb-d31e-4ac4-9a8b-075d38faf12a",

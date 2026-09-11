@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T11:26:42Z",
+  "generatedAt": "2026-09-11T22:07:03Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19582,6 +19582,147 @@
       "upc": "744861049968",
       "tracks": 15,
       "releaseDate": "2001-09-11"
+    },
+    "3d84129a-8c52-80c4-9e32-c56514ff6e2e": {
+      "source": "https://album.link/b9hcvnh74jm3b",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/49PM8q92AcUcfe0ZSIjYrF",
+        "pandora": "https://www.pandora.com/AL:66615004",
+        "tidal": "https://listen.tidal.com/album/526308265",
+        "bandcamp": "https://jackwyllie.bandcamp.com/album/eternal-spring"
+      },
+      "upc": "4062548135077",
+      "tracks": 9,
+      "releaseDate": "2026-09-11"
+    },
+    "3d84129a-8c52-80bc-ad5a-fb2f3efa0d72": {
+      "source": "https://album.link/r5crw7w8jcd4q",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/154swtVkPCdcDE32Whxq3s",
+        "pandora": "https://www.pandora.com/AL:61580959",
+        "tidal": "https://listen.tidal.com/album/499743928",
+        "bandcamp": "https://brocrecordz.bandcamp.com/album/the-proper-place"
+      },
+      "upc": "820200324207",
+      "tracks": 4,
+      "releaseDate": "2026-03-27"
+    },
+    "3d84129a-8c52-800b-b910-da5a8b798ac4": {
+      "source": "https://album.link/6fnkt235grg4s",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3FJHBeJz2ImwMQEBXSGlGh",
+        "pandora": "https://www.pandora.com/AL:9497493",
+        "deezer": "https://www.deezer.com/album/233591472",
+        "amazonMusic": "https://music.amazon.com/albums/B0964C1V3M",
+        "tidal": "https://listen.tidal.com/album/185847242",
+        "yandex": "https://music.yandex.ru/album/15887210",
+        "boomplay": "https://www.boomplay.com/albums/26256810",
+        "anghami": "https://play.anghami.com/album/1020272693?refer=linktree",
+        "bandcamp": "https://orgonemusic.bandcamp.com/album/moonshadows",
+        "amazonStore": "https://amazon.com/dp/B0964C1V3M"
+      },
+      "upc": "617308001020",
+      "tracks": 10,
+      "releaseDate": "2021-07-23"
+    },
+    "3d84129a-8c52-803d-87a0-cedd0ec48a31": {
+      "source": "https://album.link/89rkx2rgdx7s2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5qfbml8mc4mfFIZq01BSYE",
+        "pandora": "https://www.pandora.com/AL:7739244",
+        "deezer": "https://www.deezer.com/album/197248712",
+        "amazonMusic": "https://music.amazon.com/albums/B08SJ196GB",
+        "tidal": "https://listen.tidal.com/album/168122960",
+        "yandex": "https://music.yandex.ru/album/13425975",
+        "boomplay": "https://www.boomplay.com/albums/19994603",
+        "bandcamp": "https://aotns.bandcamp.com/album/love-of-mine",
+        "amazonStore": "https://amazon.com/dp/B08SJ196GB"
+      },
+      "upc": "5050580749108",
+      "tracks": 8,
+      "releaseDate": "2021-01-29"
+    },
+    "3d84129a-8c52-807f-824e-cc99b753823b": {
+      "source": "https://album.link/s42vp7xbgrgpx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5hsYvopPsCNXwpxKIfmjYU",
+        "pandora": "https://www.pandora.com/AL:6691473",
+        "deezer": "https://www.deezer.com/album/255758642",
+        "amazonMusic": "https://music.amazon.com/albums/B09DTFR5VC",
+        "tidal": "https://listen.tidal.com/album/195489553",
+        "napster": "https://play.napster.com/album/alb.608195660",
+        "yandex": "https://music.yandex.ru/album/12193613",
+        "boomplay": "https://www.boomplay.com/albums/31068091",
+        "anghami": "https://play.anghami.com/album/1022212789?refer=linktree",
+        "bandcamp": "https://eabs.bandcamp.com/album/discipline-of-sun-ra",
+        "amazonStore": "https://amazon.com/dp/B09DTFR5VC"
+      },
+      "upc": "196292343748",
+      "tracks": 7,
+      "releaseDate": "2020-10-30"
+    },
+    "3d84129a-8c52-80eb-8a5c-ed99c67ed646": {
+      "source": "https://album.link/pb9h6dpdhnvxk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7gfKIwVTWWP77PZ5A0wArN",
+        "pandora": "https://www.pandora.com/AL:2867615",
+        "deezer": "https://www.deezer.com/album/113856262",
+        "amazonMusic": "https://music.amazon.com/albums/B07WNSM4NR",
+        "tidal": "https://listen.tidal.com/album/119556727",
+        "napster": "https://play.napster.com/album/alb.413008040",
+        "yandex": "https://music.yandex.ru/album/8921294",
+        "boomplay": "https://www.boomplay.com/albums/7368665",
+        "anghami": "https://play.anghami.com/album/1008753751?refer=linktree",
+        "bandcamp": "https://brainstory1.bandcamp.com/album/buck",
+        "amazonStore": "https://amazon.com/dp/B07WNSM4NR"
+      },
+      "upc": "656605349794",
+      "tracks": 10,
+      "releaseDate": "2019-11-15"
+    },
+    "3d84129a-8c52-8045-9b0d-f91da6aa7170": {
+      "source": "https://album.link/vcqpntnnrv6xh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3Ebykp28PuMSSQfqzkt8DO",
+        "pandora": "https://www.pandora.com/AL:1805954",
+        "deezer": "https://www.deezer.com/album/231074372",
+        "amazonMusic": "https://music.amazon.com/albums/B095B4LZMW",
+        "tidal": "https://listen.tidal.com/album/184599158",
+        "napster": "https://play.napster.com/album/alb.331932338",
+        "yandex": "https://music.yandex.ru/album/15678528",
+        "boomplay": "https://www.boomplay.com/albums/6793620",
+        "anghami": "https://play.anghami.com/album/1009879308?refer=linktree",
+        "bandcamp": "https://nicolacruz.bandcamp.com/album/siku",
+        "amazonStore": "https://amazon.com/dp/B095B4LZMW"
+      },
+      "upc": "5056032320154",
+      "tracks": 11,
+      "releaseDate": "2019-01-25"
+    },
+    "3d84129a-8c52-8040-a055-e9a9a96422c8": {
+      "source": "https://album.link/zpgh9vqnwcwpz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5A7tTJDpYW01Eki5UaOlnP",
+        "yandex": "https://music.yandex.ru/album/4982471",
+        "bandcamp": "https://maghreban.bandcamp.com/album/01deas"
+      },
+      "upc": "5055274708454",
+      "tracks": 13,
+      "releaseDate": "2018-03-23"
+    },
+    "3d84129a-8c52-802f-b563-eeb85969919e": {
+      "source": "https://album.link/hqkcbstd8rczz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2OE1C1ZMhsftNGcNYlEvww",
+        "pandora": "https://www.pandora.com/AL:41304238",
+        "deezer": "https://www.deezer.com/album/670373341",
+        "amazonMusic": "https://music.amazon.com/albums/B0DN4DQ425",
+        "tidal": "https://listen.tidal.com/album/399648207",
+        "amazonStore": "https://amazon.com/dp/B0DN4DQ425"
+      },
+      "upc": "886448125556",
+      "tracks": 8,
+      "releaseDate": "1979-08-01"
     }
   }
 }

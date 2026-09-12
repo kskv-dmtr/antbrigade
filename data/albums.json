@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-12T17:13:18Z",
+  "generatedAt": "2026-09-12T19:25:17Z",
   "counts": {
-    "albums": 1248,
-    "artists": 1088,
-    "labels": 684,
+    "albums": 1250,
+    "artists": 1089,
+    "labels": 685,
     "videos": 96
   },
   "albums": [
@@ -35174,6 +35174,38 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-8032-9223-e88c9c52d990",
+      "slug": "various-artists-an-eclectic-selection-of-music-from-the-arab",
+      "artist": "Various Artists",
+      "album": "An Eclectic Selection of Music From the Arab World, Part 2",
+      "url": "https://album.link/ttfssm37pmkcf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9d47e5bb-6534-4c08-a872-ae12e1fbd772%3Aa2911442712_10.jpg?table=block&id=3d94129a-8c52-8032-9223-e88c9c52d990&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Arabic Music",
+        "Funk",
+        "Disco"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-08-06",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3ce4129a-8c52-8040-9fe7-c20666b8f22d"
+      ],
+      "labels": [
+        "Habibi Funk Records"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-80c7-8e95-e792f0516474",
       "slug": "balimaya-project-wolo-so",
       "artist": "Balimaya Project",
@@ -37683,6 +37715,37 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80b9-a0d2-fb756910b99b",
+      "slug": "kraak-smaak-pleasure-centre",
+      "artist": "Kraak & Smaak |Pleasure Centre",
+      "album": "",
+      "url": "https://album.link/qktpn536bw26s",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1fddbfaf-5670-49d3-8366-12154db05200%3Aa1121407152_10.jpg?table=block&id=3d94129a-8c52-80b9-a0d2-fb756910b99b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Balearic Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-10-18",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-8081-ba42-c431b2fbbd2b"
+      ],
+      "artists": [
+        "Kraak & Smaak"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-80a5-b809-c91135def0b6"
+      ],
+      "labels": [
+        "Boogie Angst"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-8085-89e4-cdc5ca4c29de",
       "slug": "yin-yin-the-rabbit-that-hunts-tigers",
       "artist": "YĪN YĪN",
@@ -39834,7 +39897,7 @@
       "slug": "ali",
       "name": "Ali",
       "country": "ID",
-      "bandcamp": null,
+      "bandcamp": "https://aliradio.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1e44129a-8c52-809f-993e-fd57e166d1f7"
@@ -39853,7 +39916,7 @@
       "slug": "alkaline-trio",
       "name": "Alkaline Trio",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://alkalinetrio.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1cdb45dc-ecbf-4073-abfe-1a2c94b4e7dc"
@@ -39936,7 +39999,7 @@
       "slug": "amami",
       "name": "AMAMI",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://amami.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "b23aa992-2aac-4165-beb5-080416c13dce"
@@ -39955,7 +40018,7 @@
       "slug": "amery",
       "name": "Amery",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://amery.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1254129a-8c52-80d9-b38a-f953fb9041cc"
@@ -39973,7 +40036,7 @@
       "slug": "amir-bresler",
       "name": "Amir Bresler",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://amirbresler.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1a74129a-8c52-800e-b83d-f23eb70facfa"
@@ -40056,7 +40119,7 @@
       "slug": "and-so-i-watch-you-from-afar",
       "name": "And So I Watch You from Afar",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://asiwyfa.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "be77ace5-1974-4601-b521-d15d5fb2467d"
@@ -40076,7 +40139,7 @@
       "slug": "andrew-w-k",
       "name": "Andrew W.K.",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://andrewwk.bandcamp.com/music",
       "youtube": "https://www.youtube.com/@AndrewWK",
       "albumIds": [
         "3cf4129a-8c52-801f-aa5c-f48bd1144e8b"
@@ -40115,7 +40178,7 @@
       "slug": "andy-ash",
       "name": "Andy Ash",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://andyash1.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2b04129a-8c52-80b9-adbc-d18bc701ed1d"
@@ -40133,7 +40196,7 @@
       "slug": "angelica-garcia",
       "name": "Angélica Garcia",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://angelicagarcia.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "08cb24fb-fe1b-4a37-9930-2f0a4e836bbc"
@@ -40174,7 +40237,7 @@
       "slug": "anna-von-hausswolf",
       "name": "Anna von Hausswolf",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://annavonhausswolff.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "29d4129a-8c52-80e0-8e57-d6301043fe46"
@@ -40196,7 +40259,7 @@
       "slug": "annie-the-caldwells",
       "name": "Annie & The Caldwells",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://annieandthecaldwells.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2ed4129a-8c52-8081-8062-c624005318d4"
@@ -40237,7 +40300,7 @@
       "slug": "antenna",
       "name": "Antenna",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://antennnnna.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1f14129a-8c52-807e-aadd-c6c4e22e65a2"
@@ -40256,7 +40319,7 @@
       "slug": "anthony-naples",
       "name": "Anthony Naples",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://anthonynaples.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2124129a-8c52-8054-a07c-e85fe813a890"
@@ -40276,7 +40339,7 @@
       "slug": "antibalas",
       "name": "Antibalas",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://antibalas.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2994129a-8c52-8097-859d-d324a16ea80a"
@@ -40339,7 +40402,7 @@
       "slug": "arlo-parks",
       "name": "Arlo Parks",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://arloparks.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "eee95c81-4b57-42c1-aa04-141565c99615"
@@ -40377,7 +40440,7 @@
       "slug": "arooj-aftab",
       "name": "Arooj Aftab",
       "country": "SA",
-      "bandcamp": null,
+      "bandcamp": "https://aroojaftab.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "e2324bbf-ef96-4dbe-b719-a1da32f2df14"
@@ -40397,7 +40460,7 @@
       "slug": "artificial-go",
       "name": "Artificial Go",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://artificialgo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "20e4129a-8c52-80f9-9c0f-c3473a7ffbb6"
@@ -40416,7 +40479,7 @@
       "slug": "asa-moto",
       "name": "ASA MOTO",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://asamoto.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2da4129a-8c52-80d3-afd1-eb5094af7274"
@@ -40435,7 +40498,7 @@
       "slug": "astio",
       "name": "Astio",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://astio.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1e64129a-8c52-800e-ba51-f4fee6337e53"
@@ -40454,7 +40517,7 @@
       "slug": "atabasca",
       "name": "Atabasca",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://atabasca.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3384129a-8c52-8070-a4bd-d0398f9971a0"
@@ -40492,7 +40555,7 @@
       "slug": "auntie-flo",
       "name": "Auntie Flo",
       "country": "IN",
-      "bandcamp": null,
+      "bandcamp": "https://auntieflo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "19f4129a-8c52-8036-b0f8-c599993c4a73"
@@ -40557,7 +40620,7 @@
       "slug": "automatic",
       "name": "Automatic",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://automatic-band.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2e04129a-8c52-808d-b82c-ef5bbd1e5d0c"
@@ -40576,7 +40639,7 @@
       "slug": "autos",
       "name": "AUTOS",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://autosofficial.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2584129a-8c52-8097-af6c-f9e256533b1a"
@@ -40594,7 +40657,7 @@
       "slug": "avalon-emerson",
       "name": "Avalon Emerson",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://avalonemerson.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "4a4ce791-ae0d-4dd0-b8d4-b2f3ac307296"
@@ -40653,7 +40716,7 @@
       "slug": "ba-al",
       "name": "Ba’al",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://baalbanduk.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2344129a-8c52-80cd-be09-d3ac2ce692cf"
@@ -40673,7 +40736,7 @@
       "slug": "bad-nerves",
       "name": "Bad Nerves",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://badnerves.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "9b4030a1-0e7e-4b42-aee2-cd72922b9cb7"
@@ -40693,7 +40756,7 @@
       "slug": "bad-dreems",
       "name": "Bad//Dreems",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://baddreems.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3724129a-8c52-80e1-afc0-c879b79c40e3"
@@ -40712,7 +40775,7 @@
       "slug": "badbadnotgood",
       "name": "BADBADNOTGOOD",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://badbadnotgoodofficial.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2cb8b473-c436-4f36-84c4-ad42a1200bb9"
@@ -40731,7 +40794,7 @@
       "slug": "baest",
       "name": "BAEST",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://baestband.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2534129a-8c52-801c-a795-ccc85e453004"
@@ -40789,7 +40852,7 @@
       "slug": "bambara",
       "name": "BAMBARA",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bambara.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3264129a-8c52-8013-8c12-ecd4ef99bd9b"
@@ -40831,7 +40894,7 @@
       "slug": "bardo",
       "name": "Bardo",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bardomartinez.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "25d4129a-8c52-8027-baab-d5961aa3df9e"
@@ -40853,7 +40916,7 @@
       "slug": "barker",
       "name": "Barker",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://sambarker.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2254129a-8c52-8056-9b4c-f32fff891050"
@@ -40937,7 +41000,7 @@
       "slug": "bbqt",
       "name": "BBQT",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bbqtiswild.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "7fdd88f8-7b6a-4845-923c-a34a9f0c73d7"
@@ -40956,7 +41019,7 @@
       "slug": "beans",
       "name": "Beans",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://beansband.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "41dd9428-3b0d-46f9-8164-4cd456f65c37"
@@ -40975,7 +41038,7 @@
       "slug": "beat-sexu",
       "name": "Beat Sexü",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://beatsexu.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2944129a-8c52-8028-a10f-e2ab7b2f5c55"
@@ -41014,7 +41077,7 @@
       "slug": "belgrado",
       "name": "Belgrado",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://belgrado.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "c29acd65-a613-44e0-9915-c57424e44302"
@@ -41032,7 +41095,7 @@
       "slug": "belushi-speed-ball",
       "name": "Belushi Speed Ball",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://belushispeedball.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "9e6a12a4-8909-43c3-9acc-ec45b12ee95b"
@@ -41110,7 +41173,7 @@
       "slug": "berlioz",
       "name": "berlioz",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://berliozmusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1a34129a-8c52-80bc-9956-ff9b20721f00"
@@ -41188,7 +41251,7 @@
       "slug": "bibi-club",
       "name": "Bibi Club",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://bibiclub.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "33a4129a-8c52-8005-ac89-ca704c6ea406"
@@ -41207,7 +41270,7 @@
       "slug": "biche",
       "name": "Biche",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://bichemusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1ba4129a-8c52-809c-b137-dc75b9d7134b"
@@ -41325,7 +41388,7 @@
       "slug": "black-market-brass",
       "name": "Black Market Brass",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://blackmarketbrass.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "ef883e02-050b-4f74-ad4a-8625747eee69"
@@ -41366,7 +41429,7 @@
       "slug": "blue-earth-sound",
       "name": "Blue Earth Sound",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://blueearthsound.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2894129a-8c52-8045-900d-ee572a0d425f"
@@ -41387,7 +41450,7 @@
       "slug": "blurry-the-explorer",
       "name": "Blurry the Explorer",
       "country": "PT",
-      "bandcamp": null,
+      "bandcamp": "https://blurrytheexplorer.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3654129a-8c52-8091-8a6a-f18c7a8e46ad"
@@ -41408,7 +41471,7 @@
       "slug": "boards-of-canada",
       "name": "Boards of Canada",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://boardsofcanada.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "36f4129a-8c52-8047-9cd8-c5a42d135115"
@@ -41428,7 +41491,7 @@
       "slug": "bobby-oroza",
       "name": "Bobby Oroza",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://bobbyoroza.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2534129a-8c52-80f8-8577-f0c3643e8f78"
@@ -41489,7 +41552,7 @@
       "slug": "body-type",
       "name": "Body Type",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://bodytypemusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3ac4129a-8c52-80ff-9696-de2d656317e5"
@@ -41510,7 +41573,7 @@
       "slug": "boko-yout",
       "name": "Boko Yout",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://bokoyout.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2bc4129a-8c52-807d-93c2-d12796928aa2"
@@ -41530,7 +41593,7 @@
       "slug": "bokoya",
       "name": "Bokoya",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://bokoya-wadada.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "83a23190-919c-481b-933e-80d827f306c5"
@@ -41549,7 +41612,7 @@
       "slug": "bolbec",
       "name": "Bolbec",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://bolbec.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "e2f791b2-8ce7-4045-a351-fcd96634d07d"
@@ -41568,7 +41631,7 @@
       "slug": "bolis-pupul",
       "name": "Bolis Pupul",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://bolispupul.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "4f2a5330-5f93-4682-a219-37d17ce1c394"
@@ -41588,7 +41651,7 @@
       "slug": "boof",
       "name": "Boof",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://boofbubbletease.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "27d4129a-8c52-80fb-897f-f407e174f63a"
@@ -41607,7 +41670,7 @@
       "slug": "bootlicker",
       "name": "Bootlicker",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://boot-licker.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "afd60682-390c-4b6d-8e7e-688f6c73c134"
@@ -41626,7 +41689,7 @@
       "slug": "boozoo-bajou",
       "name": "Boozoo Bajou",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://boozoobajou.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3e854e11-5cae-4d88-a2e0-78f59b4283ff"
@@ -41665,7 +41728,7 @@
       "slug": "bosq",
       "name": "Bosq",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bosq.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1944129a-8c52-8088-9134-eaaf83eb1451"
@@ -41724,7 +41787,7 @@
       "slug": "bouganville",
       "name": "Bouganville",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://bouganville.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2e44129a-8c52-8060-9fb5-f7a10f09f793"
@@ -41764,7 +41827,7 @@
       "slug": "brandee-younger",
       "name": "Brandee Younger",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brandee.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "0301a77b-15c4-406c-b12b-20541196e3f2"
@@ -41782,7 +41845,7 @@
       "slug": "brenda",
       "name": "Brenda",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://brendamelbourne.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "39e4129a-8c52-8096-a934-cc1c553f0d16"
@@ -41843,7 +41906,7 @@
       "slug": "brigitte-calls-me-baby",
       "name": "Brigitte Calls Me Baby",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brigittecallsmebaby.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1034129a-8c52-802f-a87f-d6b7de37754a"
@@ -41885,7 +41948,7 @@
       "slug": "brock-berrigan",
       "name": "Brock Berrigan",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://brockberrigan.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "0e226411-d5e0-4220-88c6-f307fb4432a6"
@@ -41904,7 +41967,7 @@
       "slug": "broken-social-scene",
       "name": "Broken Social Scene",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://brokensocialscene.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "36b4129a-8c52-80d0-9ffd-c278478ecc7d"
@@ -41943,7 +42006,7 @@
       "slug": "bullion",
       "name": "Bullion",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://bullion.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "5d2d6b53-623d-4beb-95e0-87878709d968"
@@ -42003,7 +42066,7 @@
       "slug": "c-mon-tigre",
       "name": "C’mon Tigre",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://cmontigrek7.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "9366f15e-9b72-403f-9022-63cdfb62fa08"
@@ -42022,7 +42085,7 @@
       "slug": "calalloo",
       "name": "Calalloo",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://calalloo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "28d4129a-8c52-8082-b451-c6de57ab3895"
@@ -42042,7 +42105,7 @@
       "slug": "call-super",
       "name": "Call Super",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://callsuper.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2d64129a-8c52-8094-ac14-ffa8a7f52020"
@@ -42061,7 +42124,7 @@
       "slug": "camara-chilena-de-la-destruccion",
       "name": "Cámara Chilena de la Destrucción",
       "country": "CL",
-      "bandcamp": null,
+      "bandcamp": "https://camarachilenadeladestruccion.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3524129a-8c52-80c1-9302-fd47c0430808"
@@ -42100,7 +42163,7 @@
       "slug": "caoilfhionn-rose",
       "name": "Caoilfhionn Rose",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://caoilfhionnrose.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2bf4129a-8c52-806e-922a-fdc691cfbe4a"
@@ -42120,7 +42183,7 @@
       "slug": "caribou",
       "name": "Caribou",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://caribou.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1154129a-8c52-800d-8b87-e9007efdb301"
@@ -42140,7 +42203,7 @@
       "slug": "carpenter-brut",
       "name": "Carpenter Brut",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://carpenterbrut.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3154129a-8c52-805d-913a-e35c9722cc64"
@@ -42161,7 +42224,7 @@
       "slug": "cashier",
       "name": "Cashier",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cashier-band.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3414129a-8c52-8074-9914-d6af13884529"
@@ -42180,7 +42243,7 @@
       "slug": "castle-rat",
       "name": "Castle Rat",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://castlerat.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2784129a-8c52-80f8-aa5e-e0e786e1c7d2"
@@ -42201,7 +42264,7 @@
       "slug": "cate-le-bon",
       "name": "Cate Le Bon",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://catelebon.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2894129a-8c52-8082-8275-d219df595fa4"
@@ -42221,7 +42284,7 @@
       "slug": "catpack",
       "name": "Catpack",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://catpack.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "cc75744c-6671-4db9-8bdf-487423d10089"
@@ -42264,7 +42327,7 @@
       "slug": "cecile-believe",
       "name": "Cecile Believe",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://cecilebelieve.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "23c4129a-8c52-8013-b8bc-f46dbb0e78b9"
@@ -42298,7 +42361,7 @@
       "slug": "celine-dessberg",
       "name": "Céline Dessberg",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://celinedessberg.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1b14129a-8c52-804c-93ed-d308400b284a"
@@ -42336,7 +42399,7 @@
       "slug": "chain-cult",
       "name": "Chain Cult",
       "country": "GR",
-      "bandcamp": null,
+      "bandcamp": "https://chaincult.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "005e74cd-7219-488f-8f38-6df3bd440a99"
@@ -42399,7 +42462,7 @@
       "slug": "chamber",
       "name": "Chamber",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://chambertn.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3434129a-8c52-800c-bb8d-fdb8337ba58e"
@@ -42418,7 +42481,7 @@
       "slug": "chartreuse",
       "name": "Chartreuse",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://chartreuse-band.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "bfa5ccad-8d18-471c-aec6-f3286647a511"
@@ -42490,7 +42553,7 @@
       "slug": "chicano-batman",
       "name": "Chicano Batman",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://chicanobatman.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "0a9200f5-35d6-4f88-ab9b-8879c14b7946"
@@ -42509,7 +42572,7 @@
       "slug": "chikara-aoshima",
       "name": "Chikara Aoshima",
       "country": "JP",
-      "bandcamp": null,
+      "bandcamp": "https://chikaraaoshima.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2ce4129a-8c52-80e8-bd4e-f5cb1152e039"
@@ -42528,7 +42591,7 @@
       "slug": "chinese-american-bear",
       "name": "Chinese American Bear",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://chineseamericanbear.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3bdd065d-d558-48e8-836f-aade756056b1"
@@ -42547,7 +42610,7 @@
       "slug": "chip-wickham",
       "name": "Chip Wickham",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://chipwickham.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2704129a-8c52-8049-bd10-ec2aa2a96c72"
@@ -42567,7 +42630,7 @@
       "slug": "chloe-battelle",
       "name": "Chloe Battelle",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://chloebattelle.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "36d4129a-8c52-80da-ba16-e522ac177c92"
@@ -49230,6 +49293,25 @@
       ],
       "labelIds": [
         "2504129a-8c52-80a3-9f97-f7fceaabfe3c"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d94129a-8c52-8081-ba42-c431b2fbbd2b",
+      "slug": "kraak-smaak",
+      "name": "Kraak & Smaak",
+      "country": "NL",
+      "bandcamp": "https://kraaksmaak.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80b9-a0d2-fb756910b99b"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Balearic Beat"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-80a5-b809-c91135def0b6"
       ],
       "videoIds": []
     },
@@ -59615,6 +59697,7 @@
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "3d54129a-8c52-8008-9bea-d4a9fbce6046",
         "3d64129a-8c52-80d8-8696-e0853a660a3f",
+        "3d94129a-8c52-8032-9223-e88c9c52d990",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "3d94129a-8c52-80ac-80a7-c45373107b36",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
@@ -59635,6 +59718,7 @@
         "Balearic Beat",
         "Dance-Pop",
         "Reggae",
+        "Arabic Music",
         "Downtempo",
         "Deep House",
         "Bossa Nova",
@@ -59648,6 +59732,7 @@
         "2494129a-8c52-800b-92dc-e0c48b04def1",
         "24a4129a-8c52-8043-a0e9-ebc281641b70",
         "3d64129a-8c52-80f1-84dc-cf4ddf3dcc13",
+        "3ce4129a-8c52-8040-9fe7-c20666b8f22d",
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
         "3d94129a-8c52-803f-94b6-d3f1d3612c71",
         "3d94129a-8c52-8070-89cf-e5b69ba7d24f",
@@ -61288,7 +61373,7 @@
       "slug": "ambient-tweets",
       "name": "ambient tweets",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://ambientweets.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62184,6 +62269,21 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80a5-b809-c91135def0b6",
+      "slug": "boogie-angst",
+      "name": "Boogie Angst",
+      "country": "NL",
+      "bandcamp": "https://boogieangst.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80b9-a0d2-fb756910b99b"
+      ],
+      "artistIds": [
+        "3d94129a-8c52-8081-ba42-c431b2fbbd2b"
+      ]
+    },
+    {
       "id": "2da4129a-8c52-8001-b842-c572bb5d8347",
       "slug": "bordello-a-parigi",
       "name": "Bordello A Parigi",
@@ -62391,7 +62491,7 @@
       "slug": "bubbletease-communications",
       "name": "BubbleTease Communications",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://bubbleteasecommunications.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63161,7 +63261,7 @@
       "slug": "curent-moves",
       "name": "Curent Moves",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://currentmoves.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63266,7 +63366,7 @@
       "slug": "dandy-boy-records",
       "name": "Dandy Boy Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dandyboyrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63672,7 +63772,7 @@
       "slug": "disques-dure-vie",
       "name": "Disques Dure Vie",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://disquesdurevie.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63848,7 +63948,7 @@
       "slug": "early-reflex",
       "name": "early reflex",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://earlyreflex.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -64956,10 +65056,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2"
+        "3ce4129a-8c52-80f4-9d69-f2d74c99d2e2",
+        "3d94129a-8c52-8032-9223-e88c9c52d990"
       ],
       "artistIds": [
-        "3ce4129a-8c52-8085-b12a-fd721cb6968e"
+        "3ce4129a-8c52-8085-b12a-fd721cb6968e",
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
     {
@@ -65991,7 +66093,7 @@
       "slug": "julia-s-war-recordings",
       "name": "Julia’s War Recordings",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://juliaswar.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66725,7 +66827,7 @@
       "slug": "luaka-bop",
       "name": "Luaka Bop",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://luakabop.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -67203,7 +67305,7 @@
       "slug": "modern-entity",
       "name": "Modern Entity",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://modernentity.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -67363,7 +67465,7 @@
       "slug": "moshi-moshi-records",
       "name": "Moshi Moshi Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://moshimoshimusic.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -70286,7 +70388,7 @@
       "slug": "slovenly-recordings",
       "name": "Slovenly Recordings",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://slovenly.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -70316,7 +70418,7 @@
       "slug": "smalltown-supersound",
       "name": "Smalltown Supersound",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://smalltownsupersoundofficial.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71726,7 +71828,7 @@
       "slug": "urge-records",
       "name": "Urge Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://urgerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

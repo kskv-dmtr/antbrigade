@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T17:13:42Z",
+  "generatedAt": "2026-09-12T19:25:38Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19823,6 +19823,41 @@
       "upc": "5057805554554",
       "tracks": 9,
       "releaseDate": "2021-01-15"
+    },
+    "3d94129a-8c52-8032-9223-e88c9c52d990": {
+      "source": "https://album.link/ttfssm37pmkcf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2QTAwOmV0lj1S1zGTuipFg",
+        "pandora": "https://www.pandora.com/AL:10188539",
+        "deezer": "https://www.deezer.com/album/320490627",
+        "amazonMusic": "https://music.amazon.com/albums/B0B35F85BJ",
+        "tidal": "https://listen.tidal.com/album/453620576",
+        "napster": "https://play.napster.com/album/alb.577202808",
+        "yandex": "https://music.yandex.ru/album/17154036",
+        "anghami": "https://play.anghami.com/album/1028119145?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0B35F85BJ"
+      },
+      "upc": "4018939446116",
+      "tracks": 14,
+      "releaseDate": "2021-08-06"
+    },
+    "3d94129a-8c52-80b9-a0d2-fb756910b99b": {
+      "source": "https://album.link/qktpn536bw26s",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4bL8pnVu9iQILCQlK9L7V4",
+        "deezer": "https://www.deezer.com/album/156499592",
+        "amazonMusic": "https://music.amazon.com/albums/B07W8HQY39",
+        "tidal": "https://listen.tidal.com/album/146291911",
+        "napster": "https://play.napster.com/album/alb.486210576",
+        "yandex": "https://music.yandex.ru/album/12106601",
+        "boomplay": "https://www.boomplay.com/albums/79560807",
+        "anghami": "https://play.anghami.com/album/1013266747?refer=linktree",
+        "bandcamp": "https://kraaksmaak.bandcamp.com/album/pleasure-centre",
+        "amazonStore": "https://amazon.com/dp/B07W8HQY39"
+      },
+      "upc": "3663729123510",
+      "tracks": 15,
+      "releaseDate": "2019-10-18"
     }
   }
 }

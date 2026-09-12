@@ -552,34 +552,66 @@ a { color: inherit; text-decoration: none; }
 }
 .nav__drop[data-here] .nav__mark { background: var(--fg); }
 
-/* Список падает из-под слова, поверх содержимого. Ширина по самому
-   длинному пункту: перечислены четыре слова, и заданная ширина оставляла
-   бы справа пустое поле.
+/* Список внутри меню остался только узкому экрану: там меню уезжает под
+   бургер, полосы второго уровня нет, и четыре строки раскрываются прямо в
+   этаже меню (правила — в мобильном медиазапросе ниже).
 
-   Рамка в пиксель линией решётки — та же, что у панели отбора на списках:
-   это такой же орган, только в шапке. */
-.nav__panel {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  min-width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--line);
-}
+   На широком экране список падал из-под слова отдельной панелью в рамке и
+   прожил так 12 сентября 2026 полдня. Заменён полосой второго уровня: та
+   стоит в потоке шапки и сдвигает содержимое, а не накрывает его. */
+.nav__panel { display: none; }
 
 /* Строка списка целиком служит целью: четыре буквы «Labels» — слишком
-   мелкая мишень, особенно на ощупь. Поле по горизонтали больше
-   вертикального: строка в рамке, и прижатое к краю слово читалось бы
-   вплотную. */
-.nav__panel a {
-  padding: 0.625rem 0.875rem;
-  border-bottom: 1px solid var(--line-soft);
-  white-space: nowrap;
+   мелкая мишень, особенно на ощупь. */
+.nav__panel a { white-space: nowrap; }
+
+/* ------------------------------------------ полоса второго уровня
+
+   Четыре указателя под шапкой. Открывает и закрывает её то же слово
+   «Explore» в меню: полоса привязана к раскрытому <details> — и потому
+   работает без скрипта, как и сам пункт.
+
+   Ростом она с полосу отбора на списках: та же --filters-h, 48 на
+   расчётных 1920 и 36 на 1440, — чтобы второй этаж шапки и полоса отбора
+   под ним читались одной системой. Число названо переменной, а не
+   пикселями: разойтись они тогда не смогут.
+
+   Линия сверху своя, снизу — общая с шапкой: полоса стоит внутри <header>,
+   последним рядом. */
+.subhead { display: none; }
+.masthead:has(.nav__drop[open]) .subhead { display: block; }
+
+/* Пункты по центру страницы и тем же просветом, что в меню: полоса — тот
+   же ряд ссылок, только этажом ниже. Центрируются они выключкой, а не
+   абсолютным положением, как меню: здесь слева и справа ничего нет, и
+   середина ряда сама приходится на середину кадра. */
+.subnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: var(--filters-h);
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
 }
-.nav__panel a:last-child { border-bottom: 0; }
+
+/* Набор и отметка — как у пунктов меню: прозрачная линия под словом занята
+   всегда, и текущий указатель не сдвигает соседей на пиксель. Заливку по
+   наведению даёт общее правило ссылок. */
+.subnav a {
+  padding: 0.125rem 0;
+  border-bottom: 1px solid transparent;
+}
+.subnav a[aria-current='page'] {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+.subnav a:focus-visible { color: var(--fg); }
 
 .nav a:focus-visible { color: var(--fg); }
 .nav__sum:focus-visible { color: var(--fg); }
@@ -3890,6 +3922,9 @@ html:not([data-js]) .more { display: none; }
     gap: 0.75rem;
   }
   .masthead__in { gap: 0.75rem; }
+
+  /* Полоса второго уровня держит тот же просвет, что и меню над ней. */
+  .subnav { gap: 0.75rem; }
 }
 
 @media (max-width: 900px) {
@@ -4291,19 +4326,24 @@ html:not([data-js]) .more { display: none; }
   /* Ступенька в 16 говорит, что четыре строки под словом — его, а не
      следующие пункты меню. Своей рамки у списка тут нет: в ряду строк она
      обвела бы четыре из восьми. */
-  [data-js] .masthead .nav__panel {
-    position: static;
-    border: 0;
+  .masthead .nav__panel {
+    display: flex;
+    flex-direction: column;
     padding-left: max(16px, 1rem);
   }
 
-  [data-js] .masthead .nav__panel a { padding: 0.8125rem 0; }
-
+  .masthead .nav__panel a {
+    padding: 0.8125rem 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
   /* Последняя строка последнего пункта — последняя в меню, и линия под ней
      легла бы на линию самого этажа. */
-  [data-js] .masthead .nav__drop:last-child .nav__panel a:last-child {
-    border-bottom: 0;
-  }
+  .masthead .nav__drop:last-child .nav__panel a:last-child { border-bottom: 0; }
+
+  /* Полосы второго уровня на телефоне нет: меню и так выпадает этажом под
+     шапку, и вторая полоса под ним читалась бы вторым меню. Селектор
+     повторяет тот, что показывает полосу, — иначе не перебить. */
+  .masthead:has(.nav__drop[open]) .subhead { display: none; }
 
   /* Выворотки по нажатию тут нет — как и у соседних пунктов: залитая полоса
      во всю ширину читается выбранным разделом, а не нажатой строкой. */

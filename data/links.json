@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T22:07:03Z",
+  "generatedAt": "2026-09-12T01:10:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19723,6 +19723,58 @@
       "upc": "886448125556",
       "tracks": 8,
       "releaseDate": "1979-08-01"
+    },
+    "3d84129a-8c52-80e7-9e63-f0934256be45": {
+      "source": "https://album.link/wz8mbm3fphss2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0zi4w64vQFomrWU2RWs9YF",
+        "deezer": "https://www.deezer.com/album/225168562",
+        "amazonMusic": "https://music.amazon.com/albums/B093CCDQM1",
+        "tidal": "https://listen.tidal.com/album/181910700",
+        "napster": "https://play.napster.com/album/alb.578445187",
+        "yandex": "https://music.yandex.ru/album/15150929",
+        "boomplay": "https://www.boomplay.com/albums/24669186",
+        "anghami": "https://play.anghami.com/album/1019516042?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B093CCDQM1"
+      },
+      "upc": "4260547941419",
+      "tracks": 9,
+      "releaseDate": "2021-07-02"
+    },
+    "3d84129a-8c52-8029-ae55-ca254aceba4b": {
+      "source": "https://album.link/jhx6gzx0hzgzm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1WlH9h96QgJnoqTuHedYVO",
+        "pandora": "https://www.pandora.com/AL:6523466",
+        "deezer": "https://www.deezer.com/album/163892212",
+        "amazonMusic": "https://music.amazon.com/albums/B08DW5LK5X",
+        "tidal": "https://listen.tidal.com/album/150350804",
+        "napster": "https://play.napster.com/album/alb.497789460",
+        "yandex": "https://music.yandex.ru/album/11611971",
+        "boomplay": "https://www.boomplay.com/albums/14670271",
+        "bandcamp": "https://soulofzurich.bandcamp.com/album/kamalas-danz",
+        "amazonStore": "https://amazon.com/dp/B08DW5LK5X"
+      },
+      "upc": "889845944317",
+      "tracks": 10,
+      "releaseDate": "2020-09-25"
+    },
+    "3d84129a-8c52-8053-afbe-dfcb612dfe67": {
+      "source": "https://album.link/sntdfndpsd4xk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6oIrL0YBYT6T6tXVF3LBVY",
+        "pandora": "https://www.pandora.com/AL:1105574",
+        "deezer": "https://www.deezer.com/album/40485011",
+        "amazonMusic": "https://music.amazon.com/albums/B073JPWM29",
+        "tidal": "https://listen.tidal.com/album/73130929",
+        "napster": "https://play.napster.com/album/alb.259834236",
+        "yandex": "https://music.yandex.ru/album/9777996",
+        "anghami": "https://play.anghami.com/album/1012306813?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B073JPWM29"
+      },
+      "upc": "5054429118247",
+      "tracks": 7,
+      "releaseDate": "2017-06-02"
     }
   }
 }

@@ -68,10 +68,19 @@ const pool = shuffle(albums);
       стояло «The pool rotates every hour» — обещание, которое держалось на
       почасовой сборке. Сборка идёт не каждый час (GitHub запускает
       расписание пять-семь раз в сутки), а с полным пулом обновлять его
-      сборкой больше и не нужно: каталог в разметке весь. */}
+      сборкой больше и не нужно: каталог в разметке весь.
+
+      Набрана строка тремя предложениями, а не одним с запятой: каждое —
+      отдельное обещание, и точка делит их ровнее.
+
+      Оба коротких обещания обёрнуты в неразрывное: перенос приходится как раз
+      на них, и «no» оставалось висеть в конце строки, а «algorithm» или
+      «order» уезжало на следующую. Замеры: на 375 и 414 строка ломается после
+      «No algorithm.», на 320 — после «releases.», и оба обещания уходят вниз
+      целиком. */}
   <div class="lead">
     <h1 class="item__title">Lucky Finds</h1>
-    <p class="lead__note">Some random releases. No algorithm, no order.</p>
+    <p class="lead__note">Some random releases. <span class="nb">No algorithm.</span> <span class="nb">No order.</span></p>
   </div>
 
   <RandomPicks pool={pool} />

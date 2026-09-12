@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T19:25:38Z",
+  "generatedAt": "2026-09-12T22:21:51Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19858,6 +19858,115 @@
       "upc": "3663729123510",
       "tracks": 15,
       "releaseDate": "2019-10-18"
+    },
+    "3d94129a-8c52-80d1-b427-cc9ecf92b30f": {
+      "source": "https://album.link/ffswvt4x7gq74",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6Ifae2tRjg49lTQ9390iOD",
+        "pandora": "https://www.pandora.com/AL:9784353",
+        "deezer": "https://www.deezer.com/album/239212802",
+        "amazonMusic": "https://music.amazon.com/albums/B097QFBJWK",
+        "tidal": "https://listen.tidal.com/album/188656791",
+        "napster": "https://play.napster.com/album/alb.611719723",
+        "yandex": "https://music.yandex.ru/album/18079317",
+        "boomplay": "https://www.boomplay.com/albums/31591845",
+        "anghami": "https://play.anghami.com/album/1022506206?refer=linktree",
+        "bandcamp": "https://jordanrakei.bandcamp.com/album/what-we-call-life",
+        "amazonStore": "https://amazon.com/dp/B097QFBJWK"
+      },
+      "upc": "5054429149166",
+      "tracks": 10,
+      "releaseDate": "2021-09-17"
+    },
+    "3d94129a-8c52-80d0-aea0-e67907295da1": {
+      "source": "https://album.link/rjbs9nbddqwds",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6AANVkZf5rOwMb1emJOPpe",
+        "pandora": "https://www.pandora.com/AL:9974389",
+        "deezer": "https://www.deezer.com/album/679943661",
+        "amazonMusic": "https://music.amazon.com/albums/B0DPNC8ZJ5",
+        "tidal": "https://listen.tidal.com/album/404100128",
+        "napster": "https://play.napster.com/album/alb.596375772",
+        "yandex": "https://music.yandex.ru/album/16759432",
+        "boomplay": "https://www.boomplay.com/albums/28095735",
+        "anghami": "https://play.anghami.com/album/1061879190?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DPNC8ZJ5"
+      },
+      "upc": "4251888717900",
+      "tracks": 12,
+      "releaseDate": "2021-08-20"
+    },
+    "3d94129a-8c52-80d9-b7e2-e816f2777774": {
+      "source": "https://album.link/p8fsmjwj8g6tq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4XGFdSkArqglb0DLPeh8N5",
+        "pandora": "https://www.pandora.com/AL:9126807",
+        "deezer": "https://www.deezer.com/album/369457837",
+        "amazonMusic": "https://music.amazon.com/albums/B0BKD982CZ",
+        "tidal": "https://listen.tidal.com/album/256079819",
+        "napster": "https://play.napster.com/album/alb.723096847",
+        "yandex": "https://music.yandex.ru/album/15239143",
+        "anghami": "https://play.anghami.com/album/1033112086?refer=linktree",
+        "bandcamp": "https://rodrigoamarante.bandcamp.com/album/drama",
+        "amazonStore": "https://amazon.com/dp/B0BKD982CZ"
+      },
+      "upc": "644110042293",
+      "tracks": 11,
+      "releaseDate": "2021-07-16"
+    },
+    "3d94129a-8c52-80f0-8e7e-eff58579aa6f": {
+      "source": "https://album.link/vrzgchfzbtnrw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/45pLVJUt4UXDW08WJz0TBO",
+        "pandora": "https://www.pandora.com/AL:8339641",
+        "deezer": "https://www.deezer.com/album/209559272",
+        "amazonMusic": "https://music.amazon.com/albums/B08X6BH6M8",
+        "tidal": "https://listen.tidal.com/album/184756065",
+        "napster": "https://play.napster.com/album/alb.561900622",
+        "yandex": "https://music.yandex.ru/album/14001177",
+        "boomplay": "https://www.boomplay.com/albums/21788031",
+        "anghami": "https://play.anghami.com/album/1018156225?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B08X6BH6M8"
+      },
+      "upc": "4062548024562",
+      "tracks": 9,
+      "releaseDate": "2021-05-28"
+    },
+    "3d94129a-8c52-80e1-96ed-db6b05981b95": {
+      "source": "https://album.link/mdpks6jbrxjxp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2kurMsZCVUImynJLPgGEoA",
+        "pandora": "https://www.pandora.com/AL:6822042",
+        "deezer": "https://www.deezer.com/album/171084542",
+        "amazonMusic": "https://music.amazon.com/albums/B08HBC6G6W",
+        "tidal": "https://listen.tidal.com/album/154002390",
+        "napster": "https://play.napster.com/album/alb.509162918",
+        "yandex": "https://music.yandex.ru/album/12039124",
+        "boomplay": "https://www.boomplay.com/albums/15934853",
+        "anghami": "https://play.anghami.com/album/1014997592?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B08HBC6G6W"
+      },
+      "upc": "5050580745940",
+      "tracks": 9,
+      "releaseDate": "2020-10-23"
+    },
+    "3d94129a-8c52-800f-9b76-ddab34b63d57": {
+      "source": "https://album.link/xcxj4kszsv7gw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/21z7E0MTyBXzjvuvsVt2Av",
+        "pandora": "https://www.pandora.com/AL:4070408",
+        "deezer": "https://www.deezer.com/album/353203827",
+        "amazonMusic": "https://music.amazon.com/albums/B081TM9TTD",
+        "tidal": "https://listen.tidal.com/album/246255202",
+        "napster": "https://play.napster.com/album/alb.424479920",
+        "yandex": "https://music.yandex.ru/album/9975873",
+        "boomplay": "https://www.boomplay.com/albums/7444094",
+        "anghami": "https://play.anghami.com/album/1031658881?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B081TM9TTD"
+      },
+      "upc": "5056167119852",
+      "tracks": 11,
+      "releaseDate": "2020-02-28"
     }
   }
 }

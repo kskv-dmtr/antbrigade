@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-12T19:25:17Z",
+  "generatedAt": "2026-09-12T22:20:40Z",
   "counts": {
-    "albums": 1250,
-    "artists": 1089,
-    "labels": 685,
+    "albums": 1257,
+    "artists": 1094,
+    "labels": 688,
     "videos": 96
   },
   "albums": [
@@ -34886,6 +34886,37 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80d1-b427-cc9ecf92b30f",
+      "slug": "jordan-rakei-what-we-call-life",
+      "artist": "Jordan Rakei",
+      "album": "What We Call Life",
+      "url": "https://album.link/ffswvt4x7gq74",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9cbc776f-10db-471b-9894-2d64b2044690%3Aa1632155362_10.jpg?table=block&id=3d94129a-8c52-80d1-b427-cc9ecf92b30f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-17",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-805b-a0fc-ea88be1f2c17"
+      ],
+      "artists": [
+        "Jordan Rakei"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "labels": [
+        "Ninja Tune"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-806c-990c-fb09b3b99b2e",
       "slug": "jolly-mare-epsilon",
       "artist": "Jolly Mare",
@@ -35141,6 +35172,38 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80d0-aea0-e67907295da1",
+      "slug": "mano-le-tough-at-the-moment",
+      "artist": "Mano Le Tough",
+      "album": "At the Moment",
+      "url": "https://album.link/rjbs9nbddqwds",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae75be36c-a7c0-4db8-9d4b-0fd12605fe55%3Aa1395714634_10.jpg?table=block&id=3d94129a-8c52-80d0-aea0-e67907295da1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indietronica",
+        "Neo-Psychedelia",
+        "Microhouse"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-08-20",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-80d2-bac8-f75fa1c4612b"
+      ],
+      "artists": [
+        "Mano Le Tough"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-805d-a041-f7704d3c4951"
+      ],
+      "labels": [
+        "Pampa Records"
+      ]
+    },
+    {
       "id": "3d74129a-8c52-80d3-97b1-c6a5125f46f8",
       "slug": "ishmael-ensemble-visions-of-light",
       "artist": "Ishmael Ensemble",
@@ -35359,6 +35422,37 @@
       ],
       "labels": [
         "Golden Rules"
+      ]
+    },
+    {
+      "id": "3d94129a-8c52-80d9-b7e2-e816f2777774",
+      "slug": "rodrigo-amarante-drama",
+      "artist": "Rodrigo Amarante",
+      "album": "Drama",
+      "url": "https://album.link/p8fsmjwj8g6tq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A073853a8-5a52-4169-b504-8872e33ac729%3Aa1131758462_10.jpg?table=block&id=3d94129a-8c52-80d9-b7e2-e816f2777774&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "MPB",
+        "Chamber Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-16",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-803f-85f6-d30cf1795a3d"
+      ],
+      "artists": [
+        "Rodrigo Amarante"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8032-99e9-cc6ed27f0944"
+      ],
+      "labels": [
+        "Polyvinyl Records"
       ]
     },
     {
@@ -35671,6 +35765,37 @@
       ],
       "labels": [
         "Laut & Luise"
+      ]
+    },
+    {
+      "id": "3d94129a-8c52-80f0-8e7e-eff58579aa6f",
+      "slug": "sau-poler-nocturno",
+      "artist": "Sau Poler",
+      "album": "Nocturno",
+      "url": "https://album.link/vrzgchfzbtnrw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac13e396f-32e8-488e-a78b-881ac6a8ea87%3Aa3340590829_10.jpg?table=block&id=3d94129a-8c52-80f0-8e7e-eff58579aa6f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Ambient Techno"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-28",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-80f6-ace6-ed0fffba336d"
+      ],
+      "artists": [
+        "Sau Poler"
+      ],
+      "labelIds": [
+        "2504129a-8c52-804c-b4f5-f4d11aa7a710"
+      ],
+      "labels": [
+        "Atomnation"
       ]
     },
     {
@@ -36802,6 +36927,37 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80e1-96ed-db6b05981b95",
+      "slug": "soul-supreme-soul-supreme",
+      "artist": "Soul Supreme",
+      "album": "Soul Supreme",
+      "url": "https://album.link/mdpks6jbrxjxp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7f062969-a890-403f-b80e-dfbfc37b4393%3Aa2365906424_10.jpg?table=block&id=3d94129a-8c52-80e1-96ed-db6b05981b95&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Breakbeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-10-23",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-8015-b328-da583fe59ff0"
+      ],
+      "artists": [
+        "Soul Supreme"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-803b-8733-d7109ffbac1c"
+      ],
+      "labels": [
+        "Soul Supreme Records"
+      ]
+    },
+    {
       "id": "3bf4129a-8c52-801b-94bc-d1638b65a839",
       "slug": "pellegrino-zodyaco-morphe",
       "artist": "Pellegrino / Zodyaco",
@@ -37553,6 +37709,38 @@
       ],
       "labels": [
         "Italians Do It Better"
+      ]
+    },
+    {
+      "id": "3d94129a-8c52-800f-9b76-ddab34b63d57",
+      "slug": "franc-moody",
+      "artist": "Franc Moody |",
+      "album": "",
+      "url": "https://album.link/xcxj4kszsv7gw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad9c8020e-9c52-4955-af0b-0cffcebca264%3Aab67616d0000b273dcf2b0b93503bd46271aa857.jpg?table=block&id=3d94129a-8c52-800f-9b76-ddab34b63d57&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Indie Pop",
+        "Synthpop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-02-28",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-80b5-a331-ff0cfc5c233e"
+      ],
+      "artists": [
+        "Franc Moody"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-80b6-a747-cfe58188cbf7"
+      ],
+      "labels": [
+        "Juicebox Recordings"
       ]
     },
     {
@@ -39382,6 +39570,24 @@
       "labels": [
         "Far Out Recordings"
       ]
+    },
+    {
+      "id": "3d94129a-8c52-8007-9b56-eca81e289a7e",
+      "slug": "jorden-rakei",
+      "artist": "Jorden Rakei |",
+      "album": "",
+      "url": "",
+      "cover": null,
+      "genres": [],
+      "types": [],
+      "released": null,
+      "year": null,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [],
+      "artists": [],
+      "labelIds": [],
+      "labels": []
     }
   ],
   "artists": [
@@ -45895,6 +46101,26 @@
       "videoIds": []
     },
     {
+      "id": "3d94129a-8c52-80b5-a331-ff0cfc5c233e",
+      "slug": "franc-moody",
+      "name": "Franc Moody",
+      "country": "GB",
+      "bandcamp": "https://francmoody.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-800f-9b76-ddab34b63d57"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Indie Pop",
+        "Synthpop"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-80b6-a747-cfe58188cbf7"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2fe4129a-8c52-80f8-9686-ed27dcc226d0",
       "slug": "francois-the-atlas-mountains",
       "name": "Frànçois & The Atlas Mountains",
@@ -46411,7 +46637,7 @@
       "slug": "gidge",
       "name": "Gidge",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://gidge.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "179d9d98-e311-40d1-8d30-0f557d6d3003"
@@ -48514,7 +48740,8 @@
       "youtube": "https://www.youtube.com/@jrakz",
       "albumIds": [
         "34c4129a-8c52-8079-8c55-de3b53b24a04",
-        "ec73a747-0b6f-43c9-95f1-2e71687666ae"
+        "ec73a747-0b6f-43c9-95f1-2e71687666ae",
+        "3d94129a-8c52-80d1-b427-cc9ecf92b30f"
       ],
       "genres": [
         "Neo-Soul",
@@ -48522,7 +48749,8 @@
       ],
       "labelIds": [
         "34c4129a-8c52-803f-b3b3-e3aeace3bef6",
-        "2504129a-8c52-80a4-a33d-fbfe38ea2b55"
+        "2504129a-8c52-80a4-a33d-fbfe38ea2b55",
+        "2434129a-8c52-8088-921f-e4f39ef46bee"
       ],
       "videoIds": []
     },
@@ -50795,6 +51023,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80db-94a2-e2d91763d1be"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d94129a-8c52-80d2-bac8-f75fa1c4612b",
+      "slug": "mano-le-tough",
+      "name": "Mano Le Tough",
+      "country": "IE",
+      "bandcamp": "https://manoletough.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80d0-aea0-e67907295da1"
+      ],
+      "genres": [
+        "Indietronica",
+        "Neo-Psychedelia",
+        "Microhouse"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-805d-a041-f7704d3c4951"
       ],
       "videoIds": []
     },
@@ -54813,6 +55061,25 @@
       "videoIds": []
     },
     {
+      "id": "3d94129a-8c52-803f-85f6-d30cf1795a3d",
+      "slug": "rodrigo-amarante",
+      "name": "Rodrigo Amarante",
+      "country": "BR",
+      "bandcamp": "https://rodrigoamarante.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80d9-b7e2-e816f2777774"
+      ],
+      "genres": [
+        "MPB",
+        "Chamber Pop"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8032-99e9-cc6ed27f0944"
+      ],
+      "videoIds": []
+    },
+    {
       "id": "2524129a-8c52-80f1-829c-f89f2c989c27",
       "slug": "roge",
       "name": "Rogê",
@@ -55280,6 +55547,25 @@
       "labelIds": [
         "2744129a-8c52-8056-b073-c042a1605ffa",
         "2524129a-8c52-8060-b087-dd0e3c58cfe3"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d94129a-8c52-80f6-ace6-ed0fffba336d",
+      "slug": "sau-poler",
+      "name": "Sau Poler",
+      "country": "ES",
+      "bandcamp": "https://saupoler.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80f0-8e7e-eff58579aa6f"
+      ],
+      "genres": [
+        "Deep House",
+        "Ambient Techno"
+      ],
+      "labelIds": [
+        "2504129a-8c52-804c-b4f5-f4d11aa7a710"
       ],
       "videoIds": []
     },
@@ -56276,6 +56562,25 @@
       ],
       "labelIds": [
         "2524129a-8c52-80c2-8a8f-e9da44285106"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3d94129a-8c52-8015-b328-da583fe59ff0",
+      "slug": "soul-supreme",
+      "name": "Soul Supreme",
+      "country": "IL",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80e1-96ed-db6b05981b95"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Breakbeat"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-803b-8733-d7109ffbac1c"
       ],
       "videoIds": []
     },
@@ -61762,14 +62067,16 @@
       "slug": "atomnation",
       "name": "Atomnation",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://atomnation.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "179d9d98-e311-40d1-8d30-0f557d6d3003"
+        "179d9d98-e311-40d1-8d30-0f557d6d3003",
+        "3d94129a-8c52-80f0-8e7e-eff58579aa6f"
       ],
       "artistIds": [
-        "2504129a-8c52-803b-a164-ce98ead31686"
+        "2504129a-8c52-803b-a164-ce98ead31686",
+        "3d94129a-8c52-80f6-ace6-ed0fffba336d"
       ]
     },
     {
@@ -66089,6 +66396,21 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-80b6-a747-cfe58188cbf7",
+      "slug": "juicebox-recordings",
+      "name": "Juicebox Recordings",
+      "country": "GB",
+      "bandcamp": "https://juiceboxrecordings.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-800f-9b76-ddab34b63d57"
+      ],
+      "artistIds": [
+        "3d94129a-8c52-80b5-a331-ff0cfc5c233e"
+      ]
+    },
+    {
       "id": "3414129a-8c52-8080-8021-c1796b16b67e",
       "slug": "julia-s-war-recordings",
       "name": "Julia’s War Recordings",
@@ -67879,6 +68201,7 @@
         "444ef6a3-70f1-4e27-97cc-956455529943",
         "1c64129a-8c52-80c3-905c-ff5838aefafa",
         "2675302d-32db-4c2f-9aee-16afd9646d6e",
+        "3d94129a-8c52-80d1-b427-cc9ecf92b30f",
         "3d74129a-8c52-8081-80f2-e978ac05ac21"
       ],
       "artistIds": [
@@ -67894,6 +68217,7 @@
         "2434129a-8c52-8062-8072-d25aba1f3aab",
         "24a4129a-8c52-8087-8499-e9327e6745b6",
         "2514129a-8c52-8030-b194-e5e3e260fced",
+        "2504129a-8c52-805b-a0fc-ea88be1f2c17",
         "3d74129a-8c52-80d3-a032-f35a88fe18f1"
       ]
     },
@@ -68489,6 +68813,21 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-805d-a041-f7704d3c4951",
+      "slug": "pampa-records",
+      "name": "Pampa Records",
+      "country": "DE",
+      "bandcamp": "https://pamparecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80d0-aea0-e67907295da1"
+      ],
+      "artistIds": [
+        "3d94129a-8c52-80d2-bac8-f75fa1c4612b"
+      ]
+    },
+    {
       "id": "3b54129a-8c52-8014-898d-d1fb2fc34cd6",
       "slug": "pan",
       "name": "PAN",
@@ -69034,11 +69373,13 @@
       "youtube": null,
       "albumIds": [
         "2494129a-8c52-8073-917b-f7f0ac1bda78",
-        "3d74129a-8c52-80a2-bd89-e7e6a91e53c9"
+        "3d74129a-8c52-80a2-bd89-e7e6a91e53c9",
+        "3d94129a-8c52-80d9-b7e2-e816f2777774"
       ],
       "artistIds": [
         "2494129a-8c52-80fd-905f-d7c6bcee8268",
-        "3d74129a-8c52-80dd-bafb-d0fb5fc423be"
+        "3d74129a-8c52-80dd-bafb-d0fb5fc423be",
+        "3d94129a-8c52-803f-85f6-d30cf1795a3d"
       ]
     },
     {
@@ -70595,6 +70936,21 @@
       ],
       "artistIds": [
         "2514129a-8c52-80c3-9790-c418c591a46d"
+      ]
+    },
+    {
+      "id": "3d94129a-8c52-803b-8733-d7109ffbac1c",
+      "slug": "soul-supreme-records",
+      "name": "Soul Supreme Records",
+      "country": "NL",
+      "bandcamp": "https://soulsupremerecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3d94129a-8c52-80e1-96ed-db6b05981b95"
+      ],
+      "artistIds": [
+        "3d94129a-8c52-8015-b328-da583fe59ff0"
       ]
     },
     {

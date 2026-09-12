@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T01:10:16Z",
+  "generatedAt": "2026-09-12T17:13:42Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19775,6 +19775,54 @@
       "upc": "5054429118247",
       "tracks": 7,
       "releaseDate": "2017-06-02"
+    },
+    "3d94129a-8c52-80bf-b003-f16bf476e600": {
+      "source": "https://album.link/gjs0fpmvttscz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6DAeWvNvwvKEeKUJZ8IHGl",
+        "pandora": "https://www.pandora.com/AL:67827485",
+        "tidal": "https://listen.tidal.com/album/538868778",
+        "bandcamp": "https://spreadjoy.bandcamp.com/album/iii"
+      },
+      "upc": "769152439686",
+      "tracks": 10,
+      "releaseDate": "2026-09-04"
+    },
+    "3d94129a-8c52-80ac-80a7-c45373107b36": {
+      "source": "https://album.link/tprgxxsz5xftq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5qxOXkfWGr5J0ysiBECkC8",
+        "pandora": "https://www.pandora.com/AL:6843986",
+        "amazonMusic": "https://music.amazon.com/albums/B00ODSBV2G",
+        "napster": "https://play.napster.com/album/alb.164366736",
+        "yandex": "https://music.yandex.ru/album/14446829",
+        "audius": "https://audius.co/playlists/LjbA1",
+        "boomplay": "https://www.boomplay.com/albums/113892228",
+        "bandcamp": "https://peterdoran.bandcamp.com/album/outlines",
+        "amazonStore": "https://amazon.com/dp/B00ODSBV2G"
+      },
+      "upc": "8718723166133",
+      "tracks": 10,
+      "releaseDate": "2021-04-02"
+    },
+    "3d94129a-8c52-8086-8f65-d7b3645c5865": {
+      "source": "https://album.link/mgpnkxk8smrcv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7uTAl4dESGV2JyvUONqURW",
+        "pandora": "https://www.pandora.com/AL:7430528",
+        "deezer": "https://www.deezer.com/album/722779461",
+        "amazonMusic": "https://music.amazon.com/albums/B0DZ7TZ6PZ",
+        "tidal": "https://listen.tidal.com/album/421844417",
+        "napster": "https://play.napster.com/album/alb.536556220",
+        "yandex": "https://music.yandex.ru/album/12949540",
+        "boomplay": "https://www.boomplay.com/albums/107365921",
+        "anghami": "https://play.anghami.com/album/1065509310?refer=linktree",
+        "bandcamp": "https://robohands.bandcamp.com/album/shapes",
+        "amazonStore": "https://amazon.com/dp/B0DZ7TZ6PZ"
+      },
+      "upc": "5057805554554",
+      "tracks": 9,
+      "releaseDate": "2021-01-15"
     }
   }
 }

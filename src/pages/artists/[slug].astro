@@ -78,11 +78,20 @@ const aka = artistsOf(artist.akaIds ?? []);
         такое же сведение было названо словом. */}
     {(aka.length > 0 || artist.country || hasLinks) && (
       <dl class="item__facts">
-        {/* Другие имена — первой строкой: это сведение про само имя, которое
-            стоит заголовком прямо над справкой. Ссылками на их страницы,
-            через точку, как лейблы и жанры в блоке Info. Подпись одна на
-            любое число имён: «Also known as» во множественном числе не
-            меняется. */}
+        {artist.country && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{countryName(artist.country)}</dd>
+          </div>
+        )}
+
+        {/* Другие имена — между страной и ссылками наружу: страна — про того,
+            кто это, другие имена — про то же самое, а ссылки уводят с сайта и
+            стоят последними. Первой строкой, над страной, они простояли
+            13 сентября 2026 полдня.
+
+            Ссылками на их страницы, через точку, как лейблы и жанры в блоке
+            Info. Подпись одна на любое число имён. */}
         {aka.length > 0 && (
           <div class="item__fact">
             <dt>Also known as:</dt>
@@ -94,13 +103,6 @@ const aka = artistsOf(artist.akaIds ?? []);
                 </>
               ))}
             </dd>
-          </div>
-        )}
-
-        {artist.country && (
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{countryName(artist.country)}</dd>
           </div>
         )}
 

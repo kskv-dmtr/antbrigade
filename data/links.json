@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T12:17:54Z",
+  "generatedAt": "2026-09-13T15:07:32Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -20138,6 +20138,186 @@
       "upc": "3614979858769",
       "tracks": 7,
       "releaseDate": "2018-02-23"
+    },
+    "3da4129a-8c52-8096-a359-c3bfcab739e5": {
+      "source": "https://album.link/5s36zhpjsrrrj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2bg1QFXLQ1FQ266YSczeP6",
+        "pandora": "https://www.pandora.com/AL:9697325",
+        "deezer": "https://www.deezer.com/album/298024982",
+        "amazonMusic": "https://music.amazon.com/albums/B09T8T8GX7",
+        "tidal": "https://listen.tidal.com/album/218640700",
+        "napster": "https://play.napster.com/album/alb.651338457",
+        "yandex": "https://music.yandex.ru/album/16274075",
+        "boomplay": "https://www.boomplay.com/albums/27034417",
+        "anghami": "https://play.anghami.com/album/1026441071?refer=linktree",
+        "bandcamp": "https://reubenvaunsmith.bandcamp.com/album/sounds-from-the-workshop",
+        "amazonStore": "https://amazon.com/dp/B09T8T8GX7"
+      },
+      "upc": "5060571361332",
+      "tracks": 15,
+      "releaseDate": "2021-08-27"
+    },
+    "3da4129a-8c52-805b-9e4c-d21672db8584": {
+      "source": "https://album.link/g0fhmgsr66wv9",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/43mTFLfF5mNMhuA7MtDcSi",
+        "amazonMusic": "https://music.amazon.com/albums/B08KWSGHDD",
+        "napster": "https://play.napster.com/album/alb.519099472",
+        "yandex": "https://music.yandex.ru/album/12407080",
+        "boomplay": "https://www.boomplay.com/albums/17018883",
+        "anghami": "https://play.anghami.com/album/1017113165?refer=linktree",
+        "bandcamp": "https://joelculpeppermusic.bandcamp.com/album/sgt-culpepper",
+        "amazonStore": "https://amazon.com/dp/B08KWSGHDD"
+      },
+      "upc": "3616409474136",
+      "tracks": 11,
+      "releaseDate": "2021-07-23"
+    },
+    "3da4129a-8c52-80ab-af46-c6f90f3315c9": {
+      "source": "https://album.link/nmfnskhdx7s8h",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7I0c9SA03BpX2TYIKrLlnv",
+        "pandora": "https://www.pandora.com/AL:7073277",
+        "deezer": "https://www.deezer.com/album/182976912",
+        "amazonMusic": "https://music.amazon.com/albums/B08M96DDN3",
+        "tidal": "https://listen.tidal.com/album/160322444",
+        "napster": "https://play.napster.com/album/alb.525621279",
+        "yandex": "https://music.yandex.ru/album/12623496",
+        "bandcamp": "https://biglegalmess.bandcamp.com/album/luna-68",
+        "amazonStore": "https://amazon.com/dp/B08M96DDN3"
+      },
+      "upc": "195497473250",
+      "tracks": 9,
+      "releaseDate": "2021-03-19"
+    },
+    "3da4129a-8c52-8077-9620-c52e82ce898a": {
+      "source": "https://album.link/6c2zmzccfwqxm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1oBMvwID0e07Q9kRSwAW3N",
+        "pandora": "https://www.pandora.com/AL:6091739",
+        "bandcamp": "https://teaspoon-ndelu.bandcamp.com/album/teaspoon-the-waves-1977"
+      },
+      "upc": "0878068022322",
+      "tracks": 5,
+      "releaseDate": "1977-07-17"
+    },
+    "3da4129a-8c52-80a2-bce0-e5ccf0728123": {
+      "source": "https://album.link/42mfgpqqxtb6z",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/75GwgzYvvgaJQS6DooqcIC",
+        "pandora": "https://www.pandora.com/AL:6653245",
+        "deezer": "https://www.deezer.com/album/173736402",
+        "amazonMusic": "https://music.amazon.com/albums/B08J811KR9",
+        "tidal": "https://listen.tidal.com/album/184778123",
+        "napster": "https://play.napster.com/album/alb.512591133",
+        "yandex": "https://music.yandex.ru/album/12145006",
+        "boomplay": "https://www.boomplay.com/albums/16271997",
+        "anghami": "https://play.anghami.com/album/1014794740?refer=linktree",
+        "bandcamp": "https://wearerhythmsection.bandcamp.com/album/small-moments",
+        "amazonStore": "https://amazon.com/dp/B08J811KR9"
+      },
+      "upc": "4062548017373",
+      "tracks": 8,
+      "releaseDate": "2020-11-13"
+    },
+    "3da4129a-8c52-807c-b4b1-c5879a1d9d9a": {
+      "source": "https://album.link/97qksqdnhpbkm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2GzTb3Ac303JmBOwGiAxyj",
+        "deezer": "https://www.deezer.com/album/176924982",
+        "bandcamp": "https://fantasticman.bandcamp.com/album/utopioid"
+      },
+      "upc": "4250101420139",
+      "tracks": 9,
+      "releaseDate": "2020-10-23"
+    },
+    "3da4129a-8c52-8007-8c19-c0464948bac8": {
+      "source": "https://album.link/hjxm2mxhcjczd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4nEl5WmNwaoRTUJZzJIH37",
+        "pandora": "https://www.pandora.com/AL:6424858",
+        "deezer": "https://www.deezer.com/album/357405547",
+        "amazonMusic": "https://music.amazon.com/albums/B0BFKCJWPP",
+        "tidal": "https://listen.tidal.com/album/248911855",
+        "napster": "https://play.napster.com/album/alb.504969292",
+        "yandex": "https://music.yandex.ru/album/11865291",
+        "boomplay": "https://www.boomplay.com/albums/15434018",
+        "anghami": "https://play.anghami.com/album/1032076159?refer=linktree",
+        "bandcamp": "https://gitkin.bandcamp.com/album/safe-passage",
+        "amazonStore": "https://amazon.com/dp/B0BFKCJWPP"
+      },
+      "upc": "708630009676",
+      "tracks": 11,
+      "releaseDate": "2020-09-18"
+    },
+    "3da4129a-8c52-80c4-bd66-d5df1e44004c": {
+      "source": "https://album.link/kp8zs6wqtdhnp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/19uGXP6YaIElZQ08aNLJwS",
+        "pandora": "https://www.pandora.com/AL:5490617",
+        "deezer": "https://www.deezer.com/album/134462002",
+        "amazonMusic": "https://music.amazon.com/albums/B085DDKYLW",
+        "tidal": "https://listen.tidal.com/album/141664819",
+        "napster": "https://play.napster.com/album/alb.475519371",
+        "yandex": "https://music.yandex.ru/album/10759862",
+        "boomplay": "https://www.boomplay.com/albums/12116496",
+        "amazonStore": "https://amazon.com/dp/B085DDKYLW"
+      },
+      "upc": "3616404179890",
+      "tracks": 12,
+      "releaseDate": "2020-06-12"
+    },
+    "3da4129a-8c52-8085-a9fc-ec9b0a563f1b": {
+      "source": "https://album.link/ncjw77nvdqd73",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5Cd7BhlVvsUr8dFPkLQ1JC",
+        "pandora": "https://www.pandora.com/AL:5093609",
+        "deezer": "https://www.deezer.com/album/708103671",
+        "amazonMusic": "https://music.amazon.com/albums/B0DVCJC9RX",
+        "tidal": "https://listen.tidal.com/album/414559781",
+        "napster": "https://play.napster.com/album/alb.463681912",
+        "yandex": "https://music.yandex.ru/album/10354388",
+        "boomplay": "https://www.boomplay.com/albums/9860678",
+        "anghami": "https://play.anghami.com/album/1063935601?refer=linktree",
+        "bandcamp": "https://chipwickham.bandcamp.com/album/blue-to-red",
+        "amazonStore": "https://amazon.com/dp/B0DVCJC9RX"
+      },
+      "upc": "3616404984197",
+      "tracks": 6,
+      "releaseDate": "2020-05-08"
+    },
+    "3da4129a-8c52-80b2-9599-f4f2e341839c": {
+      "source": "https://album.link/zhbhzzr6kzpdf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/22UlfqOCL0S2bdkJRgcvCU",
+        "amazonMusic": "https://music.amazon.com/albums/B087QQQ5FH",
+        "tidal": "https://listen.tidal.com/album/139178698",
+        "bandcamp": "https://setwunsounds.bandcamp.com/album/in-search-of-the-butubutu",
+        "amazonStore": "https://amazon.com/dp/B087QQQ5FH"
+      },
+      "upc": "195267880431",
+      "tracks": 12,
+      "releaseDate": "2020-04-24"
+    },
+    "3da4129a-8c52-80e8-8a35-c112140633a4": {
+      "source": "https://album.link/hghd6m0gjkk34",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4sXAvPGuK1PPUm5S8Obqs8",
+        "pandora": "https://www.pandora.com/AL:3031085",
+        "deezer": "https://www.deezer.com/album/114789142",
+        "amazonMusic": "https://music.amazon.com/albums/B07XGGZJ43",
+        "tidal": "https://listen.tidal.com/album/120076410",
+        "napster": "https://play.napster.com/album/alb.414405438",
+        "yandex": "https://music.yandex.ru/album/8980491",
+        "boomplay": "https://www.boomplay.com/albums/7349176",
+        "anghami": "https://play.anghami.com/album/1008833460?refer=linktree",
+        "bandcamp": "https://galcherlustwerk.bandcamp.com/album/information",
+        "amazonStore": "https://amazon.com/dp/B07XGGZJ43"
+      },
+      "upc": "804297835105",
+      "tracks": 12,
+      "releaseDate": "2019-11-22"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T16:22:39Z",
+  "generatedAt": "2026-09-13T19:29:34Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -20413,6 +20413,25 @@
       "upc": "0045778040667",
       "tracks": 14,
       "releaseDate": "1998-01-20"
+    },
+    "3da4129a-8c52-80a9-a604-d6303753b59e": {
+      "source": "https://album.link/sfgrqrbjq4kqx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3c9Voyw8wYyDKRwPRNCCUg",
+        "pandora": "https://www.pandora.com/AL:8532695",
+        "deezer": "https://www.deezer.com/album/213760772",
+        "amazonMusic": "https://music.amazon.com/albums/B08YKH732G",
+        "tidal": "https://listen.tidal.com/album/176653373",
+        "napster": "https://play.napster.com/album/alb.565150881",
+        "yandex": "https://music.yandex.ru/album/14342581",
+        "boomplay": "https://www.boomplay.com/albums/22486988",
+        "anghami": "https://play.anghami.com/album/1019210100?refer=linktree",
+        "bandcamp": "https://tiawa-music.bandcamp.com/album/moonlit-train",
+        "amazonStore": "https://amazon.com/dp/B08YKH732G"
+      },
+      "upc": "5060609663872",
+      "tracks": 14,
+      "releaseDate": "2021-06-04"
     }
   }
 }

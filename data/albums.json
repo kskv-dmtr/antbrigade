@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-13T16:21:58Z",
+  "generatedAt": "2026-09-13T19:29:20Z",
   "counts": {
-    "albums": 1283,
-    "artists": 1112,
+    "albums": 1284,
+    "artists": 1113,
     "labels": 701,
     "videos": 96
   },
@@ -1805,7 +1805,8 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A4f08a160-8a7b-4a0b-b0de-4ca75b5e7d3a%3Aa1996753896_10.jpg?table=block&id=3da4129a-8c52-8029-b768-fc0542a8e8ff&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
         "Nu-Disco",
-        "Afro House"
+        "Afro House",
+        "Afrobeat"
       ],
       "types": [
         "Album"
@@ -36091,6 +36092,36 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-80a9-a604-d6303753b59e",
+      "slug": "tiawa-moonlit-train",
+      "artist": "Tiawa",
+      "album": "Moonlit Train",
+      "url": "https://album.link/sfgrqrbjq4kqx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab5554d35-89be-421d-9d8c-4bcf2f7e372a%3Aa3656589812_10.jpg?table=block&id=3da4129a-8c52-80a9-a604-d6303753b59e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-80bf-b03b-d2f5234f3a92"
+      ],
+      "artists": [
+        "Tiawa"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "labels": [
+        "Tru Thoughts Recordings"
+      ]
+    },
+    {
       "id": "3d94129a-8c52-80f0-8e7e-eff58579aa6f",
       "slug": "sau-poler-nocturno",
       "artist": "Sau Poler",
@@ -61331,6 +61362,25 @@
       "akaIds": []
     },
     {
+      "id": "3da4129a-8c52-80bf-b03b-d2f5234f3a92",
+      "slug": "tiawa",
+      "name": "Tiawa",
+      "country": "GB",
+      "bandcamp": "https://tiawa-music.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80a9-a604-d6303753b59e"
+      ],
+      "genres": [
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3da4129a-8c52-80ce-91db-f64793a77153",
       "slug": "tigerbalm",
       "name": "Tigerbalm",
@@ -61342,7 +61392,8 @@
       ],
       "genres": [
         "Nu-Disco",
-        "Afro House"
+        "Afro House",
+        "Afrobeat"
       ],
       "labelIds": [
         "2494129a-8c52-8067-af88-dc8e84f69e98"
@@ -74487,14 +74538,16 @@
         "3104129a-8c52-8078-869b-d440ac20c617",
         "2664129a-8c52-8056-a76e-eb43ef492297",
         "cc75744c-6671-4db9-8bdf-487423d10089",
-        "3d54129a-8c52-80d8-9b03-d872e13cc2f9"
+        "3d54129a-8c52-80d8-9b03-d872e13cc2f9",
+        "3da4129a-8c52-80a9-a604-d6303753b59e"
       ],
       "artistIds": [
         "3104129a-8c52-8044-b0b6-f9c4ec38e9d9",
         "2664129a-8c52-80d9-9fa3-e0da2bc3dbff",
         "24f4129a-8c52-8051-8577-f8f08711cd36",
         "3d54129a-8c52-8058-865d-c83a7fe422c4",
-        "3d54129a-8c52-80a1-aa0c-f5a65f969ab6"
+        "3d54129a-8c52-80a1-aa0c-f5a65f969ab6",
+        "3da4129a-8c52-80bf-b03b-d2f5234f3a92"
       ]
     },
     {

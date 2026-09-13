@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:21:51Z",
+  "generatedAt": "2026-09-13T01:03:34Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19967,6 +19967,25 @@
       "upc": "5056167119852",
       "tracks": 11,
       "releaseDate": "2020-02-28"
+    },
+    "3d94129a-8c52-809f-8e45-c979f4684d64": {
+      "source": "https://album.link/5kf2gdhbhsd87",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2H95CvxZhzAa9j9RDexkz9",
+        "pandora": "https://www.pandora.com/AL:10968718",
+        "deezer": "https://www.deezer.com/album/252716952",
+        "amazonMusic": "https://music.amazon.com/albums/B09CVWB26M",
+        "tidal": "https://listen.tidal.com/album/194974546",
+        "napster": "https://play.napster.com/album/alb.605749025",
+        "yandex": "https://music.yandex.ru/album/17910036",
+        "boomplay": "https://www.boomplay.com/albums/31264895",
+        "anghami": "https://play.anghami.com/album/1022932404?refer=linktree",
+        "bandcamp": "https://bigyawn.bandcamp.com/album/pressure-acts",
+        "amazonStore": "https://amazon.com/dp/B09CVWB26M"
+      },
+      "upc": "5050580769922",
+      "tracks": 6,
+      "releaseDate": "2021-10-29"
     }
   }
 }

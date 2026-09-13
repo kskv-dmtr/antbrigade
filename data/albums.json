@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-12T22:20:40Z",
+  "generatedAt": "2026-09-13T01:03:20Z",
   "counts": {
-    "albums": 1257,
+    "albums": 1258,
     "artists": 1094,
     "labels": 688,
     "videos": 96
@@ -34319,6 +34319,38 @@
       ]
     },
     {
+      "id": "3d94129a-8c52-809f-8e45-c979f4684d64",
+      "slug": "big-yawn-pressure-acts",
+      "artist": "Big Yawn",
+      "album": "Pressure Acts",
+      "url": "https://album.link/5kf2gdhbhsd87",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A963fe339-18e6-4d00-b03d-6023c3d10901%3Aa2135090996_10.jpg?table=block&id=3d94129a-8c52-809f-8e45-c979f4684d64&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Krautrock",
+        "Electro",
+        "Experimental Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2021-10-29",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2414129a-8c52-801d-914c-c4884689694b"
+      ],
+      "artists": [
+        "Big Yawn"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80d0-829f-e827d49262ab"
+      ],
+      "labels": [
+        "Research Records"
+      ]
+    },
+    {
       "id": "3d74129a-8c52-8020-8094-f9fa6846c2ac",
       "slug": "nightmares-on-wax-shout-out-to-freedom",
       "artist": "Nightmares On Wax",
@@ -41498,13 +41530,17 @@
       "bandcamp": "https://bigyawn.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "6f6d2a50-53dc-4f75-9c0e-a8852699e264"
+        "6f6d2a50-53dc-4f75-9c0e-a8852699e264",
+        "3d94129a-8c52-809f-8e45-c979f4684d64"
       ],
       "genres": [
         "Electronic",
         "Experimental",
         "Breakbeat",
-        "Ambient"
+        "Ambient",
+        "Krautrock",
+        "Electro",
+        "Experimental Rock"
       ],
       "labelIds": [
         "2434129a-8c52-80d0-829f-e827d49262ab"
@@ -42892,7 +42928,7 @@
       "slug": "chromeo",
       "name": "Chromeo",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://chromeo.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "283f6018-0439-4a99-9528-c849fba35003"
@@ -42911,7 +42947,7 @@
       "slug": "cihangir-ery-ld-z",
       "name": "Cihangir Eryıldız",
       "country": "TR",
-      "bandcamp": null,
+      "bandcamp": "https://cihangir.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2a74129a-8c52-8032-bc41-e420b378c1ed"
@@ -42930,7 +42966,7 @@
       "slug": "cindy",
       "name": "Cindy",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://cindyfuture.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2fa4129a-8c52-8068-8d72-eb7327389ffc"
@@ -42949,7 +42985,7 @@
       "slug": "citron-citron",
       "name": "citron citron",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://citroncitron.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1164129a-8c52-8088-b6e3-f4cb42cdcafd"
@@ -42969,7 +43005,7 @@
       "slug": "civic",
       "name": "CIVIC",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://civicivic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2054129a-8c52-8023-8090-fbcca00fe509"
@@ -42988,7 +43024,7 @@
       "slug": "civilistjavel",
       "name": "Civilistjävel!",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://civilistjavel.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1ac4129a-8c52-8063-9e07-e195981b0c1d"
@@ -43026,7 +43062,7 @@
       "slug": "clamor",
       "name": "Clamor",
       "country": "AR",
-      "bandcamp": null,
+      "bandcamp": "https://clamorbanda.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "8f39f44f-736e-4e89-b599-4f3c4eeec204"
@@ -43046,7 +43082,7 @@
       "slug": "clark",
       "name": "Clark",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://clark.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2a94129a-8c52-8003-9bf5-dbd803bbbf0f"
@@ -43127,7 +43163,7 @@
       "slug": "clothing-club",
       "name": "Clothing Club",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://clothingclub.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "33839981-ce7c-4def-be82-fff88299015d"
@@ -43203,7 +43239,7 @@
       "slug": "cobra-man",
       "name": "Cobra Man",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cobraman.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3d04129a-8c52-802f-a998-e062b8f69554"
@@ -43262,7 +43298,7 @@
       "slug": "coffin-mulch",
       "name": "Coffin Mulch",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://coffinmulch.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "34d0079c-c3a5-44d6-9871-bfdb16f7e01c"
@@ -43280,7 +43316,7 @@
       "slug": "cola-ren",
       "name": "COLA REN",
       "country": "CN",
-      "bandcamp": null,
+      "bandcamp": "https://colaren.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3a33b90f-4c69-46c0-91c0-ab9737d2eb30"
@@ -43300,7 +43336,7 @@
       "slug": "coma",
       "name": "COMA",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://coma-cologne.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "8db38305-53df-49ab-822c-887de89fb706"
@@ -43319,7 +43355,7 @@
       "slug": "combo-chimbita",
       "name": "Combo Chimbita",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://combochimbita.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "19c4129a-8c52-8092-b61e-c8635a25808d"
@@ -43357,7 +43393,7 @@
       "slug": "comet-gain",
       "name": "Comet Gain",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://comet-gain.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "20c4129a-8c52-8090-8817-f1cf68323774"
@@ -43375,7 +43411,7 @@
       "slug": "common-saints",
       "name": "Common Saints",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://commonsaints.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "ee362d60-aa86-4585-8859-53fc1f67b9b7"
@@ -43394,7 +43430,7 @@
       "slug": "corridor",
       "name": "Corridor",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://corridormtl.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "dd76476e-47d0-48ff-b877-a0ac1f0440ef"
@@ -43412,7 +43448,7 @@
       "slug": "cosmic-collective",
       "name": "cosmic collective",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cosmiccollectivemusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "255337b6-3161-4c07-b493-59a958879ef3"
@@ -43432,7 +43468,7 @@
       "slug": "cousin",
       "name": "Cousin",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://secondcousin.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "20cab501-5a46-4c6f-803e-be57b2c74074"
@@ -43493,7 +43529,7 @@
       "slug": "coyote",
       "name": "Coyote",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://coyoteiib.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3504129a-8c52-80cf-8d3b-f3737493c365"
@@ -43513,7 +43549,7 @@
       "slug": "crash-of-rhinos",
       "name": "Crash of Rhinos",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://crashofrhinos.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "36a4129a-8c52-80d0-a690-c4750bdd6851"
@@ -43532,7 +43568,7 @@
       "slug": "craven-faults",
       "name": "Craven Faults",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://cravenfaults.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3024129a-8c52-8097-9d23-c77eec4cac0b"
@@ -43572,7 +43608,7 @@
       "slug": "cryptic-shift",
       "name": "Cryptic Shift",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://cryptic-shift.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "31a4129a-8c52-803d-9724-fcaba82ca5ec"
@@ -43631,7 +43667,7 @@
       "slug": "curses",
       "name": "Curses",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cursesforever.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "35e2d63b-bddb-43bf-9864-02a675a7047a"
@@ -43672,7 +43708,7 @@
       "slug": "custody",
       "name": "Custody",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://custody.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "8fbc5a25-1b97-4593-8680-9b5e635e5520"
@@ -43694,7 +43730,7 @@
       "slug": "cut-copy",
       "name": "Cut Copy",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://cutcopy.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2684129a-8c52-804a-bcc3-cafe73af8aec"
@@ -43714,7 +43750,7 @@
       "slug": "d-d-mirage",
       "name": "D.D. Mirage",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://ddmirage.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1c34129a-8c52-80d8-9916-fc1d3480b42c"
@@ -43734,7 +43770,7 @@
       "slug": "da-lata",
       "name": "Da Lata",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://dalata.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2fb4129a-8c52-80ab-978a-cb181853f274"
@@ -43753,7 +43789,7 @@
       "slug": "dabrye",
       "name": "Dabrye",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dabrye.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "a91b97c5-cc71-4c0d-a9a9-f294bccf0a6c"
@@ -43794,7 +43830,7 @@
       "slug": "danalogue",
       "name": "Danalogue",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://danalogue.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3a34129a-8c52-801d-8214-fdae25f815b5"
@@ -43854,7 +43890,7 @@
       "slug": "daphni",
       "name": "Daphni",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://caribouband.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2ff4129a-8c52-8086-af30-d26725740174"
@@ -43874,7 +43910,7 @@
       "slug": "dar-disku",
       "name": "Dar Disku",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://dardisku.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "11e4129a-8c52-8066-9e30-f39be953cae4"
@@ -43895,7 +43931,7 @@
       "slug": "dark-thoughts",
       "name": "Dark Thoughts",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dark-thoughts.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "24d4129a-8c52-80bd-be5a-c898c9f7e6a0"
@@ -43914,7 +43950,7 @@
       "slug": "darkside",
       "name": "DARKSIDE",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://darkside.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1a94129a-8c52-8085-83d7-f6c9fec0a73d"
@@ -43935,7 +43971,7 @@
       "slug": "daryl-johns",
       "name": "Daryl Johns",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://daryljohns.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1c84129a-8c52-8013-94b3-f4c2b70a6ce7"
@@ -43974,7 +44010,7 @@
       "slug": "dave-guy",
       "name": "Dave Guy",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://daveguy.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1114129a-8c52-80bf-9153-fe3e98c33ca0"
@@ -43993,7 +44029,7 @@
       "slug": "david-numwami",
       "name": "David Numwami",
       "country": "RW",
-      "bandcamp": null,
+      "bandcamp": "https://davidnumwami.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "6865cef3-19e3-44b4-a6c2-4c72157994f3"
@@ -44011,7 +44047,7 @@
       "slug": "david-versace",
       "name": "David Versace",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://davidversace.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "65bdef95-89cd-4471-bc54-1a6c485844d1"
@@ -44031,7 +44067,7 @@
       "slug": "de-phazz",
       "name": "De-Phazz",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://dephazz.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "ea4b1fd7-a3d9-4658-89ec-6d5c52e93a1f"
@@ -44072,7 +44108,7 @@
       "slug": "deadguy",
       "name": "Deadguy",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://deadguy666.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2224129a-8c52-80f1-8e9e-d6ea55249019"
@@ -44091,7 +44127,7 @@
       "slug": "deafdeafdeaf",
       "name": "DEAFDEAFDEAF",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://deafdeafdeafmusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "a509baae-6d31-41f9-b07a-3690bf3b1406"
@@ -44109,7 +44145,7 @@
       "slug": "death-by-unga-bunga",
       "name": "Death By Unga Bunga",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://deathbyungabunga.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1d04129a-8c52-8076-a0a0-d7f8ec4d9b43"
@@ -44229,7 +44265,7 @@
       "slug": "der-assistent",
       "name": "Der Assistent",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://derassistent.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "010dad41-01b3-4f48-98af-c01b677b7503"
@@ -44269,7 +44305,7 @@
       "slug": "desire-marea",
       "name": "Desire Marea",
       "country": "ZA",
-      "bandcamp": null,
+      "bandcamp": "https://desiremarea.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "5a4037a5-d5a5-410b-b57b-2096a560d4b7"
@@ -44330,7 +44366,7 @@
       "slug": "diane-birch",
       "name": "Diane Birch",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dianebirch-legere.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "f5fcb56a-ee7b-416a-b0ac-6962c6d9302b"
@@ -44349,7 +44385,7 @@
       "slug": "dictator-ship",
       "name": "Dictator Ship",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://dictator-ship.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "750795b0-d132-4037-83e5-bc9f6b2d65a6"
@@ -44438,7 +44474,7 @@
       "slug": "dngdngdng",
       "name": "DNGDNGDNG",
       "country": "PE",
-      "bandcamp": null,
+      "bandcamp": "https://denguedenguedengue.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1f44129a-8c52-80ca-b1d9-d268cf42220f"
@@ -44479,7 +44515,7 @@
       "slug": "dog-unit",
       "name": "Dog Unit",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://thisisdogunit.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "22f21588-cd62-46cd-bf1f-4737bdaa55a5"
@@ -44497,7 +44533,7 @@
       "slug": "domenique-dumont",
       "name": "Domenique Dumont",
       "country": "LV",
-      "bandcamp": null,
+      "bandcamp": "https://domeniquedumont.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "21a4129a-8c52-8045-af26-e737cc7af3e9"
@@ -44605,7 +44641,7 @@
       "slug": "doomsday",
       "name": "Doomsday",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://doomsdaycahc.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1ee4129a-8c52-809d-839c-e1082f751fd7"
@@ -44648,7 +44684,7 @@
       "slug": "dosem",
       "name": "Dosem",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://dosem.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "30c4129a-8c52-801e-af49-dacd6503d196"
@@ -44667,7 +44703,7 @@
       "slug": "dowdelin",
       "name": "Dowdelin",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://dowdelinmusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1994129a-8c52-80ce-9deb-f6c508436447"
@@ -44688,7 +44724,7 @@
       "slug": "drakulas",
       "name": "Drakulas",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://drakulas.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3594129a-8c52-80ca-8177-f96e0b028253"
@@ -44727,7 +44763,7 @@
       "slug": "drunk-mums",
       "name": "Drunk Mums",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://drunkmums.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "fd0b9edd-e415-449b-8013-20cf40dfe783"
@@ -44765,7 +44801,7 @@
       "slug": "dummy",
       "name": "Dummy",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://notdummy.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "ef97f649-7196-4cd2-90cf-11e1dc63fc63"
@@ -44785,7 +44821,7 @@
       "slug": "durand-jones-the-indications",
       "name": "Durand Jones & The Indications",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://durandjonesandtheindications.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "21f4129a-8c52-806c-88c0-f1aa033f1df4"
@@ -44807,7 +44843,7 @@
       "slug": "dust",
       "name": "dust",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://dustdustdust.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "28a4129a-8c52-8062-830c-d14be42f0054"
@@ -44825,7 +44861,7 @@
       "slug": "duster",
       "name": "Duster",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dusternumero.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3c54129a-8c52-80c1-83f2-d11e766bd01a"
@@ -44845,7 +44881,7 @@
       "slug": "dylan-chambers",
       "name": "Dylan Chambers",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dylanchambers.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2384129a-8c52-8033-a6ad-e2659f82457d"
@@ -44949,7 +44985,7 @@
       "slug": "eden-burns",
       "name": "Eden Burns",
       "country": "NZ",
-      "bandcamp": null,
+      "bandcamp": "https://edenburns.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "29b4129a-8c52-8077-99c8-c4e61299a196"
@@ -44968,7 +45004,7 @@
       "slug": "edmondson",
       "name": "Edmondson",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://lissomsxyz.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2444129a-8c52-808b-80f1-d72e68411a84"
@@ -45005,7 +45041,7 @@
       "slug": "eera",
       "name": "EERA",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://eeramusic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2bd4129a-8c52-8013-bde1-e3eb7e3a74c0"
@@ -45024,7 +45060,7 @@
       "slug": "eje-eje",
       "name": "Eje Eje",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://ejeeje.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "65fbcf5d-dd2a-4c40-a1b6-d7eb5a9d1745"
@@ -45044,7 +45080,7 @@
       "slug": "el-buho",
       "name": "El Búho",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://elbuho.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "6c398baa-4809-41bf-a08e-d978529699c8"
@@ -45063,7 +45099,7 @@
       "slug": "electric-kif",
       "name": "Electric Kif",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://electrickif.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "07d22961-f923-4574-8948-c362670a933c"
@@ -45123,7 +45159,7 @@
       "slug": "elkka",
       "name": "Elkka",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://elkka.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "bf59a354-7d5e-45b1-8c49-41220efd4cd1"
@@ -45143,7 +45179,7 @@
       "slug": "ellen-beth-abdi",
       "name": "Ellen Beth Abdi",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ellenbethabdi.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2044129a-8c52-8051-a544-c0192f0b1b94"
@@ -45163,7 +45199,7 @@
       "slug": "emilia-sisco",
       "name": "Emilia Sisco",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://emiliasisco.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1bf4129a-8c52-80a2-afe0-c0a825f331ad"
@@ -45201,7 +45237,7 @@
       "slug": "enforcer",
       "name": "Enforcer",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://enforcer.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "aa2d340f-4265-4d78-94e6-9f52fed4ba4f"
@@ -45219,7 +45255,7 @@
       "slug": "enji",
       "name": "Enji",
       "country": "MN",
-      "bandcamp": null,
+      "bandcamp": "https://enjierkhem.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "75cc8129-fa7e-4fa5-aa63-9da752bcfc7b"
@@ -45252,7 +45288,7 @@
       "slug": "erika-de-casier",
       "name": "Erika de Casier",
       "country": "PT",
-      "bandcamp": null,
+      "bandcamp": "https://erikadecasier.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1ef4129a-8c52-8048-b171-f217f5351ff2"
@@ -45293,7 +45329,7 @@
       "slug": "evangeline",
       "name": "Evangeline",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://evangelineevangeline.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "303065a7-d41f-4956-a568-51b27c61d1d5"
@@ -45330,7 +45366,7 @@
       "slug": "ex-generation",
       "name": "EX GENERATION",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://exgeneration.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1fa019e6-0ce4-4389-bbee-8af4258a24f1"
@@ -45351,7 +45387,7 @@
       "slug": "ex-easter-island-head",
       "name": "Ex-Easter Island Head",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://exeasterislandhead.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "14621cc4-e914-4f02-b3d8-22be830a6f0c"
@@ -45372,7 +45408,7 @@
       "slug": "eyal-talmudi",
       "name": "Eyal Talmudi",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://eyaltalmudi.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2524129a-8c52-8008-bcbd-f96d1e10d8cf"
@@ -45392,7 +45428,7 @@
       "slug": "ezra-collective",
       "name": "Ezra Collective",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ezracollective.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "10d4129a-8c52-80b5-9268-c22b991beefa"
@@ -45413,7 +45449,7 @@
       "slug": "fabueder",
       "name": "Fabueder",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://febueder.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "d3f1ffb6-0f3a-43aa-9182-7e0784db407f"
@@ -45432,7 +45468,7 @@
       "slug": "facs",
       "name": "FACS",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://wearefacs.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1a54129a-8c52-8034-8a9e-d4c102d8ca0a"
@@ -45450,7 +45486,7 @@
       "slug": "facta",
       "name": "Facta",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://facta.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2614129a-8c52-80ac-bf53-d23e0e603794"
@@ -45469,7 +45505,7 @@
       "slug": "fade-evare",
       "name": "Fade Evare",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://fadeevare.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2404129a-8c52-8008-a90c-c693e27d3d48"
@@ -45487,7 +45523,7 @@
       "slug": "fakear",
       "name": "Fakear",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://fakear.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "f1dc61eb-bc94-4d4b-99a3-09d9f6d0c898"
@@ -45527,7 +45563,7 @@
       "slug": "fantastic-twins",
       "name": "Fantastic Twins",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://fantastictwins.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "19d4129a-8c52-80ef-b59d-da81a6b1c18a"
@@ -45547,7 +45583,7 @@
       "slug": "farhot",
       "name": "Farhot",
       "country": "AF",
-      "bandcamp": null,
+      "bandcamp": "https://farhot.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2334129a-8c52-80ba-afa1-f2ff462c25c3"
@@ -45584,7 +45620,7 @@
       "slug": "fatima",
       "name": "Fatima",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://fatima.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "e92b03d4-2bc1-419b-80eb-72a093d5bc4d"
@@ -45623,7 +45659,7 @@
       "slug": "faze",
       "name": "Faze",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://fazefazefaze.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "26e4129a-8c52-8066-aba1-cb3002a5c142"
@@ -45660,7 +45696,7 @@
       "slug": "fcukers",
       "name": "Fcukers",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://fcukers.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3314129a-8c52-8080-9b7b-c74fa39f1c06"
@@ -45699,7 +45735,7 @@
       "slug": "felbm",
       "name": "Felbm",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://felbm.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2ca4129a-8c52-8020-b187-f07a05998313"
@@ -45764,7 +45800,7 @@
       "slug": "first-attack",
       "name": "First Attack",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://firstattack.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2064129a-8c52-80fd-a126-f1b3d73b6634"
@@ -45784,7 +45820,7 @@
       "slug": "first-beige",
       "name": "First Beige",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://firstbeige.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1e04129a-8c52-80c1-ae5c-e5212199090c"
@@ -45847,7 +45883,7 @@
       "slug": "fleur",
       "name": "Fleur",
       "country": "NL",
-      "bandcamp": null,
+      "bandcamp": "https://yeyefleur.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "9e53b1a5-7ce5-43d1-bdd9-d5c8a14a2038"
@@ -45867,7 +45903,7 @@
       "slug": "floating-points",
       "name": "Floating Points",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://floatingpoints.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2c6d3e66-e9bc-4cdc-a957-9a610aba3462"
@@ -45887,7 +45923,7 @@
       "slug": "flofilz",
       "name": "FloFilz",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://flofilzmpm.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "83a23190-919c-481b-933e-80d827f306c5"
@@ -45906,7 +45942,7 @@
       "slug": "fluffy-machine",
       "name": "Fluffy Machine",
       "country": "CH",
-      "bandcamp": null,
+      "bandcamp": "https://fluffymachine.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "4bf71ccf-0f15-4908-b5b4-10352ff9be90"
@@ -45925,7 +45961,7 @@
       "slug": "flying-lotus",
       "name": "Flying Lotus",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://flyinglotus.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3214129a-8c52-8076-b6f1-e870ac9634d4"
@@ -45945,7 +45981,7 @@
       "slug": "folly-group",
       "name": "Folly Group",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://follygroup.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1104129a-8c52-8063-91c7-f09ed3af577f"
@@ -45965,7 +46001,7 @@
       "slug": "fontaines-d-c",
       "name": "Fontaines D.C.",
       "country": "IE",
-      "bandcamp": null,
+      "bandcamp": "https://fontainesdc.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1ea6823e-c806-4e50-9dca-3998cf68f7e3"
@@ -47899,7 +47935,7 @@
       "slug": "ireke",
       "name": "Ireke",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://ireke.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "38f4129a-8c52-80c7-8a52-e58a8c16d86f"
@@ -50354,7 +50390,7 @@
       "slug": "lip-critic",
       "name": "Lip Critic",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://lipcritic.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "3864129a-8c52-8052-8db4-f01a1860a2cb"
@@ -50647,7 +50683,7 @@
       "slug": "lucid-express",
       "name": "Lucid Express",
       "country": "HK",
-      "bandcamp": null,
+      "bandcamp": "https://lucidexpress.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "30f4129a-8c52-80a3-8cc7-e3dbc4c81192"
@@ -51525,7 +51561,7 @@
       "slug": "melenas",
       "name": "Melenas",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://melenas.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "21f19580-1a8e-4eb5-b648-f8dbaf5e94b9"
@@ -53846,7 +53882,7 @@
       "slug": "pigs-pigs-pigs-pigs-pigs-pigs-pigs",
       "name": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://pigspigspigspigspigspigspigs.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1cf4129a-8c52-8096-bc3e-da2c83951050"
@@ -54532,7 +54568,7 @@
       "slug": "radioactivity",
       "name": "Radioactivity",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://radioactivitytx.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2b54129a-8c52-80d2-902a-ec62d33c73dc"
@@ -55170,7 +55206,7 @@
       "slug": "rosettes",
       "name": "Rosettes",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://rosettes.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1cd4129a-8c52-80c2-bbfd-c15189e99946"
@@ -56041,7 +56077,7 @@
       "slug": "silvan-strauss",
       "name": "Silvan Strauss",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://silvanstrauss.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "23c2c6e4-694e-4d94-bc84-5d3ff6cf6ef3"
@@ -56138,7 +56174,7 @@
       "slug": "skinny-pelembe",
       "name": "Skinny Pelembe",
       "country": "ZA",
-      "bandcamp": null,
+      "bandcamp": "https://skinnypelembe.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "b53adadf-4e51-4295-8bea-e156671d1d52"
@@ -56280,7 +56316,7 @@
       "slug": "snapped-ankles",
       "name": "Snapped Ankles",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://snappedankles.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "1c34129a-8c52-801e-9e31-c29f2ae8ec00"
@@ -59914,7 +59950,7 @@
       "slug": "urlaub-in-polen",
       "name": "Urlaub in Polen",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://urlaubinpolen.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2f24129a-8c52-80d1-a9fb-c730ed78f49f"
@@ -61843,7 +61879,7 @@
       "slug": "antinote-records",
       "name": "Antinote Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://antinoterecordings.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61949,7 +61985,7 @@
       "slug": "astronomy-recording-music",
       "name": "Astronomy Recording Music",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://astronomyrecordingmusic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62461,7 +62497,7 @@
       "slug": "blikflak",
       "name": "Blikflak",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://blikflak.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62670,7 +62706,7 @@
       "slug": "brace-yourself-records",
       "name": "Brace Yourself Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://braceyourselfrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62923,7 +62959,7 @@
       "slug": "castles-in-space",
       "name": "Castles In Space",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://castlesinspace.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63141,7 +63177,7 @@
       "slug": "club-romantico",
       "name": "Club Romantico",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://clubromantico.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63478,7 +63514,7 @@
       "slug": "creator-destructor-records",
       "name": "Creator Destructor Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://creator-destructor.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63613,7 +63649,7 @@
       "slug": "cutters-records",
       "name": "Cutters Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://cuttersrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63643,7 +63679,7 @@
       "slug": "da-lata-music",
       "name": "Da Lata Music",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://dlmmusic.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -64336,7 +64372,7 @@
       "slug": "eglo-records",
       "name": "Eglo Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://eglorecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -64381,7 +64417,7 @@
       "slug": "energy-exchange-records",
       "name": "Energy Exchange Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://energyexchangerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -64667,7 +64703,7 @@
       "slug": "felt",
       "name": "FELT",
       "country": "DK",
-      "bandcamp": null,
+      "bandcamp": "https://f-e-l-t.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66193,7 +66229,7 @@
       "slug": "isle-of-jura",
       "name": "Isle Of Jura",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://isleofjura.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66238,7 +66274,7 @@
       "slug": "italians-do-it-better",
       "name": "Italians Do It Better",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://italiansdoitbetter.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@ItaliansDoItBetterMusic/",
       "albumIds": [
@@ -66430,7 +66466,7 @@
       "slug": "kabul-fire-records",
       "name": "Kabul Fire Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://kabulfire.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66492,7 +66528,7 @@
       "slug": "kanine-records",
       "name": "Kanine Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://kaninerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66772,7 +66808,7 @@
       "slug": "la-sape-records",
       "name": "La Sape Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://lasape.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66939,7 +66975,7 @@
       "slug": "legere-recordings",
       "name": "Légère Recordings",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://legererecordings.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66954,7 +66990,7 @@
       "slug": "legless-records",
       "name": "Legless Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://leglessrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -67565,7 +67601,7 @@
       "slug": "mighty-eye-records",
       "name": "Mighty Eye Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://mightyeyerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68578,7 +68614,7 @@
       "slug": "nowadays-records",
       "name": "Nowadays Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://nowadaysrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -68862,7 +68898,7 @@
       "slug": "papercup-records",
       "name": "Papercup Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://papercuprecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69136,7 +69172,7 @@
       "slug": "phazz-a-delic",
       "name": "Phazz-a-delic",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://phazzadelic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69196,7 +69232,7 @@
       "slug": "pinchy-friends",
       "name": "Pinchy & Friends",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://pinchyandfriends.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69584,7 +69620,7 @@
       "slug": "qeone",
       "name": "QEONE",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://qeone.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69888,7 +69924,7 @@
       "slug": "republic-of-music",
       "name": "Republic of Music",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://republicofmusic1.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69908,6 +69944,7 @@
       "youtube": null,
       "albumIds": [
         "6f6d2a50-53dc-4f75-9c0e-a8852699e264",
+        "3d94129a-8c52-809f-8e45-c979f4684d64",
         "335f957e-501d-4503-9d32-92e725dde516"
       ],
       "artistIds": [
@@ -70152,7 +70189,7 @@
       "slug": "rocket-recordings",
       "name": "Rocket Recordings",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://rocketrecordings.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -70792,7 +70829,7 @@
       "slug": "so-young-records",
       "name": "So Young Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://soyoungrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71464,7 +71501,7 @@
       "slug": "tapete-records",
       "name": "Tapete Records",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://tapeterecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71535,7 +71572,7 @@
       "slug": "the-leaf-label",
       "name": "The Leaf Label",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://theleaflabel.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71582,7 +71619,7 @@
       "slug": "the-sign-records",
       "name": "The Sign Records",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://thesignrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71693,7 +71730,7 @@
       "slug": "throttle-records",
       "name": "Throttle Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://throttlerecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71723,7 +71760,7 @@
       "slug": "timmion-records",
       "name": "Timmion Records",
       "country": "FI",
-      "bandcamp": null,
+      "bandcamp": "https://timmionrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72089,7 +72126,7 @@
       "slug": "underdog-records",
       "name": "Underdog Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://underdogrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72106,7 +72143,7 @@
       "slug": "une-vie-pour-rien",
       "name": "Une vie pour rien?",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://uneviepourrienvinyles.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72139,7 +72176,7 @@
       "slug": "unity-records",
       "name": "Unity Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://unityrec.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72496,7 +72533,7 @@
       "slug": "wild-honey-records",
       "name": "Wild Honey Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://wildhoneyrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72528,7 +72565,7 @@
       "slug": "wisdom-teeth",
       "name": "Wisdom Teeth",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://wisdomteethuk.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

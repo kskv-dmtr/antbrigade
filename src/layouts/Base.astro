@@ -406,10 +406,19 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       ряду, тот становился шире кадра на 12 и страница ехала вбок. */}
   <footer class="foot">
     <div class="foot__in">
-      {/* Слева, от края кадра, — что это за сайт и кто его собрал. */}
+      {/* Три группы по три строки. Слева, от края кадра, — чей это сайт: имя,
+          автор, год и число. По центру — каналы. Справа, у правого края, — о
+          чём он. Строк в группах поровну, и базовые линии идут через весь
+          подвал одной строкой.
+
+          Имя сайта вернулось в подвал 13 сентября 2026 — первой строкой левой
+          группы. Со 2 сентября его здесь не было: оно стоит логотипом в шапке,
+          но тогда подвал открывался описанием, а теперь описание переехало
+          вправо и левой группе нужна подпись, чья она. */}
       <div class="foot__note mono mono--sm">
-        a personal music &amp; video archive<br />
-        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a>
+        ant brigade<br />
+        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
+        © {year} · 1723
       </div>
 
       {/* Правая половина подвала: каналы от центральной линии, справка о
@@ -418,18 +427,20 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           каналы встают на ту же линию, что текст в ячейке справки на странице
           релиза. */}
       <div class="foot__side">
-        <div class="foot__links">
-          <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">
-            @antbrigade
-          </a>
-          <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">
-            @antbrigade_rar
-          </a>
+        {/* Каналы строками, с подписью «telegram:» над ними — такой же
+            подписью, как у справа стоящей группы. Подпись вплотную к тегу,
+            без переноса строки: пробелы по краям попадали в ссылку, и волос
+            под словом вылезал за букву на пробел с каждой стороны. */}
+        <div class="foot__links mono mono--sm">
+          telegram:<br />
+          <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
+          <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
         </div>
 
         <div class="foot__note foot__note--end mono mono--sm">
+          a personal music &amp; video archive:<br />
           new releases · old favorites · strange finds<br />
-          © {year} · 1723 · 1312
+          no gods · no genres
         </div>
       </div>
     </div>

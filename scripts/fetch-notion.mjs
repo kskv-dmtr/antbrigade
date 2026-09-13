@@ -23,10 +23,13 @@ const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
 /* Ключей website здесь больше нет: колонку убрали из обеих баз 5 сентября
    2026. Были '=Mzn' у артистов и 'H>J[' у лейблов — на случай, если
    вернут. Ссылки стояли у трёх артистов и девяти лейблов. */
+/* aka — связь «Also Known As» внутри той же базы: псевдонимы и другие имена
+   одного человека или состава. Заведена 13 сентября 2026. */
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
                   bandcamp:   'XmmI',
-                  youtube:    'drlg' };
+                  youtube:    'drlg',
+                  aka:        'rupg' };
 /* У лейбла две колонки Bandcamp: «Bandcamp [1]» и «Bandcamp [2]». Вторая
    заведена 6 сентября 2026 — у части лейблов страниц на площадке две, как у
    XL Recordings: xlrecordings и xlrecordingsuk. У артистов колонка одна. */
@@ -321,9 +324,11 @@ async function directory(source, label) {
     const bandcamp  = source.bandcamp  ? plainText(prop(v.properties, source.bandcamp))  : '';
     const bandcamp2 = source.bandcamp2 ? plainText(prop(v.properties, source.bandcamp2)) : '';
     const youtube   = source.youtube   ? plainText(prop(v.properties, source.youtube))   : '';
+    const akaIds    = source.aka       ? relationIds(prop(v.properties, source.aka))   : [];
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
+      akaIds,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
@@ -551,6 +556,29 @@ async function main() {
 
   const byName = (a, b) => cmp(a.name, b.name) || cmp(a.id, b.id);
 
+  /* Другие имена взаимны: если у Aphex Twin в «Also Known As» стоит AFX, то
+     и AFX — это Aphex Twin, даже если со стороны AFX связь не проставили.
+     В Notion она однонаправленная, заполнять её с обеих сторон руками — верный
+     способ однажды забыть одну. Поэтому собираем пары со всех записей и
+     раскладываем в обе стороны.
+
+     Ссылка на себя и на запись, которой нет в справочнике (заготовка без
+     имени, удалённая страница), отбрасывается: вела бы в пустоту. */
+  const aka = new Map();
+  const связать = (из, в) => {
+    if (из === в || !artistsDir.has(из) || !artistsDir.has(в)) return;
+    if (!aka.has(из)) aka.set(из, new Set());
+    aka.get(из).add(в);
+  };
+  for (const a of artistsDir.values()) {
+    for (const id of a.akaIds) {
+      связать(a.id, id);
+      связать(id, a.id);
+    }
+  }
+  const akaOf = (id) => [...(aka.get(id) ?? [])]
+    .sort((x, y) => byName(artistsDir.get(x), artistsDir.get(y)));
+
   const artists = [...artistsDir.values()].sort(byName).map((a) => {
     const albumIds = byArtist.get(a.id) ?? [];
     return {
@@ -563,7 +591,8 @@ async function main() {
       albumIds,
       genres: uniqueFrom(albumIds, 'genres'),
       labelIds: uniqueFrom(albumIds, 'labelIds'),
-      videoIds: videosByArtist.get(a.id) ?? []
+      videoIds: videosByArtist.get(a.id) ?? [],
+      akaIds: akaOf(a.id)
     };
   });
 
@@ -620,6 +649,7 @@ async function main() {
   console.log(`  артистов:              ${artists.length}`);
   console.log(`    без альбомов:        ${count(artists, (a) => !a.albumIds.length)}`);
   console.log(`    с клипами:           ${count(artists, (a) => a.videoIds.length)}`);
+  console.log(`    с другими именами:   ${count(artists, (a) => a.akaIds.length)}`);
   console.log(`  лейблов:               ${labels.length}`);
   console.log(`  клипов:                ${videos.length}`);
   console.log(`  пропущено альбомов:    ${skipped} (без названия)`);

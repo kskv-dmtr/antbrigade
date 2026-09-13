@@ -12,7 +12,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
 import PageBar from '../../components/PageBar.astro';
 import WholeWords from '../../components/WholeWords.astro';
 import Icon from '../../components/Icon.astro';
-import { artists, albumsOf, labelsOf, videosOf, countryName, plural, coverSrc } from '../../lib/db.js';
+import { artists, albumsOf, artistsOf, labelsOf, videosOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return artists.map((artist) => ({ params: { slug: artist.slug }, props: { artist } }));
@@ -37,6 +37,14 @@ const clipsSorted = clips.slice()
 /* Раздел ссылок наружу показываем, только когда есть что показать: поля в
    Notion заполняются руками, и у большинства записей они пустые. */
 const hasLinks = Boolean(artist.bandcamp || artist.youtube);
+
+/* Другие имена того же человека или состава — связь «Also Known As» в
+   Notion, с 13 сентября 2026. Взаимность и порядок по имени наводит
+   выгрузка; здесь только превращаем идентификаторы в записи.
+
+   Через ?? []: пока выгрузка с новым полем не доехала до данных, у записей
+   его просто нет, и страница не должна от этого падать на сборке. */
+const aka = artistsOf(artist.akaIds ?? []);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
@@ -68,8 +76,27 @@ const hasLinks = Boolean(artist.bandcamp || artist.youtube);
         двоеточие. В квадратных скобках страна стояла до 7 сентября 2026 и
         читалась пометкой вроде счётчика, хотя рядом, строкой ниже, точно
         такое же сведение было названо словом. */}
-    {(artist.country || hasLinks) && (
+    {(aka.length > 0 || artist.country || hasLinks) && (
       <dl class="item__facts">
+        {/* Другие имена — первой строкой: это сведение про само имя, которое
+            стоит заголовком прямо над справкой. Ссылками на их страницы,
+            через точку, как лейблы и жанры в блоке Info. Подпись одна на
+            любое число имён: «Also known as» во множественном числе не
+            меняется. */}
+        {aka.length > 0 && (
+          <div class="item__fact">
+            <dt>Also known as:</dt>
+            <dd>
+              {aka.map((a, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+
         {artist.country && (
           <div class="item__fact">
             <dt>Country:</dt>

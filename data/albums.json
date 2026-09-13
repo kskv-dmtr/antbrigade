@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-13T12:01:48Z",
+  "generatedAt": "2026-09-13T12:17:43Z",
   "counts": {
     "albums": 1266,
-    "artists": 1098,
-    "labels": 693,
+    "artists": 1099,
+    "labels": 694,
     "videos": 96
   },
   "albums": [
@@ -39129,6 +39129,37 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8059-a4f7-ed4092485357",
+      "slug": "kansado-futuro-tumbao",
+      "artist": "Kansado",
+      "album": "Futuro Tumbao",
+      "url": "https://album.link/g8xshwmvv669d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adcb02960-fbbf-4642-a645-be63df674c9e%3Aa0959911985_10.jpg?table=block&id=3da4129a-8c52-8059-a4f7-ed4092485357&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "House",
+        "Latin House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-02-23",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-808e-95f3-f49764626805"
+      ],
+      "artists": [
+        "Kansado"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8021-a6f7-eaaec739b01a"
+      ],
+      "labels": [
+        "Darker Than Wax"
+      ]
+    },
+    {
       "id": "3d34129a-8c52-80d1-836d-f886e7030ecb",
       "slug": "basa-basa-homowo",
       "artist": "Basa Basa",
@@ -39856,24 +39887,6 @@
       "labels": [
         "Far Out Recordings"
       ]
-    },
-    {
-      "id": "3d94129a-8c52-8007-9b56-eca81e289a7e",
-      "slug": "jorden-rakei",
-      "artist": "Jorden Rakei |",
-      "album": "",
-      "url": "",
-      "cover": null,
-      "genres": [],
-      "types": [],
-      "released": null,
-      "year": null,
-      "origYear": null,
-      "playlists": [],
-      "artistIds": [],
-      "artists": [],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -49284,6 +49297,25 @@
       "videoIds": [
         "3b64129a-8c52-8031-a68f-da9107f1b119"
       ]
+    },
+    {
+      "id": "3da4129a-8c52-808e-95f3-f49764626805",
+      "slug": "kansado",
+      "name": "Kansado",
+      "country": "DO",
+      "bandcamp": "https://kansado.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8059-a4f7-ed4092485357"
+      ],
+      "genres": [
+        "House",
+        "Latin House"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8021-a6f7-eaaec739b01a"
+      ],
+      "videoIds": []
     },
     {
       "id": "2504129a-8c52-80eb-87d3-f9a282182569",
@@ -64124,6 +64156,21 @@
       ],
       "artistIds": [
         "3d54129a-8c52-80a0-a4a1-f7f358c0d827"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-8021-a6f7-eaaec739b01a",
+      "slug": "darker-than-wax",
+      "name": "Darker Than Wax",
+      "country": "SG",
+      "bandcamp": "https://darkerthanwax.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8059-a4f7-ed4092485357"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-808e-95f3-f49764626805"
       ]
     },
     {

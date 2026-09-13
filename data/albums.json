@@ -1,13 +1,45 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-13T15:06:04Z",
+  "generatedAt": "2026-09-13T16:21:58Z",
   "counts": {
-    "albums": 1278,
-    "artists": 1107,
-    "labels": 699,
+    "albums": 1283,
+    "artists": 1112,
+    "labels": 701,
     "videos": 96
   },
   "albums": [
+    {
+      "id": "3da4129a-8c52-8018-a70d-f75f4d0a6f6b",
+      "slug": "formal-sppeedwear-punch-card",
+      "artist": "Formal Sppeedwear",
+      "album": "Punch Card",
+      "url": "https://album.link/kztrtv9fpnjhw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A935b51c2-dab8-4554-bb7f-b92f27393240%3Aa2527864828_10.jpg?table=block&id=3da4129a-8c52-8018-a70d-f75f4d0a6f6b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "New Wave",
+        "Art Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-11",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-801a-a8f7-db9cd4baded7"
+      ],
+      "artists": [
+        "Formal Sppeedwear"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80f7-84bb-e2b93ee636f8",
+        "2e94129a-8c52-8087-a8a6-f61311c861eb"
+      ],
+      "labels": [
+        "Melodic Records"
+      ]
+    },
     {
       "id": "3d84129a-8c52-80c4-9e32-c56514ff6e2e",
       "slug": "jack-wyllie-eternal-spring",
@@ -1762,6 +1794,37 @@
       ],
       "labels": [
         "Now-Again Records"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-8029-b768-fc0542a8e8ff",
+      "slug": "tigerbalm-bubblegum-discos",
+      "artist": "Tigerbalm",
+      "album": "Bubblegum Discos",
+      "url": "https://album.link/pw45jr2wxgw5m",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4f08a160-8a7b-4a0b-b0de-4ca75b5e7d3a%3Aa1996753896_10.jpg?table=block&id=3da4129a-8c52-8029-b768-fc0542a8e8ff&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Afro House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-06-19",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-80ce-91db-f64793a77153"
+      ],
+      "artists": [
+        "Tigerbalm"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
+      ],
+      "labels": [
+        "Ubiquity Records"
       ]
     },
     {
@@ -35304,6 +35367,67 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8059-aea6-f7f7dea4449e",
+      "slug": "shire-t-tomorrow-s-people",
+      "artist": "Shire T",
+      "album": "Tomorrow’s People",
+      "url": "https://album.link/qvjd8d0kcrwkd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab89512fc-d7af-4b3a-b5ad-e303e964bac7%3Aa0681310832_10.jpg?table=block&id=3da4129a-8c52-8059-aea6-f7f7dea4449e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Future Garage",
+        "Progressive Breaks"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-08-20",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-804b-8028-c36a1e679fd5"
+      ],
+      "artists": [
+        "Shire T"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8094-9cdd-f0427e115873"
+      ],
+      "labels": [
+        "Dama Dama"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-8077-91d9-eb60db07b061",
+      "slug": "pachyman-the-return-of",
+      "artist": "Pachyman",
+      "album": "The Return of…",
+      "url": "https://album.link/7pbr2xtmrr2jc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7b41f788-fab6-434b-8187-a818b3be1d0e%3Aa2794949814_10.jpg?table=block&id=3da4129a-8c52-8077-91d9-eb60db07b061&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-08-13",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2494129a-8c52-80c4-b179-d60f6a07a722"
+      ],
+      "artists": [
+        "Pachyman"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8073-8ac2-dd5d733aa9c9"
+      ],
+      "labels": [
+        "ATO Records"
+      ]
+    },
+    {
       "id": "3d74129a-8c52-80d3-97b1-c6a5125f46f8",
       "slug": "ishmael-ensemble-visions-of-light",
       "artist": "Ishmael Ensemble",
@@ -35866,6 +35990,39 @@
       ],
       "labels": [
         "Soundway Records"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-8024-b3e0-c9e5ce1a71bd",
+      "slug": "mndsgn-rare-pleasure",
+      "artist": "Mndsgn",
+      "album": "Rare Pleasure",
+      "url": "https://album.link/7gs3cndqd2rzc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4f105418-2f4b-41a8-8d47-77af367dd378%3Aa1502240756_10.jpg?table=block&id=3da4129a-8c52-8024-b3e0-c9e5ce1a71bd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul",
+        "Jazz-Funk",
+        "Neo-Psychedelia",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-8014-b837-c0af765ff39b"
+      ],
+      "artists": [
+        "Mndsgn"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
       ]
     },
     {
@@ -40077,6 +40234,37 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-803f-a0d9-e3a055f78a22",
+      "slug": "hepcat-right-on-time",
+      "artist": "Hepcat",
+      "album": "Right on Time",
+      "url": "https://album.link/8dn80nqbbwgzg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A825bd93d-9804-4997-a1b9-ed1a57be4cc0%3A1900x1900-000000-80-0-0.jpg?table=block&id=3da4129a-8c52-803f-a0d9-e3a055f78a22&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ska",
+        "Rocksteady"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "1998-01-20",
+      "year": 1998,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-80ed-b768-f6d216e903d3"
+      ],
+      "artists": [
+        "Hepcat"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80f0-98f2-c0c34615e1d6"
+      ],
+      "labels": [
+        "Hellcat Records"
+      ]
+    },
+    {
       "id": "2414129a-8c52-8047-8c86-f8367c2b6f8a",
       "slug": "fishmans",
       "artist": "Fishmans",
@@ -40233,32 +40421,6 @@
       ],
       "labels": [
         "Far Out Recordings"
-      ]
-    },
-    {
-      "id": "3da4129a-8c52-8077-91d9-eb60db07b061",
-      "slug": "pachyman-the-return-of",
-      "artist": "Pachyman",
-      "album": "The Return of…",
-      "url": "",
-      "cover": "https://antbrigade.notion.site/image/attachment%3A7b41f788-fab6-434b-8187-a818b3be1d0e%3Aa2794949814_10.jpg?table=block&id=3da4129a-8c52-8077-91d9-eb60db07b061&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [],
-      "types": [],
-      "released": null,
-      "year": null,
-      "origYear": null,
-      "playlists": [],
-      "artistIds": [
-        "2494129a-8c52-80c4-b179-d60f6a07a722"
-      ],
-      "artists": [
-        "Pachyman"
-      ],
-      "labelIds": [
-        "2444129a-8c52-8073-8ac2-dd5d733aa9c9"
-      ],
-      "labels": [
-        "ATO Records"
       ]
     }
   ],
@@ -47133,6 +47295,27 @@
       "akaIds": []
     },
     {
+      "id": "3da4129a-8c52-801a-a8f7-db9cd4baded7",
+      "slug": "formal-sppeedwear",
+      "name": "Formal Sppeedwear",
+      "country": "GB",
+      "bandcamp": "https://formalsppeedwear.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8018-a70d-f75f4d0a6f6b"
+      ],
+      "genres": [
+        "New Wave",
+        "Art Punk"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80f7-84bb-e2b93ee636f8",
+        "2e94129a-8c52-8087-a8a6-f61311c861eb"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2504129a-8c52-80bd-a5c2-cd163b4e6bae",
       "slug": "fort-romeau",
       "name": "Fort Romeau",
@@ -48462,6 +48645,26 @@
       ],
       "labelIds": [
         "3b24129a-8c52-8037-9e51-c010a80eb4c1"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3da4129a-8c52-80ed-b768-f6d216e903d3",
+      "slug": "hepcat",
+      "name": "Hepcat",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-803f-a0d9-e3a055f78a22"
+      ],
+      "genres": [
+        "Ska",
+        "Rocksteady"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80f0-98f2-c0c34615e1d6"
       ],
       "videoIds": [],
       "akaIds": []
@@ -53379,6 +53582,28 @@
       "akaIds": []
     },
     {
+      "id": "3da4129a-8c52-8014-b837-c0af765ff39b",
+      "slug": "mndsgn",
+      "name": "Mndsgn",
+      "country": "US",
+      "bandcamp": "https://mndsgn.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8024-b3e0-c9e5ce1a71bd"
+      ],
+      "genres": [
+        "Psychedelic Soul",
+        "Jazz-Funk",
+        "Neo-Psychedelia",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3934129a-8c52-8025-9eb1-eae01ee904c0",
       "slug": "mo-kolours",
       "name": "Mo Kolours",
@@ -57691,6 +57916,26 @@
       "akaIds": []
     },
     {
+      "id": "3da4129a-8c52-804b-8028-c36a1e679fd5",
+      "slug": "shire-t",
+      "name": "Shire T",
+      "country": "GB",
+      "bandcamp": "https://shiret.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8059-aea6-f7f7dea4449e"
+      ],
+      "genres": [
+        "Future Garage",
+        "Progressive Breaks"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8094-9cdd-f0427e115873"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "39d4129a-8c52-80f6-a444-de27f1a878d2",
       "slug": "show-me-the-body",
       "name": "Show Me the Body",
@@ -61081,6 +61326,26 @@
       ],
       "labelIds": [
         "2514129a-8c52-80e9-ade0-f7f9ef79202f"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3da4129a-8c52-80ce-91db-f64793a77153",
+      "slug": "tigerbalm",
+      "name": "Tigerbalm",
+      "country": "GB",
+      "bandcamp": "https://tigerbalmmusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8029-b768-fc0542a8e8ff"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Afro House"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
       ],
       "videoIds": [],
       "akaIds": []
@@ -65770,6 +66035,21 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8094-9cdd-f0427e115873",
+      "slug": "dama-dama",
+      "name": "Dama Dama",
+      "country": "GB",
+      "bandcamp": "https://damadamamusic.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8059-aea6-f7f7dea4449e"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-804b-8028-c36a1e679fd5"
+      ]
+    },
+    {
       "id": "2584129a-8c52-806b-a5f2-e0efc7f1abc3",
       "slug": "dandy-boy-records",
       "name": "Dandy Boy Records",
@@ -67662,6 +67942,21 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-80f0-98f2-c0c34615e1d6",
+      "slug": "hellcat-records",
+      "name": "Hellcat Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-803f-a0d9-e3a055f78a22"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-80ed-b768-f6d216e903d3"
+      ]
+    },
+    {
       "id": "24e4129a-8c52-8078-adb0-df6297674486",
       "slug": "hells-headbangers-records",
       "name": "Hells Headbangers Records",
@@ -69544,13 +69839,15 @@
       "slug": "melodic-records",
       "name": "Melodic Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://melodicrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3da4129a-8c52-8018-a70d-f75f4d0a6f6b",
         "2e94129a-8c52-80d3-bfa0-f6d28f85c8ee"
       ],
       "artistIds": [
+        "3da4129a-8c52-801a-a8f7-db9cd4baded7",
         "2e94129a-8c52-8022-8afa-c1a167f3e4eb"
       ]
     },
@@ -73473,6 +73770,7 @@
         "98f3ef0b-d6d2-4480-a9d9-8a8ff89a4c24",
         "2534129a-8c52-8046-8e24-e9d131ffb2ca",
         "3d54129a-8c52-801c-be35-d86669478134",
+        "3da4129a-8c52-8024-b3e0-c9e5ce1a71bd",
         "df562743-4b65-4dc9-a438-4e4a04e2ee7e",
         "3d54129a-8c52-8032-8bd9-deb817ced100"
       ],
@@ -73488,6 +73786,7 @@
         "2504129a-8c52-80b4-b5f1-eb77006e9d3b",
         "2534129a-8c52-806b-863e-f2bd6a4239a9",
         "3d54129a-8c52-8004-99bb-e966d894a4e8",
+        "3da4129a-8c52-8014-b837-c0af765ff39b",
         "3d54129a-8c52-802a-aba1-c5c83b7b398d"
       ]
     },
@@ -74268,10 +74567,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3da4129a-8c52-8029-b768-fc0542a8e8ff",
         "9f61a1f2-265a-4893-bb66-b90e8fcfd29f",
         "3d54129a-8c52-8000-a738-c1c131a5b728"
       ],
       "artistIds": [
+        "3da4129a-8c52-80ce-91db-f64793a77153",
         "2494129a-8c52-8033-90f8-cdea31e793d0",
         "3d54129a-8c52-8094-b111-ebb1afdf91f5"
       ]

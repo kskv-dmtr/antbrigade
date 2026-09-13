@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-13T01:03:20Z",
+  "generatedAt": "2026-09-13T11:58:04Z",
   "counts": {
-    "albums": 1258,
-    "artists": 1094,
-    "labels": 688,
+    "albums": 1266,
+    "artists": 1098,
+    "labels": 693,
     "videos": 96
   },
   "albums": [
@@ -35014,6 +35014,43 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-80e8-9344-df3146ace281",
+      "slug": "maston-l-eclair-souvenir",
+      "artist": "Maston / L’Eclair",
+      "album": "Souvenir",
+      "url": "https://album.link/njwcjxqqrgfhx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1eedc3e6-9033-4634-bdf3-32fa239f3bc9%3Aab67616d0000b2738751f9fb27d5509afaed815c.jpg?table=block&id=3da4129a-8c52-80e8-9344-df3146ace281&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Lounge",
+        "Library Music",
+        "Indietronica"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2021-09-10",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3444129a-8c52-803e-a4d8-f91de13003f7",
+        "2494129a-8c52-803f-b9f0-f187678e0388"
+      ],
+      "artists": [
+        "Maston",
+        "L’Eclair"
+      ],
+      "labelIds": [
+        "2434129a-8c52-806e-9bf1-e6c265c72db3",
+        "3da4129a-8c52-8091-a152-cc355393eced"
+      ],
+      "labels": [
+        "Innovative Leisure",
+        "Calico Discos"
+      ]
+    },
+    {
       "id": "3c54129a-8c52-8007-a29e-c92b6745eb40",
       "slug": "pool-boy-all-inclusive",
       "artist": "Pool Boy",
@@ -35768,6 +35805,39 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8036-a90d-da1897a2a9cf",
+      "slug": "soul-sugar-excursions-in-soul-reggae-funk-dub",
+      "artist": "Soul Sugar",
+      "album": "Excursions in Soul, Reggae, Funk & Dub",
+      "url": "https://album.link/bjjwdrfqdhqfv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3735b8c5-a863-468e-ae0e-69c4bb9c2001%3Aa0446905162_10.jpg?table=block&id=3da4129a-8c52-8036-a90d-da1897a2a9cf&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soul",
+        "Reggae",
+        "Funk",
+        "Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-80ed-a6a6-eaa0f7d8d1c3"
+      ],
+      "artists": [
+        "Soul Sugar"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80a7-a6d6-ccbb49c789ab"
+      ],
+      "labels": [
+        "Gee Recordings"
+      ]
+    },
+    {
       "id": "3d34129a-8c52-807e-8d26-f6ac544c1627",
       "slug": "takeshi-s-cashew-humans-in-a-pool",
       "artist": "Takeshi’s Cashew",
@@ -35921,6 +35991,36 @@
       ],
       "labels": [
         "April Records"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-80ea-9815-cafe3fa3a7ac",
+      "slug": "panam-panic-love-of-humanity",
+      "artist": "Panam Panic",
+      "album": "Love of Humanity",
+      "url": "https://album.link/jj2zjnks07k49",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A44a02962-a1a1-454e-9979-b992c08a3675%3Aa3493517924_10.jpg?table=block&id=3da4129a-8c52-80ea-9815-cafe3fa3a7ac&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-08",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-8083-9872-ca42d855cf50"
+      ],
+      "artists": [
+        "Panam Panic"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80d9-9ff0-fc5e922928c1"
+      ],
+      "labels": [
+        "Melius Prod"
       ]
     },
     {
@@ -36423,6 +36523,37 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-80cf-86cd-f134720c73f1",
+      "slug": "liam-mockridge-goodie-bag",
+      "artist": "Liam Mockridge",
+      "album": "Goodie Bag",
+      "url": "https://album.link/s5hntnkwzpmxj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afd34e40a-f724-404a-8670-6836fa1fe69e%3Aa1184279685_10.jpg?table=block&id=3da4129a-8c52-80cf-86cd-f134720c73f1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funktronica",
+        "Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-80f4-9520-f034e18cf4b5"
+      ],
+      "artists": [
+        "Liam Mockridge"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8025-8594-ea6c276c4794"
+      ],
+      "labels": [
+        "Soul Clap Records"
+      ]
+    },
+    {
       "id": "3d34129a-8c52-8033-966f-d5e482a40d7c",
       "slug": "alt-n-gun-yol",
       "artist": "Altın Gün",
@@ -36610,6 +36741,35 @@
       ],
       "labels": [
         "Star Creature Universal Vibrations"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-807b-bf8d-f57911c63535",
+      "slug": "voilaaa-voiciii",
+      "artist": "Voilaaa",
+      "album": "Voiciii",
+      "url": "https://album.link/vfgxk0dhfdrhd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa8f9d2f1-0233-4c7b-ba4b-27e12c53c0c4%3Aa3627405170_10.jpg?table=block&id=3da4129a-8c52-807b-bf8d-f57911c63535&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Afro-Funk"
+      ],
+      "types": [],
+      "released": "2021-02-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3da4129a-8c52-8034-8762-ea5d2d484baf"
+      ],
+      "artists": [
+        "Voilaaa"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80f0-9657-d9ff5b74f610"
+      ],
+      "labels": [
+        "Favorite Recordings"
       ]
     },
     {
@@ -37809,6 +37969,40 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-80d7-ae2e-c84e5eb737d7",
+      "slug": "various-artists-seven-wonders",
+      "artist": "Various Artists",
+      "album": "Seven Wonders",
+      "url": "https://album.link/jbjr6d9c7cknb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A42eb7351-a339-4b08-ab27-f705014b0a4a%3Aa1929710621_10.jpg?table=block&id=3da4129a-8c52-80d7-ae2e-c84e5eb737d7&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Jazz Fusion",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2020-02-07",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd",
+        "3da4129a-8c52-8046-8f37-dbd1ba5c404d"
+      ],
+      "labels": [
+        "Wondercore Island",
+        "Plug Seven"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-808e-8524-dd51f4f0e147",
       "slug": "piper-summer-breeze",
       "artist": "PIPER",
@@ -38120,6 +38314,36 @@
       ],
       "labels": [
         "Topshelf Records"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-80cb-99af-d5d1f701db9c",
+      "slug": "aldorande-aldorande",
+      "artist": "Aldorande",
+      "album": "Aldorande",
+      "url": "https://album.link/fhntddzwtf8k8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A168c1657-10ce-455e-9f41-cf03a236c101%3Aa0738521341_10.jpg?table=block&id=3da4129a-8c52-80cb-99af-d5d1f701db9c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-06-14",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3b84129a-8c52-80a1-b02e-c51edcc377e8"
+      ],
+      "artists": [
+        "Aldorande"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80f0-9657-d9ff5b74f610"
+      ],
+      "labels": [
+        "Favorite Recordings"
       ]
     },
     {
@@ -38965,6 +39189,36 @@
       ],
       "labels": [
         "Ninja Tune"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-800a-99e5-c76cea89ce57",
+      "slug": "curtis-harding-face-your-fear",
+      "artist": "Curtis Harding",
+      "album": "Face Your Fear",
+      "url": "https://album.link/cgjbtkcd0hwtb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A36d7cbdb-39bc-4820-a7e0-70f943a54492%3Aa2270147797_10.jpg?table=block&id=3da4129a-8c52-800a-99e5-c76cea89ce57&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-10-27",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2714129a-8c52-807b-979f-eac3669bf78d"
+      ],
+      "artists": [
+        "Curtis Harding"
+      ],
+      "labelIds": [
+        "2474129a-8c52-8074-b77a-dcc08eef834e"
+      ],
+      "labels": [
+        "Anti- Records"
       ]
     },
     {
@@ -40082,7 +40336,8 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "3b84129a-8c52-80c2-a7a7-ef38d586db6c"
+        "3b84129a-8c52-80c2-a7a7-ef38d586db6c",
+        "3da4129a-8c52-80cb-99af-d5d1f701db9c"
       ],
       "genres": [
         "Jazz-Funk"
@@ -43691,7 +43946,8 @@
       "youtube": null,
       "albumIds": [
         "2714129a-8c52-808c-835e-da9e6ddb3cca",
-        "3d74129a-8c52-8002-913b-e260cc2515e3"
+        "3d74129a-8c52-8002-913b-e260cc2515e3",
+        "3da4129a-8c52-800a-99e5-c76cea89ce57"
       ],
       "genres": [
         "Soul",
@@ -49683,17 +49939,22 @@
       "youtube": null,
       "albumIds": [
         "2184129a-8c52-8005-a678-eda65141f9fa",
-        "3d54129a-8c52-8066-b36d-c0eb37568d9c"
+        "3d54129a-8c52-8066-b36d-c0eb37568d9c",
+        "3da4129a-8c52-80e8-9344-df3146ace281"
       ],
       "genres": [
         "Neo-Psychedelia",
         "Nu Jazz",
         "Funk",
-        "Jazz Fusion"
+        "Jazz Fusion",
+        "Lounge",
+        "Library Music",
+        "Indietronica"
       ],
       "labelIds": [
         "2434129a-8c52-806e-9bf1-e6c265c72db3",
-        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+        "2484129a-8c52-802a-8143-cdf34ee2a02a",
+        "3da4129a-8c52-8091-a152-cc355393eced"
       ],
       "videoIds": []
     },
@@ -50302,6 +50563,25 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80a1-af07-e4107fb026a0"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3da4129a-8c52-80f4-9520-f034e18cf4b5",
+      "slug": "liam-mockridge",
+      "name": "Liam Mockridge",
+      "country": "CA",
+      "bandcamp": "https://liammockridge.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80cf-86cd-f134720c73f1"
+      ],
+      "genres": [
+        "Funktronica",
+        "Pop"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-8025-8594-ea6c276c4794"
       ],
       "videoIds": []
     },
@@ -51326,15 +51606,19 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "3444129a-8c52-8036-aba9-dd2022cf244b"
+        "3444129a-8c52-8036-aba9-dd2022cf244b",
+        "3da4129a-8c52-80e8-9344-df3146ace281"
       ],
       "genres": [
         "Lounge",
         "Ambient",
-        "Indietronica"
+        "Indietronica",
+        "Library Music"
       ],
       "labelIds": [
-        "3444129a-8c52-80b6-bd1a-d3919abd3b90"
+        "3444129a-8c52-80b6-bd1a-d3919abd3b90",
+        "2434129a-8c52-806e-9bf1-e6c265c72db3",
+        "3da4129a-8c52-8091-a152-cc355393eced"
       ],
       "videoIds": []
     },
@@ -53393,6 +53677,24 @@
       "labelIds": [
         "24f4129a-8c52-809f-b04c-e94b3d66798e",
         "2504129a-8c52-8043-bbf7-dccba6159cb1"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3da4129a-8c52-8083-9872-ca42d855cf50",
+      "slug": "panam-panic",
+      "name": "Panam Panic",
+      "country": "FR",
+      "bandcamp": "https://panampanic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80ea-9815-cafe3fa3a7ac"
+      ],
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80d9-9ff0-fc5e922928c1"
       ],
       "videoIds": []
     },
@@ -56598,6 +56900,27 @@
       ],
       "labelIds": [
         "2524129a-8c52-80c2-8a8f-e9da44285106"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3da4129a-8c52-80ed-a6a6-eaa0f7d8d1c3",
+      "slug": "soul-sugar",
+      "name": "Soul Sugar",
+      "country": "FR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8036-a90d-da1897a2a9cf"
+      ],
+      "genres": [
+        "Soul",
+        "Reggae",
+        "Funk",
+        "Dub"
+      ],
+      "labelIds": [
+        "3da4129a-8c52-80a7-a6d6-ccbb49c789ab"
       ],
       "videoIds": []
     },
@@ -60043,6 +60366,7 @@
         "3d94129a-8c52-80ac-80a7-c45373107b36",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97",
+        "3da4129a-8c52-80d7-ae2e-c84e5eb737d7",
         "3d34129a-8c52-80b8-a693-e3a62aff7ae6"
       ],
       "genres": [
@@ -60065,6 +60389,9 @@
         "Bossa Nova",
         "Lovers Rock",
         "Smooth Soul",
+        "Neo-Soul",
+        "Jazz Fusion",
+        "Nu Jazz",
         "Soul"
       ],
       "labelIds": [
@@ -60079,6 +60406,8 @@
         "3d94129a-8c52-8070-89cf-e5b69ba7d24f",
         "2524129a-8c52-8064-ac08-c6bb33bff5df",
         "3b74129a-8c52-8060-af6b-ece8a3271488",
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd",
+        "3da4129a-8c52-8046-8f37-dbd1ba5c404d",
         "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
       ],
       "videoIds": []
@@ -60235,6 +60564,25 @@
       ],
       "labelIds": [
         "2e64129a-8c52-8010-b7f9-e35921c71b96"
+      ],
+      "videoIds": []
+    },
+    {
+      "id": "3da4129a-8c52-8034-8762-ea5d2d484baf",
+      "slug": "voilaaa",
+      "name": "Voilaaa",
+      "country": "FR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-807b-bf8d-f57911c63535"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Afro-Funk"
+      ],
+      "labelIds": [
+        "3b84129a-8c52-80f0-9657-d9ff5b74f610"
       ],
       "videoIds": []
     },
@@ -61848,7 +62196,8 @@
         "17a8a90b-067e-4b84-948f-5b5cdb6693ff",
         "74c7049c-a7ad-4e4f-9249-42882e976288",
         "19c4129a-8c52-8092-b61e-c8635a25808d",
-        "3d74129a-8c52-8002-913b-e260cc2515e3"
+        "3d74129a-8c52-8002-913b-e260cc2515e3",
+        "3da4129a-8c52-800a-99e5-c76cea89ce57"
       ],
       "artistIds": [
         "2714129a-8c52-807b-979f-eac3669bf78d",
@@ -62874,6 +63223,22 @@
       ],
       "artistIds": [
         "24a4129a-8c52-808c-98b2-fe07b490226b"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-8091-a152-cc355393eced",
+      "slug": "calico-discos",
+      "name": "Calico Discos",
+      "country": "US",
+      "bandcamp": "https://calicodiscos.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80e8-9344-df3146ace281"
+      ],
+      "artistIds": [
+        "3444129a-8c52-803e-a4d8-f91de13003f7",
+        "2494129a-8c52-803f-b9f0-f187678e0388"
       ]
     },
     {
@@ -64645,10 +65010,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3b84129a-8c52-80c2-a7a7-ef38d586db6c"
+        "3b84129a-8c52-80c2-a7a7-ef38d586db6c",
+        "3da4129a-8c52-807b-bf8d-f57911c63535",
+        "3da4129a-8c52-80cb-99af-d5d1f701db9c"
       ],
       "artistIds": [
-        "3b84129a-8c52-80a1-b02e-c51edcc377e8"
+        "3b84129a-8c52-80a1-b02e-c51edcc377e8",
+        "3da4129a-8c52-8034-8762-ea5d2d484baf"
       ]
     },
     {
@@ -65147,6 +65515,21 @@
       ],
       "artistIds": [
         "3634129a-8c52-80d0-bc45-c59832054775"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-80a7-a6d6-ccbb49c789ab",
+      "slug": "gee-recordings",
+      "name": "Gee Recordings",
+      "country": "FR",
+      "bandcamp": "https://soulsugar.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-8036-a90d-da1897a2a9cf"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-80ed-a6a6-eaa0f7d8d1c3"
       ]
     },
     {
@@ -66038,13 +66421,15 @@
         "3694129a-8c52-8078-89fc-d97b1512a834",
         "21f4129a-8c52-80c9-8ca7-fdab8a2ddc9a",
         "2184129a-8c52-8005-a678-eda65141f9fa",
-        "3d24129a-8c52-8095-9d0c-cc29873a391c"
+        "3d24129a-8c52-8095-9d0c-cc29873a391c",
+        "3da4129a-8c52-80e8-9344-df3146ace281"
       ],
       "artistIds": [
         "3694129a-8c52-800e-90e6-c72c8aa48cfd",
         "2424129a-8c52-801f-928b-cd1b28ba171c",
         "2494129a-8c52-803f-b9f0-f187678e0388",
-        "33e4129a-8c52-807e-902c-c35426b9919e"
+        "33e4129a-8c52-807e-902c-c35426b9919e",
+        "3444129a-8c52-803e-a4d8-f91de13003f7"
       ]
     },
     {
@@ -67390,6 +67775,21 @@
         "24f4129a-8c52-80da-8319-c726bceabe31",
         "2504129a-8c52-8032-814b-f1fd9d407286",
         "3d84129a-8c52-80be-aa0c-cdca96cf9723"
+      ]
+    },
+    {
+      "id": "3da4129a-8c52-80d9-9ff0-fc5e922928c1",
+      "slug": "melius-prod",
+      "name": "Melius Prod",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80ea-9815-cafe3fa3a7ac"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-8083-9872-ca42d855cf50"
       ]
     },
     {
@@ -69295,6 +69695,21 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8046-8f37-dbd1ba5c404d",
+      "slug": "plug-seven",
+      "name": "Plug Seven",
+      "country": "AU",
+      "bandcamp": "https://plugseven.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80d7-ae2e-c84e5eb737d7"
+      ],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ]
+    },
+    {
       "id": "3c44129a-8c52-8093-9b95-cf350b2f1390",
       "slug": "plz",
       "name": "PLZ",
@@ -70961,6 +71376,21 @@
       ]
     },
     {
+      "id": "3da4129a-8c52-8025-8594-ea6c276c4794",
+      "slug": "soul-clap-records",
+      "name": "Soul Clap Records",
+      "country": "US",
+      "bandcamp": "https://soulclaprecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3da4129a-8c52-80cf-86cd-f134720c73f1"
+      ],
+      "artistIds": [
+        "3da4129a-8c52-80f4-9520-f034e18cf4b5"
+      ]
+    },
+    {
       "id": "2514129a-8c52-8043-b321-ea74fdf68ba3",
       "slug": "soul-jazz-records",
       "name": "Soul Jazz Records",
@@ -72586,10 +73016,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3cf4129a-8c52-8062-9dc8-eda9f46784fd"
+        "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
+        "3da4129a-8c52-80d7-ae2e-c84e5eb737d7"
       ],
       "artistIds": [
-        "3cf4129a-8c52-803c-9e10-e57693c793c8"
+        "3cf4129a-8c52-803c-9e10-e57693c793c8",
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
     {

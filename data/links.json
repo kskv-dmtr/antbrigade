@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T01:03:34Z",
+  "generatedAt": "2026-09-13T11:59:15Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -19986,6 +19986,139 @@
       "upc": "5050580769922",
       "tracks": 6,
       "releaseDate": "2021-10-29"
+    },
+    "3da4129a-8c52-80e8-9344-df3146ace281": {
+      "source": "https://album.link/njwcjxqqrgfhx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3S1JqaI9eGEZeFgSzI87cV",
+        "pandora": "https://www.pandora.com/AL:9275276",
+        "deezer": "https://www.deezer.com/album/229260312",
+        "amazonMusic": "https://music.amazon.com/albums/B094MJ8DZJ",
+        "tidal": "https://listen.tidal.com/album/183690075",
+        "napster": "https://play.napster.com/album/alb.581558631",
+        "yandex": "https://music.yandex.ru/album/15499119",
+        "boomplay": "https://www.boomplay.com/albums/25421392",
+        "anghami": "https://play.anghami.com/album/1019872471?refer=linktree",
+        "bandcamp": "https://maston.bandcamp.com/album/souvenir",
+        "amazonStore": "https://amazon.com/dp/B094MJ8DZJ"
+      },
+      "upc": "0810874023865",
+      "tracks": 8,
+      "releaseDate": "2021-09-10"
+    },
+    "3da4129a-8c52-8036-a90d-da1897a2a9cf": {
+      "source": "https://album.link/bjjwdrfqdhqfv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1kQZU3CQaLaFEGB0EZyPBD",
+        "deezer": "https://www.deezer.com/album/230174292",
+        "amazonMusic": "https://music.amazon.com/albums/B094Y6QF4T",
+        "tidal": "https://listen.tidal.com/album/184138699",
+        "napster": "https://play.napster.com/album/alb.582773212",
+        "yandex": "https://music.yandex.ru/album/15586497",
+        "boomplay": "https://www.boomplay.com/albums/25589102",
+        "anghami": "https://play.anghami.com/album/1019962903?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B094Y6QF4T"
+      },
+      "upc": "196006542351",
+      "tracks": 8,
+      "releaseDate": "2021-06-04"
+    },
+    "3da4129a-8c52-80ea-9815-cafe3fa3a7ac": {
+      "source": "https://album.link/jj2zjnks07k49",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2U0H8qhDZBrvC2meiqLDKl",
+        "deezer": "https://www.deezer.com/album/231030672",
+        "amazonMusic": "https://music.amazon.com/albums/B0958XJZ92",
+        "tidal": "https://listen.tidal.com/album/184632544",
+        "yandex": "https://music.yandex.ru/album/15680438",
+        "anghami": "https://play.anghami.com/album/1020283126?refer=linktree",
+        "bandcamp": "https://panampanic.bandcamp.com/album/love-of-humanity",
+        "amazonStore": "https://amazon.com/dp/B0958XJZ92"
+      },
+      "upc": "3616555913091",
+      "tracks": 12,
+      "releaseDate": "2021-06-04"
+    },
+    "3da4129a-8c52-80cf-86cd-f134720c73f1": {
+      "source": "https://album.link/s5hntnkwzpmxj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/36sO4BVJsJgcs2rgU9HZUV",
+        "pandora": "https://www.pandora.com/AL:8210640",
+        "deezer": "https://www.deezer.com/album/670290931",
+        "amazonMusic": "https://music.amazon.com/albums/B0DN395HPY",
+        "tidal": "https://listen.tidal.com/album/399599474",
+        "napster": "https://play.napster.com/album/alb.559763484",
+        "bandcamp": "https://liammockridge.bandcamp.com/album/goodie-bag",
+        "amazonStore": "https://amazon.com/dp/B0DN395HPY"
+      },
+      "upc": "192641665615",
+      "tracks": 10,
+      "releaseDate": "2021-03-05"
+    },
+    "3da4129a-8c52-807b-bf8d-f57911c63535": {
+      "source": "https://album.link/vfgxk0dhfdrhd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5kf5N7odrE990aRCyW3PEH",
+        "pandora": "https://www.pandora.com/AL:13705141",
+        "deezer": "https://www.deezer.com/album/197676602",
+        "amazonMusic": "https://music.amazon.com/albums/B08S6MR8LL",
+        "tidal": "https://listen.tidal.com/album/168354374",
+        "napster": "https://play.napster.com/album/alb.549076347",
+        "yandex": "https://music.yandex.ru/album/13371915",
+        "boomplay": "https://www.boomplay.com/albums/20059481",
+        "anghami": "https://play.anghami.com/album/1017060827?refer=linktree",
+        "bandcamp": "https://favoriterecordings.bandcamp.com/album/voiciii",
+        "amazonStore": "https://amazon.com/dp/B08S6MR8LL"
+      },
+      "upc": "3760179355963",
+      "tracks": 14,
+      "releaseDate": "2021-02-05"
+    },
+    "3da4129a-8c52-80d7-ae2e-c84e5eb737d7": {
+      "source": "https://album.link/jbjr6d9c7cknb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3RwCiONgyrh9hDHlKiwGFo",
+        "pandora": "https://www.pandora.com/AL:4580437",
+        "tidal": "https://listen.tidal.com/album/123898073",
+        "napster": "https://play.napster.com/album/alb.426934785",
+        "yandex": "https://music.yandex.ru/album/9624162",
+        "bandcamp": "https://plugseven.bandcamp.com/album/seven-wonders"
+      },
+      "upc": "5050580729698",
+      "tracks": 14,
+      "releaseDate": "2020-02-07"
+    },
+    "3da4129a-8c52-80cb-99af-d5d1f701db9c": {
+      "source": "https://album.link/fhntddzwtf8k8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5XdRETYzbIBeEC74TB282e",
+        "pandora": "https://www.pandora.com/AL:13633060",
+        "deezer": "https://www.deezer.com/album/94598212",
+        "amazonMusic": "https://music.amazon.com/albums/B07R3RD3VM",
+        "tidal": "https://listen.tidal.com/album/108133190",
+        "napster": "https://play.napster.com/album/alb.371042466",
+        "yandex": "https://music.yandex.ru/album/7365023",
+        "bandcamp": "https://favoriterecordings.bandcamp.com/album/aldorande",
+        "amazonStore": "https://amazon.com/dp/B07R3RD3VM"
+      },
+      "upc": "3760179355062",
+      "tracks": 9,
+      "releaseDate": "2019-06-14"
+    },
+    "3da4129a-8c52-800a-99e5-c76cea89ce57": {
+      "source": "https://album.link/cgjbtkcd0hwtb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3Can2qB9S1pOcElpkfExB1",
+        "pandora": "https://www.pandora.com/AL:1181495",
+        "deezer": "https://www.deezer.com/album/49039712",
+        "napster": "https://play.napster.com/album/alb.279718450",
+        "yandex": "https://music.yandex.ru/album/4748467",
+        "anghami": "https://play.anghami.com/album/1009014685?refer=linktree",
+        "bandcamp": "https://curtisharding.bandcamp.com/album/face-your-fear"
+      },
+      "upc": "0045778753765",
+      "tracks": 11,
+      "releaseDate": "2017-10-27"
     }
   }
 }

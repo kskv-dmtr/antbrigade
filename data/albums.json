@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-14T19:24:43Z",
+  "generatedAt": "2026-09-14T23:10:00Z",
   "counts": {
-    "albums": 1306,
-    "artists": 1132,
-    "labels": 708,
+    "albums": 1319,
+    "artists": 1138,
+    "labels": 709,
     "videos": 96
   },
   "albums": [
@@ -5048,6 +5048,38 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-805a-8cd6-cb965b2350cb",
+      "slug": "the-orielles-only-you-left",
+      "artist": "The Orielles",
+      "album": "Only You Left",
+      "url": "https://album.link/cxghssbvtx2dz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A26b17df0-83f9-46c8-b8dc-71ac4679fda4%3Aa2118170054_10.jpg?table=block&id=3db4129a-8c52-805a-8cd6-cb965b2350cb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Rock",
+        "Neo-Psychedelia",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-03-13",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-802a-8722-f47dc37f7a47"
+      ],
+      "artists": [
+        "The Orielles"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "labels": [
+        "Heavenly Recordings"
       ]
     },
     {
@@ -36743,6 +36775,37 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80ef-86c4-ebf6043b7172",
+      "slug": "benny-sings-music",
+      "artist": "Benny Sings",
+      "album": "Music",
+      "url": "https://album.link/b50fqhkwr8wnb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9dcc9aa4-864d-462a-9698-f04348975306%3Aa1841436304_10.jpg?table=block&id=3db4129a-8c52-80ef-86c4-ebf6043b7172&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Sophisti-Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-09",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2534129a-8c52-806b-863e-f2bd6a4239a9"
+      ],
+      "artists": [
+        "Benny Sings"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-802c-b880-fbfee59c112e",
       "slug": "orions-belte-villa-amorini",
       "artist": "Orions Belte",
@@ -36867,6 +36930,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8036-afde-ec0a868c3ca4",
+      "slug": "kaidi-tatham-an-insight-to-all-minds",
+      "artist": "Kaidi Tatham",
+      "album": "An Insight to All Minds",
+      "url": "https://album.link/7cbqqvwv4dqwn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6cdced46-e8b8-458d-8001-1aea1213a6bd%3Aa2876825947_10.jpg?table=block&id=3db4129a-8c52-8036-afde-ec0a868c3ca4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Broken Beat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-02",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80da-b193-e4eb56ed3b82"
+      ],
+      "artists": [
+        "Kaidi Tatham"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
+      ],
+      "labels": [
+        "First Word Records"
+      ]
+    },
+    {
       "id": "3d94129a-8c52-80ac-80a7-c45373107b36",
       "slug": "various-artists-outlines",
       "artist": "Various Artists",
@@ -36901,6 +36996,39 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80ca-bc26-c0279422a950",
+      "slug": "l-imperatrice-tako-tsubo",
+      "artist": "L'Impératrice",
+      "album": "Tako Tsubo",
+      "url": "https://album.link/g5nrj6b3z85fg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Acd45bb98-42d9-499b-915e-e8400e235cfd%3Aa3916252710_10.jpg?table=block&id=3db4129a-8c52-80ca-bc26-c0279422a950&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "French Pop",
+        "Synthpop",
+        "Synth Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-26",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24f4129a-8c52-8089-bd74-cf956ca4a0d1"
+      ],
+      "artists": [
+        "L'Impératrice"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8032-8286-e37837f42212"
+      ],
+      "labels": [
+        "microqlima"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-8082-bc26-c928adf20ab2",
       "slug": "str4ta-aspects",
       "artist": "STR4TA",
@@ -36929,6 +37057,37 @@
       ],
       "labels": [
         "Brownswood Recordings"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8026-aa1b-d7fab4561145",
+      "slug": "the-orielles-la-vita-olistica",
+      "artist": "The Orielles",
+      "album": "La Vita Olistica",
+      "url": "https://album.link/tft5tj2hj4ftw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adc0a0816-8f5a-4c6e-852c-a1b3a88524ef%3Aa0091998783_10.jpg?table=block&id=3db4129a-8c52-8026-aa1b-d7fab4561145&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-26",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-802a-8722-f47dc37f7a47"
+      ],
+      "artists": [
+        "The Orielles"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "labels": [
+        "Heavenly Recordings"
       ]
     },
     {
@@ -36991,6 +37150,38 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-804d-af71-da3ccd8b9539",
+      "slug": "nubiyan-twist-freedom-fables",
+      "artist": "Nubiyan Twist",
+      "album": "Freedom Fables",
+      "url": "https://album.link/sb7xhjnmthphq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adf1e4fb5-cba7-49de-bfdc-5f013febcb7e%3Aa2461085139_10.jpg?table=block&id=3db4129a-8c52-804d-af71-da3ccd8b9539&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Nu Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-12",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80d0-871d-facc70e9243f"
+      ],
+      "artists": [
+        "Nubiyan Twist"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-981f-ddfb3704cd77"
+      ],
+      "labels": [
+        "Strut"
       ]
     },
     {
@@ -37148,6 +37339,38 @@
       ],
       "labels": [
         "Glitterbeat Records"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8008-a6a9-f0d41b92cc3c",
+      "slug": "brijean-feelings",
+      "artist": "Brijean",
+      "album": "Feelings",
+      "url": "https://album.link/3nmg0c7szbprg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A28c5dc8d-676f-42f6-89a5-bac3dbd2c38a%3Aa2658003796_10.jpg?table=block&id=3db4129a-8c52-8008-a6a9-f0d41b92cc3c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Neo-Psychedelia",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-02-26",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2424129a-8c52-807f-998f-f0675dd4ecac"
+      ],
+      "artists": [
+        "Brijean"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "labels": [
+        "Ghostly International"
       ]
     },
     {
@@ -38032,6 +38255,37 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-808e-9197-eb166ed49c66",
+      "slug": "mildlife-automatic",
+      "artist": "Mildlife",
+      "album": "Automatic",
+      "url": "https://album.link/cbfw90r7txsrm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A01ea3ef3-cdb7-4c32-839d-e08086923299%3Aa3586157449_10.jpg?table=block&id=3db4129a-8c52-808e-9197-eb166ed49c66&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-18",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-8079-85b0-fb97c7c6c0ee"
+      ],
+      "artists": [
+        "Mildlife"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "labels": [
+        "Heavenly Recordings"
+      ]
+    },
+    {
       "id": "3db4129a-8c52-80a5-995d-e3e51c54ffbd",
       "slug": "balthvs-macrocosm",
       "artist": "BALTHVS",
@@ -38091,6 +38345,67 @@
       ],
       "labels": [
         "Touching Bass"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-806e-ae75-d0f138a5216e",
+      "slug": "standards-fruit-island",
+      "artist": "standards",
+      "album": "Fruit Island",
+      "url": "https://album.link/txrhg3xjbwxbw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A092b90f2-d0a9-47d7-aed2-7dca8bf27e29%3Aa1976906458_10.jpg?table=block&id=3db4129a-8c52-806e-ae75-d0f138a5216e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-08-28",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2524129a-8c52-807c-906c-ccc0eae17734"
+      ],
+      "artists": [
+        "standards"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80be-a165-d669139458b6"
+      ],
+      "labels": [
+        "Topshelf Records"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80eb-9ae8-f890e6cc87be",
+      "slug": "mistura-pura-the-blue-bus",
+      "artist": "Mistura Pura",
+      "album": "The Blue Bus",
+      "url": "https://album.link/j49bgm946xwnd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A67d5551c-257f-45c7-b71b-b0a0f052efb5%3Aa3762543971_10.jpg?table=block&id=3db4129a-8c52-80eb-9ae8-f890e6cc87be&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Latin Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-08-21",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80a0-adf5-e22961ff22a9"
+      ],
+      "artists": [
+        "Mistura Pura"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
+      ],
+      "labels": [
+        "Ubiquity Records"
       ]
     },
     {
@@ -38975,6 +39290,36 @@
       "labels": [
         "Mosher Records",
         "Firecum Records"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-805f-b4a8-d50c6242631b",
+      "slug": "floral-floral-lp",
+      "artist": "Floral",
+      "album": "Floral LP",
+      "url": "https://album.link/xvptxvqjstqrd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A124f0b77-c15b-4604-acef-d2c3d0d51390%3Aa2118984224_10.jpg?table=block&id=3db4129a-8c52-805f-b4a8-d50c6242631b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-02-15",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80e5-8894-dad769b3a8b1"
+      ],
+      "artists": [
+        "Floral"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
       ]
     },
     {
@@ -40802,6 +41147,36 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-802e-bb74-c34f845a5d50",
+      "slug": "kiki-gyan-24-hours-in-a-disco-1978-82",
+      "artist": "Kiki Gyan",
+      "album": "24 Hours in a Disco 1978-82",
+      "url": "https://album.link/wr7k4stsggzxn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A79d71d3e-c01b-40ca-b97d-cb47f3257c18%3Aa0275121638_10.jpg?table=block&id=3db4129a-8c52-802e-bb74-c34f845a5d50&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2012-12-03",
+      "year": 2012,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-809c-ab1d-d03a684b1563"
+      ],
+      "artists": [
+        "Kiki Gyan"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
+      ],
+      "labels": [
+        "Soundway Records"
+      ]
+    },
+    {
       "id": "3cd4129a-8c52-80d6-ae3e-f2e43a8c7a2e",
       "slug": "evil-army-evil-army",
       "artist": "Evil Army",
@@ -40860,6 +41235,37 @@
       ],
       "labels": [
         "Sony Music Mexico"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8099-9a98-c7d68186e6e4",
+      "slug": "ralph-myerz-and-the-jack-herren-band-a-special-album",
+      "artist": "Ralph Myerz and The Jack Herren Band",
+      "album": "A Special Album",
+      "url": "https://album.link/0b8shw49sjzzk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0deba8e6-b27f-4fc9-a0be-04d826d43642%3Aab67616d0000b273ec11e978674ee162588b78f3.jpg?table=block&id=3db4129a-8c52-8099-9a98-c7d68186e6e4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2003-05-20",
+      "year": 2003,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8022-a11f-cc516fc9d516"
+      ],
+      "artists": [
+        "Ralph Myerz And The Jack Herren Band"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-8054-9f78-d1ad3e3baddf"
+      ],
+      "labels": [
+        "Emperor Norton Records"
       ]
     },
     {
@@ -43071,11 +43477,13 @@
       "bandcamp": "https://bennysings.bandcamp.com/music",
       "youtube": "https://www.youtube.com/@BennySings",
       "albumIds": [
-        "2534129a-8c52-8046-8e24-e9d131ffb2ca"
+        "2534129a-8c52-8046-8e24-e9d131ffb2ca",
+        "3db4129a-8c52-80ef-86c4-ebf6043b7172"
       ],
       "genres": [
         "Indie Pop",
-        "Bedroom Pop"
+        "Bedroom Pop",
+        "Sophisti-Pop"
       ],
       "labelIds": [
         "2444129a-8c52-8014-88cc-c0144285751a"
@@ -43888,12 +44296,15 @@
       "youtube": null,
       "albumIds": [
         "068a5bff-aab1-4dca-af05-b65f9e71496b",
-        "2484129a-8c52-8092-a9e7-c500923f6237"
+        "2484129a-8c52-8092-a9e7-c500923f6237",
+        "3db4129a-8c52-8008-a6a9-f0d41b92cc3c"
       ],
       "genres": [
         "Electronic",
         "Nu-Disco",
-        "Indie Pop"
+        "Indie Pop",
+        "Neo-Psychedelia",
+        "Downtempo"
       ],
       "labelIds": [
         "2444129a-8c52-808d-bac2-ee2f428fb4bc"
@@ -48060,6 +48471,25 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-80e5-8894-dad769b3a8b1",
+      "slug": "floral",
+      "name": "Floral",
+      "country": "US",
+      "bandcamp": "https://floral1.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-805f-b4a8-d50c6242631b"
+      ],
+      "genres": [
+        "Math Rock"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2504129a-8c52-80df-bc5f-d533cd79defb",
       "slug": "fluffy-machine",
       "name": "Fluffy Machine",
@@ -51397,6 +51827,27 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-80da-b193-e4eb56ed3b82",
+      "slug": "kaidi-tatham",
+      "name": "Kaidi Tatham",
+      "country": "GB",
+      "bandcamp": "https://kaiditatham.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8036-afde-ec0a868c3ca4"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Broken Beat"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2d34129a-8c52-8043-abea-f1d8c26e8186",
       "slug": "kaitlyn-aurelia-smith",
       "name": "Kaitlyn Aurelia Smith",
@@ -51752,6 +52203,25 @@
       ],
       "labelIds": [
         "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-809c-ab1d-d03a684b1563",
+      "slug": "kiki-gyan",
+      "name": "Kiki Gyan",
+      "country": "GH",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-802e-bb74-c34f845a5d50"
+      ],
+      "genres": [
+        "Disco"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
       ],
       "videoIds": [],
       "akaIds": []
@@ -52192,15 +52662,19 @@
       "slug": "l-imperatrice",
       "name": "L'Impératrice",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://l-imperatrice.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "e365dde6-6a59-4427-9fc5-7ca7e5e7ddfa"
+        "e365dde6-6a59-4427-9fc5-7ca7e5e7ddfa",
+        "3db4129a-8c52-80ca-bc26-c0279422a950"
       ],
       "genres": [
         "Pop",
         "Nu-Disco",
-        "Electro"
+        "Electro",
+        "French Pop",
+        "Synthpop",
+        "Synth Funk"
       ],
       "labelIds": [
         "2504129a-8c52-8032-8286-e37837f42212"
@@ -54465,12 +54939,15 @@
       "bandcamp": "https://mildlife.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "a90ef702-c1f0-47f1-92b6-be90c582e7d3"
+        "a90ef702-c1f0-47f1-92b6-be90c582e7d3",
+        "3db4129a-8c52-808e-9197-eb166ed49c66"
       ],
       "genres": [
         "Jazz",
         "Acid Jazz",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Jazz Fusion",
+        "Jazz-Funk"
       ],
       "labelIds": [
         "2504129a-8c52-80bc-af92-d147b4d2816e"
@@ -54535,6 +55012,26 @@
       ],
       "labelIds": [
         "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-80a0-adf5-e22961ff22a9",
+      "slug": "mistura-pura",
+      "name": "Mistura Pura",
+      "country": "IT",
+      "bandcamp": "https://misturapura.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80eb-9ae8-f890e6cc87be"
+      ],
+      "genres": [
+        "Afrobeat",
+        "Latin Jazz"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8067-af88-dc8e84f69e98"
       ],
       "videoIds": [],
       "akaIds": []
@@ -55454,13 +55951,15 @@
       "youtube": null,
       "albumIds": [
         "32b4129a-8c52-802f-a3ab-fc33a50db83d",
-        "34582e93-1697-4cca-ad7e-5966c5526f95"
+        "34582e93-1697-4cca-ad7e-5966c5526f95",
+        "3db4129a-8c52-804d-af71-da3ccd8b9539"
       ],
       "genres": [
         "Afrobeat",
         "Jazz-Funk",
         "Neo-Soul",
-        "Funk"
+        "Funk",
+        "Nu Jazz"
       ],
       "labelIds": [
         "2504129a-8c52-8045-981f-ddfb3704cd77"
@@ -57440,6 +57939,26 @@
       ],
       "labelIds": [
         "2444129a-8c52-8055-9d6c-c6d7400b2dbf"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-8022-a11f-cc516fc9d516",
+      "slug": "ralph-myerz-and-the-jack-herren-band",
+      "name": "Ralph Myerz And The Jack Herren Band",
+      "country": "NO",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8099-9a98-c7d68186e6e4"
+      ],
+      "genres": [
+        "Downtempo",
+        "Nu Jazz"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-8054-9f78-d1ad3e3baddf"
       ],
       "videoIds": [],
       "akaIds": []
@@ -60033,14 +60552,16 @@
       "youtube": null,
       "albumIds": [
         "c25d2e94-8e8b-44fe-abdf-e52c4d5fbcd5",
-        "16fbb7b7-dad4-492a-8bb9-9effb73419a9"
+        "16fbb7b7-dad4-492a-8bb9-9effb73419a9",
+        "3db4129a-8c52-806e-ae75-d0f138a5216e"
       ],
       "genres": [
         "Math Rock"
       ],
       "labelIds": [
         "2524129a-8c52-8004-af53-f666fbb0d42b",
-        "2524129a-8c52-80a9-866c-d13041a7b461"
+        "2524129a-8c52-80a9-866c-d13041a7b461",
+        "24f4129a-8c52-80be-a165-d669139458b6"
       ],
       "videoIds": [],
       "akaIds": []
@@ -61826,6 +62347,30 @@
       ],
       "labelIds": [
         "2504129a-8c52-80c9-bd93-c4a0171f3e6e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-802a-8722-f47dc37f7a47",
+      "slug": "the-orielles",
+      "name": "The Orielles",
+      "country": "GB",
+      "bandcamp": "https://theorielles.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-805a-8cd6-cb965b2350cb",
+        "3db4129a-8c52-8026-aa1b-d7fab4561145"
+      ],
+      "genres": [
+        "Indie Rock",
+        "Neo-Psychedelia",
+        "Dream Pop",
+        "Indie Pop",
+        "Psychedelic Pop"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
       ],
       "videoIds": [],
       "akaIds": []
@@ -67985,6 +68530,21 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8054-9f78-d1ad3e3baddf",
+      "slug": "emperor-norton-records",
+      "name": "Emperor Norton Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8099-9a98-c7d68186e6e4"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-8022-a11f-cc516fc9d516"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80ed-929c-e53c683a062a",
       "slug": "energy-exchange-records",
       "name": "Energy Exchange Records",
@@ -68366,11 +68926,13 @@
       "youtube": null,
       "albumIds": [
         "2de4129a-8c52-805e-b5d7-c621d04676d0",
-        "3db4129a-8c52-8054-8895-f335d0741507"
+        "3db4129a-8c52-8054-8895-f335d0741507",
+        "3db4129a-8c52-8036-afde-ec0a868c3ca4"
       ],
       "artistIds": [
         "2de4129a-8c52-80ae-a5ed-d5379f9aa32a",
-        "3db4129a-8c52-80d1-a889-fa2971364664"
+        "3db4129a-8c52-80d1-a889-fa2971364664",
+        "3db4129a-8c52-80da-b193-e4eb56ed3b82"
       ]
     },
     {
@@ -68762,6 +69324,7 @@
         "1de4129a-8c52-8056-85f9-ed0e3dcfa8c6",
         "2484129a-8c52-8092-a9e7-c500923f6237",
         "ae7dbc6c-d3ce-41e5-af28-6ccbd8bf106e",
+        "3db4129a-8c52-8008-a6a9-f0d41b92cc3c",
         "3da4129a-8c52-80e8-8a35-c112140633a4",
         "3db4129a-8c52-80b8-9479-e0b3611ee070"
       ],
@@ -69088,10 +69651,14 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3db4129a-8c52-805a-8cd6-cb965b2350cb",
         "3474129a-8c52-807b-8c02-f90a45a0029d",
-        "a90ef702-c1f0-47f1-92b6-be90c582e7d3"
+        "a90ef702-c1f0-47f1-92b6-be90c582e7d3",
+        "3db4129a-8c52-8026-aa1b-d7fab4561145",
+        "3db4129a-8c52-808e-9197-eb166ed49c66"
       ],
       "artistIds": [
+        "3db4129a-8c52-802a-8722-f47dc37f7a47",
         "3474129a-8c52-800a-a4e4-fbf3d85c5c23",
         "2504129a-8c52-8079-85b0-fb97c7c6c0ee"
       ]
@@ -71266,11 +71833,12 @@
       "slug": "microqlima",
       "name": "microqlima",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://microqlima.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "e365dde6-6a59-4427-9fc5-7ca7e5e7ddfa"
+        "e365dde6-6a59-4427-9fc5-7ca7e5e7ddfa",
+        "3db4129a-8c52-80ca-bc26-c0279422a950"
       ],
       "artistIds": [
         "24f4129a-8c52-8089-bd74-cf956ca4a0d1"
@@ -72184,6 +72752,7 @@
         "3db4129a-8c52-8059-8d99-f5cce8e91769",
         "3da4129a-8c52-80b2-9599-f4f2e341839c",
         "c70f158e-28b6-4339-af37-348710c79313",
+        "3db4129a-8c52-805f-b4a8-d50c6242631b",
         "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
         "ddf78bc2-c478-4f46-b405-877b53f9a518",
         "3d54129a-8c52-8058-b425-ce91e6f33700",
@@ -72292,6 +72861,7 @@
         "3db4129a-8c52-806e-97a0-ef5918dc28ff",
         "3da4129a-8c52-8097-a6e2-c31a14f69492",
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
+        "3db4129a-8c52-80e5-8894-dad769b3a8b1",
         "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
         "3d54129a-8c52-808c-b929-ccc677a9cd2c",
         "3db4129a-8c52-805a-a81d-ceabda28ee6d",
@@ -74811,7 +75381,8 @@
         "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5",
         "3d54129a-8c52-8008-9bea-d4a9fbce6046",
         "3da4129a-8c52-8096-a359-c3bfcab739e5",
-        "3d34129a-8c52-808a-a5e3-f9f5e1756283"
+        "3d34129a-8c52-808a-a5e3-f9f5e1756283",
+        "3db4129a-8c52-802e-bb74-c34f845a5d50"
       ],
       "artistIds": [
         "2404129a-8c52-80de-8eb6-d488b844473e",
@@ -74820,7 +75391,8 @@
         "24a4129a-8c52-80d4-a292-e8177907de63",
         "2504129a-8c52-80ef-9572-ca292af6944c",
         "2524129a-8c52-8006-a734-c559c7e081ea",
-        "2494129a-8c52-8033-90f8-cdea31e793d0"
+        "2494129a-8c52-8033-90f8-cdea31e793d0",
+        "3db4129a-8c52-809c-ab1d-d03a684b1563"
       ]
     },
     {
@@ -75047,6 +75619,7 @@
         "2534129a-8c52-8046-8e24-e9d131ffb2ca",
         "3d54129a-8c52-801c-be35-d86669478134",
         "3da4129a-8c52-8024-b3e0-c9e5ce1a71bd",
+        "3db4129a-8c52-80ef-86c4-ebf6043b7172",
         "df562743-4b65-4dc9-a438-4e4a04e2ee7e",
         "3d54129a-8c52-8032-8bd9-deb817ced100"
       ],
@@ -75111,6 +75684,7 @@
         "3084129a-8c52-80ed-a33a-cfbfcdfd6633",
         "2eb4129a-8c52-80a7-a8da-e4617954080c",
         "34582e93-1697-4cca-ad7e-5966c5526f95",
+        "3db4129a-8c52-804d-af71-da3ccd8b9539",
         "3d34129a-8c52-8023-ac81-e482e874c257"
       ],
       "artistIds": [
@@ -75624,13 +76198,15 @@
         "981cae80-e067-4c47-b75d-ff3319a3c647",
         "b8dd052d-9e97-4993-a620-1304ed328b45",
         "2524129a-8c52-805f-9615-f2986a9c075e",
+        "3db4129a-8c52-806e-ae75-d0f138a5216e",
         "3d24129a-8c52-8044-8e68-ce0ec02844de"
       ],
       "artistIds": [
         "37f4129a-8c52-80c2-8df0-e129efd28274",
         "2504129a-8c52-80d3-ab78-d5c37a0250c3",
         "2444129a-8c52-8054-a02f-f562e02a6cfb",
-        "24f4129a-8c52-80d2-8e22-e53ac6c89cc1"
+        "24f4129a-8c52-80d2-8e22-e53ac6c89cc1",
+        "2524129a-8c52-807c-906c-ccc0eae17734"
       ]
     },
     {
@@ -75847,11 +76423,13 @@
       "albumIds": [
         "3da4129a-8c52-8029-b768-fc0542a8e8ff",
         "9f61a1f2-265a-4893-bb66-b90e8fcfd29f",
+        "3db4129a-8c52-80eb-9ae8-f890e6cc87be",
         "3d54129a-8c52-8000-a738-c1c131a5b728"
       ],
       "artistIds": [
         "3da4129a-8c52-80ce-91db-f64793a77153",
         "2494129a-8c52-8033-90f8-cdea31e793d0",
+        "3db4129a-8c52-80a0-adf5-e22961ff22a9",
         "3d54129a-8c52-8094-b111-ebb1afdf91f5"
       ]
     },

@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-14T14:07:41Z",
+  "generatedAt": "2026-09-14T19:24:43Z",
   "counts": {
-    "albums": 1294,
-    "artists": 1124,
-    "labels": 703,
+    "albums": 1306,
+    "artists": 1132,
+    "labels": 708,
     "videos": 96
   },
   "albums": [
@@ -35525,6 +35525,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80e7-9001-eb12f4c7426c",
+      "slug": "durand-jones-the-indications-private-space",
+      "artist": "Durand Jones & The Indications",
+      "album": "Private Space",
+      "url": "https://album.link/5nccg9zwgmtmw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3ba7e2e2-a3f1-47f5-9bf8-09f0805ecd99%3Aa0307167131_10.jpg?table=block&id=3db4129a-8c52-80e7-9001-eb12f4c7426c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul",
+        "Philly Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-30",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2414129a-8c52-803f-84bf-e1d9f7fb7397"
+      ],
+      "artists": [
+        "Durand Jones & The Indications"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8022-abd2-d0c412936e59"
+      ],
+      "labels": [
+        "Dead Oceans"
+      ]
+    },
+    {
       "id": "3d54129a-8c52-80fa-acb5-d9fc2c751df6",
       "slug": "mocky-overtones-for-the-omniverse",
       "artist": "Mocky",
@@ -35552,6 +35584,36 @@
       ],
       "labels": [
         "Heavy Sheet"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8015-bb41-d6407e44f609",
+      "slug": "duo-brothers-cookie-stars",
+      "artist": "Duo Brothers",
+      "album": "Cookie Stars",
+      "url": "https://album.link/xrfkmdmvvwrx7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A096858a5-4ffb-4c5a-a24d-c332f8ba104a%3Aa3933668304_10.jpg?table=block&id=3db4129a-8c52-8015-bb41-d6407e44f609&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-28",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-804b-b105-c983385539c1"
+      ],
+      "artists": [
+        "Duo Brothers"
+      ],
+      "labelIds": [
+        "2484129a-8c52-805b-880b-d1c3af60ba95"
+      ],
+      "labels": [
+        "Raw Tapes Records"
       ]
     },
     {
@@ -35680,6 +35742,38 @@
       ],
       "labels": [
         "Golden Rules"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8043-b66e-c24da198db99",
+      "slug": "guess-what-children-in-space",
+      "artist": "Guess What",
+      "album": "Children in Space",
+      "url": "https://album.link/hn7xxp2chvrkt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aeb90cdcc-921d-430b-b98f-483558b93e51%3Aa0419691621_10.jpg?table=block&id=3db4129a-8c52-8043-b66e-c24da198db99&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Jazz-Rock",
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-16",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "28f4129a-8c52-80ab-a84b-fab2056a0a8b"
+      ],
+      "artists": [
+        "Guess What"
+      ],
+      "labelIds": [
+        "28f4129a-8c52-80f7-90f2-ee16b0a2efe3"
+      ],
+      "labels": [
+        "Catapulte Records"
       ]
     },
     {
@@ -36869,6 +36963,68 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8059-8d99-f5cce8e91769",
+      "slug": "joy-guerrilla-the-park-is-closed",
+      "artist": "Joy Guerrilla",
+      "album": "The Park is Closed",
+      "url": "https://album.link/9nfsfkmp6jbt0",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A22228736-a50b-4be0-b2e4-a22720586e63%3Aa3209010018_10.jpg?table=block&id=3db4129a-8c52-8059-8d99-f5cce8e91769&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-12",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-806e-97a0-ef5918dc28ff"
+      ],
+      "artists": [
+        "Joy Guerrilla"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80c3-9407-eddbfb038047",
+      "slug": "daykoda-physis",
+      "artist": "Daykoda",
+      "album": "PHYSIS",
+      "url": "https://album.link/5srgb72sgp8f0",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afb57e55d-c940-48e5-a09d-f279bf82ac2c%3Aa2281408250_10.jpg?table=block&id=3db4129a-8c52-80c3-9407-eddbfb038047&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-03-11",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8064-8750-fef06cd98a37"
+      ],
+      "artists": [
+        "Daykoda"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-805c-86b5-fc0b81b1b394"
+      ],
+      "labels": [
+        "Beat Machine Records"
+      ]
+    },
+    {
       "id": "3d54129a-8c52-80c5-804d-cb604aaf813f",
       "slug": "fyi-chris-earth-scum",
       "artist": "FYI Chris",
@@ -37212,6 +37368,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80ef-80a6-eaf00a0506ae",
+      "slug": "delvon-lamarr-organ-trio-i-told-you-so",
+      "artist": "Delvon Lamarr Organ Trio",
+      "album": "I Told You So",
+      "url": "https://album.link/jcdph5zrcqgpf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0ffb2160-6afa-45c5-a37e-5c8b6a717711%3Aa0646111769_10.jpg?table=block&id=3db4129a-8c52-80ef-80a6-eaf00a0506ae&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep Funk",
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-01-29",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80b5-abd4-dfff493f2088"
+      ],
+      "artists": [
+        "Delvon Lamarr Organ Trio"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-809f-b04c-e94b3d66798e"
+      ],
+      "labels": [
+        "Colemine Records"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-803d-87a0-cedd0ec48a31",
       "slug": "william-stuckey-love-of-mine",
       "artist": "William Stuckey",
@@ -37335,6 +37523,37 @@
       "labels": [
         "Dead Oceans",
         "Easy Eye Sound"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-800e-9f89-d993fed1b787",
+      "slug": "hamburg-spinners-skorpion-im-stiefel",
+      "artist": "Hamburg Spinners",
+      "album": "Skorpion im Stiefel",
+      "url": "https://album.link/jhbxgwk45xqc3",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae4a45623-3a1a-463b-b953-770985c1bc43%3Aa2629309094_10.jpg?table=block&id=3db4129a-8c52-800e-9f89-d993fed1b787&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk",
+        "Jazz-Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-12-04",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80f8-8d3e-f689b6f87331"
+      ],
+      "artists": [
+        "Hamburg Spinners"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80bd-8f3f-cbf15804e6df"
+      ],
+      "labels": [
+        "Légère Recordings"
       ]
     },
     {
@@ -37749,6 +37968,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8085-ad86-cfd8bf97f75c",
+      "slug": "fleur-fleur",
+      "artist": "Fleur",
+      "album": "Fleur",
+      "url": "https://album.link/0nf2nhxjx0q8m",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A965dc7da-d64c-4132-ac24-6ebb2ed1900e%3Aa4150463869_10.jpg?table=block&id=3db4129a-8c52-8085-ad86-cfd8bf97f75c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Yé-Yé",
+        "Psychedelic Pop",
+        "French Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-24",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-8033-909e-ef62300a1f40"
+      ],
+      "artists": [
+        "Fleur"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c8-9c8c-ef822b2bd0ca"
+      ],
+      "labels": [
+        "Bickerton Records"
+      ]
+    },
+    {
       "id": "3da4129a-8c52-8007-8c19-c0464948bac8",
       "slug": "gitkin-safe-passage",
       "artist": "Gitkin",
@@ -37778,6 +38029,37 @@
       ],
       "labels": [
         "Wonderwheel Recordings"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80a5-995d-e3e51c54ffbd",
+      "slug": "balthvs-macrocosm",
+      "artist": "BALTHVS",
+      "album": "MACROCOSM",
+      "url": "https://album.link/f2g0fzvnvbwv7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1bf52298-2d61-4431-a3a6-ea76f8ef99ec%3Aa4020522579_10.jpg?table=block&id=3db4129a-8c52-80a5-995d-e3e51c54ffbd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Funk",
+        "Neo-Psychedelia"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-04",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2484129a-8c52-80c8-9e8e-f370340af860"
+      ],
+      "artists": [
+        "BALTHVS"
+      ],
+      "labelIds": [
+        "2484129a-8c52-8087-a6ff-da52b2b85550"
+      ],
+      "labels": [
+        "Cubensis Records"
       ]
     },
     {
@@ -38158,6 +38440,39 @@
       ],
       "labels": [
         "Triple Crown Records"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8019-ac64-db58080c4d0c",
+      "slug": "the-sultan-s-swing-ignite",
+      "artist": "The Sultan’s Swing",
+      "album": "Ignite",
+      "url": "https://album.link/f4mphrpf0hmqc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5184cd88-d780-424b-bbac-3aa68b0fcf3d%3Aa4239678619_10.jpg?table=block&id=3db4129a-8c52-8019-ac64-db58080c4d0c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Lounge",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-05-20",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80dc-be99-f70bc1074860"
+      ],
+      "artists": [
+        "The Sultan’s Swing"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80d4-bef4-e97e2bcda0d5"
+      ],
+      "labels": [
+        "Lazy Robot Records"
       ]
     },
     {
@@ -40199,6 +40514,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8086-8ef3-c38e13aa3738",
+      "slug": "tomorrow-s-people-open-soul",
+      "artist": "Tomorrow’s People",
+      "album": "Open Soul",
+      "url": "https://album.link/wkwrg9tmh6bnm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5677297c-2320-4b8d-875f-a9d9b00cde31%3Aa3448224030_10.jpg?table=block&id=3db4129a-8c52-8086-8ef3-c38e13aa3738&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Psychedelic Soul",
+        "Smooth Soul",
+        "Deep Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-01-27",
+      "year": 2017,
+      "origYear": "1976",
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-806f-9666-d2a39ca5018b"
+      ],
+      "artists": [
+        "Tomorrow’s People"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-8000-9d0d-f3bbb61836de"
+      ],
+      "labels": [
+        "Melodies International"
+      ]
+    },
+    {
       "id": "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc",
       "slug": "deecracks-totally-cracked",
       "artist": "DeeCRACKS",
@@ -40291,6 +40638,39 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80cb-9861-cb25b08e3b15",
+      "slug": "szymon-tigersapp",
+      "artist": "Szymon",
+      "album": "Tigersapp",
+      "url": "https://album.link/txf2d4f54hjxf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6c06288b-6f55-48ec-bf77-9c175f8ad9d5%3Aa3062168516_10.jpg?table=block&id=3db4129a-8c52-80cb-9861-cb25b08e3b15&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indie Pop",
+        "Indietronica",
+        "Psychedelic Pop",
+        "Singer-Songwriter"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2015-08-21",
+      "year": 2015,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8062-a356-d25c71f73bca"
+      ],
+      "artists": [
+        "Szymon"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c1-bb30-c2fe8e81a427"
+      ],
+      "labels": [
+        "Eloper Music"
       ]
     },
     {
@@ -42335,7 +42715,8 @@
       "youtube": null,
       "albumIds": [
         "0505b721-816c-4941-bbc0-46a89c8e65fb",
-        "f9e4c167-0588-4b65-88b3-9712c5918739"
+        "f9e4c167-0588-4b65-88b3-9712c5918739",
+        "3db4129a-8c52-80a5-995d-e3e51c54ffbd"
       ],
       "genres": [
         "Funk",
@@ -45603,6 +45984,26 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-8064-8750-fef06cd98a37",
+      "slug": "daykoda",
+      "name": "Daykoda",
+      "country": "IT",
+      "bandcamp": "https://daykodamusic.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80c3-9407-eddbfb038047"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-805c-86b5-fc0b81b1b394"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24f4129a-8c52-800d-89a8-d5e60c4264c0",
       "slug": "de-phazz",
       "name": "De-Phazz",
@@ -45745,6 +46146,27 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-80b5-abd4-dfff493f2088",
+      "slug": "delvon-lamarr-organ-trio",
+      "name": "Delvon Lamarr Organ Trio",
+      "country": "US",
+      "bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80ef-80a6-eaf00a0506ae"
+      ],
+      "genres": [
+        "Deep Funk",
+        "Soul Jazz",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-809f-b04c-e94b3d66798e"
       ],
       "videoIds": [],
       "akaIds": []
@@ -46394,6 +46816,25 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-804b-b105-c983385539c1",
+      "slug": "duo-brothers",
+      "name": "Duo Brothers",
+      "country": "IL",
+      "bandcamp": "https://duobrothers.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8015-bb41-d6407e44f609"
+      ],
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2484129a-8c52-805b-880b-d1c3af60ba95"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2414129a-8c52-803f-84bf-e1d9f7fb7397",
       "slug": "durand-jones-the-indications",
       "name": "Durand Jones & The Indications",
@@ -46401,11 +46842,14 @@
       "bandcamp": "https://durandjonesandtheindications.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "21f4129a-8c52-806c-88c0-f1aa033f1df4"
+        "21f4129a-8c52-806c-88c0-f1aa033f1df4",
+        "3db4129a-8c52-80e7-9001-eb12f4c7426c"
       ],
       "genres": [
         "Neo-Soul",
-        "R'n'B"
+        "R'n'B",
+        "Smooth Soul",
+        "Philly Soul"
       ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59"
@@ -47558,15 +48002,18 @@
       "bandcamp": "https://yeyefleur.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "9e53b1a5-7ce5-43d1-bdd9-d5c8a14a2038"
+        "9e53b1a5-7ce5-43d1-bdd9-d5c8a14a2038",
+        "3db4129a-8c52-8085-ad86-cfd8bf97f75c"
       ],
       "genres": [
         "French Pop",
         "Yé-Yé",
-        "Beat"
+        "Beat",
+        "Psychedelic Pop"
       ],
       "labelIds": [
-        "2504129a-8c52-801a-89a3-f8b88ce5ba25"
+        "2504129a-8c52-801a-89a3-f8b88ce5ba25",
+        "3db4129a-8c52-80c8-9c8c-ef822b2bd0ca"
       ],
       "videoIds": [],
       "akaIds": []
@@ -48879,12 +49326,16 @@
       "bandcamp": null,
       "youtube": null,
       "albumIds": [
-        "28f4129a-8c52-8017-8d64-d89a6d347984"
+        "28f4129a-8c52-8017-8d64-d89a6d347984",
+        "3db4129a-8c52-8043-b66e-c24da198db99"
       ],
       "genres": [
         "Neo-Psychedelia",
         "Exotica",
-        "Lounge"
+        "Lounge",
+        "Jazz-Funk",
+        "Jazz-Rock",
+        "Psychedelic Pop"
       ],
       "labelIds": [
         "28f4129a-8c52-80f7-90f2-ee16b0a2efe3"
@@ -49010,6 +49461,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-8075-a3aa-ddde9fc14617"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-80f8-8d3e-f689b6f87331",
+      "slug": "hamburg-spinners",
+      "name": "Hamburg Spinners",
+      "country": "DE",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-800e-9f89-d993fed1b787"
+      ],
+      "genres": [
+        "Funk",
+        "Jazz-Funk"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80bd-8f3f-cbf15804e6df"
       ],
       "videoIds": [],
       "akaIds": []
@@ -50754,6 +51225,26 @@
       ],
       "labelIds": [
         "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-806e-97a0-ef5918dc28ff",
+      "slug": "joy-guerrilla",
+      "name": "Joy Guerrilla",
+      "country": "US",
+      "bandcamp": "https://joyguerrilla.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8059-8d99-f5cce8e91769"
+      ],
+      "genres": [
+        "Jazz-Funk",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": [],
       "akaIds": []
@@ -60014,6 +60505,28 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-8062-a356-d25c71f73bca",
+      "slug": "szymon",
+      "name": "Szymon",
+      "country": "AU",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80cb-9861-cb25b08e3b15"
+      ],
+      "genres": [
+        "Indie Pop",
+        "Indietronica",
+        "Psychedelic Pop",
+        "Singer-Songwriter"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c1-bb30-c2fe8e81a427"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2484129a-8c52-80ce-b6a8-ec0d3e69f528",
       "slug": "tagua-tagua",
       "name": "Tagua Tagua",
@@ -61623,6 +62136,28 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-80dc-be99-f70bc1074860",
+      "slug": "the-sultan-s-swing",
+      "name": "The Sultan’s Swing",
+      "country": "GB",
+      "bandcamp": "https://sultansswing.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8019-ac64-db58080c4d0c"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Lounge",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80d4-bef4-e97e2bcda0d5"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3cf4129a-8c52-803c-9e10-e57693c793c8",
       "slug": "the-sweet-enoughs",
       "name": "The Sweet Enoughs",
@@ -62109,6 +62644,27 @@
       ],
       "labelIds": [
         "2a54129a-8c52-8014-8e8d-df535daec1a3"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-806f-9666-d2a39ca5018b",
+      "slug": "tomorrow-s-people",
+      "name": "Tomorrow’s People",
+      "country": "US",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8086-8ef3-c38e13aa3738"
+      ],
+      "genres": [
+        "Psychedelic Soul",
+        "Smooth Soul",
+        "Deep Funk"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-8000-9d0d-f3bbb61836de"
       ],
       "videoIds": [],
       "akaIds": []
@@ -65203,6 +65759,21 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-805c-86b5-fc0b81b1b394",
+      "slug": "beat-machine-records",
+      "name": "Beat Machine Records",
+      "country": "IT",
+      "bandcamp": "https://beat-machine.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80c3-9407-eddbfb038047"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-8064-8750-fef06cd98a37"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80fb-8451-c31639e317ed",
       "slug": "because-music",
       "name": "Because Music",
@@ -65283,6 +65854,21 @@
       ],
       "artistIds": [
         "2524129a-8c52-80d8-960b-edb32e8a4eaf"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80c8-9c8c-ef822b2bd0ca",
+      "slug": "bickerton-records",
+      "name": "Bickerton Records",
+      "country": "ES",
+      "bandcamp": "https://bickertonrecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8085-ad86-cfd8bf97f75c"
+      ],
+      "artistIds": [
+        "2504129a-8c52-8033-909e-ef62300a1f40"
       ]
     },
     {
@@ -65910,11 +66496,12 @@
       "slug": "catapulte-records",
       "name": "Catapulte Records",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://catapulterecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "28f4129a-8c52-8017-8d64-d89a6d347984"
+        "28f4129a-8c52-8017-8d64-d89a6d347984",
+        "3db4129a-8c52-8043-b66e-c24da198db99"
       ],
       "artistIds": [
         "28f4129a-8c52-80ab-a84b-fab2056a0a8b"
@@ -66196,13 +66783,15 @@
         "33d4129a-8c52-80aa-8368-e099d4725c25",
         "e1018018-9a65-4b69-b7c3-ce1e5ed15af7",
         "182c8511-a817-4a80-a2ed-a555f5fe18fd",
-        "ef883e02-050b-4f74-ad4a-8625747eee69"
+        "ef883e02-050b-4f74-ad4a-8625747eee69",
+        "3db4129a-8c52-80ef-80a6-eaf00a0506ae"
       ],
       "artistIds": [
         "33d4129a-8c52-8020-9aaa-dd551b913dbd",
         "2504129a-8c52-8008-b7c1-f078333b98d2",
         "2504129a-8c52-80eb-87d3-f9a282182569",
-        "24f4129a-8c52-803c-be66-c9447b1219d0"
+        "24f4129a-8c52-803c-be66-c9447b1219d0",
+        "3db4129a-8c52-80b5-abd4-dfff493f2088"
       ]
     },
     {
@@ -66514,7 +67103,8 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "f9e4c167-0588-4b65-88b3-9712c5918739"
+        "f9e4c167-0588-4b65-88b3-9712c5918739",
+        "3db4129a-8c52-80a5-995d-e3e51c54ffbd"
       ],
       "artistIds": [
         "2484129a-8c52-80c8-9e8e-f370340af860"
@@ -66740,6 +67330,7 @@
         "d1f8f0c0-940d-48c7-b346-52903f2613c7",
         "4a81bf5b-0f55-4bf6-857e-12bfabba6bf1",
         "54d2749c-617d-48af-8ca1-83a8f06b65aa",
+        "3db4129a-8c52-80e7-9001-eb12f4c7426c",
         "5e8a1076-5502-44f7-a1c4-56ac067a5b32",
         "3d34129a-8c52-806d-8e83-f14478dfedaa"
       ],
@@ -67376,6 +67967,21 @@
       ],
       "artistIds": [
         "3d24129a-8c52-802d-a573-ec787633def4"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80c1-bb30-c2fe8e81a427",
+      "slug": "eloper-music",
+      "name": "Eloper Music",
+      "country": "AU",
+      "bandcamp": "https://elopermusic.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80cb-9861-cb25b08e3b15"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-8062-a356-d25c71f73bca"
       ]
     },
     {
@@ -69966,6 +70572,21 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80d4-bef4-e97e2bcda0d5",
+      "slug": "lazy-robot-records",
+      "name": "Lazy Robot Records",
+      "country": "GB",
+      "bandcamp": "https://lazyrobotrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8019-ac64-db58080c4d0c"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-80dc-be99-f70bc1074860"
+      ]
+    },
+    {
       "id": "2504129a-8c52-8038-b218-f3dae0dd70c0",
       "slug": "le-phonographe",
       "name": "Le Phonographe",
@@ -69989,10 +70610,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "f5fcb56a-ee7b-416a-b0ac-6962c6d9302b"
+        "f5fcb56a-ee7b-416a-b0ac-6962c6d9302b",
+        "3db4129a-8c52-800e-9f89-d993fed1b787"
       ],
       "artistIds": [
-        "24f4129a-8c52-80ad-a904-ff9f8864447e"
+        "24f4129a-8c52-80ad-a904-ff9f8864447e",
+        "3db4129a-8c52-80f8-8d3e-f689b6f87331"
       ]
     },
     {
@@ -70480,6 +71103,21 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8000-9d0d-f3bbb61836de",
+      "slug": "melodies-international",
+      "name": "Melodies International",
+      "country": "GB",
+      "bandcamp": "https://melodiesinternational.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8086-8ef3-c38e13aa3738"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-806f-9666-d2a39ca5018b"
+      ]
+    },
+    {
       "id": "2494129a-8c52-80c8-bab6-c43ee5705123",
       "slug": "melody-as-truth",
       "name": "Melody As Truth",
@@ -70688,7 +71326,7 @@
       "slug": "mixto-records",
       "name": "Mixto Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://mixtorecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71543,6 +72181,7 @@
         "6f07ece7-8971-4b10-a822-163f0facb645",
         "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
         "fcda5233-f95e-45b4-a1ab-b499a6a810f9",
+        "3db4129a-8c52-8059-8d99-f5cce8e91769",
         "3da4129a-8c52-80b2-9599-f4f2e341839c",
         "c70f158e-28b6-4339-af37-348710c79313",
         "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
@@ -71650,6 +72289,7 @@
         "2514129a-8c52-80a6-a5a9-f3b459c54060",
         "2524129a-8c52-80ac-8df6-e43091d38cda",
         "2524129a-8c52-801b-820d-f48f3d34ffba",
+        "3db4129a-8c52-806e-97a0-ef5918dc28ff",
         "3da4129a-8c52-8097-a6e2-c31a14f69492",
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
         "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
@@ -72874,12 +73514,14 @@
         "1a74129a-8c52-800e-b83d-f23eb70facfa",
         "2524129a-8c52-8008-bcbd-f96d1e10d8cf",
         "236749bd-b46c-4b95-8dca-82b48b88ff15",
+        "3db4129a-8c52-8015-bb41-d6407e44f609",
         "2484129a-8c52-80d4-9270-d0b11a63f388"
       ],
       "artistIds": [
         "2424129a-8c52-80e7-83b9-cae05413c17d",
         "2524129a-8c52-80aa-9ef1-d7f81cffb566",
-        "2414129a-8c52-80e4-9d23-c3cd5bb0b78b"
+        "2414129a-8c52-80e4-9d23-c3cd5bb0b78b",
+        "3db4129a-8c52-804b-b105-c983385539c1"
       ]
     },
     {

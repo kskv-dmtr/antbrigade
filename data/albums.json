@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-13T19:29:20Z",
+  "generatedAt": "2026-09-14T14:07:41Z",
   "counts": {
-    "albums": 1284,
-    "artists": 1113,
-    "labels": 701,
+    "albums": 1294,
+    "artists": 1124,
+    "labels": 703,
     "videos": 96
   },
   "albums": [
@@ -35839,6 +35839,38 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-804f-8e7e-fcb4a21a0183",
+      "slug": "amaro-freits-sankofa",
+      "artist": "Amaro Freits",
+      "album": "Sankofa",
+      "url": "https://album.link/7zs9z4xjwzdbd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac338c3eb-53d1-4d69-b6e3-7cf791c23f66%3Aa1384410111_10.jpg?table=block&id=3db4129a-8c52-804f-8e7e-fcb4a21a0183&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Post-Bop",
+        "Avant-Garde Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-25",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8035-ac75-e0222c9f48a9"
+      ],
+      "artists": [
+        "Amaro Freitas"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "labels": [
+        "Far Out Recordings"
+      ]
+    },
+    {
       "id": "2484129a-8c52-80bd-8a93-dd0d62dfee2f",
       "slug": "chain-whip-two-step-to-hell",
       "artist": "Chain Whip",
@@ -35960,6 +35992,37 @@
       ],
       "labels": [
         "La Vida Es Un Mus Discos"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8054-8895-f335d0741507",
+      "slug": "children-of-zeus-balance",
+      "artist": "Children of Zeus",
+      "album": "Balance",
+      "url": "https://album.link/pwqtvk8g67xjz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A033cffee-4b37-49e4-9f76-e0719dd34ee2%3Aa2351022178_10.jpg?table=block&id=3db4129a-8c52-8054-8895-f335d0741507&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-06-04",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80d1-a889-fa2971364664"
+      ],
+      "artists": [
+        "Children of Zeus"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
+      ],
+      "labels": [
+        "First Word Records"
       ]
     },
     {
@@ -36679,6 +36742,37 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8015-b985-e97a4e03e4f6",
+      "slug": "joao-selva-navegar",
+      "artist": "João Selva",
+      "album": "Navegar",
+      "url": "https://album.link/x5zwpdv5tc2bw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A16080c0b-783d-4fc0-9e71-e29acf6bbaec%3Aa4234706062_10.jpg?table=block&id=3db4129a-8c52-8015-b985-e97a4e03e4f6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "MPB",
+        "Latin Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-02",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8039-bc9c-cab279ae919c"
+      ],
+      "artists": [
+        "João Selva"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-8082-883f-c5f83c4ed255"
+      ],
+      "labels": [
+        "Underdog Records"
+      ]
+    },
+    {
       "id": "3d94129a-8c52-80ac-80a7-c45373107b36",
       "slug": "various-artists-outlines",
       "artist": "Various Artists",
@@ -37085,6 +37179,36 @@
       ],
       "labels": [
         "Favorite Recordings"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8068-b905-fc9b0490559e",
+      "slug": "beatchild-nostalgia-beats-of-2008-2020",
+      "artist": "Beatchild",
+      "album": "Nostalgia: Beats of 2008 - 2020",
+      "url": "https://album.link/trxrckftzjxgh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2e7bf9a2-ebe8-4264-aa0b-f113d8fd48a8%3Aa3075761127_10.jpg?table=block&id=3db4129a-8c52-8068-b905-fc9b0490559e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-01-29",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-80e7-954e-eafce3024ba5"
+      ],
+      "artists": [
+        "Beatchild"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d6-8c06-c1cbd6bec0e2"
+      ],
+      "labels": [
+        "BBE Music"
       ]
     },
     {
@@ -37879,6 +38003,42 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8041-bf02-c85ad8ba6073",
+      "slug": "compro-oro-murat-ertel-esma-ertel-simurg",
+      "artist": "Compro Oro / Murat Ertel / Esma Ertel",
+      "album": "Simurg",
+      "url": "https://album.link/sh94b44x7h6mv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A87abab33-8dca-45d5-ba7a-1b5321033b6c%3Aa1875777154_10.jpg?table=block&id=3db4129a-8c52-8041-bf02-c85ad8ba6073&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2020-06-19",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8037-a1d0-f313d9e8710a",
+        "3db4129a-8c52-80ce-b38f-dfefd3e25f8b",
+        "3db4129a-8c52-80b5-b340-f08ffbcb9d84"
+      ],
+      "artists": [
+        "Compro Oro",
+        "Murat Ertel",
+        "Esma Ertel"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "labels": [
+        "Sdban Records"
+      ]
+    },
+    {
       "id": "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
       "slug": "various-artists-tchic-tchic-french-bossa-nova",
       "artist": "Various Artists",
@@ -38375,6 +38535,36 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80b0-89b8-c544db3c85c5",
+      "slug": "ranil-ranil-y-su-conjunto-tropical",
+      "artist": "Ranil",
+      "album": "Ranil y su Conjunto Tropical",
+      "url": "https://album.link/d73cphzxjw0fs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1d9064a9-2893-4d16-85c7-dceff4e11dc1%3Aa3579508641_10.jpg?table=block&id=3db4129a-8c52-80b0-89b8-c544db3c85c5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cumbia"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2020-03-20",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8008-bd5b-c4f5cbb914cf"
+      ],
+      "artists": [
+        "Ranil"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c2-ab15-ce8f93bd7609"
+      ],
+      "labels": [
+        "Analog Africa"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-804a-a4f3-e76fcbde8433",
       "slug": "chromatics-famous-monsters",
       "artist": "Chromatics",
@@ -38661,6 +38851,37 @@
       ],
       "labels": [
         "Chicago Research"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80ef-9dbd-dc385071ec54",
+      "slug": "coastal-county-coastal-county",
+      "artist": "Coastal County",
+      "album": "Coastal County",
+      "url": "https://album.link/kzdjsqtq6qmcv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0e56a64c-1123-4dfd-bdc0-42210b64032a%3Aa3036142631_10.jpg?table=block&id=3db4129a-8c52-80ef-9dbd-dc385071ec54&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Library Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-10-18",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8086-abb5-e459c89aa33a"
+      ],
+      "artists": [
+        "Coastal County"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c1-b147-c7fe9d7d18cd"
+      ],
+      "labels": [
+        "Lomas Productions"
       ]
     },
     {
@@ -39599,6 +39820,68 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-8027-85ba-ee35d8bd9f6f",
+      "slug": "q-the-voice-of-q",
+      "artist": "Q",
+      "album": "The Voice of Q",
+      "url": "https://album.link/dj3ktzzc9xwgn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad69da85e-a534-4d43-870a-f6609bbbf7fb%3Aa4156329697_10.jpg?table=block&id=3db4129a-8c52-8027-85ba-ee35d8bd9f6f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco",
+        "Boogie"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2018-04-06",
+      "year": 2018,
+      "origYear": "1982",
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-8005-8137-dd438cfdc942"
+      ],
+      "artists": [
+        "Q"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8070-8151-c395431d72a1"
+      ],
+      "labels": [
+        "Isle Of Jura"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-8021-9886-f523f9dcec99",
+      "slug": "anbessa-orchestra-negestat",
+      "artist": "Anbessa Orchestra",
+      "album": "Negestat",
+      "url": "https://album.link/k2bcxvzsnrbtm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5be8fb6a-1f31-4bf4-9cac-586f15cc58c8%3Aa0663661840_10.jpg?table=block&id=3db4129a-8c52-8021-9886-f523f9dcec99&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ethio-Jazz",
+        "Afrobeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-03-30",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3db4129a-8c52-805a-a81d-ceabda28ee6d"
+      ],
+      "artists": [
+        "Anbessa Orchestra"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-8040-a055-e9a9a96422c8",
       "slug": "the-maghreban-01deas",
       "artist": "The Maghreban",
@@ -39785,6 +40068,38 @@
       ],
       "labels": [
         "Anti- Records"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80b8-9479-e0b3611ee070",
+      "slug": "shigeto-the-new-monday",
+      "artist": "Shigeto",
+      "album": "The New Monday",
+      "url": "https://album.link/wd7zs7c7vqg2d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A814559cf-6a79-497e-934a-dd7e5ac88f13%3Aa2168773375_10.jpg?table=block&id=3db4129a-8c52-80b8-9479-e0b3611ee070&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Deep House",
+        "Glitch Hop",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-10-06",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2494129a-8c52-80fc-8bf6-e3246aea9eeb"
+      ],
+      "artists": [
+        "Shigeto"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "labels": [
+        "Ghostly International"
       ]
     },
     {
@@ -41117,6 +41432,27 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-8035-ac75-e0222c9f48a9",
+      "slug": "amaro-freitas",
+      "name": "Amaro Freitas",
+      "country": "BR",
+      "bandcamp": "https://amarofreitas.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-804f-8e7e-fcb4a21a0183"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Post-Bop",
+        "Avant-Garde Jazz"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24e4129a-8c52-80a7-a23c-c22015d7eb66",
       "slug": "amery",
       "name": "Amery",
@@ -41220,6 +41556,26 @@
       "videoIds": [
         "37d4129a-8c52-804f-b7d7-dccf9660ca01"
       ],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-805a-a81d-ceabda28ee6d",
+      "slug": "anbessa-orchestra",
+      "name": "Anbessa Orchestra",
+      "country": "US",
+      "bandcamp": "https://anbessaorchestra.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8021-9886-f523f9dcec99"
+      ],
+      "genres": [
+        "Ethio-Jazz",
+        "Afrobeat"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
       "akaIds": []
     },
     {
@@ -42204,6 +42560,25 @@
       ],
       "labelIds": [
         "2944129a-8c52-8087-af2d-cbe3ed05d29e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-80e7-954e-eafce3024ba5",
+      "slug": "beatchild",
+      "name": "Beatchild",
+      "country": "CA",
+      "bandcamp": "https://beatchild.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8068-b905-fc9b0490559e"
+      ],
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d6-8c06-c1cbd6bec0e2"
       ],
       "videoIds": [],
       "akaIds": []
@@ -43824,6 +44199,26 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-80d1-a889-fa2971364664",
+      "slug": "children-of-zeus",
+      "name": "Children of Zeus",
+      "country": "GB",
+      "bandcamp": "https://childrenofzeus.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8054-8895-f335d0741507"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-80ad-b3eb-f14b865c1204",
       "slug": "chinese-american-bear",
       "name": "Chinese American Bear",
@@ -44274,6 +44669,26 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-8086-abb5-e459c89aa33a",
+      "slug": "coastal-county",
+      "name": "Coastal County",
+      "country": "NO",
+      "bandcamp": "https://coastalcounty.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80ef-9dbd-dc385071ec54"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Library Music"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c1-b147-c7fe9d7d18cd"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3d04129a-8c52-8044-a9f8-db170f241c0a",
       "slug": "cobra-man",
       "name": "Cobra Man",
@@ -44470,6 +44885,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80a9-bec9-fabc447ee8bc"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-8037-a1d0-f313d9e8710a",
+      "slug": "compro-oro",
+      "name": "Compro Oro",
+      "country": "BE",
+      "bandcamp": "https://compro-oro.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8041-bf02-c85ad8ba6073"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
       ],
       "videoIds": [],
       "akaIds": []
@@ -46466,6 +46901,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80ad-b4e6-f965061efb90"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-80b5-b340-f08ffbcb9d84",
+      "slug": "esma-ertel",
+      "name": "Esma Ertel",
+      "country": "TR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8041-bf02-c85ad8ba6073"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
       ],
       "videoIds": [],
       "akaIds": []
@@ -50006,6 +50461,26 @@
       ],
       "labelIds": [
         "24a4129a-8c52-808b-be0a-e44fd95c24c9"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-8039-bc9c-cab279ae919c",
+      "slug": "joao-selva",
+      "name": "João Selva",
+      "country": "BR",
+      "bandcamp": "https://joaoselva.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8015-b985-e97a4e03e4f6"
+      ],
+      "genres": [
+        "MPB",
+        "Latin Pop"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-8082-883f-c5f83c4ed255"
       ],
       "videoIds": [],
       "akaIds": []
@@ -53923,6 +54398,26 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-80ce-b38f-dfefd3e25f8b",
+      "slug": "murat-ertel",
+      "name": "Murat Ertel",
+      "country": "TR",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8041-bf02-c85ad8ba6073"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2524129a-8c52-804d-afe0-c9b48ff116da",
       "slug": "mutoid-man",
       "name": "Mutoid Man",
@@ -56318,6 +56813,26 @@
       "akaIds": []
     },
     {
+      "id": "3db4129a-8c52-8005-8137-dd438cfdc942",
+      "slug": "q",
+      "name": "Q",
+      "country": "US",
+      "bandcamp": "https://qvoiceofq.bandcamp.com/music",
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-8027-85ba-ee35d8bd9f6f"
+      ],
+      "genres": [
+        "Disco",
+        "Boogie"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8070-8151-c395431d72a1"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3d54129a-8c52-8058-865d-c83a7fe422c4",
       "slug": "quantic",
       "name": "Quantic",
@@ -56497,6 +57012,25 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3db4129a-8c52-8008-bd5b-c4f5cbb914cf",
+      "slug": "ranil",
+      "name": "Ranil",
+      "country": "PE",
+      "bandcamp": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80b0-89b8-c544db3c85c5"
+      ],
+      "genres": [
+        "Cumbia"
+      ],
+      "labelIds": [
+        "3db4129a-8c52-80c2-ab15-ce8f93bd7609"
       ],
       "videoIds": [],
       "akaIds": []
@@ -57929,16 +58463,20 @@
       "slug": "shigeto",
       "name": "Shigeto",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://shigeto.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
-        "12a4129a-8c52-80c6-98bd-eb4f88841288"
+        "12a4129a-8c52-80c6-98bd-eb4f88841288",
+        "3db4129a-8c52-80b8-9479-e0b3611ee070"
       ],
       "genres": [
         "Electronic",
         "Acid House",
         "Neo-Soul",
-        "Jazzy Hip-Hop"
+        "Jazzy Hip-Hop",
+        "Deep House",
+        "Glitch Hop",
+        "Nu Jazz"
       ],
       "labelIds": [
         "2444129a-8c52-808d-bac2-ee2f428fb4bc"
@@ -62841,7 +63379,7 @@
       "slug": "werkha",
       "name": "Werkha",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://werkha.bandcamp.com/music",
       "youtube": null,
       "albumIds": [
         "2de4129a-8c52-805e-b5d7-c621d04676d0"
@@ -64086,6 +64624,21 @@
       ]
     },
     {
+      "id": "3db4129a-8c52-80c2-ab15-ce8f93bd7609",
+      "slug": "analog-africa",
+      "name": "Analog Africa",
+      "country": "DE",
+      "bandcamp": "https://analogafrica.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80b0-89b8-c544db3c85c5"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-8008-bd5b-c4f5cbb914cf"
+      ]
+    },
+    {
       "id": "3834129a-8c52-805f-9894-ef01feac6427",
       "slug": "anjunachill",
       "name": "Anjunachill",
@@ -64624,11 +65177,13 @@
       "youtube": null,
       "albumIds": [
         "2024129a-8c52-803c-96df-dfc23bbec423",
-        "3d54129a-8c52-8083-b159-ef4db9cb2692"
+        "3d54129a-8c52-8083-b159-ef4db9cb2692",
+        "3db4129a-8c52-8068-b905-fc9b0490559e"
       ],
       "artistIds": [
         "2504129a-8c52-80ea-afdd-c278e24181e1",
-        "3d54129a-8c52-80bd-a97a-c769a63fab47"
+        "3d54129a-8c52-80bd-a97a-c769a63fab47",
+        "3db4129a-8c52-80e7-954e-eafce3024ba5"
       ]
     },
     {
@@ -66989,11 +67544,13 @@
       "youtube": null,
       "albumIds": [
         "2284129a-8c52-8026-82d0-f9aff7dd22dc",
+        "3db4129a-8c52-804f-8e7e-fcb4a21a0183",
         "3c54129a-8c52-80c3-bf4c-e8acc85552f1",
         "3b84129a-8c52-80e6-85c6-e80656072383"
       ],
       "artistIds": [
         "24a4129a-8c52-80e2-8d09-f063edda164c",
+        "3db4129a-8c52-8035-ac75-e0222c9f48a9",
         "3c54129a-8c52-802a-8d71-ede070ab10f3",
         "3b84129a-8c52-8029-b163-edd0477e91b2"
       ]
@@ -67198,14 +67755,16 @@
       "slug": "first-word-records",
       "name": "First Word Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://firstwordrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2de4129a-8c52-805e-b5d7-c621d04676d0"
+        "2de4129a-8c52-805e-b5d7-c621d04676d0",
+        "3db4129a-8c52-8054-8895-f335d0741507"
       ],
       "artistIds": [
-        "2de4129a-8c52-80ae-a5ed-d5379f9aa32a"
+        "2de4129a-8c52-80ae-a5ed-d5379f9aa32a",
+        "3db4129a-8c52-80d1-a889-fa2971364664"
       ]
     },
     {
@@ -67597,7 +68156,8 @@
         "1de4129a-8c52-8056-85f9-ed0e3dcfa8c6",
         "2484129a-8c52-8092-a9e7-c500923f6237",
         "ae7dbc6c-d3ce-41e5-af28-6ccbd8bf106e",
-        "3da4129a-8c52-80e8-8a35-c112140633a4"
+        "3da4129a-8c52-80e8-8a35-c112140633a4",
+        "3db4129a-8c52-80b8-9479-e0b3611ee070"
       ],
       "artistIds": [
         "3c74129a-8c52-80ef-8510-dea04b18cc04",
@@ -68681,10 +69241,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "1c34129a-8c52-80d8-9916-fc1d3480b42c"
+        "1c34129a-8c52-80d8-9916-fc1d3480b42c",
+        "3db4129a-8c52-8027-85ba-ee35d8bd9f6f"
       ],
       "artistIds": [
-        "24a4129a-8c52-8081-a8e0-fcca5e355dea"
+        "24a4129a-8c52-8081-a8e0-fcca5e355dea",
+        "3db4129a-8c52-8005-8137-dd438cfdc942"
       ]
     },
     {
@@ -69581,6 +70143,21 @@
       "artistIds": [
         "39d4129a-8c52-80f6-a444-de27f1a878d2",
         "2914129a-8c52-80b5-b4ef-e4e83da5fe26"
+      ]
+    },
+    {
+      "id": "3db4129a-8c52-80c1-b147-c7fe9d7d18cd",
+      "slug": "lomas-productions",
+      "name": "Lomas Productions",
+      "country": "NO",
+      "bandcamp": "https://lomasprod.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3db4129a-8c52-80ef-9dbd-dc385071ec54"
+      ],
+      "artistIds": [
+        "3db4129a-8c52-8086-abb5-e459c89aa33a"
       ]
     },
     {
@@ -70971,6 +71548,7 @@
         "136c0de1-48ba-4c91-89f8-6f1ea2373fb7",
         "ddf78bc2-c478-4f46-b405-877b53f9a518",
         "3d54129a-8c52-8058-b425-ce91e6f33700",
+        "3db4129a-8c52-8021-9886-f523f9dcec99",
         "5618b6c4-09dd-41c5-a869-bd4af0651883",
         "2f74129a-8c52-8067-a3e8-e85f767ee29f"
       ],
@@ -71076,6 +71654,7 @@
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
         "2524129a-8c52-8058-a9bc-c5b682c2a4fe",
         "3d54129a-8c52-808c-b929-ccc677a9cd2c",
+        "3db4129a-8c52-805a-a81d-ceabda28ee6d",
         "2424129a-8c52-8044-b0ee-ec4e110778f1",
         "2f74129a-8c52-80f8-b898-cb4f67ecf40c"
       ]
@@ -73005,7 +73584,8 @@
         "20d4129a-8c52-8091-9498-d46c43482d4d",
         "2769c417-15ca-4923-aa55-26b07a7525ed",
         "13d220a9-1fbd-4dc2-a2b3-fe8f68ec791f",
-        "487091ad-df98-497b-a247-aa7b6526d6ae"
+        "487091ad-df98-497b-a247-aa7b6526d6ae",
+        "3db4129a-8c52-8041-bf02-c85ad8ba6073"
       ],
       "artistIds": [
         "3d74129a-8c52-80bd-97bc-ff968eaf7e48",
@@ -73013,7 +73593,10 @@
         "2774129a-8c52-806c-b312-cc4cf5871d3d",
         "2444129a-8c52-8013-8b19-c0c5caec3998",
         "2504129a-8c52-8063-b4ad-ec1c07a03c78",
-        "24f4129a-8c52-80dc-9666-e0c68038beb0"
+        "24f4129a-8c52-80dc-9666-e0c68038beb0",
+        "3db4129a-8c52-8037-a1d0-f313d9e8710a",
+        "3db4129a-8c52-80ce-b38f-dfefd3e25f8b",
+        "3db4129a-8c52-80b5-b340-f08ffbcb9d84"
       ]
     },
     {
@@ -74702,11 +75285,13 @@
       "youtube": null,
       "albumIds": [
         "38f4129a-8c52-80c7-8a52-e58a8c16d86f",
-        "1994129a-8c52-80ce-9deb-f6c508436447"
+        "1994129a-8c52-80ce-9deb-f6c508436447",
+        "3db4129a-8c52-8015-b985-e97a4e03e4f6"
       ],
       "artistIds": [
         "38f4129a-8c52-80b1-b99e-d774f86751ce",
-        "24f4129a-8c52-8038-bda6-c7273344da09"
+        "24f4129a-8c52-8038-bda6-c7273344da09",
+        "3db4129a-8c52-8039-bc9c-cab279ae919c"
       ]
     },
     {

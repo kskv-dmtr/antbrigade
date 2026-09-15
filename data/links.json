@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T18:14:21Z",
+  "generatedAt": "2026-09-15T21:27:38Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -21439,6 +21439,58 @@
       "upc": "3616555815425",
       "tracks": 7,
       "releaseDate": "2021-05-01"
+    },
+    "3dc4129a-8c52-80fd-9d71-f3b6808b190f": {
+      "source": "https://album.link/43ngqmqhxrnkr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/31ma1VIIRX5LubeBwpUP8X",
+        "pandora": "https://www.pandora.com/AL:56696582",
+        "amazonMusic": "https://music.amazon.com/albums/B0G36NZ2CV",
+        "tidal": "https://listen.tidal.com/album/475603953",
+        "yandex": "https://music.yandex.ru/album/39281288",
+        "bandcamp": "https://colleencolleen.bandcamp.com/album/libres-antes-del-final",
+        "amazonStore": "https://amazon.com/dp/B0G36NZ2CV"
+      },
+      "upc": "790377065268",
+      "tracks": 5,
+      "releaseDate": "2026-03-20"
+    },
+    "3dc4129a-8c52-80a0-b283-fdef67f33720": {
+      "source": "https://album.link/5hgbdkz8mbknw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6iVlwI2lSSNISO2ypqXBQV",
+        "pandora": "https://www.pandora.com/AL:7873696",
+        "deezer": "https://www.deezer.com/album/200075332",
+        "amazonMusic": "https://music.amazon.com/albums/B08T4MBRH9",
+        "tidal": "https://listen.tidal.com/album/279514307",
+        "napster": "https://play.napster.com/album/alb.552303434",
+        "yandex": "https://music.yandex.ru/album/13502061",
+        "anghami": "https://play.anghami.com/album/1017266633?refer=linktree",
+        "bandcamp": "https://colleencolleen.bandcamp.com/album/the-tunnel-and-the-clearing",
+        "amazonStore": "https://amazon.com/dp/B08T4MBRH9"
+      },
+      "upc": "790377054163",
+      "tracks": 7,
+      "releaseDate": "2021-05-21"
+    },
+    "3dc4129a-8c52-8034-9577-ea2ea5303b94": {
+      "source": "https://album.link/whh3t9vjmbkqq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6R0n0ocKsjOlz4LwKz2gCr",
+        "pandora": "https://www.pandora.com/AL:2794361",
+        "deezer": "https://www.deezer.com/album/326626777",
+        "amazonMusic": "https://music.amazon.com/albums/B0B3SH1T9K",
+        "tidal": "https://listen.tidal.com/album/233226865",
+        "napster": "https://play.napster.com/album/alb.674460579",
+        "yandex": "https://music.yandex.ru/album/8351518",
+        "boomplay": "https://www.boomplay.com/albums/7971124",
+        "anghami": "https://play.anghami.com/album/1029062948?refer=linktree",
+        "bandcamp": "https://freshselects.bandcamp.com/album/honeymoon",
+        "amazonStore": "https://amazon.com/dp/B0B3SH1T9K"
+      },
+      "upc": "617308032956",
+      "tracks": 13,
+      "releaseDate": "2019-08-22"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-15T18:14:09Z",
+  "generatedAt": "2026-09-15T21:27:13Z",
   "counts": {
-    "albums": 1343,
-    "artists": 1150,
+    "albums": 1346,
+    "artists": 1152,
     "labels": 715,
     "videos": 96
   },
@@ -4827,6 +4827,37 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3dc4129a-8c52-80fd-9d71-f3b6808b190f",
+      "slug": "colleen-libres-antes-del-final",
+      "artist": "Colleen",
+      "album": "Libres antes del final",
+      "url": "https://album.link/43ngqmqhxrnkr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6cce9ea6-7124-4111-88a2-fc270eb8f5da%3Aa1977975486_10.jpg?table=block&id=3dc4129a-8c52-80fd-9d71-f3b6808b190f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive Electronic",
+        "Minimal Synth"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-03-20",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dc4129a-8c52-8000-967e-e833a751e854"
+      ],
+      "artists": [
+        "Colleen"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80ba-8611-d72e5ece9147"
+      ],
+      "labels": [
+        "Thrill Jockey Records"
       ]
     },
     {
@@ -36438,6 +36469,38 @@
       ]
     },
     {
+      "id": "3dc4129a-8c52-80a0-b283-fdef67f33720",
+      "slug": "colleen-the-tunnel-and-the-cleaning",
+      "artist": "Colleen",
+      "album": "The Tunnel and the Cleaning",
+      "url": "https://album.link/5hgbdkz8mbknw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3e0f4615-dc49-4a96-8624-f4742cdf8ffa%3Aa1818299452_10.jpg?table=block&id=3dc4129a-8c52-80a0-b283-fdef67f33720&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive Electronic",
+        "Ambient Pop",
+        "Minimal Synth"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-21",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dc4129a-8c52-8000-967e-e833a751e854"
+      ],
+      "artists": [
+        "Colleen"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80ba-8611-d72e5ece9147"
+      ],
+      "labels": [
+        "Thrill Jockey Records"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-809d-bb9f-cbad5ee12ddc",
       "slug": "otooto-this-love-is-for-you",
       "artist": "OTOOTO",
@@ -40107,6 +40170,37 @@
       ],
       "labels": [
         "Jakarta Records"
+      ]
+    },
+    {
+      "id": "3dc4129a-8c52-8034-9577-ea2ea5303b94",
+      "slug": "emmavie-honeymoon",
+      "artist": "Emmavie",
+      "album": "Honeymoon",
+      "url": "https://album.link/whh3t9vjmbkqq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6e0b5752-abd9-4047-ab66-85b76f41e8f5%3Aa0717751642_10.jpg?table=block&id=3dc4129a-8c52-8034-9577-ea2ea5303b94&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Contemporary R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-08-22",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dc4129a-8c52-80d6-9611-ed3d10e1e5d4"
+      ],
+      "artists": [
+        "Emmavie"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
+      ],
+      "labels": [
+        "Fresh Selects"
       ]
     },
     {
@@ -46557,6 +46651,29 @@
       "akaIds": []
     },
     {
+      "id": "3dc4129a-8c52-8000-967e-e833a751e854",
+      "slug": "colleen",
+      "name": "Colleen",
+      "country": "FR",
+      "bandcamp": "https://colleencolleen.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dc4129a-8c52-80fd-9d71-f3b6808b190f",
+        "3dc4129a-8c52-80a0-b283-fdef67f33720"
+      ],
+      "genres": [
+        "Progressive Electronic",
+        "Minimal Synth",
+        "Ambient Pop"
+      ],
+      "labelIds": [
+        "2494129a-8c52-80ba-8611-d72e5ece9147"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24f4129a-8c52-8002-90a4-d5d223d1046d",
       "slug": "coma",
       "name": "COMA",
@@ -48736,6 +48853,27 @@
       ],
       "labelIds": [
         "24a4129a-8c52-8015-a022-daa335c09c2f"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3dc4129a-8c52-80d6-9611-ed3d10e1e5d4",
+      "slug": "emmavie",
+      "name": "Emmavie",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dc4129a-8c52-8034-9577-ea2ea5303b94"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Contemporary R'n'B"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80d4-b694-fb3ecd0ae4da"
       ],
       "videoIds": [],
       "akaIds": []
@@ -71409,11 +71547,13 @@
       "youtube": null,
       "albumIds": [
         "aa6fbb76-1dae-4af7-ac95-03c5c52010fe",
-        "3d64129a-8c52-80ef-b59e-f879829967c2"
+        "3d64129a-8c52-80ef-b59e-f879829967c2",
+        "3dc4129a-8c52-8034-9577-ea2ea5303b94"
       ],
       "artistIds": [
         "2504129a-8c52-80bc-8d2f-d86951a2cda2",
-        "3d64129a-8c52-806d-a89e-cf6cd20c48a6"
+        "3d64129a-8c52-806d-a89e-cf6cd20c48a6",
+        "3dc4129a-8c52-80d6-9611-ed3d10e1e5d4"
       ]
     },
     {
@@ -78349,13 +78489,16 @@
       "slug": "thrill-jockey-records",
       "name": "Thrill Jockey Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://thrilljockeyrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2184129a-8c52-8085-bbd6-e2699999db66"
+        "3dc4129a-8c52-80fd-9d71-f3b6808b190f",
+        "2184129a-8c52-8085-bbd6-e2699999db66",
+        "3dc4129a-8c52-80a0-b283-fdef67f33720"
       ],
       "artistIds": [
+        "3dc4129a-8c52-8000-967e-e833a751e854",
         "2494129a-8c52-803d-99e0-ce684d12c08f"
       ]
     },

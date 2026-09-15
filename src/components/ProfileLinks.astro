@@ -2,10 +2,15 @@
 /* Ссылки наружу — Bandcamp и YouTube — перечнем через точку. Значение
    строки справки `Links:` на страницах исполнителя и лейбла.
 
-   Bandcamp у лейбла бывает два: в Notion под это заведены две колонки, и у
-   XL Recordings, например, страницы xlrecordings и xlrecordingsuk. Тогда они
-   подписаны «Bandcamp [1]» и «Bandcamp [2]» — так же, как названы сами
-   колонки, и в тех же скобках, что счётчики и пометки по всему сайту.
+   Bandcamp бывает два — и у лейбла, и с 15 сентября 2026 у исполнителя: в
+   Notion под это заведены две колонки, и у XL Recordings, например, страницы
+   xlrecordings и xlrecordingsuk. Тогда они подписаны «Bandcamp [1]» и
+   «Bandcamp [2]» — так же, как названы сами колонки, и в тех же скобках, что
+   счётчики и пометки по всему сайту.
+
+   Номер ставится, только когда страниц две. Если заполнена одна вторая
+   колонка, ссылка подписана просто «Bandcamp»: одинокое «[2]» обещало бы
+   первую, которой нет.
 
    Цифра, а не имя поддомена: имена у страниц произвольные, и
    «xlrecordingsuk» рядом с «Bandcamp» читалось бы другой площадкой, а не
@@ -28,7 +33,7 @@ const { bandcamp, bandcamp2, youtube } = Astro.props;
    трёх ссылок заполнены — заранее не известно. */
 const ссылки = [
   bandcamp  && { label: bandcamp2 ? 'Bandcamp [1]' : 'Bandcamp', href: bandcamp },
-  bandcamp2 && { label: 'Bandcamp [2]', href: bandcamp2 },
+  bandcamp2 && { label: bandcamp ? 'Bandcamp [2]' : 'Bandcamp', href: bandcamp2 },
   youtube   && { label: 'YouTube', href: youtube }
 ].filter(Boolean);
 ---

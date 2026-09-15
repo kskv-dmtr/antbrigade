@@ -36,7 +36,7 @@ const clipsSorted = clips.slice()
 
 /* Раздел ссылок наружу показываем, только когда есть что показать: поля в
    Notion заполняются руками, и у большинства записей они пустые. */
-const hasLinks = Boolean(artist.bandcamp || artist.youtube);
+const hasLinks = Boolean(artist.bandcamp || artist.bandcamp2 || artist.youtube);
 
 /* Другие имена того же человека или состава — связь «Also Known As» в
    Notion, с 13 сентября 2026. Взаимность и порядок по имени наводит
@@ -109,7 +109,7 @@ const aka = artistsOf(artist.akaIds ?? []);
         {hasLinks && (
           <div class="item__fact">
             <dt>Links:</dt>
-            <dd><ProfileLinks bandcamp={artist.bandcamp} youtube={artist.youtube} /></dd>
+            <dd><ProfileLinks bandcamp={artist.bandcamp} bandcamp2={artist.bandcamp2} youtube={artist.youtube} /></dd>
           </div>
         )}
       </dl>

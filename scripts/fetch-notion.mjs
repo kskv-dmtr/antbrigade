@@ -28,11 +28,15 @@ const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
                   bandcamp:   'XmmI',
+                  bandcamp2:  'T^U~',
                   youtube:    'drlg',
                   aka:        'rupg' };
-/* У лейбла две колонки Bandcamp: «Bandcamp [1]» и «Bandcamp [2]». Вторая
+/* Колонок Bandcamp по две — «Bandcamp [1]» и «Bandcamp [2]». У лейбла вторая
    заведена 6 сентября 2026 — у части лейблов страниц на площадке две, как у
-   XL Recordings: xlrecordings и xlrecordingsuk. У артистов колонка одна. */
+   XL Recordings: xlrecordings и xlrecordingsuk. У артиста — 15 сентября
+   2026, по той же причине: у проекта бывает страница состава и отдельная
+   страница участника. Ключи у баз свои: XmmI и T^U~ у артистов, Wd@^ и ]Ze:
+   у лейблов. */
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
@@ -587,6 +591,7 @@ async function main() {
       name: a.name,
       country: a.country,
       bandcamp: a.bandcamp,
+      bandcamp2: a.bandcamp2,
       youtube: a.youtube,
       albumIds,
       genres: uniqueFrom(albumIds, 'genres'),

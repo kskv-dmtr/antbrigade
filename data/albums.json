@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-15T13:36:36Z",
+  "generatedAt": "2026-09-15T18:14:09Z",
   "counts": {
-    "albums": 1342,
+    "albums": 1343,
     "artists": 1150,
     "labels": 715,
     "videos": 96
@@ -7281,8 +7281,8 @@
     },
     {
       "id": "2c74129a-8c52-80c0-b1ab-e03509aa485d",
-      "slug": "the-funkin-s-machine-napoletanite",
-      "artist": "The Funkin’s Machine",
+      "slug": "the-funkin-machine-napoletanite",
+      "artist": "The Funkin’ Machine",
       "album": "Napoletanite",
       "url": "https://album.link/bvvg2wzbdfpzj",
       "cover": "https://antbrigade.notion.site/image/attachment%3A0b6cdb92-9384-4c86-8d7e-6ad8c27f0918%3A1203370.jpg?table=block&id=2c74129a-8c52-80c0-b1ab-e03509aa485d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
@@ -36621,6 +36621,38 @@
       ]
     },
     {
+      "id": "3dc4129a-8c52-80f8-bd90-fb550f04794b",
+      "slug": "the-funkin-machine-allerta-meteo",
+      "artist": "The Funkin’ Machine",
+      "album": "Allerta Meteo",
+      "url": "https://album.link/p5hhdqpfqrnnc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Acd6d5659-51d5-45de-91a9-52e5704f28d8%3Aa4178205237_10.jpg?table=block&id=3dc4129a-8c52-80f8-bd90-fb550f04794b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Italo-Disco",
+        "Nu-Disco",
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-01",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2c74129a-8c52-804f-8911-dd95d795423e"
+      ],
+      "artists": [
+        "The Funkin’ Machine"
+      ],
+      "labelIds": [
+        "3b34129a-8c52-807c-9966-d73cace97807"
+      ],
+      "labels": [
+        "Sonor Music Editions"
+      ]
+    },
+    {
       "id": "3b74129a-8c52-80e1-b7dc-c7e75fcfe6f1",
       "slug": "joseph-shabason-the-fellowship",
       "artist": "Joseph Shabason",
@@ -63939,15 +63971,18 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2c74129a-8c52-80c0-b1ab-e03509aa485d"
+        "2c74129a-8c52-80c0-b1ab-e03509aa485d",
+        "3dc4129a-8c52-80f8-bd90-fb550f04794b"
       ],
       "genres": [
         "Italo-Disco",
         "Boogie",
-        "Funk"
+        "Funk",
+        "Nu-Disco"
       ],
       "labelIds": [
-        "2434129a-8c52-80d4-8ca4-d8d25c13737d"
+        "2434129a-8c52-80d4-8ca4-d8d25c13737d",
+        "3b34129a-8c52-807c-9966-d73cace97807"
       ],
       "videoIds": [],
       "akaIds": []
@@ -77499,9 +77534,11 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3dc4129a-8c52-80f8-bd90-fb550f04794b",
         "3b34129a-8c52-8013-8b34-e50ee5080289"
       ],
       "artistIds": [
+        "2c74129a-8c52-804f-8911-dd95d795423e",
         "2514129a-8c52-8006-8752-f33cc4ec59c4"
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:39:28Z",
+  "generatedAt": "2026-09-15T18:14:21Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -21421,6 +21421,24 @@
       "upc": "820250000427",
       "tracks": 12,
       "releaseDate": "2012-05-08"
+    },
+    "3dc4129a-8c52-80f8-bd90-fb550f04794b": {
+      "source": "https://album.link/p5hhdqpfqrnnc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3bREgBnhRBAtXhNEjx4EBy",
+        "pandora": "https://www.pandora.com/AL:9363324",
+        "deezer": "https://www.deezer.com/album/230718022",
+        "amazonMusic": "https://music.amazon.com/albums/B09542NX4Y",
+        "tidal": "https://listen.tidal.com/album/184465642",
+        "napster": "https://play.napster.com/album/alb.685261152",
+        "yandex": "https://music.yandex.ru/album/15645870",
+        "boomplay": "https://www.boomplay.com/albums/25750848",
+        "bandcamp": "https://periodicarecords.bandcamp.com/album/allerta-meteo",
+        "amazonStore": "https://amazon.com/dp/B09542NX4Y"
+      },
+      "upc": "3616555815425",
+      "tracks": 7,
+      "releaseDate": "2021-05-01"
     }
   }
 }

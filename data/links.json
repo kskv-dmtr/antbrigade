@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T21:27:38Z",
+  "generatedAt": "2026-09-16T11:41:31Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -21491,6 +21491,57 @@
       "upc": "617308032956",
       "tracks": 13,
       "releaseDate": "2019-08-22"
+    },
+    "3dd4129a-8c52-80eb-8253-c2f4f7f51186": {
+      "source": "https://album.link/qvjth0hzkrhkq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6KP257UWJsfOnJ5stxJ2MC",
+        "pandora": "https://www.pandora.com/AL:6200914",
+        "deezer": "https://www.deezer.com/album/163699102",
+        "amazonMusic": "https://music.amazon.com/albums/B08DR3DRXM",
+        "tidal": "https://listen.tidal.com/album/150129051",
+        "napster": "https://play.napster.com/album/alb.497050429",
+        "boomplay": "https://www.boomplay.com/albums/14551734",
+        "anghami": "https://play.anghami.com/album/1013895338?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B08DR3DRXM"
+      },
+      "upc": "195448076141",
+      "tracks": 10,
+      "releaseDate": "2020-08-28"
+    },
+    "3dd4129a-8c52-8032-a266-d965aa806007": {
+      "source": "https://album.link/kmhjr7qxbhjxz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5MrD8oMLBfXR4zxhJGtQuZ",
+        "deezer": "https://www.deezer.com/album/132325362",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKYQB62G",
+        "tidal": "https://listen.tidal.com/album/395670902",
+        "napster": "https://play.napster.com/album/alb.404921424",
+        "yandex": "https://music.yandex.ru/album/8694674",
+        "anghami": "https://play.anghami.com/album/1008715206?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0DKYQB62G"
+      },
+      "upc": "3596973689221",
+      "tracks": 14,
+      "releaseDate": "2019-10-11"
+    },
+    "3dd4129a-8c52-806c-9139-c86391e25e30": {
+      "source": "https://album.link/kkzvwwqc62sr4",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4cuPOOMu9OhpW4o3VFNRx1",
+        "pandora": "https://www.pandora.com/AL:1357568",
+        "deezer": "https://www.deezer.com/album/61574352",
+        "amazonMusic": "https://music.amazon.com/albums/B0DDCKR5WB",
+        "tidal": "https://listen.tidal.com/album/381702157",
+        "napster": "https://play.napster.com/album/alb.8491723808384403",
+        "yandex": "https://music.yandex.ru/album/5290487",
+        "boomplay": "https://www.boomplay.com/albums/7425712",
+        "bandcamp": "https://gardencitymovement.bandcamp.com/album/apollonia",
+        "amazonStore": "https://amazon.com/dp/B0DDCKR5WB"
+      },
+      "upc": "5060391091143",
+      "tracks": 18,
+      "releaseDate": "2018-03-16"
     }
   }
 }

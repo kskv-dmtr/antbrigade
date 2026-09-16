@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-15T21:27:13Z",
+  "generatedAt": "2026-09-16T11:41:06Z",
   "counts": {
-    "albums": 1346,
-    "artists": 1152,
-    "labels": 715,
+    "albums": 1349,
+    "artists": 1153,
+    "labels": 719,
     "videos": 96
   },
   "albums": [
@@ -38570,6 +38570,38 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-80eb-8253-c2f4f7f51186",
+      "slug": "mestizo-beat-canoga-madness",
+      "artist": "Mestizo Beat",
+      "album": "Canoga Madness",
+      "url": "https://album.link/qvjth0hzkrhkq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3a630de5-01f2-4e58-b19d-f60f19f9774a%3Aab67616d0000b2736ffbe122bdb68478abf09297.jpg?table=block&id=3dd4129a-8c52-80eb-8253-c2f4f7f51186&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat",
+        "Funk",
+        "Afro-Cuban"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-08-28",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-807a-b05d-c5cc7065f092"
+      ],
+      "artists": [
+        "Mestizo Beat"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-8062-a6a8-c49bfb36e85d"
+      ],
+      "labels": [
+        "California Soul Music"
+      ]
+    },
+    {
       "id": "3dc4129a-8c52-80be-8198-d6c58fce505b",
       "slug": "santiago-downbeat-santiago-downbeat",
       "artist": "Santiago Downbeat",
@@ -40111,6 +40143,39 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-8032-a266-d965aa806007",
+      "slug": "asa-lucid",
+      "artist": "Aṣa",
+      "album": "Lucid",
+      "url": "https://album.link/kmhjr7qxbhjxz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9069c8bf-61a4-4254-b9b8-3943915e3a46%3Aab67616d0000b273b2bb3d0e0c131e1d58937c8b.jpg?table=block&id=3dd4129a-8c52-8032-a266-d965aa806007&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Soul",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-10-11",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dd4129a-8c52-800f-9738-f91624da82a1"
+      ],
+      "artists": [
+        "Aṣa"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-80f4-b604-cd2b66826abe",
+        "3dd4129a-8c52-80ad-84ac-f985b7280da1"
+      ],
+      "labels": [
+        "Wagram Music",
+        "Chapter Two Records"
+      ]
+    },
+    {
       "id": "3d54129a-8c52-807f-8131-ecc057a34812",
       "slug": "ayyuka-maslak-halay",
       "artist": "Ayyuka",
@@ -41266,6 +41331,38 @@
       "labels": [
         "R&S Records",
         "Zoot Records"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-806c-9139-c86391e25e30",
+      "slug": "garden-city-movement-apollonia",
+      "artist": "Garden City Movement",
+      "album": "Apollonia",
+      "url": "https://album.link/kkzvwwqc62sr4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A71f8f582-1edb-49e2-a70c-388881ae2e73%3Aa0742435196_10.jpg?table=block&id=3dd4129a-8c52-806c-9139-c86391e25e30&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Indietronica",
+        "Downtempo",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-03-16",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-802c-9420-dd63f0cfe1bd"
+      ],
+      "artists": [
+        "Garden City Movement"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-801a-ae16-f600b44d1d23"
+      ],
+      "labels": [
+        "Night Time Stories"
       ]
     },
     {
@@ -43647,6 +43744,28 @@
       ],
       "labelIds": [
         "2494129a-8c52-8021-b7cc-e19578b97345"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3dd4129a-8c52-800f-9738-f91624da82a1",
+      "slug": "asa",
+      "name": "Aṣa",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8032-a266-d965aa806007"
+      ],
+      "genres": [
+        "Pop Soul",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-80f4-b604-cd2b66826abe",
+        "3dd4129a-8c52-80ad-84ac-f985b7280da1"
       ],
       "videoIds": [],
       "akaIds": []
@@ -50433,18 +50552,23 @@
       "slug": "garden-city-movement",
       "name": "Garden City Movement",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://gardencitymovement.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "22afc665-a930-4f6c-abf0-930f9eefbecc"
+        "22afc665-a930-4f6c-abf0-930f9eefbecc",
+        "3dd4129a-8c52-806c-9139-c86391e25e30"
       ],
       "genres": [
         "Electronic",
-        "Indie Pop"
+        "Indie Pop",
+        "Indietronica",
+        "Downtempo",
+        "Dream Pop"
       ],
       "labelIds": [
-        "2504129a-8c52-80ef-bdac-c5ae421c6c4f"
+        "2504129a-8c52-80ef-bdac-c5ae421c6c4f",
+        "3dd4129a-8c52-801a-ae16-f600b44d1d23"
       ],
       "videoIds": [],
       "akaIds": []
@@ -56460,19 +56584,22 @@
       "slug": "mestizo-beat",
       "name": "Mestizo Beat",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://mestizobeat.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "5d19b1ea-c944-450d-bfda-715f53431490"
+        "5d19b1ea-c944-450d-bfda-715f53431490",
+        "3dd4129a-8c52-80eb-8253-c2f4f7f51186"
       ],
       "genres": [
         "Afrobeat",
         "Funk",
-        "Latin Jazz"
+        "Latin Jazz",
+        "Afro-Cuban"
       ],
       "labelIds": [
-        "2504129a-8c52-8008-83c4-ee60ba2de050"
+        "2504129a-8c52-8008-83c4-ee60ba2de050",
+        "3dd4129a-8c52-8062-a6a8-c49bfb36e85d"
       ],
       "videoIds": [],
       "akaIds": []
@@ -69292,6 +69419,21 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-8062-a6a8-c49bfb36e85d",
+      "slug": "california-soul-music",
+      "name": "California Soul Music",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-80eb-8253-c2f4f7f51186"
+      ],
+      "artistIds": [
+        "2504129a-8c52-807a-b05d-c5cc7065f092"
+      ]
+    },
+    {
       "id": "3924129a-8c52-8043-9d21-df12aae8797a",
       "slug": "candy-o-records",
       "name": "Candy-O Records",
@@ -69430,6 +69572,21 @@
       ],
       "artistIds": [
         "2504129a-8c52-8083-a82e-f5dac9c588ed"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-80ad-84ac-f985b7280da1",
+      "slug": "chapter-two-records",
+      "name": "Chapter Two Records",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8032-a266-d965aa806007"
+      ],
+      "artistIds": [
+        "3dd4129a-8c52-800f-9738-f91624da82a1"
       ]
     },
     {
@@ -74893,6 +75050,21 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-801a-ae16-f600b44d1d23",
+      "slug": "night-time-stories",
+      "name": "Night Time Stories",
+      "country": "GB",
+      "bandcamp": "https://nighttimestories.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-806c-9139-c86391e25e30"
+      ],
+      "artistIds": [
+        "2504129a-8c52-802c-9420-dd63f0cfe1bd"
+      ]
+    },
+    {
       "id": "2434129a-8c52-8088-921f-e4f39ef46bee",
       "slug": "ninja-tune",
       "name": "Ninja Tune",
@@ -79148,6 +79320,21 @@
       ],
       "artistIds": [
         "3d34129a-8c52-80fb-8b0b-cffeb997a19f"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-80f4-b604-cd2b66826abe",
+      "slug": "wagram-music",
+      "name": "Wagram Music",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8032-a266-d965aa806007"
+      ],
+      "artistIds": [
+        "3dd4129a-8c52-800f-9738-f91624da82a1"
       ]
     },
     {

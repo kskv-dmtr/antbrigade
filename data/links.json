@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T11:41:31Z",
+  "generatedAt": "2026-09-16T22:59:19Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -21542,6 +21542,91 @@
       "upc": "5060391091143",
       "tracks": 18,
       "releaseDate": "2018-03-16"
+    },
+    "3dd4129a-8c52-80d3-bd4a-dcd697fb968c": {
+      "source": "https://album.link/z89nqskxhf4px",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/65GzwrlNr04FSGziCz36uZ",
+        "pandora": "https://www.pandora.com/AL:42498523",
+        "tidal": "https://listen.tidal.com/album/521616208",
+        "yandex": "https://music.yandex.ru/album/41980955",
+        "boomplay": "https://www.boomplay.com/albums/130652223"
+      },
+      "upc": "198846924397",
+      "tracks": 5,
+      "releaseDate": "2025-02-21"
+    },
+    "3dd4129a-8c52-80d1-b4c5-c19b905acc33": {
+      "source": "https://album.link/ffcfdwn7x4m4b",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1BjMKN30apv13C3578RBxt",
+        "pandora": "https://www.pandora.com/AL:8829587",
+        "deezer": "https://www.deezer.com/album/182894112",
+        "amazonMusic": "https://music.amazon.com/albums/B08MB3ZWKB",
+        "tidal": "https://listen.tidal.com/album/179382884",
+        "napster": "https://play.napster.com/album/alb.525373133",
+        "yandex": "https://music.yandex.ru/album/14704969",
+        "boomplay": "https://www.boomplay.com/albums/23830581",
+        "anghami": "https://play.anghami.com/album/1019112142?refer=linktree",
+        "bandcamp": "https://rafrundell.bandcamp.com/album/o-m-days",
+        "amazonStore": "https://amazon.com/dp/B08MB3ZWKB"
+      },
+      "upc": "5400863036010",
+      "tracks": 10,
+      "releaseDate": "2021-04-09"
+    },
+    "3dd4129a-8c52-8061-88f9-e1815f174d04": {
+      "source": "https://album.link/fszd5kkfgb9h4",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1X4BBkB7OYNgxMPA5AcznL",
+        "pandora": "https://www.pandora.com/AL:8535490",
+        "deezer": "https://www.deezer.com/album/741124431",
+        "amazonMusic": "https://music.amazon.com/albums/B0F4KXNCLR",
+        "tidal": "https://listen.tidal.com/album/429738830",
+        "napster": "https://play.napster.com/album/alb.615186105",
+        "yandex": "https://music.yandex.ru/album/18404576",
+        "boomplay": "https://www.boomplay.com/albums/112790452",
+        "anghami": "https://play.anghami.com/album/1022851508?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0F4KXNCLR"
+      },
+      "upc": "687700205265",
+      "tracks": 9,
+      "releaseDate": "2021-03-12"
+    },
+    "3dd4129a-8c52-8080-be5f-f2404c4e8e45": {
+      "source": "https://album.link/gf9jv9dtk4vfv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4tfbLwcGrNRjsVorJaSdL3",
+        "pandora": "https://www.pandora.com/AL:5872369",
+        "deezer": "https://www.deezer.com/album/155805242",
+        "amazonMusic": "https://music.amazon.com/albums/B08BJBQLH3",
+        "tidal": "https://listen.tidal.com/album/145745428",
+        "napster": "https://play.napster.com/album/alb.485239307",
+        "yandex": "https://music.yandex.ru/album/11146490",
+        "amazonStore": "https://amazon.com/dp/B08BJBQLH3"
+      },
+      "upc": "3616406641265",
+      "tracks": 8,
+      "releaseDate": "2020-09-18"
+    },
+    "3dd4129a-8c52-8077-bd1d-e477ba1f100b": {
+      "source": "https://album.link/4q809kzwf8hk2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4tYZVOP8XBwxksamRVQjLm",
+        "pandora": "https://www.pandora.com/AL:1093112",
+        "deezer": "https://www.deezer.com/album/140296132",
+        "amazonMusic": "https://music.amazon.com/albums/B086SXSQHJ",
+        "tidal": "https://listen.tidal.com/album/136636267",
+        "napster": "https://play.napster.com/album/alb.463577231",
+        "yandex": "https://music.yandex.ru/album/10349843",
+        "boomplay": "https://www.boomplay.com/albums/79521720",
+        "anghami": "https://play.anghami.com/album/1011734156?refer=linktree",
+        "bandcamp": "https://totorro.bandcamp.com/album/come-to-mexico",
+        "amazonStore": "https://amazon.com/dp/B086SXSQHJ"
+      },
+      "upc": "3663729118738",
+      "tracks": 11,
+      "releaseDate": "2016-10-21"
     }
   }
 }

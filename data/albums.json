@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-16T11:41:06Z",
+  "generatedAt": "2026-09-16T22:58:31Z",
   "counts": {
-    "albums": 1349,
-    "artists": 1153,
-    "labels": 719,
+    "albums": 1354,
+    "artists": 1155,
+    "labels": 720,
     "videos": 96
   },
   "albums": [
@@ -16858,6 +16858,37 @@
       ],
       "labels": [
         "toucan sounds"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-80d3-bd4a-dcd697fb968c",
+      "slug": "will-scott-iii-snooze",
+      "artist": "Will Scott III",
+      "album": "Snooze",
+      "url": "https://album.link/z89nqskxhf4px",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3ebccae7-50d6-42c9-8019-985c83e9d823%3Aa1513311025_10.jpg?table=block&id=3dd4129a-8c52-80d3-bd4a-dcd697fb968c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Cinematic Soul"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-02-21",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dd4129a-8c52-80f8-ae6f-eaa4c4aff2e6"
+      ],
+      "artists": [
+        "Will Scott III"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80bb-94c1-e62863f464c3"
+      ],
+      "labels": [
+        "popop"
       ]
     },
     {
@@ -36996,6 +37027,38 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-80d1-b4c5-c19b905acc33",
+      "slug": "raf-rundell-o-m-days",
+      "artist": "Raf Rundell",
+      "album": "O.M. Days",
+      "url": "https://album.link/ffcfdwn7x4m4b",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4a712eb3-519f-47a8-bedd-211c8a585c2a%3Aa0124762714_10.jpg?table=block&id=3dd4129a-8c52-80d1-b4c5-c19b905acc33&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Art Pop",
+        "Alternative Dance"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-09",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dd4129a-8c52-8063-996c-e394e81307d3"
+      ],
+      "artists": [
+        "Raf Rundell"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "labels": [
+        "Heavenly Recordings"
+      ]
+    },
+    {
       "id": "3d24129a-8c52-8053-bc95-fef3d8493129",
       "slug": "whatitdo-archive-group-the-black-stone-affair",
       "artist": "Whatitdo Archive Group",
@@ -37341,6 +37404,38 @@
       ],
       "labels": [
         "Strut"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-8061-88f9-e1815f174d04",
+      "slug": "various-artists-silk-road-journey-of-the-armenian-diaspora-1",
+      "artist": "Various Artists",
+      "album": "Silk Road: Journey of the Armenian Diaspora (1971-1982)",
+      "url": "https://album.link/fszd5kkfgb9h4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1111c541-d2b7-4168-bfec-354fa2ef42a6%3Aa1674988596_10.jpg?table=block&id=3dd4129a-8c52-8061-88f9-e1815f174d04&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Disco",
+        "Boogie",
+        "Funk"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2021-03-12",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-808d-b5f0-c83ea150829d"
+      ],
+      "labels": [
+        "Terrestrial Funk"
       ]
     },
     {
@@ -38474,6 +38569,37 @@
       ],
       "labels": [
         "Wonderwheel Recordings"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-8080-be5f-f2404c4e8e45",
+      "slug": "huw-marc-bennett-tresilian-boy",
+      "artist": "Huw Marc Bennett",
+      "album": "Tresilian Boy",
+      "url": "https://album.link/gf9jv9dtk4vfv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3eeae764-521c-4ae1-b7b7-bb0f4e370161%3Aa2499385375_10.jpg?table=block&id=3dd4129a-8c52-8080-be5f-f2404c4e8e45&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-18",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-805e-bba4-cb0169d5bcae"
+      ],
+      "artists": [
+        "Huw Marc Bennett"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8036-930d-f6635b80b570"
+      ],
+      "labels": [
+        "Albert’s Favourites"
       ]
     },
     {
@@ -41775,6 +41901,37 @@
       ],
       "labels": [
         "Brownswood Recordings"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-8077-bd1d-e477ba1f100b",
+      "slug": "totorro-come-to-mexico",
+      "artist": "Totorro",
+      "album": "Come to Mexico",
+      "url": "https://album.link/4q809kzwf8hk2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A043ca376-12f5-4027-9faa-1e29261bb856%3Aa0678220836_10.jpg?table=block&id=3dd4129a-8c52-8077-bd1d-e477ba1f100b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock",
+        "Post-Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2016-10-21",
+      "year": 2016,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2704129a-8c52-806d-bfca-fdbefc14172a"
+      ],
+      "artists": [
+        "Totorro"
+      ],
+      "labelIds": [
+        "2814129a-8c52-8035-b6b1-dc8d6f219640"
+      ],
+      "labels": [
+        "Recreation Center"
       ]
     },
     {
@@ -51899,12 +52056,15 @@
       "youtube": null,
       "albumIds": [
         "31e4129a-8c52-80fa-b9f0-e312bedcc98c",
-        "5b47f2c2-5fd0-4374-ac74-48f897a1e32a"
+        "5b47f2c2-5fd0-4374-ac74-48f897a1e32a",
+        "3dd4129a-8c52-8080-be5f-f2404c4e8e45"
       ],
       "genres": [
         "Psychedelic Folk",
         "Electronic",
-        "Folk"
+        "Folk",
+        "Neo-Psychedelia",
+        "Nu Jazz"
       ],
       "labelIds": [
         "2434129a-8c52-8036-930d-f6635b80b570"
@@ -59897,6 +60057,28 @@
       "akaIds": []
     },
     {
+      "id": "3dd4129a-8c52-8063-996c-e394e81307d3",
+      "slug": "raf-rundell",
+      "name": "Raf Rundell",
+      "country": "GB",
+      "bandcamp": "https://rafrundell.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-80d1-b4c5-c19b905acc33"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Art Pop",
+        "Alternative Dance"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80bc-af92-d147b4d2816e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2444129a-8c52-8014-8bad-c0c7eb45e98c",
       "slug": "rafiki",
       "name": "Rafiki",
@@ -65638,11 +65820,12 @@
       "slug": "totorro",
       "name": "Totorro",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://totorro.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2814129a-8c52-801d-99fe-c629966da46c"
+        "2814129a-8c52-801d-99fe-c629966da46c",
+        "3dd4129a-8c52-8077-bd1d-e477ba1f100b"
       ],
       "genres": [
         "Math Rock",
@@ -66283,6 +66466,7 @@
         "3d94129a-8c52-8032-9223-e88c9c52d990",
         "26eca379-5783-4be3-88d2-b52a28eda9b6",
         "3d94129a-8c52-80ac-80a7-c45373107b36",
+        "3dd4129a-8c52-8061-88f9-e1815f174d04",
         "a5ac12ae-8985-4281-9514-0bac9f3a37a6",
         "3b74129a-8c52-806e-a3d9-c82dacea2e97",
         "3dc4129a-8c52-8067-83da-d69fccb65cb5",
@@ -66328,6 +66512,7 @@
         "2494129a-8c52-8080-9b9b-efb2b4dc157d",
         "3d94129a-8c52-803f-94b6-d3f1d3612c71",
         "3d94129a-8c52-8070-89cf-e5b69ba7d24f",
+        "3dd4129a-8c52-808d-b5f0-c83ea150829d",
         "2524129a-8c52-8064-ac08-c6bb33bff5df",
         "3b74129a-8c52-8060-af6b-ece8a3271488",
         "2474129a-8c52-80e7-937d-feb32fb47e2c",
@@ -67005,6 +67190,27 @@
       ],
       "labelIds": [
         "33b4129a-8c52-802a-99d4-c1a708ffcf85"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3dd4129a-8c52-80f8-ae6f-eaa4c4aff2e6",
+      "slug": "will-scott-iii",
+      "name": "Will Scott III",
+      "country": "CA",
+      "bandcamp": "https://willscottiii.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-80d3-bd4a-dcd697fb968c"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Cinematic Soul"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80bb-94c1-e62863f464c3"
       ],
       "videoIds": [],
       "akaIds": []
@@ -68098,7 +68304,8 @@
         "cd65a8e1-4854-4000-8a38-e854f706fadb",
         "5b47f2c2-5fd0-4374-ac74-48f897a1e32a",
         "c2a57a30-242f-4a51-beb2-cf27cdd9d022",
-        "3d64129a-8c52-80ef-aaf4-eff0c684ea9b"
+        "3d64129a-8c52-80ef-aaf4-eff0c684ea9b",
+        "3dd4129a-8c52-8080-be5f-f2404c4e8e45"
       ],
       "artistIds": [
         "2504129a-8c52-805e-bba4-cb0169d5bcae",
@@ -72202,13 +72409,15 @@
         "3db4129a-8c52-805a-8cd6-cb965b2350cb",
         "3474129a-8c52-807b-8c02-f90a45a0029d",
         "a90ef702-c1f0-47f1-92b6-be90c582e7d3",
+        "3dd4129a-8c52-80d1-b4c5-c19b905acc33",
         "3db4129a-8c52-8026-aa1b-d7fab4561145",
         "3db4129a-8c52-808e-9197-eb166ed49c66"
       ],
       "artistIds": [
         "3db4129a-8c52-802a-8722-f47dc37f7a47",
         "3474129a-8c52-800a-a4e4-fbf3d85c5c23",
-        "2504129a-8c52-8079-85b0-fb97c7c6c0ee"
+        "2504129a-8c52-8079-85b0-fb97c7c6c0ee",
+        "3dd4129a-8c52-8063-996c-e394e81307d3"
       ]
     },
     {
@@ -76339,12 +76548,14 @@
       "albumIds": [
         "3484129a-8c52-8032-a41a-e3c3d9e9685a",
         "28f4129a-8c52-8034-880d-e178c6e424a9",
+        "3dd4129a-8c52-80d3-bd4a-dcd697fb968c",
         "f3f22345-3554-4d53-89c2-8af88ad585cd",
         "684ea5f5-95b3-4faf-85da-d82d597dfcd2"
       ],
       "artistIds": [
         "3484129a-8c52-80b9-902f-e0b2db481e78",
-        "2484129a-8c52-8048-a123-d4997cec3650"
+        "2484129a-8c52-8048-a123-d4997cec3650",
+        "3dd4129a-8c52-80f8-ae6f-eaa4c4aff2e6"
       ]
     },
     {
@@ -76766,7 +76977,8 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2814129a-8c52-801d-99fe-c629966da46c"
+        "2814129a-8c52-801d-99fe-c629966da46c",
+        "3dd4129a-8c52-8077-bd1d-e477ba1f100b"
       ],
       "artistIds": [
         "2704129a-8c52-806d-bfca-fdbefc14172a"
@@ -78513,6 +78725,21 @@
       ],
       "artistIds": [
         "2c14129a-8c52-800d-acc6-f673a64da6ec"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-808d-b5f0-c83ea150829d",
+      "slug": "terrestrial-funk",
+      "name": "Terrestrial Funk",
+      "country": "US",
+      "bandcamp": "https://terrestrialfunk.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8061-88f9-e1815f174d04"
+      ],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
     {

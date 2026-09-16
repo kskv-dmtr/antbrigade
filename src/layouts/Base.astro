@@ -265,6 +265,22 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     <div class="masthead__in shell">
       <a class="brand" href="/">ant brigade</a>
 
+      {/* Лупа — поиск на телефоне, с 16 сентября 2026. Строка поиска там
+          больше не стоит второй строкой шапки всегда: она открывается по
+          этой кнопке и закрывается крестиком справа в самом поле. Показывает
+          кнопку только мобильный медиазапрос и только при [data-js]: без
+          скрипта открыть строку нечем, и поле остаётся на виду, как было. */}
+      <button
+        class="search-toggle"
+        type="button"
+        id="search-toggle"
+        aria-controls="search-box"
+        aria-expanded="false"
+        aria-label="Search"
+      >
+        <Icon name="magnifying-glass" class="search-toggle__icon" />
+      </button>
+
       {/* Кнопка есть в разметке всегда, но показывает её только мобильный
           медиазапрос и только при [data-js]: без скрипта нажимать было бы
           не на что, и меню там остаётся развёрнутым, как было. */}
@@ -639,6 +655,43 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       matchMedia('(min-width: 641px)').addEventListener('change', (e) => {
         if (e.matches) setOpen(false);
       });
+    }
+
+    /* Строка поиска на телефоне. Открывается лупой в шапке, закрывается
+       крестиком в самом поле — тем, что на широком экране только стирает
+       набранное. Поле при открытии получает фокус: человек нажал лупу, чтобы
+       искать, и лишнее касание по полю ему ни к чему.
+
+       Состояние — атрибут на шапке, как у бургера: по нему CSS показывает
+       строку. Высота шапки после каждого переключения пересчитывается сразу,
+       в том же кадре, — иначе липкие полосы разделов на кадр оставались бы
+       по старой высоте. */
+    const лупа = document.getElementById('search-toggle');
+
+    if (лупа) {
+      const полеПоиска = document.getElementById('search');
+      const узкий = matchMedia('(max-width: 640px)');
+
+      const строкаПоиска = (on) => {
+        masthead.toggleAttribute('data-search', on);
+        лупа.setAttribute('aria-expanded', String(on));
+        пересчитатьШапку();
+        if (on) полеПоиска?.focus();
+      };
+
+      лупа.addEventListener('click', () => строкаПоиска(!masthead.hasAttribute('data-search')));
+
+      /* Крестик в поле: на телефоне он закрывает строку. Стирает набранное
+         и закрывает находки его собственный обработчик в SearchField — он
+         же на узком экране и не возвращает фокус в поле, которое сейчас
+         спрячется. */
+      masthead.querySelector('.search__clear')?.addEventListener('click', () => {
+        if (узкий.matches) строкаПоиска(false);
+      });
+
+      /* На широком экране строка стоит всегда, и забытое состояние
+         «открыто» при возврате на узкий открывало бы её без спроса. */
+      узкий.addEventListener('change', () => строкаПоиска(false));
     }
 
     /* Высота шапки снимается с готовой вёрстки, а не задаётся числом: от неё

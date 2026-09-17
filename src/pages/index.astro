@@ -75,12 +75,16 @@ const pool = shuffle(albums);
 
       Оба коротких обещания обёрнуты в неразрывное: перенос приходится как раз
       на них, и «no» оставалось висеть в конце строки, а «algorithm» или
-      «order» уезжало на следующую. Замеры: на 375 и 414 строка ломается после
-      «No algorithm.», на 320 — после «releases.», и оба обещания уходят вниз
-      целиком. */}
+      «order» уезжало на следующую. Замеры: на 360, 375 и 414 строка ломается
+      после «No algorithm.».
+
+      Где первой строке не хватает места — на 320 или при крупном шрифте в
+      браузере, — каждое предложение встаёт своей строкой (lead__note--steps,
+      см. стили). До 17 сентября 2026 там ломалось после «releases.», и оба
+      обещания съезжали вниз одной строкой, склеенные. */}
   <div class="lead">
     <h1 class="item__title">Lucky Finds</h1>
-    <p class="lead__note">Some random releases. <span class="nb">No algorithm.</span> <span class="nb">No order.</span></p>
+    <p class="lead__note lead__note--steps"><span>Some random releases.</span> <span class="nb">No algorithm.</span> <span class="nb">No order.</span></p>
   </div>
 
   <RandomPicks pool={pool} />

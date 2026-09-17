@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T22:59:19Z",
+  "generatedAt": "2026-09-17T01:28:31Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -21627,6 +21627,43 @@
       "upc": "3663729118738",
       "tracks": 11,
       "releaseDate": "2016-10-21"
+    },
+    "3dd4129a-8c52-8045-b275-e588487085b2": {
+      "source": "https://album.link/xfvvzx3f9mmgj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2y9Q7zhiwdkETmdR0N4IkW",
+        "pandora": "https://www.pandora.com/AL:10813165",
+        "deezer": "https://www.deezer.com/album/116742502",
+        "amazonMusic": "https://music.amazon.com/albums/B07ZPDLLKD",
+        "tidal": "https://listen.tidal.com/album/121206084",
+        "napster": "https://play.napster.com/album/alb.418676666",
+        "yandex": "https://music.yandex.ru/album/9085922",
+        "boomplay": "https://www.boomplay.com/albums/6228741",
+        "anghami": "https://play.anghami.com/album/1065643470?refer=linktree",
+        "bandcamp": "https://tortuganonima.bandcamp.com/album/imago",
+        "amazonStore": "https://amazon.com/dp/B07ZPDLLKD"
+      },
+      "upc": "8447053054611",
+      "tracks": 10,
+      "releaseDate": "2019-11-22"
+    },
+    "3dd4129a-8c52-80fe-9208-fce213948e1b": {
+      "source": "https://album.link/0cvg3xwxvrzp6",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1sKHdsjlXudKAI9TEOpnbM",
+        "pandora": "https://www.pandora.com/AL:2100249",
+        "deezer": "https://www.deezer.com/album/87518532",
+        "amazonMusic": "https://music.amazon.com/albums/B07NS2NSYK",
+        "tidal": "https://listen.tidal.com/album/104250531",
+        "napster": "https://play.napster.com/album/alb.354325481",
+        "yandex": "https://music.yandex.ru/album/6915643",
+        "boomplay": "https://www.boomplay.com/albums/5057537",
+        "bandcamp": "https://ekleroshock.bandcamp.com/album/l-t-suivant",
+        "amazonStore": "https://amazon.com/dp/B07NS2NSYK"
+      },
+      "upc": "3663729074577",
+      "tracks": 8,
+      "releaseDate": "2019-03-22"
     }
   }
 }

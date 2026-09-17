@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-16T22:58:31Z",
+  "generatedAt": "2026-09-17T01:28:11Z",
   "counts": {
-    "albums": 1354,
-    "artists": 1155,
-    "labels": 720,
+    "albums": 1356,
+    "artists": 1157,
+    "labels": 722,
     "videos": 96
   },
   "albums": [
@@ -40080,6 +40080,37 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-8045-b275-e588487085b2",
+      "slug": "tortuganonima-imago",
+      "artist": "tortuganónima",
+      "album": "Imago",
+      "url": "https://album.link/xfvvzx3f9mmgj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af6cd529c-b2f2-4526-b08d-f86ac57a1cc5%3Aa1874652734_10.jpg?table=block&id=3dd4129a-8c52-8045-b275-e588487085b2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Math Rock",
+        "Post-Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-11-22",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dd4129a-8c52-801a-b9a7-de9f2232d18f"
+      ],
+      "artists": [
+        "tortuganónima"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-80e4-bb1b-cfcb89293620"
+      ],
+      "labels": [
+        "LeRockPsicophonique"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-80eb-8a5c-ed99c67ed646",
       "slug": "brainstory-buck",
       "artist": "Brainstory",
@@ -40764,6 +40795,37 @@
       ],
       "labels": [
         "Delicieuse Records"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-80fe-9208-fce213948e1b",
+      "slug": "limousine-l-ete-suivant",
+      "artist": "Limousine",
+      "album": "L’été suivant...",
+      "url": "https://album.link/0cvg3xwxvrzp6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A97921d24-bc67-4b00-a03c-bd880f89317c%3Aa2043663869_10.jpg?table=block&id=3dd4129a-8c52-80fe-9208-fce213948e1b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Rock",
+        "Contemporary Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-03-22",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3dd4129a-8c52-8027-bf6a-d0997a64371f"
+      ],
+      "artists": [
+        "Limousine"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-8035-9f05-e2e0117bb1fd"
+      ],
+      "labels": [
+        "Ekler"
       ]
     },
     {
@@ -55225,6 +55287,27 @@
       "akaIds": []
     },
     {
+      "id": "3dd4129a-8c52-8027-bf6a-d0997a64371f",
+      "slug": "limousine",
+      "name": "Limousine",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-80fe-9208-fce213948e1b"
+      ],
+      "genres": [
+        "Post-Rock",
+        "Contemporary Jazz"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-8035-9f05-e2e0117bb1fd"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2504129a-8c52-80fe-9961-f1b295a9c602",
       "slug": "lindstr-m",
       "name": "Lindstrøm",
@@ -65794,6 +65877,27 @@
       "akaIds": []
     },
     {
+      "id": "3dd4129a-8c52-801a-b9a7-de9f2232d18f",
+      "slug": "tortuganonima",
+      "name": "tortuganónima",
+      "country": "CL",
+      "bandcamp": "https://tortuganonima.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8045-b275-e588487085b2"
+      ],
+      "genres": [
+        "Math Rock",
+        "Post-Rock"
+      ],
+      "labelIds": [
+        "3dd4129a-8c52-80e4-bb1b-cfcb89293620"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-8016-9c11-e4831dfb97e4",
       "slug": "total-blue",
       "name": "Total Blue",
@@ -71236,6 +71340,21 @@
       ]
     },
     {
+      "id": "3dd4129a-8c52-8035-9f05-e2e0117bb1fd",
+      "slug": "ekler",
+      "name": "Ekler",
+      "country": "FR",
+      "bandcamp": "https://ekler.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-80fe-9208-fce213948e1b"
+      ],
+      "artistIds": [
+        "3dd4129a-8c52-8027-bf6a-d0997a64371f"
+      ]
+    },
+    {
       "id": "3b54129a-8c52-80f3-88fe-d71f993c1674",
       "slug": "el-palmas-music",
       "name": "El Palmas Music",
@@ -73972,6 +74091,21 @@
       ],
       "artistIds": [
         "2484129a-8c52-80f5-b045-dd6a3b874b32"
+      ]
+    },
+    {
+      "id": "3dd4129a-8c52-80e4-bb1b-cfcb89293620",
+      "slug": "lerockpsicophonique",
+      "name": "LeRockPsicophonique",
+      "country": "CL",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3dd4129a-8c52-8045-b275-e588487085b2"
+      ],
+      "artistIds": [
+        "3dd4129a-8c52-801a-b9a7-de9f2232d18f"
       ]
     },
     {

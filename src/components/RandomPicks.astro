@@ -13,12 +13,16 @@
 
    SHOW — сколько видно за раз: восемь, два полных ряда по четыре на
    расчётных 1920. Ряд всегда полный: на трёх столбцах показывается девять,
-   см. пересчёт в скрипте ниже. */
+   см. пересчёт в скрипте ниже.
+
+   SHOW_NARROW — сколько видно на телефоне (до 640): шесть, три ряда по два.
+   С 17 сентября 2026: восемь обложек в два столбца — четыре экрана высоты
+   с лишним, и пока долистаешь до кнопки, верхних уже не видно. */
 
 import AlbumCard from './AlbumCard.astro';
 import Icon from './Icon.astro';
 
-const { pool, show: SHOW = 8, title = 'Random Picks' } = Astro.props;
+const { pool, show: SHOW = 8, showNarrow: SHOW_NARROW = 6, title = 'Random Picks' } = Astro.props;
 const POOL = pool.length;
 ---
 {/* Разворот выбирается здесь, до того как решётка ниже вообще разобрана
@@ -42,7 +46,7 @@ const POOL = pool.length;
     такой же соседний узел, как любой другой, пусть и невидимый: полоса
     переставала видеть решётку, теряла линию и отходила от обложек на 16.
     Работает он одинаково откуда угодно выше решётки. */}
-<script is:inline define:vars={{ SHOW, POOL }}>
+<script is:inline define:vars={{ SHOW, SHOW_NARROW, POOL }}>
   (() => {
     /* Сдвиг считаем шагом в базовые SHOW, а показываем — округлив вверх до
        числа столбцов: на трёх их девять. Стили к этому времени разобраны —
@@ -50,14 +54,16 @@ const POOL = pool.length;
        читается, и первая отрисовка сразу даёт полный ряд. */
     const столбцов =
       Number(getComputedStyle(document.documentElement).getPropertyValue('--cols')) || 4;
-    const видно = Math.ceil(SHOW / столбцов) * столбцов;
+    const база = matchMedia('(max-width: 640px)').matches ? SHOW_NARROW : SHOW;
+    const видно = Math.ceil(база / столбцов) * столбцов;
 
     /* Шагов столько, чтобы самый дальний разворот уместился в пуле целиком.
        Вычитаем не SHOW, а добавку широкого ряда: на трёх столбцах
        показывается девять, и от конца пула нужен запас ровно на эту девятую.
+       На телефоне видно шесть — меньше шага, и вычитать там нечего.
        Без вычитания пул в двести давал последним шагом 192, девятой плитки
        ему не хватало, и ряд обрывался на середине. */
-    const шагов = Math.max(1, Math.floor((POOL - (видно - SHOW)) / SHOW));
+    const шагов = Math.max(1, Math.floor((POOL - Math.max(0, видно - SHOW)) / SHOW));
     const начало = Math.floor(Math.random() * шагов) * SHOW;
 
     document.documentElement.dataset.digStart = начало;
@@ -87,7 +93,7 @@ const POOL = pool.length;
 
   {/* Пул отдаётся целиком, но видны только первые SHOW: без скрипта
       страница показывает осмысленную выборку, а не пустое место. */}
-  <ul class="tiles tiles--auto" id="dig" data-show={SHOW}>
+  <ul class="tiles tiles--auto" id="dig" data-show={SHOW} data-show-narrow={SHOW_NARROW}>
     {pool.map((a, i) => <AlbumCard album={a} hidden={i >= SHOW} />)}
   </ul>
 
@@ -116,6 +122,8 @@ const POOL = pool.length;
   const dig   = document.getElementById('dig');
   const items = Array.from(dig.children);
   const базово = Number(dig.dataset.show) || 8;
+  const наТелефоне = Number(dig.dataset.showNarrow) || базово;
+  const узкий = matchMedia('(max-width: 640px)');
   const agains = document.querySelectorAll('.dig-again');
 
   /* Ряд всегда полный. Столбцов в решётке бывает четыре, три или два — их
@@ -132,8 +140,10 @@ const POOL = pool.length;
 
   let show = базово;
 
+  /* На телефоне база своя — шесть, см. SHOW_NARROW в начале файла. */
   function пересчитать() {
-    show = Math.ceil(базово / столбцов()) * столбцов();
+    const база = узкий.matches ? наТелефоне : базово;
+    show = Math.ceil(база / столбцов()) * столбцов();
   }
 
   пересчитать();

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:33:40Z",
+  "generatedAt": "2026-09-17T18:17:55Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22005,6 +22005,78 @@
       "upc": "3663729117960",
       "tracks": 10,
       "releaseDate": "2020-04-30"
+    },
+    "3de4129a-8c52-8003-9a5e-e97ede6e65b6": {
+      "source": "https://album.link/23djm2rtzq7nz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3mihMKEickUerWqYhi2Vg6",
+        "pandora": "https://www.pandora.com/AL:8923944",
+        "deezer": "https://www.deezer.com/album/254927282",
+        "amazonMusic": "https://music.amazon.com/albums/B09DTFLM5G",
+        "tidal": "https://listen.tidal.com/album/195489532",
+        "napster": "https://play.napster.com/album/alb.608192092",
+        "yandex": "https://music.yandex.ru/album/14857575",
+        "boomplay": "https://www.boomplay.com/albums/31069185",
+        "anghami": "https://play.anghami.com/album/1022212602?refer=linktree",
+        "bandcamp": "https://jaubi.bandcamp.com/album/nafs-at-peace",
+        "amazonStore": "https://amazon.com/dp/B09DTFLM5G"
+      },
+      "upc": "196292343298",
+      "tracks": 7,
+      "releaseDate": "2021-05-28"
+    },
+    "3de4129a-8c52-8053-9868-def025cd80e9": {
+      "source": "https://album.link/tfmw88x0vgm5d",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6rAjOLYMgyddMcP8LLJLcl",
+        "pandora": "https://www.pandora.com/AL:5747038",
+        "deezer": "https://www.deezer.com/album/287207792",
+        "amazonMusic": "https://music.amazon.com/albums/B09QC8Z57Q",
+        "tidal": "https://listen.tidal.com/album/212274481",
+        "napster": "https://play.napster.com/album/alb.638745064",
+        "yandex": "https://music.yandex.ru/album/10959645",
+        "anghami": "https://play.anghami.com/album/1025289420?refer=linktree",
+        "bandcamp": "https://egoellamay.bandcamp.com/album/honey-for-wounds",
+        "amazonStore": "https://amazon.com/dp/B09QC8Z57Q"
+      },
+      "upc": "5059950420395",
+      "tracks": 11,
+      "releaseDate": "2020-06-26"
+    },
+    "3de4129a-8c52-80b2-8d3d-de45692fe380": {
+      "source": "https://album.link/crshqw7gthtmb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6BqQtWIZEpt4HgLF3de81l",
+        "pandora": "https://www.pandora.com/AL:5073418",
+        "deezer": "https://www.deezer.com/album/135478482",
+        "amazonMusic": "https://music.amazon.com/albums/B085RDKNZX",
+        "tidal": "https://listen.tidal.com/album/133939180",
+        "napster": "https://play.napster.com/album/alb.453974958",
+        "yandex": "https://music.yandex.ru/album/10350319",
+        "boomplay": "https://www.boomplay.com/albums/8523959",
+        "anghami": "https://play.anghami.com/album/1011666668?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B085RDKNZX"
+      },
+      "upc": "5050580735699",
+      "tracks": 10,
+      "releaseDate": "2020-05-01"
+    },
+    "3de4129a-8c52-8063-815c-c847fd420ee5": {
+      "source": "https://album.link/3nnvmfw8n2rpg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/058No4Kiz8r284NwzBSBC2",
+        "pandora": "https://www.pandora.com/AL:878746",
+        "deezer": "https://www.deezer.com/album/353510127",
+        "amazonMusic": "https://music.amazon.com/albums/B06Y31WG99",
+        "tidal": "https://listen.tidal.com/album/246567978",
+        "napster": "https://play.napster.com/album/alb.136347103",
+        "yandex": "https://music.yandex.ru/album/6407357",
+        "boomplay": "https://www.boomplay.com/albums/5582245",
+        "amazonStore": "https://amazon.com/dp/B06Y31WG99"
+      },
+      "upc": "5060186922560",
+      "tracks": 12,
+      "releaseDate": "2014-04-07"
     }
   }
 }

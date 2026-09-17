@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-17T13:31:16Z",
+  "generatedAt": "2026-09-17T18:17:25Z",
   "counts": {
-    "albums": 1377,
-    "artists": 1171,
-    "labels": 735,
+    "albums": 1381,
+    "artists": 1174,
+    "labels": 738,
     "videos": 96
   },
   "albums": [
@@ -20977,7 +20977,6 @@
       "url": "https://album.link/wtggmtfsjrnbp",
       "cover": "https://antbrigade.notion.site/image/attachment%3A04cc2401-a908-4d46-99e6-09e17e73ce92%3Aphoto_2025-08-15_17-07-09.jpg?table=block&id=6332185a-724e-4ae5-94e8-cdbaf780a758&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Jazz",
         "Contemporary Jazz",
         "Jazz Fusion",
         "World Music"
@@ -36437,6 +36436,39 @@
       ]
     },
     {
+      "id": "3de4129a-8c52-8003-9a5e-e97ede6e65b6",
+      "slug": "jaubi-nafs-at-peace",
+      "artist": "Jaubi",
+      "album": "Nafs at Peace",
+      "url": "https://album.link/23djm2rtzq7nz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A03ad1fce-5181-4abb-af3a-590fea04b897%3Aa0027061803_10.jpg?table=block&id=3de4129a-8c52-8003-9a5e-e97ede6e65b6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Spiritual Jazz",
+        "Indo Jazz",
+        "World Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-28",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80ef-bcb3-d445324f7493"
+      ],
+      "artists": [
+        "Jaubi"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80b8-ba92-e97678ff94f4"
+      ],
+      "labels": [
+        "Astigmatic Records"
+      ]
+    },
+    {
       "id": "3dc4129a-8c52-8091-90c9-e8ac77d36304",
       "slug": "portico-quartet-terrain",
       "artist": "Portico Quartet",
@@ -39195,6 +39227,37 @@
       ]
     },
     {
+      "id": "3de4129a-8c52-8053-9868-def025cd80e9",
+      "slug": "ego-ella-may-honey-for-wounds",
+      "artist": "Ego Ella May",
+      "album": "Honey for Wounds",
+      "url": "https://album.link/tfmw88x0vgm5d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A49bf413e-80da-4e71-85d4-d7df8c256dbf%3Aa2273912853_10.jpg?table=block&id=3de4129a-8c52-8053-9868-def025cd80e9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Sophisti-Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-06-26",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3de4129a-8c52-8098-a462-ecfa72ac3e8a"
+      ],
+      "artists": [
+        "Ego Ella May"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "f16e9641-bf53-475e-8450-e22c864cd19e",
       "slug": "futuro-terror-sangre",
       "artist": "Futuro Terror",
@@ -39637,6 +39700,36 @@
       ]
     },
     {
+      "id": "3de4129a-8c52-80b2-8d3d-de45692fe380",
+      "slug": "cantoma-into-daylight",
+      "artist": "Cantoma",
+      "album": "Into Daylight",
+      "url": "https://album.link/crshqw7gthtmb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af80a1d8f-bbcf-4a6a-95ad-366f7ff258e4%3Aa2840543477_10.jpg?table=block&id=3de4129a-8c52-80b2-8d3d-de45692fe380&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-05-01",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3de4129a-8c52-80c4-affe-f32a1c3a2a96"
+      ],
+      "artists": [
+        "Cantoma"
+      ],
+      "labelIds": [
+        "3de4129a-8c52-80c2-890e-d80e19015442"
+      ],
+      "labels": [
+        "Highwood Recordings"
+      ]
+    },
+    {
       "id": "3d74129a-8c52-80f2-ba12-d60a6e49cd0a",
       "slug": "karate-boogaloo",
       "artist": "Karate Boogaloo |",
@@ -39730,6 +39823,38 @@
       ],
       "labels": [
         "Wondercore Island"
+      ]
+    },
+    {
+      "id": "3de4129a-8c52-8056-9e76-df333e29aa0a",
+      "slug": "jupiter-hey-there",
+      "artist": "Jupiter",
+      "album": "“Hey There”",
+      "url": "https://album.link/tb4k86hznwgwt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5edf9513-a220-4bd8-80e0-5695a30b986a%3Aa0103471519_10.jpg?table=block&id=3de4129a-8c52-8056-9e76-df333e29aa0a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Electro-Disco",
+        "Funktronica",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-04-30",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3de4129a-8c52-8050-b38b-ef0e67a43ad5"
+      ],
+      "artists": [
+        "Jupiter"
+      ],
+      "labelIds": [
+        "3de4129a-8c52-80f4-bd0e-e231f9d8865e"
+      ],
+      "labels": [
+        "Grand Blanc"
       ]
     },
     {
@@ -42818,6 +42943,38 @@
       ]
     },
     {
+      "id": "3de4129a-8c52-8063-815c-c847fd420ee5",
+      "slug": "todd-terje-it-s-album-time",
+      "artist": "Todd Terje",
+      "album": "It’s Album Time",
+      "url": "https://album.link/3nnvmfw8n2rpg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A019fb5f1-7d8a-490c-aa56-962d976c2a4e%3Aab67616d0000b273ef57e636952c4099cf13c6b5.jpg?table=block&id=3de4129a-8c52-8063-815c-c847fd420ee5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Electro-Disco",
+        "Electro House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2014-04-07",
+      "year": 2014,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3de4129a-8c52-80ed-bfa2-faabe4e91c95"
+      ],
+      "artists": [
+        "Todd Terje"
+      ],
+      "labelIds": [
+        "3de4129a-8c52-80ab-a0a4-fe1e4f643149"
+      ],
+      "labels": [
+        "Olsen Records"
+      ]
+    },
+    {
       "id": "3dc4129a-8c52-80e2-92b7-da6a78948c90",
       "slug": "the-delegators-all-aboard",
       "artist": "The Delegators",
@@ -43348,32 +43505,6 @@
       "labels": [
         "Vlad"
       ]
-    },
-    {
-      "id": "3de4129a-8c52-8056-9e76-df333e29aa0a",
-      "slug": "jupiter-hey-there",
-      "artist": "Jupiter",
-      "album": "“Hey There”",
-      "url": "https://album.link/tb4k86hznwgwt",
-      "cover": "https://antbrigade.notion.site/image/attachment%3A5edf9513-a220-4bd8-80e0-5695a30b986a%3Aa0103471519_10.jpg?table=block&id=3de4129a-8c52-8056-9e76-df333e29aa0a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "genres": [
-        "Electro-Disco"
-      ],
-      "types": [
-        "Album"
-      ],
-      "released": null,
-      "year": null,
-      "origYear": null,
-      "playlists": [],
-      "artistIds": [
-        "3de4129a-8c52-8050-b38b-ef0e67a43ad5"
-      ],
-      "artists": [
-        "Jupiter"
-      ],
-      "labelIds": [],
-      "labels": []
     }
   ],
   "artists": [
@@ -46591,6 +46722,26 @@
       "akaIds": []
     },
     {
+      "id": "3de4129a-8c52-80c4-affe-f32a1c3a2a96",
+      "slug": "cantoma",
+      "name": "Cantoma",
+      "country": "GB",
+      "bandcamp": "https://cantomamusic.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-80b2-8d3d-de45692fe380"
+      ],
+      "genres": [
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3de4129a-8c52-80c2-890e-d80e19015442"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2bf4129a-8c52-80c7-9c18-e44459d2d2ff",
       "slug": "caoilfhionn-rose",
       "name": "Caoilfhionn Rose",
@@ -49755,6 +49906,27 @@
       ],
       "labelIds": [
         "2bd4129a-8c52-80d5-8d04-f4ce765e8ae0"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3de4129a-8c52-8098-a462-ecfa72ac3e8a",
+      "slug": "ego-ella-may",
+      "name": "Ego Ella May",
+      "country": "GB",
+      "bandcamp": "https://egoellamay.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-8053-9868-def025cd80e9"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Sophisti-Pop"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": [],
       "akaIds": []
@@ -53653,20 +53825,23 @@
       "slug": "jaubi",
       "name": "Jaubi",
       "country": "PK",
-      "bandcamp": null,
+      "bandcamp": "https://jaubi.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "6332185a-724e-4ae5-94e8-cdbaf780a758"
+        "6332185a-724e-4ae5-94e8-cdbaf780a758",
+        "3de4129a-8c52-8003-9a5e-e97ede6e65b6"
       ],
       "genres": [
-        "Jazz",
         "Contemporary Jazz",
         "Jazz Fusion",
-        "World Music"
+        "World Music",
+        "Spiritual Jazz",
+        "Indo Jazz"
       ],
       "labelIds": [
-        "2504129a-8c52-80e8-9f37-f905067969bd"
+        "2504129a-8c52-80e8-9f37-f905067969bd",
+        "2434129a-8c52-80b8-ba92-e97678ff94f4"
       ],
       "videoIds": [],
       "akaIds": []
@@ -54418,16 +54593,20 @@
       "slug": "jupiter",
       "name": "Jupiter",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://jupiterstore.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
         "3de4129a-8c52-8056-9e76-df333e29aa0a"
       ],
       "genres": [
-        "Electro-Disco"
+        "Electro-Disco",
+        "Funktronica",
+        "Nu-Disco"
       ],
-      "labelIds": [],
+      "labelIds": [
+        "3de4129a-8c52-80f4-bd0e-e231f9d8865e"
+      ],
       "videoIds": [],
       "akaIds": []
     },
@@ -66549,6 +66728,28 @@
       "akaIds": []
     },
     {
+      "id": "3de4129a-8c52-80ed-bfa2-faabe4e91c95",
+      "slug": "todd-terje",
+      "name": "Todd Terje",
+      "country": "NO",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-8063-815c-c847fd420ee5"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "Electro-Disco",
+        "Electro House"
+      ],
+      "labelIds": [
+        "3de4129a-8c52-80ab-a0a4-fe1e4f643149"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2b44129a-8c52-8094-910d-ed853d29b11f",
       "slug": "todos-mis-amigos-estan-tristes",
       "name": "Todos Mis Amigos Están Tristes",
@@ -69690,13 +69891,15 @@
         "11b4129a-8c52-80a7-bd9c-eb44ebfe2867",
         "d73f2bc3-1137-417d-a4f9-bd5df904aece",
         "0e69c201-f7a2-4037-a4d2-a53b22044168",
+        "3de4129a-8c52-8003-9a5e-e97ede6e65b6",
         "3d84129a-8c52-807f-824e-cc99b753823b"
       ],
       "artistIds": [
         "2cc4129a-8c52-8018-864a-d85adaa92404",
         "2424129a-8c52-80ba-b5f9-de57ff674937",
         "2434129a-8c52-80cd-881a-dd488e479cb3",
-        "2514129a-8c52-8014-96ee-e03dc7776b3b"
+        "2514129a-8c52-8014-96ee-e03dc7776b3b",
+        "2504129a-8c52-80ef-bcb3-d445324f7493"
       ]
     },
     {
@@ -73358,6 +73561,21 @@
       ]
     },
     {
+      "id": "3de4129a-8c52-80f4-bd0e-e231f9d8865e",
+      "slug": "grand-blanc",
+      "name": "Grand Blanc",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-8056-9e76-df333e29aa0a"
+      ],
+      "artistIds": [
+        "3de4129a-8c52-8050-b38b-ef0e67a43ad5"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-80c3-adc7-fb060cc7c552",
       "slug": "greco-roman",
       "name": "Greco-Roman",
@@ -73754,6 +73972,21 @@
       ],
       "artistIds": [
         "3514129a-8c52-80e5-8d5e-d406da581028"
+      ]
+    },
+    {
+      "id": "3de4129a-8c52-80c2-890e-d80e19015442",
+      "slug": "highwood-recordings",
+      "name": "Highwood Recordings",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-80b2-8d3d-de45692fe380"
+      ],
+      "artistIds": [
+        "3de4129a-8c52-80c4-affe-f32a1c3a2a96"
       ]
     },
     {
@@ -76753,6 +76986,7 @@
         "fcda5233-f95e-45b4-a1ab-b499a6a810f9",
         "3db4129a-8c52-8059-8d99-f5cce8e91769",
         "3dc4129a-8c52-80be-8198-d6c58fce505b",
+        "3de4129a-8c52-8053-9868-def025cd80e9",
         "3da4129a-8c52-80b2-9599-f4f2e341839c",
         "c70f158e-28b6-4339-af37-348710c79313",
         "3db4129a-8c52-805f-b4a8-d50c6242631b",
@@ -76866,6 +77100,7 @@
         "2524129a-8c52-801b-820d-f48f3d34ffba",
         "3db4129a-8c52-806e-97a0-ef5918dc28ff",
         "3dc4129a-8c52-807e-a18c-e33eb5123328",
+        "3de4129a-8c52-8098-a462-ecfa72ac3e8a",
         "3da4129a-8c52-8097-a6e2-c31a14f69492",
         "2514129a-8c52-8081-a43f-ef9abfc4c641",
         "3db4129a-8c52-80e5-8894-dad769b3a8b1",
@@ -77008,6 +77243,21 @@
       ],
       "artistIds": [
         "2524129a-8c52-802c-9d08-c799849553e3"
+      ]
+    },
+    {
+      "id": "3de4129a-8c52-80ab-a0a4-fe1e4f643149",
+      "slug": "olsen-records",
+      "name": "Olsen Records",
+      "country": "NO",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3de4129a-8c52-8063-815c-c847fd420ee5"
+      ],
+      "artistIds": [
+        "3de4129a-8c52-80ed-bfa2-faabe4e91c95"
       ]
     },
     {

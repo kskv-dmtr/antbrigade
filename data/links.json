@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T18:17:55Z",
+  "generatedAt": "2026-09-17T21:31:45Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22077,6 +22077,144 @@
       "upc": "5060186922560",
       "tracks": 12,
       "releaseDate": "2014-04-07"
+    },
+    "3de4129a-8c52-8048-b13c-edf5cf74f6d7": {
+      "source": "https://album.link/x8rzg6f5tpgvb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6Md4bFFy49yYCQ0VHCO4tt",
+        "pandora": "https://www.pandora.com/AL:9304919",
+        "deezer": "https://www.deezer.com/album/407518277",
+        "amazonMusic": "https://music.amazon.com/albums/B0BVSM81PM",
+        "tidal": "https://listen.tidal.com/album/276693907",
+        "napster": "https://play.napster.com/album/alb.744527347",
+        "yandex": "https://music.yandex.ru/album/24925472",
+        "boomplay": "https://www.boomplay.com/albums/25507405",
+        "anghami": "https://play.anghami.com/album/1036362327?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0BVSM81PM"
+      },
+      "upc": "3617056550761",
+      "tracks": 11,
+      "releaseDate": "2021-06-11"
+    },
+    "3de4129a-8c52-800d-ac50-fcc61d5f31bf": {
+      "source": "https://album.link/d0v2ckzj0vkbw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4D27p1LbIS5mdcdreJWRda",
+        "pandora": "https://www.pandora.com/AL:9003607",
+        "deezer": "https://www.deezer.com/album/223930632",
+        "amazonMusic": "https://music.amazon.com/albums/B092W54CDG",
+        "tidal": "https://listen.tidal.com/album/181156009",
+        "napster": "https://play.napster.com/album/alb.575920749",
+        "yandex": "https://music.yandex.ru/album/15285532",
+        "bandcamp": "https://fourfliesrecords.bandcamp.com/album/ufo-bar",
+        "amazonStore": "https://amazon.com/dp/B092W54CDG"
+      },
+      "upc": "0652733753052",
+      "tracks": 8,
+      "releaseDate": "2021-05-14"
+    },
+    "3de4129a-8c52-805e-9c35-eeee71e431d4": {
+      "source": "https://album.link/7ksbwtvcxn2hb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3VsUWS2gfK7sssBs0sSzZ1",
+        "pandora": "https://www.pandora.com/AL:8179305",
+        "deezer": "https://www.deezer.com/album/356435297",
+        "amazonMusic": "https://music.amazon.com/albums/B0FD864594",
+        "tidal": "https://listen.tidal.com/album/442133262",
+        "napster": "https://play.napster.com/album/alb.559061195",
+        "yandex": "https://music.yandex.ru/album/13829295",
+        "boomplay": "https://www.boomplay.com/albums/21293589",
+        "amazonStore": "https://amazon.com/dp/B0FD864594"
+      },
+      "upc": "886449085446",
+      "tracks": 10,
+      "releaseDate": "2021-04-23"
+    },
+    "3de4129a-8c52-80a7-8d6c-c0f33c243e12": {
+      "source": "https://album.link/vnc4fqbzxr6tr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/27jNgBWNJvSDtbqqvbHf6g",
+        "pandora": "https://www.pandora.com/AL:5742206",
+        "deezer": "https://www.deezer.com/album/152846242",
+        "amazonMusic": "https://music.amazon.com/albums/B089QN1DHN",
+        "tidal": "https://listen.tidal.com/album/184856248",
+        "napster": "https://play.napster.com/album/alb.506702264",
+        "yandex": "https://music.yandex.ru/album/10970542",
+        "boomplay": "https://www.boomplay.com/albums/12786492",
+        "anghami": "https://play.anghami.com/album/1012942107?refer=linktree",
+        "bandcamp": "https://prequel.bandcamp.com/album/love-or-i-heard-you-like-heartbreak",
+        "amazonStore": "https://amazon.com/dp/B089QN1DHN"
+      },
+      "upc": "4062548012729",
+      "tracks": 12,
+      "releaseDate": "2021-03-19"
+    },
+    "3de4129a-8c52-8065-9010-c434b0155f0c": {
+      "source": "https://album.link/5hpfcm2fjdtmb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3QAqLB0l9c1OD2GG2fsW5F",
+        "pandora": "https://www.pandora.com/AL:4992296",
+        "deezer": "https://www.deezer.com/album/137475382",
+        "amazonMusic": "https://music.amazon.com/albums/B0867XF84M",
+        "tidal": "https://listen.tidal.com/album/134998165",
+        "napster": "https://play.napster.com/album/alb.457072517",
+        "yandex": "https://music.yandex.ru/album/10212280",
+        "boomplay": "https://www.boomplay.com/albums/8965155",
+        "anghami": "https://play.anghami.com/album/1011378589?refer=linktree",
+        "bandcamp": "https://holyhivemusic.bandcamp.com/album/float-back-to-you",
+        "amazonStore": "https://amazon.com/dp/B0867XF84M"
+      },
+      "upc": "349223007831",
+      "tracks": 12,
+      "releaseDate": "2020-05-29"
+    },
+    "3de4129a-8c52-8028-9fe1-e4a69ac4daf7": {
+      "source": "https://album.link/p7rq9jjmz2vg2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2cQnpiurM4NX99E1Lb5ljS",
+        "pandora": "https://www.pandora.com/AL:4854719",
+        "amazonMusic": "https://music.amazon.com/albums/B084161HBB",
+        "tidal": "https://listen.tidal.com/album/128629218",
+        "yandex": "https://music.yandex.ru/album/9680017",
+        "amazonStore": "https://amazon.com/dp/B084161HBB"
+      },
+      "upc": "5050580729995",
+      "tracks": 10,
+      "releaseDate": "2020-01-14"
+    },
+    "3de4129a-8c52-8002-b5f2-e6b8086209fc": {
+      "source": "https://album.link/wz3m87rfzg8hj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4W4gNYa4tt3t8V6FmONWEK",
+        "pandora": "https://www.pandora.com/AL:2742433",
+        "deezer": "https://www.deezer.com/album/104755862",
+        "amazonMusic": "https://music.amazon.com/albums/B07VL68Q7J",
+        "tidal": "https://listen.tidal.com/album/113866499",
+        "napster": "https://play.napster.com/album/alb.393777657",
+        "yandex": "https://music.yandex.ru/album/36422830",
+        "boomplay": "https://www.boomplay.com/albums/8623527",
+        "anghami": "https://play.anghami.com/album/1007794577?refer=linktree",
+        "bandcamp": "https://menitrust.bandcamp.com/album/oncle-jazz",
+        "amazonStore": "https://amazon.com/dp/B07VL68Q7J"
+      },
+      "upc": "194616709379",
+      "tracks": 24,
+      "releaseDate": "2019-09-13"
+    },
+    "3de4129a-8c52-8051-9d00-ed1642ae3ff8": {
+      "source": "https://album.link/kvwjcprd72hzf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1aBmGushgZyoyUAnSBFmik",
+        "deezer": "https://www.deezer.com/album/349872097",
+        "amazonMusic": "https://music.amazon.com/albums/B0BBXCVTM4",
+        "tidal": "https://listen.tidal.com/album/372221111",
+        "anghami": "https://play.anghami.com/album/1031404213?refer=linktree",
+        "bandcamp": "https://patrickholland.bandcamp.com/album/come-to-canada-you-will-like-it",
+        "amazonStore": "https://amazon.com/dp/B0BBXCVTM4"
+      },
+      "upc": "8718723104050",
+      "tracks": 10,
+      "releaseDate": "2018-06-22"
     }
   }
 }

@@ -4961,7 +4961,10 @@ html:not([data-js]) .more { display: none; }
     padding: 0 0 0 calc(var(--pad) + 1px);
     font-family: var(--mono);
     font-size: max(13px, 0.8125rem);
-    font-weight: 500;
+
+    /* 400, как ссылки на жанры и лейблы, а не 500, как Grid / List рядом:
+       в 500 слово читалось темнее ссылок (18 сентября 2026, владелец). */
+    font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--fg-muted);

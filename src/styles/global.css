@@ -5126,7 +5126,17 @@ html:not([data-js]) .more { display: none; }
     margin: 0 calc(var(--pad) * -1);
     padding: var(--pad) var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
     background: var(--bg);
+
+    /* Линия над блоком кнопки во всю ширину шторки — как над «Dig again»
+       на витрине (18 сентября 2026, просьба владельца). */
+    border-top: 1px solid var(--line);
   }
+
+  /* Мягкая черта под последним отбором легла бы вплотную к линии над
+     кнопкой — у последнего видимого отбора её нет. Последний видимый — тот,
+     за которым стоит скрытый вид или сразу низ шторки. */
+  [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
+  [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
   .filters-row__apply {
     display: flex;
     align-items: center;
@@ -5148,6 +5158,22 @@ html:not([data-js]) .more { display: none; }
     background: var(--ink);
     color: var(--ink-fg);
     border-color: var(--ink);
+  }
+
+  /* Цвет из жеребьёвки — как у «Dig again»: по наведению и по нажатию. */
+  @media (hover: hover) {
+    .filters-row__apply[data-hot]:hover {
+      background: var(--hot);
+      color: var(--hot-fg);
+      border-color: var(--hot);
+    }
+  }
+  @media (hover: none) {
+    .filters-row__apply[data-hot]:active {
+      background: var(--hot);
+      color: var(--hot-fg);
+      border-color: var(--hot);
+    }
   }
 
   /* Вид в шторке не повторяем: он стоит в самой полосе. */

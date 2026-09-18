@@ -4495,14 +4495,34 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-dim);
     text-transform: none;
   }
-  [data-js] .masthead .nav .nav__foot a {
+  /* Ссылки — как в подвале: приглушённые, с волосом под словом, по нажатию
+     и наведению — выворотка. Отличаться от подвала им не с чего: это те же
+     ссылки. Селектор через p — ради веса: правило меню «у последней
+     ссылки линии нет» иначе снимало волос у @antbrigade_rar, последней в
+     своей группе. */
+  [data-js] .masthead .nav .nav__foot p a {
     display: inline;
     padding: 0;
-    border-bottom: 0;
     color: var(--fg-muted);
+    border-bottom: 1px solid var(--line);
   }
+  @media (hover: hover) {
+    [data-js] .masthead .nav .nav__foot a:hover {
+      background: var(--ink);
+      color: var(--ink-fg);
+      border-bottom-color: transparent;
+    }
+  }
+  [data-js] .masthead .nav .nav__foot a:active,
+  [data-js] .masthead .nav .nav__foot a:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-bottom-color: transparent;
+  }
+
+  /* Между группами — 20 пикселей ровно, числом, а не в rem. */
   .nav__foot p { margin: 0; }
-  .nav__foot p + p { margin-top: 1.25rem; }
+  .nav__foot p + p { margin-top: 20px; }
 
   /* Шапка на телефоне уезжает вверх при прокрутке вниз и возвращается при
      прокрутке вверх — по образцу dsgners.ru, с тем же ходом: 0,15 секунды.

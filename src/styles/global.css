@@ -4651,6 +4651,11 @@ html:not([data-js]) .more { display: none; }
     background: var(--bg);
   }
   [data-js] .masthead[data-open] .nav { display: flex; }
+
+  /* Открытое меню и шапка — один экран: линия под шапкой на это время
+     гаснет (18 сентября 2026, просьба владельца). Цвет, а не толщина:
+     высота шапки не меняется, и меню, стоящее по --head-h, не сдвигается. */
+  [data-js] .masthead[data-open] { border-bottom-color: transparent; }
   [data-js]:has(.masthead[data-open]) { overflow: hidden; }
 
   /* Низ меню — всё, что в подвале: описание, каналы, подпись со знаком

@@ -1086,29 +1086,51 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           ящикЭл.setAttribute('data-open', '');
           // Страницу под панелью не прокручиваем — но и полосу прокрутки не
           // прячем (см. стоп() ниже).
-          addEventListener('wheel', стоп, { passive: false });
-          addEventListener('touchmove', стоп, { passive: false });
+          замок = scrollY;
+          addEventListener('wheel', колесо, { passive: false });
+          addEventListener('touchmove', палец, { passive: false });
+          addEventListener('scroll', держать);
           тень?.setAttribute('data-open', '');
           полеЯщика?.focus();
           полеЯщика?.select();
         } else {
           ящикЭл.removeAttribute('data-open');
           тень?.removeAttribute('data-open');
-          removeEventListener('wheel', стоп);
-          removeEventListener('touchmove', стоп);
+          removeEventListener('wheel', колесо);
+          removeEventListener('touchmove', палец);
+          removeEventListener('scroll', держать);
           полеЯщика?.blur();
         }
       }
       const открыт = () => Boolean(ящикЭл?.hasAttribute('data-open'));
 
-      /* Прокрутка страницы под панелью гасится здесь, а не overflow: hidden
-         на <html>: тот убирал полосу прокрутки, и на её месте справа от
-         панели оставалась пустая колея — линия под полем обрывалась в 15
-         от края экрана (19 сентября 2026). Теперь полоса на месте, линия
-         доходит до неё. Колесо и палец внутри панели работают — там
-         прокручиваются находки. */
-      function стоп(e) {
-        if (!ящикЭл.contains(e.target)) e.preventDefault();
+      /* Страница под открытой панелью не прокручивается ничем (19 сентября
+         2026, просьба владельца). Не overflow: hidden на <html>: тот убирал
+         полосу прокрутки, и на её месте справа от панели оставалась пустая
+         колея — линия под полем обрывалась, не доходя до края. Поэтому:
+
+         — колесо гасится всегда, а список находок прокручиваем сами на ту же
+           величину: иначе над полем и подсказками, и когда список дошёл до
+           конца, прокрутка уходила на страницу;
+         — палец гасится везде, кроме списка находок (у того overscroll-
+           behavior: contain — дальше списка движение не идёт);
+         — что прорвалось мимо (клавиши, перетаскивание полосы), держать()
+           возвращает на место, где страница стояла при открытии. */
+      let замок = 0;
+      const находки = () => ящикЭл.querySelector('.search__found');
+      function колесо(e) {
+        e.preventDefault();
+        const список = находки();
+        if (список && список.contains(e.target)) {
+          список.scrollTop += e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+        }
+      }
+      function палец(e) {
+        const список = находки();
+        if (!(список && список.contains(e.target))) e.preventDefault();
+      }
+      function держать() {
+        if (scrollY !== замок) scrollTo(0, замок);
       }
 
       ящикЭл?.querySelector('.search__close')?.addEventListener('click', () => {

@@ -5360,11 +5360,15 @@ html:not([data-js]) .more { display: none; }
   border-top: 1px solid var(--line);
 }
 
-/* Мягкая черта под последним отбором легла бы вплотную к линии над
-   кнопкой — у последнего видимого отбора её нет. Последний видимый — тот,
-   за которым стоит скрытый вид или сразу низ шторки. */
-[data-js] .filters-row__set .filter:has(+ .filter .view-pick),
-[data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
+/* На телефоне мягкая черта под последним отбором легла бы вплотную к линии
+   над кнопкой — у последнего видимого отбора её там нет. Последний
+   видимый — тот, за которым стоит скрытый вид или сразу низ шторки. На
+   широком экране Apply прижат к низу панели, и черта под последним
+   отбором (Year) остаётся (19 сентября 2026, просьба владельца). */
+@media (max-width: 640px) {
+  [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
+  [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
+}
 .filters-row__apply {
   display: flex;
   align-items: center;

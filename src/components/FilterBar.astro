@@ -137,6 +137,32 @@ import ViewSwitch from './ViewSwitch.astro';
     const набор = полоса.querySelector('.filters-row__set');
     const списки = [...набор.querySelectorAll('details.multi')];
 
+    /* Раскрытый список в шторке прокручивается сам, а всё остальное стоит
+       на месте: заголовок, строки отборов под списком (раскрыли жанр — год
+       остаётся внизу на виду и нажимается) и Apply (19 сентября 2026,
+       просьба владельца). Высота списка — остаток: вся высота шторки
+       (на телефоне — её потолок, 85 % экрана) минус всё, что в ней стоит,
+       пока сам список сжат в ноль. Не меньше 96 — хотя бы три пункта. */
+    function уместить() {
+      const открытый = набор.querySelector('details.multi[open] .multi__list, .filters-row__pick:not([hidden]) .multi__list');
+      for (const л of набор.querySelectorAll('.multi__list')) {
+        if (л !== открытый) { л.style.maxHeight = ''; л.style.overflowY = ''; }
+      }
+      if (!открытый) return;
+
+      открытый.style.maxHeight = '0px';
+      const потолок = getComputedStyle(набор).maxHeight;
+      // Потолок на телефоне считается с рамкой сверху — её пиксель вычитаем.
+      const рамка = parseFloat(getComputedStyle(набор).borderTopWidth) || 0;
+      const предел = потолок !== 'none' ? parseFloat(потолок) - рамка : набор.clientHeight;
+      let занято = 0;
+      for (const ч of набор.children) занято += ч.getBoundingClientRect().height;
+      // Вниз до целого: дробные высоты строк иначе давали шторке лишний
+      // пиксель прокрутки.
+      открытый.style.maxHeight = Math.max(Math.floor(предел - занято), 96) + 'px';
+      открытый.style.overflowY = 'auto';
+    }
+
     /* Сортировка в шторке — раскрывающимся списком, как тип, жанр и год
        (18 сентября 2026, просьба владельца). Системный <select> открывал
        на телефоне выбор во весь экран. Пункты собираем из его же <option>,
@@ -181,6 +207,7 @@ import ViewSwitch from './ViewSwitch.astro';
         панель.hidden = !on;
         коробка.toggleAttribute('data-open', on);
         if (on) for (const с of списки) с.open = false;
+        уместить();
       };
       коробка._раскрыть = раскрыть;
 
@@ -207,7 +234,8 @@ import ViewSwitch from './ViewSwitch.astro';
       const сдвиг = строка.getBoundingClientRect().left - список.getBoundingClientRect().left;
       панель.style.marginLeft = сдвиг + 'px';
     };
-    for (const с of списки) с.addEventListener('toggle', () => вширь(с));
+    for (const с of списки) с.addEventListener('toggle', () => { вширь(с); уместить(); });
+    addEventListener('resize', () => уместить(), { passive: true });
     addEventListener('resize', () => { for (const с of списки) вширь(с); });
 
     /* Нажимается вся строка отбора, а не только кнопка справа: имя слева
@@ -255,6 +283,8 @@ import ViewSwitch from './ViewSwitch.astro';
     const отметить = () => {
       полоса.toggleAttribute('data-dirty', выбрано());
       счёт();
+      // Появился или пропал Apply — места под раскрытый список стало иначе.
+      уместить();
     };
 
     /* Сортировка на широком экране — в самой полосе, рядом с Grid / List, а в

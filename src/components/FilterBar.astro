@@ -44,6 +44,14 @@ import ViewSwitch from './ViewSwitch.astro';
       </button>
     </div>
     <slot />
+
+    {/* Кнопка внизу шторки (18 сентября 2026, просьба владельца). Отборы
+        срабатывают сразу, по выбору, — Apply закрывает шторку и, если страница
+        уже ушла ниже начала списка, возвращает к нему: найденное начинается
+        сверху. */}
+    <div class="filters-row__foot">
+      <button type="button" class="filters-row__apply">Apply</button>
+    </div>
   </div>
 
   {/* Переключатель вида на телефоне стоит в самой полосе, справа, а в шторке
@@ -79,6 +87,12 @@ import ViewSwitch from './ViewSwitch.astro';
       кнопка.focus();
     });
     полоса.querySelector('.filters-row__scrim')?.addEventListener('click', () => шторка(false));
+
+    полоса.querySelector('.filters-row__apply')?.addEventListener('click', () => {
+      шторка(false);
+      const верх = полоса.getBoundingClientRect().top;
+      if (верх < 0) scrollTo({ top: scrollY + верх, behavior: 'smooth' });
+    });
 
     addEventListener('keydown', (e) => {
       if (e.key !== 'Escape' || !полоса.hasAttribute('data-sheet')) return;

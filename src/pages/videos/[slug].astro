@@ -44,7 +44,7 @@ const dateText = formatDate(video.released);
 
 /* Вид ролика и дата одной строкой под названием: «Official Video ·
    September 6, 2023» — как тип и дата у релиза. */
-const выпуск = [video.kind, dateText].filter(Boolean).join(' · ');
+const вид = video.kind;
 
 /* Год оригинала — у роликов, выложенных много позже съёмки. Показывается
    только здесь: порядок в списках держит released, как и у релиза.
@@ -134,7 +134,11 @@ const releases = [...new Map(
               </>
             ))}
 
-            {выпуск && <>{' · '}{выпуск}</>}
+            {/* Дата неразрывная: переносится целиком, а не рвётся на «September»
+                и «11, 2026» (18 сентября 2026, просьба владельца). */}
+            {[вид, dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть) => (
+              <>{' · '}{часть}</>
+            ))}
             {origText && <span class="item__faint"> · originally {origText}</span>}
           </p>
         </div>

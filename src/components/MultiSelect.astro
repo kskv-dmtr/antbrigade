@@ -83,9 +83,11 @@ const блоки = [{ axis, items }];
     const chosen = (root) =>
       [...root.querySelectorAll('input:checked')];
 
-    /* Подпись на кнопке: ничего не выбрано — «All genres», один пункт — его
-       собственное имя, несколько — «Genres [3]». Число вместо перечисления
-       потому, что кнопка узкая и три названия в неё всё равно не влезут. */
+    /* Подпись на кнопке: ничего не выбрано — «All», один пункт — его
+       собственное имя, несколько — только счётчик, «[3]». Число вместо
+       перечисления потому, что кнопка узкая и три названия в неё всё равно не
+       влезут. Слово перед счётчиком («Chosen [3]») убрано 18 сентября 2026 по
+       просьбе владельца: data-many в разметке остался, но не выводится. */
     function label(root) {
       const marked = chosen(root);
       const text = root.querySelector('.multi__label');
@@ -94,7 +96,7 @@ const блоки = [{ axis, items }];
         const item = marked[0].closest('.multi__item');
         text.textContent = `${item.querySelector('.multi__name').textContent} ${item.querySelector('.multi__count').textContent}`;
       }
-      else                          text.textContent = `${root.dataset.many} [${marked.length}]`;
+      else                          text.textContent = `[${marked.length}]`;
 
       /* Крестик появляется вместо шеврона; сам шеврон прячет CSS по этому
          же признаку. */

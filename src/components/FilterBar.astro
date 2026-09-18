@@ -24,7 +24,9 @@ import Icon from './Icon.astro';
 import ViewSwitch from './ViewSwitch.astro';
 ---
 <div class="filters-row">
-  <span class="filters-row__name">Filters</span>
+  {/* Счётчик применённых отборов — в квадратных скобках за словом, на всех
+      ширинах (18 сентября 2026, просьба владельца). Пишет его скрипт ниже. */}
+  <span class="filters-row__name">Filters<span class="filters-row__count"></span></span>
 
   <button
     type="button"
@@ -34,7 +36,7 @@ import ViewSwitch from './ViewSwitch.astro';
   >
     {/* Подпись без треугольника, набрана как Grid / List справа (18 сентября
         2026, просьба владельца): линия под словом — у открытой шторки. */}
-    <span class="filters-row__label">Filters</span>
+    <span class="filters-row__label">Filters<span class="filters-row__count"></span></span>
   </button>
 
   <div class="filters-row__set" id="filters-sheet" role="dialog" aria-label="Filters">
@@ -215,7 +217,20 @@ import ViewSwitch from './ViewSwitch.astro';
         const исходный = [...поле.options].find((о) => о.defaultSelected) ?? поле.options[0];
         return поле.value !== исходный?.value;
       });
-    const отметить = () => полоса.toggleAttribute('data-dirty', выбрано());
+    /* Счётчик за словом Filters: сколько пунктов отмечено во всех отборах
+       вместе. Сортировка — не отбор, её не считаем. Пусто, пока не отмечено
+       ничего. */
+    const счёт = () => {
+      const n = набор.querySelectorAll('.multi input:checked').length;
+      for (const место of полоса.querySelectorAll('.filters-row__count')) {
+        место.textContent = n ? ` [${n}]` : '';
+      }
+    };
+
+    const отметить = () => {
+      полоса.toggleAttribute('data-dirty', выбрано());
+      счёт();
+    };
 
     набор.addEventListener('change', отметить);
     addEventListener('pageshow', отметить);

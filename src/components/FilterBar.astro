@@ -223,7 +223,9 @@ import ViewSwitch from './ViewSwitch.astro';
     const счёт = () => {
       const n = набор.querySelectorAll('.multi input:checked').length;
       for (const место of полоса.querySelectorAll('.filters-row__count')) {
-        место.textContent = n ? ` [${n}]` : '';
+        // Неразрывный пробел: на широком экране слово стоит во флексе, и
+        // обычный пробел в начале счётчика там отбрасывался — «FILTERS[3]».
+        место.textContent = n ? ` [${n}]` : '';
       }
     };
 

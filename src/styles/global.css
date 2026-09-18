@@ -5390,20 +5390,33 @@ html:not([data-js]) .more { display: none; }
 /* Вид в шторке не повторяем: он стоит в самой полосе. */
 [data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
 
-/* Шторка на широком экране — по центру, 40rem (640 на 1920, 480 на 1440), с
-   рамкой по бокам: во всю ширину имя отбора и его значение разъезжались бы
-   на полторы тысячи пикселей. Рост строк — от полос десктопа, --page-bar-h. */
+/* На широком экране шторка выезжает слева направо, во всю высоту экрана и
+   шириной ровно в один столбец сетки обложек (19 сентября 2026, просьба
+   владельца; утром того же дня выезжала снизу по центру, шириной 40rem).
+   Ширину считаем как у решётки: та начинается на пиксель левее края и
+   шире окна на пиксель, поэтому столбец — (100% + 1px) / --cols, а правая
+   граница шторки ложится на первую вертикаль решётки.
+
+   Полоса отбора липкая и лежит под шапкой (z-index 10 против 20), а шторка
+   живёт внутри неё — на время открытой шторки полосу поднимаем над
+   шапкой, иначе шапка закрыла бы верх шторки. Рост строк — от полос
+   десктопа, --page-bar-h. Apply прижат к низу шторки. */
 @media (min-width: 641px) {
   [data-js] .filters-row__set {
     --bar-h: var(--page-bar-h);
-    left: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: auto;
-    width: min(40rem, 100%);
-    border-left: 1px solid var(--line);
+    width: calc((100% + 1px) / var(--cols) - 1px);
+    max-height: none;
+    border-top: 0;
     border-right: 1px solid var(--line);
-    transform: translate(-50%, 100%);
+    transform: translateX(-100%);
   }
-  [data-js] .filters-row[data-sheet] .filters-row__set { transform: translate(-50%, 0); }
+  [data-js] .filters-row[data-sheet] .filters-row__set { transform: none; }
+  [data-js] .filters-row[data-sheet] { z-index: 60; }
+  [data-js] .filters-row__set .filters-row__foot { margin-top: auto; }
 }
 
 /* Порог в 840 пикселей удалён 3 сентября 2026 вместе с полосой букв: она

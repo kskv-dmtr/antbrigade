@@ -5474,16 +5474,13 @@ html:not([data-js]) .more { display: none; }
    шапки: то уезжало в панель и возвращалось с задержкой. Поле в шапке
    стоит на месте всегда. */
 @media (min-width: 641px) {
-  /* Поля внутри — ровно 16 от края экрана (19 сентября 2026, просьба
-     владельца). Справа от панели лежит колея под полосу прокрутки (15 на
-     1440): пока панель открыта, прокрутка страницы снята, а колея остаётся
-     полосой того же фона, и отступ до крестика выходил 31. Зайти на колею
-     панель не может — закреплённые элементы кончаются перед ней, — поэтому
-     правое поле уменьшено на её ширину: --gutter меряет скрипт при
-     открытии. */
+  /* Поля внутри — ровно 16 (19 сентября 2026, просьба владельца). Справа от
+     панели — полоса прокрутки страницы: её не прячем, пока панель открыта
+     (прокрутку гасит скрипт), иначе на её месте оставалась пустая колея и
+     линия под полем обрывалась, не доходя до края. */
   [data-js] .search-drawer {
     --drawer-pad: 16px;
-    --drawer-pad-end: max(0px, calc(16px - var(--gutter, 0px)));
+    --drawer-pad-end: 16px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -5523,12 +5520,16 @@ html:not([data-js]) .more { display: none; }
   /* Подсказки по управлению — под чертой верхнего ряда: слева Navigate со
      стрелками, справа Open с Enter. Набраны как подписи — моноширинным
      приглушённым; клавиши — квадратами в рамке, как «/» у поля. */
+  /* Черта под подсказками — с отступами по 16 слева и справа, а не во
+     всю ширину, как под полем: подсказки — подпись к находкам, а не новый
+     этаж панели. */
   [data-js] .search-drawer .search__hints {
     display: flex;
     flex: none;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem var(--drawer-pad-end) 0.75rem var(--drawer-pad);
+    margin: 0 var(--drawer-pad-end) 0 var(--drawer-pad);
+    padding: 0.75rem 0;
     color: var(--fg-dim);
     border-bottom: 1px solid var(--line-soft);
   }
@@ -5547,6 +5548,11 @@ html:not([data-js]) .more { display: none; }
     font: inherit;
     color: var(--fg-dim);
     border: 1px solid var(--line);
+  }
+  /* Клавиша словом — Enter: ширина по слову, поля как у квадрата. */
+  .search__kbd--word {
+    width: auto;
+    padding: 0 0.3125rem;
   }
   [data-js] .search-drawer .search__key,
   [data-js] .search-drawer .search__clear { display: none !important; }
@@ -5588,7 +5594,6 @@ html:not([data-js]) .more { display: none; }
     transition: opacity 0.32s ease;
   }
   [data-js] .search-scrim[data-open] { opacity: 1; pointer-events: auto; }
-  [data-js]:has(.search-drawer[data-open]) { overflow: hidden; }
 }
 
 /* Порог в 840 пикселей удалён 3 сентября 2026 вместе с полосой букв: она

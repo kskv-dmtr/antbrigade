@@ -1084,20 +1084,32 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           // Шторка отборов закрывается: две панели сразу не открываются.
           document.dispatchEvent(new CustomEvent('drawer:open'));
           ящикЭл.setAttribute('data-open', '');
-          // Колея под полосу прокрутки справа от панели — её ширину CSS
-          // вычитает из правого поля, чтобы до края экрана было ровно 16.
-          const колея = innerWidth - document.documentElement.getBoundingClientRect().width;
-          ящикЭл.style.setProperty('--gutter', Math.max(0, колея) + 'px');
+          // Страницу под панелью не прокручиваем — но и полосу прокрутки не
+          // прячем (см. стоп() ниже).
+          addEventListener('wheel', стоп, { passive: false });
+          addEventListener('touchmove', стоп, { passive: false });
           тень?.setAttribute('data-open', '');
           полеЯщика?.focus();
           полеЯщика?.select();
         } else {
           ящикЭл.removeAttribute('data-open');
           тень?.removeAttribute('data-open');
+          removeEventListener('wheel', стоп);
+          removeEventListener('touchmove', стоп);
           полеЯщика?.blur();
         }
       }
       const открыт = () => Boolean(ящикЭл?.hasAttribute('data-open'));
+
+      /* Прокрутка страницы под панелью гасится здесь, а не overflow: hidden
+         на <html>: тот убирал полосу прокрутки, и на её месте справа от
+         панели оставалась пустая колея — линия под полем обрывалась в 15
+         от края экрана (19 сентября 2026). Теперь полоса на месте, линия
+         доходит до неё. Колесо и палец внутри панели работают — там
+         прокручиваются находки. */
+      function стоп(e) {
+        if (!ящикЭл.contains(e.target)) e.preventDefault();
+      }
 
       ящикЭл?.querySelector('.search__close')?.addEventListener('click', () => {
         if (полеЯщика) {

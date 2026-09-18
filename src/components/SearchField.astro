@@ -58,11 +58,11 @@ const { id = 'search', hints = false } = Astro.props;
 
   {/* Подсказки по управлению — только в панели поиска (19 сентября
       2026, просьба владельца): стрелки ходят по находкам, Enter открывает
-      выбранную. Клавиши — квадратами в рамке, как «/» у поля. */}
+      выбранную. Клавиши — в рамке, как «/» у поля; Enter — словом. */}
   {hints && (
     <div class="search__hints mono mono--sm" aria-hidden="true">
       <span class="search__hint">Navigate <kbd class="search__kbd">↑</kbd><kbd class="search__kbd">↓</kbd></span>
-      <span class="search__hint">Open <kbd class="search__kbd">↵</kbd></span>
+      <span class="search__hint">Open <kbd class="search__kbd search__kbd--word">Enter</kbd></span>
     </div>
   )}
 

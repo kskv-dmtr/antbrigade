@@ -2395,6 +2395,7 @@ main > .head--page:first-child { border-top: 0; }
    и крестик сброса отмеряются от .search__row, а не от всего .search: в
    слое под рядом стоят находки, и середина всего короба ушла бы вниз. */
 .search__top { display: flex; align-items: center; gap: 0.5rem; }
+.search-scrim { display: none; }
 .search__row { position: relative; flex: 1; min-width: 0; }
 .search__close { display: none; }
 
@@ -5417,6 +5418,84 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row[data-sheet] .filters-row__set { transform: none; }
   [data-js] .filters-row[data-sheet] { z-index: 60; }
   [data-js] .filters-row__set .filters-row__foot { margin-top: auto; }
+}
+
+/* Панель поиска на широком экране — по косой черте (19 сентября 2026,
+   просьба владельца). Зеркало панели отборов: выезжает справа налево, во
+   всю высоту экрана, шириной ровно в столбец сетки — левая граница ложится
+   на последнюю вертикаль решётки: последний столбец начинается на
+   100% − (100% + 1px) / --cols. Сверху поле во всю ширину и крестик в
+   рамке, ниже находки на всю оставшуюся высоту — как слой поиска на
+   телефоне. Это то же поле из шапки: на время панели в шапке на его месте
+   пусто, а кнопка темы остаётся у правого края. */
+@media (min-width: 641px) {
+  [data-js] .masthead[data-drawer] .search {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    width: calc((100% + 1px) / var(--cols));
+    margin: 0;
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  [data-js] .masthead[data-drawer-open] .search { transform: none; }
+  [data-js] .masthead[data-drawer] .theme-toggle { margin-left: auto; }
+
+  [data-js] .masthead[data-drawer] .search__top {
+    flex: none;
+    box-sizing: border-box;
+    height: var(--head-exact, var(--head-h));
+    gap: 0.75rem;
+    padding: 0 var(--pad);
+    border-bottom: 1px solid var(--line);
+  }
+  [data-js] .masthead[data-drawer] .search__key,
+  [data-js] .masthead[data-drawer] .search__clear { display: none !important; }
+  [data-js] .masthead[data-drawer] .search__close {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.125rem;
+    height: 2.125rem;
+    padding: 0;
+    color: var(--fg-muted);
+    background: none;
+    border: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .search__close-x { width: 0.875rem; height: 0.875rem; }
+  [data-js] .masthead[data-drawer] .search__close:active,
+  [data-js] .masthead[data-drawer] .search__close:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+  [data-js] .masthead[data-drawer] .search__found {
+    position: static;
+    flex: 1;
+    width: auto;
+    max-height: none;
+    border: 0;
+  }
+
+  [data-js] .masthead[data-drawer] .search-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 29;
+    background: color-mix(in srgb, var(--fg) 35%, transparent);
+    opacity: 0;
+    transition: opacity 0.32s ease;
+  }
+  [data-js] .masthead[data-drawer-open] .search-scrim { opacity: 1; }
+  [data-js]:has(.masthead[data-drawer-open]) { overflow: hidden; }
 }
 
 /* Порог в 840 пикселей удалён 3 сентября 2026 вместе с полосой букв: она

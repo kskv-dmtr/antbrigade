@@ -79,6 +79,7 @@ import ViewSwitch from './ViewSwitch.astro';
       if (!on) {
         // Раскрытые списки внутри закрываем вместе со шторкой.
         for (const список of полоса.querySelectorAll('details.multi[open]')) список.open = false;
+        for (const коробка of полоса.querySelectorAll('.select[data-open]')) коробка._раскрыть?.(false);
       }
     };
 
@@ -106,5 +107,101 @@ import ViewSwitch from './ViewSwitch.astro';
     // На широком экране шторки нет: забытое «открыто» держало бы страницу
     // без прокрутки.
     узкий.addEventListener('change', () => шторка(false));
+
+    const набор = полоса.querySelector('.filters-row__set');
+    const списки = [...набор.querySelectorAll('details.multi')];
+
+    /* Сортировка в шторке — раскрывающимся списком, как тип, жанр и год
+       (18 сентября 2026, просьба владельца). Системный <select> открывал
+       на телефоне выбор во весь экран. Пункты собираем из его же <option>,
+       а выбор кладём обратно в него и шлём change: страница слушает
+       сортировку по-прежнему, у <select>. Сам <select> в шторке не
+       нажимается — стилями. */
+    for (const коробка of набор.querySelectorAll('.filter > .select')) {
+      const поле = коробка.querySelector('select');
+      if (!поле) continue;
+
+      const панель = document.createElement('div');
+      панель.className = 'multi__panel filters-row__pick';
+      панель.hidden = true;
+      const лист = document.createElement('div');
+      лист.className = 'multi__list';
+
+      for (const вариант of поле.options) {
+        const пункт = document.createElement('label');
+        пункт.className = 'multi__item';
+        const радио = document.createElement('input');
+        радио.type = 'radio';
+        радио.name = 'sheet-' + поле.id;
+        радио.value = вариант.value;
+        радио.checked = вариант.selected;
+        const имя = document.createElement('span');
+        имя.className = 'multi__name';
+        имя.textContent = вариант.textContent;
+        пункт.append(радио, имя);
+        лист.append(пункт);
+
+        радио.addEventListener('change', () => {
+          поле.value = радио.value;
+          поле.dispatchEvent(new Event('change', { bubbles: true }));
+          раскрыть(false);
+        });
+      }
+
+      панель.append(лист);
+      коробка.after(панель);
+
+      const раскрыть = (on) => {
+        панель.hidden = !on;
+        коробка.toggleAttribute('data-open', on);
+        if (on) for (const с of списки) с.open = false;
+      };
+      коробка._раскрыть = раскрыть;
+
+      // Раскрыли тип, жанр или год — сортировка сворачивается.
+      for (const с of списки) с.addEventListener('toggle', () => { if (с.open) раскрыть(false); });
+
+      // Выбор, сделанный иначе (возврат назад, сброс), — отметку за ним.
+      поле.addEventListener('change', () => {
+        for (const р of лист.querySelectorAll('input')) р.checked = р.value === поле.value;
+      });
+    }
+
+    /* Нажимается вся строка отбора, а не только кнопка справа: имя слева
+       раскрывает свой список так же. Щелчки внутри раскрытого списка и по
+       самой кнопке — их собственные, их не трогаем. Дальше документа
+       событие не пускаем: общий обработчик списков закрыл бы только что
+       раскрытый, раз щелчок пришёлся мимо него. */
+    набор.addEventListener('click', (e) => {
+      if (!узкий.matches) return;
+      const строка = e.target.closest('.filter');
+      if (!строка || e.target.closest('.multi__panel, summary')) return;
+
+      const список = строка.querySelector('details.multi');
+      const коробка = строка.querySelector('.select');
+      if (список) {
+        e.preventDefault();
+        e.stopPropagation();
+        список.open = !список.open;
+      } else if (коробка?._раскрыть) {
+        e.preventDefault();
+        e.stopPropagation();
+        коробка._раскрыть(!коробка.hasAttribute('data-open'));
+      }
+    });
+
+    /* Apply виден, только когда что-то выбрано: отмечен пункт в типе,
+       жанре или годе либо сортировка не та, с которой страница пришла. */
+    const выбрано = () =>
+      Boolean(набор.querySelector('.multi input:checked')) ||
+      [...набор.querySelectorAll('select')].some((поле) => {
+        const исходный = [...поле.options].find((о) => о.defaultSelected) ?? поле.options[0];
+        return поле.value !== исходный?.value;
+      });
+    const отметить = () => полоса.toggleAttribute('data-dirty', выбрано());
+
+    набор.addEventListener('change', отметить);
+    addEventListener('pageshow', отметить);
+    отметить();
   }
 </script>

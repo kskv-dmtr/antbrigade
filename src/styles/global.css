@@ -5176,6 +5176,22 @@ html:not([data-js]) .more { display: none; }
     }
   }
 
+  /* Сортировка в шторке раскрывается своим списком под строкой (его
+     собирает скрипт FilterBar), а системный <select> не нажимается: на
+     телефоне он открывал выбор во весь экран. Список — в той же колонке,
+     что раскрытые тип, жанр и год, и с тем же набором пунктов. */
+  [data-js] .filters-row__set .select select { pointer-events: none; }
+  [data-js] .filters-row__set .select { cursor: pointer; }
+  [data-js] .filters-row__set .filters-row__pick {
+    --select-pad: 0.8125rem;
+    grid-column: 2;
+  }
+  [data-js] .filters-row__set .filters-row__pick[hidden] { display: none; }
+  [data-js] .filters-row__set .filter { cursor: pointer; }
+
+  /* Apply — только когда что-то выбрано (атрибут ставит скрипт). */
+  [data-js] .filters-row:not([data-dirty]) .filters-row__foot { display: none; }
+
   /* Вид в шторке не повторяем: он стоит в самой полосе. */
   [data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
   /* Содержимое строки не сжимается по её ширине: пусть уезжает за край, а не

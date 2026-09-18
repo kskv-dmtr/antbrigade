@@ -4556,6 +4556,8 @@ html:not([data-js]) .more { display: none; }
      таким же знаком, а стирает набранное и закрывающий. */
   [data-js] .masthead .search { display: none; }
   [data-js] .masthead .search__key { display: none; }
+  /* Через полосу — ради веса: основное правило подсказки стоит ниже по файлу. */
+  .filters-row .filters-row__key { display: none; }
   [data-js] .masthead .search__clear { display: none !important; }
 
   [data-js] .masthead[data-search] .search {
@@ -5126,6 +5128,38 @@ html:not([data-js]) .more { display: none; }
      нажимается. У открытой шторки линия темнеет, см. ниже. */
   border-bottom: 1px solid var(--line);
 }
+/* Подсказка клавиши F — квадрат с рамкой, как «/» в поле поиска: ширина
+   и высота равны, знак по центру (19 сентября 2026). На телефоне
+   клавиатуры нет — там подсказку прячет мобильный блок. */
+.filters-row__key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-left: 0.5rem;
+  color: var(--fg-dim);
+  border: 1px solid var(--line);
+}
+
+/* Цвет из общей жеребьёвки на слове — как у ссылок и Grid / List рядом:
+   по наведению, а на телефоне по нажатию. Подчёркивание на время заливки
+   гаснет. */
+@media (hover: hover) {
+  [data-js] .filters-row__toggle[data-hot]:hover .filters-row__label {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+}
+@media (hover: none) {
+  [data-js] .filters-row__toggle[data-hot]:active .filters-row__label {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+}
+
 [data-js] .filters-row[data-sheet] .filters-row__label {
   color: var(--fg);
   border-bottom-color: var(--fg);

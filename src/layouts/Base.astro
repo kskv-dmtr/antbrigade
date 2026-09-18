@@ -814,6 +814,17 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         if (измерено !== сейчас) {
           document.documentElement.style.setProperty('--head-h', измерено + 'px');
         }
+
+        /* Точная высота, без округления и без поправки на уехавшую шапку, —
+           для того, что встаёт вплотную к её нижней линии поверх неё: меню и
+           верхнего ряда поиска на телефоне. По округлённой --head-h их линия
+           на дробной шапке (63,3 при 63) вставала на треть пикселя выше
+           линии шапки, и при открытии меню или поиска шапка будто прыгала на
+           точку-другую (18 сентября 2026). */
+        const точно = masthead.offsetHeight
+          ? masthead.getBoundingClientRect().height
+          : 0;
+        if (точно) document.documentElement.style.setProperty('--head-exact', точно + 'px');
       };
 
       пересчитатьШапку = setHeadHeight;

@@ -4549,14 +4549,14 @@ html:not([data-js]) .more { display: none; }
     background: var(--bg);
   }
 
-  /* Ряд ростом ровно с шапку — берёт её замеренную высоту, --head-h (63 на
-     375). Слой открывается, а линия стоит там же, где стояла, — глаз не
+  /* Ряд ростом ровно с шапку — берёт её точную замеренную высоту,
+     --head-exact (63 на 375; без округления, в отличие от --head-h). Слой открывается, а линия стоит там же, где стояла, — глаз не
      ищет, куда всё уехало. Полями сверху и снизу рост не набирается: поле
      поиска выходит в 35, и ряд перерастал шапку на пиксель. */
   [data-js] .masthead[data-search] .search__top {
     flex: none;
     box-sizing: border-box;
-    height: var(--head-h, 3.9375rem);
+    height: var(--head-exact, var(--head-h, 3.9375rem));
     gap: 0.75rem;
     padding: 0 max(var(--pad), env(safe-area-inset-right)) 0 max(var(--pad), env(safe-area-inset-left));
     border-bottom: 1px solid var(--line);
@@ -4644,8 +4644,10 @@ html:not([data-js]) .more { display: none; }
        шапки, а --head-h округлена вниз, и на телефоне с дробной высотой
        шапки (63,3 при --head-h 63) меню закрывало её нижнюю линию — та
        пропадала, пока меню открыто. Теперь линию на том же месте чертит само
-       меню (18 сентября 2026). */
-    top: calc(var(--head-h) - 1px);
+       меню (18 сентября 2026). Отсчёт — от точной высоты шапки,
+       --head-exact, а не от округлённой: иначе на дробной шапке линия меню
+       вставала на долю пикселя выше её линии. */
+    top: calc(var(--head-exact, var(--head-h)) - 1px);
     border-top: 1px solid var(--line);
     bottom: 0;
     left: 0;

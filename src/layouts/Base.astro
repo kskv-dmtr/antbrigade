@@ -1078,6 +1078,11 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         if (on) {
           // Шторка отборов закрывается: две панели сразу не открываются.
           document.dispatchEvent(new CustomEvent('drawer:open'));
+          /* Поле поиска — самый высокий элемент шапки: уехав в панель, оно
+             сжимало шапку (замер на 1920 — 71,6 → 70,3), и верх панели, ростом
+             со старую шапку, расходился с ней на 1,3. Держим шапку в прежнем
+             росте, пока панель открыта. */
+          masthead.style.height = masthead.getBoundingClientRect().height + 'px';
           masthead.setAttribute('data-drawer', '');
           masthead.offsetWidth;
           masthead.setAttribute('data-drawer-open', '');
@@ -1086,7 +1091,10 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         } else {
           masthead.removeAttribute('data-drawer-open');
           search.blur();
-          ящик.таймер = setTimeout(() => masthead.removeAttribute('data-drawer'), 340);
+          ящик.таймер = setTimeout(() => {
+            masthead.removeAttribute('data-drawer');
+            masthead.style.height = '';
+          }, 340);
         }
       }
 

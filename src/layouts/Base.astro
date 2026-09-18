@@ -1076,6 +1076,8 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       function ящик(on) {
         clearTimeout(ящик.таймер);
         if (on) {
+          // Шторка отборов закрывается: две панели сразу не открываются.
+          document.dispatchEvent(new CustomEvent('drawer:open'));
           masthead.setAttribute('data-drawer', '');
           masthead.offsetWidth;
           masthead.setAttribute('data-drawer-open', '');
@@ -1095,6 +1097,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         ящик(false);
       });
       masthead?.querySelector('.search-scrim')?.addEventListener('click', () => ящик(false));
+      document.addEventListener('sheet:open', () => { if (masthead?.hasAttribute('data-drawer')) ящик(false); });
       addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && masthead?.hasAttribute('data-drawer-open')) ящик(false);
       });

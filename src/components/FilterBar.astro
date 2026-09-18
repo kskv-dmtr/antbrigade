@@ -76,7 +76,13 @@ import ViewSwitch from './ViewSwitch.astro';
   if (полоса && кнопка) {
     const узкий = matchMedia('(max-width: 640px)');
 
+    /* Открытыми не бывают две панели сразу: шторка отборов и панель поиска
+       (по косой черте) закрывают друг друга (19 сентября 2026). Иначе вторая
+       ложилась поверх первой, а полоса отбора, поднятая над шапкой, оставалась
+       светлой среди затемнённого — и линия между ней и полосой раздела
+       пропадала. Поиск шлёт drawer:open, отборы — sheet:open. */
     const шторка = (on) => {
+      if (on) document.dispatchEvent(new CustomEvent('sheet:open'));
       полоса.toggleAttribute('data-sheet', on);
       кнопка.setAttribute('aria-expanded', String(on));
       if (!on) {
@@ -87,6 +93,7 @@ import ViewSwitch from './ViewSwitch.astro';
     };
 
     кнопка.addEventListener('click', () => шторка(!полоса.hasAttribute('data-sheet')));
+    document.addEventListener('drawer:open', () => { if (полоса.hasAttribute('data-sheet')) шторка(false); });
     полоса.querySelector('.filters-row__close')?.addEventListener('click', () => {
       шторка(false);
       кнопка.focus();

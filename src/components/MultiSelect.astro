@@ -12,7 +12,6 @@
    остаётся закрытым, а не разложенным во весь экран. Отбор и так работает
    только со скриптом — как и прежние списки. */
 
-import Icon from './Icon.astro';
 
 const {
   id,
@@ -38,13 +37,11 @@ const блоки = [{ axis, items }];
         выбрано — крестик, и он же сбрасывает отбор. Отдельной кнопки сброса
         поэтому нет: она стояла бы рядом с тем же действием.
 
-        Крестик оформлен как подсказка клавиши в поиске — квадрат 22×22 с
-        рамкой: на странице это уже сложившийся вид для маленького знака в
-        углу поля. */}
+        С 19 сентября 2026 (просьба владельца) сброс — словом Reset с
+        подчёркиванием, как ссылки, а не крестиком в квадрате: стоит в строке
+        сразу за подписью выбранного. */}
     <span class="select__chevron" aria-hidden="true"></span>
-    <button type="button" class="multi__clear" aria-label={`Clear ${label}`} hidden>
-      <Icon name="x" class="multi__x" />
-    </button>
+    <button type="button" class="multi__clear" aria-label={`Reset ${label}`} hidden>Reset</button>
   </summary>
 
   <div class="multi__panel">

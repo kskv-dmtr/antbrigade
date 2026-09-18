@@ -2256,11 +2256,8 @@ main > .head--page:first-child { border-top: 0; }
    он вчетверо шире: квадрат 22 против девяти. Поле справа считаем от него,
    иначе подпись наезжала бы на крестик — на пять пикселей, проверено.
    Просвет тот же, восемь. */
-.filter .multi[data-chosen] .multi__button {
-  padding-right: calc(1.375rem + 0.5rem);
-}
-.filter .select__chevron,
-.filter .multi__clear { right: 0; }
+.filter .multi[data-chosen] .multi__button { padding-right: 0; }
+.filter .select__chevron { right: 0; }
 
 .filter__name {
   flex: none;
@@ -2858,26 +2855,35 @@ select option { background: var(--option-bg); color: var(--fg); }
    поэтому подпись при появлении крестика не дёргается: шеврон кончался в 22
    пикселях от правого края, квадрат кончается в 30, а место под подпись
    отмерено на 38. */
+/* Сброс — словом Reset с подчёркиванием, как ссылки на жанры и лейблы (с
+   19 сентября 2026, просьба владельца; до того — крестик в квадрате 22 с
+   рамкой). Стоит в строке сразу за подписью выбранного, а не в углу поверх
+   поля: слово шире квадрата, и места под треугольник ему мало. Не
+   сжимается — ужимается подпись слева, многоточием. */
 .multi__clear {
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.375rem;
-  height: 1.375rem;
-  color: var(--fg-dim);
+  flex: none;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0;
+
+  /* Поля и волос не должны растить кнопку: без отрицательных полей она
+     выходила на 4 выше соседних отборов (замер на 1440 — 28 против 24). */
+  margin-top: -0.125rem;
+  margin-bottom: calc(-0.125rem - 1px);
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  line-height: inherit;
+  color: var(--fg-muted);
   background: none;
-  border: 1px solid var(--line);
+  border: 0;
+  border-bottom: 1px solid var(--line);
   cursor: pointer;
 }
 @media (hover: hover) {
-  .multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+  .multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 }
-.multi__clear:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
-.multi__x { width: 0.6875rem; height: 0.6875rem; }
+.multi__clear:active,
+.multi__clear:focus-visible { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 /* Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
    панели по одной подписи «Genres [3]» не видно, что отбор включён. */
 .multi[data-chosen] .multi__button { color: var(--fg); }

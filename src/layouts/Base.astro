@@ -345,6 +345,19 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
             <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
           )
         ))}
+
+        {/* Низ меню на телефоне: каналы и знак охраны, как в подвале. Меню
+            там с 18 сентября 2026 открывается на весь экран, по образцу
+            dsgners.ru, и под разделами остаётся пустое поле — туда и встаёт
+            то, что иначе пришлось бы искать в самом низу страницы. На
+            широком экране блока нет. */}
+        <div class="nav__foot mono mono--sm">
+          telegram:<br />
+          <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
+          <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a><br />
+          <br />
+          © {year} · 1723
+        </div>
       </nav>
 
       {/* Поиск живёт в шапке, а не на странице: ищут по каталогу целиком, а
@@ -743,8 +756,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       /* Та же функция, что держит ссылка выше: полоса второго уровня зовёт её
          сразу, как свернулась, и липкая полоса раздела встаёт по новой высоте
          в том же кадре. */
+      /* Шапка, уехавшая вверх (на телефоне, при прокрутке вниз), места
+         над полосами не занимает: --head-h тогда ноль, и липкие полосы
+         разделов поднимаются к самому верху экрана. */
       const setHeadHeight = () => {
-        const измерено = Math.floor(masthead.getBoundingClientRect().height);
+        const измерено = masthead.hasAttribute('data-away')
+          ? 0
+          : Math.floor(masthead.getBoundingClientRect().height);
         const сейчас = parseFloat(
           getComputedStyle(document.documentElement).getPropertyValue('--head-h')
         );
@@ -778,6 +796,42 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           queueMicrotask(setHeadHeight);
         });
       }
+
+      /* На телефоне шапка уезжает вверх при прокрутке вниз и возвращается
+         при прокрутке вверх — с 18 сентября 2026, по образцу dsgners.ru.
+         На экране в 812 она занимала 63 всегда, а вместе с липкой полосой
+         раздела — больше ста.
+
+         Не прячется, пока открыто меню или поиск, и у самого верха
+         страницы, пока шапка ещё стоит на своём месте в потоке. Порог в
+         шесть пикселей — против дрожания инерционной прокрутки, как у
+         прежней полосы списков. */
+      const узкийЭкран = matchMedia('(max-width: 640px)');
+      const ШАГ_ШАПКИ = 6;
+      let прошлое = scrollY;
+
+      const увести = (on) => {
+        if (on === masthead.hasAttribute('data-away')) return;
+        masthead.toggleAttribute('data-away', on);
+        setHeadHeight();
+      };
+
+      addEventListener('scroll', () => {
+        const y = scrollY;
+        const занята =
+          masthead.hasAttribute('data-open') || masthead.hasAttribute('data-search');
+
+        if (!узкийЭкран.matches || занята || y <= masthead.offsetHeight) увести(false);
+        else if (y > прошлое + ШАГ_ШАПКИ) увести(true);
+        else if (y < прошлое - ШАГ_ШАПКИ) увести(false);
+
+        if (Math.abs(y - прошлое) > ШАГ_ШАПКИ) прошлое = y;
+      }, { passive: true });
+
+      узкийЭкран.addEventListener('change', () => увести(false));
+
+      /* Фокус с клавиатуры в уехавшую шапку — возвращаем её на экран. */
+      masthead.addEventListener('focusin', () => увести(false));
     }
 
     /* Прилипла полоса раздела или ещё нет — в CSS не спросить, поэтому
@@ -816,9 +870,14 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         });
       };
 
+      /* Отступ сверху читаем при каждой проверке, а не берём снятый: на
+         телефоне шапка уезжает вверх, и полосы вслед за ней встают к самому
+         верху — отступ у них меняется на ходу. */
       const красить = () => {
         полосы.forEach((полоса, i) => {
-          полоса.toggleAttribute('data-stuck', scrollY + верх[i] > якоря[i]);
+          const отступ = parseFloat(getComputedStyle(полоса).top);
+          const сверху = Number.isNaN(отступ) ? верх[i] : отступ;
+          полоса.toggleAttribute('data-stuck', scrollY + сверху > якоря[i]);
         });
       };
 

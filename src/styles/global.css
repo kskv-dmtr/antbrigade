@@ -458,6 +458,9 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 
+/* Низ меню с каналами — только в меню на телефоне, см. мобильный блок. */
+.nav__foot { display: none; }
+
 .nav {
   display: flex;
   gap: 1.5rem;
@@ -4454,22 +4457,82 @@ html:not([data-js]) .more { display: none; }
      43, и тогда точную высоту ставит скрипт. */
   [data-js] { --head-h: 3.9375rem; }
 
-  /* Меню выпадает из-под шапки поверх содержимого, а не раздвигает её:
-     от --head-h отсчитывается положение липкой полосы, и раздвинутая шапка
-     накрыла бы её собой. */
+  /* Меню открывается на весь экран под шапкой — с 18 сентября 2026, по
+     образцу dsgners.ru. До того оно выпадало этажом ровно в свой рост, и
+     под ним продолжала стоять страница: читалось всплывающей панелью, а не
+     отдельным экраном. Теперь от линии шапки до низа экрана — только меню:
+     сверху разделы, внизу каналы и знак охраны. Разделов больше, чем
+     влезет, не бывает, но на всякий случай слой прокручивается сам.
+
+     Шапка остаётся на месте: в ней бургер, ставший крестом, — им меню и
+     закрывается. Страница под меню не прокручивается. */
   [data-js] .masthead .nav {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: var(--head-h);
+    bottom: 0;
     left: 0;
     right: 0;
     flex-direction: column;
     gap: 0;
-    padding: 0.125rem var(--pad) 0.625rem;
+    padding: 0.125rem var(--pad) calc(1.5rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: var(--bg);
-    border-bottom: 1px solid var(--line);
   }
   [data-js] .masthead[data-open] .nav { display: flex; }
+  [data-js]:has(.masthead[data-open]) { overflow: hidden; }
+
+  /* Низ меню — каналы и знак охраны, набраны как в подвале. margin-top:
+     auto уводит блок к низу экрана, сколько бы ни было разделов сверху. */
+  [data-js] .masthead .nav__foot {
+    display: block;
+    margin-top: auto;
+    padding-top: 2rem;
+    line-height: 1.7;
+    color: var(--fg-dim);
+    text-transform: none;
+  }
+  [data-js] .masthead .nav .nav__foot a {
+    display: inline;
+    padding: 0;
+    border-bottom: 0;
+    color: var(--fg-muted);
+  }
+
+  /* Шапка на телефоне уезжает вверх при прокрутке вниз и возвращается при
+     прокрутке вверх — по образцу dsgners.ru, с тем же ходом: 0,15 секунды.
+     Уводим на свой рост и ещё на полрема: под шапкой висит юбка в четыре
+     пикселя, и без запаса она оставалась бы полоской у верхнего края.
+
+     В покое transform — none, а не нулевой сдвиг: любой transform делает
+     шапку рамкой для fixed-потомков, и меню со слоем поиска меряли бы себя
+     от неё, а не от экрана. */
+  [data-js] .masthead { transition: transform 0.15s ease-out; }
+  [data-js] .masthead[data-away] { transform: translateY(calc(-100% - 0.5rem)); }
+
+  /* Липкие полосы едут к верху экрана вслед за шапкой и тем же ходом:
+     --head-h у уехавшей шапки ноль. */
+  .head--sticky,
+  .filters-row,
+  .fold__head,
+  .fold:not([open]) { transition: top 0.15s ease-out; }
+
+  /* Страница релиза и клипа на телефоне без липких частей — с 18 сентября
+     2026. На широком экране справка с именем стоит рядом с обложкой и
+     липнет, пока листаешь её ячейку; на телефоне всё идёт одним столбцом,
+     и прилипшие полосы с именем только закрывали бы собой обложку и
+     справку. Липкой остаётся одна шапка — да и та уезжает при прокрутке.
+
+     relative с top: auto, а не static: у полос есть абсолютные
+     псевдоэлементы, им нужна своя рамка отсчёта. Селекторы через main —
+     ради веса: правила уголков стоят в файле ниже и иначе перебили бы. */
+  main:has(article.item) .head--sticky,
+  main:has(article.item) .item__top,
+  main:has(article.item) .corners__top {
+    position: relative;
+    top: auto;
+  }
 
   /* Пункт во всю ширину: на ощупь попадать в строку из четырёх букв
      неудобно, поэтому целью служит вся строка. */
@@ -4478,6 +4541,9 @@ html:not([data-js]) .more { display: none; }
     border-bottom: 1px solid var(--line-soft);
   }
   [data-js] .masthead .nav a:last-child { border-bottom: 0; }
+  /* Последний раздел стоит теперь не последним в меню — за ним низ с
+     каналами, — но линия под ним по-прежнему лишняя. */
+  [data-js] .masthead .nav > a:nth-last-child(2) { border-bottom: 0; }
 
   /* Выворотка по нажатию — только у строчного пункта в шапке. Здесь пункт
      во всю ширину этажа, и залитая полоса читалась бы выбранным разделом,
@@ -4712,6 +4778,7 @@ html:not([data-js]) .more { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .select__chevron, .tile__over, .sticky-bar { transition: none; }
+  .masthead, .head--sticky, .filters-row, .fold__head, .fold { transition: none !important; }
 }
 
 /* -------------------------------------------- переключение вида

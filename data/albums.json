@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-18T00:23:16Z",
+  "generatedAt": "2026-09-18T16:27:29Z",
   "counts": {
-    "albums": 1390,
-    "artists": 1180,
-    "labels": 740,
-    "videos": 96
+    "albums": 1397,
+    "artists": 1183,
+    "labels": 743,
+    "videos": 97
   },
   "albums": [
     {
@@ -36691,6 +36691,37 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-80f4-8e9c-d7d735f931e1",
+      "slug": "erika-de-casier-sensational",
+      "artist": "Erika de Casier",
+      "album": "Sensational",
+      "url": "https://album.link/hz0m8zjgnzvbj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3006de28-f7e4-43a9-b73a-d81f21803680%3Aa2932584140_10.jpg?table=block&id=3df4129a-8c52-80f4-8e9c-d7d735f931e1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Contemporary R'n'B",
+        "Alternative R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-21",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-80eb-8657-c40d16537f6d"
+      ],
+      "artists": [
+        "Erika de Casier"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8072-a441-e05f226d572d"
+      ],
+      "labels": [
+        "4AD Records"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-809d-bb9f-cbad5ee12ddc",
       "slug": "otooto-this-love-is-for-you",
       "artist": "OTOOTO",
@@ -36965,6 +36996,38 @@
       ],
       "labels": [
         "Sonor Music Editions"
+      ]
+    },
+    {
+      "id": "3df4129a-8c52-80b8-a695-d84b43599fb1",
+      "slug": "bruno-belissimo-maison-belissimo",
+      "artist": "Bruno Belissimo",
+      "album": "Maison Belissimo",
+      "url": "https://album.link/pddpxjpk4h3q4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A24cae6ed-94d4-4b43-97df-81bd03cf17cc%3Aa0989665740_10.jpg?table=block&id=3df4129a-8c52-80b8-a695-d84b43599fb1&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "шеф",
+        "Italo-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-04-30",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3df4129a-8c52-8066-aa48-e4401baba6fb"
+      ],
+      "artists": [
+        "Bruno Belissimo"
+      ],
+      "labelIds": [
+        "3df4129a-8c52-80e7-9d80-f3b5a28fb779"
+      ],
+      "labels": [
+        "Vulcano"
       ]
     },
     {
@@ -38537,6 +38600,37 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-80ef-8f87-e139659fe5ad",
+      "slug": "y-bulbul-fever",
+      "artist": "Y Bülbül",
+      "album": "Fever",
+      "url": "https://album.link/8vshgk2sk9bzr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0e883268-6c86-4aef-b752-eee51fb6f98b%3Aab67616d0000b27378296ffceb2f382a8d1d5297.jpg?table=block&id=3df4129a-8c52-80ef-8f87-e139659fe5ad&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-11-06",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3df4129a-8c52-80a5-9fde-da736876378b"
+      ],
+      "artists": [
+        "Y Bülbül"
+      ],
+      "labelIds": [
+        "3df4129a-8c52-800d-9849-da0d5d954943"
+      ],
+      "labels": [
+        "Pingipung"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-807f-824e-cc99b753823b",
       "slug": "eabs-discipline-of-sun-ra",
       "artist": "EABS",
@@ -39068,6 +39162,36 @@
       ],
       "labels": [
         "Touching Bass"
+      ]
+    },
+    {
+      "id": "3df4129a-8c52-8061-ad58-deaf3f258454",
+      "slug": "hologram-teen-pizza-conspiracy",
+      "artist": "Hologram Teen",
+      "album": "Pizza Conspiracy",
+      "url": "https://album.link/kkjbhqqjp8xjr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac1dec2ae-3953-4930-92a6-e4d0f1a8901d%3Aa0451531158_10.jpg?table=block&id=3df4129a-8c52-8061-ad58-deaf3f258454&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-09-04",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3df4129a-8c52-8091-81c2-ca01bc9cbf05"
+      ],
+      "artists": [
+        "Hologram Teen"
+      ],
+      "labelIds": [
+        "2924129a-8c52-800b-b4ad-e4a2aa14167e"
+      ],
+      "labels": [
+        "Ransom Note Records"
       ]
     },
     {
@@ -40577,6 +40701,36 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-800a-a91d-f56639bb93fd",
+      "slug": "pachyman-at-333-house",
+      "artist": "Pachyman",
+      "album": "At 333 House",
+      "url": "https://album.link/fmrs70dzjkm97",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aaa6e97be-a9a5-4d7b-94fa-0735f1fb9674%3Aa0459541811_10.jpg?table=block&id=3df4129a-8c52-800a-a91d-f56639bb93fd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-02-07",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2494129a-8c52-80c4-b179-d60f6a07a722"
+      ],
+      "artists": [
+        "Pachyman"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8073-8ac2-dd5d733aa9c9"
+      ],
+      "labels": [
+        "ATO Records"
+      ]
+    },
+    {
       "id": "3da4129a-8c52-80d7-ae2e-c84e5eb737d7",
       "slug": "various-artists-seven-wonders",
       "artist": "Various Artists",
@@ -41082,6 +41236,38 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-80b8-ba99-f306aa6457f4",
+      "slug": "moonchild-little-ghost",
+      "artist": "Moonchild",
+      "album": "Little Ghost",
+      "url": "https://album.link/pthkbv2pk7qx6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A1a48b7e2-677f-4338-9e0b-ae19679301e5%3Aa3816386280_10.jpg?table=block&id=3df4129a-8c52-80b8-ba99-f306aa6457f4&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Alternative R'n'B",
+        "Nu Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-09-06",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3104129a-8c52-8044-b0b6-f9c4ec38e9d9"
+      ],
+      "artists": [
+        "Moonchild"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "labels": [
+        "Tru Thoughts Recordings"
+      ]
+    },
+    {
       "id": "3de4129a-8c52-80df-be74-e150389ea372",
       "slug": "o-flynn-aletheia",
       "artist": "O’Flynn",
@@ -41360,6 +41546,38 @@
       ],
       "labels": [
         "Oriental Tapes"
+      ]
+    },
+    {
+      "id": "3df4129a-8c52-8034-bb05-d1ea44935ccf",
+      "slug": "jitwam-honeycomb",
+      "artist": "Jitwam",
+      "album": "Honeycomb",
+      "url": "https://album.link/9wtxw3wmj8fwx",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa4795bf3-bde0-4e10-b49f-3b1d36401bec%3Aa4232199560_10.jpg?table=block&id=3df4129a-8c52-8034-bb05-d1ea44935ccf&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Psychedelic Soul",
+        "Neo-Psychedelia"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-05-03",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24d4129a-8c52-8091-affd-c55a11dd4cb9"
+      ],
+      "artists": [
+        "Jitwam"
+      ],
+      "labelIds": [
+        "3df4129a-8c52-80d9-8e4d-c77021e295b0"
+      ],
+      "labels": [
+        "Tartelet Records"
       ]
     },
     {
@@ -46850,6 +47068,28 @@
       "akaIds": []
     },
     {
+      "id": "3df4129a-8c52-8066-aa48-e4401baba6fb",
+      "slug": "bruno-belissimo",
+      "name": "Bruno Belissimo",
+      "country": "CA",
+      "bandcamp": "https://brunobelissimo.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-80b8-a695-d84b43599fb1"
+      ],
+      "genres": [
+        "Nu-Disco",
+        "шеф",
+        "Italo-Disco"
+      ],
+      "labelIds": [
+        "3df4129a-8c52-80e7-9d80-f3b5a28fb779"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3d24129a-8c52-80ba-8019-f2bfb5f1ddd4",
       "slug": "bruxas",
       "name": "Bruxas",
@@ -50556,15 +50796,19 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "1ef4129a-8c52-8048-b171-f217f5351ff2"
+        "1ef4129a-8c52-8048-b171-f217f5351ff2",
+        "3df4129a-8c52-80f4-8e9c-d7d735f931e1"
       ],
       "genres": [
         "R'n'B",
         "Trip Hop",
-        "Downtempo"
+        "Downtempo",
+        "Contemporary R'n'B",
+        "Alternative R'n'B"
       ],
       "labelIds": [
-        "24a4129a-8c52-80ad-b4e6-f965061efb90"
+        "24a4129a-8c52-80ad-b4e6-f965061efb90",
+        "2504129a-8c52-8072-a441-e05f226d572d"
       ],
       "videoIds": [],
       "akaIds": []
@@ -53141,6 +53385,26 @@
       "akaIds": []
     },
     {
+      "id": "3df4129a-8c52-8091-81c2-ca01bc9cbf05",
+      "slug": "hologram-teen",
+      "name": "Hologram Teen",
+      "country": "US",
+      "bandcamp": "https://hologramteen.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-8061-ad58-deaf3f258454"
+      ],
+      "genres": [
+        "Synthpop"
+      ],
+      "labelIds": [
+        "2924129a-8c52-800b-b4ad-e4a2aa14167e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2504129a-8c52-8075-a2da-d8c2fba0e151",
       "slug": "holy-blade",
       "name": "Holy Blade",
@@ -54412,19 +54676,22 @@
       "slug": "jitwam",
       "name": "Jitwam",
       "country": "IN",
-      "bandcamp": null,
+      "bandcamp": "https://jitwam.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "24d4129a-8c52-8020-8c9d-cb244b61e67a"
+        "24d4129a-8c52-8020-8c9d-cb244b61e67a",
+        "3df4129a-8c52-8034-bb05-d1ea44935ccf"
       ],
       "genres": [
         "Neo-Soul",
         "Psychedelic Soul",
-        "House"
+        "House",
+        "Neo-Psychedelia"
       ],
       "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3df4129a-8c52-80d9-8e4d-c77021e295b0"
       ],
       "videoIds": [],
       "akaIds": []
@@ -57272,7 +57539,7 @@
       "slug": "maiorano",
       "name": "MAIORANO",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://maioranomusic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -57286,7 +57553,9 @@
       "labelIds": [
         "2d34129a-8c52-80c6-a1c9-e1f7870527dc"
       ],
-      "videoIds": [],
+      "videoIds": [
+        "3df4129a-8c52-80bc-8be9-f81fa964b557"
+      ],
       "akaIds": []
     },
     {
@@ -58650,15 +58919,17 @@
       "slug": "moonchild",
       "name": "Moonchild",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://thisismoonchild.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3104129a-8c52-8078-869b-d440ac20c617"
+        "3104129a-8c52-8078-869b-d440ac20c617",
+        "3df4129a-8c52-80b8-ba99-f306aa6457f4"
       ],
       "genres": [
         "Neo-Soul",
-        "Alternative R'n'B"
+        "Alternative R'n'B",
+        "Nu Jazz"
       ],
       "labelIds": [
         "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
@@ -60061,7 +60332,8 @@
       "albumIds": [
         "1fd4129a-8c52-8052-9032-f763629a9c4a",
         "d935d9cc-e55f-4bee-8601-29c0f18f4e10",
-        "3da4129a-8c52-8077-91d9-eb60db07b061"
+        "3da4129a-8c52-8077-91d9-eb60db07b061",
+        "3df4129a-8c52-800a-a91d-f56639bb93fd"
       ],
       "genres": [
         "Dub"
@@ -69118,6 +69390,27 @@
       "akaIds": []
     },
     {
+      "id": "3df4129a-8c52-80a5-9fde-da736876378b",
+      "slug": "y-bulbul",
+      "name": "Y Bülbül",
+      "country": "TR",
+      "bandcamp": "https://ybulbul.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-80ef-8f87-e139659fe5ad"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3df4129a-8c52-800d-9849-da0d5d954943"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2524129a-8c52-800f-b39b-c4646ab57cee",
       "slug": "yadava",
       "name": "Yadava",
@@ -69834,15 +70127,17 @@
       "name": "4AD Records",
       "country": "GB",
       "bandcamp": "https://4aduk.bandcamp.com/",
-      "bandcamp2": null,
+      "bandcamp2": "https://4adofficial.bandcamp.com/",
       "youtube": null,
       "albumIds": [
         "37c4129a-8c52-8031-a05a-d37a87d2be82",
-        "04d10031-7bcf-400e-9f91-e6b2ea6922ff"
+        "04d10031-7bcf-400e-9f91-e6b2ea6922ff",
+        "3df4129a-8c52-80f4-8e9c-d7d735f931e1"
       ],
       "artistIds": [
         "24a4129a-8c52-8056-9f0a-e627d3933971",
-        "2504129a-8c52-8032-ab7b-dbadf4248593"
+        "2504129a-8c52-8032-ab7b-dbadf4248593",
+        "24a4129a-8c52-80eb-8657-c40d16537f6d"
       ]
     },
     {
@@ -70444,7 +70739,8 @@
         "1034129a-8c52-802f-a87f-d6b7de37754a",
         "0a9200f5-35d6-4f88-ab9b-8879c14b7946",
         "d935d9cc-e55f-4bee-8601-29c0f18f4e10",
-        "3da4129a-8c52-8077-91d9-eb60db07b061"
+        "3da4129a-8c52-8077-91d9-eb60db07b061",
+        "3df4129a-8c52-800a-a91d-f56639bb93fd"
       ],
       "artistIds": [
         "2444129a-8c52-8023-a3a5-c7faf6e6beba",
@@ -74905,9 +75201,9 @@
       "slug": "irma-records",
       "name": "Irma Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://irmarecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@irmarecords",
       "albumIds": [
         "2d34129a-8c52-80e9-9369-e7df59283131"
       ],
@@ -78243,6 +78539,21 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-800d-9849-da0d5d954943",
+      "slug": "pingipung",
+      "name": "Pingipung",
+      "country": "DE",
+      "bandcamp": "https://pingipung.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-80ef-8f87-e139659fe5ad"
+      ],
+      "artistIds": [
+        "3df4129a-8c52-80a5-9fde-da736876378b"
+      ]
+    },
+    {
       "id": "2484129a-8c52-806e-bd5e-e0f260a9b0d3",
       "slug": "pirates-press-records",
       "name": "Pirates Press Records",
@@ -78759,14 +79070,16 @@
       "slug": "ransom-note-records",
       "name": "Ransom Note Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://ransomnoterecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "2924129a-8c52-805c-84cd-f381ca20a2dc"
+        "2924129a-8c52-805c-84cd-f381ca20a2dc",
+        "3df4129a-8c52-8061-ad58-deaf3f258454"
       ],
       "artistIds": [
-        "2924129a-8c52-80b5-895b-d8dd8792d15b"
+        "2924129a-8c52-80b5-895b-d8dd8792d15b",
+        "3df4129a-8c52-8091-81c2-ca01bc9cbf05"
       ]
     },
     {
@@ -80652,6 +80965,21 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-80d9-8e4d-c77021e295b0",
+      "slug": "tartelet-records",
+      "name": "Tartelet Records",
+      "country": "DK",
+      "bandcamp": "https://tarteletrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-8034-bb05-d1ea44935ccf"
+      ],
+      "artistIds": [
+        "24d4129a-8c52-8091-affd-c55a11dd4cb9"
+      ]
+    },
+    {
       "id": "2484129a-8c52-8053-9a67-cfd3b9aa2dd9",
       "slug": "technicolour",
       "name": "Technicolour",
@@ -81160,7 +81488,8 @@
         "2664129a-8c52-8056-a76e-eb43ef492297",
         "cc75744c-6671-4db9-8bdf-487423d10089",
         "3d54129a-8c52-80d8-9b03-d872e13cc2f9",
-        "3da4129a-8c52-80a9-a604-d6303753b59e"
+        "3da4129a-8c52-80a9-a604-d6303753b59e",
+        "3df4129a-8c52-80b8-ba99-f306aa6457f4"
       ],
       "artistIds": [
         "3104129a-8c52-8044-b0b6-f9c4ec38e9d9",
@@ -81556,6 +81885,21 @@
       ],
       "artistIds": [
         "3de4129a-8c52-8079-b6ae-d091b8fb9f73"
+      ]
+    },
+    {
+      "id": "3df4129a-8c52-80e7-9d80-f3b5a28fb779",
+      "slug": "vulcano",
+      "name": "Vulcano",
+      "country": "IT",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-80b8-a695-d84b43599fb1"
+      ],
+      "artistIds": [
+        "3df4129a-8c52-8066-aa48-e4401baba6fb"
       ]
     },
     {
@@ -82712,6 +83056,19 @@
         "3b64129a-8c52-80cb-a1d8-c03d2c5ebe60"
       ],
       "slug": "madness-baggy-trousers"
+    },
+    {
+      "id": "3df4129a-8c52-80bc-8be9-f81fa964b557",
+      "title": "MAIORANO | Swim Alone",
+      "url": "https://youtu.be/K1Eg7tyBmR8?si=SRgJATMXxWnPSj8l",
+      "kind": "Official Video",
+      "released": "2025-08-08",
+      "year": 2025,
+      "origYear": null,
+      "artistIds": [
+        "2d34129a-8c52-8080-8683-e2763cfd56d6"
+      ],
+      "slug": "maiorano-swim-alone"
     },
     {
       "id": "2424129a-8c52-80ad-a8a9-f768630a2696",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T00:23:30Z",
+  "generatedAt": "2026-09-18T16:28:30Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22224,6 +22224,119 @@
       "upc": "4062548144055",
       "tracks": 9,
       "releaseDate": "2026-09-18"
+    },
+    "3df4129a-8c52-80f4-8e9c-d7d735f931e1": {
+      "source": "https://album.link/hz0m8zjgnzvbj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4nsap9FkZQJLSbQP8I9one",
+        "pandora": "https://www.pandora.com/AL:9316731",
+        "deezer": "https://www.deezer.com/album/226588992",
+        "amazonMusic": "https://music.amazon.com/albums/B091B5FG4J",
+        "tidal": "https://listen.tidal.com/album/182354301",
+        "napster": "https://play.napster.com/album/alb.582439578",
+        "boomplay": "https://www.boomplay.com/albums/25540136",
+        "anghami": "https://play.anghami.com/album/1019935860?refer=linktree",
+        "bandcamp": "https://erikadecasier.bandcamp.com/album/sensational",
+        "amazonStore": "https://amazon.com/dp/B091B5FG4J"
+      },
+      "upc": "191400035454",
+      "tracks": 13,
+      "releaseDate": "2021-05-21"
+    },
+    "3df4129a-8c52-80b8-a695-d84b43599fb1": {
+      "source": "https://album.link/pddpxjpk4h3q4",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2rQu03UOssXQjmatsLxWfb",
+        "pandora": "https://www.pandora.com/AL:8852601",
+        "amazonMusic": "https://music.amazon.com/albums/B091V1VQ55",
+        "tidal": "https://listen.tidal.com/album/179656437",
+        "bandcamp": "https://brunobelissimo.bandcamp.com/album/maison-belissimo",
+        "amazonStore": "https://amazon.com/dp/B091V1VQ55"
+      },
+      "upc": "8718857699248",
+      "tracks": 8,
+      "releaseDate": "2021-04-30"
+    },
+    "3df4129a-8c52-80ef-8f87-e139659fe5ad": {
+      "source": "https://album.link/8vshgk2sk9bzr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5bXv5L6WuTDS3mOnL7akcV",
+        "pandora": "https://www.pandora.com/AL:55170843",
+        "deezer": "https://www.deezer.com/album/171756422",
+        "amazonMusic": "https://music.amazon.com/albums/B0FX5KQWGH",
+        "tidal": "https://listen.tidal.com/album/468490536",
+        "napster": "https://play.napster.com/album/alb.509897988",
+        "yandex": "https://music.yandex.ru/album/12041923",
+        "boomplay": "https://www.boomplay.com/albums/15995647",
+        "anghami": "https://play.anghami.com/album/1014761818?refer=linktree",
+        "bandcamp": "https://ybulbul.bandcamp.com/album/fever-2",
+        "amazonStore": "https://amazon.com/dp/B0FX5KQWGH"
+      },
+      "upc": "3616408703817",
+      "tracks": 6,
+      "releaseDate": "2020-11-06"
+    },
+    "3df4129a-8c52-8061-ad58-deaf3f258454": {
+      "source": "https://album.link/kkjbhqqjp8xjr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0yWP0bki3piEYrWzRZH369",
+        "deezer": "https://www.deezer.com/album/155571812",
+        "amazonMusic": "https://music.amazon.com/albums/B08BGCQBWY",
+        "tidal": "https://listen.tidal.com/album/184779106",
+        "yandex": "https://music.yandex.ru/album/11136987",
+        "bandcamp": "https://hologramteen.bandcamp.com/album/pizza-conspiracy",
+        "amazonStore": "https://amazon.com/dp/B08BGCQBWY"
+      },
+      "upc": "4062548014129",
+      "tracks": 15,
+      "releaseDate": "2020-09-04"
+    },
+    "3df4129a-8c52-800a-a91d-f56639bb93fd": {
+      "source": "https://album.link/fmrs70dzjkm97",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2lsYPbuW6yOqkm1DKtkiES",
+        "pandora": "https://www.pandora.com/AL:33503714",
+        "deezer": "https://www.deezer.com/album/556102302",
+        "amazonMusic": "https://music.amazon.com/albums/B083TNK65V",
+        "tidal": "https://listen.tidal.com/album/350604221",
+        "boomplay": "https://www.boomplay.com/albums/86202298",
+        "anghami": "https://play.anghami.com/album/1050011242?refer=linktree",
+        "bandcamp": "https://pachyman.bandcamp.com/album/at-333-house",
+        "amazonStore": "https://amazon.com/dp/B083TNK65V"
+      },
+      "upc": "00880882624354",
+      "tracks": 14,
+      "releaseDate": "2020-02-07"
+    },
+    "3df4129a-8c52-80b8-ba99-f306aa6457f4": {
+      "source": "https://album.link/pthkbv2pk7qx6",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7rYzbhbLxg91bTkGmvQQ6p",
+        "tidal": "https://listen.tidal.com/album/112331096",
+        "napster": "https://play.napster.com/album/alb.387725396",
+        "boomplay": "https://www.boomplay.com/albums/3404871",
+        "anghami": "https://play.anghami.com/album/1007674663?refer=linktree",
+        "bandcamp": "https://thisismoonchild.bandcamp.com/album/little-ghost"
+      },
+      "upc": "5060609661458",
+      "tracks": 14,
+      "releaseDate": "2019-09-06"
+    },
+    "3df4129a-8c52-8034-bb05-d1ea44935ccf": {
+      "source": "https://album.link/9wtxw3wmj8fwx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4q6t2qUYy2bp5sqwXSXldc",
+        "deezer": "https://www.deezer.com/album/87284632",
+        "tidal": "https://listen.tidal.com/album/184748438",
+        "napster": "https://play.napster.com/album/alb.353845998",
+        "yandex": "https://music.yandex.ru/album/6892089",
+        "boomplay": "https://www.boomplay.com/albums/9797476",
+        "anghami": "https://play.anghami.com/album/1010789665?refer=linktree",
+        "bandcamp": "https://jitwam.bandcamp.com/album/honeycomb"
+      },
+      "upc": "0730003681004",
+      "tracks": 12,
+      "releaseDate": "2019-05-03"
     }
   }
 }

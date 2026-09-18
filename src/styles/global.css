@@ -2155,7 +2155,11 @@ main > .head--page:first-child { border-top: 0; }
   gap: 0.25rem;
   font-family: var(--mono);
   font-size: max(13px, 0.8125rem);
-  font-weight: 500;
+
+  /* Невыбранный вид — 400, как ссылки на жанры и лейблы; выбранный — 500,
+     см. отметку ниже (18 сентября 2026, просьба владельца). Шрифт
+     моноширинный, и смена начертания ширины слова не меняет. */
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -2190,6 +2194,7 @@ main > .head--page:first-child { border-top: 0; }
    разобрана у меню в шапке. */
 :root[data-view='grid'] .view-pick__opt[data-view-opt='grid'],
 :root:not([data-view='grid']) .view-pick__opt[data-view-opt='list'] {
+  font-weight: 500;
   color: var(--fg);
   border-bottom-color: var(--fg);
   cursor: default;

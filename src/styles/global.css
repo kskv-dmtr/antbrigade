@@ -2329,6 +2329,14 @@ main > .head--page:first-child { border-top: 0; }
 
 .search { position: relative; }
 
+/* Верхний ряд поиска: поле и крестик «закрыть» справа. Крестик есть только
+   в слое на телефоне; на широком экране ряд — это одно поле. Лупа, клавиша
+   и крестик сброса отмеряются от .search__row, а не от всего .search: в
+   слое под рядом стоят находки, и середина всего короба ушла бы вниз. */
+.search__top { display: flex; align-items: center; gap: 0.5rem; }
+.search__row { position: relative; flex: 1; min-width: 0; }
+.search__close { display: none; }
+
 /* Поле в шапке — единственное место поиска на сайте. Ширина названа числом,
    а не долей: шапка выложена флексом с меню посередине абсолютом, и растущее
    поле сдвигало бы кнопку темы, а меню осталось бы на месте.
@@ -4341,21 +4349,87 @@ html:not([data-js]) .more { display: none; }
     margin-left: auto;
   }
 
-  /* Строка поиска на телефоне закрыта, пока её не откроет лупа. Открытая —
-     та же, что была: во всю ширину, второй строкой шапки.
+  /* Поиск на телефоне — слой на весь экран, с 18 сентября 2026, по образцу
+     dsgners.ru. До этого он открывался второй строкой шапки, и находки
+     выпадали панелью поверх страницы: в неё помещалось пять-шесть строк, а
+     под ней просвечивала страница.
 
-     Подсказки клавиши «/» здесь нет — на телефоне нажимать её нечем, — а
-     крестик стоит всегда: он не только стирает набранное, но и закрывает
-     саму строку. */
+     Сверху ряд ростом с шапку — те же 63 на 375: поле на всю ширину и
+     крестик в рамке справа от него, он закрывает слой. Ниже — находки на
+     всю высоту экрана, прокручиваются сами по себе.
+
+     Подсказки клавиши «/» здесь нет — на телефоне нажимать её нечем. Нет и
+     крестика сброса внутри поля: рядом с закрывающим он стоял бы вторым
+     таким же знаком, а стирает набранное и закрывающий. */
   [data-js] .masthead .search { display: none; }
-  [data-js] .masthead[data-search] .search { display: block; }
   [data-js] .masthead .search__key { display: none; }
-  [data-js] .masthead .search__clear { display: flex; }
+  [data-js] .masthead .search__clear { display: none !important; }
 
-  /* Панель находок — не шире самого поля. На широком экране она растёт
-     влево до 24rem, а здесь 24rem — это 384 при поле в 343, и левый край
-     панели уезжал за экран на 25 пикселей: замер на 375 — панель от −25. */
-  .masthead .search__found { width: 100%; }
+  [data-js] .masthead[data-search] .search {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    background: var(--bg);
+  }
+
+  /* Ряд ростом ровно с шапку — берёт её замеренную высоту, --head-h (63 на
+     375). Слой открывается, а линия стоит там же, где стояла, — глаз не
+     ищет, куда всё уехало. Полями сверху и снизу рост не набирается: поле
+     поиска выходит в 35, и ряд перерастал шапку на пиксель. */
+  [data-js] .masthead[data-search] .search__top {
+    flex: none;
+    box-sizing: border-box;
+    height: var(--head-h, 3.9375rem);
+    gap: 0.75rem;
+    padding: 0 max(var(--pad), env(safe-area-inset-right)) 0 max(var(--pad), env(safe-area-inset-left));
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Крестик «закрыть» — квадрат 34 в рамке линией, ростом ровно с поле:
+     та же рамка, что у крестика сброса на широком экране, только в размер
+     ряда. Знак 14 — как крестик бургера, приглушённым, как все служебные
+     знаки шапки. */
+  [data-js] .masthead[data-search] .search__close {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.125rem;
+    height: 2.125rem;
+    padding: 0;
+    color: var(--fg-muted);
+    background: none;
+    border: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .search__close-x { width: 0.875rem; height: 0.875rem; }
+  [data-js] .masthead .search__close:active,
+  [data-js] .masthead .search__close:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+
+  /* Находки — на всю оставшуюся высоту, во всю ширину, без рамки: это уже
+     не панель поверх страницы, а сама страница поиска. Пока ничего не
+     набрано, под рядом пусто, как у образца. */
+  [data-js] .masthead[data-search] .search__found {
+    position: static;
+    flex: 1;
+    width: auto;
+    max-height: none;
+    border: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  [data-js] .masthead[data-search] .found:last-child { border-bottom: 1px solid var(--line-soft); }
+
+  /* Страница под слоем не прокручивается: иначе палец, дошедший до конца
+     находок, начинал бы листать её, невидимую. */
+  [data-js]:has(.masthead[data-search]) { overflow: hidden; }
 
   /* Центрирование с широкого экрана снимается целиком. Без скрипта меню
      остаётся в потоке и переносится под слово, а со скриптом выпадает

@@ -20,6 +20,12 @@
 import Icon from './Icon.astro';
 ---
 <div class="search" id="search-box">
+  {/* Верхний ряд: само поле и крестик «закрыть» справа от него. Крестик
+      виден только на телефоне, где поиск открывается слоем на весь экран
+      (с 18 сентября 2026, по образцу dsgners.ru), и закрывает этот слой.
+      На широком экране ряд — это просто поле. */}
+  <div class="search__top">
+  <div class="search__row">
   <Icon name="magnifying-glass" class="search__icon" />
   <input
     type="search"
@@ -37,6 +43,12 @@ import Icon from './Icon.astro';
   <button type="button" class="search__clear" aria-label="Clear search">
     <Icon name="x" class="search__x" />
   </button>
+  </div>
+
+  <button type="button" class="search__close" aria-label="Close search">
+    <Icon name="x" class="search__close-x" />
+  </button>
+  </div>
 
   {/* Панель пустой не показывается: состояний «ничего не найдено» на сайте
       нет нигде, и заводить одно ради поиска не за чем. */}
@@ -194,16 +206,15 @@ import Icon from './Icon.astro';
        что и набор с клавиатуры: обработчик выше один на оба случая. */
     const сброс = короб.querySelector('.search__clear');
 
-    /* На телефоне крестик ещё и закрывает саму строку поиска (это делает
-       Base.astro), и возвращать фокус в поле, которое сейчас спрячется, не
-       нужно: на телефоне это на миг поднимало бы клавиатуру. */
-    const узкий = matchMedia('(max-width: 640px)');
-
+    /* Крестик сброса только стирает. На телефоне его в слое поиска нет — там
+       с 18 сентября 2026 стоит свой крестик справа от поля, он и закрывает
+       слой, и стирает (Base.astro). Фокус возвращаем в поле — человек стёр
+       набранное, чтобы набрать другое. */
     if (сброс) {
       сброс.addEventListener('click', () => {
         поле.value = '';
         закрыть();
-        if (!узкий.matches) поле.focus();
+        поле.focus();
       });
     }
 

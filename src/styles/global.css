@@ -2118,6 +2118,13 @@ main > .head--page:first-child { border-top: 0; }
 /* Отборы идут подряд справа. Просвет между ними — 24: имя со списком внутри
    отбора связаны восемью, и будь просвет между отборами таким же, они
    слиплись бы в одну строку из десяти слов. */
+/* Кнопка шторки, заголовок шторки, второй переключатель вида и затемнение —
+   только для телефона (правила в мобильном блоке). */
+.filters-row__toggle,
+.filters-row__head,
+.filters-row__view,
+.filters-row__scrim { display: none; }
+
 .filters-row__set {
   flex: none;
   display: flex;
@@ -4927,6 +4934,168 @@ html:not([data-js]) .more { display: none; }
     scrollbar-width: none;
   }
   .filters-row::-webkit-scrollbar { display: none; }
+
+  /* Со скриптом полоса — одна строка: слева кнопка «Filters» с
+     треугольником, справа Grid / List (18 сентября 2026, просьба
+     владельца). Отборы и сортировка уходят в шторку снизу. Без скрипта
+     открыть шторку нечем, и полоса остаётся прежней строкой. */
+  [data-js] .filters-row {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+  }
+  [data-js] .filters-row__name { display: none; }
+
+  /* Кнопка набрана как подпись отбора, но основным цветом — это орган, а
+     не подпись. Треугольник — тот же, что у отборов: вправо, пока шторка
+     закрыта, вниз — пока открыта. */
+  [data-js] .filters-row__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: calc(var(--filters-h) - 1px);
+    padding: 0 0 0 calc(var(--pad) + 1px);
+    font-family: var(--mono);
+    font-size: max(13px, 0.8125rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  [data-js] .filters-row__toggle .filters-row__mark {
+    position: static;
+    margin-top: 0;
+  }
+  [data-js] .filters-row[data-sheet] .filters-row__mark { transform: rotate(0deg); }
+
+  [data-js] .filters-row__view {
+    display: flex;
+    align-items: center;
+    padding-right: var(--pad);
+  }
+
+  /* Шторка — тот же набор отборов, выложенный столбцом у низа экрана.
+     Выезжает снизу ходом шапки (0,32 с, мягкое замедление); выше 85 %
+     экрана не растёт и прокручивается сама. */
+  [data-js] .filters-row__set {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 85dvh;
+    margin: 0;
+    padding: 0 var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s linear 0.32s;
+  }
+  [data-js] .filters-row[data-sheet] .filters-row__set {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s;
+  }
+
+  /* Затемнение под шторкой: страница остаётся видна, но ясно, что сейчас
+     работают со шторкой. Нажатие на него закрывает шторку. */
+  [data-js] .filters-row__scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    background: color-mix(in srgb, var(--fg) 35%, transparent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s ease;
+  }
+  [data-js] .filters-row[data-sheet] .filters-row__scrim {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  [data-js]:has(.filters-row[data-sheet]) { overflow: hidden; }
+
+  /* Заголовок шторки: слово слева, крестик в рамке справа — такой же, как
+     у меню и поиска. Липнет к верху шторки, когда та прокручивается. */
+  [data-js] .filters-row__head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: none;
+    height: var(--bar-h);
+    margin: 0 calc(var(--pad) * -1);
+    padding: 0 var(--pad);
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .filters-row__title {
+    font-family: var(--mono);
+    font-size: max(13px, 0.8125rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  .filters-row__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.125rem;
+    height: 2.125rem;
+    padding: 0;
+    color: var(--fg-muted);
+    background: none;
+    border: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .filters-row__close-x { width: 0.875rem; height: 0.875rem; }
+  .filters-row__close:active,
+  .filters-row__close:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+
+  /* Отбор в шторке — строка во всю ширину: имя слева, список справа, мягкая
+     черта снизу. Раскрытый список встаёт под своей кнопкой, в потоке, и
+     раздвигает строки ниже, а не падает поверх них. */
+  [data-js] .filters-row__set .filter {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    column-gap: 1rem;
+    padding: calc((var(--bar-h) - 2.125rem) / 2) 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  [data-js] .filters-row__set .filter:last-child { border-bottom: 0; }
+  [data-js] .filters-row__set .filter__name { line-height: 2.125rem; }
+  [data-js] .filters-row__set .filter > .select { justify-self: end; }
+  [data-js] .filters-row__set .multi { justify-self: stretch; }
+  [data-js] .filters-row__set .multi__button {
+    max-width: none;
+    justify-content: flex-end;
+  }
+  [data-js] .filters-row__set .multi__panel {
+    position: static;
+    width: auto;
+    margin-top: 0.375rem;
+  }
+
+  /* Вид в шторке не повторяем: он стоит в самой полосе. */
+  [data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
   /* Содержимое строки не сжимается по её ширине: пусть уезжает за край, а не
      ужимается до нечитаемого. */
   .filter { flex: none; }

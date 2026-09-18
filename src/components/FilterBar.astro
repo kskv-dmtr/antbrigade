@@ -10,9 +10,86 @@
    глазу приходилось прыгать через пустоту от имени к списку.
 
    Полоса липкая и встаёт под заголовок раздела: обе держатся на экране,
-   пока листаешь каталог. */
+   пока листаешь каталог.
+
+   На телефоне, с 18 сентября 2026 (просьба владельца), полоса другая: слева
+   кнопка «Filters» с треугольником, справа Grid / List. Кнопка открывает
+   снизу шторку со всеми отборами и сортировкой — это тот же набор отборов,
+   .filters-row__set, только выложенный столбцом. До того отборы стояли одной
+   строкой, уезжавшей за край экрана, и дальние приходилось искать сдвигом
+   вбок. Кнопка, заголовок шторки, второй переключатель вида и затемнение
+   есть в разметке всегда, а показывает их только мобильный медиазапрос. */
+
+import Icon from './Icon.astro';
+import ViewSwitch from './ViewSwitch.astro';
 ---
 <div class="filters-row">
   <span class="filters-row__name">Filters</span>
-  <div class="filters-row__set"><slot /></div>
+
+  <button
+    type="button"
+    class="filters-row__toggle"
+    aria-expanded="false"
+    aria-controls="filters-sheet"
+  >
+    Filters
+    <span class="select__chevron filters-row__mark" aria-hidden="true"></span>
+  </button>
+
+  <div class="filters-row__set" id="filters-sheet" role="dialog" aria-label="Filters">
+    <div class="filters-row__head">
+      <span class="filters-row__title">Filters</span>
+      <button type="button" class="filters-row__close" aria-label="Close filters">
+        <Icon name="x" class="filters-row__close-x" />
+      </button>
+    </div>
+    <slot />
+  </div>
+
+  {/* Переключатель вида на телефоне стоит в самой полосе, справа, а в шторке
+      его нет: выбирают вид взглядом, и прятать его за кнопку незачем. */}
+  <span class="filters-row__view"><ViewSwitch /></span>
+
+  <div class="filters-row__scrim" aria-hidden="true"></div>
 </div>
+
+<script>
+  /* Шторка отборов на телефоне. Открывается кнопкой «Filters», закрывается
+     крестиком в своём заголовке, нажатием на затемнение и клавишей Escape.
+     Состояние — атрибут на полосе, как у меню и поиска в шапке: по нему CSS
+     выдвигает шторку и прячет прокрутку страницы под ней. */
+  const полоса = document.querySelector('.filters-row');
+  const кнопка = полоса?.querySelector('.filters-row__toggle');
+
+  if (полоса && кнопка) {
+    const узкий = matchMedia('(max-width: 640px)');
+
+    const шторка = (on) => {
+      полоса.toggleAttribute('data-sheet', on);
+      кнопка.setAttribute('aria-expanded', String(on));
+      if (!on) {
+        // Раскрытые списки внутри закрываем вместе со шторкой.
+        for (const список of полоса.querySelectorAll('details.multi[open]')) список.open = false;
+      }
+    };
+
+    кнопка.addEventListener('click', () => шторка(!полоса.hasAttribute('data-sheet')));
+    полоса.querySelector('.filters-row__close')?.addEventListener('click', () => {
+      шторка(false);
+      кнопка.focus();
+    });
+    полоса.querySelector('.filters-row__scrim')?.addEventListener('click', () => шторка(false));
+
+    addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || !полоса.hasAttribute('data-sheet')) return;
+      // Открытый список внутри закрывается своим обработчиком — сначала он.
+      if (полоса.querySelector('details.multi[open]')) return;
+      шторка(false);
+      кнопка.focus();
+    });
+
+    // На широком экране шторки нет: забытое «открыто» держало бы страницу
+    // без прокрутки.
+    узкий.addEventListener('change', () => шторка(false));
+  }
+</script>

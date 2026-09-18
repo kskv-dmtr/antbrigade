@@ -56,7 +56,11 @@ import ViewSwitch from './ViewSwitch.astro';
         срабатывают сразу, по выбору, — Apply закрывает шторку и, если страница
         уже ушла ниже начала списка, возвращает к нему: найденное начинается
         сверху. */}
+    {/* Reset all — рядом с Apply, когда выбрано в двух отборах и больше
+        (19 сентября 2026, просьба владельца): сбрасывает все отборы разом;
+        сортировку не трогает — она не отбор. */}
     <div class="filters-row__foot">
+      <button type="button" class="filters-row__reset-all">Reset all</button>
       <button type="button" class="filters-row__apply">Apply</button>
     </div>
   </div>
@@ -280,8 +284,21 @@ import ViewSwitch from './ViewSwitch.astro';
       }
     };
 
+    /* Отборов с выбором два и больше — рядом с Apply встаёт Reset all. */
+    const выбраноВНескольких = () => набор.querySelectorAll('details.multi[data-chosen]').length >= 2;
+
+    полоса.querySelector('.filters-row__reset-all')?.addEventListener('click', () => {
+      for (const список of набор.querySelectorAll('details.multi')) {
+        const отмечено = [...список.querySelectorAll('input:checked')];
+        if (!отмечено.length) continue;
+        for (const флажок of отмечено) флажок.checked = false;
+        список.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
     const отметить = () => {
       полоса.toggleAttribute('data-dirty', выбрано());
+      полоса.toggleAttribute('data-several', выбраноВНескольких());
       счёт();
       // Появился или пропал Apply — места под раскрытый список стало иначе.
       уместить();

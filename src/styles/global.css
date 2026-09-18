@@ -5349,7 +5349,13 @@ html:not([data-js]) .more { display: none; }
 [data-js] .filters-row__foot {
   position: sticky;
   bottom: 0;
-  display: block;
+
+  /* Кнопки в ряд пополам: Reset all слева, Apply справа; пока выбрано в
+     одном отборе, Reset all нет и Apply во всю ширину. */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--pad);
   flex: none;
   margin: 0 calc(var(--pad) * -1);
   padding: var(--pad) var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
@@ -5369,7 +5375,14 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
   [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
 }
-.filters-row__apply {
+/* Reset all — только когда выбрано в двух отборах и больше (атрибут
+   data-several ставит скрипт FilterBar). Через полосу — ради веса: общее
+   правило кнопок ниже задаёт display: flex и иначе перебивало бы. */
+.filters-row:not([data-several]) .filters-row__reset-all { display: none; }
+
+/* Reset all набрана так же, как Apply: это пара равных кнопок. */
+.filters-row__apply,
+.filters-row__reset-all {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5386,7 +5399,9 @@ html:not([data-js]) .more { display: none; }
   cursor: pointer;
 }
 .filters-row__apply:active,
-.filters-row__apply:focus-visible {
+.filters-row__apply:focus-visible,
+.filters-row__reset-all:active,
+.filters-row__reset-all:focus-visible {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -5394,14 +5409,16 @@ html:not([data-js]) .more { display: none; }
 
 /* Цвет из жеребьёвки — как у «Dig again»: по наведению и по нажатию. */
 @media (hover: hover) {
-  .filters-row__apply[data-hot]:hover {
+  .filters-row__apply[data-hot]:hover,
+  .filters-row__reset-all[data-hot]:hover {
     background: var(--hot);
     color: var(--hot-fg);
     border-color: var(--hot);
   }
 }
 @media (hover: none) {
-  .filters-row__apply[data-hot]:active {
+  .filters-row__apply[data-hot]:active,
+  .filters-row__reset-all[data-hot]:active {
     background: var(--hot);
     color: var(--hot-fg);
     border-color: var(--hot);

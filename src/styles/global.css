@@ -318,6 +318,14 @@
    построена на el.hidden, так что страховка нужна общая. */
 [hidden] { display: none !important; }
 
+/* Состояний фокуса на сайте нет — ни своей выворотки, ни обводки
+   браузера (19 сентября 2026, решение владельца: после Escape фокус,
+   возвращённый на кнопку, оставлял её залитой). Осталась только ссылка
+   «Skip to content» — она видна лишь в фокусе, и иначе её не было бы
+   вовсе. */
+:focus,
+:focus-visible { outline: none; }
+
 /* Колонка во всю высоту окна, чтобы на короткой странице — скажем, у лейбла
    с одним релизом — подвал прижимался к низу, а не висел посреди экрана. */
 body {
@@ -676,10 +684,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--fg);
   border-bottom-color: var(--fg);
 }
-.subnav a:focus-visible { color: var(--fg); }
 
-.nav a:focus-visible { color: var(--fg); }
-.nav__sum:focus-visible { color: var(--fg); }
 .nav a:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 
 /* Бургер. На широком экране шесть пунктов стоят в строку, кнопка не нужна и
@@ -716,7 +721,6 @@ a { color: inherit; text-decoration: none; }
     border-color: var(--ink);
   }
 }
-[data-js] .burger:focus-visible,
 [data-js] .burger:active {
   background: var(--ink);
   color: var(--ink-fg);
@@ -763,7 +767,6 @@ a { color: inherit; text-decoration: none; }
 @media (hover: hover) {
   [data-js] .search-toggle:hover { background: var(--ink); color: var(--ink-fg); }
 }
-[data-js] .search-toggle:focus-visible,
 [data-js] .search-toggle:active { background: var(--ink); color: var(--ink-fg); }
 
 /* Открытая строка отмечена на самой лупе — как бургер меняется на крест. */
@@ -824,10 +827,6 @@ a { color: inherit; text-decoration: none; }
 }
 .theme-toggle:active { color: var(--fg); }
 
-.theme-toggle:focus-visible {
-  background: var(--ink);
-  color: var(--ink-fg);
-}
 
 /* Кружок у кнопки темы ровно того же размера, что метка раздела в полосе:
    16 видимой краски, коробка считается от неё по тем же тринадцати
@@ -1080,9 +1079,7 @@ a { color: inherit; text-decoration: none; }
 @media (hover: hover) {
   .tile__link:hover .tile__art img { filter: invert(1); }
 }
-.tile__link:focus-visible .tile__art img,
 .tile__link:active .tile__art img { filter: invert(1); }
-
 
 .tile__over {
   position: absolute;
@@ -1102,7 +1099,6 @@ a { color: inherit; text-decoration: none; }
 @media (hover: hover) {
   .tile__link:hover .tile__over { opacity: 1; }
 }
-.tile__link:focus-visible .tile__over,
 .tile__link:active .tile__over { opacity: 1; }
 
 /* Плашка поверх обложки не показывается с 7 сентября 2026: её работу делает
@@ -1417,15 +1413,11 @@ a { color: inherit; text-decoration: none; }
   .row:hover .row__num,
   .row:hover .row__val { color: var(--ink-muted); }
 }
-.row:focus-visible,
 .row:active {
   background: var(--ink);
   color: var(--ink-fg);
   outline: none;
 }
-.row:focus-visible .row__meta,
-.row:focus-visible .row__num,
-.row:focus-visible .row__val,
 .row:active .row__meta,
 .row:active .row__num,
 .row:active .row__val { color: var(--ink-muted); }
@@ -1954,9 +1946,7 @@ main > .head--page:first-child { border-top: 0; }
   }
 }
 
-.view-all--below:focus-visible .btn-label,
 .view-all--below:active .btn-label,
-.dig-again--below:focus-visible .btn-label,
 .dig-again--below:active .btn-label {
   background: var(--ink);
   color: var(--ink-fg);
@@ -1987,9 +1977,7 @@ main > .head--page:first-child { border-top: 0; }
   }
 }
 
-.head--dot .view-all:focus-visible .btn-label,
 .head--dot .view-all:active .btn-label,
-.head--dot .dig-again:focus-visible .btn-label,
 .head--dot .dig-again:active .btn-label {
   background: var(--ink);
   color: var(--ink-fg);
@@ -2224,7 +2212,6 @@ main > .head--page:first-child { border-top: 0; }
     border-bottom-color: transparent;
   }
 }
-.view-pick__opt:focus-visible,
 .view-pick__opt:active {
   background: var(--ink);
   color: var(--ink-fg);
@@ -2449,7 +2436,6 @@ main > .head--page:first-child { border-top: 0; }
 }
 
 .search input::placeholder { color: var(--fg-dim); text-transform: uppercase; }
-.search input:focus-visible { border-color: var(--fg-muted); }
 
 /* Лупа слева, клавиша справа. pointer-events: none у обеих — чтобы клик по
    ним попадал в поле, а не в саму метку. */
@@ -2515,10 +2501,7 @@ main > .head--page:first-child { border-top: 0; }
 @media (hover: hover) {
   .search__clear:hover { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
 }
-.search__clear:focus-visible,
 .search__clear:active { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
-
-.search:focus-within .search__icon { color: var(--fg-muted); }
 
 /* Панель находок выпадает из-под поля. Приём взят у Spotify: поиск там один
    на всё и отвечает вперемешку — исполнителями, альбомами, треками, — у
@@ -2883,8 +2866,7 @@ select option { background: var(--option-bg); color: var(--fg); }
 @media (hover: hover) {
   .multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 }
-.multi__clear:active,
-.multi__clear:focus-visible { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
+.multi__clear:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
 /* Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
    панели по одной подписи «Genres [3]» не видно, что отбор включён. */
 .multi[data-chosen] .multi__button { color: var(--fg); }
@@ -4071,7 +4053,6 @@ html:not([data-js]) .more { display: none; }
     border-bottom-color: transparent;
   }
 }
-.foot__note a:focus-visible,
 .foot__note a:active {
   background: var(--ink);
   color: var(--ink-fg);
@@ -4283,7 +4264,6 @@ html:not([data-js]) .more { display: none; }
   @media (hover: hover) {
     .row:hover { padding-left: 0.5rem; padding-right: 0.5rem; }
   }
-  .row:focus-visible,
   .row:active { padding-left: 0.5rem; padding-right: 0.5rem; }
 
   /* Мобильные правила .row--name и .row--video удалены 5 сентября 2026:
@@ -4364,9 +4344,7 @@ html:not([data-js]) .more { display: none; }
      специфичнее, и от общего правила доезжал только цвет текста: подпись
      красилась в цвет фона и пропадала. */
   .view-all--below:active .btn-label,
-  .view-all--below:focus-visible .btn-label,
-  [data-js] .dig-again--below:active .btn-label,
-  [data-js] .dig-again--below:focus-visible .btn-label {
+  [data-js] .dig-again--below:active .btn-label {
     background: var(--ink);
     color: var(--ink-fg);
     border-bottom-color: transparent;
@@ -4433,14 +4411,12 @@ html:not([data-js]) .more { display: none; }
     border-top: 1px solid var(--line);
     pointer-events: none;
   }
-  [data-js] .dig-again--below:active,
-  [data-js] .dig-again--below:focus-visible {
+  [data-js] .dig-again--below:active {
     background: var(--ink);
     color: var(--ink-fg);
     border-color: var(--ink);
   }
-  [data-js] .dig-again--below:active .btn-label,
-  [data-js] .dig-again--below:focus-visible .btn-label { background: none; color: inherit; }
+  [data-js] .dig-again--below:active .btn-label { background: none; color: inherit; }
   @media (hover: hover) {
     [data-js] .dig-again--below:hover .btn-label { background: none; color: inherit; }
     [data-js] .dig-again--below[data-hot]:hover {
@@ -4602,8 +4578,7 @@ html:not([data-js]) .more { display: none; }
     cursor: pointer;
   }
   .search__close-x { width: 0.875rem; height: 0.875rem; }
-  [data-js] .masthead .search__close:active,
-  [data-js] .masthead .search__close:focus-visible {
+  [data-js] .masthead .search__close:active {
     background: var(--ink);
     color: var(--ink-fg);
     border-color: var(--ink);
@@ -4714,8 +4689,7 @@ html:not([data-js]) .more { display: none; }
       border-bottom-color: transparent;
     }
   }
-  [data-js] .masthead .nav .nav__foot a:active,
-  [data-js] .masthead .nav .nav__foot a:focus-visible {
+  [data-js] .masthead .nav .nav__foot a:active {
     background: var(--ink);
     color: var(--ink-fg);
     border-bottom-color: transparent;
@@ -5164,8 +5138,7 @@ html:not([data-js]) .more { display: none; }
   color: var(--fg);
   border-bottom-color: var(--fg);
 }
-[data-js] .filters-row__toggle:active .filters-row__label,
-[data-js] .filters-row__toggle:focus-visible .filters-row__label {
+[data-js] .filters-row__toggle:active .filters-row__label {
   background: var(--ink);
   color: var(--ink-fg);
   border-bottom-color: transparent;
@@ -5272,8 +5245,7 @@ html:not([data-js]) .more { display: none; }
   cursor: pointer;
 }
 .filters-row__close-x { width: 0.875rem; height: 0.875rem; }
-.filters-row__close:active,
-.filters-row__close:focus-visible {
+.filters-row__close:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -5407,9 +5379,7 @@ html:not([data-js]) .more { display: none; }
   cursor: pointer;
 }
 .filters-row__apply:active,
-.filters-row__apply:focus-visible,
-.filters-row__reset-all:active,
-.filters-row__reset-all:focus-visible {
+.filters-row__reset-all:active {
   background: var(--ink);
   color: var(--ink-fg);
   border-color: var(--ink);
@@ -5542,8 +5512,7 @@ html:not([data-js]) .more { display: none; }
     cursor: pointer;
   }
   .search__close-x { width: 0.875rem; height: 0.875rem; }
-  [data-js] .masthead[data-drawer] .search__close:active,
-  [data-js] .masthead[data-drawer] .search__close:focus-visible {
+  [data-js] .masthead[data-drawer] .search__close:active {
     background: var(--ink);
     color: var(--ink-fg);
     border-color: var(--ink);

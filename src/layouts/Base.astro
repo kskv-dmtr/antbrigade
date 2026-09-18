@@ -383,9 +383,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           списка, где искало только по открытому списку. */}
       <SearchField />
 
-      {/* Затемнение под панелью поиска на широком экране — она открывается
-          косой чертой (см. скрипт ниже). Нажатие на него закрывает панель. */}
-      <div class="search-scrim" aria-hidden="true"></div>
 
       {/* Переключатель темы — последним в разметке, после меню. Выключен
           флагом с 7 сентября 2026: тема на сайте одна.
@@ -439,6 +436,16 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       </div>
     )}
   </header>
+
+  {/* Панель поиска на широком экране — по косой черте, выезжает справа.
+      С 19 сентября 2026 это отдельный экземпляр поля, а не поле из шапки:
+      то уезжало в панель и возвращалось, только когда панель доедет за
+      край, — поле в шапке пропадало и появлялось с задержкой. Теперь поле в
+      шапке стоит на месте всегда. */}
+  <div class="search-drawer" id="search-drawer" role="dialog" aria-label="Search">
+    <SearchField id="drawer-search" />
+  </div>
+  <div class="search-scrim" aria-hidden="true"></div>
 
   <main id="main" class="shell">
     <slot />
@@ -745,8 +752,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
          набор с клавиатуры, — находки закрывает обработчик в SearchField.
          Фокус возвращаем на лупу, иначе он остался бы в спрятанном поле. */
       masthead.querySelector('.search__close')?.addEventListener('click', () => {
-        // Панель поиска на широком экране закрывает свой обработчик ниже.
-        if (masthead.hasAttribute('data-drawer')) return;
         if (полеПоиска) {
           полеПоиска.value = '';
           полеПоиска.dispatchEvent(new Event('input'));
@@ -1028,6 +1033,9 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        широком экране косая черта открывает панель поиска справа. */
     const search = document.getElementById('search');
     const широкий = matchMedia('(min-width: 641px)');
+    const ящикЭл = document.getElementById('search-drawer');
+    const полеЯщика = document.getElementById('drawer-search');
+    const тень = document.querySelector('.search-scrim');
 
     if (search) {
       addEventListener('keydown', (e) => {
@@ -1043,7 +1051,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         e.preventDefault();
 
         // На широком экране косая черта открывает панель поиска справа.
-        if (широкий.matches && masthead) {
+        if (широкий.matches && ящикЭл) {
           ящик(true);
           return;
         }
@@ -1056,68 +1064,52 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       });
 
       search.addEventListener('keydown', (e) => {
-        // В панели Escape закрывает её — это ловит общий обработчик ниже.
-        if (masthead?.hasAttribute('data-drawer-open')) return;
         // Только снимаем фокус: набранное не стираем, иначе Escape рушил бы
         // выборку, которую человек собирал.
         if (e.key === 'Escape') search.blur();
       });
 
-      /* Панель поиска на широком экране — по косой черте, с 19 сентября 2026
-         (просьба владельца), как панель отборов, только справа: выезжает
-         справа налево, во всю высоту экрана, шириной в столбец сетки. Это
-         то же поле из шапки: атрибут data-drawer выносит его в панель, и на
-         время панели в шапке на его месте пусто. Щелчок мышью по полю в
-         шапке панели не открывает — там поле остаётся как было.
+      /* Панель поиска на широком экране — по косой черте (19 сентября 2026,
+         просьба владельца), как панель отборов, только справа: выезжает
+         справа налево, во всю высоту экрана, шириной в столбец сетки. Своё
+         поле — второй экземпляр SearchField; поле в шапке не трогаем.
+         Щелчок мышью по полю в шапке панели не открывает.
 
-         Два атрибута, чтобы был ход: data-drawer ставит панель за правый
-         край, data-drawer-open в следующем кадре выдвигает её. Закрытие —
-         наоборот, и data-drawer снимается, когда ход кончился. */
+         Закрывают крестик в панели (он же стирает набранное), нажатие на
+         затемнение и Escape — сразу, даже когда под полем раскрыты находки:
+         обработчик стоит на фазе захвата, раньше собственного Escape поля. */
       function ящик(on) {
-        clearTimeout(ящик.таймер);
+        if (!ящикЭл) return;
         if (on) {
           // Шторка отборов закрывается: две панели сразу не открываются.
           document.dispatchEvent(new CustomEvent('drawer:open'));
-          /* Поле поиска — самый высокий элемент шапки: уехав в панель, оно
-             сжимало шапку (замер на 1920 — 71,6 → 70,3), и верх панели, ростом
-             со старую шапку, расходился с ней на 1,3. Держим шапку в прежнем
-             росте, пока панель открыта. */
-          masthead.style.height = masthead.getBoundingClientRect().height + 'px';
-          /* Сначала без хода ставим панель за правый край: поле переходит из
-             шапки в панель, и с включённым ходом оно поехало бы туда из
-             шапки и тут же обратно — панель появлялась без выезда. Потом ход
-             включаем и выдвигаем, как шторку отборов слева. */
-          const коробка = masthead.querySelector('.search');
-          коробка.style.transition = 'none';
-          masthead.setAttribute('data-drawer', '');
-          коробка.getBoundingClientRect();
-          коробка.style.transition = '';
-          коробка.getBoundingClientRect();
-          masthead.setAttribute('data-drawer-open', '');
-          search.focus();
-          search.select();
+          ящикЭл.setAttribute('data-open', '');
+          тень?.setAttribute('data-open', '');
+          полеЯщика?.focus();
+          полеЯщика?.select();
         } else {
-          masthead.removeAttribute('data-drawer-open');
-          search.blur();
-          ящик.таймер = setTimeout(() => {
-            masthead.removeAttribute('data-drawer');
-            masthead.style.height = '';
-          }, 340);
+          ящикЭл.removeAttribute('data-open');
+          тень?.removeAttribute('data-open');
+          полеЯщика?.blur();
         }
       }
+      const открыт = () => Boolean(ящикЭл?.hasAttribute('data-open'));
 
-      masthead?.querySelector('.search__close')?.addEventListener('click', () => {
-        if (!masthead.hasAttribute('data-drawer')) return;
-        search.value = '';
-        search.dispatchEvent(new Event('input'));
+      ящикЭл?.querySelector('.search__close')?.addEventListener('click', () => {
+        if (полеЯщика) {
+          полеЯщика.value = '';
+          полеЯщика.dispatchEvent(new Event('input'));
+        }
         ящик(false);
       });
-      masthead?.querySelector('.search-scrim')?.addEventListener('click', () => ящик(false));
-      document.addEventListener('sheet:open', () => { if (masthead?.hasAttribute('data-drawer')) ящик(false); });
+      тень?.addEventListener('click', () => ящик(false));
+      document.addEventListener('sheet:open', () => { if (открыт()) ящик(false); });
       addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && masthead?.hasAttribute('data-drawer-open')) ящик(false);
-      });
-      широкий.addEventListener('change', () => { if (masthead?.hasAttribute('data-drawer')) ящик(false); });
+        if (e.key !== 'Escape' || !открыт()) return;
+        e.stopPropagation();
+        ящик(false);
+      }, true);
+      широкий.addEventListener('change', () => { if (открыт()) ящик(false); });
     }
   </script>
 </body>

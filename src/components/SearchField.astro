@@ -18,8 +18,14 @@
    год у релиза и клипа, счёт релизов у остальных. */
 
 import Icon from './Icon.astro';
+
+/* Экземпляров на странице два: поле в шапке (id по умолчанию — search) и
+   поле в панели поиска справа (drawer-search), с 19 сентября 2026. У
+   каждого свои id — поля, списка находок и коробки; указатель поиска
+   загружается один раз на оба. */
+const { id = 'search' } = Astro.props;
 ---
-<div class="search" id="search-box">
+<div class="search" id={`${id}-box`}>
   {/* Верхний ряд: само поле и крестик «закрыть» справа от него. Крестик
       виден только на телефоне, где поиск открывается слоем на весь экран
       (с 18 сентября 2026, по образцу dsgners.ru), и закрывает этот слой.
@@ -29,13 +35,13 @@ import Icon from './Icon.astro';
   <Icon name="magnifying-glass" class="search__icon" />
   <input
     type="search"
-    id="search"
+    id={id}
     placeholder="Search"
     autocomplete="off"
     spellcheck="false"
     role="combobox"
     aria-expanded="false"
-    aria-controls="search-found"
+    aria-controls={`${id}-found`}
     aria-autocomplete="list"
     aria-label="Search artists, releases, videos, labels and genres"
   />
@@ -52,7 +58,7 @@ import Icon from './Icon.astro';
 
   {/* Панель пустой не показывается: состояний «ничего не найдено» на сайте
       нет нигде, и заводить одно ради поиска не за чем. */}
-  <div class="search__found" id="search-found" role="listbox" aria-label="Search results" hidden></div>
+  <div class="search__found" id={`${id}-found`} role="listbox" aria-label="Search results" hidden></div>
 </div>
 
 <script>
@@ -64,11 +70,16 @@ import Icon from './Icon.astro';
 
   import { fold } from '../lib/fold.js';
 
-  const поле   = document.getElementById('search');
-  const панель = document.getElementById('search-found');
-  const короб  = document.getElementById('search-box');
+  /* Указатель один на все поля страницы: грузится по первому касанию
+     любого из них. */
+  let указатель = null;
+  let грузим = null;
 
-  if (поле && панель && короб) {
+  for (const короб of document.querySelectorAll('.search')) {
+    const поле   = короб.querySelector('input[type="search"]');
+    const панель = короб.querySelector('.search__found');
+    if (!поле || !панель) continue;
+
     /* Свод тот же, что у отбора на списках: общая функция на весь сайт,
        иначе «bjork» находил бы «Björk» в одном месте и не находил в другом. */
 
@@ -80,8 +91,6 @@ import Icon from './Icon.astro';
 
     const СКОЛЬКО = 12;
 
-    let указатель = null;
-    let грузим = null;
     let выбран = -1;
 
     const загрузить = () => {
@@ -172,7 +181,7 @@ import Icon from './Icon.astro';
         const строка = document.createElement('a');
         строка.className = 'found';
         строка.href = адрес;
-        строка.id = 'found-' + i;
+        строка.id = поле.id + '-found-' + i;
         строка.setAttribute('role', 'option');
         строка.append(ряд(имя, РОД[тип], 'found__name', 'found__type'));
 

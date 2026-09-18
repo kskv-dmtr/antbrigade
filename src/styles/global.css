@@ -2382,6 +2382,7 @@ main > .head--page:first-child { border-top: 0; }
    и крестик сброса отмеряются от .search__row, а не от всего .search: в
    слое под рядом стоят находки, и середина всего короба ушла бы вниз. */
 .search__top { display: flex; align-items: center; gap: 0.5rem; }
+.search-drawer,
 .search-scrim { display: none; }
 .search__row { position: relative; flex: 1; min-width: 0; }
 .search__close { display: none; }
@@ -5466,29 +5467,40 @@ html:not([data-js]) .more { display: none; }
    всю высоту экрана, шириной ровно в столбец сетки — левая граница ложится
    на последнюю вертикаль решётки: последний столбец начинается на
    100% − (100% + 1px) / --cols. Сверху поле во всю ширину и крестик в
-   рамке, ниже находки на всю оставшуюся высоту — как слой поиска на
-   телефоне. Это то же поле из шапки: на время панели в шапке на его месте
-   пусто, а кнопка темы остаётся у правого края. */
+   рамке, ряд ростом с шапку, ниже находки на всю оставшуюся высоту.
+
+   Это отдельный элемент со своим полем (второй SearchField), а не поле из
+   шапки: то уезжало в панель и возвращалось с задержкой. Поле в шапке
+   стоит на месте всегда. */
 @media (min-width: 641px) {
-  [data-js] .masthead[data-drawer] .search {
+  [data-js] .search-drawer {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 30;
+    z-index: 70;
     display: flex;
     flex-direction: column;
     width: calc((100% + 1px) / var(--cols));
-    margin: 0;
     background: var(--bg);
     border-left: 1px solid var(--line);
     transform: translateX(100%);
-    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s linear 0.32s;
   }
-  [data-js] .masthead[data-drawer-open] .search { transform: none; }
-  [data-js] .masthead[data-drawer] .theme-toggle { margin-left: auto; }
+  [data-js] .search-drawer[data-open] {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s;
+  }
 
-  [data-js] .masthead[data-drawer] .search__top {
+  [data-js] .search-drawer .search {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+  [data-js] .search-drawer .search__top {
     flex: none;
     box-sizing: border-box;
     height: var(--head-exact, var(--head-h));
@@ -5496,9 +5508,9 @@ html:not([data-js]) .more { display: none; }
     padding: 0 var(--pad);
     border-bottom: 1px solid var(--line);
   }
-  [data-js] .masthead[data-drawer] .search__key,
-  [data-js] .masthead[data-drawer] .search__clear { display: none !important; }
-  [data-js] .masthead[data-drawer] .search__close {
+  [data-js] .search-drawer .search__key,
+  [data-js] .search-drawer .search__clear { display: none !important; }
+  [data-js] .search-drawer .search__close {
     display: inline-flex;
     flex: none;
     align-items: center;
@@ -5512,12 +5524,12 @@ html:not([data-js]) .more { display: none; }
     cursor: pointer;
   }
   .search__close-x { width: 0.875rem; height: 0.875rem; }
-  [data-js] .masthead[data-drawer] .search__close:active {
+  [data-js] .search-drawer .search__close:active {
     background: var(--ink);
     color: var(--ink-fg);
     border-color: var(--ink);
   }
-  [data-js] .masthead[data-drawer] .search__found {
+  [data-js] .search-drawer .search__found {
     position: static;
     flex: 1;
     width: auto;
@@ -5525,17 +5537,18 @@ html:not([data-js]) .more { display: none; }
     border: 0;
   }
 
-  [data-js] .masthead[data-drawer] .search-scrim {
+  [data-js] .search-scrim {
     display: block;
     position: fixed;
     inset: 0;
-    z-index: 29;
+    z-index: 69;
     background: color-mix(in srgb, var(--fg) 35%, transparent);
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.32s ease;
   }
-  [data-js] .masthead[data-drawer-open] .search-scrim { opacity: 1; }
-  [data-js]:has(.masthead[data-drawer-open]) { overflow: hidden; }
+  [data-js] .search-scrim[data-open] { opacity: 1; pointer-events: auto; }
+  [data-js]:has(.search-drawer[data-open]) { overflow: hidden; }
 }
 
 /* Порог в 840 пикселей удалён 3 сентября 2026 вместе с полосой букв: она

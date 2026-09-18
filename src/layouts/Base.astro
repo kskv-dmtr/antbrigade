@@ -684,7 +684,14 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     const burger = document.getElementById('burger');
 
     if (burger) {
+      /* Меню открывается с Explore свёрнутым — всегда, и на четырёх его
+         страницах тоже, где сервер ставит <details> открытым ради полосы
+         второго уровня на широком экране (решение владельца 18 сентября
+         2026). Раскрыть — нажатием на само слово. */
       const setOpen = (on) => {
+        if (on) {
+          for (const пункт of masthead.querySelectorAll('.nav__drop')) пункт.open = false;
+        }
         masthead.toggleAttribute('data-open', on);
         burger.setAttribute('aria-expanded', String(on));
       };

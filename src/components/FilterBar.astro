@@ -93,6 +93,19 @@ import ViewSwitch from './ViewSwitch.astro';
     };
 
     кнопка.addEventListener('click', () => шторка(!полоса.hasAttribute('data-sheet')));
+
+    /* Клавиша F открывает и закрывает шторку — как косая черта поиск (19
+       сентября 2026, просьба владельца). По коду клавиши, а не по букве: в
+       русской раскладке на том же месте «А», и шторка открывается так же.
+       Сочетания не трогаем — Ctrl+F и Cmd+F остаются поиском по странице в
+       браузере. Пока человек набирает текст, F должна набраться. */
+    addEventListener('keydown', (e) => {
+      if (e.code !== 'KeyF' || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+      const el = document.activeElement;
+      if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
+      e.preventDefault();
+      шторка(!полоса.hasAttribute('data-sheet'));
+    });
     document.addEventListener('drawer:open', () => { if (полоса.hasAttribute('data-sheet')) шторка(false); });
     полоса.querySelector('.filters-row__close')?.addEventListener('click', () => {
       шторка(false);

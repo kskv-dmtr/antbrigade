@@ -4975,7 +4975,11 @@ html:not([data-js]) .more { display: none; }
     display: inline-block;
     line-height: 1.4;
     padding: 0.125rem 0;
-    border-bottom: 1px solid transparent;
+
+    /* Подчёркнута, как ссылки на лейблы и жанры, — волосом цвета линий
+       (18 сентября 2026, просьба владельца): по нему видно, что слово
+       нажимается. У открытой шторки линия темнеет, см. ниже. */
+    border-bottom: 1px solid var(--line);
   }
   [data-js] .filters-row[data-sheet] .filters-row__label {
     color: var(--fg);

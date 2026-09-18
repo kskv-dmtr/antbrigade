@@ -5418,6 +5418,14 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row[data-sheet] .filters-row__set { transform: none; }
   [data-js] .filters-row[data-sheet] { z-index: 60; }
   [data-js] .filters-row__set .filters-row__foot { margin-top: auto; }
+
+  /* Верх панели — ростом ровно с шапку, как у панели поиска справа: линия
+     под заголовком ложится на линию шапки (19 сентября 2026, просьба
+     владельца). Точная высота, без округления, — --head-exact. */
+  [data-js] .filters-row__head {
+    box-sizing: border-box;
+    height: var(--head-exact, var(--head-h));
+  }
 }
 
 /* Панель поиска на широком экране — по косой черте (19 сентября 2026,

@@ -5124,7 +5124,7 @@ html:not([data-js]) .more { display: none; }
      просьба владельца): без рамки, черта сверху во всю ширину, пункты
      строками со ступенькой в 16 и мягкой чертой между ними, моноширинным
      приглушённым; отмеченный — основным цветом, как текущий раздел в меню.
-     Флажков и кружков нет: отметку несёт цвет строки. Своей прокрутки у
+     Флажки и кружки оставлены (владелец вернул их в тот же день). Своей прокрутки у
      списка тоже нет — длинный список прокручивается вместе со шторкой. */
   [data-js] .filters-row__set .multi__panel,
   [data-js] .filters-row__set .filters-row__pick {
@@ -5142,11 +5142,6 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-muted);
   }
   [data-js] .filters-row__set .multi__item:last-child { border-bottom: 0; }
-  [data-js] .filters-row__set .multi__item input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
   [data-js] .filters-row__set .multi__item:has(input:checked) { color: var(--fg); }
   [data-js] .filters-row__set .multi__item:active {
     background: transparent;

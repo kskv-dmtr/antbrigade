@@ -4276,6 +4276,48 @@ html:not([data-js]) .more { display: none; }
     }
   }
 
+  /* «Dig again» под подборкой на телефоне — кнопкой, как площадки на
+     странице релиза (Spotify, Bandcamp): рамка линией решётки, 64 ростом,
+     моноширинный 13 прописными в основной цвет, подпись без волоса. С 18
+     сентября 2026, по просьбе владельца; до того кнопка была полосой во всю
+     ширину экрана с чертой сверху и подчёркнутым словом.
+
+     Поле 16 со всех сторон — как у площадок в ячейке. Кнопка по-прежнему
+     липнет к низу экрана, только на 16 выше края, а поле вокруг неё
+     закрывает фон тенью без размытия: иначе в просвете между кнопкой и краем
+     экрана ехали бы обложки. */
+  [data-js] .dig-again--below {
+    width: 100%;
+    height: max(64px, 4rem);
+
+    /* Сверху 17, а не 16: нижняя линия последнего ряда плиток лежит
+       снаружи решётки, в её первом пикселе ниже, — от линии до кнопки
+       выходит ровно 16, и фон вокруг кнопки линию не закрывает. */
+    margin: 17px 0 16px;
+    bottom: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 0 0 16px var(--bg);
+    font-weight: 400;
+    color: var(--fg);
+  }
+  [data-js] .dig-again--below .btn-label { border-bottom: 0; }
+  [data-js] .dig-again--below:active,
+  [data-js] .dig-again--below:focus-visible {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-color: var(--ink);
+  }
+  [data-js] .dig-again--below:active .btn-label,
+  [data-js] .dig-again--below:focus-visible .btn-label { background: none; color: inherit; }
+  @media (hover: hover) {
+    [data-js] .dig-again--below:hover .btn-label { background: none; color: inherit; }
+    [data-js] .dig-again--below[data-hot]:hover {
+      background: var(--hot);
+      color: var(--hot-fg);
+      border-color: var(--hot);
+    }
+  }
+
   /* Кружок в заголовке мельче: рядом с 20 кеглем шестнадцать смотрелись бы
      маркером списка, а не меткой раздела. */
   .mark {
@@ -4543,23 +4585,28 @@ html:not([data-js]) .more { display: none; }
   [data-js] .masthead[data-away] { transform: translateY(-100%); }
   [data-js] .masthead[data-away]::after { display: none; }
 
-  /* Липкие полосы едут к верху экрана вслед за шапкой и тем же ходом:
-     --head-h у уехавшей шапки ноль. */
-  .head--sticky,
-  .filters-row,
-  .fold__head,
-  .fold:not([open]) { transition: top 0.15s ease-out; }
+  /* Липкие полосы за шапкой не едут, а переставляются под ней — см.
+     скрипт в Base.astro. Ход у полос (transition: top) стоял в первый
+     день, 18 сентября 2026, и на телефоне расходился с ходом шапки:
+     под её линией на миг открывалась щель. */
 
-  /* Страница релиза и клипа на телефоне без липких частей — с 18 сентября
-     2026. На широком экране справка с именем стоит рядом с обложкой и
-     липнет, пока листаешь её ячейку; на телефоне всё идёт одним столбцом,
-     и прилипшие полосы с именем только закрывали бы собой обложку и
-     справку. Липкой остаётся одна шапка — да и та уезжает при прокрутке.
+  /* Подвала на телефоне нет — с 18 сентября 2026 всё из него стоит внизу
+     раскрытого меню, по образцу dsgners.ru. Без скрипта меню не
+     открывается, и тогда подвал остаётся на месте. */
+  [data-js] .foot { display: none; }
 
-     relative с top: auto, а не static: у полос есть абсолютные
-     псевдоэлементы, им нужна своя рамка отсчёта. Селекторы через main —
-     ради веса: правила уголков стоят в файле ниже и иначе перебили бы. */
-  main:has(article.item) .head--sticky,
+  /* Страница релиза и клипа на телефоне: не липнут имя со справкой и
+     уголки обложки — с 18 сентября 2026. На широком экране справка стоит
+     рядом с обложкой и липнет, пока листаешь её ячейку; на телефоне всё идёт
+     одним столбцом, и прилипшее имя только закрывало бы собой обложку.
+
+     Полосы разделов — Release, More Releases, Videos — липнут, как на
+     главной «Random Picks»: по ним видно, что сейчас листаешь. В первый час
+     того же дня не липли и они; владелец вернул.
+
+     top: auto обязателен: у relative прежний отступ сверху сдвинул бы блок
+     вниз. Селекторы через main — ради веса: правила уголков стоят в файле
+     ниже и иначе перебили бы. */
   main:has(article.item) .item__top,
   main:has(article.item) .corners__top {
     position: relative;
@@ -4810,7 +4857,7 @@ html:not([data-js]) .more { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .select__chevron, .tile__over, .sticky-bar { transition: none; }
-  .masthead, .head--sticky, .filters-row, .fold__head, .fold { transition: none !important; }
+  .masthead { transition: none !important; }
 }
 
 /* -------------------------------------------- переключение вида

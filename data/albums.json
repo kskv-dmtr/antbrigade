@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-18T19:39:44Z",
+  "generatedAt": "2026-09-18T22:36:48Z",
   "counts": {
-    "albums": 1398,
+    "albums": 1399,
     "artists": 1184,
     "labels": 743,
     "videos": 97
@@ -42897,6 +42897,39 @@
       ]
     },
     {
+      "id": "3df4129a-8c52-8020-b381-ca9bc62e7978",
+      "slug": "various-artists-digital-zandoli-2",
+      "artist": "Various Artists",
+      "album": "Digital Zandoli 2",
+      "url": "https://album.link/3zd8jcjv3tsr4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0c588251-ea72-472d-8c30-f234af5c66ae%3Aa3931176128_10.jpg?table=block&id=3df4129a-8c52-8020-b381-ca9bc62e7978&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Zouk",
+        "Funk",
+        "Boogie",
+        "Disco"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2017-09-22",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3b04129a-8c52-8069-be64-e818af0bbf0a"
+      ],
+      "labels": [
+        "Heavenly Sweetness"
+      ]
+    },
+    {
       "id": "3cd4129a-8c52-80ef-8c7e-ed0b7efd0dbc",
       "slug": "impalers-cellar-dweller",
       "artist": "Impalers",
@@ -68455,6 +68488,7 @@
         "3da4129a-8c52-80d7-ae2e-c84e5eb737d7",
         "3de4129a-8c52-8096-aaab-fd60fc48b94a",
         "3dc4129a-8c52-80ad-8d67-d03fcfd140f0",
+        "3df4129a-8c52-8020-b381-ca9bc62e7978",
         "3dc4129a-8c52-803f-8fe4-dd9099b0cb55",
         "3de4129a-8c52-8052-ad59-e241be6170a8",
         "3de4129a-8c52-80aa-aca6-d6f2ad450307",
@@ -68485,9 +68519,9 @@
         "Jazz Fusion",
         "Nu Jazz",
         "Soul",
+        "Zouk",
         "Jazz-Funk",
-        "Afro-Funk",
-        "Zouk"
+        "Afro-Funk"
       ],
       "labelIds": [
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
@@ -68506,8 +68540,8 @@
         "3cf4129a-8c52-8022-bb88-e1d587754ffd",
         "3da4129a-8c52-8046-8f37-dbd1ba5c404d",
         "3bf4129a-8c52-8009-9e03-ceaba509be56",
-        "2444129a-8c52-80db-a429-df4e6a0e0164",
         "3b04129a-8c52-8069-be64-e818af0bbf0a",
+        "2444129a-8c52-80db-a429-df4e6a0e0164",
         "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
       ],
       "videoIds": [],
@@ -74564,6 +74598,7 @@
       "youtube": null,
       "albumIds": [
         "3b04129a-8c52-8064-b416-cceca538edd3",
+        "3df4129a-8c52-8020-b381-ca9bc62e7978",
         "3de4129a-8c52-80aa-aca6-d6f2ad450307"
       ],
       "artistIds": [

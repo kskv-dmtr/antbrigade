@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T19:39:56Z",
+  "generatedAt": "2026-09-18T22:36:59Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22349,6 +22349,23 @@
       "upc": "787960237768",
       "tracks": 15,
       "releaseDate": "2026-09-17"
+    },
+    "3df4129a-8c52-8020-b381-ca9bc62e7978": {
+      "source": "https://album.link/3zd8jcjv3tsr4",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7cpcYbgoOkiUUyiyobZNCG",
+        "pandora": "https://www.pandora.com/AL:1161313",
+        "deezer": "https://www.deezer.com/album/47540262",
+        "amazonMusic": "https://music.amazon.com/albums/B075DT9RGX",
+        "tidal": "https://listen.tidal.com/album/78388189",
+        "yandex": "https://music.yandex.ru/album/5994010",
+        "boomplay": "https://www.boomplay.com/albums/79478415",
+        "bandcamp": "https://antillesseries.bandcamp.com/album/digital-zandoli-2",
+        "amazonStore": "https://amazon.com/dp/B075DT9RGX"
+      },
+      "upc": "3663729031167",
+      "tracks": 12,
+      "releaseDate": "2017-09-22"
     }
   }
 }

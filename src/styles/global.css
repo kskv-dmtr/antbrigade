@@ -5139,6 +5139,10 @@ html:not([data-js]) .more { display: none; }
 [data-js] .filters-row__view {
   display: flex;
   align-items: center;
+
+  /* На широком экране здесь же стоит сортировка — её переставляет сюда
+     скрипт FilterBar; просвет до переключателя вида — как между отборами. */
+  gap: 1.5rem;
   padding-right: var(--pad);
 }
 

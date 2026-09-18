@@ -1,13 +1,45 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-18T16:27:29Z",
+  "generatedAt": "2026-09-18T19:39:44Z",
   "counts": {
-    "albums": 1397,
-    "artists": 1183,
+    "albums": 1398,
+    "artists": 1184,
     "labels": 743,
     "videos": 97
   },
   "albums": [
+    {
+      "id": "3df4129a-8c52-8033-b20a-f31d69a65e9d",
+      "slug": "from-furar-hondo",
+      "artist": "from",
+      "album": "Furar Hondo",
+      "url": "https://album.link/79nrpxz47k8nn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aaba864a4-27bd-4f37-940b-77a79a0b6cd4%3Aa1772201873_10.jpg?table=block&id=3df4129a-8c52-8033-b20a-f31d69a65e9d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Minimal Wave",
+        "Art Rock",
+        "Art Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3df4129a-8c52-8077-9d07-c78af2334daf"
+      ],
+      "artists": [
+        "from"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8003-9138-ca1f9204d545"
+      ],
+      "labels": [
+        "humo internacional"
+      ]
+    },
     {
       "id": "3de4129a-8c52-80d2-8032-f037844c893f",
       "slug": "okvsho-frozen-flashes",
@@ -52011,6 +52043,28 @@
       "akaIds": []
     },
     {
+      "id": "3df4129a-8c52-8077-9d07-c78af2334daf",
+      "slug": "from",
+      "name": "from",
+      "country": "ES",
+      "bandcamp": "https://fr0m.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3df4129a-8c52-8033-b20a-f31d69a65e9d"
+      ],
+      "genres": [
+        "Minimal Wave",
+        "Art Rock",
+        "Art Pop"
+      ],
+      "labelIds": [
+        "2524129a-8c52-8003-9138-ca1f9204d545"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3214129a-8c52-8020-861f-dcbd27107d3c",
       "slug": "from-one-hell",
       "name": "From One Hell",
@@ -74845,13 +74899,15 @@
       "slug": "humo-internacional",
       "name": "humo internacional",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://humointernacional.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3df4129a-8c52-8033-b20a-f31d69a65e9d",
         "f16e9641-bf53-475e-8450-e22c864cd19e"
       ],
       "artistIds": [
+        "3df4129a-8c52-8077-9d07-c78af2334daf",
         "2524129a-8c52-8052-9039-cca8120c3e36"
       ]
     },

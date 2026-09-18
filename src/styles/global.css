@@ -4483,8 +4483,10 @@ html:not([data-js]) .more { display: none; }
   [data-js] .masthead[data-open] .nav { display: flex; }
   [data-js]:has(.masthead[data-open]) { overflow: hidden; }
 
-  /* Низ меню — каналы и знак охраны, набраны как в подвале. margin-top:
-     auto уводит блок к низу экрана, сколько бы ни было разделов сверху. */
+  /* Низ меню — всё, что в подвале: описание, каналы, подпись со знаком
+     охраны; набрано как в подвале. margin-top: auto уводит блок к низу
+     экрана, сколько бы ни было разделов сверху. Группы разведены просветом
+     в строку с четвертью — как абзацы, а не как пункты списка. */
   [data-js] .masthead .nav__foot {
     display: block;
     margin-top: auto;
@@ -4499,6 +4501,8 @@ html:not([data-js]) .more { display: none; }
     border-bottom: 0;
     color: var(--fg-muted);
   }
+  .nav__foot p { margin: 0; }
+  .nav__foot p + p { margin-top: 1.25rem; }
 
   /* Шапка на телефоне уезжает вверх при прокрутке вниз и возвращается при
      прокрутке вверх — по образцу dsgners.ru, с тем же ходом: 0,15 секунды.

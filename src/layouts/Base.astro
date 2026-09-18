@@ -346,17 +346,32 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           )
         ))}
 
-        {/* Низ меню на телефоне: каналы и знак охраны, как в подвале. Меню
-            там с 18 сентября 2026 открывается на весь экран, по образцу
-            dsgners.ru, и под разделами остаётся пустое поле — туда и встаёт
-            то, что иначе пришлось бы искать в самом низу страницы. На
-            широком экране блока нет. */}
+        {/* Низ меню на телефоне — всё, что стоит в подвале, по образцу
+            dsgners.ru: там меню открывается на весь экран, и под разделами
+            остаётся поле, куда встаёт то, что иначе пришлось бы искать в самом
+            низу страницы. С 18 сентября 2026.
+
+            Порядок как у образца — знак охраны последним: описание сайта,
+            каналы, подпись со знаком. Подвал на телефоне пока остаётся тоже
+            (решение владельца); тексты в двух местах, правьте оба. На широком
+            экране блока нет. */}
         <div class="nav__foot mono mono--sm">
-          telegram:<br />
-          <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
-          <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a><br />
-          <br />
-          © {year} · 1723
+          <p>
+            a personal music &amp; video archive:<br />
+            {/* Пары слов не рвутся: на 375 строка ломалась внутри «strange finds». */}
+            <span class="nb">new releases</span> · <span class="nb">old favorites</span> · <span class="nb">strange finds</span><br />
+            no gods · no genres
+          </p>
+          <p>
+            telegram:<br />
+            <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
+            <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
+          </p>
+          <p>
+            ant brigade<br />
+            made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
+            © {year} · 1723
+          </p>
         </div>
       </nav>
 

@@ -5063,6 +5063,13 @@ html:not([data-js]) .more { display: none; }
     border-bottom: 1px solid var(--line);
   }
   .filters-row__title {
+    /* Прописные стоят на базовой линии, под ними пустует место выносных, и
+       середина букв выше середины строки: замер на 375 — 573,72 против
+       574,31 у крестика рядом. Опускаем на эту разницу, в долях кегля, —
+       та же поправка, что у треугольника отборов (18 сентября 2026).
+       После сдвига — 574,30 против 574,31. */
+    display: inline-block;
+    transform: translateY(0.045em);
     font-family: var(--mono);
     font-size: max(13px, 0.8125rem);
     letter-spacing: 0.08em;

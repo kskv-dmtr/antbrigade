@@ -3177,7 +3177,21 @@ select option { background: var(--option-bg); color: var(--fg); }
   .lead__note--steps > span:first-child { display: block; }
 }
 
-.lead .item__fact { padding: 0.5rem 0; }
+/* Справка под именем — в две колонки, как справка релиза: подписи в первой
+   шириной по самой длинной, значения во второй с одной вертикали. До 18
+   сентября 2026 каждое значение начиналось сразу за своей подписью, и у
+   лейбла «United States» стояло на 95, а «Bandcamp» — на 77. Поле строки
+   прежнее, 8 сверху и снизу, — теперь на её половинках: у строки-призрака
+   своей коробки нет. */
+.lead .item__facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.5rem;
+}
+.lead .item__fact { display: contents; }
+.lead .item__fact dt,
+.lead .item__fact dd { padding: 0.5rem 0; }
 .lead .item__facts { padding-top: 0.5rem; }
 .lead:has(.item__facts) { padding-bottom: 0.5rem; }
 
@@ -4875,13 +4889,13 @@ html:not([data-js]) .more { display: none; }
   }
   .info > *,
   .info .item__fact { display: contents; }
-  /* Межстрочный — как в справке релиза, 1.4: общий для Info 24 (строки
-     там — перечни во всю половину) здесь распирал строку до 40 против 34. */
+  /* Межстрочный у перечня остаётся 24: у жанра и лейбла в нём десятки
+     имён, и при 1.4 они слипались в плашку (так простояло несколько часов
+     18 сентября 2026). Поле строки зато 5 вместо 8: однострочная строка
+     выходит те же 34, что в справке релиза, и просвет между строками на
+     глаз тот же. */
   .info .item__fact dt,
-  .info .item__fact dd {
-    padding: 0.5rem 0;
-    line-height: 1.4;
-  }
+  .info .item__fact dd { padding: 0.3125rem 0; }
   .head--page .head__lead,
   .head--page .head__side { height: var(--bar-h); }
   .head--page .head__side {

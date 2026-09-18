@@ -460,10 +460,12 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           группы. Со 2 сентября его здесь не было: оно стоит логотипом в шапке,
           но тогда подвал открывался описанием, а теперь описание переехало
           вправо и левой группе нужна подпись, чья она. */}
+      {/* С 18 сентября 2026 (просьба владельца): слева — что это за сайт, по
+          центру — каналы, справа — подпись и знак охраны. Строки «ant
+          brigade», «telegram:» и «no gods · no genres» убраны. */}
       <div class="foot__note mono mono--sm">
-        ant brigade<br />
-        made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
-        © {year} · 1723
+        a personal music &amp; video archive:<br />
+        new releases · old favorites · strange finds
       </div>
 
       {/* Правая половина подвала: каналы от центральной линии, справка о
@@ -477,15 +479,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
             без переноса строки: пробелы по краям попадали в ссылку, и волос
             под словом вылезал за букву на пробел с каждой стороны. */}
         <div class="foot__links mono mono--sm">
-          telegram:<br />
           <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
           <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
         </div>
 
         <div class="foot__note foot__note--end mono mono--sm">
-          a personal music &amp; video archive:<br />
-          new releases · old favorites · strange finds<br />
-          no gods · no genres
+          made for fun by <a href="https://t.me/kskv_dmtr" target="_blank" rel="noopener noreferrer">Dmitriy Kuskov</a><br />
+          © {year} · 1723
         </div>
       </div>
     </div>

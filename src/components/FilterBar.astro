@@ -60,8 +60,8 @@ import ViewSwitch from './ViewSwitch.astro';
         (19 сентября 2026, просьба владельца): сбрасывает все отборы разом;
         сортировку не трогает — она не отбор. */}
     <div class="filters-row__foot">
-      <button type="button" class="filters-row__reset-all">Reset all</button>
       <button type="button" class="filters-row__apply">Apply</button>
+      <button type="button" class="filters-row__reset-all">Reset all</button>
     </div>
   </div>
 
@@ -152,6 +152,9 @@ import ViewSwitch from './ViewSwitch.astro';
       for (const л of набор.querySelectorAll('.multi__list')) {
         if (л !== открытый) { л.style.maxHeight = ''; л.style.overflowY = ''; }
       }
+      // Раскрытый список доводит шторку до низа, и последний отбор встаёт
+      // вплотную к блоку Apply — черту под ним тогда снимает CSS.
+      набор.toggleAttribute('data-full', Boolean(открытый));
       if (!открытый) return;
 
       открытый.style.maxHeight = '0px';

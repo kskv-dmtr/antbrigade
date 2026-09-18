@@ -5350,7 +5350,7 @@ html:not([data-js]) .more { display: none; }
   position: sticky;
   bottom: 0;
 
-  /* Кнопки в ряд пополам: Reset all слева, Apply справа; пока выбрано в
+  /* Кнопки в ряд пополам: Apply слева, Reset all справа; пока выбрано в
      одном отборе, Reset all нет и Apply во всю ширину. */
   display: grid;
   grid-auto-flow: column;
@@ -5375,12 +5375,20 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
   [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
 }
+
+/* На широком экране то же — когда раскрытый список довёл панель до низа и
+   виден Apply: последний отбор тогда стоит вплотную к блоку кнопок, и две
+   черты шли подряд (19 сентября 2026, находка владельца). Атрибут
+   data-full ставит скрипт FilterBar. */
+[data-js] .filters-row[data-dirty] .filters-row__set[data-full] .filter:has(+ .filter .view-pick),
+[data-js] .filters-row[data-dirty] .filters-row__set[data-full] .filter:has(+ .filters-row__foot) { border-bottom: 0; }
 /* Reset all — только когда выбрано в двух отборах и больше (атрибут
    data-several ставит скрипт FilterBar). Через полосу — ради веса: общее
    правило кнопок ниже задаёт display: flex и иначе перебивало бы. */
 .filters-row:not([data-several]) .filters-row__reset-all { display: none; }
 
-/* Reset all набрана так же, как Apply: это пара равных кнопок. */
+/* Reset all набрана так же, как Apply: это пара равных кнопок; Apply слева,
+   Reset all справа. */
 .filters-row__apply,
 .filters-row__reset-all {
   display: flex;

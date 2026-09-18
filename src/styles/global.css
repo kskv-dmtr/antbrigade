@@ -4639,7 +4639,14 @@ html:not([data-js]) .more { display: none; }
   [data-js] .masthead .nav {
     display: none;
     position: fixed;
-    top: var(--head-h);
+
+    /* На пиксель выше низа шапки и со своей линией сверху: меню лежит поверх
+       шапки, а --head-h округлена вниз, и на телефоне с дробной высотой
+       шапки (63,3 при --head-h 63) меню закрывало её нижнюю линию — та
+       пропадала, пока меню открыто. Теперь линию на том же месте чертит само
+       меню (18 сентября 2026). */
+    top: calc(var(--head-h) - 1px);
+    border-top: 1px solid var(--line);
     bottom: 0;
     left: 0;
     right: 0;
@@ -4651,11 +4658,6 @@ html:not([data-js]) .more { display: none; }
     background: var(--bg);
   }
   [data-js] .masthead[data-open] .nav { display: flex; }
-
-  /* Открытое меню и шапка — один экран: линия под шапкой на это время
-     гаснет (18 сентября 2026, просьба владельца). Цвет, а не толщина:
-     высота шапки не меняется, и меню, стоящее по --head-h, не сдвигается. */
-  [data-js] .masthead[data-open] { border-bottom-color: transparent; }
   [data-js]:has(.masthead[data-open]) { overflow: hidden; }
 
   /* Низ меню — всё, что в подвале: описание, каналы, подпись со знаком

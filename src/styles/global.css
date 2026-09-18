@@ -4947,314 +4947,6 @@ html:not([data-js]) .more { display: none; }
   }
   .filters-row::-webkit-scrollbar { display: none; }
 
-  /* Со скриптом полоса — одна строка: слева кнопка «Filters» с
-     треугольником, справа Grid / List (18 сентября 2026, просьба
-     владельца). Отборы и сортировка уходят в шторку снизу. Без скрипта
-     открыть шторку нечем, и полоса остаётся прежней строкой. */
-  [data-js] .filters-row {
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    overflow: visible;
-  }
-  [data-js] .filters-row__name { display: none; }
-
-  /* Кнопка набрана как Grid / List справа — без треугольника, тем же
-     моноширинным приглушённым, с прозрачной линией под словом (18 сентября
-     2026, просьба владельца; до того стояла основным цветом с треугольником
-     отборов). Пока шторка открыта, кнопка отмечена, как выбранный вид:
-     основной цвет и видимая линия. Цель нажатия — вся высота полосы, а
-     оформлено только слово. */
-  [data-js] .filters-row__toggle {
-    display: flex;
-    align-items: center;
-    height: calc(var(--filters-h) - 1px);
-    padding: 0 0 0 calc(var(--pad) + 1px);
-    font-family: var(--mono);
-    font-size: max(13px, 0.8125rem);
-
-    /* 400, как ссылки на жанры и лейблы, а не 500, как Grid / List рядом:
-       в 500 слово читалось темнее ссылок (18 сентября 2026, владелец). */
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fg-muted);
-    background: none;
-    border: 0;
-    cursor: pointer;
-  }
-  .filters-row__label {
-    /* Межстрочный — как у Grid / List (1.4 от страницы): у кнопки браузер
-       ставит свой, и слова в полосе стояли на полпикселя вразнобой. */
-    display: inline-block;
-    line-height: 1.4;
-    padding: 0.125rem 0;
-
-    /* Подчёркнута, как ссылки на лейблы и жанры, — волосом цвета линий
-       (18 сентября 2026, просьба владельца): по нему видно, что слово
-       нажимается. У открытой шторки линия темнеет, см. ниже. */
-    border-bottom: 1px solid var(--line);
-  }
-  [data-js] .filters-row[data-sheet] .filters-row__label {
-    color: var(--fg);
-    border-bottom-color: var(--fg);
-  }
-  [data-js] .filters-row__toggle:active .filters-row__label,
-  [data-js] .filters-row__toggle:focus-visible .filters-row__label {
-    background: var(--ink);
-    color: var(--ink-fg);
-    border-bottom-color: transparent;
-  }
-
-  [data-js] .filters-row__view {
-    display: flex;
-    align-items: center;
-    padding-right: var(--pad);
-  }
-
-  /* Шторка — тот же набор отборов, выложенный столбцом у низа экрана.
-     Выезжает снизу ходом шапки (0,32 с, мягкое замедление); выше 85 %
-     экрана не растёт и прокручивается сама. */
-  [data-js] .filters-row__set {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    max-height: 85dvh;
-    margin: 0;
-    padding: 0 var(--pad);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    background: var(--bg);
-    border-top: 1px solid var(--line);
-    transform: translateY(100%);
-    visibility: hidden;
-    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s linear 0.32s;
-  }
-  [data-js] .filters-row[data-sheet] .filters-row__set {
-    transform: none;
-    visibility: visible;
-    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s;
-  }
-
-  /* Затемнение под шторкой: страница остаётся видна, но ясно, что сейчас
-     работают со шторкой. Нажатие на него закрывает шторку. */
-  [data-js] .filters-row__scrim {
-    position: fixed;
-    inset: 0;
-    z-index: 49;
-    background: color-mix(in srgb, var(--fg) 35%, transparent);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.32s ease;
-  }
-  [data-js] .filters-row[data-sheet] .filters-row__scrim {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  [data-js]:has(.filters-row[data-sheet]) { overflow: hidden; }
-
-  /* Заголовок шторки: слово слева, крестик в рамке справа — такой же, как
-     у меню и поиска. Липнет к верху шторки, когда та прокручивается. */
-  [data-js] .filters-row__head {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: none;
-    height: var(--bar-h);
-    margin: 0 calc(var(--pad) * -1);
-    padding: 0 var(--pad);
-    background: var(--bg);
-    border-bottom: 1px solid var(--line);
-  }
-  .filters-row__title {
-    /* Прописные стоят на базовой линии, под ними пустует место выносных, и
-       середина букв выше середины строки: замер на 375 — 573,72 против
-       574,31 у крестика рядом. Опускаем на эту разницу, в долях кегля, —
-       та же поправка, что у треугольника отборов (18 сентября 2026).
-       После сдвига — 574,30 против 574,31. */
-    display: inline-block;
-    transform: translateY(0.045em);
-    font-family: var(--mono);
-    font-size: max(13px, 0.8125rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fg-dim);
-  }
-  .filters-row__close {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.125rem;
-    height: 2.125rem;
-    padding: 0;
-    color: var(--fg-muted);
-    background: none;
-    border: 1px solid var(--line);
-    cursor: pointer;
-  }
-  .filters-row__close-x { width: 0.875rem; height: 0.875rem; }
-  .filters-row__close:active,
-  .filters-row__close:focus-visible {
-    background: var(--ink);
-    color: var(--ink-fg);
-    border-color: var(--ink);
-  }
-
-  /* Отбор в шторке — строка во всю ширину: имя слева, список справа, мягкая
-     черта снизу. Раскрытый список встаёт под своей кнопкой, в потоке, и
-     раздвигает строки ниже, а не падает поверх них. */
-  [data-js] .filters-row__set .filter {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: start;
-    column-gap: 1rem;
-    padding: calc((var(--bar-h) - 2.125rem) / 2) 0;
-    border-bottom: 1px solid var(--line-soft);
-  }
-  [data-js] .filters-row__set .filter:last-child { border-bottom: 0; }
-  [data-js] .filters-row__set .filter__name { line-height: 2.125rem; }
-  [data-js] .filters-row__set .filter > .select { justify-self: end; }
-  [data-js] .filters-row__set .multi { justify-self: stretch; }
-  [data-js] .filters-row__set .multi__button {
-    max-width: none;
-    justify-content: flex-end;
-  }
-  [data-js] .filters-row__set .multi__panel {
-    position: static;
-    width: auto;
-  }
-
-  /* Раскрытый список в шторке — как пункт Explore в меню (18 сентября 2026,
-     просьба владельца): без рамки, черта сверху во всю ширину, пункты
-     строками со ступенькой в 16 и мягкой чертой между ними, моноширинным
-     приглушённым; отмеченный — основным цветом, как текущий раздел в меню.
-     Флажки и кружки оставлены (владелец вернул их в тот же день). Своей прокрутки у
-     списка тоже нет — длинный список прокручивается вместе со шторкой. */
-  [data-js] .filters-row__set .multi__panel,
-  [data-js] .filters-row__set .filters-row__pick {
-    margin-top: calc((var(--bar-h) - 2.125rem) / 2);
-    padding-left: max(16px, 1rem);
-    background: none;
-    border: 0;
-    border-top: 1px solid var(--line-soft);
-  }
-  [data-js] .filters-row__set .multi__list { max-height: none; overflow: visible; }
-  [data-js] .filters-row__set .multi__item {
-    padding: 0.8125rem 0;
-    border-bottom: 1px solid var(--line-soft);
-    font-weight: 400;
-    color: var(--fg-muted);
-  }
-  [data-js] .filters-row__set .multi__item:last-child { border-bottom: 0; }
-  [data-js] .filters-row__set .multi__item:has(input:checked) { color: var(--fg); }
-  [data-js] .filters-row__set .multi__item:active {
-    background: transparent;
-    color: var(--fg);
-  }
-  @media (hover: hover) {
-    [data-js] .filters-row__set .multi__item:hover {
-      background: transparent;
-      color: var(--fg);
-    }
-  }
-
-  /* Строка с раскрытым списком кончается самим списком: поле снизу ушло бы
-     пустой полосой между последним пунктом и чертой строки. */
-  [data-js] .filters-row__set .filter:has(.multi[open]),
-  [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) { padding-bottom: 0; }
-
-  /* Низ шторки — кнопка Apply во всю ширину, прилипшая к низу, даже когда
-     раскрытый список вытянул шторку в прокрутку. Кнопка — как площадки на
-     странице релиза и «Dig again»: рамка линией решётки, рост полосы
-     раздела, моноширинный прописными. */
-  [data-js] .filters-row__foot {
-    position: sticky;
-    bottom: 0;
-    display: block;
-    flex: none;
-    margin: 0 calc(var(--pad) * -1);
-    padding: var(--pad) var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
-    background: var(--bg);
-
-    /* Линия над блоком кнопки во всю ширину шторки — как над «Dig again»
-       на витрине (18 сентября 2026, просьба владельца). */
-    border-top: 1px solid var(--line);
-  }
-
-  /* Мягкая черта под последним отбором легла бы вплотную к линии над
-     кнопкой — у последнего видимого отбора её нет. Последний видимый — тот,
-     за которым стоит скрытый вид или сразу низ шторки. */
-  [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
-  [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
-  .filters-row__apply {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: var(--bar-h);
-    padding: 0;
-    font-family: var(--mono);
-    font-size: max(13px, 0.8125rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fg);
-    background: none;
-    border: 1px solid var(--line);
-    cursor: pointer;
-  }
-  .filters-row__apply:active,
-  .filters-row__apply:focus-visible {
-    background: var(--ink);
-    color: var(--ink-fg);
-    border-color: var(--ink);
-  }
-
-  /* Цвет из жеребьёвки — как у «Dig again»: по наведению и по нажатию. */
-  @media (hover: hover) {
-    .filters-row__apply[data-hot]:hover {
-      background: var(--hot);
-      color: var(--hot-fg);
-      border-color: var(--hot);
-    }
-  }
-  @media (hover: none) {
-    .filters-row__apply[data-hot]:active {
-      background: var(--hot);
-      color: var(--hot-fg);
-      border-color: var(--hot);
-    }
-  }
-
-  /* Сортировка в шторке раскрывается своим списком под строкой (его
-     собирает скрипт FilterBar), а системный <select> не нажимается: на
-     телефоне он открывал выбор во весь экран. Список — в той же колонке,
-     что раскрытые тип, жанр и год, и с тем же набором пунктов. */
-  [data-js] .filters-row__set .select select { pointer-events: none; }
-  [data-js] .filters-row__set .select { cursor: pointer; }
-  /* Во всю ширину строки, как раскрытые тип, жанр и год (их вытягивает
-     скрипт FilterBar). */
-  [data-js] .filters-row__set .filters-row__pick {
-    --select-pad: 0.8125rem;
-    grid-column: 1 / -1;
-  }
-  [data-js] .filters-row__set .filters-row__pick[hidden] { display: none; }
-  [data-js] .filters-row__set .filter { cursor: pointer; }
-
-  /* Apply — только когда что-то выбрано (атрибут ставит скрипт). */
-  [data-js] .filters-row:not([data-dirty]) .filters-row__foot { display: none; }
-
-  /* Вид в шторке не повторяем: он стоит в самой полосе. */
-  [data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
   /* Содержимое строки не сжимается по её ширине: пусть уезжает за край, а не
      ужимается до нечитаемого. */
   .filter { flex: none; }
@@ -5375,6 +5067,339 @@ html:not([data-js]) .more { display: none; }
      она всё равно уезжает за край. */
   .select { max-width: 44vw; }
 
+}
+
+/* ------------------------------------------------ шторка отборов
+
+   С 19 сентября 2026 — на всех ширинах (просьба владельца); с 18-го была
+   только на телефоне. Полоса отбора — «Filters» со счётчиком слева и
+   Grid / List справа, а сами отборы, сортировка и Apply — в шторке, что
+   выезжает снизу. Без скрипта шторки нет, и полоса остаётся прежней строкой
+   отборов. Ширина и рост строк на широком экране — ниже, после блока. */
+
+/* Со скриптом полоса — одна строка: слева кнопка «Filters» с
+   треугольником, справа Grid / List (18 сентября 2026, просьба
+   владельца). Отборы и сортировка уходят в шторку снизу. Без скрипта
+   открыть шторку нечем, и полоса остаётся прежней строкой. */
+[data-js] .filters-row {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+}
+[data-js] .filters-row__name { display: none; }
+
+/* Кнопка набрана как Grid / List справа — без треугольника, тем же
+   моноширинным приглушённым, с прозрачной линией под словом (18 сентября
+   2026, просьба владельца; до того стояла основным цветом с треугольником
+   отборов). Пока шторка открыта, кнопка отмечена, как выбранный вид:
+   основной цвет и видимая линия. Цель нажатия — вся высота полосы, а
+   оформлено только слово. */
+[data-js] .filters-row__toggle {
+  display: flex;
+  align-items: center;
+  height: calc(var(--filters-h) - 1px);
+  padding: 0 0 0 calc(var(--pad) + 1px);
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+
+  /* 400, как ссылки на жанры и лейблы, а не 500, как Grid / List рядом:
+     в 500 слово читалось темнее ссылок (18 сентября 2026, владелец). */
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.filters-row__label {
+  /* Межстрочный — как у Grid / List (1.4 от страницы): у кнопки браузер
+     ставит свой, и слова в полосе стояли на полпикселя вразнобой. */
+  display: inline-block;
+  line-height: 1.4;
+  padding: 0.125rem 0;
+
+  /* Подчёркнута, как ссылки на лейблы и жанры, — волосом цвета линий
+     (18 сентября 2026, просьба владельца): по нему видно, что слово
+     нажимается. У открытой шторки линия темнеет, см. ниже. */
+  border-bottom: 1px solid var(--line);
+}
+[data-js] .filters-row[data-sheet] .filters-row__label {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+[data-js] .filters-row__toggle:active .filters-row__label,
+[data-js] .filters-row__toggle:focus-visible .filters-row__label {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-bottom-color: transparent;
+}
+
+[data-js] .filters-row__view {
+  display: flex;
+  align-items: center;
+  padding-right: var(--pad);
+}
+
+/* Шторка — тот же набор отборов, выложенный столбцом у низа экрана.
+   Выезжает снизу ходом шапки (0,32 с, мягкое замедление); выше 85 %
+   экрана не растёт и прокручивается сама. */
+[data-js] .filters-row__set {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  max-height: 85dvh;
+  margin: 0;
+  padding: 0 var(--pad);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s linear 0.32s;
+}
+[data-js] .filters-row[data-sheet] .filters-row__set {
+  transform: none;
+  visibility: visible;
+  transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s;
+}
+
+/* Затемнение под шторкой: страница остаётся видна, но ясно, что сейчас
+   работают со шторкой. Нажатие на него закрывает шторку. */
+[data-js] .filters-row__scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  background: color-mix(in srgb, var(--fg) 35%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+[data-js] .filters-row[data-sheet] .filters-row__scrim {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+[data-js]:has(.filters-row[data-sheet]) { overflow: hidden; }
+
+/* Заголовок шторки: слово слева, крестик в рамке справа — такой же, как
+   у меню и поиска. Липнет к верху шторки, когда та прокручивается. */
+[data-js] .filters-row__head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+  height: var(--bar-h);
+  margin: 0 calc(var(--pad) * -1);
+  padding: 0 var(--pad);
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.filters-row__title {
+  /* Прописные стоят на базовой линии, под ними пустует место выносных, и
+     середина букв выше середины строки: замер на 375 — 573,72 против
+     574,31 у крестика рядом. Опускаем на эту разницу, в долях кегля, —
+     та же поправка, что у треугольника отборов (18 сентября 2026).
+     После сдвига — 574,30 против 574,31. */
+  display: inline-block;
+  transform: translateY(0.045em);
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.filters-row__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0;
+  color: var(--fg-muted);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.filters-row__close-x { width: 0.875rem; height: 0.875rem; }
+.filters-row__close:active,
+.filters-row__close:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-color: var(--ink);
+}
+
+/* Отбор в шторке — строка во всю ширину: имя слева, список справа, мягкая
+   черта снизу. Раскрытый список встаёт под своей кнопкой, в потоке, и
+   раздвигает строки ниже, а не падает поверх них. */
+[data-js] .filters-row__set .filter {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 1rem;
+  padding: calc((var(--bar-h) - 2.125rem) / 2) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+[data-js] .filters-row__set .filter:last-child { border-bottom: 0; }
+[data-js] .filters-row__set .filter__name { line-height: 2.125rem; }
+[data-js] .filters-row__set .filter > .select { justify-self: end; }
+[data-js] .filters-row__set .multi { justify-self: stretch; }
+[data-js] .filters-row__set .multi__button {
+  max-width: none;
+  justify-content: flex-end;
+}
+[data-js] .filters-row__set .multi__panel {
+  position: static;
+  width: auto;
+}
+
+/* Раскрытый список в шторке — как пункт Explore в меню (18 сентября 2026,
+   просьба владельца): без рамки, черта сверху во всю ширину, пункты
+   строками со ступенькой в 16 и мягкой чертой между ними, моноширинным
+   приглушённым; отмеченный — основным цветом, как текущий раздел в меню.
+   Флажки и кружки оставлены (владелец вернул их в тот же день). Своей прокрутки у
+   списка тоже нет — длинный список прокручивается вместе со шторкой. */
+[data-js] .filters-row__set .multi__panel,
+[data-js] .filters-row__set .filters-row__pick {
+  margin-top: calc((var(--bar-h) - 2.125rem) / 2);
+  padding-left: max(16px, 1rem);
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--line-soft);
+}
+[data-js] .filters-row__set .multi__list { max-height: none; overflow: visible; }
+[data-js] .filters-row__set .multi__item {
+  padding: 0.8125rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-weight: 400;
+  color: var(--fg-muted);
+}
+[data-js] .filters-row__set .multi__item:last-child { border-bottom: 0; }
+[data-js] .filters-row__set .multi__item:has(input:checked) { color: var(--fg); }
+[data-js] .filters-row__set .multi__item:active {
+  background: transparent;
+  color: var(--fg);
+}
+@media (hover: hover) {
+  [data-js] .filters-row__set .multi__item:hover {
+    background: transparent;
+    color: var(--fg);
+  }
+}
+
+/* Строка с раскрытым списком кончается самим списком: поле снизу ушло бы
+   пустой полосой между последним пунктом и чертой строки. */
+[data-js] .filters-row__set .filter:has(.multi[open]),
+[data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) { padding-bottom: 0; }
+
+/* Низ шторки — кнопка Apply во всю ширину, прилипшая к низу, даже когда
+   раскрытый список вытянул шторку в прокрутку. Кнопка — как площадки на
+   странице релиза и «Dig again»: рамка линией решётки, рост полосы
+   раздела, моноширинный прописными. */
+[data-js] .filters-row__foot {
+  position: sticky;
+  bottom: 0;
+  display: block;
+  flex: none;
+  margin: 0 calc(var(--pad) * -1);
+  padding: var(--pad) var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
+  background: var(--bg);
+
+  /* Линия над блоком кнопки во всю ширину шторки — как над «Dig again»
+     на витрине (18 сентября 2026, просьба владельца). */
+  border-top: 1px solid var(--line);
+}
+
+/* Мягкая черта под последним отбором легла бы вплотную к линии над
+   кнопкой — у последнего видимого отбора её нет. Последний видимый — тот,
+   за которым стоит скрытый вид или сразу низ шторки. */
+[data-js] .filters-row__set .filter:has(+ .filter .view-pick),
+[data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
+.filters-row__apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--bar-h);
+  padding: 0;
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.filters-row__apply:active,
+.filters-row__apply:focus-visible {
+  background: var(--ink);
+  color: var(--ink-fg);
+  border-color: var(--ink);
+}
+
+/* Цвет из жеребьёвки — как у «Dig again»: по наведению и по нажатию. */
+@media (hover: hover) {
+  .filters-row__apply[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-color: var(--hot);
+  }
+}
+@media (hover: none) {
+  .filters-row__apply[data-hot]:active {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-color: var(--hot);
+  }
+}
+
+/* Сортировка в шторке раскрывается своим списком под строкой (его
+   собирает скрипт FilterBar), а системный <select> не нажимается: на
+   телефоне он открывал выбор во весь экран. Список — в той же колонке,
+   что раскрытые тип, жанр и год, и с тем же набором пунктов. */
+[data-js] .filters-row__set .select select { pointer-events: none; }
+[data-js] .filters-row__set .select { cursor: pointer; }
+/* Во всю ширину строки, как раскрытые тип, жанр и год (их вытягивает
+   скрипт FilterBar). */
+[data-js] .filters-row__set .filters-row__pick {
+  --select-pad: 0.8125rem;
+  grid-column: 1 / -1;
+}
+[data-js] .filters-row__set .filters-row__pick[hidden] { display: none; }
+[data-js] .filters-row__set .filter { cursor: pointer; }
+
+/* Apply — только когда что-то выбрано (атрибут ставит скрипт). */
+[data-js] .filters-row:not([data-dirty]) .filters-row__foot { display: none; }
+
+/* Вид в шторке не повторяем: он стоит в самой полосе. */
+[data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
+
+/* Шторка на широком экране — по центру, 40rem (640 на 1920, 480 на 1440), с
+   рамкой по бокам: во всю ширину имя отбора и его значение разъезжались бы
+   на полторы тысячи пикселей. Рост строк — от полос десктопа, --page-bar-h. */
+@media (min-width: 641px) {
+  [data-js] .filters-row__set {
+    --bar-h: var(--page-bar-h);
+    left: 50%;
+    right: auto;
+    width: min(40rem, 100%);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    transform: translate(-50%, 100%);
+  }
+  [data-js] .filters-row[data-sheet] .filters-row__set { transform: translate(-50%, 0); }
 }
 
 /* Порог в 840 пикселей удалён 3 сентября 2026 вместе с полосой букв: она

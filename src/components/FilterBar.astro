@@ -12,13 +12,14 @@
    Полоса липкая и встаёт под заголовок раздела: обе держатся на экране,
    пока листаешь каталог.
 
-   На телефоне, с 18 сентября 2026 (просьба владельца), полоса другая: слева
+   С 18 сентября 2026 на телефоне, а с 19-го и на широком экране (просьба
+   владельца) полоса другая: слева
    кнопка «Filters», справа Grid / List. Кнопка открывает
    снизу шторку со всеми отборами и сортировкой — это тот же набор отборов,
    .filters-row__set, только выложенный столбцом. До того отборы стояли одной
    строкой, уезжавшей за край экрана, и дальние приходилось искать сдвигом
    вбок. Кнопка, заголовок шторки, второй переключатель вида и затемнение
-   есть в разметке всегда, а показывает их только мобильный медиазапрос. */
+   есть в разметке всегда; без скрипта их нет, и полоса остаётся строкой. */
 
 import Icon from './Icon.astro';
 import ViewSwitch from './ViewSwitch.astro';
@@ -178,7 +179,7 @@ import ViewSwitch from './ViewSwitch.astro';
     const вширь = (список) => {
       const панель = список.querySelector('.multi__panel');
       if (!панель) return;
-      if (!узкий.matches || !список.open) { панель.style.marginLeft = ''; return; }
+      if (!список.open) { панель.style.marginLeft = ''; return; }
       const строка = список.closest('.filter');
       const сдвиг = строка.getBoundingClientRect().left - список.getBoundingClientRect().left;
       панель.style.marginLeft = сдвиг + 'px';
@@ -192,7 +193,6 @@ import ViewSwitch from './ViewSwitch.astro';
        событие не пускаем: общий обработчик списков закрыл бы только что
        раскрытый, раз щелчок пришёлся мимо него. */
     набор.addEventListener('click', (e) => {
-      if (!узкий.matches) return;
       const строка = e.target.closest('.filter');
       if (!строка || e.target.closest('.multi__panel, summary')) return;
 

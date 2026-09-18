@@ -4948,13 +4948,15 @@ html:not([data-js]) .more { display: none; }
   }
   [data-js] .filters-row__name { display: none; }
 
-  /* Кнопка набрана как подпись отбора, но основным цветом — это орган, а
-     не подпись. Треугольник — тот же, что у отборов: вправо, пока шторка
-     закрыта, вниз — пока открыта. */
+  /* Кнопка набрана как Grid / List справа — без треугольника, тем же
+     моноширинным приглушённым, с прозрачной линией под словом (18 сентября
+     2026, просьба владельца; до того стояла основным цветом с треугольником
+     отборов). Пока шторка открыта, кнопка отмечена, как выбранный вид:
+     основной цвет и видимая линия. Цель нажатия — вся высота полосы, а
+     оформлено только слово. */
   [data-js] .filters-row__toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     height: calc(var(--filters-h) - 1px);
     padding: 0 0 0 calc(var(--pad) + 1px);
     font-family: var(--mono);
@@ -4962,16 +4964,29 @@ html:not([data-js]) .more { display: none; }
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--fg);
+    color: var(--fg-muted);
     background: none;
     border: 0;
     cursor: pointer;
   }
-  [data-js] .filters-row__toggle .filters-row__mark {
-    position: static;
-    margin-top: 0;
+  .filters-row__label {
+    /* Межстрочный — как у Grid / List (1.4 от страницы): у кнопки браузер
+       ставит свой, и слова в полосе стояли на полпикселя вразнобой. */
+    display: inline-block;
+    line-height: 1.4;
+    padding: 0.125rem 0;
+    border-bottom: 1px solid transparent;
   }
-  [data-js] .filters-row[data-sheet] .filters-row__mark { transform: rotate(0deg); }
+  [data-js] .filters-row[data-sheet] .filters-row__label {
+    color: var(--fg);
+    border-bottom-color: var(--fg);
+  }
+  [data-js] .filters-row__toggle:active .filters-row__label,
+  [data-js] .filters-row__toggle:focus-visible .filters-row__label {
+    background: var(--ink);
+    color: var(--ink-fg);
+    border-bottom-color: transparent;
+  }
 
   [data-js] .filters-row__view {
     display: flex;

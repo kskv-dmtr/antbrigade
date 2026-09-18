@@ -13,7 +13,7 @@
    пока листаешь каталог.
 
    На телефоне, с 18 сентября 2026 (просьба владельца), полоса другая: слева
-   кнопка «Filters» с треугольником, справа Grid / List. Кнопка открывает
+   кнопка «Filters», справа Grid / List. Кнопка открывает
    снизу шторку со всеми отборами и сортировкой — это тот же набор отборов,
    .filters-row__set, только выложенный столбцом. До того отборы стояли одной
    строкой, уезжавшей за край экрана, и дальние приходилось искать сдвигом
@@ -32,8 +32,9 @@ import ViewSwitch from './ViewSwitch.astro';
     aria-expanded="false"
     aria-controls="filters-sheet"
   >
-    Filters
-    <span class="select__chevron filters-row__mark" aria-hidden="true"></span>
+    {/* Подпись без треугольника, набрана как Grid / List справа (18 сентября
+        2026, просьба владельца): линия под словом — у открытой шторки. */}
+    <span class="filters-row__label">Filters</span>
   </button>
 
   <div class="filters-row__set" id="filters-sheet" role="dialog" aria-label="Filters">

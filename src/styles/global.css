@@ -138,6 +138,16 @@
      телефоне обе разворачиваются. */
   --page-bar-h:  4rem;
 
+  /* Справки строками — одна мерка на весь сайт, с 18 сентября 2026: справка
+     релиза и клипа, справка под именем исполнителя и лейбла, Info. До того
+     межстрочный был в каждой свой — 1.4 у релиза (18,2), 24 в Info на
+     широком экране, 28 на телефоне, — и перечень жанров на соседних
+     страницах выглядел по-разному. 28 (при корневом 16) — чтобы длинные
+     перечни из десятков имён не слипались; поле строки 3 — чтобы
+     однострочная строка осталась прежних 34. */
+  --fact-lh:     1.75rem;
+  --fact-pad:    0.1875rem;
+
   /* Высота полосы отбора. Она ниже заголовка: в ней стоят подписи и списки
      в 34, и 64 оставляли бы вокруг них воздуха больше, чем вокруг
      32-пиксельного заголовка этажом выше. */
@@ -3191,7 +3201,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .lead .item__fact { display: contents; }
 .lead .item__fact dt,
-.lead .item__fact dd { padding: 0.5rem 0; }
+.lead .item__fact dd {
+  padding: var(--fact-pad) 0;
+  line-height: var(--fact-lh);
+}
 .lead .item__facts { padding-top: 0.5rem; }
 .lead:has(.item__facts) { padding-bottom: 0.5rem; }
 
@@ -3312,7 +3325,10 @@ select option { background: var(--option-bg); color: var(--fg); }
      смотрится выключенной по центру, а когда её распирает на две и больше,
      поле сверху остаётся тем же и текст растёт вниз. С полем в 16 одна
      строка садилась выше середины: сверху 16, снизу 24. */
-  padding: 1.25rem var(--pad);
+  /* Одна строка — по центру полосы: (рост полосы − межстрочный) пополам.
+     Было 1.25rem при межстрочном 1.5rem; с 18 сентября 2026 межстрочный
+     общий для всех справок, --fact-lh, и поле считается от него. */
+  padding: calc((var(--page-bar-h) - var(--fact-lh)) / 2) var(--pad);
   border-left: 1px solid var(--line);
 }
 
@@ -3328,7 +3344,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    две единицы выше перечня, и блок в одну строку перерастал полосу раздела —
    замер на 1440: 50 при 48. */
 .info .item__fact,
-.info .item__fact dd { line-height: 1.5rem; }
+.info .item__fact dd { line-height: var(--fact-lh); }
 
 /* Кадр клипа — 16:9 вместо квадрата, и высоту блока задаёт он: правило
    «первый экран во весь рост» на странице клипа снято. Кадр вдвое ниже
@@ -3518,7 +3534,10 @@ select option { background: var(--option-bg); color: var(--fg); }
    полей двух соседок, и целое поле давало между ними 19,5 на 1440 против 12
    между чертой и строкой с типом и датой. Половина сводит их в одно число. */
 .item__head .item__facts dt,
-.item__head .item__facts dd { padding: 0.5rem 0; }
+.item__head .item__facts dd {
+  padding: var(--fact-pad) 0;
+  line-height: var(--fact-lh);
+}
 
 /* Правила .facts--page — справка во всю ширину кадра — прожили полдня
    6 сентября 2026 и удалены: справка переехала в правую половину первого
@@ -4928,10 +4947,8 @@ html:not([data-js]) .more { display: none; }
      2026), а при общих для Info 24 владелец попросил ещё на 4 свободнее. Поле
      строки зато 3 вместо 8: однострочная строка выходит те же 34, что в
      справке релиза. */
-  .info .item__fact,
-  .info .item__fact dd { line-height: 1.75rem; }
   .info .item__fact dt,
-  .info .item__fact dd { padding: 0.1875rem 0; }
+  .info .item__fact dd { padding: var(--fact-pad) 0; }
   .head--page .head__lead,
   .head--page .head__side { height: var(--bar-h); }
   .head--page .head__side {

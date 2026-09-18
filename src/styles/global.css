@@ -5189,9 +5189,11 @@ html:not([data-js]) .more { display: none; }
      что раскрытые тип, жанр и год, и с тем же набором пунктов. */
   [data-js] .filters-row__set .select select { pointer-events: none; }
   [data-js] .filters-row__set .select { cursor: pointer; }
+  /* Во всю ширину строки, как раскрытые тип, жанр и год (их вытягивает
+     скрипт FilterBar). */
   [data-js] .filters-row__set .filters-row__pick {
     --select-pad: 0.8125rem;
-    grid-column: 2;
+    grid-column: 1 / -1;
   }
   [data-js] .filters-row__set .filters-row__pick[hidden] { display: none; }
   [data-js] .filters-row__set .filter { cursor: pointer; }

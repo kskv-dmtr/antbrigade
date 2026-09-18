@@ -1083,8 +1083,16 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
              со старую шапку, расходился с ней на 1,3. Держим шапку в прежнем
              росте, пока панель открыта. */
           masthead.style.height = masthead.getBoundingClientRect().height + 'px';
+          /* Сначала без хода ставим панель за правый край: поле переходит из
+             шапки в панель, и с включённым ходом оно поехало бы туда из
+             шапки и тут же обратно — панель появлялась без выезда. Потом ход
+             включаем и выдвигаем, как шторку отборов слева. */
+          const коробка = masthead.querySelector('.search');
+          коробка.style.transition = 'none';
           masthead.setAttribute('data-drawer', '');
-          masthead.offsetWidth;
+          коробка.getBoundingClientRect();
+          коробка.style.transition = '';
+          коробка.getBoundingClientRect();
           masthead.setAttribute('data-drawer-open', '');
           search.focus();
           search.select();

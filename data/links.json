@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T21:31:45Z",
+  "generatedAt": "2026-09-18T00:23:30Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22215,6 +22215,15 @@
       "upc": "8718723104050",
       "tracks": 10,
       "releaseDate": "2018-06-22"
+    },
+    "3de4129a-8c52-80d2-8032-f037844c893f": {
+      "source": "https://album.link/zsrvfq9prhdwh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/21GPT25bZsfbb5qYXDvgL8"
+      },
+      "upc": "4062548144055",
+      "tracks": 9,
+      "releaseDate": "2026-09-18"
     }
   }
 }

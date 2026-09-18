@@ -1,13 +1,45 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-17T21:30:28Z",
+  "generatedAt": "2026-09-18T00:23:16Z",
   "counts": {
-    "albums": 1389,
+    "albums": 1390,
     "artists": 1180,
     "labels": 740,
     "videos": 96
   },
   "albums": [
+    {
+      "id": "3de4129a-8c52-80d2-8032-f037844c893f",
+      "slug": "okvsho-frozen-flashes",
+      "artist": "Okvsho",
+      "album": "Frozen Flashes",
+      "url": "https://album.link/zsrvfq9prhdwh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afee24cec-d04d-448c-92a5-e18bcba16fda%3Aa0965100002_10.jpg?table=block&id=3de4129a-8c52-80d2-8032-f037844c893f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz Fusion",
+        "Nu Jazz",
+        "Contemporary Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80ab-871a-cadfa13ad0b3"
+      ],
+      "artists": [
+        "Okvsho"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8053-b0b8-cd61c1ff4d9c"
+      ],
+      "labels": [
+        "Current Moves"
+      ]
+    },
     {
       "id": "3da4129a-8c52-8018-a70d-f75f4d0a6f6b",
       "slug": "formal-sppeedwear-punch-card",
@@ -59592,13 +59624,16 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3de4129a-8c52-80d2-8032-f037844c893f",
         "a44dd296-2925-4834-8ebf-ce1b8347c667",
         "2524129a-8c52-80ed-afc3-f411fbb7eefb",
         "3d84129a-8c52-8029-ae55-ca254aceba4b"
       ],
       "genres": [
-        "Jazz",
+        "Jazz Fusion",
         "Nu Jazz",
+        "Contemporary Jazz",
+        "Jazz",
         "Instrumental Hip-Hop"
       ],
       "labelIds": [
@@ -72126,6 +72161,7 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3de4129a-8c52-80d2-8032-f037844c893f",
         "a44dd296-2925-4834-8ebf-ce1b8347c667"
       ],
       "artistIds": [

@@ -4887,6 +4887,11 @@ html:not([data-js]) .more { display: none; }
      ради веса: общее правило .listen стоит в файле ниже. */
   .item .listen { height: var(--bar-h); }
 
+  /* «Show more» под списками на телефоне — тоже ростом с полосу раздела,
+     как площадки и «Dig again» (18 сентября 2026, просьба владельца). Через
+     main — с запасом веса над общим правилом .more. */
+  main .more { height: var(--bar-h); }
+
   .info {
     grid-template-columns: max-content minmax(0, 1fr);
     align-items: baseline;

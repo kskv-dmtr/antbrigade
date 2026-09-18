@@ -4383,6 +4383,22 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg);
   }
   [data-js] .dig-again--below .btn-label { border-bottom: 0; }
+
+  /* Линия над полосой фона вокруг кнопки — во всю ширину кадра, цветом
+     решётки (18 сентября 2026, просьба владельца). Стоит на пиксель выше
+     поля в 16: когда кнопка прилипла к низу, линия отделяет её полосу от
+     обложек; когда стоит на своём месте под подборкой, ложится ровно на
+     нижнюю линию последнего ряда — двух черт подряд не выходит. */
+  [data-js] .dig-again--below::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: calc(var(--pad) * -1 - 1px);
+    right: calc(var(--pad) * -1);
+    height: 1px;
+    background: var(--line);
+    pointer-events: none;
+  }
   [data-js] .dig-again--below:active,
   [data-js] .dig-again--below:focus-visible {
     background: var(--ink);

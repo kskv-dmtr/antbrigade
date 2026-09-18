@@ -536,6 +536,18 @@ a { color: inherit; text-decoration: none; }
   }
   .nav .nav__sum[data-hot]:hover .nav__mark { background: var(--hot-fg); }
 }
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .nav .nav__sum[data-hot]:active {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+  .nav .nav__sum[data-hot]:active .nav__mark {
+    background: var(--hot-fg);
+  }
+}
 /* ------------------------------------------- раскрывающийся пункт меню
 
    «Explore» ничего не открывает сам: под ним четыре указателя —
@@ -1947,6 +1959,16 @@ main > .head--page:first-child { border-top: 0; }
     border-bottom-color: transparent;
   }
 }
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .head--dot .view-all[data-hot]:active .btn-label,
+  .head--dot .dig-again[data-hot]:active .btn-label {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+}
 
 .head--dot .view-all:focus-visible .btn-label,
 .head--dot .view-all:active .btn-label,
@@ -2158,6 +2180,15 @@ main > .head--page:first-child { border-top: 0; }
    решает порядок: это правило стоит ниже. */
 @media (hover: hover) {
   .view-pick .view-pick__opt[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+}
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .view-pick .view-pick__opt[data-hot]:active {
     background: var(--hot);
     color: var(--hot-fg);
     border-bottom-color: transparent;
@@ -2960,6 +2991,15 @@ select option { background: var(--option-bg); color: var(--fg); }
    осталась нажатию: цвет выпадает только под указателем. */
 @media (hover: hover) {
   .more[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-color: var(--hot);
+  }
+}
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .more[data-hot]:active {
     background: var(--hot);
     color: var(--hot-fg);
     border-color: var(--hot);
@@ -4317,6 +4357,15 @@ html:not([data-js]) .more { display: none; }
       border-color: var(--hot);
     }
   }
+  /* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+     достаётся нажатию (с 18 сентября 2026). */
+  @media (hover: none) {
+    [data-js] .dig-again--below[data-hot]:active {
+      background: var(--hot);
+      color: var(--hot-fg);
+      border-color: var(--hot);
+    }
+  }
 
   /* Кружок в заголовке мельче: рядом с 20 кеглем шестнадцать смотрелись бы
      маркером списка, а не меткой раздела. */
@@ -4567,7 +4616,11 @@ html:not([data-js]) .more { display: none; }
   .nav__foot p + p { margin-top: 20px; }
 
   /* Шапка на телефоне уезжает вверх при прокрутке вниз и возвращается при
-     прокрутке вверх — по образцу dsgners.ru, с тем же ходом: 0,15 секунды.
+     прокрутке вверх — по образцу dsgners.ru.
+
+     Ход — 0,32 секунды с мягким замедлением к концу (ease-out cubic), в обе
+     стороны. Первые часы 18 сентября 2026 стоял ход образца, 0,15 с ease-out:
+     владелец попросил плавнее.
 
      Уводим ровно на свой рост — столько же проходит и липкая полоса раздела
      (её top едет от --head-h к нулю тем же ходом), и линия шапки с верхом
@@ -4581,7 +4634,7 @@ html:not([data-js]) .more { display: none; }
      В покое transform — none, а не нулевой сдвиг: любой transform делает
      шапку рамкой для fixed-потомков, и меню со слоем поиска меряли бы себя
      от неё, а не от экрана. */
-  [data-js] .masthead { transition: transform 0.15s ease-out; }
+  [data-js] .masthead { transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1); }
   [data-js] .masthead[data-away] { transform: translateY(-100%); }
   [data-js] .masthead[data-away]::after { display: none; }
 
@@ -4972,6 +5025,14 @@ html:not([data-js]) .more { display: none; }
     color: color-mix(in srgb, var(--hot-fg) 70%, var(--hot));
   }
 }
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .brief[data-hot]:active .brief__note,
+  .brief[data-hot]:active .brief__line--sub {
+    color: color-mix(in srgb, var(--hot-fg) 70%, var(--hot));
+  }
+}
 
 /* Своей сетки у клипов больше нет: столбцы общие для всех решёток, иначе
    вертикальные разделители, нарисованные на фоне, попадали бы мимо границ.
@@ -5042,6 +5103,19 @@ html:not([data-js]) .more { display: none; }
     color: color-mix(in srgb, var(--hot-fg) 70%, var(--hot));
   }
 }
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .row[data-hot]:active {
+    background: var(--hot);
+    color: var(--hot-fg);
+  }
+  .row[data-hot]:active .row__meta,
+  .row[data-hot]:active .row__num,
+  .row[data-hot]:active .row__val {
+    color: color-mix(in srgb, var(--hot-fg) 70%, var(--hot));
+  }
+}
 
 /* Обложка: не негатив, а дуотон. Цвет лежит фоном, картинка накладывается
    по светлоте — сохраняется вся её светотень, но в один тон. isolation
@@ -5059,6 +5133,18 @@ html:not([data-js]) .more { display: none; }
   /* Подпись под обложкой цвет не берёт: тёмные заливки на светлом фоне
      читаются, но спорят с чёрным названием рядом. Одна строка —
      .tile__link[data-hot]:hover .tile__title { color: var(--hot); } — вернёт. */
+}
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .tile__link[data-hot]:active .tile__art {
+    background: var(--hot);
+    isolation: isolate;
+  }
+  .tile__link[data-hot]:active .tile__art img {
+    filter: none;
+    mix-blend-mode: luminosity;
+  }
 }
 
 /* ======================================================================
@@ -5142,6 +5228,15 @@ html:not([data-js]) .more { display: none; }
 @media (hover: hover) {
   .listen__btn[data-hot]:hover,
   .foot__btn[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+  }
+}
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  .listen__btn[data-hot]:active,
+  .foot__btn[data-hot]:active {
     background: var(--hot);
     color: var(--hot-fg);
   }
@@ -5247,6 +5342,15 @@ html:not([data-js]) .more { display: none; }
    указателем. */
 @media (hover: hover) {
   a[data-hot]:hover:not(.tile__link):not(.view-all):not(.dig-again) {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
+}
+/* То же касанием: на телефоне наведения нет, и цвет из жеребьёвки
+   достаётся нажатию (с 18 сентября 2026). */
+@media (hover: none) {
+  a[data-hot]:active:not(.tile__link):not(.view-all):not(.dig-again) {
     background: var(--hot);
     color: var(--hot-fg);
     border-bottom-color: transparent;

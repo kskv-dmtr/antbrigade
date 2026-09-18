@@ -584,6 +584,27 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       карта.dataset.hot = '';
     }, { passive: true });
 
+    /* Телефон, с 18 сентября 2026: цвет из той же жеребьёвки достаётся
+       нажатию — правила (hover: none) … :active в global.css. pointerover
+       приходит и от пальца, в самом начале касания, так что цвет уже выбран,
+       когда включается :active.
+
+       Палец отпущен — выбор сбрасываем: иначе второе касание той же
+       карточки не дало бы нового цвета (pointerover на ней не повторится).
+       Пустой слушатель touchstart нужен Safari: без него :active на касание
+       там не срабатывает вовсе. */
+    const отпустить = (e) => {
+      if (e.pointerType !== 'touch' || !подсвечена) return;
+      подсвечена.removeAttribute('data-hot');
+      подсвечена.style.removeProperty('--hot');
+      подсвечена.style.removeProperty('--hot-fg');
+      подсвечена = null;
+    };
+
+    addEventListener('pointerup', отпустить, { passive: true });
+    addEventListener('pointercancel', отпустить, { passive: true });
+    addEventListener('touchstart', () => {}, { passive: true });
+
     /* Закрытия по нажатию мимо и по Escape у раскрывающегося пункта нет — оно
        было написано для панели, падавшей поверх страницы. 12 сентября 2026
        список стал полосой второго уровня внутри шапки: это не всплывающее окно,
@@ -850,7 +871,8 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           узкийЭкран.matches && !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         if (on || !плавно) setHeadHeight();
-        else ждём = setTimeout(setHeadHeight, 160);
+        // Чуть дольше хода шапки (0,32 с в global.css): спускаемся, когда она встала.
+        else ждём = setTimeout(setHeadHeight, 340);
       };
 
       addEventListener('scroll', () => {

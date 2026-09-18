@@ -2383,7 +2383,8 @@ main > .head--page:first-child { border-top: 0; }
    слое под рядом стоят находки, и середина всего короба ушла бы вниз. */
 .search__top { display: flex; align-items: center; gap: 0.5rem; }
 .search-drawer,
-.search-scrim { display: none; }
+.search-scrim,
+.search__hints { display: none; }
 .search__row { position: relative; flex: 1; min-width: 0; }
 .search__close { display: none; }
 
@@ -5473,7 +5474,16 @@ html:not([data-js]) .more { display: none; }
    шапки: то уезжало в панель и возвращалось с задержкой. Поле в шапке
    стоит на месте всегда. */
 @media (min-width: 641px) {
+  /* Поля внутри — ровно 16 от края экрана (19 сентября 2026, просьба
+     владельца). Справа от панели лежит колея под полосу прокрутки (15 на
+     1440): пока панель открыта, прокрутка страницы снята, а колея остаётся
+     полосой того же фона, и отступ до крестика выходил 31. Зайти на колею
+     панель не может — закреплённые элементы кончаются перед ней, — поэтому
+     правое поле уменьшено на её ширину: --gutter меряет скрипт при
+     открытии. */
   [data-js] .search-drawer {
+    --drawer-pad: 16px;
+    --drawer-pad-end: max(0px, calc(16px - var(--gutter, 0px)));
     position: fixed;
     top: 0;
     bottom: 0;
@@ -5505,8 +5515,38 @@ html:not([data-js]) .more { display: none; }
     box-sizing: border-box;
     height: var(--head-exact, var(--head-h));
     gap: 0.75rem;
-    padding: 0 var(--pad);
+    padding: 0 var(--drawer-pad-end) 0 var(--drawer-pad);
     border-bottom: 1px solid var(--line);
+  }
+  [data-js] .search-drawer .found { padding-inline: var(--drawer-pad) var(--drawer-pad-end); }
+
+  /* Подсказки по управлению — под чертой верхнего ряда: слева Navigate со
+     стрелками, справа Open с Enter. Набраны как подписи — моноширинным
+     приглушённым; клавиши — квадратами в рамке, как «/» у поля. */
+  [data-js] .search-drawer .search__hints {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem var(--drawer-pad-end) 0.75rem var(--drawer-pad);
+    color: var(--fg-dim);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .search__hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  .search__hint .search__kbd:first-of-type { margin-left: 0.125rem; }
+  .search__kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.375rem;
+    height: 1.375rem;
+    font: inherit;
+    color: var(--fg-dim);
+    border: 1px solid var(--line);
   }
   [data-js] .search-drawer .search__key,
   [data-js] .search-drawer .search__clear { display: none !important; }

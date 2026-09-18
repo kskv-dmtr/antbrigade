@@ -23,7 +23,7 @@ import Icon from './Icon.astro';
    поле в панели поиска справа (drawer-search), с 19 сентября 2026. У
    каждого свои id — поля, списка находок и коробки; указатель поиска
    загружается один раз на оба. */
-const { id = 'search' } = Astro.props;
+const { id = 'search', hints = false } = Astro.props;
 ---
 <div class="search" id={`${id}-box`}>
   {/* Верхний ряд: само поле и крестик «закрыть» справа от него. Крестик
@@ -55,6 +55,16 @@ const { id = 'search' } = Astro.props;
     <Icon name="x" class="search__close-x" />
   </button>
   </div>
+
+  {/* Подсказки по управлению — только в панели поиска (19 сентября
+      2026, просьба владельца): стрелки ходят по находкам, Enter открывает
+      выбранную. Клавиши — квадратами в рамке, как «/» у поля. */}
+  {hints && (
+    <div class="search__hints mono mono--sm" aria-hidden="true">
+      <span class="search__hint">Navigate <kbd class="search__kbd">↑</kbd><kbd class="search__kbd">↓</kbd></span>
+      <span class="search__hint">Open <kbd class="search__kbd">↵</kbd></span>
+    </div>
+  )}
 
   {/* Панель пустой не показывается: состояний «ничего не найдено» на сайте
       нет нигде, и заводить одно ради поиска не за чем. */}

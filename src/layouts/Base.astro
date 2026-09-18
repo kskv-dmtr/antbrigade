@@ -443,7 +443,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       край, — поле в шапке пропадало и появлялось с задержкой. Теперь поле в
       шапке стоит на месте всегда. */}
   <div class="search-drawer" id="search-drawer" role="dialog" aria-label="Search">
-    <SearchField id="drawer-search" />
+    <SearchField id="drawer-search" hints />
   </div>
   <div class="search-scrim" aria-hidden="true"></div>
 
@@ -1084,6 +1084,10 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           // Шторка отборов закрывается: две панели сразу не открываются.
           document.dispatchEvent(new CustomEvent('drawer:open'));
           ящикЭл.setAttribute('data-open', '');
+          // Колея под полосу прокрутки справа от панели — её ширину CSS
+          // вычитает из правого поля, чтобы до края экрана было ровно 16.
+          const колея = innerWidth - document.documentElement.getBoundingClientRect().width;
+          ящикЭл.style.setProperty('--gutter', Math.max(0, колея) + 'px');
           тень?.setAttribute('data-open', '');
           полеЯщика?.focus();
           полеЯщика?.select();

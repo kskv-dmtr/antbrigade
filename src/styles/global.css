@@ -5546,6 +5546,12 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-muted);
   }
   [data-js] .filters-row__sorter .multi__item:last-child { border-bottom: 0; }
+  /* Черта — только между группами (по дате, по артисту, по альбому…), как в
+     меню на широком экране (19 сентября 2026, просьба владельца): внутри
+     группы пункты без черт, иначе граница групп терялась среди одинаковых
+     линий под каждой строкой. */
+  [data-js] .filters-row__sorter .multi__item { border-bottom-color: transparent; }
+  [data-js] .filters-row__sorter .multi__item:has(+ .multi__item[data-group]) { border-bottom-color: var(--line); }
   /* Выбор отмечен галочкой у правого края строки, как в меню сортировки на
      широком экране (19 сентября 2026, просьба владельца; днём здесь стоял
      кружок). Сам кружок спрятан, но остаётся в строке: по нему работает

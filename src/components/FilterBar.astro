@@ -226,10 +226,22 @@ import ViewSwitch from './ViewSwitch.astro';
        шторка закрывается: сортировка срабатывает сразу. */
     const поле = полоса.querySelector('.filter > .select select');
     const лист = сортер?.querySelector('.filters-row__sorter-list');
+    /* Ось сортировки пункта — по ней пункты делятся чертой на группы, и в
+       шторке, и в меню на широком экране: по дате, по артисту, по альбому
+       (названию), по имени, по числу релизов. */
+    const ось = (v) =>
+      /^(new|old)$/.test(v) ? 'date' : /^(az|za)$/.test(v) ? 'name' : v.replace(/-(az|za|asc)$/, '');
+
     if (поле && лист) {
+      let прежняяОсь = null;
       for (const вариант of поле.options) {
+        // Первый пункт новой группы — с чертой сверху (19 сентября 2026).
+        const осьПункта = ось(вариант.value);
+        const новаяГруппа = прежняяОсь !== null && осьПункта !== прежняяОсь;
+        прежняяОсь = осьПункта;
         const пункт = document.createElement('label');
         пункт.className = 'multi__item';
+        if (новаяГруппа) пункт.dataset.group = '';
         const радио = document.createElement('input');
         радио.type = 'radio';
         радио.name = 'sheet-' + поле.id;
@@ -364,8 +376,6 @@ import ViewSwitch from './ViewSwitch.astro';
       меню.className = 'filters-row__menu';
       меню.setAttribute('role', 'menu');
       const галочка = полоса.querySelector('.filters-row__check');
-      const ось = (v) =>
-        /^(new|old)$/.test(v) ? 'date' : /^(az|za)$/.test(v) ? 'name' : v.replace(/-(az|za|asc)$/, '');
 
       let прежняя = null;
       for (const вариант of поле.options) {

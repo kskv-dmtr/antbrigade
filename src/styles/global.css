@@ -6281,14 +6281,12 @@ html:not([data-js]) .more { display: none; }
   color: var(--fg-muted);
   white-space: nowrap;
 }
-/* На широком экране — моноширинным 13, как служебное в полосах (19
-   сентября 2026, просьба владельца). На телефоне — кеглем названия. */
-@media (min-width: 641px) {
-  .row__year {
-    font-family: var(--mono);
-    font-size: max(13px, 0.8125rem);
-    letter-spacing: 0.08em;
-  }
+/* Моноширинным (Geist Mono) 13, как служебное в полосах — на всех ширинах
+   (19 сентября 2026, просьба владельца; сперва только на широком экране). */
+.row__year {
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+  letter-spacing: 0.08em;
 }
 @media (hover: hover) {
   .row:hover .row__year { color: inherit; }

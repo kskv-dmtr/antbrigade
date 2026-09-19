@@ -4615,12 +4615,35 @@ html:not([data-js]) .more { display: none; }
      шапку рамкой для fixed-потомков, и меню со слоем поиска меряли бы себя
      от неё, а не от экрана. */
   [data-js] .masthead { transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1); }
-  [data-js] .masthead[data-away] { transform: translateY(-100%); }
+  [data-js] .masthead[data-away] { transform: translateY(calc(-1 * var(--lift, 100%))); }
 
-  /* Липкие полосы за шапкой не едут, а переставляются под ней — см.
-     скрипт в Base.astro. Ход у полос (transition: top) стоял в первый
-     день, 18 сентября 2026, и на телефоне расходился с ходом шапки:
-     под её линией на миг открывалась щель. */
+  /* С 19 сентября 2026 прилипшие под шапкой полосы — заголовок раздела и
+     строка отборов — уходят и возвращаются вместе с ней, одним куском:
+     тот же сдвиг (--lift — рост шапки и полос), тот же ход. Состояния
+     ставит скрипт в Base.astro атрибутом data-lift на <html>. До того
+     полосы переставлялись по top, скачком, и возвращение выходило
+     дёрганым (замечание владельца). */
+  [data-js][data-lift] .head--sticky[data-stuck],
+  [data-js][data-lift] .filters-row[data-stuck] {
+    transform: translateY(calc(-1 * var(--lift)));
+  }
+  [data-js][data-lift='moving'] .head--sticky[data-stuck],
+  [data-js][data-lift='moving'] .filters-row[data-stuck],
+  [data-js][data-lift='show'] .head--sticky[data-stuck],
+  [data-js][data-lift='show'] .filters-row[data-stuck] {
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  [data-js][data-lift='settled'] .head--sticky[data-stuck],
+  [data-js][data-lift='settled'] .filters-row[data-stuck],
+  [data-js][data-lift='show'] .head--sticky[data-stuck],
+  [data-js][data-lift='show'] .filters-row[data-stuck] { transform: none; }
+
+  /* Строка отборов на телефоне липнет под заголовком раздела, как на
+     широком экране (19 сентября 2026): заголовок здесь ростом --bar-h. */
+  [data-js] .filters-row {
+    position: sticky;
+    top: calc(var(--head-h) + var(--bar-h));
+  }
 
   /* Подвала на телефоне нет — с 18 сентября 2026 всё из него стоит внизу
      раскрытого меню, по образцу dsgners.ru. Без скрипта меню не
@@ -4657,9 +4680,9 @@ html:not([data-js]) .more { display: none; }
     border-bottom: 1px solid var(--line-soft);
   }
   [data-js] .masthead .nav a:last-child { border-bottom: 0; }
-  /* Последний раздел стоит теперь не последним в меню — за ним низ с
-     каналами, — но линия под ним по-прежнему лишняя. */
-  [data-js] .masthead .nav > a:nth-last-child(2) { border-bottom: 0; }
+  /* Под последним разделом (Playlists) черта есть — с 19 сентября 2026,
+     просьба владельца: список разделов кончается чертой, как список
+     отборов, а низ с каналами стоит отдельно. */
 
   /* Выворотка по нажатию — только у строчного пункта в шапке. Здесь пункт
      во всю ширину этажа, и залитая полоса читалась бы выбранным разделом,
@@ -5202,15 +5225,11 @@ html:not([data-js]) .more { display: none; }
   border-top: 1px solid var(--line);
 }
 
-/* На телефоне мягкая черта под последним отбором легла бы вплотную к линии
-   над кнопкой — у последнего видимого отбора её там нет. Последний
-   видимый — тот, за которым стоит скрытый вид или сразу низ шторки. На
-   широком экране Apply прижат к низу панели, и черта под последним
-   отбором (Year) остаётся (19 сентября 2026, просьба владельца). */
-@media (max-width: 640px) {
-  [data-js] .filters-row__set .filter:has(+ .filter .view-pick),
-  [data-js] .filters-row__set .filter:has(+ .filters-row__foot) { border-bottom: 0; }
-}
+/* Черта под последним отбором (Year) стоит на всех ширинах: на телефоне
+   отборы с 19 сентября 2026 открываются на весь экран, Apply прижат к
+   низу, и черта под Year отделяет список от пустого поля (просьба
+   владельца). До того на телефоне её снимали: шторка была ростом по
+   содержимому, и черта ложилась вплотную к линии над кнопкой. */
 
 /* На широком экране то же — когда раскрытый список довёл панель до низа и
    виден Apply: последний отбор тогда стоит вплотную к блоку кнопок, и две
@@ -5418,6 +5437,10 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-muted);
   }
   [data-js] .filters-row__sorter .multi__item:last-child { border-bottom: 0; }
+  /* Кружок выбора — у правого края строки, название слева (19 сентября
+     2026, просьба владельца). */
+  [data-js] .filters-row__sorter .multi__item { justify-content: space-between; }
+  [data-js] .filters-row__sorter .multi__item input { order: 1; margin: 0; }
   [data-js] .filters-row__sorter .multi__item:has(input:checked) { color: var(--fg); }
   [data-js] .filters-row__sorter .multi__item:active { background: transparent; color: var(--fg); }
 

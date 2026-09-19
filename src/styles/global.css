@@ -4930,7 +4930,7 @@ html:not([data-js]) .more { display: none; }
   display: flex;
   align-items: center;
   height: calc(var(--filters-h) - 1px);
-  padding: 0 0 0 calc(var(--pad) + 1px);
+  padding: 0 var(--pad) 0 0;
   font-family: var(--mono);
   font-size: max(13px, 0.8125rem);
 
@@ -4998,15 +4998,23 @@ html:not([data-js]) .more { display: none; }
   border-bottom-color: transparent;
 }
 
+/* С вечера 19 сентября 2026 (просьба владельца) полоса зеркальна: Grid /
+   List слева, справа сортировка и за ней кнопка «Filters» — шторка тоже
+   выезжает справа, как панель поиска. Поле слева на пиксель больше: полоса
+   начинается на пиксель левее края, как решётка. */
 [data-js] .filters-row__view {
   display: flex;
   align-items: center;
-
-  /* На широком экране здесь же стоит сортировка — её переставляет сюда
-     скрипт FilterBar; просвет до переключателя вида — как между отборами. */
-  gap: 1.5rem;
-  padding-right: var(--pad);
+  order: -1;
+  padding-left: calc(var(--pad) + 1px);
 }
+
+/* Сортировка в полосе (на широком экране её переставляет сюда скрипт
+   FilterBar) — перед «Filters», без подписи «Sort by»: слова в списке
+   («Newest first») сами говорят, что это порядок. Просвет до кнопки —
+   общий просвет полосы, 24. */
+[data-js] .filters-row > .filter { margin-left: auto; }
+[data-js] .filters-row > .filter .filter__name { display: none; }
 
 /* Шторка — тот же набор отборов, выложенный столбцом у низа экрана.
    Выезжает снизу ходом шапки (0,32 с, мягкое замедление); выше 85 %
@@ -5278,12 +5286,13 @@ html:not([data-js]) .more { display: none; }
 /* Вид в шторке не повторяем: он стоит в самой полосе. */
 [data-js] .filters-row__set .filter:has(.view-pick) { display: none; }
 
-/* На широком экране шторка выезжает слева направо, во всю высоту экрана и
-   шириной ровно в один столбец сетки обложек (19 сентября 2026, просьба
-   владельца; утром того же дня выезжала снизу по центру, шириной 40rem).
-   Ширину считаем как у решётки: та начинается на пиксель левее края и
-   шире окна на пиксель, поэтому столбец — (100% + 1px) / --cols, а правая
-   граница шторки ложится на первую вертикаль решётки.
+/* На широком экране шторка выезжает справа налево, во всю высоту экрана и
+   шириной ровно в один столбец сетки обложек — как панель поиска (вечер
+   19 сентября 2026, просьба владельца; днём выезжала слева, утром — снизу
+   по центру, шириной 40rem). Ширина как у панели поиска: решётка
+   начинается на пиксель левее края и шире окна на пиксель, поэтому
+   столбец — (100% + 1px) / --cols, и левая граница шторки ложится на
+   последнюю вертикаль решётки.
 
    Полоса отбора липкая и лежит под шапкой (z-index 10 против 20), а шторка
    живёт внутри неё — на время открытой шторки полосу поднимаем над
@@ -5294,13 +5303,13 @@ html:not([data-js]) .more { display: none; }
     --bar-h: var(--page-bar-h);
     top: 0;
     bottom: 0;
-    left: 0;
-    right: auto;
-    width: calc((100% + 1px) / var(--cols) - 1px);
+    left: auto;
+    right: 0;
+    width: calc((100% + 1px) / var(--cols));
     max-height: none;
     border-top: 0;
-    border-right: 1px solid var(--line);
-    transform: translateX(-100%);
+    border-left: 1px solid var(--line);
+    transform: translateX(100%);
   }
   [data-js] .filters-row[data-sheet] .filters-row__set { transform: none; }
   [data-js] .filters-row[data-sheet] { z-index: 60; }

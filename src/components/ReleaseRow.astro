@@ -30,16 +30,17 @@ import { artistLine } from '../lib/db.js';
 
 const { album } = Astro.props;
 
-/* Точка, а не косая: «Album / Collaboration» читалось как одно составное
-   слово. Год без скобок: в скобки взяты счётчики — числа релизов у артиста,
+/* Типов бывает несколько («Album», «Collaboration») — каждый в своей рамке
+   (19 сентября 2026; до того через точку). Год без скобок: в скобки взяты счётчики — числа релизов у артиста,
    лейбла и жанра, — а год не счётчик. */
-const тип = album.types.join(' · ');
 const год = album.year ?? '—';
 ---
 <a class="row row--release" href={`/albums/${album.slug}`}>
   <span class="row__line">
     <span class="row__artist">{artistLine(album)}</span>
-    <span class="row__meta">{тип}</span>
+    {/* Типы — каждый в своей рамке, как род находки в поиске (19 сентября
+        2026, просьба владельца). */}
+    <span class="row__meta row__types">{album.types.map((t) => <span class="row__type">{t}</span>)}</span>
   </span>
   <span class="row__line">
     <span class="row__title">{album.album}</span>

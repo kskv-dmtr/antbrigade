@@ -23,7 +23,8 @@ const год = video.released ? video.released.slice(0, 4) : '—';
 <a class="row row--release row--video" href={`/video/${video.slug}`}>
   <span class="row__line">
     <span class="row__artist">{videoArtists(video)}</span>
-    <span class="row__meta">{video.kind}</span>
+    {/* Вид ролика — в рамке, как род находки в поиске (19 сентября 2026). */}
+    <span class="row__meta row__types">{video.kind && <span class="row__type">{video.kind}</span>}</span>
   </span>
   <span class="row__line">
     <span class="row__title">{videoTitle(video)}</span>

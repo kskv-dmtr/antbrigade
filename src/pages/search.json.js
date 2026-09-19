@@ -8,6 +8,9 @@
    из трёх с половиной тысяч записей и заняли бы больше самих значений.
    Порядок такой: тип, имя, адрес, подпись, пометка справа, миниатюра.
 
+   Страны у исполнителя и лейбла в подписи нет — с 19 сентября 2026 (просьба
+   владельца): подпись у них — один счёт релизов.
+
    Миниатюра — с 19 сентября 2026 (находки набраны по образцу Spotify):
    «c» и id обложки либо «v» и id ролика, полный адрес собирает скрипт
    поля — так строка короче вдвое. У релиза — его обложка, у клипа — кадр,
@@ -23,7 +26,7 @@
 
 import {
   albums, artists, labels, genres, videos,
-  artistLine, videoTitle, videoArtists, countryName,
+  artistLine, videoTitle, videoArtists,
   albumById, videoById, coverSrc, thumbSrc
 } from '../lib/db.js';
 
@@ -62,7 +65,7 @@ export function GET() {
      чаще то, что искали, чем одноимённый релиз. */
   for (const a of artists) {
     записи.push(['a', a.name, `/artists/${a.slug}`,
-      a.country ? countryName(a.country) : '', String(a.albumIds?.length ?? 0),
+      '', String(a.albumIds?.length ?? 0),
       миниатюра(a.albumIds, a.videoIds)]);
   }
 
@@ -76,7 +79,7 @@ export function GET() {
 
   for (const l of labels) {
     записи.push(['l', l.name, `/labels/${l.slug}`,
-      l.country ? countryName(l.country) : '', String(l.albumIds?.length ?? 0),
+      '', String(l.albumIds?.length ?? 0),
       миниатюра(l.albumIds)]);
   }
 

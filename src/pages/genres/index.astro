@@ -76,9 +76,9 @@ let выведено = 0;
     </FilterCell>
 
     <FilterCell name="Sort by:">
-      <Select id="sort" label="Sorting" initial="A→Z">
-        <option value="az">A→Z</option>
-        <option value="za">Z→A</option>
+      <Select id="sort" label="Sorting" initial="A—Z">
+        <option value="az">A—Z</option>
+        <option value="za">Z—A</option>
         <option value="releases">Most releases</option>
         {/* Обратный порядок — с 19 сентября 2026, просьба владельца. */}
         <option value="releases-asc">Fewest releases</option>
@@ -180,7 +180,7 @@ let выведено = 0;
     more.hidden = rest <= 0;
     if (rest > 0) more.textContent = `Show more [${Math.min(PAGE, rest)}]`;
 
-    // Порядок A→Z — то, с чем страница открывается, поэтому он же
+    // Порядок A—Z — то, с чем страница открывается, поэтому он же
     // считается нетронутым состоянием.
   }
 

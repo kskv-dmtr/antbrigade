@@ -120,17 +120,17 @@ const PAGE = 48;
                    items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
     </FilterCell>
 
-    {/* У каждой оси обе стороны: и по дате, и по алфавиту. Стрелка в
-        подписи — та же, что у списков A→Z на /artists, /labels и
-        /genres, чтобы направление читалось одинаково везде. */}
+    {/* У каждой оси обе стороны: и по дате, и по алфавиту. Направление в
+        подписи — длинным тире без пробелов (A—Z, Z—A; с 19 сентября 2026, до
+        того стрелкой), как у списков на /artists, /labels и /genres. */}
     <FilterCell name="Sort by:">
       <Select id="sort" label="Sorting" initial="Newest first">
         <option value="new">Newest first</option>
         <option value="old">Oldest first</option>
-        <option value="artist-az">Artists A→Z</option>
-        <option value="artist-za">Artists Z→A</option>
-        <option value="album-az">Albums A→Z</option>
-        <option value="album-za">Albums Z→A</option>
+        <option value="artist-az">Artists A—Z</option>
+        <option value="artist-za">Artists Z—A</option>
+        <option value="album-az">Albums A—Z</option>
+        <option value="album-za">Albums Z—A</option>
       </Select>
     </FilterCell>
 

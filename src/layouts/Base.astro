@@ -507,9 +507,12 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     let прошлый = -1;
 
     addEventListener('pointerover', (e) => {
-      const карта = e.target instanceof Element
+      /* Находки поиска — без жеребьёвки (19 сентября 2026, просьба владельца):
+         их строка отзывается мягким фоном, как пункт меню. */
+      const найдено = e.target instanceof Element
         ? e.target.closest('a, .more, .dig-again, .filters-row__apply, .filters-row__reset-all, .filters-row__toggle, .view-pick__opt, .filters-row > .filter .select')
         : null;
+      const карта = найдено?.matches('.found') ? null : найдено;
 
       if (карта === подсвечена) return;
 

@@ -27,7 +27,7 @@
 import {
   albums, artists, labels, genres, videos,
   artistLine, videoTitle, videoArtists,
-  albumById, videoById, coverSrc, thumbSrc
+  albumById, videoById, coverSrc, thumbSrc, plural
 } from '../lib/db.js';
 
 const обложка = (al) => {
@@ -51,6 +51,14 @@ const свежий = (ids = []) => {
   }
   return лучший;
 };
+/* Пометка у исполнителя, лейбла и жанра — готовой строкой: «2 releases ·
+   3 videos» (клипы — только у исполнителя и только если они есть; 19
+   сентября 2026, просьба владельца). В подпись её не кладём: подпись
+   участвует в поиске, и «releases» находило бы всех исполнителей разом. */
+const счёт = (релизов = 0, клипов = 0) =>
+  [plural(релизов, 'release', 'releases'), клипов ? plural(клипов, 'video', 'videos') : '']
+    .filter(Boolean).join(' · ');
+
 const миниатюра = (albumIds, videoIds = []) => {
   const al = свежий(albumIds);
   if (al) { const c = обложка(al); if (c) return c; }
@@ -65,7 +73,7 @@ export function GET() {
      чаще то, что искали, чем одноимённый релиз. */
   for (const a of artists) {
     записи.push(['a', a.name, `/artists/${a.slug}`,
-      '', String(a.albumIds?.length ?? 0),
+      '', счёт(a.albumIds?.length, a.videoIds?.length),
       миниатюра(a.albumIds, a.videoIds)]);
   }
 
@@ -79,12 +87,12 @@ export function GET() {
 
   for (const l of labels) {
     записи.push(['l', l.name, `/labels/${l.slug}`,
-      '', String(l.albumIds?.length ?? 0),
+      '', счёт(l.albumIds?.length),
       миниатюра(l.albumIds)]);
   }
 
   for (const g of genres) {
-    записи.push(['g', g.name, `/genres/${g.slug}`, '', String(g.count ?? 0), миниатюра(g.albumIds)]);
+    записи.push(['g', g.name, `/genres/${g.slug}`, '', счёт(g.count), миниатюра(g.albumIds)]);
   }
 
   return new Response(JSON.stringify(записи), {

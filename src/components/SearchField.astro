@@ -204,11 +204,9 @@ const { id = 'search', hints = false } = Astro.props;
         н.textContent = имя;
         текст.append(н);
 
-        const счётный = тип === 'a' || тип === 'l' || тип === 'g';
-        const хвост = счётный
-          ? (число ? число + (число === '1' ? ' release' : ' releases') : '')
-          : число;
-        const второй = [подпись, хвост].filter(Boolean).join(' · ');
+        // Пометка — год у релиза и клипа, готовый счёт у остальных (его
+        // собирает search.json).
+        const второй = [подпись, число].filter(Boolean).join(' · ');
         if (второй) {
           const п = document.createElement('span');
           п.className = 'found__sub';

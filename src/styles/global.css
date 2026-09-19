@@ -6261,9 +6261,9 @@ html:not([data-js]) .more { display: none; }
 
    С 19 сентября 2026 в строке релиза и клипа два ряда — исполнитель и
    название, а справа один тип в рамке (года больше нет). Рамка стоит по
-   вертикальной середине всей записи, а не против исполнителя (просьба
-   владельца): в первом ряду она висела у верха, и под ней пустовало место
-   названия. Строка для этого — сетка: имя и название в левой колонке, тип
+   вертикальной середине всей записи, а не против первого ряда (просьба
+   владельца). С того же вечера первым рядом идёт название, вторым —
+   исполнитель и год. Строка для этого — сетка: имя и название в левой колонке, тип
    справа на оба ряда; обёртки рядов растворены (display: contents), разметка
    прежняя. На телефоне то же. */
 .row.row--release {
@@ -6274,30 +6274,26 @@ html:not([data-js]) .more { display: none; }
   align-items: baseline;
 }
 .row--release .row__line { display: contents; }
-.row--release .row__artist { grid-column: 1; grid-row: 1; }
-.row--release .row__title { grid-column: 1; grid-row: 2; }
+.row--release .row__title { grid-column: 1; grid-row: 1; }
+.row--release .row__sub { grid-column: 1; grid-row: 2; }
 .row--release .row__types {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
 }
 
-/* Год в строке — через точку после названия (19 сентября 2026, просьба
-   владельца): тем же кеглем, но обычным весом и приглушённым, чтобы
-   название оставалось главным. На залитой строке — цветом строки. */
-.row__year {
-  font-weight: 400;
-  color: var(--fg-muted);
-  white-space: nowrap;
-}
-/* Моноширинным (Geist Mono) 13, как служебное в полосах — на всех ширинах
-   (19 сентября 2026, просьба владельца; сперва только на широком экране). */
-.row__year {
+/* Второй ряд строки — исполнитель и год через точку, моноширинным 13 с
+   разрядкой, приглушённым: так же, как под названием в плитке (19 сентября
+   2026, просьба владельца). На залитой строке — цветом строки. */
+.row__sub {
+  min-width: 0;
   font-family: var(--mono);
   font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
+  line-height: 1.4;
+  color: var(--fg-muted);
 }
 @media (hover: hover) {
-  .row:hover .row__year { color: inherit; }
+  .row:hover .row__sub { color: inherit; }
 }
-.row:active .row__year { color: inherit; }
+.row:active .row__sub { color: inherit; }

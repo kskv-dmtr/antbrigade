@@ -16,15 +16,15 @@ import { videoTitle, videoArtists } from '../lib/db.js';
 
 const { video } = Astro.props;
 
-/* Год — через точку после названия, как у релизов (19 сентября 2026). */
 ---
 <a class="row row--release row--video" href={`/video/${video.slug}`}>
+  {/* Порядок как у плитки (19 сентября 2026): название, под ним исполнитель
+      и год; вид ролика — в рамке справа. */}
   <span class="row__line">
-    <span class="row__artist">{videoArtists(video)}</span>
-    {/* Вид ролика — в рамке, как род находки в поиске (19 сентября 2026). */}
+    <span class="row__title">{videoTitle(video)}</span>
     <span class="row__meta row__types">{video.kind && <span class="row__type">{video.kind}</span>}</span>
   </span>
   <span class="row__line">
-    <span class="row__title">{videoTitle(video)}{video.released && <span class="row__year"> · {video.released.slice(0, 4)}</span>}</span>
+    <span class="row__sub">{[videoArtists(video), video.released?.slice(0, 4)].filter(Boolean).join(' · ')}</span>
   </span>
 </a>

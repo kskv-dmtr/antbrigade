@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-19T11:06:10Z",
+  "generatedAt": "2026-09-19T14:27:47Z",
   "counts": {
     "albums": 1400,
-    "artists": 1184,
+    "artists": 1185,
     "labels": 743,
-    "videos": 97
+    "videos": 101
   },
   "albums": [
     {
@@ -28155,7 +28155,7 @@
       "id": "bfa5ccad-8d18-471c-aec6-f3286647a511",
       "slug": "chartreuse-morning-ritual",
       "artist": "Chartreuse",
-      "album": "Morning Ritual/",
+      "album": "Morning Ritual",
       "url": "https://album.link/cpc6z5czjxwvd",
       "cover": "https://antbrigade.notion.site/image/attachment%3Add931c03-d2eb-4bb6-8b77-8a53cea5f508%3Aphoto_2025-08-14_15-32-41.jpg?table=block&id=bfa5ccad-8d18-471c-aec6-f3286647a511&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
@@ -56994,6 +56994,22 @@
       "akaIds": []
     },
     {
+      "id": "3e04129a-8c52-801a-b595-fa59aeba1adb",
+      "slug": "liars",
+      "name": "Liars",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@liarsliarsliars",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3e04129a-8c52-80b2-a9c4-e1b682960dd6"
+      ],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-80d4-a5f2-cb71df4a43ff",
       "slug": "lifted",
       "name": "Lifted",
@@ -58868,9 +58884,9 @@
       "slug": "mitch-murder",
       "name": "Mitch Murder",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://mitchmurder.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@mitch_murder",
       "albumIds": [
         "bace706f-ce66-4cfc-97b9-997366d1ed22"
       ],
@@ -58880,7 +58896,10 @@
       "labelIds": [
         "24b4129a-8c52-80f3-a55a-f6c37d0fa115"
       ],
-      "videoIds": [],
+      "videoIds": [
+        "3e04129a-8c52-8029-9843-fe1c913224d5",
+        "3e04129a-8c52-80a7-8ef8-e64fd7460746"
+      ],
       "akaIds": []
     },
     {
@@ -63228,7 +63247,7 @@
       "slug": "sault",
       "name": "SAULT",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://saultglobal.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -67317,7 +67336,7 @@
       "country": "US",
       "bandcamp": "https://theesacredsouls.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@TheeSacredSouls",
       "albumIds": [
         "1144129a-8c52-80b6-89b2-cc2b6b138f8a",
         "dc3c0aa4-1abd-44ef-8545-e995adc417d0"
@@ -67330,7 +67349,9 @@
         "2504129a-8c52-80eb-8df6-e3a43ad40f12",
         "2514129a-8c52-80d0-a54c-ec7fc34b695e"
       ],
-      "videoIds": [],
+      "videoIds": [
+        "3e04129a-8c52-8091-bd51-d5b9fbdd2de1"
+      ],
       "akaIds": []
     },
     {
@@ -72682,7 +72703,7 @@
       "country": "US",
       "bandcamp": "https://daptonerecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@DaptoneRecordsChannel",
       "albumIds": [
         "39f4129a-8c52-80c2-98dd-c9f3a5998e4c",
         "3814129a-8c52-80dc-bbcd-e74cc5471a1b",
@@ -77271,7 +77292,7 @@
       "country": "US",
       "bandcamp": "https://muterecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@themutechannel",
       "albumIds": [
         "1be4129a-8c52-8009-bd7e-e33e5cea9539",
         "5a4037a5-d5a5-410b-b57b-2096a560d4b7",
@@ -83131,6 +83152,19 @@
       "slug": "leenalchi-full-performance-live-on-kexp"
     },
     {
+      "id": "3e04129a-8c52-80b2-a9c4-e1b682960dd6",
+      "title": "Liars | Ice Pick, Kalamazoo",
+      "url": "https://youtu.be/V7r7cSssVN4?si=snQif7m2qiU5wt5Q",
+      "kind": "Official Video",
+      "released": "2026-09-09",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "3e04129a-8c52-801a-b595-fa59aeba1adb"
+      ],
+      "slug": "liars-ice-pick-kalamazoo"
+    },
+    {
       "id": "3c74129a-8c52-80e8-a498-dd362a63edbc",
       "title": "Los Baby Jaguars | El Fuego (Latin Funk)",
       "url": "https://youtu.be/AHux-RBJgnU?si=gCDCBZ7m5h_lYVFz",
@@ -83233,6 +83267,32 @@
         "2504129a-8c52-8032-814b-f1fd9d407286"
       ],
       "slug": "mdou-moctar-full-performance-live-on-kexp"
+    },
+    {
+      "id": "3e04129a-8c52-8029-9843-fe1c913224d5",
+      "title": "Mitch Murder | Copacetic",
+      "url": "https://youtu.be/gZOi6qgzrXc?si=rbvDT7YGQZ1suYXl",
+      "kind": "Official Video",
+      "released": "2026-08-26",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "2524129a-8c52-807e-bb76-f975d91eb871"
+      ],
+      "slug": "mitch-murder-copacetic"
+    },
+    {
+      "id": "3e04129a-8c52-80a7-8ef8-e64fd7460746",
+      "title": "Mitch Murder | Interceptor",
+      "url": "https://youtu.be/hugowO0sSrM?si=kaOKHsI74Pn47Nni",
+      "kind": "Official Video",
+      "released": "2014-07-30",
+      "year": 2014,
+      "origYear": null,
+      "artistIds": [
+        "2524129a-8c52-807e-bb76-f975d91eb871"
+      ],
+      "slug": "mitch-murder-interceptor"
     },
     {
       "id": "1064129a-8c52-80bd-a54f-fbba51cdc4ed",
@@ -83599,6 +83659,19 @@
         "3c54129a-8c52-806a-b956-db14a7f4a286"
       ],
       "slug": "the-specials-what-i-like-most-about-you-is-your-girlfriend"
+    },
+    {
+      "id": "3e04129a-8c52-8091-bd51-d5b9fbdd2de1",
+      "title": "Thee Sacred Souls | Weak for Your Love",
+      "url": "https://youtu.be/RfjT26dpuG0?si=h-eoNqG7zFPk5x18",
+      "kind": "Official Video",
+      "released": "2020-10-31",
+      "year": 2020,
+      "origYear": null,
+      "artistIds": [
+        "2434129a-8c52-80c9-8833-e0c8f133cde3"
+      ],
+      "slug": "thee-sacred-souls-weak-for-your-love"
     },
     {
       "id": "2754129a-8c52-8091-8e3e-d49513e3047b",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T22:36:59Z",
+  "generatedAt": "2026-09-19T11:04:43Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22366,6 +22366,21 @@
       "upc": "3663729031167",
       "tracks": 12,
       "releaseDate": "2017-09-22"
+    },
+    "3e04129a-8c52-80a6-b32d-c40dee403103": {
+      "source": "https://album.link/ds7bdshz5css6",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3ZZggnDcLmRknnJxyw6Kvs",
+        "pandora": "https://www.pandora.com/AL:53426476",
+        "amazonMusic": "https://music.amazon.com/albums/B0FQW29TJ9",
+        "tidal": "https://listen.tidal.com/album/460177628",
+        "yandex": "https://music.yandex.ru/album/39560789",
+        "bandcamp": "https://lautluise.bandcamp.com/album/unlimited-dreams-corporation",
+        "amazonStore": "https://amazon.com/dp/B0FQW29TJ9"
+      },
+      "upc": "4250101489969",
+      "tracks": 14,
+      "releaseDate": "2025-12-05"
     }
   }
 }

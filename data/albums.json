@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-19T01:12:54Z",
+  "generatedAt": "2026-09-19T11:04:30Z",
   "counts": {
-    "albums": 1399,
+    "albums": 1400,
     "artists": 1184,
     "labels": 743,
     "videos": 97
@@ -7278,6 +7278,37 @@
       ],
       "labels": [
         "Paul Institute"
+      ]
+    },
+    {
+      "id": "3e04129a-8c52-80a6-b32d-c40dee403103",
+      "slug": "brigade-unlimited-dreams-corporation",
+      "artist": "Brigade",
+      "album": "Unlimited Dreams Corporation",
+      "url": "https://album.link/ds7bdshz5css6",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abb2c3226-d51c-4cb8-816e-aacd1867f239%3Aa1074807137_10.jpg?table=block&id=3e04129a-8c52-80a6-b32d-c40dee403103&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Trip Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-12-05",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-804d-a48f-c699f3901480"
+      ],
+      "artists": [
+        "Brigade"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80be-9856-f7341f8d5188"
+      ],
+      "labels": [
+        "Laut & Luise"
       ]
     },
     {
@@ -40074,9 +40105,9 @@
     },
     {
       "id": "3d74129a-8c52-80f2-ba12-d60a6e49cd0a",
-      "slug": "karate-boogaloo",
-      "artist": "Karate Boogaloo |",
-      "album": "",
+      "slug": "karate-boogaloo-carn-the-boogers",
+      "artist": "Karate Boogaloo",
+      "album": "Carn the Boogers",
       "url": "https://album.link/5fztrfppksmg6",
       "cover": "https://antbrigade.notion.site/image/attachment%3A37a8c503-130b-43a0-bc75-44de3822e4a6%3Aa0522915360_10.jpg?table=block&id=3d74129a-8c52-80f2-ba12-d60a6e49cd0a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
@@ -47027,12 +47058,14 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e04129a-8c52-80a6-b32d-c40dee403103",
         "0e6365df-e315-4c88-acc7-076a85bce47f"
       ],
       "genres": [
+        "Downtempo",
+        "Trip Hop",
         "Electronic",
-        "Deep House",
-        "Downtempo"
+        "Deep House"
       ],
       "labelIds": [
         "2434129a-8c52-80be-9856-f7341f8d5188"
@@ -76076,13 +76109,14 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e04129a-8c52-80a6-b32d-c40dee403103",
         "803efcd0-ac64-4c38-92f7-9420b3381362",
         "0e6365df-e315-4c88-acc7-076a85bce47f",
         "3d34129a-8c52-807e-8d26-f6ac544c1627"
       ],
       "artistIds": [
-        "2434129a-8c52-8093-b38e-c7ec94393cf4",
-        "2434129a-8c52-804d-a48f-c699f3901480"
+        "2434129a-8c52-804d-a48f-c699f3901480",
+        "2434129a-8c52-8093-b38e-c7ec94393cf4"
       ]
     },
     {

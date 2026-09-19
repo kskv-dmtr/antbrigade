@@ -85,13 +85,15 @@ import ViewSwitch from './ViewSwitch.astro';
       из <option> самого <select>. */}
   <div class="filters-row__sorter" id="sort-sheet" role="dialog" aria-label="Sort by">
     <div class="filters-row__head">
+      {/* Крестика нет (19 сентября 2026, просьба владельца): закрывают
+          выбор пункта, нажатие на затемнение и Escape. */}
       <span class="filters-row__title">Sort by</span>
-      <button type="button" class="filters-row__close filters-row__sorter-close" aria-label="Close sorting">
-        <Icon name="x" class="filters-row__close-x" />
-      </button>
     </div>
     <div class="multi__list filters-row__sorter-list"></div>
   </div>
+  {/* Галочка для меню сортировки на широком экране — его пункты собирает
+      скрипт, а значок берём отсюда. */}
+  <template class="filters-row__check"><Icon name="check" class="filters-row__menu-check" /></template>
   {/* Переключатель вида на телефоне стоит в самой полосе, справа, а в шторке
       его нет: выбирают вид взглядом, и прятать его за кнопку незачем. */}
   <span class="filters-row__view"><ViewSwitch /></span>
@@ -159,7 +161,6 @@ import ViewSwitch from './ViewSwitch.astro';
       if (полоса.hasAttribute('data-sort')) сорт(false);
     });
     кнопкаСорт?.addEventListener('click', () => сорт(!полоса.hasAttribute('data-sort')));
-    сортер?.querySelector('.filters-row__close')?.addEventListener('click', () => сорт(false));
     полоса.querySelector('.filters-row__set .filters-row__close')?.addEventListener('click', () => {
       шторка(false);
       кнопка.focus();
@@ -344,6 +345,79 @@ import ViewSwitch from './ViewSwitch.astro';
     if (сортировка) полоса.insertBefore(сортировка, кнопкаСорт ?? кнопка);
     // Сортировки на странице нет — нет и значка.
     if (!сортировка && кнопкаСорт) кнопкаСорт.hidden = true;
+
+    /* Меню сортировки на широком экране — по образцу контекстного меню
+       Spotify (19 сентября 2026, просьба владельца): под подписью
+       выпадает панель в рамке, пункты строками, наведённый подсвечен,
+       у выбранного галочка справа; оси сортировки разделены чертой —
+       по дате, по артисту, по альбому, по имени, по числу релизов.
+       Системный список не нажимается (стилями) — открывал бы своё окно
+       поверх. Выбор кладём в <select> и шлём change, как шторка на
+       телефоне. Закрывают выбор, нажатие мимо и Escape. */
+    const коробка = сортировка?.querySelector('.select');
+    if (сортировка && коробка && поле) {
+      const меню = document.createElement('div');
+      меню.className = 'filters-row__menu';
+      меню.setAttribute('role', 'menu');
+      const галочка = полоса.querySelector('.filters-row__check');
+      const ось = (v) =>
+        /^(new|old)$/.test(v) ? 'date' : /^(az|za)$/.test(v) ? 'name' : v.replace(/-(az|za|asc)$/, '');
+
+      let прежняя = null;
+      for (const вариант of поле.options) {
+        const своя = ось(вариант.value);
+        if (прежняя !== null && своя !== прежняя) {
+          const черта = document.createElement('div');
+          черта.className = 'filters-row__menu-line';
+          меню.append(черта);
+        }
+        прежняя = своя;
+
+        const пункт = document.createElement('button');
+        пункт.type = 'button';
+        пункт.className = 'filters-row__menu-item';
+        пункт.setAttribute('role', 'menuitemradio');
+        пункт.dataset.value = вариант.value;
+        const имя = document.createElement('span');
+        имя.textContent = вариант.textContent;
+        пункт.append(имя);
+        if (галочка) пункт.append(галочка.content.cloneNode(true));
+        пункт.addEventListener('click', () => {
+          поле.value = вариант.value;
+          поле.dispatchEvent(new Event('change', { bubbles: true }));
+          раскрытьМеню(false);
+        });
+        меню.append(пункт);
+      }
+      сортировка.append(меню);
+
+      const отметитьМеню = () => {
+        for (const п of меню.querySelectorAll('.filters-row__menu-item')) {
+          const да = п.dataset.value === поле.value;
+          п.toggleAttribute('data-chosen', да);
+          п.setAttribute('aria-checked', String(да));
+        }
+      };
+      const раскрытьМеню = (on) => {
+        сортировка.toggleAttribute('data-menu', on);
+        if (on) отметитьМеню();
+      };
+      поле.addEventListener('change', отметитьМеню);
+      коробка.addEventListener('click', (e) => {
+        if (узкий.matches) return;
+        e.preventDefault();
+        раскрытьМеню(!сортировка.hasAttribute('data-menu'));
+      });
+      document.addEventListener('click', (e) => {
+        if (сортировка.hasAttribute('data-menu') && !сортировка.contains(e.target)) раскрытьМеню(false);
+      });
+      addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && сортировка.hasAttribute('data-menu')) раскрытьМеню(false);
+      });
+      document.addEventListener('sheet:open', () => раскрытьМеню(false));
+      document.addEventListener('drawer:open', () => раскрытьМеню(false));
+      узкий.addEventListener('change', () => раскрытьМеню(false));
+    }
 
     набор.addEventListener('change', отметить);
     addEventListener('pageshow', отметить);

@@ -5345,6 +5345,72 @@ html:not([data-js]) .more { display: none; }
   }
 }
 
+/* ------------------------------------------- меню сортировки на десктопе
+
+   По образцу контекстного меню Spotify (19 сентября 2026, просьба
+   владельца): панель в рамке под подписью сортировки, выровненная по её
+   правому краю, с мягкой тенью; пункты строками, наведённый подсвечен
+   фоном, у выбранного — основной цвет и галочка справа; оси сортировки
+   разделены чертой. Скругления и тёмного фона, как у образца, нет — на
+   сайте ни того ни другого. Пункты собирает скрипт FilterBar. */
+.filters-row__menu,
+.filters-row__check { display: none; }
+
+@media (min-width: 641px) {
+  [data-js] .filters-row > .filter { position: relative; }
+  [data-js] .filters-row > .filter .select { cursor: pointer; }
+  [data-js] .filters-row > .filter .select select { pointer-events: none; }
+
+  [data-js] .filters-row > .filter[data-menu] .filters-row__menu {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    right: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+    padding: 0.25rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    box-shadow: 0 0.5rem 1.5rem color-mix(in srgb, var(--fg) 12%, transparent);
+  }
+  .filters-row__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font-family: var(--mono);
+    font-size: max(13px, 0.8125rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+    color: var(--fg-muted);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .filters-row__menu-item:hover {
+    color: var(--fg);
+    background: color-mix(in srgb, var(--fg) 6%, transparent);
+  }
+  .filters-row__menu-item[data-chosen] { color: var(--fg); }
+  .filters-row__menu-check {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    visibility: hidden;
+  }
+  .filters-row__menu-item[data-chosen] .filters-row__menu-check { visibility: visible; }
+  .filters-row__menu-line {
+    height: 1px;
+    margin: 0.25rem 0;
+    background: var(--line-soft);
+  }
+}
+
 /* ------------------------------------ сортировка и отборы на телефоне
 
    С вечера 19 сентября 2026 (просьба владельца) на телефоне справа в полосе

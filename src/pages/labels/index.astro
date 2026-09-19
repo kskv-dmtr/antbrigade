@@ -78,6 +78,8 @@ let выведено = 0;
         <option value="az">A → Z</option>
         <option value="za">Z → A</option>
         <option value="releases">Most releases</option>
+        {/* Обратный порядок — с 19 сентября 2026, просьба владельца. */}
+        <option value="releases-asc">Fewest releases</option>
       </Select>
     </FilterCell>
 
@@ -185,6 +187,10 @@ let выведено = 0;
     const by = sortEl.value;
     if (by === 'az') current = initialOrder;
     else if (by === 'za') current = items.slice().reverse();
+    else if (by === 'releases-asc') current = items.slice().sort(
+      (a, b) => Number(a.dataset.count) - Number(b.dataset.count)
+             || a.dataset.name.localeCompare(b.dataset.name)
+    );
     else current = items.slice().sort(
       (a, b) => Number(b.dataset.count) - Number(a.dataset.count)
              || a.dataset.name.localeCompare(b.dataset.name)

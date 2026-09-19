@@ -30,8 +30,8 @@ import { artistLine } from '../lib/db.js';
 
 const { album } = Astro.props;
 
-/* Года в строке нет — с 19 сентября 2026 (просьба владельца): в списке
-   остались исполнитель, название и тип, год — на плитке и на странице релиза.
+/* Год стоит через точку после названия (19 сентября 2026, просьба
+   владельца; днём того же дня отдельной справкой справа его убрали).
    Типов бывает несколько («Album», «Collaboration») — каждый в своей рамке. */
 ---
 <a class="row row--release" href={`/albums/${album.slug}`}>
@@ -42,6 +42,8 @@ const { album } = Astro.props;
     <span class="row__meta row__types">{album.types.map((t) => <span class="row__type">{t}</span>)}</span>
   </span>
   <span class="row__line">
-    <span class="row__title">{album.album}</span>
+    {/* Год — через точку после названия (19 сентября 2026, просьба
+        владельца), приглушённым. */}
+    <span class="row__title">{album.album}{album.year && <span class="row__year"> · {album.year}</span>}</span>
   </span>
 </a>

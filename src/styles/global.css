@@ -6272,3 +6272,16 @@ html:not([data-js]) .more { display: none; }
   grid-row: 1 / span 2;
   align-self: center;
 }
+
+/* Год в строке — через точку после названия (19 сентября 2026, просьба
+   владельца): тем же кеглем, но обычным весом и приглушённым, чтобы
+   название оставалось главным. На залитой строке — цветом строки. */
+.row__year {
+  font-weight: 400;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+@media (hover: hover) {
+  .row:hover .row__year { color: inherit; }
+}
+.row:active .row__year { color: inherit; }

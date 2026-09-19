@@ -35,7 +35,7 @@ export function GET() {
   }
 
   for (const v of videos) {
-    записи.push(['v', videoTitle(v), `/videos/${v.slug}`, videoArtists(v), String(v.year ?? '')]);
+    записи.push(['v', videoTitle(v), `/video/${v.slug}`, videoArtists(v), String(v.year ?? '')]);
   }
 
   for (const l of labels) {

@@ -9,7 +9,11 @@
     { "source": "/releases", "destination": "/music", "permanent": true },
     { "source": "/releases.html", "destination": "/music", "permanent": true },
     { "source": "/featured", "destination": "/playlists", "permanent": true },
-    { "source": "/featured.html", "destination": "/playlists", "permanent": true }
+    { "source": "/featured.html", "destination": "/playlists", "permanent": true },
+    { "source": "/videos", "destination": "/video", "permanent": true },
+    { "source": "/videos.html", "destination": "/video", "permanent": true },
+    { "source": "/videos/:slug([^./]+).html", "destination": "/video/:slug", "permanent": true },
+    { "source": "/videos/:slug([^./]+)", "destination": "/video/:slug", "permanent": true }
   ],
   "headers": [
     {

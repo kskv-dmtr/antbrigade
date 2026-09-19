@@ -30,7 +30,7 @@ const clips  = videosOf(artist.videoIds);
    одинаково.
 
    Вид ролика при этом никуда не делся: он стоит подписью на каждой плитке и
-   отдельным отбором на /videos. */
+   отдельным отбором на /video. */
 const clipsSorted = clips.slice()
   .sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
 

@@ -3,7 +3,7 @@
 
    Тот же класс .row и та же раскладка, что у релизов: список в два столбца,
    строка в два ряда — исполнитель и вид ролика в первом, название и год во
-   втором. Иначе названия на /videos начинались бы не там, где на /music, и
+   втором. Иначе названия на /video начинались бы не там, где на /music, и
    вертикаль, по которой их читают, съезжала бы при переходе со списка на
    список.
 
@@ -20,7 +20,7 @@ const { video } = Astro.props;
    от неё нужен порядок, а не число. Так же устроен и список релизов. */
 const год = video.released ? video.released.slice(0, 4) : '—';
 ---
-<a class="row row--release row--video" href={`/videos/${video.slug}`}>
+<a class="row row--release row--video" href={`/video/${video.slug}`}>
   <span class="row__line">
     <span class="row__artist">{videoArtists(video)}</span>
     <span class="row__meta">{video.kind}</span>

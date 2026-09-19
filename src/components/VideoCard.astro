@@ -34,7 +34,7 @@ const meta = [video.kind, video.year].filter(Boolean).join(' · ');
   {/* Ведёт на страницу клипа, а не сразу на YouTube: у клипа есть своя
       страница, как у релиза, и подпись по наведению поэтому «Open» —
       такая же, как на всех плитках сайта. */}
-  <a class="tile__link" href={`/videos/${video.slug}`}>
+  <a class="tile__link" href={`/video/${video.slug}`}>
     <div class="tile__art">
       {src && (
         <img

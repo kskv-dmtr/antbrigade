@@ -5324,6 +5324,124 @@ html:not([data-js]) .more { display: none; }
   }
 }
 
+/* ------------------------------------ сортировка и отборы на телефоне
+
+   С вечера 19 сентября 2026 (просьба владельца) на телефоне справа в полосе
+   два значка: сортировка (arrows-down-up) и отборы (sliders-horizontal),
+   без слов; за значком отборов — счётчик «[N]». Сортировка открывает снизу
+   шторку «Sort by», отборы — экран целиком, как меню и поиск. На широком
+   экране значков и шторки сортировки нет: там сортировка — списком в
+   полосе, отборы — словом «Filters» и панелью справа. */
+.filters-row__sort,
+.filters-row__sorter,
+.filters-row__icon,
+.filters-row__count--icon { display: none; }
+
+/* Открытая шторка или экран живут внутри полосы, а у липкой полосы свой
+   слой (z-index 10) — ниже шапки. На время открытой полосу поднимаем. */
+[data-js] .filters-row[data-sheet],
+[data-js] .filters-row[data-sort] { z-index: 60; }
+
+@media (max-width: 640px) {
+  /* Список сортировки в полосе прячем — вместо него значок. Просвета между
+     частями полосы нет: значки разведены своими полями, цель нажатия у
+     каждого — 44 в ширину и вся высота полосы. */
+  [data-js] .filters-row { column-gap: 0; }
+  [data-js] .filters-row > .filter { display: none; }
+
+  [data-js] .filters-row__sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--filters-h) - 1px);
+    margin-left: auto;
+    padding: 0 0.75rem;
+    color: var(--fg-muted);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  [data-js] .filters-row__sort[hidden] { display: none; }
+  [data-js] .filters-row__toggle { padding: 0 var(--pad) 0 0.75rem; }
+  [data-js] .filters-row__sort:not([hidden]) + .filters-row__toggle { margin-left: 0; }
+  [data-js] .filters-row__toggle .filters-row__label { display: none; }
+  [data-js] .filters-row__icon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  [data-js] .filters-row__count--icon {
+    display: inline;
+    margin-left: 0.25rem;
+    white-space: pre;
+  }
+  [data-js] .filters-row__count--icon:empty { display: none; }
+
+  /* Открытое — основным цветом, как выбранный вид. */
+  [data-js] .filters-row[data-sort] .filters-row__sort,
+  [data-js] .filters-row[data-sheet] .filters-row__toggle { color: var(--fg); }
+  [data-js] .filters-row__sort:active,
+  [data-js] .filters-row__toggle:active { color: var(--fg); }
+
+  /* Шторка «Sort by» — снизу, ходом шапки, как стояла шторка отборов до
+     этого вечера: заголовок с крестиком в рамке, пункты строками. */
+  [data-js] .filters-row__sorter {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    max-height: 85dvh;
+    padding: 0 var(--pad) env(safe-area-inset-bottom);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s linear 0.32s;
+  }
+  [data-js] .filters-row[data-sort] .filters-row__sorter {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), visibility 0s;
+  }
+  [data-js] .filters-row__sorter .multi__list { max-height: none; overflow: visible; }
+  [data-js] .filters-row__sorter .multi__item {
+    padding: 0.8125rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-weight: 400;
+    color: var(--fg-muted);
+  }
+  [data-js] .filters-row__sorter .multi__item:last-child { border-bottom: 0; }
+  [data-js] .filters-row__sorter .multi__item:has(input:checked) { color: var(--fg); }
+  [data-js] .filters-row__sorter .multi__item:active { background: transparent; color: var(--fg); }
+
+  [data-js] .filters-row[data-sort] .filters-row__scrim {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  [data-js]:has(.filters-row[data-sort]) { overflow: hidden; }
+
+  /* Отборы — на весь экран, как меню и поиск: без хода и без затемнения,
+     поверх шапки. Верх ростом с шапку — заголовок «Filters» и крестик в
+     рамке стоят там, где у поиска поле и крестик. Apply — у низа экрана. */
+  [data-js] .filters-row__set {
+    top: 0;
+    max-height: none;
+    border-top: 0;
+    transform: none;
+    transition: none;
+  }
+  [data-js] .filters-row[data-sheet] .filters-row__set { transition: none; }
+  [data-js] .filters-row[data-sheet] .filters-row__scrim { display: none; }
+  [data-js] .filters-row__set .filters-row__head { height: var(--head-exact, var(--head-h)); }
+  [data-js] .filters-row__set .filters-row__foot { margin-top: auto; }
+}
+
 /* Панель поиска на широком экране — по косой черте (19 сентября 2026,
    просьба владельца). Зеркало панели отборов: выезжает справа налево, во
    всю высоту экрана, шириной ровно в столбец сетки — левая граница ложится

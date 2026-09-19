@@ -29,6 +29,18 @@ import ViewSwitch from './ViewSwitch.astro';
       ширинах (18 сентября 2026, просьба владельца). Пишет его скрипт ниже. */}
   <span class="filters-row__name">Filters<span class="filters-row__count"></span></span>
 
+  {/* Сортировка на телефоне — значком рядом с отборами (19 сентября 2026,
+      просьба владельца): открывает снизу шторку «Sort by». На широком
+      экране кнопки нет — там в полосе стоит сам список сортировки. */}
+  <button
+    type="button"
+    class="filters-row__sort"
+    aria-label="Sort by"
+    aria-expanded="false"
+    aria-controls="sort-sheet"
+  >
+    <Icon name="arrows-down-up" class="filters-row__icon" />
+  </button>
   <button
     type="button"
     class="filters-row__toggle"
@@ -37,6 +49,9 @@ import ViewSwitch from './ViewSwitch.astro';
   >
     {/* Подпись без треугольника, набрана как Grid / List справа (18 сентября
         2026, просьба владельца): линия под словом — у открытой шторки. */}
+    {/* На телефоне вместо слова — значок, счётчик за ним (19 сентября 2026). */}
+    <Icon name="sliders-horizontal" class="filters-row__icon" />
+    <span class="filters-row__count filters-row__count--icon"></span>
     <span class="filters-row__label">Filters<span class="filters-row__count"></span></span>
     {/* Подсказка клавиши — как «/» в поле поиска (19 сентября 2026).
         На телефоне её нет: клавиатуры там нет. */}
@@ -65,6 +80,18 @@ import ViewSwitch from './ViewSwitch.astro';
     </div>
   </div>
 
+  {/* Шторка сортировки — только на телефоне: снизу, с заголовком «Sort by»,
+      пункты строками, как раскрытый список отборов. Пункты собирает скрипт
+      из <option> самого <select>. */}
+  <div class="filters-row__sorter" id="sort-sheet" role="dialog" aria-label="Sort by">
+    <div class="filters-row__head">
+      <span class="filters-row__title">Sort by</span>
+      <button type="button" class="filters-row__close filters-row__sorter-close" aria-label="Close sorting">
+        <Icon name="x" class="filters-row__close-x" />
+      </button>
+    </div>
+    <div class="multi__list filters-row__sorter-list"></div>
+  </div>
   {/* Переключатель вида на телефоне стоит в самой полосе, справа, а в шторке
       его нет: выбирают вид взглядом, и прятать его за кнопку незачем. */}
   <span class="filters-row__view"><ViewSwitch /></span>
@@ -88,8 +115,22 @@ import ViewSwitch from './ViewSwitch.astro';
        ложилась поверх первой, а полоса отбора, поднятая над шапкой, оставалась
        светлой среди затемнённого — и линия между ней и полосой раздела
        пропадала. Поиск шлёт drawer:open, отборы — sheet:open. */
+    const кнопкаСорт = полоса.querySelector('.filters-row__sort');
+    const сортер = полоса.querySelector('.filters-row__sorter');
+
+    /* Шторка сортировки на телефоне — снизу, как прежняя шторка отборов.
+       Открытыми вместе с отборами и поиском не бывает. */
+    const сорт = (on) => {
+      if (!кнопкаСорт) return;
+      if (on) document.dispatchEvent(new CustomEvent('sheet:open'));
+      if (on && полоса.hasAttribute('data-sheet')) шторка(false);
+      полоса.toggleAttribute('data-sort', on);
+      кнопкаСорт.setAttribute('aria-expanded', String(on));
+    };
+
     const шторка = (on) => {
       if (on) document.dispatchEvent(new CustomEvent('sheet:open'));
+      if (on && полоса.hasAttribute('data-sort')) сорт(false);
       полоса.toggleAttribute('data-sheet', on);
       кнопка.setAttribute('aria-expanded', String(on));
       if (!on) {
@@ -113,12 +154,17 @@ import ViewSwitch from './ViewSwitch.astro';
       e.preventDefault();
       шторка(!полоса.hasAttribute('data-sheet'));
     });
-    document.addEventListener('drawer:open', () => { if (полоса.hasAttribute('data-sheet')) шторка(false); });
-    полоса.querySelector('.filters-row__close')?.addEventListener('click', () => {
+    document.addEventListener('drawer:open', () => {
+      if (полоса.hasAttribute('data-sheet')) шторка(false);
+      if (полоса.hasAttribute('data-sort')) сорт(false);
+    });
+    кнопкаСорт?.addEventListener('click', () => сорт(!полоса.hasAttribute('data-sort')));
+    сортер?.querySelector('.filters-row__close')?.addEventListener('click', () => сорт(false));
+    полоса.querySelector('.filters-row__set .filters-row__close')?.addEventListener('click', () => {
       шторка(false);
       кнопка.focus();
     });
-    полоса.querySelector('.filters-row__scrim')?.addEventListener('click', () => шторка(false));
+    полоса.querySelector('.filters-row__scrim')?.addEventListener('click', () => { шторка(false); сорт(false); });
 
     полоса.querySelector('.filters-row__apply')?.addEventListener('click', () => {
       шторка(false);
@@ -127,6 +173,7 @@ import ViewSwitch from './ViewSwitch.astro';
     });
 
     addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && полоса.hasAttribute('data-sort')) { сорт(false); return; }
       if (e.key !== 'Escape' || !полоса.hasAttribute('data-sheet')) return;
       // Открытый список внутри закрывается своим обработчиком — сначала он.
       if (полоса.querySelector('details.multi[open]')) return;
@@ -136,7 +183,7 @@ import ViewSwitch from './ViewSwitch.astro';
 
     // На широком экране шторки нет: забытое «открыто» держало бы страницу
     // без прокрутки.
-    узкий.addEventListener('change', () => шторка(false));
+    узкий.addEventListener('change', () => { шторка(false); сорт(false); });
 
     const набор = полоса.querySelector('.filters-row__set');
     const списки = [...набор.querySelectorAll('details.multi')];
@@ -170,22 +217,15 @@ import ViewSwitch from './ViewSwitch.astro';
       открытый.style.overflowY = 'auto';
     }
 
-    /* Сортировка в шторке — раскрывающимся списком, как тип, жанр и год
-       (18 сентября 2026, просьба владельца). Системный <select> открывал
-       на телефоне выбор во весь экран. Пункты собираем из его же <option>,
-       а выбор кладём обратно в него и шлём change: страница слушает
-       сортировку по-прежнему, у <select>. Сам <select> в шторке не
-       нажимается — стилями. */
-    for (const коробка of набор.querySelectorAll('.filter > .select')) {
-      const поле = коробка.querySelector('select');
-      if (!поле) continue;
-
-      const панель = document.createElement('div');
-      панель.className = 'multi__panel filters-row__pick';
-      панель.hidden = true;
-      const лист = document.createElement('div');
-      лист.className = 'multi__list';
-
+    /* Сортировка на телефоне — шторкой снизу «Sort by» (19 сентября 2026,
+       просьба владельца; с 18-го была строкой в шторке отборов). Системный
+       <select> открывал на телефоне выбор во весь экран, поэтому пункты
+       собираем из его же <option>, а выбор кладём обратно в него и шлём
+       change: страница слушает сортировку по-прежнему, у <select>. Выбрали —
+       шторка закрывается: сортировка срабатывает сразу. */
+    const поле = полоса.querySelector('.filter > .select select');
+    const лист = сортер?.querySelector('.filters-row__sorter-list');
+    if (поле && лист) {
       for (const вариант of поле.options) {
         const пункт = document.createElement('label');
         пункт.className = 'multi__item';
@@ -203,25 +243,12 @@ import ViewSwitch from './ViewSwitch.astro';
         радио.addEventListener('change', () => {
           поле.value = радио.value;
           поле.dispatchEvent(new Event('change', { bubbles: true }));
-          раскрыть(false);
+          сорт(false);
         });
       }
 
-      панель.append(лист);
-      коробка.after(панель);
-
-      const раскрыть = (on) => {
-        панель.hidden = !on;
-        коробка.toggleAttribute('data-open', on);
-        if (on) for (const с of списки) с.open = false;
-        уместить();
-      };
-      коробка._раскрыть = раскрыть;
-
-      // Раскрыли тип, жанр или год — сортировка сворачивается.
-      for (const с of списки) с.addEventListener('toggle', () => { if (с.open) раскрыть(false); });
-
-      // Выбор, сделанный иначе (возврат назад, сброс), — отметку за ним.
+      // Выбор, сделанный иначе (список на широком экране, возврат назад), —
+      // отметку за ним.
       поле.addEventListener('change', () => {
         for (const р of лист.querySelectorAll('input')) р.checked = р.value === поле.value;
       });
@@ -307,33 +334,16 @@ import ViewSwitch from './ViewSwitch.astro';
       уместить();
     };
 
-    /* Сортировка на широком экране — в самой полосе, а в шторке только
-       отборы (19 сентября 2026, просьба владельца). С того же вечера она
-       стоит справа, перед кнопкой «Filters», без подписи «Sort by»; Grid /
-       List — слева. На телефоне сортировка остаётся в шторке. Узел один —
-       страница слушает этот самый <select>, — поэтому не дублируем, а
-       переставляем: в полосу перед кнопкой и обратно в шторку на прежнее
-       место, перед скрытой строкой вида. */
-    const сортировка = [...набор.querySelectorAll('.filter')].find((с) => с.querySelector(':scope > .select'));
-    const вид = полоса.querySelector('.filters-row__view');
-
-    const разложить = () => {
-      if (!сортировка || !вид) return;
-      if (узкий.matches) {
-        if (сортировка.parentElement === набор) return;
-        const место = набор.querySelector('.filter:has(.view-pick)') ?? набор.querySelector('.filters-row__foot');
-        набор.insertBefore(сортировка, место);
-        сортировка.querySelector('.select')?._раскрыть?.(false);
-      } else if (сортировка.parentElement !== полоса) {
-        сортировка.querySelector('.select')?._раскрыть?.(false);
-        полоса.insertBefore(сортировка, кнопка);
-      }
-    };
-    разложить();
-    узкий.addEventListener('change', разложить);
-    // И по смене размера окна — страховка: сравнение внутри делает лишний
-    // вызов бесплатным.
-    addEventListener('resize', разложить, { passive: true });
+    /* Сортировка — в самой полосе, а в шторке только отборы (19 сентября
+       2026, просьба владельца). На широком экране — списком перед «Filters»,
+       без подписи «Sort by»; на телефоне список спрятан, вместо него значок,
+       открывающий шторку «Sort by». Узел один — страница слушает этот самый
+       <select>, — поэтому переставляем его из шторки в полосу, перед
+       кнопками. */
+    const сортировка = поле?.closest('.filter');
+    if (сортировка) полоса.insertBefore(сортировка, кнопкаСорт ?? кнопка);
+    // Сортировки на странице нет — нет и значка.
+    if (!сортировка && кнопкаСорт) кнопкаСорт.hidden = true;
 
     набор.addEventListener('change', отметить);
     addEventListener('pageshow', отметить);

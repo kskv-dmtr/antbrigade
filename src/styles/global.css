@@ -5503,10 +5503,26 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-muted);
   }
   [data-js] .filters-row__sorter .multi__item:last-child { border-bottom: 0; }
-  /* Кружок выбора — у правого края строки, название слева (19 сентября
-     2026, просьба владельца). */
+  /* Выбор отмечен галочкой у правого края строки, как в меню сортировки на
+     широком экране (19 сентября 2026, просьба владельца; днём здесь стоял
+     кружок). Сам кружок спрятан, но остаётся в строке: по нему работает
+     выбор и его читает экранный диктор. */
   [data-js] .filters-row__sorter .multi__item { justify-content: space-between; }
-  [data-js] .filters-row__sorter .multi__item input { order: 1; margin: 0; }
+  [data-js] .filters-row__sorter .multi__item input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  [data-js] .filters-row__sorter .filters-row__menu-check {
+    display: block;
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    visibility: hidden;
+  }
+  [data-js] .filters-row__sorter .multi__item:has(input:checked) .filters-row__menu-check { visibility: visible; }
   [data-js] .filters-row__sorter .multi__item:has(input:checked) { color: var(--fg); }
   [data-js] .filters-row__sorter .multi__item:active { background: transparent; color: var(--fg); }
 

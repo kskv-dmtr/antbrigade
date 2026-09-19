@@ -239,6 +239,10 @@ import ViewSwitch from './ViewSwitch.astro';
         имя.className = 'multi__name';
         имя.textContent = вариант.textContent;
         пункт.append(радио, имя);
+        // Отметка — галочкой справа, как в меню на широком экране (19 сентября
+        // 2026, просьба владельца); сам кружок спрятан, но работает.
+        const галочкаСорт = полоса.querySelector('.filters-row__check');
+        if (галочкаСорт) пункт.append(галочкаСорт.content.cloneNode(true));
         лист.append(пункт);
 
         радио.addEventListener('change', () => {

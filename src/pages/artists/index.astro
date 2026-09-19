@@ -9,6 +9,14 @@ import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
 import { artists, plural } from '../../lib/db.js';
 
+/* Счёт под именем: релизы и клипы через точку, нулевое не пишем — у
+   исполнителя с одними клипами стоит «3 videos», а не «0 releases · 3
+   videos» (20 сентября 2026, просьба владельца). */
+const счётИсполнителя = (a) => [
+  a.albumIds?.length ? plural(a.albumIds.length, 'release', 'releases') : '',
+  a.videoIds?.length ? plural(a.videoIds.length, 'video', 'videos') : ''
+].filter(Boolean).join(' · ');
+
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {
   const ch = name.trim()[0]?.toUpperCase() ?? '#';
@@ -122,8 +130,7 @@ let выведено = 0;
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/artists/${a.slug}`}>
                 <span class="row__line"><span class="row__title">{a.name}</span></span>
-                <span class="row__line"><span class="row__sub">{plural(a.albumIds.length, 'release', 'releases') +
-                  (a.videoIds?.length ? ' · ' + plural(a.videoIds.length, 'video', 'videos') : '')}</span></span>
+                <span class="row__line"><span class="row__sub">{счётИсполнителя(a)}</span></span>
               </a>
             </div>
 
@@ -135,8 +142,7 @@ let выведено = 0;
             <BriefCard
               href={`/artists/${a.slug}`}
               name={a.name}
-              left={plural(a.albumIds.length, 'release', 'releases') +
-                (a.videoIds?.length ? ' · ' + plural(a.videoIds.length, 'video', 'videos') : '')}
+              left={счётИсполнителя(a)}
             />
           </li>
         ))}

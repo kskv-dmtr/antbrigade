@@ -30,10 +30,9 @@ import { artistLine } from '../lib/db.js';
 
 const { album } = Astro.props;
 
-/* Типов бывает несколько («Album», «Collaboration») — каждый в своей рамке
-   (19 сентября 2026; до того через точку). Год без скобок: в скобки взяты счётчики — числа релизов у артиста,
-   лейбла и жанра, — а год не счётчик. */
-const год = album.year ?? '—';
+/* Года в строке нет — с 19 сентября 2026 (просьба владельца): в списке
+   остались исполнитель, название и тип, год — на плитке и на странице релиза.
+   Типов бывает несколько («Album», «Collaboration») — каждый в своей рамке. */
 ---
 <a class="row row--release" href={`/albums/${album.slug}`}>
   <span class="row__line">
@@ -44,6 +43,5 @@ const год = album.year ?? '—';
   </span>
   <span class="row__line">
     <span class="row__title">{album.album}</span>
-    <span class="row__meta">{год}</span>
   </span>
 </a>

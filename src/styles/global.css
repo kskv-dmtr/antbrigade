@@ -1272,12 +1272,6 @@ a { color: inherit; text-decoration: none; }
 .row:active .row__meta,
 .row:active .row__num,
 .row:active .row__val { color: var(--ink-muted); }
-/* Рамка типа на вывороте — приглушённым светлым, как подпись в ней: линия
-   цвета линий на тёмном горела бы ярче самого слова. */
-@media (hover: hover) {
-  .row:hover .row__type { border-color: var(--ink-muted); }
-}
-.row:active .row__type { border-color: var(--ink-muted); }
 
 /* Исполнитель текстовым шрифтом — как и на плитке. Цвет не задан: строка
    наследует его от .row, то есть ровно тот же, что у названия, — и вместе
@@ -5997,6 +5991,18 @@ html:not([data-js]) .more { display: none; }
     color: color-mix(in srgb, var(--hot-fg) 70%, var(--hot));
   }
 }
+
+/* Тип в рамке на залитой строке — тем же цветом, что имя и название, и
+   рамка им же (19 сентября 2026, просьба владельца): приглушённый, как год
+   и счётчики, он на заливке терялся. */
+@media (hover: hover) {
+  .row:hover .row__types,
+  .row[data-hot]:hover .row__types { color: inherit; }
+  .row:hover .row__type { border-color: currentColor; }
+}
+.row:active .row__types,
+.row[data-hot]:active .row__types { color: inherit; }
+.row:active .row__type { border-color: currentColor; }
 
 /* Обложка: не негатив, а дуотон. Цвет лежит фоном, картинка накладывается
    по светлоте — сохраняется вся её светотень, но в один тон. isolation

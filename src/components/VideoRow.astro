@@ -16,9 +16,8 @@ import { videoTitle, videoArtists } from '../lib/db.js';
 
 const { video } = Astro.props;
 
-/* Только год: полная дата стоит на самой странице клипа, а в строке индекса
-   от неё нужен порядок, а не число. Так же устроен и список релизов. */
-const год = video.released ? video.released.slice(0, 4) : '—';
+/* Года в строке нет — с 19 сентября 2026 (просьба владельца), как у
+   релизов: дата стоит на самой странице клипа. */
 ---
 <a class="row row--release row--video" href={`/video/${video.slug}`}>
   <span class="row__line">
@@ -28,6 +27,5 @@ const год = video.released ? video.released.slice(0, 4) : '—';
   </span>
   <span class="row__line">
     <span class="row__title">{videoTitle(video)}</span>
-    <span class="row__meta">{год}</span>
   </span>
 </a>

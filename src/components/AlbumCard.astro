@@ -14,6 +14,11 @@ import { coverSrc, coverSrcSet, artistLine } from '../lib/db.js';
 // всё лишнее (data-* для фильтров) пробрасывается на обёртку как есть
 const { album, showArtist = true, as: Wrapper = 'li', class: extra, ...rest } = Astro.props;
 const meta = [album.types.join(' · '), album.year].filter(Boolean).join(' · ');
+
+/* Под обложкой сперва название, под ним исполнитель и год через точку —
+   моноширинным (19 сентября 2026, просьба владельца; до того исполнитель
+   стоял над названием). На странице исполнителя его имя не повторяем. */
+const sub = [showArtist && artistLine(album), album.year].filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', extra]} {...rest}>
   <a class="tile__link" href={`/music/${album.slug}`}>
@@ -34,7 +39,7 @@ const meta = [album.types.join(' · '), album.year].filter(Boolean).join(' · ')
         <span class="tile__meta">{meta}</span>
       </div>
     </div>
-    {showArtist && <span class="tile__artist">{artistLine(album)}</span>}
     <span class="tile__title">{album.album}</span>
+    {sub && <span class="tile__sub">{sub}</span>}
   </a>
 </Wrapper>

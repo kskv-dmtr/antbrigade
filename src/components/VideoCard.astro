@@ -29,6 +29,11 @@ const src = thumbSrc(video, 480);
    не идёт: там же, где у релиза, показывается год того, что лежит в
    каталоге. */
 const meta = [video.kind, video.year].filter(Boolean).join(' · ');
+
+/* Порядок как у релиза: название, под ним исполнитель и год через точку
+   (19 сентября 2026). */
+const год = video.year ?? video.released?.slice(0, 4);
+const sub = [showArtist && videoArtists(video), год].filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', 'tile--video', extra]}>
   {/* Ведёт на страницу клипа, а не сразу на YouTube: у клипа есть своя
@@ -52,7 +57,7 @@ const meta = [video.kind, video.year].filter(Boolean).join(' · ');
         <span class="tile__meta">{meta}</span>
       </div>
     </div>
-    {showArtist && <span class="tile__artist">{videoArtists(video)}</span>}
     <span class="tile__title">{videoTitle(video)}</span>
+    {sub && <span class="tile__sub">{sub}</span>}
   </a>
 </Wrapper>

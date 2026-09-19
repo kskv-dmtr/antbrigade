@@ -129,8 +129,8 @@ const PAGE = 48;
         <option value="old">Oldest first</option>
         <option value="artist-az">Artists A—Z</option>
         <option value="artist-za">Artists Z—A</option>
-        <option value="album-az">Albums A—Z</option>
-        <option value="album-za">Albums Z—A</option>
+        <option value="title-az">Titles A—Z</option>
+        <option value="title-za">Titles Z—A</option>
       </Select>
     </FilterCell>
 
@@ -323,8 +323,8 @@ const PAGE = 48;
       current = cards.slice().sort((a, b) => {
         if (by === 'artist-az') return a.dataset.artist.localeCompare(b.dataset.artist);
         if (by === 'artist-za') return b.dataset.artist.localeCompare(a.dataset.artist);
-        if (by === 'album-az')  return a.dataset.album.localeCompare(b.dataset.album);
-        if (by === 'album-za')  return b.dataset.album.localeCompare(a.dataset.album);
+        if (by === 'title-az')  return a.dataset.album.localeCompare(b.dataset.album);
+        if (by === 'title-za')  return b.dataset.album.localeCompare(a.dataset.album);
         const da = a.dataset.released, db = b.dataset.released;
         // релизы без даты всегда в конце
         if (!da && !db) return 0;

@@ -6,7 +6,13 @@
 
    Строка записи — массив, а не объект: имена ключей повторились бы на каждой
    из трёх с половиной тысяч записей и заняли бы больше самих значений.
-   Порядок такой: тип, имя, адрес, подпись, пометка справа.
+   Порядок такой: тип, имя, адрес, подпись, пометка справа, миниатюра.
+
+   Миниатюра — с 19 сентября 2026 (находки набраны по образцу Spotify):
+   «c» и id обложки либо «v» и id ролика, полный адрес собирает скрипт
+   поля — так строка короче вдвое. У релиза — его обложка, у клипа — кадр,
+   у исполнителя, лейбла и жанра — обложка самого свежего их релиза, у
+   исполнителя без релизов — кадр клипа. Нет скачанной картинки — пусто.
 
    Тип одной буквой: r — релиз, v — клип, a — исполнитель, l — лейбл,
    g — жанр. Развернёт его в слово тот же скрипт, что рисует находки.
@@ -17,8 +23,37 @@
 
 import {
   albums, artists, labels, genres, videos,
-  artistLine, videoTitle, videoArtists, countryName
+  artistLine, videoTitle, videoArtists, countryName,
+  albumById, videoById, coverSrc, thumbSrc
 } from '../lib/db.js';
+
+const обложка = (al) => {
+  const src = coverSrc(al, 400);
+  const m = src && src.match(/^\/covers\/(.+)-400\.webp$/);
+  return m ? 'c' + m[1] : '';
+};
+const кадр = (v) => {
+  const src = thumbSrc(v, 480);
+  const m = src && src.match(/^\/videos\/(.+)-480\.webp$/);
+  return m ? 'v' + m[1] : '';
+};
+// Самый свежий релиз из списка — по дате выхода, затем по году.
+const свежий = (ids = []) => {
+  let лучший = null;
+  for (const id of ids) {
+    const al = albumById.get(id);
+    if (!al) continue;
+    const ключ = al.released ?? String(al.year ?? '');
+    if (!лучший || ключ > (лучший.released ?? String(лучший.year ?? ''))) лучший = al;
+  }
+  return лучший;
+};
+const миниатюра = (albumIds, videoIds = []) => {
+  const al = свежий(albumIds);
+  if (al) { const c = обложка(al); if (c) return c; }
+  for (const id of videoIds) { const k = кадр(videoById.get(id)); if (k) return k; }
+  return '';
+};
 
 export function GET() {
   const записи = [];
@@ -27,24 +62,26 @@ export function GET() {
      чаще то, что искали, чем одноимённый релиз. */
   for (const a of artists) {
     записи.push(['a', a.name, `/artists/${a.slug}`,
-      a.country ? countryName(a.country) : '', String(a.albumIds?.length ?? 0)]);
+      a.country ? countryName(a.country) : '', String(a.albumIds?.length ?? 0),
+      миниатюра(a.albumIds, a.videoIds)]);
   }
 
   for (const al of albums) {
-    записи.push(['r', al.album, `/albums/${al.slug}`, artistLine(al), String(al.year ?? '')]);
+    записи.push(['r', al.album, `/albums/${al.slug}`, artistLine(al), String(al.year ?? ''), обложка(al)]);
   }
 
   for (const v of videos) {
-    записи.push(['v', videoTitle(v), `/video/${v.slug}`, videoArtists(v), String(v.year ?? '')]);
+    записи.push(['v', videoTitle(v), `/video/${v.slug}`, videoArtists(v), String(v.year ?? ''), кадр(v)]);
   }
 
   for (const l of labels) {
     записи.push(['l', l.name, `/labels/${l.slug}`,
-      l.country ? countryName(l.country) : '', String(l.albumIds?.length ?? 0)]);
+      l.country ? countryName(l.country) : '', String(l.albumIds?.length ?? 0),
+      миниатюра(l.albumIds)]);
   }
 
   for (const g of genres) {
-    записи.push(['g', g.name, `/genres/${g.slug}`, '', String(g.count ?? 0)]);
+    записи.push(['g', g.name, `/genres/${g.slug}`, '', String(g.count ?? 0), миниатюра(g.albumIds)]);
   }
 
   return new Response(JSON.stringify(записи), {

@@ -136,12 +136,16 @@ let выведено = 0;
             </div>
 
             {/* Пустых скобок у страны не бывает: если её нет, пометки нет
-                вовсе. Такой в базе один — Various Artists. */}
+                вовсе. Такой в базе один — Various Artists.
+
+                Под именем — счёт релизов и, через точку, клипов, если они
+                есть (19 сентября 2026, просьба владельца). */}
             <BriefCard
               href={`/artists/${a.slug}`}
               name={a.name}
               note={a.country ? `[${a.country}]` : null}
-              left={plural(a.albumIds.length, 'release', 'releases')}
+              left={plural(a.albumIds.length, 'release', 'releases') +
+                (a.videoIds?.length ? ' · ' + plural(a.videoIds.length, 'video', 'videos') : '')}
             />
           </li>
         ))}

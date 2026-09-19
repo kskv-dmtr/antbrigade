@@ -13,9 +13,8 @@
    каждой находки подписан её род. Наши роды: artist, release, video, label,
    genre.
 
-   Строка находки набрана как строка списка на /music: два ряда, в каждом
-   слева своё, справа служебное. Сверху имя и род, снизу подпись и число —
-   год у релиза и клипа, счёт релизов у остальных. */
+   Строка находки — по образцу поиска Spotify (19 сентября 2026): миниатюра,
+   имя с подписью под ним, род находки в рамке справа. */
 
 import Icon from './Icon.astro';
 
@@ -166,39 +165,62 @@ const { id = 'search', hints = false } = Astro.props;
       поле.setAttribute('aria-activedescendant', строки[выбран].id);
     };
 
-    const ряд = (слева, справа, клСлева, клСправа) => {
-      const р = document.createElement('span');
-      р.className = 'found__line';
-
-      const л = document.createElement('span');
-      л.className = клСлева;
-      л.textContent = слева;
-
-      const п = document.createElement('span');
-      п.className = клСправа;
-      п.textContent = справа;
-
-      р.append(л, п);
-      return р;
-    };
+    // Полный адрес миниатюры из короткой пометки указателя (search.json).
+    const миниатюра = (м) =>
+      !м ? '' : м[0] === 'c' ? `/covers/${м.slice(1)}-400.webp` : `/videos/${м.slice(1)}-480.webp`;
 
     const нарисовать = (находки) => {
       if (!находки.length) return закрыть();
 
       панель.replaceChildren(...находки.map((з, i) => {
-        const [тип, имя, адрес, подпись, число] = з;
+        const [тип, имя, адрес, подпись, число, мини] = з;
 
+        /* Строка по образцу Spotify (19 сентября 2026, просьба владельца):
+           слева миниатюра, рядом имя и под ним подпись, справа род находки
+           в рамке. Подпись — исполнители и год у релиза и клипа, страна и
+           счёт релизов у исполнителя и лейбла, счёт релизов у жанра. */
         const строка = document.createElement('a');
         строка.className = 'found';
         строка.href = адрес;
         строка.id = поле.id + '-found-' + i;
         строка.setAttribute('role', 'option');
-        строка.append(ряд(имя, РОД[тип], 'found__name', 'found__type'));
 
-        /* Второй ряд только когда есть что в нём написать: у жанра нет ни
-           подписи, ни года, и пустой ряд задирал бы строку вдвое. */
-        if (подпись || число) строка.append(ряд(подпись, число, 'found__sub', 'found__note'));
+        const рамка = document.createElement('span');
+        рамка.className = 'found__thumb';
+        const src = миниатюра(мини);
+        if (src) {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = '';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          рамка.append(img);
+        }
 
+        const текст = document.createElement('span');
+        текст.className = 'found__text';
+        const н = document.createElement('span');
+        н.className = 'found__name';
+        н.textContent = имя;
+        текст.append(н);
+
+        const счётный = тип === 'a' || тип === 'l' || тип === 'g';
+        const хвост = счётный
+          ? (число ? число + (число === '1' ? ' release' : ' releases') : '')
+          : число;
+        const второй = [подпись, хвост].filter(Boolean).join(' · ');
+        if (второй) {
+          const п = document.createElement('span');
+          п.className = 'found__sub';
+          п.textContent = второй;
+          текст.append(п);
+        }
+
+        const род = document.createElement('span');
+        род.className = 'found__type';
+        род.textContent = РОД[тип];
+
+        строка.append(рамка, текст, род);
         return строка;
       }));
 

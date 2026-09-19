@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-19T20:44:27Z",
+  "generatedAt": "2026-09-19T23:09:42Z",
   "counts": {
     "albums": 1401,
     "artists": 1185,
     "labels": 743,
-    "videos": 101
+    "videos": 102
   },
   "albums": [
     {
@@ -52657,7 +52657,7 @@
       "country": "US",
       "bandcamp": "https://gingerroot.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@GingerRootMusic",
       "albumIds": [
         "1004129a-8c52-80e5-bea3-d120b24d4d37",
         "24b4129a-8c52-806e-8953-fe39869c70d7",
@@ -52676,6 +52676,7 @@
         "24b4129a-8c52-80c9-bab2-f979d58a6d37"
       ],
       "videoIds": [
+        "3e04129a-8c52-8030-9a63-de02d8d1d7f0",
         "24f4129a-8c52-8000-b752-da7ccfa2a09b"
       ],
       "akaIds": []
@@ -83011,6 +83012,19 @@
         "2424129a-8c52-801f-928b-cd1b28ba171c"
       ],
       "slug": "gelli-haha-klouds-will-carry-me-to-sleep"
+    },
+    {
+      "id": "3e04129a-8c52-8030-9a63-de02d8d1d7f0",
+      "title": "Ginger Root | Nisemono",
+      "url": "https://youtu.be/nVIN8ZiIFr4?si=bAeyLhTSzuoVLq4e",
+      "kind": "Official Video",
+      "released": "2023-03-26",
+      "year": 2023,
+      "origYear": null,
+      "artistIds": [
+        "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
+      ],
+      "slug": "ginger-root-nisemono"
     },
     {
       "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",

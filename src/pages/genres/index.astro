@@ -99,7 +99,7 @@ let выведено = 0;
       прятал их первый расчёт скрипта — уже после первой отрисовки: страница
       успевала нарисоваться во всю длину и тут же схлопывалась, и вместе с
       полосой прокрутки дёргались липкие полосы заголовка и отбора. */}
-  <ul class="names names--two" id="list" data-first>
+  <ul class="names names--two names--square" id="list" data-first>
     {ordered.map(([letter, items]) => (
       <>
         {items.map((genre) => (
@@ -116,9 +116,11 @@ let выведено = 0;
                 два столбца, и в каждом то же, что было в строке: имя
                 слева, счётчик справа. */}
             <div class="view-row">
-              <a class="row row--brief" href={`/genres/${genre.slug}`}>
-                <span class="row__title">{genre.name}</span>
-                <span class="row__val">[{genre.count}]</span>
+              {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
+                  сверху имя, под ним счёт через точку моноширинным 13. */}
+              <a class="row row--release row--name" href={`/genres/${genre.slug}`}>
+                <span class="row__line"><span class="row__title">{genre.name}</span></span>
+                <span class="row__line"><span class="row__sub">{plural(genre.count, 'release', 'releases')}</span></span>
               </a>
             </div>
 

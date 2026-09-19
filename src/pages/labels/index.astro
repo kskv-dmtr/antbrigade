@@ -97,7 +97,7 @@ let выведено = 0;
       прятал их первый расчёт скрипта — уже после первой отрисовки: страница
       успевала нарисоваться во всю длину и тут же схлопывалась, и вместе с
       полосой прокрутки дёргались липкие полосы заголовка и отбора. */}
-  <ul class="names names--two" id="list" data-first>
+  <ul class="names names--two names--square" id="list" data-first>
     {ordered.map(([letter, items]) => (
       <>
         {items.map((l) => (
@@ -114,9 +114,11 @@ let выведено = 0;
                 всегда повторяет число релизов, а спорит за место с ним.
                 Оно осталось на странице самого лейбла. */}
             <div class="view-row">
-              <a class="row row--brief" href={`/labels/${l.slug}`}>
-                <span class="row__title">{l.name}</span>
-                <span class="row__val">[{l.albumIds.length}]</span>
+              {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
+                  сверху имя, под ним счёт через точку моноширинным 13. */}
+              <a class="row row--release row--name" href={`/labels/${l.slug}`}>
+                <span class="row__line"><span class="row__title">{l.name}</span></span>
+                <span class="row__line"><span class="row__sub">{plural(l.albumIds.length, 'release', 'releases')}</span></span>
               </a>
             </div>
 

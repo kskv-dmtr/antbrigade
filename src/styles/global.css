@@ -5891,7 +5891,9 @@ html:not([data-js]) .more { display: none; }
 .brief__note,
 .brief__line--sub {
   font-family: var(--mono);
-  font-size: max(11px, 0.6875rem);
+  /* 13, как исполнитель и год под плиткой на Music и Video (19 сентября
+     2026, просьба владельца; днём было 11). */
+  font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -6299,3 +6301,68 @@ html:not([data-js]) .more { display: none; }
   .row:hover .row__sub { color: inherit; }
 }
 .row:active .row__sub { color: inherit; }
+
+/* ------------------------------------------ рамка с обложкой у исполнителя
+
+   Проба 19 сентября 2026 (владелец), только на /artists в сетке. Поле 16:9
+   ровно в размер кадра клипа на /video: у плитки клипа поле ячейки 1rem, у
+   карточки имени 16 — рамку выводим на поле клипа отрицательными отступами,
+   и её края совпадают с краями кадра. По углам — Г-образные фигуры, как у
+   обложки на странице релиза (плечо 16, линия решётки), по центру —
+   обложка свежего релиза квадратом во всю высоту поля. */
+.brief__art {
+  --рог: 1px;
+  --плечо: 16px;
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  margin: calc(1rem - max(16px, 1rem)) calc(1rem - max(16px, 1rem)) 0;
+  background:
+    linear-gradient(var(--line), var(--line)) 0 0 / var(--плечо) var(--рог) no-repeat,
+    linear-gradient(var(--line), var(--line)) 0 0 / var(--рог) var(--плечо) no-repeat,
+    linear-gradient(var(--line), var(--line)) 100% 0 / var(--плечо) var(--рог) no-repeat,
+    linear-gradient(var(--line), var(--line)) 100% 0 / var(--рог) var(--плечо) no-repeat,
+    linear-gradient(var(--line), var(--line)) 0 100% / var(--плечо) var(--рог) no-repeat,
+    linear-gradient(var(--line), var(--line)) 0 100% / var(--рог) var(--плечо) no-repeat,
+    linear-gradient(var(--line), var(--line)) 100% 100% / var(--плечо) var(--рог) no-repeat,
+    linear-gradient(var(--line), var(--line)) 100% 100% / var(--рог) var(--плечо) no-repeat;
+}
+/* Обложка — поверх поля, а не в потоке: в потоке загруженная картинка
+   распирала поле до своих 400 и ломала 16:9 (замер на 1440: поле 331 × 400). */
+.brief__art img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transform: translateX(-50%);
+}
+
+/* ------------------------------------------- сетка указателей: 8 столбцов
+
+   Проба 19 сентября 2026 (владелец): /artists, а следом /labels и /genres в
+   сетке (класс names--square у всех трёх). На широком
+   экране — восемь столбцов вместо общих --cols; карточка квадратная: имя
+   сверху, счёт релизов и клипов у низа, между ними пусто (space-between).
+   Рамка с обложкой из предыдущей пробы в этом варианте спрятана. На
+   телефоне и до 900 — два столбца, как у остальных сеток. */
+@media (min-width: 901px) {
+  :root[data-view='grid'] .names--square {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+:root[data-view='grid'] .names--square .names__item { aspect-ratio: 1 / 1; }
+:root[data-view='grid'] .names--square .brief { justify-content: space-between; }
+.names--square .brief__art { display: none; }
+
+/* Счёт под именем в строке исполнителя, лейбла, жанра — прописными, как в
+   их карточках сетки: RELEASES, VIDEOS (20 сентября 2026, просьба владельца).
+   Под названием релиза и клипа там имена исполнителей — их регистр не
+   трогаем. */
+.row--name .row__sub { text-transform: uppercase; }

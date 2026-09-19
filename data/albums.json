@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-18T22:36:48Z",
+  "generatedAt": "2026-09-19T01:12:54Z",
   "counts": {
     "albums": 1399,
     "artists": 1184,
@@ -61498,7 +61498,7 @@
       "slug": "pot-pot",
       "name": "pôt-pot",
       "country": "IE",
-      "bandcamp": null,
+      "bandcamp": "https://potpot.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -62262,7 +62262,7 @@
       "slug": "rescue-cat",
       "name": "Rescüe Cat",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://rescuecat.bandcamp.com/album/flesh-weapon",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66322,7 +66322,7 @@
       "slug": "the-ellameno-beat",
       "name": "The Ellameno Beat",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://theellamenobeat.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -73710,7 +73710,7 @@
       "slug": "felte-records",
       "name": "Felte Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://felte.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -81320,7 +81320,7 @@
       "slug": "time-to-kill-records",
       "name": "Time To Kill Records",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://timetokillrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

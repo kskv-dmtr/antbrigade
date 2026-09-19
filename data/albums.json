@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-19T14:27:47Z",
+  "generatedAt": "2026-09-19T20:44:27Z",
   "counts": {
-    "albums": 1400,
+    "albums": 1401,
     "artists": 1185,
     "labels": 743,
     "videos": 101
@@ -38,6 +38,37 @@
       ],
       "labels": [
         "humo internacional"
+      ]
+    },
+    {
+      "id": "3e04129a-8c52-8060-8e68-fdb9b0736996",
+      "slug": "now-always-fades-coalesce",
+      "artist": "Now Always Fades",
+      "album": "Coalesce",
+      "url": "https://album.link/g6tfjzrvdkjww",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac4c2d164-2540-409b-a28c-e63bfd01a145%3Aa0858265084_10.jpg?table=block&id=3e04129a-8c52-8060-8e68-fdb9b0736996&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Trip Hop",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3364129a-8c52-80c9-ba0f-e07b1ea4c368"
+      ],
+      "artists": [
+        "Now Always Fades"
+      ],
+      "labelIds": [
+        "3364129a-8c52-802e-aeb1-e725b30474df"
+      ],
+      "labels": [
+        "Northern Underground Records"
       ]
     },
     {
@@ -59771,6 +59802,7 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e04129a-8c52-8060-8e68-fdb9b0736996",
         "3364129a-8c52-80c4-a30a-cadf8b5bb231"
       ],
       "genres": [
@@ -77720,10 +77752,11 @@
       "slug": "northern-underground-records",
       "name": "Northern Underground Records",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://northernundergroundrecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e04129a-8c52-8060-8e68-fdb9b0736996",
         "3364129a-8c52-80c4-a30a-cadf8b5bb231"
       ],
       "artistIds": [

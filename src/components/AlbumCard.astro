@@ -16,7 +16,7 @@ const { album, showArtist = true, as: Wrapper = 'li', class: extra, ...rest } = 
 const meta = [album.types.join(' · '), album.year].filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', extra]} {...rest}>
-  <a class="tile__link" href={`/albums/${album.slug}`}>
+  <a class="tile__link" href={`/music/${album.slug}`}>
     <div class="tile__art">
       {album.cover && (
         <img

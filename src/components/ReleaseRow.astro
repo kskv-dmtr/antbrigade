@@ -34,7 +34,7 @@ const { album } = Astro.props;
    владельца; днём того же дня отдельной справкой справа его убрали).
    Типов бывает несколько («Album», «Collaboration») — каждый в своей рамке. */
 ---
-<a class="row row--release" href={`/albums/${album.slug}`}>
+<a class="row row--release" href={`/music/${album.slug}`}>
   <span class="row__line">
     <span class="row__artist">{artistLine(album)}</span>
     {/* Типы — каждый в своей рамке, как род находки в поиске (19 сентября

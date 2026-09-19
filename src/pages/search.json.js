@@ -78,7 +78,7 @@ export function GET() {
   }
 
   for (const al of albums) {
-    записи.push(['r', al.album, `/albums/${al.slug}`, artistLine(al), String(al.year ?? ''), обложка(al)]);
+    записи.push(['r', al.album, `/music/${al.slug}`, artistLine(al), String(al.year ?? ''), обложка(al)]);
   }
 
   for (const v of videos) {

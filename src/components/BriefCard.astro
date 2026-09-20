@@ -18,7 +18,7 @@
    линии берёт у ячейки, а заливка по наведению ложится на всю ячейку, а не
    на текст внутри — как у строки списка. */
 
-const { href, name, note, left, right, cover, top } = Astro.props;
+const { href, name, note, left, right, cover, counts } = Astro.props;
 ---
 <a class="brief view-tile" href={href}>
   {/* Рамка с обложкой — пока только у исполнителей (19 сентября 2026, проба
@@ -31,16 +31,22 @@ const { href, name, note, left, right, cover, top } = Astro.props;
       {cover && <img src={cover} alt="" width="400" height="400" loading="lazy" decoding="async" />}
     </span>
   )}
-  {/* Страна — первой строкой, над именем (20 сентября 2026, просьба
-      владельца): у исполнителя и лейбла она есть, у жанра нет. */}
-  {top && <span class="brief__top">{top}</span>}
   <span class="brief__line">
     <span class="brief__name">{name}</span>
     {note && <span class="brief__note">{note}</span>}
   </span>
 
-  <span class="brief__line brief__line--sub">
-    <span>{left}</span>
-    {right && <span>{right}</span>}
-  </span>
+  {/* Опись — по строке на род, с тонкой чертой между ними (20 сентября
+      2026, просьба владельца; до того — одной строкой через точку, как в
+      списке). Прижата к низу карточки. */}
+  {counts ? (
+    <span class="brief__counts">
+      {counts.map((строка) => <span class="brief__count">{строка}</span>)}
+    </span>
+  ) : (
+    <span class="brief__line brief__line--sub">
+      <span>{left}</span>
+      {right && <span>{right}</span>}
+    </span>
+  )}
 </a>

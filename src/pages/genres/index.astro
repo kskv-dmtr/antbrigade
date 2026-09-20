@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { genres, typeLine } from '../../lib/db.js';
+import { genres, typeLine, typeParts } from '../../lib/db.js';
 
 /* Счёт исполнителей в жанре — по его же релизам, через Set — считался здесь
    несколько часов 11 сентября 2026 и стоял второй величиной в карточке.
@@ -135,7 +135,7 @@ let выведено = 0;
             <BriefCard
               href={`/genres/${genre.slug}`}
               name={genre.name}
-              left={typeLine(genre.albumIds)}
+              counts={typeParts(genre.albumIds)}
             />
           </li>
         ))}

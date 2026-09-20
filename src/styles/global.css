@@ -6384,13 +6384,20 @@ html:not([data-js]) .more { display: none; }
    uppercase. Пометка при имени (код страны) капителью и остаётся. */
 .brief__line--sub { text-transform: none; }
 
-/* Страна первой строкой карточки указателя — над именем, у левого края (20
-   сентября 2026, просьба владельца; до того стояла кодом в скобках справа от
-   имени). Набрана как служебное: моноширинным прописными, приглушённым. */
-.brief__top {
+
+/* Опись в карточке — по строке на род, с тонкой чертой между ними (20
+   сентября 2026, просьба владельца). Прижата к низу карточки, как прежний
+   второй ряд; набрана так же — моноширинным 13, приглушённым, с прописной
+   первой буквы (слова приходят из db.js). */
+.brief__counts {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
   font-family: var(--mono);
   font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--fg-muted);
 }
+.brief__count { padding: 0.25rem 0; }
+.brief__count + .brief__count { border-top: 1px solid var(--line-soft); }
+.brief__count:last-child { padding-bottom: 0; }

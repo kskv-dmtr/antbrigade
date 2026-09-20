@@ -319,7 +319,7 @@ export function artistLine(album) {
 const РОДЫ = ['Album', 'EP', 'Single', 'Compilation', 'Collaboration',
               'Official Video', 'Official Visualizer', 'Live Performance'];
 
-export function typeLine(albumIds = [], videoIds = []) {
+export function typeParts(albumIds = [], videoIds = []) {
   const счёт = new Map();
   const добавить = (род) => род && счёт.set(род, (счёт.get(род) ?? 0) + 1);
 
@@ -332,6 +332,8 @@ export function typeLine(albumIds = [], videoIds = []) {
       if (i !== j) return (i < 0 ? РОДЫ.length : i) - (j < 0 ? РОДЫ.length : j);
       return a[0].localeCompare(b[0]);
     })
-    .map(([род, n]) => `${n} ${род}${n === 1 ? '' : 's'}`)
-    .join(' · ');
+    .map(([род, n]) => `${n} ${род}${n === 1 ? '' : 's'}`);
 }
+
+/* Та же опись одной строкой, через точку — для строки списка. */
+export const typeLine = (albumIds, videoIds) => typeParts(albumIds, videoIds).join(' · ');

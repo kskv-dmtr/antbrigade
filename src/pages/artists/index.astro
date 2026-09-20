@@ -142,6 +142,7 @@ let выведено = 0;
             <BriefCard
               href={`/artists/${a.slug}`}
               name={a.name}
+              top={a.country ? countryName(a.country) : null}
               left={счётИсполнителя(a)}
             />
           </li>

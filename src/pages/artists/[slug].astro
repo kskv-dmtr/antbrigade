@@ -183,7 +183,7 @@ const aka = artistsOf(artist.akaIds ?? []);
       <PageBar as="h2" title="Releases" count={releases.length} />
       {/* Первые 48, дальше по кнопке — как на Music. */}
       <TilesMore count={releases.length}>
-        {releases.map((a) => <AlbumCard album={a} showArtist={false} />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={false} showType />)}
       </TilesMore>
     </section>
   )}
@@ -192,7 +192,7 @@ const aka = artistsOf(artist.akaIds ?? []);
     <section class="section">
       <PageBar as="h2" title="Videos" count={clipsSorted.length} />
       <TilesMore count={clipsSorted.length}>
-        {clipsSorted.map((v) => <VideoCard video={v} />)}
+        {clipsSorted.map((v) => <VideoCard video={v} showType />)}
       </TilesMore>
     </section>
   )}

@@ -6383,3 +6383,14 @@ html:not([data-js]) .more { display: none; }
    файла — общее правило .brief__note, .brief__line--sub выше задаёт
    uppercase. Пометка при имени (код страны) капителью и остаётся. */
 .brief__line--sub { text-transform: none; }
+
+/* Страна первой строкой карточки указателя — над именем, у левого края (20
+   сентября 2026, просьба владельца; до того стояла кодом в скобках справа от
+   имени). Набрана как служебное: моноширинным прописными, приглушённым. */
+.brief__top {
+  font-family: var(--mono);
+  font-size: max(13px, 0.8125rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}

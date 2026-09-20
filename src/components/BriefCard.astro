@@ -18,7 +18,7 @@
    линии берёт у ячейки, а заливка по наведению ложится на всю ячейку, а не
    на текст внутри — как у строки списка. */
 
-const { href, name, note, left, right, cover } = Astro.props;
+const { href, name, note, left, right, cover, top } = Astro.props;
 ---
 <a class="brief view-tile" href={href}>
   {/* Рамка с обложкой — пока только у исполнителей (19 сентября 2026, проба
@@ -31,6 +31,9 @@ const { href, name, note, left, right, cover } = Astro.props;
       {cover && <img src={cover} alt="" width="400" height="400" loading="lazy" decoding="async" />}
     </span>
   )}
+  {/* Страна — первой строкой, над именем (20 сентября 2026, просьба
+      владельца): у исполнителя и лейбла она есть, у жанра нет. */}
+  {top && <span class="brief__top">{top}</span>}
   <span class="brief__line">
     <span class="brief__name">{name}</span>
     {note && <span class="brief__note">{note}</span>}

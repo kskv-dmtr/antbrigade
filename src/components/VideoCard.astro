@@ -12,7 +12,7 @@
 
 import { thumbSrc, thumbSrcSet, videoTitle, videoArtists } from '../lib/db.js';
 
-const { video, showArtist = false, as: Wrapper = 'li', class: extra } = Astro.props;
+const { video, showArtist = false, showType = false, as: Wrapper = 'li', class: extra } = Astro.props;
 
 const src = thumbSrc(video, 480);
 
@@ -33,7 +33,8 @@ const meta = [video.kind, video.year].filter(Boolean).join(' · ');
 /* Порядок как у релиза: название, под ним исполнитель и год через точку
    (19 сентября 2026). */
 const год = video.year ?? video.released?.slice(0, 4);
-const sub = [showArtist && videoArtists(video), год].filter(Boolean).join(' · ');
+const sub = [showArtist && videoArtists(video), showType && video.kind, год]
+  .filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', 'tile--video', extra]}>
   {/* Ведёт на страницу клипа, а не сразу на YouTube: у клипа есть своя

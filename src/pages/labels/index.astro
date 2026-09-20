@@ -132,6 +132,7 @@ let выведено = 0;
             <BriefCard
               href={`/labels/${l.slug}`}
               name={l.name}
+              top={l.country ? countryName(l.country) : null}
               left={typeLine(l.albumIds)}
             />
           </li>

@@ -6439,6 +6439,11 @@ html:not([data-js]) .more { display: none; }
     padding: 0.875rem 0;
     color: var(--fg-dim);
     border-top: 1px solid var(--line);
+
+    /* С прописной первой буквы, а не капителью: «Keyboard Shortcuts»,
+       «Filters», «Enter» — как теги и подписи находок (20 сентября 2026,
+       просьба владельца). Общий набор mono--sm задаёт капитель. */
+    text-transform: none;
   }
 
   /* Клавиши идут в строку и переносятся вместе со своим словом: на узком

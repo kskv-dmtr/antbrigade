@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { genres, typeLine, typeParts, albumById, plural, randomCover } from '../../lib/db.js';
+import { genres, typeLine, typeParts, albumById, plural, coverMarks } from '../../lib/db.js';
 
 /* Сколько разных исполнителей в жанре — тегом в строке, на месте страны у
    исполнителей и лейблов (20 сентября 2026, просьба владельца). Считаем по
@@ -147,7 +147,7 @@ let выведено = 0;
             <BriefCard
               href={`/genres/${genre.slug}`}
               name={genre.name}
-              cover={randomCover(genre.albumIds)}
+              covers={coverMarks(genre.albumIds)}
               counts={typeParts(genre.albumIds)}
             />
           </li>

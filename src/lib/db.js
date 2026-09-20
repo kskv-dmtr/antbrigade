@@ -338,14 +338,39 @@ export function typeParts(albumIds = [], videoIds = []) {
 /* Та же опись одной строкой, через точку — для строки списка. */
 export const typeLine = (albumIds, videoIds) => typeParts(albumIds, videoIds).join(' · ');
 
-/* Обложка одного из релизов, выбранная наугад при сборке (20 сентября 2026):
-   миниатюра в карточке указателя и в находке поиска. У кого релиз один,
-   выбирать не из чего. Нет ни одной обложки — null. */
-export function randomCover(albumIds = [], size = 400) {
-  const есть = albumIds
-    .map((id) => albumById.get(id))
-    .filter((al) => al?.cover);
+/* Метки обложек записи — для миниатюры в карточке указателя: «c» и id
+   обложки либо «v» и id кадра, полный адрес собирает скрипт карточки.
+   Меткой, а не адресом: на /artists таких карточек 1184, и полные адреса
+   весили бы вдвое больше.
 
-  if (!есть.length) return null;
-  return coverSrc(есть[Math.floor(Math.random() * есть.length)], size);
+   Берём не больше ШЕСТИ, перетасовав: выбор из них делает браузер при
+   каждой загрузке — как «Random Picks» на витрине и находки поиска. Жребий
+   только при сборке обложку не обновлял: без нового коммита сайт не
+   пересобирается (20 сентября 2026, просьба владельца). */
+const МЕТОК = 6;
+
+export function coverMarks(albumIds = [], videoIds = []) {
+  const метки = [];
+
+  for (const id of albumIds) {
+    const al = albumById.get(id);
+    const src = al && coverSrc(al, 400);
+    const m = src && src.match(/^\/covers\/(.+)-400\.webp$/);
+    if (m) метки.push('c' + m[1]);
+  }
+
+  if (!метки.length) {
+    for (const id of videoIds) {
+      const src = thumbSrc(videoById.get(id), 480);
+      const m = src && src.match(/^\/videos\/(.+)-480\.webp$/);
+      if (m) метки.push('v' + m[1]);
+    }
+  }
+
+  for (let i = метки.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [метки[i], метки[j]] = [метки[j], метки[i]];
+  }
+
+  return метки.slice(0, МЕТОК);
 }

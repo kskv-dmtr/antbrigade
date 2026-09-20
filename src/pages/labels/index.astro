@@ -122,7 +122,9 @@ let выведено = 0;
               {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/labels/${l.slug}`}>
-                <span class="row__line"><span class="row__title">{l.name}</span></span>
+                <span class="row__line"><span class="row__title">{l.name}</span>
+                  {/* Страна — кодом в рамке, как тип релиза на /music (20 сентября 2026). */}
+                  <span class="row__meta row__types">{l.country && <span class="row__type">{l.country}</span>}</span></span>
                 <span class="row__line"><span class="row__sub">{plural(l.albumIds.length, 'release', 'releases')}</span></span>
               </a>
             </div>

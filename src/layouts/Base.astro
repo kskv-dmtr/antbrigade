@@ -19,7 +19,14 @@ import grotesk from '@fontsource-variable/space-grotesk/files/space-grotesk-lati
    noindex — страница не для выдачи. Сейчас такая одна, 404: хостинг отдаёт
    её с кодом 404, и поисковик её и так не возьмёт, но сам файл лежит ещё и
    по адресу /404 и оттуда отвечает обычным «двухсотым». */
-const { title, description, activeSection, cardTitle, image, noindex } = Astro.props;
+/* shortcuts — какие горячие клавиши перечислять в подвале (20 сентября
+   2026, просьба владельца). «full» на списках, где есть вид и отборы:
+   /music, /video, /artists, /labels, /genres. Везде ещё — только то, что
+   работает на любой странице: ходьба по находкам, поиск и открытие. */
+const {
+  title, description, activeSection, cardTitle, image, noindex,
+  shortcuts = 'basic'
+} = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
    ссылка в никуда хуже отсутствующего пункта.
@@ -60,14 +67,21 @@ const { title, description, activeSection, cardTitle, image, noindex } = Astro.p
    поставить обратно true — вернуть переключатель как был. */
 const ТЕМА_ПЕРЕКЛЮЧАЕТСЯ = false;
 
-const nav = [
+/* На широком экране разделы стоят двумя группами по бокам от логотипа (20
+   сентября 2026, просьба владельца): слева то, что показывает сам каталог,
+   справа — указатели, по которым в него входят, и кнопка поиска. В бургере
+   на телефоне те же группы идут подряд, одним списком. */
+const слева = [
   { href: '/',          label: 'Lucky Finds', key: 'home' },
   { href: '/music',     label: 'Music',       key: 'albums' },
   { href: '/video',     label: 'Video',       key: 'videos' },
+  { href: '/playlists', label: 'Playlists',   key: 'playlists' }
+];
+
+const справа = [
   { href: '/artists',   label: 'Artists',     key: 'artists' },
   { href: '/labels',    label: 'Labels',      key: 'labels' },
-  { href: '/genres',    label: 'Genres',      key: 'genres' },
-  { href: '/playlists', label: 'Playlists',   key: 'playlists' }
+  { href: '/genres',    label: 'Genres',      key: 'genres' }
 ];
 
 /* Год в знаке охраны — от времени сборки, а не вписанный руками: сайт
@@ -290,17 +304,31 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           попадают в ссылку, и подчёркивание с вывороткой вылезали бы за букву
           на пробел с каждой стороны. */}
       <nav class="nav" id="nav">
-        {/* Все семь разделов — одной строкой через точку (19 сентября 2026,
-            просьба владельца). Explore, раскрывавший четыре указателя —
-            исполнителей, лейблы, жанры и подборки, — убран отовсюду, и из
-            бургера тоже: указатели стоят обычными пунктами. Точки — только
-            на широком экране; в бургере пункты идут строками. */}
-        {nav.map((item, i) => (
-          <>
-            {i > 0 && <span class="nav__dot" aria-hidden="true">·</span>}
-            <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
-          </>
-        ))}
+        {/* Две группы разделов: на широком экране они расходятся по бокам от
+            логотипа, на телефоне идут подряд строками в бургере. Точки между
+            словами — только на широком экране (19 сентября 2026). */}
+        <span class="nav__group">
+          {слева.map((item, i) => (
+            <>
+              {i > 0 && <span class="nav__dot" aria-hidden="true">·</span>}
+              <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
+            </>
+          ))}
+        </span>
+
+        <span class="nav__group nav__group--end">
+          {справа.map((item) => (
+            <>
+              <a href={item.href} aria-current={activeSection === item.key ? 'page' : undefined}>{item.label}</a>
+              <span class="nav__dot" aria-hidden="true">·</span>
+            </>
+          ))}
+
+          {/* Поиск на широком экране — словом, а не лупой (20 сентября 2026,
+              просьба владельца): открывает ту же панель справа, что и косая
+              черта. Кнопка, а не ссылка: никуда не ведёт. */}
+          <button type="button" class="nav__search" id="nav-search">Search</button>
+        </span>
 
         {/* Низ меню на телефоне — всё, что стоит в подвале, по образцу
             dsgners.ru: там меню открывается на весь экран, и под разделами
@@ -449,9 +477,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       <span class="keys__list">
         <span class="keys__item">Navigate <kbd class="search__kbd">↑</kbd><kbd class="search__kbd">↓</kbd></span>
         <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
-        <span class="keys__item">Grid <kbd class="search__kbd">G</kbd></span>
-        <span class="keys__item">List <kbd class="search__kbd">L</kbd></span>
-        <span class="keys__item">Filters <kbd class="search__kbd">F</kbd></span>
+        {shortcuts === 'full' && (
+          <>
+            <span class="keys__item">Grid <kbd class="search__kbd">G</kbd></span>
+            <span class="keys__item">List <kbd class="search__kbd">L</kbd></span>
+            <span class="keys__item">Filters <kbd class="search__kbd">F</kbd></span>
+          </>
+        )}
         <span class="keys__item">Open <kbd class="search__kbd search__kbd--word">Enter</kbd></span>
       </span>
     </div>
@@ -529,7 +561,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       /* Находки поиска — без жеребьёвки (19 сентября 2026, просьба владельца):
          их строка отзывается мягким фоном, как пункт меню. */
       const найдено = e.target instanceof Element
-        ? e.target.closest('a, .more, .dig-again, .filters-row__apply, .filters-row__reset-all, .filters-row__toggle, .view-pick__opt, .filters-row > .filter .select')
+        ? e.target.closest('a, .more, .dig-again, .filters-row__apply, .filters-row__reset-all, .filters-row__toggle, .view-pick__opt, .filters-row > .filter .select, .nav__search')
         : null;
       const карта = найдено?.matches('.found') ? null : найдено;
 
@@ -1071,6 +1103,9 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         ящик(false);
       }, true);
       широкий.addEventListener('change', () => { if (открыт()) ящик(false); });
+
+      // Слово «Search» в шапке открывает ту же панель, что и косая черта.
+      document.getElementById('nav-search')?.addEventListener('click', () => ящик(true));
     }
   </script>
 </body>

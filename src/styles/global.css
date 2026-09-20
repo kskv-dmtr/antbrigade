@@ -6300,14 +6300,12 @@ html:not([data-js]) .more { display: none; }
 }
 .row:active .row__sub { color: inherit; }
 
-/* ------------------------------------------ рамка с обложкой у исполнителя
+/* ------------------------------------------ поле с миниатюрой у указателя
 
-   Проба 19 сентября 2026 (владелец), только на /artists в сетке. Поле 16:9
-   ровно в размер кадра клипа на /video: у плитки клипа поле ячейки 1rem, у
-   карточки имени 16 — рамку выводим на поле клипа отрицательными отступами,
-   и её края совпадают с краями кадра. По углам — Г-образные фигуры, как у
-   обложки на странице релиза (плечо 16, линия решётки), по центру —
-   обложка свежего релиза квадратом во всю высоту поля. */
+   Г-образные фигуры по углам — те же, что у обложки на странице релиза:
+   восемь полосок фоном, плечо 16, линия решётки. Внутри — квадратная
+   миниатюра во всю высоту поля, по центру (20 сентября 2026, просьба
+   владельца). Рост поля назначает карточка, см. правило выше. */
 .brief__art {
   --рог: 1px;
   --плечо: 16px;
@@ -6316,8 +6314,6 @@ html:not([data-js]) .more { display: none; }
   flex: none;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 16 / 9;
-  margin: calc(1rem - max(16px, 1rem)) calc(1rem - max(16px, 1rem)) 0;
   background:
     linear-gradient(var(--line), var(--line)) 0 0 / var(--плечо) var(--рог) no-repeat,
     linear-gradient(var(--line), var(--line)) 0 0 / var(--рог) var(--плечо) no-repeat,
@@ -6355,9 +6351,34 @@ html:not([data-js]) .more { display: none; }
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 }
-:root[data-view='grid'] .names--square .names__item { aspect-ratio: 1 / 1; }
-:root[data-view='grid'] .names--square .brief { justify-content: space-between; }
-.names--square .brief__art { display: none; }
+/* Карточка набрана как плитка релиза (20 сентября 2026, просьба
+   владельца): сверху поле с миниатюрой, под ним имя и опись — те же поля,
+   что у плиток на Music и Video (1rem по краям и вдвое снизу, под
+   подписью), и тот же просвет между ними.
+
+   Высоту карточке не назначаем: ряд решётки тянется по самой высокой, а
+   остальные дорисовываются до неё — как у плиток. Квадратной она была
+   днём того же дня. */
+:root[data-view='grid'] .names--square .brief {
+  padding: 1rem 1rem 2rem;
+  gap: 0.5rem;
+}
+
+/* Поле миниатюры — ростом ровно в половину столбца. Считается от ширины
+   самого столбца: поле раздвинуто на поля карточки (по 1rem с каждой
+   стороны) и держит пропорцию 2:1. Проценты от высоты тут не годятся —
+   высота карточки не задана, и поле выходило нулевым.
+
+   Г-образные фигуры при этом остаются у краёв миниатюры, а не у краёв
+   ячейки: фон рисуется по содержимому (background-origin), а поля
+   возвращены изнутри. */
+:root[data-view='grid'] .names--square .brief__art {
+  width: calc(100% + 2rem);
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  aspect-ratio: 2 / 1;
+  background-origin: content-box;
+}
 
 /* Счёт под именем в строке исполнителя, лейбла, жанра — прописными, как в
    их карточках сетки: RELEASES, VIDEOS (20 сентября 2026, просьба владельца).
@@ -6375,50 +6396,24 @@ html:not([data-js]) .more { display: none; }
 .brief__line--sub { text-transform: none; }
 
 
-/* Опись в карточке — по строке на род, с тонкой чертой между ними (20
-   сентября 2026, просьба владельца). Прижата к низу карточки, как прежний
-   второй ряд; набрана так же — моноширинным 13, приглушённым, с прописной
-   первой буквы (слова приходят из db.js). */
-.brief__counts {
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
+/* Опись под именем — как подпись под плиткой на Music и Video: моноширинным
+   13, приглушённым, роды через точку (20 сентября 2026, просьба владельца;
+   днём того же дня стояла столбцом с чертой между строками). */
+.brief__sub {
   font-family: var(--mono);
   font-size: max(13px, 0.8125rem);
   letter-spacing: 0.08em;
+  line-height: 1.4;
   color: var(--fg-muted);
 }
-/* Поле у строки — 0,5rem: 8 на расчётных 1920 (просьба владельца), 6 на
-   1440, 8 на телефоне, где корень возвращается к 16. */
-.brief__count { padding: 0.5rem 0; }
-.brief__count + .brief__count { border-top: 1px solid var(--line-soft); }
-.brief__count:last-child { padding-bottom: 0; }
 
 /* На залитой карточке опись — цветом карточки, как счёт в строке списка (20
    сентября 2026, просьба владельца): приглушённый на цветной заливке терялся.
    Черта между строками светлеет вместе с ним. */
 @media (hover: hover) {
-  .brief[data-hot]:hover .brief__counts { color: inherit; }
-  .brief[data-hot]:hover .brief__count + .brief__count { border-top-color: currentColor; }
+  .brief[data-hot]:hover .brief__sub { color: inherit; }
 }
 @media (hover: none) {
-  .brief[data-hot]:active .brief__counts { color: inherit; }
-  .brief[data-hot]:active .brief__count + .brief__count { border-top-color: currentColor; }
+  .brief[data-hot]:active .brief__sub { color: inherit; }
 }
 
-/* Миниатюра в карточке указателя — квадрат в четверть карточки, ровно по её
-   середине (20 сентября 2026, проба владельца). Слоем поверх поля: в потоке
-   она раздвигала бы имя и опись, а карточка должна остаться квадратной.
-   Нажатие берёт на себя сама карточка — картинка его не перехватывает. */
-.brief { position: relative; }
-.brief__thumb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 25%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}

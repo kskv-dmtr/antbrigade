@@ -76,14 +76,13 @@ const aka = artistsOf(artist.akaIds ?? []);
         двоеточие. В квадратных скобках страна стояла до 7 сентября 2026 и
         читалась пометкой вроде счётчика, хотя рядом, строкой ниже, точно
         такое же сведение было названо словом. */}
-    {(aka.length > 0 || artist.country || hasLinks) && (
-      <dl class="item__facts">
-        {artist.country && (
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{countryName(artist.country)}</dd>
-          </div>
-        )}
+    {/* Страна есть у всех, кроме Various Artists: у него — Worldwide, как в
+        теге на /artists (20 сентября 2026, просьба владельца). */}
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Country:</dt>
+        <dd>{artist.country ? countryName(artist.country) : 'Worldwide'}</dd>
+      </div>
 
         {/* Другие имена — между страной и ссылками наружу: страна — про того,
             кто это, другие имена — про то же самое, а ссылки уводят с сайта и
@@ -113,7 +112,6 @@ const aka = artistsOf(artist.akaIds ?? []);
           </div>
         )}
       </dl>
-    )}
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не

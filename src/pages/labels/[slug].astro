@@ -50,14 +50,13 @@ const genres = [...genreCounts.entries()]
     <h1 class="item__title"><WholeWords text={label.name} /></h1>
 
     {/* Страна и переходы наружу — строками одной справки, как у исполнителя. */}
-    {(label.country || label.bandcamp || label.bandcamp2 || label.youtube) && (
-      <dl class="item__facts">
-        {label.country && (
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{countryName(label.country)}</dd>
-          </div>
-        )}
+    {/* Страна есть у всех, кроме «Not on Label»: у него — Worldwide, как в
+        теге на /labels (20 сентября 2026, просьба владельца). */}
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Country:</dt>
+        <dd>{label.country ? countryName(label.country) : 'Worldwide'}</dd>
+      </div>
 
         {(label.bandcamp || label.bandcamp2 || label.youtube) && (
           <div class="item__fact">
@@ -66,7 +65,6 @@ const genres = [...genreCounts.entries()]
           </div>
         )}
       </dl>
-    )}
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не

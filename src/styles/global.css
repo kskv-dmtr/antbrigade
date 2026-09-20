@@ -6398,6 +6398,20 @@ html:not([data-js]) .more { display: none; }
   letter-spacing: 0.08em;
   color: var(--fg-muted);
 }
-.brief__count { padding: 0.25rem 0; }
+/* Поле у строки — 0,5rem: 8 на расчётных 1920 (просьба владельца), 6 на
+   1440, 8 на телефоне, где корень возвращается к 16. */
+.brief__count { padding: 0.5rem 0; }
 .brief__count + .brief__count { border-top: 1px solid var(--line-soft); }
 .brief__count:last-child { padding-bottom: 0; }
+
+/* На залитой карточке опись — цветом карточки, как счёт в строке списка (20
+   сентября 2026, просьба владельца): приглушённый на цветной заливке терялся.
+   Черта между строками светлеет вместе с ним. */
+@media (hover: hover) {
+  .brief[data-hot]:hover .brief__counts { color: inherit; }
+  .brief[data-hot]:hover .brief__count + .brief__count { border-top-color: currentColor; }
+}
+@media (hover: none) {
+  .brief[data-hot]:active .brief__counts { color: inherit; }
+  .brief[data-hot]:active .brief__count + .brief__count { border-top-color: currentColor; }
+}

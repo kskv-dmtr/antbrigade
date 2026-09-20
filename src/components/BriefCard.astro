@@ -41,7 +41,7 @@ const { href, name, note, left, right, covers, counts } = Astro.props;
   {covers !== undefined && (
     <span class="brief__art" aria-hidden="true" data-covers={covers.join(' ')}>
       {covers[0] && (
-        <img src={адрес(covers[0])} alt="" width="400" height="400" loading="lazy" decoding="async" />
+        <img data-kind={covers[0][0]} src={адрес(covers[0])} alt="" width="400" height="400" loading="lazy" decoding="async" />
       )}
     </span>
   )}
@@ -80,6 +80,9 @@ const { href, name, note, left, right, covers, counts } = Astro.props;
     const картинка = поле.querySelector('img');
     if (метки.length < 2 || !картинка) continue;
 
-    картинка.src = адрес(метки[Math.floor(Math.random() * метки.length)]);
+    const метка = метки[Math.floor(Math.random() * метки.length)];
+    // Кадр клипа шире обложки — рода картинки держится стиль, см. global.css.
+    картинка.dataset.kind = метка[0];
+    картинка.src = адрес(метка);
   }
 </script>

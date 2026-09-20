@@ -7,7 +7,16 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { genres, typeLine, typeParts } from '../../lib/db.js';
+import { genres, typeLine, typeParts, albumById, plural } from '../../lib/db.js';
+
+/* Сколько разных исполнителей в жанре — тегом в строке, на месте страны у
+   исполнителей и лейблов (20 сентября 2026, просьба владельца). Считаем по
+   релизам жанра: у релиза бывает несколько авторов, поэтому по множеству. */
+const исполнителей = (albumIds = []) => {
+  const кто = new Set();
+  for (const id of albumIds) for (const a of albumById.get(id)?.artistIds ?? []) кто.add(a);
+  return plural(кто.size, 'Artist', 'Artists');
+};
 
 /* Счёт исполнителей в жанре — по его же релизам, через Set — считался здесь
    несколько часов 11 сентября 2026 и стоял второй величиной в карточке.
@@ -124,7 +133,10 @@ let выведено = 0;
               {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/genres/${genre.slug}`}>
-                <span class="row__line"><span class="row__title">{genre.name}</span></span>
+                <span class="row__line"><span class="row__title">{genre.name}</span>
+                  {/* Число исполнителей — в рамке, как страна у исполнителей и
+                      лейблов (20 сентября 2026, просьба владельца). */}
+                  <span class="row__meta row__types"><span class="row__type">{исполнителей(genre.albumIds)}</span></span></span>
                 <span class="row__line"><span class="row__sub">{typeLine(genre.albumIds)}</span></span>
               </a>
             </div>

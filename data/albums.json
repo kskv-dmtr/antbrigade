@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-19T23:09:42Z",
+  "generatedAt": "2026-09-20T12:25:25Z",
   "counts": {
     "albums": 1401,
     "artists": 1185,
@@ -38235,7 +38235,9 @@
         "Nu-Disco",
         "Afro-Funk"
       ],
-      "types": [],
+      "types": [
+        "Album"
+      ],
       "released": "2021-02-05",
       "year": 2021,
       "origYear": null,

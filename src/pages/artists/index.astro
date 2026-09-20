@@ -13,8 +13,8 @@ import { artists, plural, countryName } from '../../lib/db.js';
    исполнителя с одними клипами стоит «3 videos», а не «0 releases · 3
    videos» (20 сентября 2026, просьба владельца). */
 const счётИсполнителя = (a) => [
-  a.albumIds?.length ? plural(a.albumIds.length, 'release', 'releases') : '',
-  a.videoIds?.length ? plural(a.videoIds.length, 'video', 'videos') : ''
+  a.albumIds?.length ? plural(a.albumIds.length, 'Release', 'Releases') : '',
+  a.videoIds?.length ? plural(a.videoIds.length, 'Video', 'Videos') : ''
 ].filter(Boolean).join(' · ');
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.

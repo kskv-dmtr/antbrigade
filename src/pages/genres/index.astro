@@ -125,7 +125,7 @@ let выведено = 0;
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/genres/${genre.slug}`}>
                 <span class="row__line"><span class="row__title">{genre.name}</span></span>
-                <span class="row__line"><span class="row__sub">{plural(genre.count, 'release', 'releases')}</span></span>
+                <span class="row__line"><span class="row__sub">{plural(genre.count, 'Release', 'Releases')}</span></span>
               </a>
             </div>
 
@@ -135,7 +135,7 @@ let выведено = 0;
             <BriefCard
               href={`/genres/${genre.slug}`}
               name={genre.name}
-              left={plural(genre.count, 'release', 'releases')}
+              left={plural(genre.count, 'Release', 'Releases')}
             />
           </li>
         ))}

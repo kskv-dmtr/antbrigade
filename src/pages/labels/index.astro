@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { labels, plural } from '../../lib/db.js';
+import { labels, plural, countryName } from '../../lib/db.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -123,8 +123,8 @@ let выведено = 0;
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/labels/${l.slug}`}>
                 <span class="row__line"><span class="row__title">{l.name}</span>
-                  {/* Страна — кодом в рамке, как тип релиза на /music (20 сентября 2026). */}
-                  <span class="row__meta row__types">{l.country && <span class="row__type">{l.country}</span>}</span></span>
+                  {/* Страна — названием в рамке, как тип релиза на /music (20 сентября 2026). */}
+                  <span class="row__meta row__types">{l.country && <span class="row__type">{countryName(l.country)}</span>}</span></span>
                 <span class="row__line"><span class="row__sub">{plural(l.albumIds.length, 'release', 'releases')}</span></span>
               </a>
             </div>

@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-20T16:50:43Z",
+  "generatedAt": "2026-09-20T22:28:56Z",
   "counts": {
-    "albums": 1401,
+    "albums": 1402,
     "artists": 1185,
     "labels": 743,
     "videos": 102
@@ -101,6 +101,37 @@
       ],
       "labels": [
         "Current Moves"
+      ]
+    },
+    {
+      "id": "3e14129a-8c52-80ed-a568-eff273e903e5",
+      "slug": "wau-wau-collectif-teranga",
+      "artist": "Wau Wau Collectif",
+      "album": "Teranga",
+      "url": "https://album.link/cxkx6qxcrqvrc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abecd0f22-b5d0-43a8-b9f2-14ff43643886%3Aa1347577906_10.jpg?table=block&id=3e14129a-8c52-80ed-a568-eff273e903e5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "West African Music",
+        "Wolof Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3bd4129a-8c52-80d2-9c62-cc349cdc7b48"
+      ],
+      "artists": [
+        "Wau Wau Collectif"
+      ],
+      "labelIds": [
+        "3bd4129a-8c52-8057-9733-ef7165204d13"
+      ],
+      "labels": [
+        "Sahel Sounds"
       ]
     },
     {
@@ -34199,7 +34230,7 @@
     {
       "id": "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb",
       "slug": "etran-de-l-air-agadez",
-      "artist": "Etran de L'AÏr",
+      "artist": "Etran de L'Aïr",
       "album": "Agadez",
       "url": "https://album.link/990rjnncj5tcm",
       "cover": "https://antbrigade.notion.site/image/attachment%3A6ec99402-47f7-4e88-b085-266e758558ed%3Aa1658507371_10.jpg?table=block&id=3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
@@ -34218,7 +34249,7 @@
         "3bd4129a-8c52-80df-ab67-f7fdf0d9c626"
       ],
       "artists": [
-        "Etran de L'AÏr"
+        "Etran de L'Aïr"
       ],
       "labelIds": [
         "3bd4129a-8c52-8057-9733-ef7165204d13"
@@ -50966,7 +50997,7 @@
     {
       "id": "3bd4129a-8c52-80df-ab67-f7fdf0d9c626",
       "slug": "etran-de-l-air",
-      "name": "Etran de L'AÏr",
+      "name": "Etran de L'Aïr",
       "country": "NE",
       "bandcamp": "https://etrandelair.bandcamp.com/music",
       "bandcamp2": null,
@@ -69029,12 +69060,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e14129a-8c52-80ed-a568-eff273e903e5",
         "3bd4129a-8c52-806e-b8f9-ce9f11998292"
       ],
       "genres": [
         "West African Music",
-        "Spiritual Jazz",
-        "Wolof Music"
+        "Wolof Music",
+        "Spiritual Jazz"
       ],
       "labelIds": [
         "3bd4129a-8c52-8057-9733-ef7165204d13"
@@ -79920,12 +79952,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e14129a-8c52-80ed-a568-eff273e903e5",
         "3bd4129a-8c52-80f7-a4c7-dc4fbdbd1aeb",
         "3bd4129a-8c52-806e-b8f9-ce9f11998292"
       ],
       "artistIds": [
-        "3bd4129a-8c52-80df-ab67-f7fdf0d9c626",
-        "3bd4129a-8c52-80d2-9c62-cc349cdc7b48"
+        "3bd4129a-8c52-80d2-9c62-cc349cdc7b48",
+        "3bd4129a-8c52-80df-ab67-f7fdf0d9c626"
       ]
     },
     {

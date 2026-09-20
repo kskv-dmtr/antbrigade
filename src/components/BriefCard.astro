@@ -26,10 +26,11 @@ const { href, name, note, left, right, cover, counts } = Astro.props;
       Г-образные фигуры, как у обложки на странице релиза, по центру —
       квадратом обложка свежего релиза исполнителя. cover === undefined —
       рамки нет вовсе (лейблы, жанры); null — рамка без обложки. */}
-  {cover !== undefined && (
-    <span class="brief__art" aria-hidden="true">
-      {cover && <img src={cover} alt="" width="400" height="400" loading="lazy" decoding="async" />}
-    </span>
+  {/* Миниатюра — обложка одного из релизов записи, выбранная наугад при
+      сборке: квадрат в четверть карточки, ровно по её середине (20 сентября
+      2026, проба владельца). */}
+  {cover && (
+    <img class="brief__thumb" src={cover} alt="" width="400" height="400" loading="lazy" decoding="async" />
   )}
   <span class="brief__line">
     <span class="brief__name">{name}</span>

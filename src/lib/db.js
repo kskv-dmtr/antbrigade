@@ -337,3 +337,15 @@ export function typeParts(albumIds = [], videoIds = []) {
 
 /* Та же опись одной строкой, через точку — для строки списка. */
 export const typeLine = (albumIds, videoIds) => typeParts(albumIds, videoIds).join(' · ');
+
+/* Обложка одного из релизов, выбранная наугад при сборке (20 сентября 2026):
+   миниатюра в карточке указателя и в находке поиска. У кого релиз один,
+   выбирать не из чего. Нет ни одной обложки — null. */
+export function randomCover(albumIds = [], size = 400) {
+  const есть = albumIds
+    .map((id) => albumById.get(id))
+    .filter((al) => al?.cover);
+
+  if (!есть.length) return null;
+  return coverSrc(есть[Math.floor(Math.random() * есть.length)], size);
+}

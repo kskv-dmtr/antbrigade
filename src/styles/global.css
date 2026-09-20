@@ -6405,3 +6405,20 @@ html:not([data-js]) .more { display: none; }
   .brief[data-hot]:active .brief__counts { color: inherit; }
   .brief[data-hot]:active .brief__count + .brief__count { border-top-color: currentColor; }
 }
+
+/* Миниатюра в карточке указателя — квадрат в четверть карточки, ровно по её
+   середине (20 сентября 2026, проба владельца). Слоем поверх поля: в потоке
+   она раздвигала бы имя и опись, а карточка должна остаться квадратной.
+   Нажатие берёт на себя сама карточка — картинка его не перехватывает. */
+.brief { position: relative; }
+.brief__thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

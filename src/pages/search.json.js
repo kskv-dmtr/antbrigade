@@ -11,7 +11,7 @@
    Род — то, что стоит в рамке справа от находки: у релиза его тип («Album»,
    «EP»), у ролика — вид («Official Video»); с 20 сентября 2026, просьба
    владельца, до того стояли общие «release» и «video». У исполнителя, лейбла
-   и жанра — слово рода. Род лежит у всех записей и всегда седьмым: скрипт
+   и жанра — слово рода (Artist, Label, Genre). Род лежит у всех записей и всегда седьмым: скрипт
    поля дописывает к записи свои поля (свёрнутые имя и подпись), и место рода
    должно быть постоянным.
 
@@ -33,8 +33,8 @@
 
 import {
   albums, artists, labels, genres, videos,
-  artistLine, videoTitle, videoArtists,
-  albumById, videoById, coverSrc, thumbSrc, plural
+  artistLine, videoTitle, videoArtists, typeLine,
+  albumById, videoById, coverSrc, thumbSrc
 } from '../lib/db.js';
 
 const обложка = (al) => {
@@ -58,15 +58,6 @@ const свежий = (ids = []) => {
   }
   return лучший;
 };
-/* Пометка у исполнителя, лейбла и жанра — готовой строкой: «2 releases ·
-   3 videos» (клипы — только у исполнителя и только если они есть; 19
-   сентября 2026, просьба владельца). Нулевые релизы при клипах не пишем (20
-   сентября 2026): «3 videos», а не «0 releases · 3 videos». В подпись её не кладём: подпись
-   участвует в поиске, и «releases» находило бы всех исполнителей разом. */
-const счёт = (релизов = 0, клипов = 0) =>
-  [релизов || !клипов ? plural(релизов, 'release', 'releases') : '', клипов ? plural(клипов, 'video', 'videos') : '']
-    .filter(Boolean).join(' · ');
-
 const миниатюра = (albumIds, videoIds = []) => {
   const al = свежий(albumIds);
   if (al) { const c = обложка(al); if (c) return c; }
@@ -81,8 +72,8 @@ export function GET() {
      чаще то, что искали, чем одноимённый релиз. */
   for (const a of artists) {
     записи.push(['a', a.name, `/artists/${a.slug}`,
-      '', счёт(a.albumIds?.length, a.videoIds?.length),
-      миниатюра(a.albumIds, a.videoIds), 'artist']);
+      '', typeLine(a.albumIds, a.videoIds),
+      миниатюра(a.albumIds, a.videoIds), 'Artist']);
   }
 
   for (const al of albums) {
@@ -97,12 +88,12 @@ export function GET() {
 
   for (const l of labels) {
     записи.push(['l', l.name, `/labels/${l.slug}`,
-      '', счёт(l.albumIds?.length),
-      миниатюра(l.albumIds), 'label']);
+      '', typeLine(l.albumIds),
+      миниатюра(l.albumIds), 'Label']);
   }
 
   for (const g of genres) {
-    записи.push(['g', g.name, `/genres/${g.slug}`, '', счёт(g.count), миниатюра(g.albumIds), 'genre']);
+    записи.push(['g', g.name, `/genres/${g.slug}`, '', typeLine(g.albumIds), миниатюра(g.albumIds), 'Genre']);
   }
 
   return new Response(JSON.stringify(записи), {

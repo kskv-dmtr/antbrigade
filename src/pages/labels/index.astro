@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { labels, plural, countryName } from '../../lib/db.js';
+import { labels, countryName, typeLine } from '../../lib/db.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -125,14 +125,14 @@ let выведено = 0;
                 <span class="row__line"><span class="row__title">{l.name}</span>
                   {/* Страна — названием в рамке, как тип релиза на /music (20 сентября 2026). */}
                   <span class="row__meta row__types">{l.country && <span class="row__type">{countryName(l.country)}</span>}</span></span>
-                <span class="row__line"><span class="row__sub">{plural(l.albumIds.length, 'Release', 'Releases')}</span></span>
+                <span class="row__line"><span class="row__sub">{typeLine(l.albumIds)}</span></span>
               </a>
             </div>
 
             <BriefCard
               href={`/labels/${l.slug}`}
               name={l.name}
-              left={plural(l.albumIds.length, 'Release', 'Releases')}
+              left={typeLine(l.albumIds)}
             />
           </li>
         ))}

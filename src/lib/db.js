@@ -301,3 +301,37 @@ export function artistLine(album) {
   );
   return names.length > 1 ? names.join(' · ') : album.artist;
 }
+
+/* Счёт по типам — под именем исполнителя, лейбла и жанра: «2 Albums · 1 EP ·
+   3 Official Videos» (20 сентября 2026, просьба владельца; до того — общее
+   «N releases · N videos»).
+
+   Релиз считается по первому своему типу: у двух дюжин из 1401 их два
+   («Album · Collaboration»), и счёт по обоим давал бы в сумме больше, чем
+   релизов. Ролики — по виду из Notion, как он там назван.
+
+   Порядок родов постоянный, а не по величине: глаз привыкает к одному и
+   тому же ряду, а числа в нём меняются от записи к записи. Неизвестный род
+   (заведут в Notion новый) встаёт в конец, по алфавиту.
+
+   Множественное — буквой s: все рода английские и считаются обычным
+   образом, включая «EPs» и «Official Videos». */
+const РОДЫ = ['Album', 'EP', 'Single', 'Compilation', 'Collaboration',
+              'Official Video', 'Official Visualizer', 'Live Performance'];
+
+export function typeLine(albumIds = [], videoIds = []) {
+  const счёт = new Map();
+  const добавить = (род) => род && счёт.set(род, (счёт.get(род) ?? 0) + 1);
+
+  for (const id of albumIds) добавить(albumById.get(id)?.types?.[0]);
+  for (const id of videoIds) добавить(videoById.get(id)?.kind);
+
+  return [...счёт.entries()]
+    .sort((a, b) => {
+      const i = РОДЫ.indexOf(a[0]), j = РОДЫ.indexOf(b[0]);
+      if (i !== j) return (i < 0 ? РОДЫ.length : i) - (j < 0 ? РОДЫ.length : j);
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([род, n]) => `${n} ${род}${n === 1 ? '' : 's'}`)
+    .join(' · ');
+}

@@ -7,15 +7,11 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { artists, plural, countryName } from '../../lib/db.js';
+import { artists, countryName, typeLine } from '../../lib/db.js';
 
-/* Счёт под именем: релизы и клипы через точку, нулевое не пишем — у
-   исполнителя с одними клипами стоит «3 videos», а не «0 releases · 3
-   videos» (20 сентября 2026, просьба владельца). */
-const счётИсполнителя = (a) => [
-  a.albumIds?.length ? plural(a.albumIds.length, 'Release', 'Releases') : '',
-  a.videoIds?.length ? plural(a.videoIds.length, 'Video', 'Videos') : ''
-].filter(Boolean).join(' · ');
+/* Счёт под именем — по типам: «2 Albums · 1 EP · 3 Official Videos» (20
+   сентября 2026, просьба владельца). Собирает его typeLine в db.js. */
+const счётИсполнителя = (a) => typeLine(a.albumIds, a.videoIds);
 
 // Группировка по первой букве, чтобы 935 имён можно было просматривать глазами.
 function bucket(name) {

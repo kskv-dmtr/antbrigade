@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { genres, plural } from '../../lib/db.js';
+import { genres, typeLine } from '../../lib/db.js';
 
 /* Счёт исполнителей в жанре — по его же релизам, через Set — считался здесь
    несколько часов 11 сентября 2026 и стоял второй величиной в карточке.
@@ -125,7 +125,7 @@ let выведено = 0;
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/genres/${genre.slug}`}>
                 <span class="row__line"><span class="row__title">{genre.name}</span></span>
-                <span class="row__line"><span class="row__sub">{plural(genre.count, 'Release', 'Releases')}</span></span>
+                <span class="row__line"><span class="row__sub">{typeLine(genre.albumIds)}</span></span>
               </a>
             </div>
 
@@ -135,7 +135,7 @@ let выведено = 0;
             <BriefCard
               href={`/genres/${genre.slug}`}
               name={genre.name}
-              left={plural(genre.count, 'Release', 'Releases')}
+              left={typeLine(genre.albumIds)}
             />
           </li>
         ))}

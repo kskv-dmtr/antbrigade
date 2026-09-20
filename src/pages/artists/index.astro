@@ -128,8 +128,9 @@ let выведено = 0;
               <a class="row row--release row--name" href={`/artists/${a.slug}`}>
                 <span class="row__line"><span class="row__title">{a.name}</span>
                   {/* Страна — названием в рамке, как тип релиза на /music (20 сентября
-                      2026, просьба владельца). Нет страны — нет и рамки. */}
-                  <span class="row__meta row__types">{a.country && <span class="row__type">{countryName(a.country)}</span>}</span></span>
+                      2026, просьба владельца). Без страны в базе один — Various
+                      Artists, и у него в рамке Worldwide: сборники со всего света. */}
+                  <span class="row__meta row__types"><span class="row__type">{a.country ? countryName(a.country) : 'Worldwide'}</span></span></span>
                 <span class="row__line"><span class="row__sub">{счётИсполнителя(a)}</span></span>
               </a>
             </div>

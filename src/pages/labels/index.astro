@@ -123,8 +123,10 @@ let выведено = 0;
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/labels/${l.slug}`}>
                 <span class="row__line"><span class="row__title">{l.name}</span>
-                  {/* Страна — названием в рамке, как тип релиза на /music (20 сентября 2026). */}
-                  <span class="row__meta row__types">{l.country && <span class="row__type">{countryName(l.country)}</span>}</span></span>
+                  {/* Страна — названием в рамке, как тип релиза на /music (20 сентября
+                      2026). Без страны в базе один — «Not on Label», и у него в
+                      рамке Worldwide: это не лейбл, а его отсутствие. */}
+                  <span class="row__meta row__types"><span class="row__type">{l.country ? countryName(l.country) : 'Worldwide'}</span></span></span>
                 <span class="row__line"><span class="row__sub">{typeLine(l.albumIds)}</span></span>
               </a>
             </div>

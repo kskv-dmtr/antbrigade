@@ -22,12 +22,25 @@
 <script>
   /* Скрипт собирается один раз на страницу, сколько бы таких пар на ней ни
      стояло. */
-  for (const кнопка of document.querySelectorAll('.view-pick__opt')) {
-    кнопка.addEventListener('click', () => {
-      const вид = кнопка.dataset.viewOpt;
+  const поставить = (вид) => {
+    document.documentElement.dataset.view = вид;
+    try { localStorage.setItem('view', вид); } catch (e) {}
+  };
 
-      document.documentElement.dataset.view = вид;
-      try { localStorage.setItem('view', вид); } catch (e) {}
-    });
+  for (const кнопка of document.querySelectorAll('.view-pick__opt')) {
+    кнопка.addEventListener('click', () => поставить(кнопка.dataset.viewOpt));
   }
+
+  /* Клавиши G и L переключают вид — как F открывает отборы, а косая черта
+     поиск (20 сентября 2026, просьба владельца). По коду клавиши, а не по
+     букве: в русской раскладке на тех же местах «П» и «Д». Сочетания не
+     трогаем, и пока человек набирает текст, буква должна набраться. */
+  addEventListener('keydown', (e) => {
+    const вид = e.code === 'KeyG' ? 'grid' : e.code === 'KeyL' ? 'list' : null;
+    if (!вид || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+    const где = document.activeElement;
+    if (где && (где.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(где.tagName))) return;
+    e.preventDefault();
+    поставить(вид);
+  });
 </script>

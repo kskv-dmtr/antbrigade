@@ -359,12 +359,13 @@ export function coverMarks(albumIds = [], videoIds = []) {
     if (m) метки.push('c' + m[1]);
   }
 
-  if (!метки.length) {
-    for (const id of videoIds) {
-      const src = thumbSrc(videoById.get(id), 480);
-      const m = src && src.match(/^\/videos\/(.+)-480\.webp$/);
-      if (m) метки.push('v' + m[1]);
-    }
+  /* Кадры клипов идут наравне с обложками, а не только когда релизов нет
+     (20 сентября 2026, просьба владельца): у кого одни клипы, карточка не
+     выбивается — обложка в ней меняется так же, как у соседей. */
+  for (const id of videoIds) {
+    const src = thumbSrc(videoById.get(id), 480);
+    const m = src && src.match(/^\/videos\/(.+)-480\.webp$/);
+    if (m) метки.push('v' + m[1]);
   }
 
   for (let i = метки.length - 1; i > 0; i--) {

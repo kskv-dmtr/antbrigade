@@ -6,7 +6,14 @@
 
    Строка записи — массив, а не объект: имена ключей повторились бы на каждой
    из трёх с половиной тысяч записей и заняли бы больше самих значений.
-   Порядок такой: тип, имя, адрес, подпись, пометка справа, миниатюра.
+   Порядок такой: тип, имя, адрес, подпись, пометка справа, миниатюра, род.
+
+   Род — то, что стоит в рамке справа от находки: у релиза его тип («Album»,
+   «EP»), у ролика — вид («Official Video»); с 20 сентября 2026, просьба
+   владельца, до того стояли общие «release» и «video». У исполнителя, лейбла
+   и жанра — слово рода. Род лежит у всех записей и всегда седьмым: скрипт
+   поля дописывает к записи свои поля (свёрнутые имя и подпись), и место рода
+   должно быть постоянным.
 
    Страны у исполнителя и лейбла в подписи нет — с 19 сентября 2026 (просьба
    владельца): подпись у них — один счёт релизов.
@@ -75,25 +82,27 @@ export function GET() {
   for (const a of artists) {
     записи.push(['a', a.name, `/artists/${a.slug}`,
       '', счёт(a.albumIds?.length, a.videoIds?.length),
-      миниатюра(a.albumIds, a.videoIds)]);
+      миниатюра(a.albumIds, a.videoIds), 'artist']);
   }
 
   for (const al of albums) {
-    записи.push(['r', al.album, `/music/${al.slug}`, artistLine(al), String(al.year ?? ''), обложка(al)]);
+    записи.push(['r', al.album, `/music/${al.slug}`, artistLine(al), String(al.year ?? ''), обложка(al),
+      al.types?.[0] ?? 'release']);
   }
 
   for (const v of videos) {
-    записи.push(['v', videoTitle(v), `/video/${v.slug}`, videoArtists(v), String(v.year ?? ''), кадр(v)]);
+    записи.push(['v', videoTitle(v), `/video/${v.slug}`, videoArtists(v), String(v.year ?? ''), кадр(v),
+      v.kind ?? 'video']);
   }
 
   for (const l of labels) {
     записи.push(['l', l.name, `/labels/${l.slug}`,
       '', счёт(l.albumIds?.length),
-      миниатюра(l.albumIds)]);
+      миниатюра(l.albumIds), 'label']);
   }
 
   for (const g of genres) {
-    записи.push(['g', g.name, `/genres/${g.slug}`, '', счёт(g.count), миниатюра(g.albumIds)]);
+    записи.push(['g', g.name, `/genres/${g.slug}`, '', счёт(g.count), миниатюра(g.albumIds), 'genre']);
   }
 
   return new Response(JSON.stringify(записи), {

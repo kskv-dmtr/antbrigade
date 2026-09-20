@@ -6418,3 +6418,45 @@ html:not([data-js]) .more { display: none; }
   .brief[data-hot]:active .brief__sub { color: inherit; }
 }
 
+
+/* ------------------------------------------------- горячие клавиши
+
+   Строка под подвалом: слева «Keyboard Shortcuts», справа сами клавиши —
+   только на широком экране (20 сентября 2026, просьба владельца).
+
+   Черта сверху с полями по 16 от краёв кадра: подвал держит своё поле
+   переменной --pad (12 на 1440, 16 на 1920 и на телефоне), а здесь нужно
+   ровно 16 — разницу добираем полем строки. */
+.keys { display: none; }
+
+@media (min-width: 641px) {
+  .keys {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-inline: calc(16px - var(--pad));
+    padding: 0.875rem 0;
+    color: var(--fg-dim);
+    border-top: 1px solid var(--line);
+  }
+
+  /* Клавиши идут в строку и переносятся вместе со своим словом: на узком
+     экране «Filters» и его рамка не должны оказаться на разных строках. */
+  .keys__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem 1rem;
+  }
+  .keys__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    white-space: nowrap;
+  }
+  /* Запятая между парами — не знаком в разметке, а псевдоэлементом: в
+     разметке она липла бы к рамке клавиши или уезжала на другую строку. */
+  .keys__item:not(:last-child)::after { content: ","; }
+  .keys__item .search__kbd + .search__kbd { margin-left: -0.125rem; }
+}

@@ -436,6 +436,25 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         </div>
       </div>
     </div>
+
+    {/* Горячие клавиши — отдельной строкой под подвалом, на широком экране
+        (20 сентября 2026, просьба владельца). На телефоне их нет: нажимать
+        нечем. Черта сверху идёт не во всю ширину кадра, а с полями по 16,
+        как поля текста в подвале над ней.
+
+        Клавиши — в рамке, теми же квадратами, что подсказки в панели
+        поиска; Enter словом — он в квадрат не встаёт. */}
+    <div class="keys mono mono--sm">
+      <span class="keys__title">Keyboard Shortcuts</span>
+      <span class="keys__list">
+        <span class="keys__item">Navigate <kbd class="search__kbd">↑</kbd><kbd class="search__kbd">↓</kbd></span>
+        <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
+        <span class="keys__item">Grid <kbd class="search__kbd">G</kbd></span>
+        <span class="keys__item">List <kbd class="search__kbd">L</kbd></span>
+        <span class="keys__item">Filters <kbd class="search__kbd">F</kbd></span>
+        <span class="keys__item">Open <kbd class="search__kbd search__kbd--word">Enter</kbd></span>
+      </span>
+    </div>
   </footer>
 
   <script>

@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-21T19:32:18Z",
+  "generatedAt": "2026-09-21T23:18:37Z",
   "counts": {
-    "albums": 1404,
-    "artists": 1186,
+    "albums": 1407,
+    "artists": 1189,
     "labels": 745,
     "videos": 103
   },
@@ -1117,6 +1117,37 @@
       ],
       "labels": [
         "Brain Floss Records"
+      ]
+    },
+    {
+      "id": "3e24129a-8c52-80d2-b747-c44ae2480e9f",
+      "slug": "gi-gi-in-lieu",
+      "artist": "Gi Gi",
+      "album": "In Lieu",
+      "url": "https://album.link/gb9wmhbqjkngw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A54c0db7d-e15b-4401-aff9-197840e4946f%3Aa3138037821_10.jpg?table=block&id=3e24129a-8c52-80d2-b747-c44ae2480e9f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Downtempo",
+        "Ambient Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-17",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e24129a-8c52-80ca-90e1-d6486de15eb3"
+      ],
+      "artists": [
+        "Gi Gi"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80d7-bfc8-eb6744309e44"
+      ],
+      "labels": [
+        "Mood Hut"
       ]
     },
     {
@@ -30776,8 +30807,8 @@
       "url": "https://album.link/jqx2cz876fhhz",
       "cover": "https://antbrigade.notion.site/image/attachment%3A33263d7c-d664-477d-83e1-57328b29eae0%3Aa1467478603_10.jpg?table=block&id=eee95c81-4b57-42c1-aa04-141565c99615&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Indie",
-        "Pop"
+        "Bedroom Pop",
+        "Alt-Pop"
       ],
       "types": [
         "Album"
@@ -43884,6 +43915,68 @@
       ]
     },
     {
+      "id": "3e24129a-8c52-803e-86e4-cf20ff4ccad0",
+      "slug": "the-marked-men-fix-my-brain",
+      "artist": "The Marked Men",
+      "album": "Fix My Brain",
+      "url": "https://album.link/gpxqjpfsw5x6d",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae7676de4-55d3-4fe6-9b74-57109669d996%3Aa0480124315_10.jpg?table=block&id=3e24129a-8c52-803e-86e4-cf20ff4ccad0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Garage Punk",
+        "Punk Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2006-05-16",
+      "year": 2006,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e24129a-8c52-8003-97ef-d2f796873513"
+      ],
+      "artists": [
+        "The Marked Men"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80a3-935f-cd2ee01127fa"
+      ],
+      "labels": [
+        "Dirtnap Records"
+      ]
+    },
+    {
+      "id": "3e24129a-8c52-8057-a5fd-c3ed839506dd",
+      "slug": "enemy-you-stories-never-told",
+      "artist": "Enemy You",
+      "album": "Stories Never Told",
+      "url": "https://album.link/rr6mpwr9jt8cv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A17160da2-a470-4194-910b-c624840efa2d%3Aab67616d0000b2735fe1182be60c55d4a572d72a.jpg?table=block&id=3e24129a-8c52-8057-a5fd-c3ed839506dd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2004-11-23",
+      "year": 2004,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e24129a-8c52-808d-a408-f9ce8ca61324"
+      ],
+      "artists": [
+        "Enemy You"
+      ],
+      "labelIds": [
+        "2524129a-8c52-800d-a34e-c7c8cb00d232"
+      ],
+      "labels": [
+        "Red Scare Industries"
+      ]
+    },
+    {
       "id": "3db4129a-8c52-8099-9a98-c7d68186e6e4",
       "slug": "ralph-myerz-and-the-jack-herren-band-a-special-album",
       "artist": "Ralph Myerz and The Jack Herren Band",
@@ -45403,8 +45496,8 @@
         "eee95c81-4b57-42c1-aa04-141565c99615"
       ],
       "genres": [
-        "Indie",
-        "Pop"
+        "Bedroom Pop",
+        "Alt-Pop"
       ],
       "labelIds": [
         "24e4129a-8c52-802e-bbee-e55d92264c92"
@@ -50939,6 +51032,27 @@
       "akaIds": []
     },
     {
+      "id": "3e24129a-8c52-808d-a408-f9ce8ca61324",
+      "slug": "enemy-you",
+      "name": "Enemy You",
+      "country": "US",
+      "bandcamp": "https://enemyyou.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-8057-a5fd-c3ed839506dd"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "labelIds": [
+        "2524129a-8c52-800d-a34e-c7c8cb00d232"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-8080-94f3-eac240b50996",
       "slug": "enforced",
       "name": "Enforced",
@@ -52724,6 +52838,27 @@
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b",
         "2504129a-8c52-8045-9ebb-f93a5767b17a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e24129a-8c52-80ca-90e1-d6486de15eb3",
+      "slug": "gi-gi",
+      "name": "Gi Gi",
+      "country": "US",
+      "bandcamp": "https://gi-gi.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-80d2-b747-c44ae2480e9f"
+      ],
+      "genres": [
+        "Downtempo",
+        "Ambient Dub"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80d7-bfc8-eb6744309e44"
       ],
       "videoIds": [],
       "akaIds": []
@@ -66162,7 +66297,7 @@
       "slug": "the-bollweevils",
       "name": "The Bollweevils",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://thebollweevils.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -66722,6 +66857,27 @@
       "akaIds": []
     },
     {
+      "id": "3e24129a-8c52-8003-97ef-d2f796873513",
+      "slug": "the-marked-men",
+      "name": "The Marked Men",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-803e-86e4-cf20ff4ccad0"
+      ],
+      "genres": [
+        "Garage Punk",
+        "Punk Rock"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80a3-935f-cd2ee01127fa"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3ad4129a-8c52-80d6-9b05-fe55e3d622c6",
       "slug": "the-menzingers",
       "name": "The Menzingers",
@@ -67144,7 +67300,7 @@
       "slug": "the-riptides",
       "name": "The Riptides",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://theriptides.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -73224,12 +73380,14 @@
       "albumIds": [
         "3594129a-8c52-80ca-8177-f96e0b028253",
         "1fc4129a-8c52-8068-8523-c02520cc10ea",
-        "8db88dd3-f26b-4ca9-968e-18058276427a"
+        "8db88dd3-f26b-4ca9-968e-18058276427a",
+        "3e24129a-8c52-803e-86e4-cf20ff4ccad0"
       ],
       "artistIds": [
         "3594129a-8c52-80ac-aff4-f7799db06837",
         "24a4129a-8c52-8019-a5ba-d2c653acd92a",
-        "2514129a-8c52-806a-9413-d19b23f3d0c6"
+        "2514129a-8c52-806a-9413-d19b23f3d0c6",
+        "3e24129a-8c52-8003-97ef-d2f796873513"
       ]
     },
     {
@@ -77248,11 +77406,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e24129a-8c52-80d2-b747-c44ae2480e9f",
         "2764129a-8c52-80dd-93b7-cc96b5a9f606",
         "20cab501-5a46-4c6f-803e-be57b2c74074",
         "4b01b244-0dbf-4d84-9566-98637efcaf61"
       ],
       "artistIds": [
+        "3e24129a-8c52-80ca-90e1-d6486de15eb3",
         "2764129a-8c52-80c8-a294-ef144f1215ba",
         "24f4129a-8c52-80a7-b6bf-cb1a3aaa1d5f",
         "2504129a-8c52-80fd-a074-c06e7b6a1fbf"
@@ -79536,14 +79696,16 @@
       "slug": "red-scare-industries",
       "name": "Red Scare Industries",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://redscareindustries.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "05ba2d93-2a4b-41b0-8f3f-ad015b79debf"
+        "05ba2d93-2a4b-41b0-8f3f-ad015b79debf",
+        "3e24129a-8c52-8057-a5fd-c3ed839506dd"
       ],
       "artistIds": [
-        "2524129a-8c52-80b8-9603-da9f788bce11"
+        "2524129a-8c52-80b8-9603-da9f788bce11",
+        "3e24129a-8c52-808d-a408-f9ce8ca61324"
       ]
     },
     {

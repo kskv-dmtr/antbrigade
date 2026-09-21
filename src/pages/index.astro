@@ -81,10 +81,14 @@ const pool = shuffle(albums);
       «releases.»: первой строкой описание, второй оба обещания вместе. Так
       решено 17 сентября 2026; перенос задан стилем (lead__note--steps), а не
       оставлен ширине экрана, которая ломала то после «No algorithm.», то
-      после «releases.». От 641 всё в одну строку. */}
+      после «releases.». От 641 всё в одну строку.
+
+      Набрана как в предложении, а не прописными, как остальные такие строки
+      сайта (lead__note--sentence), — решение владельца 21 сентября 2026:
+      это фраза, а не служебная пометка. */}
   <div class="lead">
     <h1 class="item__title">Lucky Finds</h1>
-    <p class="lead__note lead__note--steps"><span>Some random releases.</span> <span class="nb">No algorithm.</span> <span class="nb">No order.</span></p>
+    <p class="lead__note lead__note--steps lead__note--sentence"><span>Some random releases.</span> <span class="nb">No algorithm.</span> <span class="nb">No order.</span></p>
   </div>
 
   <RandomPicks pool={pool} />

@@ -47,11 +47,13 @@ const labels = [...labelCounts.entries()]
   title={`${genre.name} · ant brigade`}
   description={`${genre.name}: ${plural(releases.length, 'release', 'releases')} in the collection.`}
   image={coverSrc(releases.find((a) => a.cover), 800)}
+  shortcuts="info"
 >
   {/* Полоса «назад» — как на остальных внутренних страницах. */}
   {/* Три строки, как у исполнителя: имя, полоса «Info», справка. У жанра ни
-      страны, ни переходов наружу нет; справки две — исполнители слева, лейблы
-      справа, и обе собраны из его релизов. */}
+      страны, ни переходов наружу нет; столбцов два — Artists и Labels, оба
+      собраны из его релизов. Пустой не выводится, оставшийся — во всю ширину
+      (с 22 сентября 2026). */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={genre.name} /></h1>
   </div>
@@ -78,9 +80,11 @@ const labels = [...labelCounts.entries()]
         </div>
       </summary>
 
-      <div class="info">
-        <dl class="item__facts">
-          {roster.length > 0 && (
+      {/* Справка — столбцами, как у исполнителя и лейбла: Artists, Labels
+          (22 сентября 2026, просьба владельца). */}
+      <div class="info info--auto">
+        {roster.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
               <dd>
@@ -92,13 +96,13 @@ const labels = [...labelCounts.entries()]
                 ))}
               </dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
 
         {/* Лейблы — из релизов жанра, а не из своего поля: такого поля в
             Notion нет. Тот же блок, что жанры у лейбла, только наоборот. */}
-        <dl class="item__facts">
-          {labels.length > 0 && (
+        {labels.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
               <dd>
@@ -110,8 +114,8 @@ const labels = [...labelCounts.entries()]
                 ))}
               </dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
       </div>
     </details>
   </section>

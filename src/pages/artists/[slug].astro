@@ -54,64 +54,45 @@ const aka = artistsOf(artist.akaIds ?? []);
   {/* В карточке ссылки — обложка самого свежего релиза: своей картинки у
       артиста нет, а плитка в сетке берёт ту же. */}
   image={coverSrc(releases.find((a) => a.cover), 800)}
+  shortcuts="info"
 >
   {/* Три строки, одна под другой.
 
-      Первая — имя во всю ширину кадра, страна у правого края той же
-      строкой, под ними переходы наружу. Имя — заголовок страницы, и
-      место ему первое: до полосы «Info», а не под ней.
+      Первая — имя во всю ширину кадра, под ним другие имена, если есть.
+      Имя — заголовок страницы, и место ему первое: до полосы «Info», а не
+      под ней.
 
       Вторая — полоса «Info», такая же, как у Releases и Videos ниже:
       кружок и название во всю ширину. Подпись в ней строка, а не
       заголовок: заголовок страницы уже стоит выше, и второй сбивал бы
       порядок уровней.
 
-      Третья — справка в два блока по два столбца: жанры слева, лейблы
-      справа. В каждом подпись у левого края своего блока, перечень у
-      правого. Разделителя между блоками пока нет. */}
+      Третья — справка столбцами: страна, ссылки, жанры, лейблы — сколько
+      заполнено, столько и столбцов, поровну (с 22 сентября 2026). */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={artist.name} /></h1>
 
-    {/* Страна и переходы наружу — строками одной справки, с подписью через
-        двоеточие. В квадратных скобках страна стояла до 7 сентября 2026 и
-        читалась пометкой вроде счётчика, хотя рядом, строкой ниже, точно
-        такое же сведение было названо словом. */}
-    {/* Страна есть у всех, кроме Various Artists: у него — Worldwide, как в
-        теге на /artists (20 сентября 2026, просьба владельца). */}
-    <dl class="item__facts">
-      <div class="item__fact">
-        <dt>Country:</dt>
-        <dd>{artist.country ? countryName(artist.country) : 'Worldwide'}</dd>
-      </div>
-
-        {/* Другие имена — между страной и ссылками наружу: страна — про того,
-            кто это, другие имена — про то же самое, а ссылки уводят с сайта и
-            стоят последними. Первой строкой, над страной, они простояли
-            13 сентября 2026 полдня.
-
-            Ссылками на их страницы, через точку, как лейблы и жанры в блоке
+    {/* Под именем — только другие имена того же человека или состава, если
+        они есть. Страна и переходы наружу стояли здесь строками справки до
+        22 сентября 2026 и переехали в блок Info — первым и вторым столбцом
+        (просьба владельца). */}
+    {aka.length > 0 && (
+      <dl class="item__facts">
+        {/* Ссылками на их страницы, через точку, как лейблы и жанры в блоке
             Info. Подпись одна на любое число имён. */}
-        {aka.length > 0 && (
-          <div class="item__fact">
-            <dt>Also known as:</dt>
-            <dd>
-              {aka.map((a, i) => (
-                <>
-                  {i > 0 && <span class="sep"> · </span>}
-                  <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
-                </>
-              ))}
-            </dd>
-          </div>
-        )}
-
-        {hasLinks && (
-          <div class="item__fact">
-            <dt>Links:</dt>
-            <dd><ProfileLinks bandcamp={artist.bandcamp} bandcamp2={artist.bandcamp2} youtube={artist.youtube} /></dd>
-          </div>
-        )}
+        <div class="item__fact">
+          <dt>Also known as:</dt>
+          <dd>
+            {aka.map((a, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${a.slug}`}><WholeWords text={a.name} /></a>
+              </>
+            ))}
+          </dd>
+        </div>
       </dl>
+    )}
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не
@@ -121,10 +102,8 @@ const aka = artistsOf(artist.akaIds ?? []);
       Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
       вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
       её при первом заходе не за чем. */}
-  {/* Раздел появляется, только если справке есть что сказать. Пустая полоса
-      «Info» с двумя пустыми блоками под ней обещала бы сведения, которых
-      нет: то же правило, что у разделов Releases и Videos. */}
-  {(artist.genres.length > 0 || labels.length > 0) && (
+  {/* Раздел есть всегда: страна есть у каждого исполнителя (у Various
+      Artists — Worldwide). */}
   <section class="section">
     <details class="fold" open>
       <summary class="fold__head">
@@ -136,20 +115,42 @@ const aka = artistsOf(artist.akaIds ?? []);
         </div>
       </summary>
 
-      <div class="info">
-        {/* Жанры перед лейблами: в справке релиза они идут в том же
-            порядке. */}
+      {/* Справка — столбцами по порядку: Country, Links, Genres, Labels
+          (22 сентября 2026, просьба владельца). Пустых столбцов нет — блок
+          не выводится вовсе, и оставшиеся делят ширину поровну: у
+          исполнителя без ссылок и лейблов — два столбца по половине. Между
+          соседними — мягкая черта. */}
+      {/* У Various Artists страны нет (Worldwide): столбец Country — одна
+          четверть, как первый из четырёх, остальное — перечням (22 сентября
+          2026, просьба владельца). */}
+      <div class:list={['info info--auto', { 'info--narrow-first': !artist.country }]}>
         <dl class="item__facts">
-          {artist.genres.length > 0 && (
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{artist.country ? countryName(artist.country) : 'Worldwide'}</dd>
+          </div>
+        </dl>
+
+        {hasLinks && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>Links:</dt>
+              <dd><ProfileLinks bandcamp={artist.bandcamp} bandcamp2={artist.bandcamp2} youtube={artist.youtube} /></dd>
+            </div>
+          </dl>
+        )}
+
+        {artist.genres.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{artist.genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
               <dd><GenreLinks names={artist.genres} inline /></dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
 
-        <dl class="item__facts">
-          {labels.length > 0 && (
+        {labels.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{labels.length > 1 ? 'Labels:' : 'Label:'}</dt>
               <dd>
@@ -161,12 +162,11 @@ const aka = artistsOf(artist.akaIds ?? []);
                 ))}
               </dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
       </div>
     </details>
   </section>
-  )}
 
   {/* Сначала релизы, клипы под ними: страница артиста — прежде всего его
       дискография, а клипы есть у полутора десятков из девятисот.

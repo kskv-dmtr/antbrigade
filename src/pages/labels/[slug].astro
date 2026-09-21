@@ -38,33 +38,18 @@ const genres = [...genreCounts.entries()]
   title={`${label.name} · ant brigade`}
   description={`${label.name}: ${plural(releases.length, 'release', 'releases')} in the collection.`}
   image={coverSrc(releases.find((a) => a.cover), 800)}
+  shortcuts="info"
 >
   {/* Полоса «назад» стоит на всех внутренних страницах одинаково: релиза,
       клипа, исполнителя, лейбла и жанра. На лейбле и жанре её не было до
       6 сентября 2026 — возвращаться оттуда было нечем, кроме браузерной
       стрелки. */}
-  {/* Три строки, как у исполнителя: имя со страной и переходами, полоса
-      «Info», справка в два блока по два столбца. У лейбла справка одна —
-      состав, и стоит она в левом блоке. */}
+  {/* Три строки, как у исполнителя: имя, полоса «Info», справка столбцами —
+      Country, Links, Artists, Genres; сколько заполнено, столько столбцов,
+      поровну (с 22 сентября 2026). */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={label.name} /></h1>
 
-    {/* Страна и переходы наружу — строками одной справки, как у исполнителя. */}
-    {/* Страна есть у всех, кроме «Not on Label»: у него — Worldwide, как в
-        теге на /labels (20 сентября 2026, просьба владельца). */}
-    <dl class="item__facts">
-      <div class="item__fact">
-        <dt>Country:</dt>
-        <dd>{label.country ? countryName(label.country) : 'Worldwide'}</dd>
-      </div>
-
-        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
-          <div class="item__fact">
-            <dt>Links:</dt>
-            <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
-          </div>
-        )}
-      </dl>
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не
@@ -74,10 +59,8 @@ const genres = [...genreCounts.entries()]
       Треугольник тот же, что у дропдаунов отбора, и поворачивается так же —
       вниз, когда раскрыто. Открыто по умолчанию: справка коротка, прятать
       её при первом заходе не за чем. */}
-  {/* Раздел появляется, только если справке есть что сказать. Пустая полоса
-      «Info» с двумя пустыми блоками под ней обещала бы сведения, которых
-      нет: то же правило, что у разделов Releases и Videos. */}
-  {(roster.length > 0 || genres.length > 0) && (
+  {/* Раздел есть всегда: страна есть у каждого лейбла (у «Not on Label» —
+      Worldwide, как в теге на /labels). */}
   <section class="section">
     <details class="fold" open>
       <summary class="fold__head">
@@ -89,9 +72,34 @@ const genres = [...genreCounts.entries()]
         </div>
       </summary>
 
-      <div class="info">
+      {/* Справка — столбцами по порядку: Country, Links, Artists, Genres
+          (22 сентября 2026, просьба владельца; страна и ссылки до того стояли
+          под названием). Пустых столбцов нет, оставшиеся делят ширину
+          поровну. */}
+      {/* У «Not on Label» страны нет (Worldwide): столбец Country — одна
+          четверть, как первый из четырёх, остальное — перечням (22 сентября
+          2026, просьба владельца). */}
+      <div class:list={['info info--auto', { 'info--narrow-first': !label.country }]}>
         <dl class="item__facts">
-          {roster.length > 0 && (
+          {/* Страна есть у всех, кроме «Not on Label»: у него — Worldwide
+              (20 сентября 2026, просьба владельца). */}
+          <div class="item__fact">
+            <dt>Country:</dt>
+            <dd>{label.country ? countryName(label.country) : 'Worldwide'}</dd>
+          </div>
+        </dl>
+
+        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>Links:</dt>
+              <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
+            </div>
+          </dl>
+        )}
+
+        {roster.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{roster.length > 1 ? 'Artists:' : 'Artist:'}</dt>
               <dd>
@@ -103,23 +111,22 @@ const genres = [...genreCounts.entries()]
                 ))}
               </dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
 
         {/* Жанры — из релизов лейбла, а не из его собственного поля: такого
             поля в Notion нет. Ссылки те же, что у жанров исполнителя. */}
-        <dl class="item__facts">
-          {genres.length > 0 && (
+        {genres.length > 0 && (
+          <dl class="item__facts">
             <div class="item__fact">
               <dt>{genres.length > 1 ? 'Genres:' : 'Genre:'}</dt>
               <dd><GenreLinks names={genres} inline /></dd>
             </div>
-          )}
-        </dl>
+          </dl>
+        )}
       </div>
     </details>
   </section>
-  )}
 
   <section class="section">
     <PageBar as="h2" title="Releases" count={releases.length} />

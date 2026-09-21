@@ -3346,6 +3346,69 @@ select option { background: var(--option-bg); color: var(--fg); }
 .info .item__fact,
 .info .item__fact dd { line-height: var(--fact-lh); }
 
+/* Подписи в Info — Country:, Links:, Genres:, Labels:, Artists: — набором
+   названия релиза: Geist 20, полужирный, как написано, основным цветом
+   (22 сентября 2026, просьба владельца). Перечни под ними — прежние, ссылки
+   13 прописными, как везде. Селектор с .info — ради веса: общее правило
+   подписи справки (.item__fact dt) задаёт моноширинный и цвет. Так же — у
+   справки на странице релиза (item__facts--titles): Label:, Genres:, Links:
+   (22 сентября 2026). «Also known as:» под именем исполнителя — прежняя. */
+.info .item__fact dt,
+.item__facts--titles .item__fact dt {
+  font-family: var(--font);
+  font-size: max(20px, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--fg);
+}
+
+/* На широком экране перечень — под подписью, а не в строку с ней: «Genres:»,
+   ниже жанры; «Labels:», ниже лейблы (22 сентября 2026, просьба владельца).
+   Просвет между ними — 8, тот же, что между подписью и значением в строке
+   справки.
+
+   Перемычка между половинами — не сплошная граница во всю высоту блока, а
+   мягкая черта с полями сверху и снизу, как черта между строками описи в
+   карточках указателей (22 сентября 2026, просьба владельца). Поля — те же,
+   что у текста в блоке, поэтому черта идёт ровно от верха подписи до низа
+   последней строки перечня. Только между двумя непустыми половинами: у
+   исполнителя без жанров первый <dl> пуст, и черте рядом с одиноким Labels
+   нечего делить. */
+@media (min-width: 641px) {
+  .info .item__fact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .info > * {
+    position: relative;
+    border-left: 0;
+  }
+  /* У исполнителя справка — до четырёх столбцов (Country, Links, Genres,
+     Labels), пустые не выводятся, и оставшиеся делят ширину поровну
+     (22 сентября 2026, просьба владельца). */
+  .info--auto {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  /* Страны нет — Worldwide у Various Artists и «Not on Label»: слово одно, а
+     перечни рядом на сотни имён. Столбец Country тогда — ровно четверть, как
+     первый из четырёх, а остальные делят оставшееся поровну (22 сентября
+     2026, просьба владельца). */
+  .info--narrow-first { grid-template-columns: 25%; }
+  .info > :has(.item__fact) ~ :has(.item__fact)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc((var(--page-bar-h) - var(--fact-lh)) / 2);
+    bottom: calc((var(--page-bar-h) - var(--fact-lh)) / 2);
+    width: 1px;
+    background: var(--line-soft);
+  }
+}
+
 /* Кадр клипа — 16:9 вместо квадрата, и высоту блока задаёт он: правило
    «первый экран во весь рост» на странице клипа снято. Кадр вдвое ниже
    обложки, и растягивать под него экран не за чем — под ним сразу пошли бы
@@ -3543,6 +3606,44 @@ select option { background: var(--option-bg); color: var(--fg); }
 .item__head .item__facts dd {
   padding: var(--fact-pad) 0;
   line-height: var(--fact-lh);
+}
+
+/* Справка релиза на широком экране — столбцами, как блок Info: Label,
+   Genres, Links, подпись сверху, значение под ней через 8, столбцов столько,
+   сколько заполнено, поровну (22 сентября 2026, просьба владельца). Между
+   столбцами — тонкая мягкая черта с полями сверху и снизу, как в Info: от
+   верха подписи до низа значения. У крайних столбцов внешнего поля нет —
+   текст стоит на тех же вертикалях, что название и строка с датой над ним.
+   На телефоне справка прежняя — строками. */
+@media (min-width: 641px) {
+  .item__head .item__facts--titles {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    align-items: stretch;
+    column-gap: 0;
+  }
+  .item__head .item__facts--titles .item__fact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: var(--fact-pad) var(--pad);
+  }
+  .item__head .item__facts--titles .item__fact:first-child { padding-left: 0; }
+  .item__head .item__facts--titles .item__fact:last-child { padding-right: 0; }
+  .item__head .item__facts--titles dt,
+  .item__head .item__facts--titles dd { padding: 0; }
+  .item__head .item__facts--titles .item__fact + .item__fact::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: var(--fact-pad);
+    bottom: var(--fact-pad);
+    width: 1px;
+    background: var(--line-soft);
+  }
 }
 
 /* Правила .facts--page — справка во всю ширину кадра — прожили полдня

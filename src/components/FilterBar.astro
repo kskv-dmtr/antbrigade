@@ -412,7 +412,74 @@ import ViewSwitch from './ViewSwitch.astro';
       const раскрытьМеню = (on) => {
         сортировка.toggleAttribute('data-menu', on);
         if (on) отметитьМеню();
+        if (!on) погасить();
       };
+
+      /* Выбор стрелками в открытой сортировке (21 сентября 2026, просьба
+         владельца): ↑ и ↓ ведут подсветку по пунктам, Enter или пробел
+         выбирают подсвеченный, Home и End — к первому и последнему, Escape
+         закрывает, ничего не меняя. Открылась сортировка — подсвечен
+         выбранный пункт: видно, откуда идти. По кругу подсветка не ходит,
+         у краёв останавливается — как в поиске.
+
+         Подсвечивается атрибутом, а не фокусом: в шторке на телефоне пункты
+         — радиокнопки, и стрелки на сфокусированной радиокнопке сами меняли
+         бы выбор и сразу сортировали. Наведение мышью ведёт ту же подсветку,
+         чтобы две подсвеченных строки не спорили. */
+      const пункты = () => узкий.matches
+        ? [...(лист?.querySelectorAll('.multi__item') ?? [])]
+        : [...меню.querySelectorAll('.filters-row__menu-item')];
+      const открыта = () => узкий.matches ? полоса.hasAttribute('data-sort') : сортировка.hasAttribute('data-menu');
+      let активный = -1;
+      function подсветить(i) {
+        const все = пункты();
+        if (!все.length) return;
+        активный = Math.max(0, Math.min(все.length - 1, i));
+        все.forEach((п, k) => п.toggleAttribute('data-active', k === активный));
+        все[активный].scrollIntoView({ block: 'nearest' });
+      }
+      function погасить() {
+        активный = -1;
+        for (const п of полоса.querySelectorAll('.filters-row__menu-item[data-active], .filters-row__sorter .multi__item[data-active]')) {
+          п.removeAttribute('data-active');
+        }
+      }
+      const подсветитьВыбранный = () => {
+        const i = [...поле.options].findIndex((о) => о.value === поле.value);
+        подсветить(i < 0 ? 0 : i);
+      };
+      addEventListener('keydown', (e) => {
+        if (!открыта() || e.metaKey || e.ctrlKey || e.altKey) return;
+        const все = пункты();
+        if (!все.length) return;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (активный < 0) { подсветитьВыбранный(); return; }
+          подсветить(активный + (e.key === 'ArrowDown' ? 1 : -1));
+        } else if (e.key === 'Home' || e.key === 'End') {
+          e.preventDefault();
+          подсветить(e.key === 'Home' ? 0 : все.length - 1);
+        } else if ((e.key === 'Enter' || e.key === ' ') && активный >= 0) {
+          e.preventDefault();
+          const п = все[активный];
+          // В шторке пункт — <label> с радиокнопкой: выбираем через неё, её
+          // change кладёт значение в <select> и закрывает шторку.
+          const радио = п.querySelector('input');
+          if (радио) { радио.checked = true; радио.dispatchEvent(new Event('change', { bubbles: true })); }
+          else п.click();
+          погасить();
+        }
+      });
+      // Шторку закрывают и затемнением, и выбором, и Escape — подсветку
+      // гасим при любом закрытии, чтобы в следующий раз не встретила старая.
+      new MutationObserver(() => { if (!полоса.hasAttribute('data-sort')) погасить(); })
+        .observe(полоса, { attributes: true, attributeFilter: ['data-sort'] });
+      for (const п of [...меню.querySelectorAll('.filters-row__menu-item'), ...(лист?.querySelectorAll('.multi__item') ?? [])]) {
+        п.addEventListener('pointermove', () => {
+          const i = пункты().indexOf(п);
+          if (i >= 0 && i !== активный) подсветить(i);
+        });
+      }
       поле.addEventListener('change', отметитьМеню);
       коробка.addEventListener('click', (e) => {
         if (узкий.matches) return;
@@ -424,6 +491,28 @@ import ViewSwitch from './ViewSwitch.astro';
       });
       addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && сортировка.hasAttribute('data-menu')) раскрытьМеню(false);
+      });
+      /* Клавиша S открывает и закрывает сортировку (21 сентября 2026, просьба
+         владельца) — по образцу F: по коду клавиши, а не по букве (в русской
+         раскладке на том же месте «Ы»), без сочетаний — Ctrl+S и Cmd+S
+         остаются сохранением страницы, — и не пока набирают текст. На
+         телефоне — шторка «Sort by», на широком экране — меню у списка;
+         открытая шторка отборов при этом закрывается. */
+      addEventListener('keydown', (e) => {
+        if (e.code !== 'KeyS' || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+        const el = document.activeElement;
+        if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
+        e.preventDefault();
+        if (узкий.matches) {
+          const on = !полоса.hasAttribute('data-sort');
+          сорт(on);
+          if (on) подсветитьВыбранный(); else погасить();
+          return;
+        }
+        const on = !сортировка.hasAttribute('data-menu');
+        if (on && полоса.hasAttribute('data-sheet')) шторка(false);
+        раскрытьМеню(on);
+        if (on) подсветитьВыбранный();
       });
       document.addEventListener('sheet:open', () => раскрытьМеню(false));
       document.addEventListener('drawer:open', () => раскрытьМеню(false));

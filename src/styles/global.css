@@ -2897,6 +2897,10 @@ select option { background: var(--option-bg); color: var(--fg); }
   .multi__item:hover { background: var(--ink); color: var(--ink-fg); }
 }
 .multi__item:active { background: var(--ink); color: var(--ink-fg); }
+/* Пункт шторки сортировки, подсвеченный стрелками, — выворотка, как
+   наведённый пункт списка (21 сентября 2026). Селектор со шторкой — ради
+   веса: её правило красит пункты в --fg-muted, и текст на чёрном тонул. */
+[data-js] .filters-row__sorter .multi__item[data-active] { background: var(--ink); color: var(--ink-fg); }
 .multi__item input {
   flex: none;
   width: 0.8125rem;
@@ -5472,7 +5476,9 @@ html:not([data-js]) .more { display: none; }
     border: 0;
     cursor: pointer;
   }
-  .filters-row__menu-item:hover {
+  /* Подсвеченный стрелками — как наведённый (21 сентября 2026). */
+  .filters-row__menu-item:hover,
+  .filters-row__menu-item[data-active] {
     color: var(--fg);
     background: color-mix(in srgb, var(--fg) 6%, transparent);
   }

@@ -346,8 +346,8 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
             <span class="nb">new releases</span> · <span class="nb">old favorites</span> · <span class="nb">strange finds</span>
           </p>
           <p>
-            <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
-            <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
+            tg: <a href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
+            tg: <a href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
           </p>
           {/* Тексты — те же, что в подвале (18 сентября 2026): без «ant brigade»,
               «telegram:» и «no gods · no genres». Правите одно — правьте и другое. */}
@@ -453,9 +453,12 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
             подписью, как у справа стоящей группы. Подпись вплотную к тегу,
             без переноса строки: пробелы по краям попадали в ссылку, и волос
             под словом вылезал за букву на пробел с каждой стороны. */}
+        {/* Перед каждым каналом — «tg:» простым текстом (21 сентября 2026,
+            просьба владельца): ссылка — только сам адрес после пробела, волос
+            под «tg:» не идёт. В меню на телефоне — так же. */}
         <div class="foot__links mono mono--sm">
-          <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
-          <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
+          tg: <a class="foot__btn" href="https://t.me/antbrigade" target="_blank" rel="noopener noreferrer">@antbrigade</a><br />
+          tg: <a class="foot__btn" href="https://t.me/antbrigade_rar" target="_blank" rel="noopener noreferrer">@antbrigade_rar</a>
         </div>
 
         <div class="foot__note foot__note--end mono mono--sm">

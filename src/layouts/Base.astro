@@ -23,8 +23,9 @@ import grotesk from '@fontsource-variable/space-grotesk/files/space-grotesk-lati
    2026, просьба владельца). «full» на списках, где есть вид и отборы:
    /music, /video, /artists, /labels, /genres. «info» на страницах с блоком
    Info — исполнителя, лейбла и жанра: там работает клавиша I (22 сентября
-   2026). Везде ещё — только то, что работает на любой странице: ходьба по
-   находкам, поиск и открытие. */
+   2026). «random» на главной: там работает клавиша R, «Dig again» (22
+   сентября 2026). Везде ещё — только то, что работает на любой странице:
+   ходьба по находкам, поиск и открытие. */
 const {
   title, description, activeSection, cardTitle, image, noindex,
   shortcuts = 'basic'
@@ -484,6 +485,9 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
         {shortcuts === 'info' && (
           <span class="keys__item">Info <kbd class="search__kbd">I</kbd></span>
+        )}
+        {shortcuts === 'random' && (
+          <span class="keys__item">Random <kbd class="search__kbd">R</kbd></span>
         )}
         {shortcuts === 'full' && (
           <>

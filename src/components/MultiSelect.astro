@@ -56,8 +56,9 @@ const блоки = [{ axis, items }];
               <input type="checkbox" value={item.value} data-axis={блок.axis} />
               <span class="multi__name">{item.label}</span>
               {/* Счёт отдельным узлом: страница пересчитывает его при каждой
-                  смене отбора, а имя не трогает. */}
-              <span class="multi__count">({item.count})</span>
+                  смене отбора, а имя не трогает. В квадратных скобках, как
+                  счётчики по всему сайту (21 сентября 2026; до того в круглых). */}
+              <span class="multi__count">[{item.count}]</span>
             </label>
           ))}
         </div>

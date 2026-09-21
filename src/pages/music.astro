@@ -260,7 +260,7 @@ const PAGE = 48;
       for (const item of group.querySelectorAll('.multi__item')) {
         const box = item.querySelector('input');
         const n = карты[box.dataset.axis]?.get(box.value) || 0;
-        item.querySelector('.multi__count').textContent = `(${n})`;
+        item.querySelector('.multi__count').textContent = `[${n}]`;
 
         /* Пункт с нулём прячем — выбирать в нём нечего. Но только пока он не
            отмечен: отмеченный с нулём случается (отметили год, потом жанр,

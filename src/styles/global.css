@@ -2190,6 +2190,15 @@ main > .head--page:first-child { border-top: 0; }
 .filter .multi[data-chosen] .multi__button { padding-right: 0; }
 .filter .select__chevron { right: 0; }
 
+/* Подписи отборов со списком — Type:, Genre:, Year:, у указателей Letters: —
+   как написаны, с заглавной, 14 (21 сентября 2026, просьба владельца).
+   Sort by: и View: остаются как были. */
+.filter:has(> .multi) > .filter__name {
+  font-size: max(14px, 0.875rem);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .filter__name {
   flex: none;
   font-family: var(--mono);
@@ -2360,7 +2369,9 @@ main > .head--page:first-child { border-top: 0; }
      прежними: под лупой 40, под клавишей 44. */
   padding: 0.5rem 2.75rem 0.5rem 2.5rem;
   font-family: var(--mono);
-  font-size: max(13px, 0.8125rem);
+  /* 14, как моноширинный текст по сайту (21 сентября 2026, просьба
+     владельца; до того 13). */
+  font-size: max(14px, 0.875rem);
   letter-spacing: 0.06em;
   color: var(--fg);
   background: transparent;
@@ -2381,7 +2392,9 @@ main > .head--page:first-child { border-top: 0; }
   display: none;
 }
 
-.search input::placeholder { color: var(--fg-dim); text-transform: uppercase; }
+/* Подсказка в поле — «Search» как написано, с заглавной, без разрядки
+   (21 сентября 2026, просьба владельца; до того прописными). */
+.search input::placeholder { color: var(--fg-dim); letter-spacing: 0; text-transform: none; }
 
 /* Лупа слева, клавиша справа. pointer-events: none у обеих — чтобы клик по
    ним попадал в поле, а не в саму метку. */
@@ -2759,6 +2772,9 @@ select option { background: var(--option-bg); color: var(--fg); }
   --select-pad: 0.8125rem;
   --select-gap: 1rem;
 }
+/* Кнопка списка отбора — All, выбранное, «[3]» — как написано, с
+   заглавной, 14 (21 сентября 2026, просьба владельца). Reset за ними —
+   прописными, как кнопки: у него своё правило. */
 .multi__button {
   display: flex;
   align-items: center;
@@ -2766,7 +2782,7 @@ select option { background: var(--option-bg); color: var(--fg); }
   max-width: 16.25rem;
   padding: 0.5rem calc(var(--select-gap) + var(--chevron) + var(--select-pad)) 0.5rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(13px, 0.8125rem);
+  font-size: max(14px, 0.875rem);
 
   /* Межстрочный задан числом, хотя у соседей по полосе его нет. Кнопка —
      единственный флексовый контейнер среди них: подпись внутри становится
@@ -2774,8 +2790,8 @@ select option { background: var(--option-bg); color: var(--fg); }
      выше отбора рядом. У остальных строка ровно 16, и 8 + 8 + 16 + рамки
      дают 34 — общую высоту органов управления. */
   line-height: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--fg);
   /* Рамки нет — по той же причине, что у обычного списка рядом. */
   border: 0;
@@ -2817,8 +2833,13 @@ select option { background: var(--option-bg); color: var(--fg); }
   margin-top: -0.125rem;
   margin-bottom: calc(-0.125rem - 1px);
   font: inherit;
-  letter-spacing: inherit;
-  text-transform: inherit;
+
+  /* Reset — кнопка, и набран как все кнопки: прописными, 13, с разрядкой,
+     хотя подпись списка рядом с 21 сентября 2026 с заглавной в 14 (просьба
+     владельца). */
+  font-size: max(13px, 0.8125rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   line-height: inherit;
   color: var(--fg-muted);
   background: none;
@@ -2881,15 +2902,17 @@ select option { background: var(--option-bg); color: var(--fg); }
 }
 .multi__list::-webkit-scrollbar-thumb:hover { background: var(--fg-dim); }
 
+/* Пункты списков отбора — типы, жанры, годы, буквы — как написаны, с
+   заглавной, 14 (21 сентября 2026, просьба владельца). */
 .multi__item {
   display: flex;
   align-items: center;
   gap: 0.5625rem;
   padding: 0.4375rem var(--select-pad);
   font-family: var(--mono);
-  font-size: max(13px, 0.8125rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: max(14px, 0.875rem);
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--fg-muted);
   cursor: pointer;
 }
@@ -2899,8 +2922,10 @@ select option { background: var(--option-bg); color: var(--fg); }
 .multi__item:active { background: var(--ink); color: var(--ink-fg); }
 /* Пункт шторки сортировки, подсвеченный стрелками, — выворотка, как
    наведённый пункт списка (21 сентября 2026). Селектор со шторкой — ради
-   веса: её правило красит пункты в --fg-muted, и текст на чёрном тонул. */
-[data-js] .filters-row__sorter .multi__item[data-active] { background: var(--ink); color: var(--ink-fg); }
+   веса: её правила красят пункты в --fg-muted, а выбранный — в --fg, и
+   текст на чёрном тонул; у выбранного и подсвеченного сразу — пропадал. */
+[data-js] .filters-row__sorter .multi__item[data-active],
+[data-js] .filters-row__sorter .multi__item[data-active]:has(input:checked) { background: var(--ink); color: var(--ink-fg); }
 .multi__item input {
   flex: none;
   width: 0.8125rem;
@@ -5360,6 +5385,13 @@ html:not([data-js]) .more { display: none; }
     color: var(--hot-fg);
     border-color: var(--hot);
   }
+  /* Reset у отбора — тоже с жеребьёвкой цвета (21 сентября 2026, просьба
+     владельца). Волос под словом прячем, как при прежней выворотке. */
+  .multi__clear[data-hot]:hover {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
+  }
 }
 @media (hover: none) {
   .filters-row__apply[data-hot]:active,
@@ -5367,6 +5399,11 @@ html:not([data-js]) .more { display: none; }
     background: var(--hot);
     color: var(--hot-fg);
     border-color: var(--hot);
+  }
+  .multi__clear[data-hot]:active {
+    background: var(--hot);
+    color: var(--hot-fg);
+    border-bottom-color: transparent;
   }
 }
 
@@ -5475,6 +5512,13 @@ html:not([data-js]) .more { display: none; }
     background: none;
     border: 0;
     cursor: pointer;
+  }
+  /* Пункты сортировки — как написаны, с заглавной, 14 (21 сентября 2026,
+     просьба владельца; до того прописными в 13). */
+  .filters-row__menu-item {
+    font-size: max(14px, 0.875rem);
+    letter-spacing: 0;
+    text-transform: none;
   }
   /* Подсвеченный стрелками — как наведённый (21 сентября 2026). */
   .filters-row__menu-item:hover,
@@ -5632,6 +5676,13 @@ html:not([data-js]) .more { display: none; }
     color: var(--fg-muted);
   }
   [data-js] .filters-row__sorter .multi__item:last-child { border-bottom: 0; }
+  /* Пункты шторки сортировки — как в меню на широком экране: с заглавной,
+     14 (21 сентября 2026, просьба владельца). */
+  [data-js] .filters-row__sorter .multi__item {
+    font-size: max(14px, 0.875rem);
+    letter-spacing: 0;
+    text-transform: none;
+  }
   /* Черта — только между группами (по дате, по артисту, по альбому…), как в
      меню на широком экране (19 сентября 2026, просьба владельца): внутри
      группы пункты без черт, иначе граница групп терялась среди одинаковых

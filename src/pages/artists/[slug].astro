@@ -38,6 +38,10 @@ const clipsSorted = clips.slice()
    Notion заполняются руками, и у большинства записей они пустые. */
 const hasLinks = Boolean(artist.bandcamp || artist.bandcamp2 || artist.youtube);
 
+/* Подпись по числу ссылок: одна — «Link:», две и больше — «Links:»
+   (22 сентября 2026, просьба владельца), как «Label:» / «Labels:». */
+const linkCount = [artist.bandcamp, artist.bandcamp2, artist.youtube].filter(Boolean).length;
+
 /* Другие имена того же человека или состава — связь «Also Known As» в
    Notion, с 13 сентября 2026. Взаимность и порядок по имени наводит
    выгрузка; здесь только превращаем идентификаторы в записи.
@@ -134,7 +138,7 @@ const aka = artistsOf(artist.akaIds ?? []);
         {hasLinks && (
           <dl class="item__facts">
             <div class="item__fact">
-              <dt>Links:</dt>
+              <dt>{linkCount > 1 ? 'Links:' : 'Link:'}</dt>
               <dd><ProfileLinks bandcamp={artist.bandcamp} bandcamp2={artist.bandcamp2} youtube={artist.youtube} /></dd>
             </div>
           </dl>

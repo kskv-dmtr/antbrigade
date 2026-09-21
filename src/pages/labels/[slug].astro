@@ -33,6 +33,10 @@ for (const a of releases) {
 const genres = [...genreCounts.entries()]
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   .map(([g]) => g);
+
+/* Подпись по числу ссылок: одна — «Link:», две и больше — «Links:»
+   (22 сентября 2026, просьба владельца), как «Label:» / «Labels:». */
+const linkCount = [label.bandcamp, label.bandcamp2, label.youtube].filter(Boolean).length;
 ---
 <Base
   title={`${label.name} · ant brigade`}
@@ -92,7 +96,7 @@ const genres = [...genreCounts.entries()]
         {(label.bandcamp || label.bandcamp2 || label.youtube) && (
           <dl class="item__facts">
             <div class="item__fact">
-              <dt>Links:</dt>
+              <dt>{linkCount > 1 ? 'Links:' : 'Link:'}</dt>
               <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
             </div>
           </dl>

@@ -13,14 +13,11 @@
 import { listenLinks } from '../lib/db.js';
 
 const { album } = Astro.props;
-/* album.link — последней кнопкой, сразу за Bandcamp, тем же видом (22
-   сентября 2026, просьба владельца). До того он стоял строкой справки
-   «Links:»: не площадка, а сборник ссылок на них. Кнопкой он встал рядом с
-   тем, куда и ведёт, — к площадкам. */
-const links = [
-  ...listenLinks(album),
-  ...(album.url ? [{ key: 'albumlink', label: 'album.link', url: album.url }] : [])
-];
+const links = listenLinks(album);
+
+/* album.link в ряд не идёт: это не площадка, а сборник ссылок на них, и
+   стоит он строкой справки «Links:» в блоке Info — см. [slug].astro. Кнопкой
+   за Bandcamp он простоял несколько часов 22 сентября 2026. */
 ---
 {links.length > 0 && (
   <div class="listen">

@@ -84,10 +84,10 @@ async function api(endpoint, body, attempt = 1) {
   }
 }
 
-async function queryCollection({ collection, view }, filter = null, sort = null) {
+async function queryCollection({ collection, view }, filter = null, sort = null, limit = 5000) {
   const loader = {
     type: 'reducer',
-    reducers: { collection_group_results: { type: 'results', limit: 5000 } },
+    reducers: { collection_group_results: { type: 'results', limit } },
     searchQuery: '',
     userTimeZone: 'Europe/Moscow'
   };
@@ -100,10 +100,27 @@ async function queryCollection({ collection, view }, filter = null, sort = null)
     loader
   });
 
+  const колонка = res.recordMap?.collection?.[collection];
   return {
     ids: res.result?.reducerResults?.collection_group_results?.blockIds ?? [],
-    blocks: res.recordMap?.block ?? {}
+    blocks: res.recordMap?.block ?? {},
+    schema: (колонка?.value?.value ?? колонка?.value)?.schema ?? null
   };
+}
+
+/* Схема коллекции — отдельным запросом на одну строку: в ответе на большой
+   запрос (limit 5000) Notion саму коллекцию не кладёт, а на маленький —
+   кладёт (замер 22 сентября 2026). */
+async function schemaOf(source) {
+  return (await queryCollection(source, null, null, 1)).schema;
+}
+
+/* Варианты колонки с выбором по схеме коллекции — множество названий.
+   null, если схемы в ответе нет: тогда сверять не с чем, и фильтр ниже
+   пропускает всё как есть, а не стирает все значения разом. */
+function optionsOf(schema, key) {
+  const options = schema?.[key]?.options;
+  return Array.isArray(options) && options.length ? new Set(options.map((o) => o.value)) : null;
 }
 
 /** Складывает строки нужной коллекции в общий словарь. */
@@ -366,6 +383,23 @@ async function main() {
   const all = await queryCollection(ALBUMS);
   console.log(`Всего записей в базе: ${all.ids.length}`);
 
+  /* Жанры сверяем с вариантами колонки Genre (22 сентября 2026). Удалённый
+     вариант из строк не уходит: значение остаётся в записи, в интерфейсе
+     Notion его не видно и не убрать, а API отдаёт его как ни в чём не бывало.
+     Так у «Maison Belissimo» (Bruno Belissimo) после удаления варианта
+     остался жанр «шеф» и попал на сайт — и в релиз, и в исполнителя. Тот же
+     род сирот, что под старым ключом даты — см. PV выше. */
+  const жанры = optionsOf(await schemaOf(ALBUMS), P.genre);
+  const сироты = new Map();
+  const живые = (list, album) => {
+    if (!жанры) return list;
+    return list.filter((g) => {
+      if (жанры.has(g)) return true;
+      сироты.set(g, [...(сироты.get(g) ?? []), album]);
+      return false;
+    });
+  };
+
   const store = new Map();
   collect(store, all.blocks, ALBUMS.collection);
   console.log(`Получено сразу: ${store.size}. Добираю остальное по диапазонам дат:`);
@@ -505,7 +539,7 @@ async function main() {
       album,
       url: plainText(prop(props, P.url)),
       cover: coverUrl(v),
-      genres: splitList(plainText(prop(props, P.genre))),
+      genres: живые(splitList(plainText(prop(props, P.genre))), album),
       types: splitList(plainText(prop(props, P.type))),
       released,
       year: released && released.length >= 4 ? Number(released.slice(0, 4)) : null,
@@ -658,6 +692,10 @@ async function main() {
   console.log(`  лейблов:               ${labels.length}`);
   console.log(`  клипов:                ${videos.length}`);
   console.log(`  пропущено альбомов:    ${skipped} (без названия)`);
+  if (!жанры) console.log('  жанры: схемы колонки Genre в ответе нет, сверка пропущена');
+  for (const [g, list] of сироты) {
+    console.log(`  убран жанр-сирота:     «${g}» — нет в вариантах колонки (${list.join(', ')})`);
+  }
 }
 
 await main();

@@ -164,10 +164,14 @@ const releases = [...new Map(
   {rest.length > 0 && (
     <section class="section">
       {/* Без имени исполнителя: оно уже стоит в полосе над разделом, и
-          в заголовке повторялось бы третий раз за экран. */}
+          в заголовке повторялось бы третий раз за экран.
+
+          Рядом с годом — вид клипа, «Official Video · 2024», и тип релиза в
+          «Releases» ниже — то же правило, что в «More Releases» на странице
+          релиза (21 сентября 2026, просьба владельца). */}
       <PageBar as="h2" title="More Videos" count={rest.length} />
       <ul class="tiles tiles--auto">
-        {rest.map((v) => <VideoCard video={v} />)}
+        {rest.map((v) => <VideoCard video={v} showType />)}
       </ul>
     </section>
   )}
@@ -182,7 +186,7 @@ const releases = [...new Map(
           принадлежат тому же исполнителю, а у дуэта сюда попадают и сольные
           работы каждого. */}
       <ul class="tiles tiles--auto">
-        {releases.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} showType />)}
       </ul>
     </section>
   )}

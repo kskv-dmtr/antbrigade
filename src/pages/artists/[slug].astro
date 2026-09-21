@@ -125,15 +125,21 @@ const aka = artistsOf(artist.akaIds ?? []);
           исполнителя без ссылок и лейблов — два столбца по половине. Между
           соседними — мягкая черта. */}
       {/* Столбец Country — всегда одна четверть, как первый из четырёх:
-          когда ссылок нет (или страны — у Various Artists, Worldwide),
-          остальное делят перечни (22 сентября 2026, просьба владельца). */}
-      <div class="info info--auto info--narrow-first">
-        <dl class="item__facts">
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{artist.country ? countryName(artist.country) : 'Worldwide'}</dd>
-          </div>
-        </dl>
+          когда ссылок нет, остальное делят перечни (22 сентября 2026,
+          просьба владельца).
+
+          У Various Artists страны нет, и столбца Country у него нет вовсе
+          (22 сентября 2026, просьба владельца): «Worldwide» стояло там
+          заглушкой. Тогда и четверти нет — столбцы делят ширину поровну. */}
+      <div class:list={['info info--auto', { 'info--narrow-first': artist.country }]}>
+        {artist.country && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>Country:</dt>
+              <dd>{countryName(artist.country)}</dd>
+            </div>
+          </dl>
+        )}
 
         {hasLinks && (
           <dl class="item__facts">

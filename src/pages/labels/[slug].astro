@@ -81,17 +81,21 @@ const linkCount = [label.bandcamp, label.bandcamp2, label.youtube].filter(Boolea
           под названием). Пустых столбцов нет, оставшиеся делят ширину
           поровну. */}
       {/* Столбец Country — всегда одна четверть, как первый из четырёх:
-          когда ссылок нет (или страны — у «Not on Label», Worldwide),
-          остальное делят перечни (22 сентября 2026, просьба владельца). */}
-      <div class="info info--auto info--narrow-first">
-        <dl class="item__facts">
-          {/* Страна есть у всех, кроме «Not on Label»: у него — Worldwide
-              (20 сентября 2026, просьба владельца). */}
-          <div class="item__fact">
-            <dt>Country:</dt>
-            <dd>{label.country ? countryName(label.country) : 'Worldwide'}</dd>
-          </div>
-        </dl>
+          когда ссылок нет, остальное делят перечни (22 сентября 2026,
+          просьба владельца).
+
+          У «Not on Label» страны нет, и столбца Country у него нет вовсе
+          (22 сентября 2026, просьба владельца): «Worldwide» стояло там
+          заглушкой. Тогда и четверти нет — столбцы делят ширину поровну. */}
+      <div class:list={['info info--auto', { 'info--narrow-first': label.country }]}>
+        {label.country && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>Country:</dt>
+              <dd>{countryName(label.country)}</dd>
+            </div>
+          </dl>
+        )}
 
         {(label.bandcamp || label.bandcamp2 || label.youtube) && (
           <dl class="item__facts">

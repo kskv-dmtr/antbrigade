@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-21T14:14:02Z",
+  "generatedAt": "2026-09-21T19:32:18Z",
   "counts": {
     "albums": 1404,
     "artists": 1186,
     "labels": 745,
-    "videos": 102
+    "videos": 103
   },
   "albums": [
     {
@@ -49603,7 +49603,9 @@
         "24f4129a-8c52-80e5-9c87-e9c6de73281b",
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
-      "videoIds": [],
+      "videoIds": [
+        "3e24129a-8c52-801c-9d76-c6f96e20ef66"
+      ],
       "akaIds": []
     },
     {
@@ -83025,6 +83027,19 @@
         "2434129a-8c52-80d5-88d2-cc1cbf65f233"
       ],
       "slug": "dance-with-the-dead-shaun-phillips-cold-as-hell"
+    },
+    {
+      "id": "3e24129a-8c52-801c-9d76-c6f96e20ef66",
+      "title": "Dead Air | Fallout Flex",
+      "url": "https://youtu.be/fo7Rz2kGsR0?si=BZ6iRrWxgcHB8aQe",
+      "kind": "Official Video",
+      "released": "2026-09-16",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "24f4129a-8c52-805e-a500-c4d2c68cc389"
+      ],
+      "slug": "dead-air-fallout-flex"
     },
     {
       "id": "3d84129a-8c52-801c-8793-eb9bc2796118",

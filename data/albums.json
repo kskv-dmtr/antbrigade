@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-20T22:28:56Z",
+  "generatedAt": "2026-09-21T01:09:40Z",
   "counts": {
     "albums": 1402,
     "artists": 1185,
@@ -69011,7 +69011,7 @@
       "slug": "warmduscher",
       "name": "Warmduscher",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://warmduscher.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -80942,7 +80942,7 @@
       "slug": "strap-originals",
       "name": "Strap Originals",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://straporiginals.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

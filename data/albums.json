@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-21T01:09:40Z",
+  "generatedAt": "2026-09-21T14:14:02Z",
   "counts": {
-    "albums": 1402,
-    "artists": 1185,
-    "labels": 743,
+    "albums": 1404,
+    "artists": 1186,
+    "labels": 745,
     "videos": 102
   },
   "albums": [
@@ -2182,6 +2182,39 @@
       ]
     },
     {
+      "id": "3e24129a-8c52-80ee-a351-f81e68f2da1a",
+      "slug": "yushh-full-body-axy",
+      "artist": "Yushh",
+      "album": "Full Body AXY",
+      "url": "https://album.link/v5nscjrq2bj9b",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab9443139-6bd1-4102-84e4-d935dfc5f8bc%3Aa2598792617_10.jpg?table=block&id=3e24129a-8c52-80ee-a351-f81e68f2da1a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "UK Bass",
+        "Broken Beat",
+        "Post-Dubstep",
+        "IDM"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-06-12",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e24129a-8c52-80d6-be2f-f94b9c20ba71"
+      ],
+      "artists": [
+        "Yushh"
+      ],
+      "labelIds": [
+        "3e24129a-8c52-80c4-901c-daabb0056eea"
+      ],
+      "labels": [
+        "Timedance"
+      ]
+    },
+    {
       "id": "37c4129a-8c52-8031-a05a-d37a87d2be82",
       "slug": "yhwh-nailgun-magazine",
       "artist": "YHWH Nailgun",
@@ -2499,6 +2532,40 @@
       ],
       "labels": [
         "Captured Tracks"
+      ]
+    },
+    {
+      "id": "3e24129a-8c52-80b4-b8d8-c67371eddb1f",
+      "slug": "wu-lu-poison-anna-bakerz-dozen",
+      "artist": "Wu-Lu / POiSON ANNA",
+      "album": "Bakerz Dozen",
+      "url": "https://album.link/3hns2gsgq4ckw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A599319c3-6ee3-48cb-8a3c-cc8bed2f368a%3Aa3989831731_10.jpg?table=block&id=3e24129a-8c52-80b4-b8d8-c67371eddb1f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Trip Hop",
+        "Sound Collage"
+      ],
+      "types": [
+        "EP",
+        "Collaboration"
+      ],
+      "released": "2026-06-05",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2514129a-8c52-8087-968d-cbacaad81947"
+      ],
+      "artists": [
+        "Wu-Lu"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175",
+        "3e24129a-8c52-807e-aa7e-c67e07a0ec03"
+      ],
+      "labels": [
+        "Warp Records",
+        "POiSON ANNA"
       ]
     },
     {
@@ -61636,7 +61703,7 @@
       "slug": "power-face",
       "name": "Power Face",
       "country": "SE",
-      "bandcamp": null,
+      "bandcamp": "https://powerface.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69534,18 +69601,21 @@
       "slug": "wu-lu",
       "name": "Wu-Lu",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://wu-lu.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e24129a-8c52-80b4-b8d8-c67371eddb1f",
         "1084129a-8c52-80fe-a77c-fd829ae34aef"
       ],
       "genres": [
         "Trip Hop",
+        "Sound Collage",
         "Downtempo"
       ],
       "labelIds": [
-        "2444129a-8c52-80bc-980e-d768395ab175"
+        "2444129a-8c52-80bc-980e-d768395ab175",
+        "3e24129a-8c52-807e-aa7e-c67e07a0ec03"
       ],
       "videoIds": [],
       "akaIds": []
@@ -69881,6 +69951,29 @@
       ],
       "labelIds": [
         "2514129a-8c52-80fd-8984-e7bcbbf775f2"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e24129a-8c52-80d6-be2f-f94b9c20ba71",
+      "slug": "yushh",
+      "name": "Yushh",
+      "country": "GB",
+      "bandcamp": "https://yushh.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-80ee-a351-f81e68f2da1a"
+      ],
+      "genres": [
+        "UK Bass",
+        "Broken Beat",
+        "Post-Dubstep",
+        "IDM"
+      ],
+      "labelIds": [
+        "3e24129a-8c52-80c4-901c-daabb0056eea"
       ],
       "videoIds": [],
       "akaIds": []
@@ -78878,6 +78971,21 @@
       ]
     },
     {
+      "id": "3e24129a-8c52-807e-aa7e-c67e07a0ec03",
+      "slug": "poison-anna",
+      "name": "POiSON ANNA",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-80b4-b8d8-c67371eddb1f"
+      ],
+      "artistIds": [
+        "2514129a-8c52-8087-968d-cbacaad81947"
+      ]
+    },
+    {
       "id": "3ac4129a-8c52-8015-9418-c6ed99eab12c",
       "slug": "poison-city-records",
       "name": "Poison City Records",
@@ -81453,6 +81561,21 @@
       ]
     },
     {
+      "id": "3e24129a-8c52-80c4-901c-daabb0056eea",
+      "slug": "timedance",
+      "name": "Timedance",
+      "country": "GB",
+      "bandcamp": "https://timedance.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-80ee-a351-f81e68f2da1a"
+      ],
+      "artistIds": [
+        "3e24129a-8c52-80d6-be2f-f94b9c20ba71"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-8015-a022-daa335c09c2f",
       "slug": "timmion-records",
       "name": "Timmion Records",
@@ -82187,6 +82310,7 @@
       "youtube": "https://www.youtube.com/@warprecords",
       "albumIds": [
         "3ae4129a-8c52-8061-a18f-d976199c95dd",
+        "3e24129a-8c52-80b4-b8d8-c67371eddb1f",
         "36f4129a-8c52-8047-9cd8-c5a42d135115",
         "35b4129a-8c52-80dc-b612-c9fdd255d82c",
         "3424129a-8c52-807a-88d1-c7fb1df2df87",
@@ -82202,6 +82326,7 @@
       ],
       "artistIds": [
         "3ae4129a-8c52-808c-9c06-d2927dc7bae0",
+        "2514129a-8c52-8087-968d-cbacaad81947",
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e",
         "24a4129a-8c52-80f3-bcb1-e3a6f63ca82a",
         "3424129a-8c52-80f6-b89f-ea9abaef0612",
@@ -82209,7 +82334,6 @@
         "2a64129a-8c52-804e-b6b5-f05c8fdca18a",
         "26d4129a-8c52-80a3-ad08-d6d3f4578d25",
         "24a4129a-8c52-8049-886f-d7ff8518b523",
-        "2514129a-8c52-8087-968d-cbacaad81947",
         "2504129a-8c52-804c-a693-dc85640a23de",
         "2414129a-8c52-8011-be30-ca3659f3e880",
         "3d74129a-8c52-80bd-ac45-fd11be135ce6"

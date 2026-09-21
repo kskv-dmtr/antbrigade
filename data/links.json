@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T22:29:09Z",
+  "generatedAt": "2026-09-21T14:14:20Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22406,6 +22406,31 @@
       "upc": "666945415639",
       "tracks": 12,
       "releaseDate": "2026-09-18"
+    },
+    "3e24129a-8c52-80ee-a351-f81e68f2da1a": {
+      "source": "https://album.link/v5nscjrq2bj9b",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4w8Tr4KP4wd6tqlGDYUMTw",
+        "pandora": "https://www.pandora.com/AL:66237434",
+        "tidal": "https://listen.tidal.com/album/522025696",
+        "yandex": "https://music.yandex.ru/album/41954641",
+        "boomplay": "https://www.boomplay.com/albums/130753168",
+        "bandcamp": "https://yushh.bandcamp.com/album/full-body-axy"
+      },
+      "upc": "3618111152821",
+      "tracks": 5,
+      "releaseDate": "2026-06-12"
+    },
+    "3e24129a-8c52-80b4-b8d8-c67371eddb1f": {
+      "source": "https://album.link/3hns2gsgq4ckw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/09MUcG45RZssbCJQb18Cyf",
+        "pandora": "https://www.pandora.com/AL:65245949",
+        "tidal": "https://listen.tidal.com/album/516509037"
+      },
+      "upc": "5056818804069",
+      "tracks": 9,
+      "releaseDate": "2026-06-05"
     }
   }
 }

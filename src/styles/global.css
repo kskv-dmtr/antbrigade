@@ -3392,13 +3392,24 @@ select option { background: var(--option-bg); color: var(--fg); }
     grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr);
   }
-  /* У исполнителя и лейбла столбец Country — всегда ровно четверть, как
-     первый из четырёх, а остальные делят оставшееся поровну (22 сентября
-     2026, просьба владельца). При четырёх столбцах это и так четверть;
-     разница видна, когда ссылок нет: страна — одно-два слова, а перечни
-     рядом бывают на сотни имён. Сначала правило стояло только у записей без
-     страны (Worldwide). */
-  .info--narrow-first { grid-template-columns: 25%; }
+  /* У исполнителя и лейбла Info — ровно четыре четверти (22 сентября 2026,
+     просьба владельца): каждый блок встаёт в свою четверть по порядку —
+     Country в первую, следующий во вторую, — а последний забирает всё, что
+     осталось справа. У лейбла без ссылок: Country, Artists — по четверти,
+     Genres — половина. Раньше в тот же день Country держал четверть, а
+     остальные делили оставшееся поровну, и Artists растягивался на 37,5 %.
+
+     Класс ставится, только когда страна есть; у Various Artists и «Not on
+     Label» столбца Country нет, и столбцы там делят ширину поровну. */
+  .info--narrow-first {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  /* Растяжку последнего задаём по его номеру: «auto / -1» ставит его в
+     четвёртую четверть, а не тянет от своей, и третья оставалась пустой. */
+  .info--narrow-first > :nth-child(1):last-child { grid-column: span 4; }
+  .info--narrow-first > :nth-child(2):last-child { grid-column: span 3; }
+  .info--narrow-first > :nth-child(3):last-child { grid-column: span 2; }
   .info > :has(.item__fact) ~ :has(.item__fact)::before {
     content: '';
     position: absolute;

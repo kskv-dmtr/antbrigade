@@ -94,24 +94,3 @@ const pool = shuffle(albums);
 
   <RandomPicks pool={pool} />
 </Base>
-
-<script>
-  /* Клавиша R — «Dig again», новая горсть случайных релизов (22 сентября
-     2026, просьба владельца). Только на главной: на странице промаха тот же
-     раздел, но клавиши там не просили. Как F, S и I: по коду клавиши (в
-     русской раскладке — «К»), без сочетаний — Ctrl+R и Cmd+R остаются
-     перезагрузкой, — и не пока набирают текст. Нажимаем саму кнопку: её
-     обработчик листает пул, подгружает следующую горсть и тасует заново,
-     когда пул кончился. Кнопок две — в полосе и под подборкой; обработчик
-     у них общий, так что годится любая. */
-  const копать = document.querySelector('.dig-again');
-  if (копать) {
-    addEventListener('keydown', (e) => {
-      if (e.code !== 'KeyR' || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
-      const el = document.activeElement;
-      if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
-      e.preventDefault();
-      копать.click();
-    });
-  }
-</script>

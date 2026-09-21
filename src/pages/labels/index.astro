@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { labels, countryName, typeLine, typeParts } from '../../lib/db.js';
+import { labels, countryName, typeLine, typePairs } from '../../lib/db.js';
 
 /* Раскладка та же, что у артистов: по первой букве.
 
@@ -135,7 +135,7 @@ let выведено = 0;
             <BriefCard
               href={`/labels/${l.slug}`}
               name={l.name}
-              counts={typeParts(l.albumIds)}
+              counts={typePairs(l.albumIds)}
             />
           </li>
         ))}

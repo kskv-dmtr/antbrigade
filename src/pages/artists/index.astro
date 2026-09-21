@@ -7,7 +7,7 @@ import FilterCell from '../../components/FilterCell.astro';
 import MultiSelect from '../../components/MultiSelect.astro';
 import ViewSwitch from '../../components/ViewSwitch.astro';
 import BriefCard from '../../components/BriefCard.astro';
-import { artists, countryName, typeLine, typeParts } from '../../lib/db.js';
+import { artists, countryName, typeLine, typePairs } from '../../lib/db.js';
 
 /* Счёт под именем — по типам: «2 Albums · 1 EP · 3 Official Videos» (20
    сентября 2026, просьба владельца). Собирает его typeLine в db.js. */
@@ -140,11 +140,12 @@ let выведено = 0;
                 она осталась на странице исполнителя.
 
                 Под именем — счёт релизов и, через точку, клипов, если они
-                есть (19 сентября 2026, просьба владельца). */}
+                есть (19 сентября 2026, просьба владельца). С 21 сентября —
+                род слева, число справа в квадратных скобках: «Albums [2]». */}
             <BriefCard
               href={`/artists/${a.slug}`}
               name={a.name}
-              counts={typeParts(a.albumIds, a.videoIds)}
+              counts={typePairs(a.albumIds, a.videoIds)}
             />
           </li>
         ))}

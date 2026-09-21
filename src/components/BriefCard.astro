@@ -30,9 +30,15 @@ const { href, name, note, left, right, counts } = Astro.props;
   {/* Опись — по строке на род, с тонкой чертой между ними (21 сентября
       2026, просьба владельца; так она уже стояла 20 сентября, потом была
       строкой через точку). Стоит сразу под именем. */}
+  {/* Строка описи — либо готовая строка («2 Albums»), либо пара [род,
+      число]: тогда род слева, число в квадратных скобках справа, «Albums
+      [2]», разведены space-between (у исполнителя, лейбла и жанра, 21–22
+      сентября 2026). */}
   {counts ? (
     <span class="brief__counts">
-      {counts.map((строка) => <span class="brief__count">{строка}</span>)}
+      {counts.map((строка) => Array.isArray(строка)
+        ? <span class="brief__count brief__count--split"><span>{строка[0]}</span><span>[{строка[1]}]</span></span>
+        : <span class="brief__count">{строка}</span>)}
     </span>
   ) : (
     <span class="brief__line brief__line--sub">

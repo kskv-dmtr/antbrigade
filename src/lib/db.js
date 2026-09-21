@@ -320,6 +320,13 @@ const РОДЫ = ['Album', 'EP', 'Single', 'Compilation', 'Collaboration',
               'Official Video', 'Official Visualizer', 'Live Performance'];
 
 export function typeParts(albumIds = [], videoIds = []) {
+  return typePairs(albumIds, videoIds).map(([род, n]) => `${n} ${род}`);
+}
+
+/* Та же опись парами [род во множественном числе, число] — для карточки
+   исполнителя, где род и число разведены по краям: «Albums [2]»
+   (21 сентября 2026, просьба владельца). */
+export function typePairs(albumIds = [], videoIds = []) {
   const счёт = new Map();
   const добавить = (род) => род && счёт.set(род, (счёт.get(род) ?? 0) + 1);
 
@@ -332,7 +339,7 @@ export function typeParts(albumIds = [], videoIds = []) {
       if (i !== j) return (i < 0 ? РОДЫ.length : i) - (j < 0 ? РОДЫ.length : j);
       return a[0].localeCompare(b[0]);
     })
-    .map(([род, n]) => `${n} ${род}${n === 1 ? '' : 's'}`);
+    .map(([род, n]) => [`${род}${n === 1 ? '' : 's'}`, n]);
 }
 
 /* Та же опись одной строкой, через точку — для строки списка. */

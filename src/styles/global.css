@@ -3393,10 +3393,12 @@ select option { background: var(--option-bg); color: var(--fg); }
     grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr);
   }
-  /* Страны нет — Worldwide у Various Artists и «Not on Label»: слово одно, а
-     перечни рядом на сотни имён. Столбец Country тогда — ровно четверть, как
+  /* У исполнителя и лейбла столбец Country — всегда ровно четверть, как
      первый из четырёх, а остальные делят оставшееся поровну (22 сентября
-     2026, просьба владельца). */
+     2026, просьба владельца). При четырёх столбцах это и так четверть;
+     разница видна, когда ссылок нет: страна — одно-два слова, а перечни
+     рядом бывают на сотни имён. Сначала правило стояло только у записей без
+     страны (Worldwide). */
   .info--narrow-first { grid-template-columns: 25%; }
   .info > :has(.item__fact) ~ :has(.item__fact)::before {
     content: '';

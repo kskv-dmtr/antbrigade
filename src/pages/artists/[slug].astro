@@ -120,10 +120,10 @@ const aka = artistsOf(artist.akaIds ?? []);
           не выводится вовсе, и оставшиеся делят ширину поровну: у
           исполнителя без ссылок и лейблов — два столбца по половине. Между
           соседними — мягкая черта. */}
-      {/* У Various Artists страны нет (Worldwide): столбец Country — одна
-          четверть, как первый из четырёх, остальное — перечням (22 сентября
-          2026, просьба владельца). */}
-      <div class:list={['info info--auto', { 'info--narrow-first': !artist.country }]}>
+      {/* Столбец Country — всегда одна четверть, как первый из четырёх:
+          когда ссылок нет (или страны — у Various Artists, Worldwide),
+          остальное делят перечни (22 сентября 2026, просьба владельца). */}
+      <div class="info info--auto info--narrow-first">
         <dl class="item__facts">
           <div class="item__fact">
             <dt>Country:</dt>

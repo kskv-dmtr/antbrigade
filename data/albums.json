@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-22T00:43:05Z",
+  "generatedAt": "2026-09-22T10:01:11Z",
   "counts": {
     "albums": 1407,
     "artists": 1190,
@@ -23184,10 +23184,10 @@
         "Forest Law"
       ],
       "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
       ],
       "labels": [
-        "Not on Label"
+        "Les Disques Bongo Joe"
       ]
     },
     {
@@ -52102,7 +52102,7 @@
       "slug": "forest-law",
       "name": "Forest Law",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://forestlaw.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52114,7 +52114,7 @@
         "Indie Pop"
       ],
       "labelIds": [
-        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
       ],
       "videoIds": [],
       "akaIds": []
@@ -52124,7 +52124,7 @@
       "slug": "forest-swords",
       "name": "Forest Swords",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://forestswords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52168,7 +52168,7 @@
       "slug": "fort-romeau",
       "name": "Fort Romeau",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://fort-romeau.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52189,7 +52189,7 @@
       "slug": "foxwarren",
       "name": "Foxwarren",
       "country": "CA",
-      "bandcamp": null,
+      "bandcamp": "https://foxwarren.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52254,7 +52254,7 @@
       "slug": "frankie-and-the-witch-fingers",
       "name": "Frankie and The Witch Fingers",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://frankieandthewitchfingers.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52295,7 +52295,7 @@
       "slug": "frazer-ray",
       "name": "Frazer Ray",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://frazerray.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52400,7 +52400,7 @@
       "slug": "fu-manchu",
       "name": "Fu Manchu",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://fumanchuband.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52485,7 +52485,7 @@
       "slug": "futuro-terror",
       "name": "Futuro Terror",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://futuroterrormusica.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52549,7 +52549,7 @@
       "slug": "gabriel-da-rosa",
       "name": "Gabriel da Rosa",
       "country": "BR",
-      "bandcamp": null,
+      "bandcamp": "https://gabrieldarosa.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52592,7 +52592,7 @@
       "slug": "galdive",
       "name": "Galdive",
       "country": "ID",
-      "bandcamp": null,
+      "bandcamp": "https://galdive.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52613,7 +52613,7 @@
       "slug": "gama-bomb",
       "name": "Gama Bomb",
       "country": "IE",
-      "bandcamp": null,
+      "bandcamp": "https://gamabomb.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -53211,7 +53211,7 @@
       "slug": "grail-guard",
       "name": "Grail Guard",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://grailguard.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -69694,7 +69694,7 @@
       "slug": "with-honor",
       "name": "With Honor",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://withhonorct.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -71565,7 +71565,7 @@
       "slug": "big-bite-records",
       "name": "Big Bite Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://bigbiterecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -76615,6 +76615,7 @@
         "b23aa992-2aac-4165-beb5-080416c13dce",
         "8efa65f4-09df-4006-8089-2869aee41410",
         "1164129a-8c52-8088-b6e3-f4cb42cdcafd",
+        "2144129a-8c52-8039-8c65-f7d4a1f2fa65",
         "3d54129a-8c52-8066-b36d-c0eb37568d9c",
         "3d44129a-8c52-80c7-9687-da7f32d44da0",
         "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
@@ -76624,6 +76625,7 @@
         "2424129a-8c52-80d3-81e6-ee184d274263",
         "24a4129a-8c52-8032-bc8e-fd1c9173c69a",
         "24f4129a-8c52-80c4-b1d8-cffe7bd29def",
+        "24a4129a-8c52-80a0-9283-e00355c89095",
         "2494129a-8c52-803f-b9f0-f187678e0388",
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ]
@@ -77378,7 +77380,7 @@
       "slug": "mom-pop",
       "name": "Mom+Pop",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://mompop.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -78151,7 +78153,6 @@
         "1944129a-8c52-8088-9134-eaaf83eb1451",
         "012eb997-f1ea-4a6b-a872-2cc9ab08cf6c",
         "01755075-ae26-4b7c-a51b-c9ca82ffd983",
-        "2144129a-8c52-8039-8c65-f7d4a1f2fa65",
         "2f44129a-8c52-8085-ad3a-da31fdc2dcb8",
         "0a588099-193b-4ccb-8bc8-34e79c7f948b",
         "2384129a-8c52-8033-a6ad-e2659f82457d",
@@ -78273,7 +78274,6 @@
         "2414129a-8c52-80b9-b9d1-d0b0e427b129",
         "24a4129a-8c52-808a-a31f-f2b297f38174",
         "2504129a-8c52-802b-8a9b-d5ef2c868127",
-        "24a4129a-8c52-80a0-9283-e00355c89095",
         "2444129a-8c52-804d-afaa-e16a4836cee5",
         "2434129a-8c52-80b4-b84c-c72d6c303294",
         "2504129a-8c52-8085-bcd0-d2b38bac0a50",
@@ -79350,7 +79350,7 @@
       "slug": "prosthetic-records",
       "name": "Prosthetic Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://prostheticrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -81577,7 +81577,7 @@
       "slug": "the-reverberation-appreciation-society",
       "name": "The Reverberation Appreciation Society",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://reverberationappreciation.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -81768,7 +81768,7 @@
       "slug": "tns-records",
       "name": "TNS Records",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://tnsrecords.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

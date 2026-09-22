@@ -5037,10 +5037,11 @@ html:not([data-js]) .more { display: none; }
      main — с запасом веса над общим правилом .more. */
   main .more { height: var(--bar-h); }
 
+  /* Блоки — один под другим, в каждом подпись сверху и перечень под ней
+     через 8, как на широком экране (22 сентября 2026, просьба владельца).
+     До того подписи стояли колонкой слева, а перечни — справа от них. */
   .info {
-    grid-template-columns: max-content minmax(0, 1fr);
-    align-items: baseline;
-    column-gap: 0.5rem;
+    display: block;
     padding: 0.5rem var(--pad) 0.5rem calc(var(--pad) + 1px);
   }
   /* Блоки — сеткой-наследницей, а не contents: колонки у них общие, с
@@ -5051,10 +5052,7 @@ html:not([data-js]) .more { display: none; }
      жанров первый <dl> пуст, и черта над одиноким Labels ничего бы не
      делила. */
   .info > * {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns: subgrid;
-    align-items: baseline;
+    display: block;
 
     /* Поля, перемычка слева и рост в полосу — от половин широкого экрана;
        здесь их держит сама справка. */
@@ -5067,14 +5065,20 @@ html:not([data-js]) .more { display: none; }
     padding-top: 0.5rem;
     border-top: 1px solid var(--line-soft);
   }
-  .info .item__fact { display: contents; }
+  .info .item__fact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: var(--fact-pad) 0;
+  }
   /* Межстрочный у перечня — 28: у жанра и лейбла в нём десятки имён, и при
      1.4 они слипались в плашку (так простояло несколько часов 18 сентября
      2026), а при общих для Info 24 владелец попросил ещё на 4 свободнее. Поле
      строки зато 3 вместо 8: однострочная строка выходит те же 34, что в
      справке релиза. */
   .info .item__fact dt,
-  .info .item__fact dd { padding: var(--fact-pad) 0; }
+  .info .item__fact dd { padding: 0; }
   .head--page .head__lead,
   .head--page .head__side { height: var(--bar-h); }
   .head--page .head__side {
@@ -5889,7 +5893,9 @@ html:not([data-js]) .more { display: none; }
     /* 11 кеглем — как подписи рода в находках (ARTIST, RELEASE), вместе с
        клавишами в рамках (19 сентября 2026, просьба владельца). */
     font-size: max(14px, 0.875rem);
-    border-bottom: 1px solid var(--line-soft);
+
+    /* Черты под подсказками нет (22 сентября 2026, просьба владельца):
+       строка Navigate / Open отделена от находок и так — полем. */
   }
   .search__hint {
     display: inline-flex;

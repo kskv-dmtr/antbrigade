@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Шрифты. Файл собран из wght.css трёх пакетов Fontsource — geist,
    geist-mono, space-grotesk — и отличается от них одним: у латиницы стоит
-   font-display: optional вместо swap.
+   font-display: block вместо swap (с 22 сентября 2026; до того — optional).
 
    Swap означает «покажи запасным, потом перерисуй своим», и перерисовка
    двигала на странице всё разом: замер на 1440 — «GENRE: ALL» запасным
@@ -10,9 +10,20 @@
    поиска, и строки списка. Заметнее всего при обновлении: кадр с запасным
    шрифтом успевает нарисоваться до того, как браузер достанет свой из кэша.
 
-   Optional перерисовку запрещает: либо шрифт готов к первой отрисовке — а он
-   готов, три файла латиницы просятся в <head> через rel=preload, — либо
-   страница рисуется запасным и такой остаётся до следующего перехода.
+   Optional перерисовку запрещал: либо шрифт готов к первой отрисовке, либо
+   страница рисуется запасным и такой остаётся до следующего перехода. На
+   деле при первом заходе шрифт к первой отрисовке не успевал — окно у
+   optional около 100 мс, а замер с www.antbrigade.fun 22 сентября 2026 дал
+   0,5–0,9 с на файл при холодном соединении, хотя preload стоит и адреса с
+   @font-face совпадают. Весь первый заход сайт показывался запасными
+   шрифтами — они уже, и владелец видел «шрифты меньше, после обновления
+   правильные».
+
+   Block ждёт свой шрифт с невидимым текстом — до трёх секунд — и рисует
+   текст сразу своим: запасного не видно, перерисовки с запасного на свой
+   нет. Плата — на первом заходе текст на долю секунды невидим; из кэша
+   шрифт готов сразу. Если за три секунды шрифт так и не пришёл, браузер
+   покажет запасной и подменит, когда дождётся.
 
    Остальные наборы (кириллица, вьетнамский, символы) остаются на swap: они
    подключаются по своим unicode-range, на латинском сайте почти не нужны, и
@@ -67,7 +78,7 @@
 @font-face {
   font-family: 'Geist Variable';
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 100 900;
   src: url('@fontsource-variable/geist/files/geist-latin-wght-normal.woff2') format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
@@ -128,7 +139,7 @@
 @font-face {
   font-family: 'Geist Mono Variable';
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 100 900;
   src: url('@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2') format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
@@ -159,7 +170,7 @@
 @font-face {
   font-family: 'Space Grotesk Variable';
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 300 700;
   src: url('@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2') format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;

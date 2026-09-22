@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-22T10:01:11Z",
+  "generatedAt": "2026-09-22T18:57:01Z",
   "counts": {
     "albums": 1407,
     "artists": 1190,
@@ -52659,7 +52659,7 @@
       "slug": "gatecreeper",
       "name": "Gatecreeper",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://gatecreeper.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

@@ -1,8 +1,8 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-22T18:57:01Z",
+  "generatedAt": "2026-09-22T22:13:06Z",
   "counts": {
-    "albums": 1407,
+    "albums": 1408,
     "artists": 1190,
     "labels": 744,
     "videos": 104
@@ -132,6 +132,37 @@
       ],
       "labels": [
         "Sahel Sounds"
+      ]
+    },
+    {
+      "id": "3e34129a-8c52-801e-9168-d9b6414bbfc8",
+      "slug": "eje-eje-mezze",
+      "artist": "Eje Eje",
+      "album": "Mezze",
+      "url": "https://album.link/7jm8zrrzfjkfj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A293538f2-7c1a-46f2-acd8-d6bbbd70808b%3Aa1109911348_10.jpg?table=block&id=3e34129a-8c52-801e-9168-d9b6414bbfc8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Psychedelia",
+        "Anatolian Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-09-16",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24f4129a-8c52-80a4-899c-d3ff7c457202"
+      ],
+      "artists": [
+        "Eje Eje"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8056-af87-f846674a33ab"
+      ],
+      "labels": [
+        "Batov Records"
       ]
     },
     {
@@ -30064,9 +30095,8 @@
       "url": "https://album.link/vzndcxzxst9vm",
       "cover": "https://antbrigade.notion.site/image/attachment%3A37e8d00f-ae6b-41c3-b474-f18c13af05b7%3Aphoto_2025-08-15_02-03-21.jpg?table=block&id=65fbcf5d-dd2a-4c40-a1b6-d7eb5a9d1745&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Funk",
-        "Dub",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Anatolian Rock"
       ],
       "types": [
         "Album"
@@ -50845,12 +50875,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e34129a-8c52-801e-9168-d9b6414bbfc8",
         "65fbcf5d-dd2a-4c40-a1b6-d7eb5a9d1745"
       ],
       "genres": [
-        "Funk",
-        "Dub",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Anatolian Rock"
       ],
       "labelIds": [
         "2494129a-8c52-8056-af87-f846674a33ab"
@@ -71365,6 +71395,7 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e34129a-8c52-801e-9168-d9b6414bbfc8",
         "3bc4129a-8c52-8087-a140-c7ab7716e9d2",
         "2264129a-8c52-80ba-8e5f-ce7f24cd3e62",
         "10a4129a-8c52-8046-ae56-ee657a9d6398",
@@ -71373,12 +71404,12 @@
         "8f80099a-e6b5-4979-81fd-56bdc1f09871"
       ],
       "artistIds": [
+        "24f4129a-8c52-80a4-899c-d3ff7c457202",
         "3bc4129a-8c52-80da-b4b3-f405f28c2856",
         "2494129a-8c52-8050-ab11-d101fbe0e5b8",
         "2504129a-8c52-80d8-9302-ef6c4c021119",
         "2504129a-8c52-8035-ab39-ea60ca960b99",
-        "24f4129a-8c52-8097-83e2-c4f8b9b24a1c",
-        "24f4129a-8c52-80a4-899c-d3ff7c457202"
+        "24f4129a-8c52-8097-83e2-c4f8b9b24a1c"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T23:18:59Z",
+  "generatedAt": "2026-09-22T22:13:18Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22472,6 +22472,19 @@
       "upc": "187223000021",
       "tracks": 14,
       "releaseDate": "2005-03-08"
+    },
+    "3e34129a-8c52-801e-9168-d9b6414bbfc8": {
+      "source": "https://album.link/7jm8zrrzfjkfj",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4shMUOpRwxtACLcS9H1V2T",
+        "pandora": "https://www.pandora.com/AL:67812343",
+        "amazonMusic": "https://music.amazon.com/albums/B0H725KZM6",
+        "tidal": "https://listen.tidal.com/album/538675185",
+        "amazonStore": "https://amazon.com/dp/B0H725KZM6"
+      },
+      "upc": "4062548146455",
+      "tracks": 5,
+      "releaseDate": "2026-09-16"
     }
   }
 }

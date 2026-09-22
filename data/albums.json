@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-21T23:25:31Z",
+  "generatedAt": "2026-09-22T00:43:05Z",
   "counts": {
     "albums": 1407,
-    "artists": 1189,
-    "labels": 745,
-    "videos": 103
+    "artists": 1190,
+    "labels": 744,
+    "videos": 104
   },
   "albums": [
     {
@@ -2585,18 +2585,19 @@
       "origYear": null,
       "playlists": [],
       "artistIds": [
-        "2514129a-8c52-8087-968d-cbacaad81947"
+        "2514129a-8c52-8087-968d-cbacaad81947",
+        "3e34129a-8c52-80a7-80ff-d1c13447c6c6"
       ],
       "artists": [
-        "Wu-Lu"
+        "Wu-Lu",
+        "POiSON ANNA"
       ],
       "labelIds": [
         "2444129a-8c52-80bc-980e-d768395ab175",
         "3e24129a-8c52-807e-aa7e-c67e07a0ec03"
       ],
       "labels": [
-        "Warp Records",
-        "POiSON ANNA"
+        "Warp Records"
       ]
     },
     {
@@ -44637,6 +44638,7 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": [
+        "3e24129a-8c52-809e-b943-c41c462be7c7",
         "3cb4129a-8c52-80b2-be79-f93b24895d7c"
       ],
       "akaIds": []
@@ -59128,7 +59130,7 @@
       "slug": "misty-coast",
       "name": "Misty Coast",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://mistycoast.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -61583,6 +61585,28 @@
       ],
       "labelIds": [
         "3d24129a-8c52-8091-b21a-ffe75126c691"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e34129a-8c52-80a7-80ff-d1c13447c6c6",
+      "slug": "poison-anna",
+      "name": "POiSON ANNA",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e24129a-8c52-80b4-b8d8-c67371eddb1f"
+      ],
+      "genres": [
+        "Trip Hop",
+        "Sound Collage"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80bc-980e-d768395ab175",
+        "3e24129a-8c52-807e-aa7e-c67e07a0ec03"
       ],
       "videoIds": [],
       "akaIds": []
@@ -79131,21 +79155,6 @@
       ]
     },
     {
-      "id": "3e24129a-8c52-807e-aa7e-c67e07a0ec03",
-      "slug": "poison-anna",
-      "name": "POiSON ANNA",
-      "country": "GB",
-      "bandcamp": null,
-      "bandcamp2": null,
-      "youtube": null,
-      "albumIds": [
-        "3e24129a-8c52-80b4-b8d8-c67371eddb1f"
-      ],
-      "artistIds": [
-        "2514129a-8c52-8087-968d-cbacaad81947"
-      ]
-    },
-    {
       "id": "3ac4129a-8c52-8015-9418-c6ed99eab12c",
       "slug": "poison-city-records",
       "name": "Poison City Records",
@@ -82489,6 +82498,7 @@
       "artistIds": [
         "3ae4129a-8c52-808c-9c06-d2927dc7bae0",
         "2514129a-8c52-8087-968d-cbacaad81947",
+        "3e34129a-8c52-80a7-80ff-d1c13447c6c6",
         "36f4129a-8c52-8038-80bc-dcb7a31d0e5e",
         "24a4129a-8c52-80f3-bcb1-e3a6f63ca82a",
         "3424129a-8c52-80f6-b89f-ea9abaef0612",
@@ -82951,6 +82961,19 @@
         "2404129a-8c52-800a-826f-dd385decf385"
       ],
       "slug": "aaron-frazer-paint-the-picture"
+    },
+    {
+      "id": "3e24129a-8c52-809e-b943-c41c462be7c7",
+      "title": "Adult DVD | Jesus Christ Supercar",
+      "url": "https://youtu.be/5-9cn9fXDFE?si=GqBPflYNGgLbNCGs",
+      "kind": "Official Visualizer",
+      "released": "2026-09-22",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "3cb4129a-8c52-80c8-b478-fca9935731a1"
+      ],
+      "slug": "adult-dvd-jesus-christ-supercar"
     },
     {
       "id": "3cb4129a-8c52-80b2-be79-f93b24895d7c",

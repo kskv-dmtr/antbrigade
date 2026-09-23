@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-22T22:13:06Z",
+  "generatedAt": "2026-09-23T06:01:14Z",
   "counts": {
     "albums": 1408,
     "artists": 1190,
@@ -71393,7 +71393,7 @@
       "country": "GB",
       "bandcamp": "https://batovrecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@BatovRecords",
       "albumIds": [
         "3e34129a-8c52-801e-9168-d9b6414bbfc8",
         "3bc4129a-8c52-8087-a140-c7ab7716e9d2",

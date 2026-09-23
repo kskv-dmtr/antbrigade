@@ -3105,6 +3105,30 @@ select option { background: var(--option-bg); color: var(--fg); }
   border-left: 1px solid var(--line);
 }
 
+/* Перемычка между обложкой и справкой у релиза — не граница ячейки во всю
+   её высоту, а мягкая черта с полями по 16 сверху и снизу (24 сентября
+   2026, просьба владельца): тот же --line-soft, что у черты над справкой и
+   между строками описи. Граница снята, черту чертит слой — иначе поля с
+   границей не задать.
+
+   Только на широком экране: от 900 и ниже ячейки идут одна под другой, и
+   перемычки между ними нет вовсе. */
+@media (min-width: 901px) {
+  .item:not(.item--video) .item__head {
+    position: relative;
+    border-left: 0;
+  }
+  .item:not(.item--video) .item__head::before {
+    content: '';
+    position: absolute;
+    top: var(--item-pad);
+    bottom: var(--item-pad);
+    left: -1px;
+    width: 1px;
+    background: var(--line-soft);
+  }
+}
+
 /* Поле со всех сторон одинаковое, без удвоенного снизу: у плитки те вторые
    16 держат воздух под подписью, а здесь под обложкой ничего нет.
 

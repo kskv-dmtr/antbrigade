@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-23T06:01:14Z",
+  "generatedAt": "2026-09-23T12:40:14Z",
   "counts": {
-    "albums": 1408,
-    "artists": 1190,
-    "labels": 744,
+    "albums": 1411,
+    "artists": 1191,
+    "labels": 746,
     "videos": 104
   },
   "albums": [
@@ -20398,6 +20398,37 @@
       ]
     },
     {
+      "id": "3e44129a-8c52-80cc-986c-f5f382c08431",
+      "slug": "cinnamon-gum-the-cinnamon-show",
+      "artist": "Cinnamon Gum",
+      "album": "The Cinnamon Show",
+      "url": "https://album.link/34q8k3d30hkzt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5fba21be-5256-4218-bd05-063d8d2b3787%3Aa0532504703_10.jpg?table=block&id=3e44129a-8c52-80cc-986c-f5f382c08431&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-09-27",
+      "year": 2024,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e44129a-8c52-805d-803f-e3ff77f0b128"
+      ],
+      "artists": [
+        "Cinnamon Gum"
+      ],
+      "labelIds": [
+        "3e44129a-8c52-8085-8731-c9e87335c453"
+      ],
+      "labels": [
+        "Seagull Ross"
+      ]
+    },
+    {
       "id": "b23ba8a3-1461-4815-ab0b-6ccd2a70190e",
       "slug": "cocobolo-consider-it-done",
       "artist": "Cocobolo",
@@ -22687,8 +22718,8 @@
       "url": "https://album.link/ffbvtgh8jh9qz",
       "cover": "https://antbrigade.notion.site/image/attachment%3A26e35061-94d2-4ad7-a92f-c39a2d531411%3Aa1721060516_10_(1).jpg?table=block&id=d1f8f0c0-940d-48c7-b346-52903f2613c7&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Soul",
-        "Gospel"
+        "Neo-Soul",
+        "Smooth Soul"
       ],
       "types": [
         "Album"
@@ -38671,7 +38702,8 @@
       "url": "https://album.link/sm9hgjxjjm2qk",
       "cover": "https://antbrigade.notion.site/image/attachment%3Ac01ad0ee-5018-41ca-8013-9390dd1c6023%3Aa2883045466_10.jpg?table=block&id=5e8a1076-5502-44f7-a1c4-56ac067a5b32&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Soul"
+        "Neo-Soul",
+        "Smooth Soul"
       ],
       "types": [
         "Album"
@@ -43375,6 +43407,37 @@
       ]
     },
     {
+      "id": "3e44129a-8c52-8053-99ed-c14b079615f2",
+      "slug": "proton-packs-conspiracy-66",
+      "artist": "Proton Packs",
+      "album": "Conspiracy ‘66",
+      "url": "https://album.link/89gwgs2wrgzwc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af0a28963-ab5f-4bce-89fe-e7334c7e8e1e%3Aa2052719939_10.jpg?table=block&id=3e44129a-8c52-8053-99ed-c14b079615f2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2017-01-01",
+      "year": 2017,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3144129a-8c52-80c0-9e2b-c818f793ec41"
+      ],
+      "artists": [
+        "Proton Packs"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8045-9ebb-f93a5767b17a"
+      ],
+      "labels": [
+        "Mom's Basement Records"
+      ]
+    },
+    {
       "id": "3de4129a-8c52-8052-ad59-e241be6170a8",
       "slug": "various-artists-doing-it-in-lagos-boogie-pop-disco-in-1980-s",
       "artist": "Various Artists",
@@ -43881,6 +43944,37 @@
       ],
       "labels": [
         "Cultures of Soul"
+      ]
+    },
+    {
+      "id": "3e44129a-8c52-8038-8019-c6ea5a27cd02",
+      "slug": "various-artists-dengue-fever-presents-electric-cambodia-14-r",
+      "artist": "Various Artists",
+      "album": "Dengue Fever Presents Electric Cambodia: 14 Rare Gems from Cambodia’s Past",
+      "url": "https://album.link/3qmwxxb5hmwpt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad6d90648-2a86-48ce-9fe4-5ede8d569a07%3Aa0381180395_10.jpg?table=block&id=3e44129a-8c52-8038-8019-c6ea5a27cd02&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cambodian Pop",
+        "Psychedelic Rock"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2010-01-12",
+      "year": 2010,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "3e44129a-8c52-80ae-b8a9-f12a59b2b467"
+      ],
+      "labels": [
+        "Minky Records"
       ]
     },
     {
@@ -44506,8 +44600,8 @@
         "5e8a1076-5502-44f7-a1c4-56ac067a5b32"
       ],
       "genres": [
-        "Soul",
-        "Gospel"
+        "Neo-Soul",
+        "Smooth Soul"
       ],
       "labelIds": [
         "2434129a-8c52-8022-abd2-d0c412936e59",
@@ -48313,6 +48407,27 @@
       ],
       "labelIds": [
         "2fa4129a-8c52-809b-9f9a-ea9528a9ccc2"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e44129a-8c52-805d-803f-e3ff77f0b128",
+      "slug": "cinnamon-gum",
+      "name": "Cinnamon Gum",
+      "country": "PL",
+      "bandcamp": "https://cinnamongum.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e44129a-8c52-80cc-986c-f5f382c08431"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul"
+      ],
+      "labelIds": [
+        "3e44129a-8c52-8085-8731-c9e87335c453"
       ],
       "videoIds": [],
       "akaIds": []
@@ -61994,11 +62109,12 @@
       "slug": "proton-packs",
       "name": "Proton Packs",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://protonpacks.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "3144129a-8c52-802e-a79d-c2b0f243feb9"
+        "3144129a-8c52-802e-a79d-c2b0f243feb9",
+        "3e44129a-8c52-8053-99ed-c14b079615f2"
       ],
       "genres": [
         "Punk Rock",
@@ -68887,7 +69003,8 @@
         "3dc4129a-8c52-803f-8fe4-dd9099b0cb55",
         "3de4129a-8c52-8052-ad59-e241be6170a8",
         "3de4129a-8c52-80aa-aca6-d6f2ad450307",
-        "3d34129a-8c52-80b8-a693-e3a62aff7ae6"
+        "3d34129a-8c52-80b8-a693-e3a62aff7ae6",
+        "3e44129a-8c52-8038-8019-c6ea5a27cd02"
       ],
       "genres": [
         "City Pop",
@@ -68916,7 +69033,9 @@
         "Soul",
         "Zouk",
         "Jazz-Funk",
-        "Afro-Funk"
+        "Afro-Funk",
+        "Cambodian Pop",
+        "Psychedelic Rock"
       ],
       "labelIds": [
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
@@ -68937,7 +69056,8 @@
         "3bf4129a-8c52-8009-9e03-ceaba509be56",
         "3b04129a-8c52-8069-be64-e818af0bbf0a",
         "2444129a-8c52-80db-a429-df4e6a0e0164",
-        "3d24129a-8c52-80e5-ae5f-f83aa36ca244"
+        "3d24129a-8c52-80e5-ae5f-f83aa36ca244",
+        "3e44129a-8c52-80ae-b8a9-f12a59b2b467"
       ],
       "videoIds": [],
       "akaIds": []
@@ -77310,6 +77430,21 @@
       ]
     },
     {
+      "id": "3e44129a-8c52-80ae-b8a9-f12a59b2b467",
+      "slug": "minky-records",
+      "name": "Minky Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e44129a-8c52-8038-8019-c6ea5a27cd02"
+      ],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ]
+    },
+    {
       "id": "2f54129a-8c52-802b-8542-c222663153f8",
       "slug": "mississippi-records",
       "name": "Mississippi Records",
@@ -77398,7 +77533,8 @@
         "3144129a-8c52-802e-a79d-c2b0f243feb9",
         "3c54129a-8c52-8050-9ffc-e0bdb6a0ecbe",
         "ffc6c1bb-4044-421a-8301-7ac1ae22874c",
-        "3c54129a-8c52-806f-a2b6-c8f50ac0d582"
+        "3c54129a-8c52-806f-a2b6-c8f50ac0d582",
+        "3e44129a-8c52-8053-99ed-c14b079615f2"
       ],
       "artistIds": [
         "3144129a-8c52-80c0-9e2b-c818f793ec41",
@@ -80367,6 +80503,21 @@
         "3db4129a-8c52-80ce-b38f-dfefd3e25f8b",
         "3db4129a-8c52-80b5-b340-f08ffbcb9d84",
         "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ]
+    },
+    {
+      "id": "3e44129a-8c52-8085-8731-c9e87335c453",
+      "slug": "seagull-ross",
+      "name": "Seagull Ross",
+      "country": "PL",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e44129a-8c52-80cc-986c-f5f382c08431"
+      ],
+      "artistIds": [
+        "3e44129a-8c52-805d-803f-e3ff77f0b128"
       ]
     },
     {

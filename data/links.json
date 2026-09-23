@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T22:13:18Z",
+  "generatedAt": "2026-09-23T12:40:36Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22485,6 +22485,51 @@
       "upc": "4062548146455",
       "tracks": 5,
       "releaseDate": "2026-09-16"
+    },
+    "3e44129a-8c52-80cc-986c-f5f382c08431": {
+      "source": "https://album.link/34q8k3d30hkzt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4wNTx3n951dp4FZtCk7CVP",
+        "pandora": "https://www.pandora.com/AL:36176127",
+        "deezer": "https://www.deezer.com/album/604949122",
+        "amazonMusic": "https://music.amazon.com/albums/B0D7QQB37Z",
+        "tidal": "https://listen.tidal.com/album/370716534",
+        "boomplay": "https://www.boomplay.com/albums/92731884",
+        "anghami": "https://play.anghami.com/album/1054346876?refer=linktree",
+        "bandcamp": "https://cinnamongum.bandcamp.com/album/the-cinnamon-show",
+        "amazonStore": "https://amazon.com/dp/B0D7QQB37Z"
+      },
+      "upc": "617308080032",
+      "tracks": 7,
+      "releaseDate": "2024-09-27"
+    },
+    "3e44129a-8c52-8053-99ed-c14b079615f2": {
+      "source": "https://album.link/89gwgs2wrgzwc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5iw0QGDFGwvPcQUNolBUQT",
+        "amazonMusic": "https://music.amazon.com/albums/B071DL2B6N",
+        "tidal": "https://listen.tidal.com/album/73277200",
+        "amazonStore": "https://amazon.com/dp/B071DL2B6N"
+      },
+      "upc": "5057302243944",
+      "tracks": 12,
+      "releaseDate": "2017-01-01"
+    },
+    "3e44129a-8c52-8038-8019-c6ea5a27cd02": {
+      "source": "https://album.link/3qmwxxb5hmwpt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2zfaBmo864X4b0WiKB0Gan",
+        "pandora": "https://www.pandora.com/AL:1558972",
+        "deezer": "https://www.deezer.com/album/1018574",
+        "amazonMusic": "https://music.amazon.com/albums/B003AW1OM8",
+        "tidal": "https://listen.tidal.com/album/6138927",
+        "yandex": "https://music.yandex.ru/album/717024",
+        "bandcamp": "https://denguefever.bandcamp.com/album/dengue-fever-presents-electric-cambodia",
+        "amazonStore": "https://amazon.com/dp/B003AW1OM8"
+      },
+      "upc": "824247018228",
+      "tracks": 14,
+      "releaseDate": "2010-03-22"
     }
   }
 }

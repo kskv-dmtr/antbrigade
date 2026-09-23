@@ -487,7 +487,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
           <span class="keys__item">Info <kbd class="search__kbd">I</kbd></span>
         )}
         {shortcuts === 'random' && (
-          <span class="keys__item">Random <kbd class="search__kbd">R</kbd></span>
+          <span class="keys__item">Random Picks <kbd class="search__kbd">R</kbd></span>
         )}
         {shortcuts === 'full' && (
           <>
@@ -497,11 +497,47 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
             <span class="keys__item">Filters <kbd class="search__kbd">F</kbd></span>
           </>
         )}
+        {/* Случайный релиз из всей базы — последней подсказкой, на всех
+            страницах (23 сентября 2026, просьба владельца). */}
+        <span class="keys__item">Random Release <kbd class="search__kbd search__kbd--word">Shift</kbd><kbd class="search__kbd">R</kbd></span>
       </span>
     </div>
   </footer>
 
   <script>
+    /* Shift+R — случайный релиз из всей базы, с любой страницы
+       (23 сентября 2026, просьба владельца). Список берём из того же
+       указателя, что и поиск: /search.json, записи рода «r». Запрашиваем по
+       нажатию, а не заранее — на большинстве страниц он не понадобится, а
+       весит треть мегабайта; браузер его кэширует, и второе нажатие уже не
+       ходит в сеть.
+
+       По коду клавиши, а не по букве (в русской раскладке — «К»), и только с
+       Shift: без него R на главной и на промахе листает Lucky Finds. Ctrl и
+       Cmd не трогаем — Ctrl+Shift+R перезагружает без кэша. Пока набирают
+       текст, сочетание не срабатывает. */
+    let релизы = null;
+    addEventListener('keydown', async (e) => {
+      if (e.code !== 'KeyR' || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+      const el = document.activeElement;
+      if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
+      e.preventDefault();
+
+      if (!релизы) {
+        try {
+          const ответ = await fetch('/search.json');
+          const { записи } = await ответ.json();
+          релизы = записи.filter((з) => з[0] === 'r').map((з) => з[2]);
+        } catch (err) {
+          // Сеть подвела — нажатие просто ничего не делает.
+          релизы = null;
+          return;
+        }
+      }
+      if (!релизы.length) return;
+      location.href = релизы[Math.floor(Math.random() * релизы.length)];
+    });
+
     /* Клавиша I сворачивает и разворачивает блок Info на страницах
        исполнителя, лейбла и жанра (22 сентября 2026, просьба владельца).
        Как F и S: по коду клавиши, а не по букве (в русской раскладке на том

@@ -277,7 +277,8 @@ const POOL = pool.length;
   const копать = document.querySelector('.dig-again');
   if (копать) {
     addEventListener('keydown', (e) => {
-      if (e.code !== 'KeyR' || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+      // Shift+R — случайный релиз из всей базы, это дело оболочки.
+      if (e.code !== 'KeyR' || e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
       const el = document.activeElement;
       if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
       e.preventDefault();

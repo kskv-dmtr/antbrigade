@@ -1,13 +1,46 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-23T20:25:45Z",
+  "generatedAt": "2026-09-23T23:44:21Z",
   "counts": {
-    "albums": 1411,
-    "artists": 1191,
-    "labels": 746,
+    "albums": 1413,
+    "artists": 1192,
+    "labels": 747,
     "videos": 104
   },
   "albums": [
+    {
+      "id": "3e44129a-8c52-8045-9c70-ea874a369c2d",
+      "slug": "actress-radical-frame",
+      "artist": "Actress",
+      "album": "Radical Frame",
+      "url": "https://album.link/dxxpksmj6d9q8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af5d1492f-c47a-4316-b5f1-fbf061807c1c%3Aa1290224174_10.jpg?table=block&id=3e44129a-8c52-8045-9c70-ea874a369c2d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "IDM",
+        "Microhouse",
+        "Outsider House",
+        "Footwork"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2414129a-8c52-80ff-8814-ca87285f34c6"
+      ],
+      "artists": [
+        "Actress"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8088-921f-e4f39ef46bee"
+      ],
+      "labels": [
+        "Ninja Tune"
+      ]
+    },
     {
       "id": "3df4129a-8c52-8033-b20a-f31d69a65e9d",
       "slug": "from-furar-hondo",
@@ -38,6 +71,38 @@
       ],
       "labels": [
         "humo internacional"
+      ]
+    },
+    {
+      "id": "3e44129a-8c52-805e-9e4c-c12205ad7dfe",
+      "slug": "janka-exit-the-dream",
+      "artist": "JANKA",
+      "album": "Exit the Dream",
+      "url": "https://album.link/g6vb5vm8z7kzv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4d78439b-97bd-496d-857f-ac6cb90988f2%3Aa3530176811_10.jpg?table=block&id=3e44129a-8c52-805e-9e4c-c12205ad7dfe&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Ambient Dub",
+        "IDM",
+        "Dub Techno"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-18",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e44129a-8c52-8074-81b0-c21997da7008"
+      ],
+      "artists": [
+        "JANKA"
+      ],
+      "labelIds": [
+        "3e44129a-8c52-8083-9ddc-f2e53e0c81ac"
+      ],
+      "labels": [
+        "Moonshine Recordings"
       ]
     },
     {
@@ -44644,14 +44709,19 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e44129a-8c52-8045-9c70-ea874a369c2d",
         "9a2a34e4-ba78-467b-8745-eeb1f6861b8d"
       ],
       "genres": [
+        "IDM",
+        "Microhouse",
+        "Outsider House",
+        "Footwork",
         "Electronic",
-        "Ambient",
-        "IDM"
+        "Ambient"
       ],
       "labelIds": [
+        "2434129a-8c52-8088-921f-e4f39ef46bee",
         "2444129a-8c52-80c4-890d-ec0d373d281f"
       ],
       "videoIds": [],
@@ -54960,6 +55030,28 @@
       ],
       "labelIds": [
         "24a4129a-8c52-801e-ad1f-d85aa631f2ee"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e44129a-8c52-8074-81b0-c21997da7008",
+      "slug": "janka",
+      "name": "JANKA",
+      "country": "PL",
+      "bandcamp": "https://janka-dub.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e44129a-8c52-805e-9e4c-c12205ad7dfe"
+      ],
+      "genres": [
+        "Ambient Dub",
+        "IDM",
+        "Dub Techno"
+      ],
+      "labelIds": [
+        "3e44129a-8c52-8083-9ddc-f2e53e0c81ac"
       ],
       "videoIds": [],
       "akaIds": []
@@ -77629,6 +77721,21 @@
       ]
     },
     {
+      "id": "3e44129a-8c52-8083-9ddc-f2e53e0c81ac",
+      "slug": "moonshine-recordings",
+      "name": "Moonshine Recordings",
+      "country": "PL",
+      "bandcamp": "https://moonshinerecordings.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e44129a-8c52-805e-9e4c-c12205ad7dfe"
+      ],
+      "artistIds": [
+        "3e44129a-8c52-8074-81b0-c21997da7008"
+      ]
+    },
+    {
       "id": "2494129a-8c52-8082-b7d5-f51446692fd6",
       "slug": "morr-music",
       "name": "Morr Music",
@@ -78113,8 +78220,9 @@
       "country": "GB",
       "bandcamp": "https://ninjatune.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@ninjatune",
       "albumIds": [
+        "3e44129a-8c52-8045-9c70-ea874a369c2d",
         "3984129a-8c52-8009-be26-dddfd396ee4b",
         "3314129a-8c52-8080-9b7b-c74fa39f1c06",
         "2424129a-8c52-80b0-b711-c00b93135226",
@@ -78133,6 +78241,7 @@
         "3d74129a-8c52-8081-80f2-e978ac05ac21"
       ],
       "artistIds": [
+        "2414129a-8c52-80ff-8814-ca87285f34c6",
         "24a4129a-8c52-80f9-b775-db08e934426c",
         "3314129a-8c52-8052-b695-fb5b36793427",
         "2424129a-8c52-8027-86a4-e56f36a2bd97",

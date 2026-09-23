@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T12:40:36Z",
+  "generatedAt": "2026-09-23T23:44:35Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22530,6 +22530,35 @@
       "upc": "824247018228",
       "tracks": 14,
       "releaseDate": "2010-03-22"
+    },
+    "3e44129a-8c52-8045-9c70-ea874a369c2d": {
+      "source": "https://album.link/dxxpksmj6d9q8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4bvfwACExnuV8cVqmTvneG",
+        "amazonMusic": "https://music.amazon.com/albums/B0H8ZDZCYJ",
+        "tidal": "https://listen.tidal.com/album/543339348",
+        "boomplay": "https://www.boomplay.com/albums/140396900",
+        "bandcamp": "https://actress.bandcamp.com/album/radical-frame",
+        "amazonStore": "https://amazon.com/dp/B0H8ZDZCYJ"
+      },
+      "upc": "5054429207088",
+      "tracks": 8,
+      "releaseDate": "2026-09-18"
+    },
+    "3e44129a-8c52-805e-9e4c-c12205ad7dfe": {
+      "source": "https://album.link/g6vb5vm8z7kzv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/500iP7EqxwDwrK9DPwsz6z",
+        "pandora": "https://www.pandora.com/AL:69414224",
+        "amazonMusic": "https://music.amazon.com/albums/B0HHG87SJC",
+        "tidal": "https://listen.tidal.com/album/557536346",
+        "yandex": "https://music.yandex.ru/album/43794005",
+        "boomplay": "https://www.boomplay.com/albums/139350669",
+        "amazonStore": "https://amazon.com/dp/B0HHG87SJC"
+      },
+      "upc": "612891219500",
+      "tracks": 8,
+      "releaseDate": "2026-09-18"
     }
   }
 }

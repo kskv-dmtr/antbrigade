@@ -1,13 +1,44 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-24T13:11:33Z",
+  "generatedAt": "2026-09-24T22:27:45Z",
   "counts": {
-    "albums": 1418,
-    "artists": 1193,
+    "albums": 1421,
+    "artists": 1195,
     "labels": 748,
     "videos": 105
   },
   "albums": [
+    {
+      "id": "3e54129a-8c52-808a-b06f-e211443c7a81",
+      "slug": "adult-dvd-adult-dvd",
+      "artist": "Adult DVD",
+      "album": "Adult DVD",
+      "url": "https://album.link/gqcr8zcwfcwvd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A244adf9d-7f75-4b22-98e7-c801640aa7e2%3Aa2222476588_10.jpg?table=block&id=3e54129a-8c52-808a-b06f-e211443c7a81&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Dance-Punk",
+        "Alternative Dance"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-25",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3cb4129a-8c52-80c8-b478-fca9935731a1"
+      ],
+      "artists": [
+        "Adult DVD"
+      ],
+      "labelIds": [
+        "2ad4129a-8c52-8007-8018-e7024fea8c95"
+      ],
+      "labels": [
+        "Fat Possum Records"
+      ]
+    },
     {
       "id": "3e44129a-8c52-8045-9c70-ea874a369c2d",
       "slug": "actress-radical-frame",
@@ -19100,6 +19131,38 @@
       ],
       "labels": [
         "Strap Originals"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-8047-b086-ecf3668e4cc6",
+      "slug": "the-gits-frenching-the-bully",
+      "artist": "The Gits",
+      "album": "Frenching the Bully",
+      "url": "https://album.link/6db2thjpgbxqt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aed91fee4-209b-4173-b0c5-00a2e3096976%3Aa2674974162_10.jpg?table=block&id=3e54129a-8c52-8047-b086-ecf3668e4cc6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Punk Rock",
+        "Grunge",
+        "Alternative Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-11-13",
+      "year": 2024,
+      "origYear": "1992",
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-8087-8cfe-d7a27ac4eb32"
+      ],
+      "artists": [
+        "The Gits"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8054-8334-e56a9e29b35e"
+      ],
+      "labels": [
+        "Sub Pop Records"
       ]
     },
     {
@@ -44353,6 +44416,38 @@
       ]
     },
     {
+      "id": "3e54129a-8c52-8083-974b-cd3bf852a067",
+      "slug": "the-exploding-hearts-guitar-romantic",
+      "artist": "The Exploding Hearts",
+      "album": "Guitar Romantic",
+      "url": "https://album.link/spb5mpdfr6hkz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0ed40712-1a0f-48bf-9619-549ec257f844%3Aa2356691421_10.jpg?table=block&id=3e54129a-8c52-8083-974b-cd3bf852a067&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Power Pop",
+        "Garage Punk",
+        "Garage Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2003-04-01",
+      "year": 2003,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-8048-adfe-c1f04a8fa4cc"
+      ],
+      "artists": [
+        "The Exploding Hearts"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80ab-bc10-e508949aaa7e"
+      ],
+      "labels": [
+        "Third Man Records"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-80bb-a4dd-cdabd5a26222",
       "slug": "solex-low-kick-and-hard-bop",
       "artist": "Solex",
@@ -44977,6 +45072,7 @@
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@adultdvdband/",
       "albumIds": [
+        "3e54129a-8c52-808a-b06f-e211443c7a81",
         "3cb4129a-8c52-8007-a2ae-f5e81654e3ad"
       ],
       "genres": [
@@ -44985,6 +45081,7 @@
         "Mutant Disco"
       ],
       "labelIds": [
+        "2ad4129a-8c52-8007-8018-e7024fea8c95",
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
       ],
       "videoIds": [
@@ -67104,6 +67201,28 @@
       "akaIds": []
     },
     {
+      "id": "3e54129a-8c52-8048-adfe-c1f04a8fa4cc",
+      "slug": "the-exploding-hearts",
+      "name": "The Exploding Hearts",
+      "country": "US",
+      "bandcamp": "https://theexplodinghearts.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-8083-974b-cd3bf852a067"
+      ],
+      "genres": [
+        "Power Pop",
+        "Garage Punk",
+        "Garage Rock"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80ab-bc10-e508949aaa7e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3684129a-8c52-8043-9831-e6e813d1de42",
       "slug": "the-field",
       "name": "The Field",
@@ -67167,6 +67286,28 @@
       ],
       "labelIds": [
         "35a4129a-8c52-80b2-8748-e67799ccaea3"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e54129a-8c52-8087-8cfe-d7a27ac4eb32",
+      "slug": "the-gits",
+      "name": "The Gits",
+      "country": "US",
+      "bandcamp": "https://thegits.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-8047-b086-ecf3668e4cc6"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Grunge",
+        "Alternative Rock"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8054-8334-e56a9e29b35e"
       ],
       "videoIds": [],
       "akaIds": []
@@ -74411,13 +74552,15 @@
       "name": "Fat Possum Records",
       "country": "US",
       "bandcamp": "https://fatpossumrecords.bandcamp.com/",
-      "bandcamp2": null,
+      "bandcamp2": "https://fatpossumuk.bandcamp.com/",
       "youtube": null,
       "albumIds": [
+        "3e54129a-8c52-808a-b06f-e211443c7a81",
         "2ad4129a-8c52-8002-b9a4-df00d2817434",
         "3d54129a-8c52-8059-814d-ca6b8af8ec16"
       ],
       "artistIds": [
+        "3cb4129a-8c52-80c8-b478-fca9935731a1",
         "2ad4129a-8c52-8002-a0e8-c02d87c13937",
         "3d54129a-8c52-80dd-80f8-f38de87b0119"
       ]
@@ -81800,6 +81943,7 @@
         "2734129a-8c52-80a1-a8d0-df038082046a",
         "2554129a-8c52-8039-8af4-e28f39267696",
         "1ca4129a-8c52-80cd-a5bc-f4e5fc327f0c",
+        "3e54129a-8c52-8047-b086-ecf3668e4cc6",
         "498dd494-ea75-4180-a546-84ce88c14bb4",
         "dd76476e-47d0-48ff-b877-a0ac1f0440ef",
         "bc95aa48-de37-4325-8b42-07e981288df5",
@@ -81812,6 +81956,7 @@
         "2734129a-8c52-8012-b23d-e189e9f31aeb",
         "2554129a-8c52-8058-b86d-c258ac4c6344",
         "24a4129a-8c52-8082-8335-e14604efa91e",
+        "3e54129a-8c52-8087-8cfe-d7a27ac4eb32",
         "2504129a-8c52-8088-9e2e-f56ea2c3f4bd",
         "24f4129a-8c52-8019-abdf-e68886fb2648",
         "2524129a-8c52-80a2-be6f-f4b9118a3b5f",
@@ -82113,12 +82258,14 @@
       "albumIds": [
         "3904129a-8c52-80e9-aac3-eb81e4cc1c8b",
         "2824129a-8c52-8072-9ded-c7cac9d1a2a9",
-        "178f610d-1d38-4074-aafb-8d09c40e74d8"
+        "178f610d-1d38-4074-aafb-8d09c40e74d8",
+        "3e54129a-8c52-8083-974b-cd3bf852a067"
       ],
       "artistIds": [
         "3904129a-8c52-80df-90f0-ed19fa09ece9",
         "2824129a-8c52-80ca-b195-f3e8b6d3dd8b",
-        "24a4129a-8c52-8053-8169-ef7a25dee213"
+        "24a4129a-8c52-8053-8169-ef7a25dee213",
+        "3e54129a-8c52-8048-adfe-c1f04a8fa4cc"
       ]
     },
     {

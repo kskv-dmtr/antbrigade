@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T13:12:04Z",
+  "generatedAt": "2026-09-24T22:28:06Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22630,6 +22630,51 @@
       "upc": "3614973988783",
       "tracks": 11,
       "releaseDate": "2009-12-01"
+    },
+    "3e54129a-8c52-808a-b06f-e211443c7a81": {
+      "source": "https://album.link/gqcr8zcwfcwvd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/17BEYcycElkLNpRbd85OT7",
+        "amazonMusic": "https://music.amazon.com/albums/B0H3M38XB7",
+        "amazonStore": "https://amazon.com/dp/B0H3M38XB7"
+      },
+      "upc": "820233066471",
+      "tracks": 12,
+      "releaseDate": "2026-09-25"
+    },
+    "3e54129a-8c52-8047-b086-ecf3668e4cc6": {
+      "source": "https://album.link/6db2thjpgbxqt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0unK1ttNt8xgj6bU0cMo2t",
+        "pandora": "https://www.pandora.com/AL:40642151",
+        "deezer": "https://www.deezer.com/album/661167471",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKSQHJKR",
+        "tidal": "https://listen.tidal.com/album/397350796",
+        "anghami": "https://play.anghami.com/album/1059755346?refer=linktree",
+        "bandcamp": "https://thegits.bandcamp.com/album/frenching-the-bully-2024-remaster",
+        "amazonStore": "https://amazon.com/dp/B0DKSQHJKR"
+      },
+      "upc": "098787164862",
+      "tracks": 13,
+      "releaseDate": "1992-11-25"
+    },
+    "3e54129a-8c52-8083-974b-cd3bf852a067": {
+      "source": "https://album.link/spb5mpdfr6hkz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1SSAnjxmkyvfcQI8I5SM9y",
+        "pandora": "https://www.pandora.com/AL:17753",
+        "deezer": "https://www.deezer.com/album/434461977",
+        "amazonMusic": "https://music.amazon.com/albums/B0G3D1DT8N",
+        "tidal": "https://listen.tidal.com/album/475818634",
+        "napster": "https://play.napster.com/album/alb.767841498",
+        "yandex": "https://music.yandex.ru/album/7021678",
+        "boomplay": "https://www.boomplay.com/albums/2539241",
+        "anghami": "https://play.anghami.com/album/1038744928?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0G3D1DT8N"
+      },
+      "upc": "082197000292",
+      "tracks": 10,
+      "releaseDate": "2003-04-01"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-23T23:44:21Z",
+  "generatedAt": "2026-09-24T13:11:33Z",
   "counts": {
-    "albums": 1413,
-    "artists": 1192,
-    "labels": 747,
-    "videos": 104
+    "albums": 1418,
+    "artists": 1193,
+    "labels": 748,
+    "videos": 105
   },
   "albums": [
     {
@@ -418,6 +418,37 @@
       ],
       "labels": [
         "Feel It Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-8032-a2ea-f0614415051d",
+      "slug": "various-artists-can-t-stop-it-ii-australian-post-punk-1979-8",
+      "artist": "Various Artists",
+      "album": "Can’t Stop It! II: Australian Post-Punk 1979-84 (Deluxe Edition)",
+      "url": "https://album.link/mtxk6snmrs5dn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aed156c84-dbea-4f39-88e9-96c557600729%3Aa1968461004_10.jpg?table=block&id=3e54129a-8c52-8032-a2ea-f0614415051d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "Minimal Synth"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2026-09-04",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8012-b70d-f1d959393d55"
+      ],
+      "labels": [
+        "Chapter Music"
       ]
     },
     {
@@ -13684,6 +13715,37 @@
       ],
       "labels": [
         "BMM Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-8063-b992-fc999aa318ac",
+      "slug": "various-artists-can-t-stop-it-australian-post-punk-1978-82-d",
+      "artist": "Various Artists",
+      "album": "Can’t Stop It!: Australian Post-Punk 1978-82 (Deluxe Edition)",
+      "url": "https://album.link/dvchbg3rx3sfv",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8afd3042-bc37-41ca-ba46-8723bd8014f7%3Aa1013328588_10.jpg?table=block&id=3e54129a-8c52-8063-b992-fc999aa318ac&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "Minimal Synth"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2025-06-06",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2"
+      ],
+      "artists": [
+        "Various Artists"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8012-b70d-f1d959393d55"
+      ],
+      "labels": [
+        "Chapter Music"
       ]
     },
     {
@@ -27410,8 +27472,8 @@
       "url": "https://album.link/dsj4h3vdzrnsk",
       "cover": "https://antbrigade.notion.site/image/attachment%3Aa2753522-214d-40d8-91b6-819577525bde%3Aphoto_2025-08-15_15-15-55.jpg?table=block&id=e92b03d4-2bc1-419b-80eb-72a093d5bc4d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Soul",
-        "R'n'B"
+        "Neo-Soul",
+        "Contemporary R'n'B"
       ],
       "types": [
         "EP"
@@ -37881,6 +37943,37 @@
       ]
     },
     {
+      "id": "3e54129a-8c52-80ab-bab8-e3349ec75598",
+      "slug": "pest-control-infestation-rat-race",
+      "artist": "Pest Control",
+      "album": "INFESTATION / RAT RACE",
+      "url": "https://album.link/2bmg6ghgcrhxf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A74a563d4-806f-4757-bcf9-c9bd5bcd8ca3%3Aa0596190178_10.jpg?table=block&id=3e54129a-8c52-80ab-bab8-e3349ec75598&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2021-04-01",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-80d0-9c2c-e023721f32bb"
+      ],
+      "artists": [
+        "Pest Control"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "3db4129a-8c52-80ca-bc26-c0279422a950",
       "slug": "l-imperatrice-tako-tsubo",
       "artist": "L'Impératrice",
@@ -39357,6 +39450,37 @@
       ],
       "labels": [
         "Bickerton Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-8041-b129-fd664820f7bd",
+      "slug": "pest-control-demo-2020",
+      "artist": "Pest Control",
+      "album": "Demo 2020",
+      "url": "https://album.link/hgmn0gxj5mgrk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A33b119e9-3137-4d27-a976-2bc4e4a77e0a%3Aa4215143365_10.jpg?table=block&id=3e54129a-8c52-8041-b129-fd664820f7bd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2020-09-19",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-80d0-9c2c-e023721f32bb"
+      ],
+      "artists": [
+        "Pest Control"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
       ]
     },
     {
@@ -44040,6 +44164,38 @@
       ],
       "labels": [
         "Minky Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-8051-835e-d2b42e1929a2",
+      "slug": "lone-ecstasy-friends",
+      "artist": "Lone",
+      "album": "Ecstasy & Friends",
+      "url": "https://album.link/mpx58xpd4wfrk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A333834cd-d210-493d-9e9d-c44a9ee40aad%3Aa3501644213_10.jpg?table=block&id=3e54129a-8c52-8051-835e-d2b42e1929a2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Instrumental Hip-Hop",
+        "Glitch Hop",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2009-12-01",
+      "year": 2009,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-8012-b4dd-e1da10045dfc"
+      ],
+      "artists": [
+        "Lone"
+      ],
+      "labelIds": [
+        "3e54129a-8c52-80e5-920b-c2bd8e3c2b29"
+      ],
+      "labels": [
+        "Werk Discs"
       ]
     },
     {
@@ -49990,7 +50146,7 @@
       "country": "AT",
       "bandcamp": "https://deecracks.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@DeeCracks",
       "albumIds": [
         "f3a51968-e656-4ffe-8820-4117ff5382ee",
         "3ce4129a-8c52-8087-9bc6-f157c2a1d3bc"
@@ -50005,6 +50161,7 @@
       ],
       "videoIds": [
         "3d84129a-8c52-801c-8793-eb9bc2796118",
+        "3e54129a-8c52-8037-9822-c61ac7e5fb86",
         "3b94129a-8c52-804f-97d7-fcc0f7eea16d"
       ],
       "akaIds": []
@@ -51817,8 +51974,8 @@
         "e92b03d4-2bc1-419b-80eb-72a093d5bc4d"
       ],
       "genres": [
-        "Soul",
-        "R'n'B"
+        "Neo-Soul",
+        "Contemporary R'n'B"
       ],
       "labelIds": [
         "2504129a-8c52-80a0-b238-f68fc609f897"
@@ -57693,6 +57850,28 @@
       "akaIds": []
     },
     {
+      "id": "3e54129a-8c52-8012-b4dd-e1da10045dfc",
+      "slug": "lone",
+      "name": "Lone",
+      "country": "GB",
+      "bandcamp": "https://lone.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-8051-835e-d2b42e1929a2"
+      ],
+      "genres": [
+        "Instrumental Hip-Hop",
+        "Glitch Hop",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3e54129a-8c52-80e5-920b-c2bd8e3c2b29"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3624129a-8c52-8031-b8b8-c84175f8af8a",
       "slug": "loraine-james",
       "name": "Loraine James",
@@ -61529,7 +61708,9 @@
       "youtube": null,
       "albumIds": [
         "8e68bc81-6693-4fdd-ac1a-6c7867a4d577",
-        "1024129a-8c52-8006-8d61-c03f586fbf1a"
+        "1024129a-8c52-8006-8d61-c03f586fbf1a",
+        "3e54129a-8c52-80ab-bab8-e3349ec75598",
+        "3e54129a-8c52-8041-b129-fd664820f7bd"
       ],
       "genres": [
         "Crossover Thrash",
@@ -69079,8 +69260,10 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e54129a-8c52-8032-a2ea-f0614415051d",
         "3674129a-8c52-8082-90ca-cc85795b72e4",
         "24e4129a-8c52-80c4-864d-ef35463b5b9f",
+        "3e54129a-8c52-8063-b992-fc999aa318ac",
         "3d44129a-8c52-8072-a478-e30d19a775f0",
         "1b74129a-8c52-809e-ad31-f7896f5737eb",
         "3d54129a-8c52-8008-9bea-d4a9fbce6046",
@@ -69103,12 +69286,13 @@
         "3e44129a-8c52-8038-8019-c6ea5a27cd02"
       ],
       "genres": [
+        "Post-Punk",
+        "Minimal Synth",
         "City Pop",
         "Synth Funk",
         "Boogie",
         "Electronic",
         "Synthpop",
-        "Minimal Synth",
         "New Wave",
         "MPB",
         "Disco",
@@ -69134,6 +69318,7 @@
         "Psychedelic Rock"
       ],
       "labelIds": [
+        "2504129a-8c52-8012-b70d-f1d959393d55",
         "3674129a-8c52-80a9-a2ba-e4176be2297f",
         "24e4129a-8c52-807a-920f-fb0794ae2606",
         "2494129a-8c52-800b-92dc-e0c48b04def1",
@@ -72485,9 +72670,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e54129a-8c52-8032-a2ea-f0614415051d",
+        "3e54129a-8c52-8063-b992-fc999aa318ac",
         "e67c59ec-c56f-4f30-96ec-5b4497780bce"
       ],
       "artistIds": [
+        "24e4129a-8c52-8076-995a-f0732e8c76e2",
         "2504129a-8c52-8083-a82e-f5dac9c588ed"
       ]
     },
@@ -78468,7 +78656,9 @@
         "6f07ece7-8971-4b10-a822-163f0facb645",
         "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
         "fcda5233-f95e-45b4-a1ab-b499a6a810f9",
+        "3e54129a-8c52-80ab-bab8-e3349ec75598",
         "3db4129a-8c52-8059-8d99-f5cce8e91769",
+        "3e54129a-8c52-8041-b129-fd664820f7bd",
         "3dc4129a-8c52-80be-8198-d6c58fce505b",
         "3de4129a-8c52-8053-9868-def025cd80e9",
         "3da4129a-8c52-80b2-9599-f4f2e341839c",
@@ -79329,7 +79519,7 @@
       "country": "US",
       "bandcamp": "https://piratespressrecords.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@piratespressrecords",
       "albumIds": [
         "3764129a-8c52-8016-b3b8-c0b66d765f88",
         "1af4129a-8c52-806b-84d1-ff5293e7d84f",
@@ -82870,6 +83060,21 @@
       ]
     },
     {
+      "id": "3e54129a-8c52-80e5-920b-c2bd8e3c2b29",
+      "slug": "werk-discs",
+      "name": "Werk Discs",
+      "country": "GB",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-8051-835e-d2b42e1929a2"
+      ],
+      "artistIds": [
+        "3e54129a-8c52-8012-b4dd-e1da10045dfc"
+      ]
+    },
+    {
       "id": "30b4129a-8c52-80b0-81aa-f0e9abd36478",
       "slug": "western-vinyl",
       "name": "Western Vinyl",
@@ -83531,6 +83736,19 @@
         "2524129a-8c52-80d8-960b-edb32e8a4eaf"
       ],
       "slug": "deecracks-hell-today"
+    },
+    {
+      "id": "3e54129a-8c52-8037-9822-c61ac7e5fb86",
+      "title": "DeeCRACKS | Next to No One",
+      "url": "https://youtu.be/CCXEAs7H-tg?si=u6aQSTNhSUDmVf8d",
+      "kind": "Official Video",
+      "released": "2026-09-24",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "2524129a-8c52-80d8-960b-edb32e8a4eaf"
+      ],
+      "slug": "deecracks-next-to-no-one"
     },
     {
       "id": "3b94129a-8c52-804f-97d7-fcc0f7eea16d",

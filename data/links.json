@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T23:44:35Z",
+  "generatedAt": "2026-09-24T13:12:04Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22559,6 +22559,77 @@
       "upc": "612891219500",
       "tracks": 8,
       "releaseDate": "2026-09-18"
+    },
+    "3e54129a-8c52-8032-a2ea-f0614415051d": {
+      "source": "https://album.link/mtxk6snmrs5dn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3WOfjo2ijonqTIplMPNobb",
+        "pandora": "https://www.pandora.com/AL:66393295",
+        "amazonMusic": "https://music.amazon.com/albums/B0H1DYRT23",
+        "tidal": "https://listen.tidal.com/album/523561389",
+        "amazonStore": "https://amazon.com/dp/B0H1DYRT23"
+      },
+      "upc": "747742113154",
+      "tracks": 26,
+      "releaseDate": "2007-03-03"
+    },
+    "3e54129a-8c52-8063-b992-fc999aa318ac": {
+      "source": "https://album.link/dvchbg3rx3sfv",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3MjS9KD5toyE3zqOPqq4Tf",
+        "pandora": "https://www.pandora.com/AL:44236743",
+        "amazonMusic": "https://music.amazon.com/albums/B0H1DYRT23",
+        "tidal": "https://listen.tidal.com/album/414775718",
+        "bandcamp": "https://chaptermusic.bandcamp.com/album/cant-stop-it-australian-post-punk-1978-82-2025-deluxe-edition",
+        "amazonStore": "https://amazon.com/dp/B0H1DYRT23"
+      },
+      "upc": "617308092516",
+      "tracks": 26,
+      "releaseDate": "2025-06-06"
+    },
+    "3e54129a-8c52-80ab-bab8-e3349ec75598": {
+      "source": "https://album.link/2bmg6ghgcrhxf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/53MURaDOCijumw4W3rSDd9",
+        "pandora": "https://www.pandora.com/AL:17739031",
+        "amazonMusic": "https://music.amazon.com/albums/B0BC2DMW7N",
+        "tidal": "https://listen.tidal.com/album/245154219",
+        "amazonStore": "https://amazon.com/dp/B0BC2DMW7N"
+      },
+      "upc": "197147697986",
+      "tracks": 2,
+      "releaseDate": "2022-08-26"
+    },
+    "3e54129a-8c52-8041-b129-fd664820f7bd": {
+      "source": "https://album.link/hgmn0gxj5mgrk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2X0aPC6mWc50PIhQW9PfBN",
+        "pandora": "https://www.pandora.com/AL:16477847",
+        "amazonMusic": "https://music.amazon.com/albums/B0B62MTZH7",
+        "tidal": "https://listen.tidal.com/album/236961534",
+        "bandcamp": "https://pestcontroluk.bandcamp.com/album/demo-2020-2",
+        "amazonStore": "https://amazon.com/dp/B0B62MTZH7"
+      },
+      "upc": "197046395563",
+      "tracks": 4,
+      "releaseDate": "2020-09-19"
+    },
+    "3e54129a-8c52-8051-835e-d2b42e1929a2": {
+      "source": "https://album.link/mpx58xpd4wfrk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0t90e91bho3LVUkYQuJQFt",
+        "pandora": "https://www.pandora.com/AL:510094",
+        "deezer": "https://www.deezer.com/album/15486610",
+        "amazonMusic": "https://music.amazon.com/albums/B06XCDBM5P",
+        "tidal": "https://listen.tidal.com/album/70952617",
+        "yandex": "https://music.yandex.ru/album/4171781",
+        "boomplay": "https://www.boomplay.com/albums/3293536",
+        "bandcamp": "https://lone.bandcamp.com/album/ecstacy-friends",
+        "amazonStore": "https://amazon.com/dp/B06XCDBM5P"
+      },
+      "upc": "3614973988783",
+      "tracks": 11,
+      "releaseDate": "2009-12-01"
     }
   }
 }

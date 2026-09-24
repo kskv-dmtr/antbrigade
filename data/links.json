@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T22:28:06Z",
+  "generatedAt": "2026-09-24T22:53:47Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22675,6 +22675,57 @@
       "upc": "082197000292",
       "tracks": 10,
       "releaseDate": "2003-04-01"
+    },
+    "3e54129a-8c52-804c-9fc4-e161649c9f1c": {
+      "source": "https://album.link/xg6pqhpvpxfqw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5qFaIDKHV9uYPootkCGV8J",
+        "pandora": "https://www.pandora.com/AL:51783117",
+        "deezer": "https://www.deezer.com/album/800026821",
+        "amazonMusic": "https://music.amazon.com/albums/B0FLB89D66",
+        "tidal": "https://listen.tidal.com/album/452421051",
+        "bandcamp": "https://sessa.bandcamp.com/album/pequena-vertigem-de-amor",
+        "amazonStore": "https://amazon.com/dp/B0FLB89D66"
+      },
+      "upc": "184923136968",
+      "tracks": 9,
+      "releaseDate": "2025-11-07"
+    },
+    "3e54129a-8c52-80e7-839e-cdf1c983be27": {
+      "source": "https://album.link/vcmhhg0nxhbdw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/73BfBnLSqUPWACTvdd9rU5",
+        "pandora": "https://www.pandora.com/AL:12877517",
+        "deezer": "https://www.deezer.com/album/662536881",
+        "amazonMusic": "https://music.amazon.com/albums/B0DKQWMB2N",
+        "tidal": "https://listen.tidal.com/album/216591247",
+        "napster": "https://play.napster.com/album/alb.646034086",
+        "boomplay": "https://www.boomplay.com/albums/101653235",
+        "anghami": "https://play.anghami.com/album/1059889412?refer=linktree",
+        "bandcamp": "https://sessa.bandcamp.com/album/estrela-acesa",
+        "amazonStore": "https://amazon.com/dp/B0DKQWMB2N"
+      },
+      "upc": "184923131369",
+      "tracks": 12,
+      "releaseDate": "2022-06-24"
+    },
+    "3e54129a-8c52-80cd-88e6-c58d889b0a2c": {
+      "source": "https://album.link/bdshzswk4brgg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1rXtrdiLSiMyoqjdgh5t4V",
+        "pandora": "https://www.pandora.com/AL:10079798",
+        "deezer": "https://www.deezer.com/album/320487647",
+        "amazonMusic": "https://music.amazon.com/albums/B0FM3V7SF3",
+        "tidal": "https://listen.tidal.com/album/453626266",
+        "napster": "https://play.napster.com/album/alb.576782129",
+        "boomplay": "https://www.boomplay.com/albums/28624283",
+        "anghami": "https://play.anghami.com/album/1021360039?refer=linktree",
+        "bandcamp": "https://bluestaeb.bandcamp.com/album/giseke",
+        "amazonStore": "https://amazon.com/dp/B0FM3V7SF3"
+      },
+      "upc": "4018939488628",
+      "tracks": 14,
+      "releaseDate": "2021-07-23"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-24T22:27:45Z",
+  "generatedAt": "2026-09-24T22:53:27Z",
   "counts": {
-    "albums": 1421,
-    "artists": 1195,
+    "albums": 1424,
+    "artists": 1197,
     "labels": 748,
     "videos": 105
   },
@@ -8569,6 +8569,38 @@
       ],
       "labels": [
         "Wharf Cat Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-804c-9fc4-e161649c9f1c",
+      "slug": "sessa-pequena-vertigem-de-amor",
+      "artist": "Sessa",
+      "album": "Pequena Vertigem de Amor",
+      "url": "https://album.link/xg6pqhpvpxfqw",
+      "cover": "https://antbrigade.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fpublic.notion-static.com%2F676efa9e-e4f0-4dbe-a8ed-be0499ba8c34%2Fa0624859805_10.jpg?table=block&id=3e54129a-8c52-804c-9fc4-e161649c9f1c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "MPB",
+        "Psychedelic Soul",
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-11-07",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-80a4-a935-c08b103e176d"
+      ],
+      "artists": [
+        "Sessa"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80b3-8352-c7955cb7fa54"
+      ],
+      "labels": [
+        "Mexican Summer"
       ]
     },
     {
@@ -33985,6 +34017,38 @@
       ]
     },
     {
+      "id": "3e54129a-8c52-80e7-839e-cdf1c983be27",
+      "slug": "sessa-estrela-acesa",
+      "artist": "Sessa",
+      "album": "Estrela Acesa",
+      "url": "https://album.link/vcmhhg0nxhbdw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab12f0a1d-698d-4a96-a2c0-507e608bbd83%3Aa2992986028_10.jpg?table=block&id=3e54129a-8c52-80e7-839e-cdf1c983be27&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "MPB",
+        "Baroque Pop",
+        "Bossa Nova"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-06-24",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-80a4-a935-c08b103e176d"
+      ],
+      "artists": [
+        "Sessa"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80b3-8352-c7955cb7fa54"
+      ],
+      "labels": [
+        "Mexican Summer"
+      ]
+    },
+    {
       "id": "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
       "slug": "pisse-lambada",
       "artist": "Pisse",
@@ -36214,6 +36278,38 @@
       ],
       "labels": [
         "Raw Tapes Records"
+      ]
+    },
+    {
+      "id": "3e54129a-8c52-80cd-88e6-c58d889b0a2c",
+      "slug": "bluestaeb-giseke",
+      "artist": "Bluestaeb",
+      "album": "GISEKE",
+      "url": "https://album.link/bdshzswk4brgg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ade3e7c76-328f-4bbc-a995-b4d56892aeff%3Aa3716511408_10.jpg?table=block&id=3e54129a-8c52-80cd-88e6-c58d889b0a2c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Jazz-Funk",
+        "Jazzy Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-07-23",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e54129a-8c52-804b-b8a2-f746c21d6a9d"
+      ],
+      "artists": [
+        "Bluestaeb"
+      ],
+      "labelIds": [
+        "2524129a-8c52-808c-aa13-ce752fa0ab3c"
+      ],
+      "labels": [
+        "Jakarta Records"
       ]
     },
     {
@@ -47216,6 +47312,28 @@
       "videoIds": [
         "2894129a-8c52-8067-a0b1-c059d649a1b0"
       ],
+      "akaIds": []
+    },
+    {
+      "id": "3e54129a-8c52-804b-b8a2-f746c21d6a9d",
+      "slug": "bluestaeb",
+      "name": "Bluestaeb",
+      "country": "DE",
+      "bandcamp": "https://bluestaeb.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-80cd-88e6-c58d889b0a2c"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Jazz-Funk",
+        "Jazzy Hip-Hop"
+      ],
+      "labelIds": [
+        "2524129a-8c52-808c-aa13-ce752fa0ab3c"
+      ],
+      "videoIds": [],
       "akaIds": []
     },
     {
@@ -64257,6 +64375,31 @@
       "akaIds": []
     },
     {
+      "id": "3e54129a-8c52-80a4-a935-c08b103e176d",
+      "slug": "sessa",
+      "name": "Sessa",
+      "country": "BR",
+      "bandcamp": "https://sessa.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e54129a-8c52-804c-9fc4-e161649c9f1c",
+        "3e54129a-8c52-80e7-839e-cdf1c983be27"
+      ],
+      "genres": [
+        "MPB",
+        "Psychedelic Soul",
+        "Psychedelic Pop",
+        "Baroque Pop",
+        "Bossa Nova"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80b3-8352-c7955cb7fa54"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2844129a-8c52-806b-83b6-c9fe57e7cdba",
       "slug": "session-victim",
       "name": "Session Victim",
@@ -76411,10 +76554,12 @@
       "youtube": null,
       "albumIds": [
         "2524129a-8c52-8036-b372-f651ed89f5f7",
+        "3e54129a-8c52-80cd-88e6-c58d889b0a2c",
         "3d14129a-8c52-80c2-aac6-f47eb222712f"
       ],
       "artistIds": [
         "2524129a-8c52-80e1-a63b-e906afbe3916",
+        "3e54129a-8c52-804b-b8a2-f746c21d6a9d",
         "3d14129a-8c52-806c-b6c8-c9a0e826a5da"
       ]
     },
@@ -77800,12 +77945,15 @@
       "albumIds": [
         "38b4129a-8c52-8077-8e25-fbf8d647287a",
         "37b4129a-8c52-800e-a5e9-e752ed0a543c",
+        "3e54129a-8c52-804c-9fc4-e161649c9f1c",
         "2894129a-8c52-8082-8275-d219df595fa4",
-        "62cf3839-264f-4a2a-ac0c-d9c253fd77c3"
+        "62cf3839-264f-4a2a-ac0c-d9c253fd77c3",
+        "3e54129a-8c52-80e7-839e-cdf1c983be27"
       ],
       "artistIds": [
         "24a4129a-8c52-80e2-8d09-f063edda164c",
         "37b4129a-8c52-8039-9da3-f1f2ade5e7d8",
+        "3e54129a-8c52-80a4-a935-c08b103e176d",
         "2894129a-8c52-8058-8fb8-f13cf032d6d7",
         "2484129a-8c52-803f-b15c-f017e17c93d2"
       ]

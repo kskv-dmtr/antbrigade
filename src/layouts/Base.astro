@@ -521,7 +521,14 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
        Состояние слушаем наблюдателем за теми же атрибутами, по которым
        открываются сами панели: их ставят разные скрипты, и звать общий
        замок из каждого пришлось бы четырежды. */
+    /* Запираем только на телефоне: там панели занимают весь экран, полосы
+       прокрутки не видно, и её пропажа незаметна. На широком экране запирать
+       нечего — шторка отбора и панель поиска выезжают сбоку, прокрутку
+       перехватывают сами (overscroll-behavior: contain), а у запертой
+       страницы пропадал ползунок полосы: прокручивать было нечего, и полоса
+       мигала при каждом открытии (24 сентября 2026, замечание владельца). */
     const ОТКРЫТО = '.masthead[data-open], .masthead[data-search], .filters-row[data-sheet], .filters-row[data-sort]';
+    const узкий = matchMedia('(max-width: 640px)');
     let прокрутка = 0;
 
     const запереть = () => {
@@ -538,13 +545,14 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       window.scrollTo(0, прокрутка);
     };
 
-    const сверить = () => (document.querySelector(ОТКРЫТО) ? запереть() : отпереть());
+    const сверить = () => (узкий.matches && document.querySelector(ОТКРЫТО) ? запереть() : отпереть());
     new MutationObserver(сверить).observe(document.documentElement, {
       subtree: true,
       attributes: true,
       attributeFilter: ['data-open', 'data-search', 'data-sheet', 'data-sort']
     });
     сверить();
+    узкий.addEventListener('change', сверить);
 
     /* Shift+R — случайный релиз из всей базы, с любой страницы
        (23 сентября 2026, просьба владельца). Список берём из того же

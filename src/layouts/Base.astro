@@ -505,6 +505,47 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
   </footer>
 
   <script>
+    /* Пока открыты меню, панель поиска, шторка отбора или шторка
+       сортировки, страница стоять должна, а кадр — не дёргаться.
+
+       Прежде страницу запирал overflow: hidden в стилях. Но у страницы с
+       overflow: hidden не бывает колеи полосы прокрутки, которую сайт держит
+       всегда, — и в момент открытия всё разом уезжало на её ширину, 15
+       пикселей (24 сентября 2026, замечание владельца).
+
+       Поэтому запираем иначе: тело становится position: fixed и сдвигается
+       вверх на текущую прокрутку — страница остаётся на том же месте, а
+       полоса прокрутки и её колея никуда не деваются. На закрытии
+       возвращаем прокрутку обратно.
+
+       Состояние слушаем наблюдателем за теми же атрибутами, по которым
+       открываются сами панели: их ставят разные скрипты, и звать общий
+       замок из каждого пришлось бы четырежды. */
+    const ОТКРЫТО = '.masthead[data-open], .masthead[data-search], .filters-row[data-sheet], .filters-row[data-sort]';
+    let прокрутка = 0;
+
+    const запереть = () => {
+      if (document.body.hasAttribute('data-locked')) return;
+      прокрутка = window.scrollY;
+      document.body.style.top = `-${прокрутка}px`;
+      document.body.setAttribute('data-locked', '');
+    };
+
+    const отпереть = () => {
+      if (!document.body.hasAttribute('data-locked')) return;
+      document.body.removeAttribute('data-locked');
+      document.body.style.top = '';
+      window.scrollTo(0, прокрутка);
+    };
+
+    const сверить = () => (document.querySelector(ОТКРЫТО) ? запереть() : отпереть());
+    new MutationObserver(сверить).observe(document.documentElement, {
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['data-open', 'data-search', 'data-sheet', 'data-sort']
+    });
+    сверить();
+
     /* Shift+R — случайный релиз из всей базы, с любой страницы
        (23 сентября 2026, просьба владельца). Список берём из того же
        указателя, что и поиск: /search.json, записи рода «r». Запрашиваем по

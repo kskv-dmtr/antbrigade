@@ -2502,14 +2502,28 @@ main > .head--page:first-child { border-top: 0; }
    как у образца, нет — ни у строк, ни у миниатюр: на сайте их нет нигде.
    Черта снизу — мягкая, как между строками списков. */
 .found {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.625rem var(--pad);
   color: var(--fg);
-  border-bottom: 1px solid var(--line-soft);
 }
-.found:last-child { border-bottom: 0; }
+/* Черта между находками — не во всю ширину панели, а с полями по краям, как
+   у пунктов в шторке отбора (24 сентября 2026, просьба владельца). Слоем, а
+   не границей: у границы полей не бывает. Поля берутся у самой строки,
+   поэтому черта всегда стоит ровно под текстом — и в панели справа, где поля
+   свои. */
+.found::after {
+  content: '';
+  position: absolute;
+  left: var(--pad);
+  right: var(--pad);
+  bottom: 0;
+  height: 1px;
+  background: var(--line-soft);
+}
+.found:last-child::after { display: none; }
 
 /* Миниатюра: обложка, кадр ролика или пустой квадрат мягкого тона — у
    кого картинки нет. Кадр ролика обрезается до квадрата по центру. */
@@ -5396,9 +5410,24 @@ html:not([data-js]) .more { display: none; }
   border: 0;
   border-top: 1px solid var(--line-soft);
 }
-[data-js] .filters-row__set .multi__list { max-height: none; overflow: visible; }
+/* Список во всю ширину шторки: её поля снимаются отрицательными, и полоса
+   прокрутки списка встаёт вплотную к краю (24 сентября 2026, просьба
+   владельца). Поля возвращаются самим пунктам — по 16 слева и справа, так
+   что строки и черты под ними стоят на той же вертикали, что подписи
+   Type:, Genre:, Year: над ними. */
+[data-js] .filters-row__set .multi__panel { padding-left: 0; }
+[data-js] .filters-row__set .multi__list {
+  max-height: none;
+  overflow: visible;
+  margin-inline: calc(var(--pad) * -1);
+}
 [data-js] .filters-row__set .multi__item {
-  padding: 0.8125rem 0;
+  /* Поле слева — полем строки, а не отступом внутри: черта под пунктом
+     должна начинаться там же, где подпись отбора, а текст — стоять на той
+     же вертикали. Справа поле внутреннее: черта доходит до полосы
+     прокрутки, а та прижата к краю шторки. */
+  margin-left: var(--pad);
+  padding: 0.8125rem var(--pad) 0.8125rem 0;
   border-bottom: 1px solid var(--line-soft);
   font-weight: 400;
   color: var(--fg-muted);
@@ -5440,9 +5469,8 @@ html:not([data-js]) .more { display: none; }
   padding: var(--pad) var(--pad) calc(var(--pad) + env(safe-area-inset-bottom));
   background: var(--bg);
 
-  /* Линия над блоком кнопки во всю ширину шторки — как над «Dig again»
-     на витрине (18 сентября 2026, просьба владельца). */
-  border-top: 1px solid var(--line);
+  /* Черты над блоком кнопки нет (24 сентября 2026, просьба владельца): с 18
+     сентября она шла во всю ширину шторки, как над «Dig again» на витрине. */
 }
 
 /* Черта под последним отбором (Year) стоит на всех ширинах: на телефоне
@@ -5902,6 +5930,12 @@ html:not([data-js]) .more { display: none; }
     border-bottom: 1px solid var(--line);
   }
   [data-js] .search-drawer .found { padding-inline: var(--drawer-pad) var(--drawer-pad-end); }
+  /* Черта под находкой — по тем же полям, что у самой строки: в панели
+     они свои, шире общих. */
+  [data-js] .search-drawer .found::after {
+    left: var(--drawer-pad);
+    right: var(--drawer-pad-end);
+  }
 
   /* Подсказки по управлению — под чертой верхнего ряда: слева Navigate со
      стрелками, справа Open с Enter. Набраны как подписи — моноширинным

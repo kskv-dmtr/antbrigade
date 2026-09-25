@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-25T18:39:50Z",
+  "generatedAt": "2026-09-25T22:24:15Z",
   "counts": {
-    "albums": 1433,
-    "artists": 1204,
-    "labels": 750,
+    "albums": 1436,
+    "artists": 1206,
+    "labels": 752,
     "videos": 108
   },
   "albums": [
@@ -34525,6 +34525,38 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-80fc-8c25-d7d1b43be94a",
+      "slug": "rlyr-rlyr",
+      "artist": "RLYR",
+      "album": "RLYR",
+      "url": "https://album.link/rmdtsgsb8xwrt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab22d8beb-437c-4c06-9183-dd35bb3845bb%3Aa3525769468_10.jpg?table=block&id=3e64129a-8c52-80fc-8c25-d7d1b43be94a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Rock",
+        "Post-Metal",
+        "Math Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-13",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-8021-bfd0-d5a507bc92e7"
+      ],
+      "artists": [
+        "RLYR"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-8009-80a0-ca03c6c3ad3e"
+      ],
+      "labels": [
+        "Gilead Media"
+      ]
+    },
+    {
       "id": "2524129a-8c52-805f-9615-f2986a9c075e",
       "slug": "elephant-gym-dreams",
       "artist": "Elephant Gym",
@@ -34615,6 +34647,37 @@
       ],
       "labels": [
         "Montgrí"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-80f7-b042-d78e7b1c4124",
+      "slug": "blundetto-cousin-zaka-vol-2",
+      "artist": "Blundetto",
+      "album": "Cousin Zaka Vol. 2",
+      "url": "https://album.link/sq6qdgrzkpgvd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A25a93613-1395-47cb-b9fd-254aa97fd5f8%3A1200x1200bf-60_(1).jpg?table=block&id=3e64129a-8c52-80f7-b042-d78e7b1c4124&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Cinematic Soul",
+        "Library Music"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-04-22",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80db-a0d7-da19bd25ec69"
+      ],
+      "artists": [
+        "Blundetto"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-80d0-8f6f-d95c1e8f974a"
+      ],
+      "labels": [
+        "Les Rythmes Ruban"
       ]
     },
     {
@@ -34984,6 +35047,38 @@
       ],
       "labels": [
         "Big Crown Records"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8071-bd4d-fba07782d125",
+      "slug": "mystic-jungle-deviant-disco",
+      "artist": "Mystic Jungle",
+      "album": "Deviant Disco",
+      "url": "https://album.link/cnq6jdg9tpmpr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aabd584e8-7978-478a-ab6d-13e4fed80ffe%3Aa1782093094_10.jpg?table=block&id=3e64129a-8c52-8071-bd4d-fba07782d125&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Nu-Disco",
+        "Synth Funk",
+        "Boogie"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2022-01-28",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-8070-9b46-c4600951bd80"
+      ],
+      "artists": [
+        "Mystic Jungle"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80df-8da6-d54309d919db"
+      ],
+      "labels": [
+        "Periodica Records"
       ]
     },
     {
@@ -47616,6 +47711,27 @@
       ],
       "labelIds": [
         "2524129a-8c52-808c-aa13-ce752fa0ab3c"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e64129a-8c52-80db-a0d7-da19bd25ec69",
+      "slug": "blundetto",
+      "name": "Blundetto",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-80f7-b042-d78e7b1c4124"
+      ],
+      "genres": [
+        "Cinematic Soul",
+        "Library Music"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-80d0-8f6f-d95c1e8f974a"
       ],
       "videoIds": [],
       "akaIds": []
@@ -60574,11 +60690,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
-        "1f14129a-8c52-808a-b5e0-ca6a6dbc1f2b"
+        "1f14129a-8c52-808a-b5e0-ca6a6dbc1f2b",
+        "3e64129a-8c52-8071-bd4d-fba07782d125"
       ],
       "genres": [
         "Nu-Disco",
-        "Synth Funk"
+        "Synth Funk",
+        "Boogie"
       ],
       "labelIds": [
         "24a4129a-8c52-80df-8da6-d54309d919db"
@@ -60996,7 +61114,7 @@
       "slug": "no-zu",
       "name": "NO ZU",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://nozu.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -63890,6 +64008,28 @@
       ],
       "labelIds": [
         "2524129a-8c52-806f-be7f-fbac694ebbd1"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e64129a-8c52-8021-bfd0-d5a507bc92e7",
+      "slug": "rlyr",
+      "name": "RLYR",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-80fc-8c25-d7d1b43be94a"
+      ],
+      "genres": [
+        "Post-Rock",
+        "Post-Metal",
+        "Math Rock"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-8009-80a0-ca03c6c3ad3e"
       ],
       "videoIds": [],
       "akaIds": []
@@ -66838,7 +66978,7 @@
       "slug": "tamir-barzilay",
       "name": "Tamir Barzilay",
       "country": "IL",
-      "bandcamp": null,
+      "bandcamp": "https://tamirbarzilay.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -73411,7 +73551,7 @@
       "slug": "chapter-music",
       "name": "Chapter Music",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://chaptermusic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -73754,7 +73894,7 @@
       "slug": "colorfield-records",
       "name": "Colorfield Records",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://colorfieldrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -75795,6 +75935,21 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-8009-80a0-ca03c6c3ad3e",
+      "slug": "gilead-media",
+      "name": "Gilead Media",
+      "country": null,
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-80fc-8c25-d7d1b43be94a"
+      ],
+      "artistIds": [
+        "3e64129a-8c52-8021-bfd0-d5a507bc92e7"
+      ]
+    },
+    {
       "id": "24a4129a-8c52-8093-8156-f94f7507964c",
       "slug": "glitterbeat-records",
       "name": "Glitterbeat Records",
@@ -77814,6 +77969,21 @@
         "24a4129a-8c52-80a0-9283-e00355c89095",
         "2494129a-8c52-803f-b9f0-f187678e0388",
         "2414129a-8c52-8012-9a94-e8afd5875a12"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-80d0-8f6f-d95c1e8f974a",
+      "slug": "les-rythmes-ruban",
+      "name": "Les Rythmes Ruban",
+      "country": "FR",
+      "bandcamp": "https://lesrythmesruban.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-80f7-b042-d78e7b1c4124"
+      ],
+      "artistIds": [
+        "3e64129a-8c52-80db-a0d7-da19bd25ec69"
       ]
     },
     {
@@ -80108,7 +80278,8 @@
       "albumIds": [
         "3824129a-8c52-802d-86ba-fbe30a38629a",
         "1f14129a-8c52-808a-b5e0-ca6a6dbc1f2b",
-        "59388676-c2d0-456f-81af-84e6cb8c0ae7"
+        "59388676-c2d0-456f-81af-84e6cb8c0ae7",
+        "3e64129a-8c52-8071-bd4d-fba07782d125"
       ],
       "artistIds": [
         "3824129a-8c52-8049-af49-c82a0888234b",

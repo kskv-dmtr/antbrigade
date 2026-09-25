@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T18:40:28Z",
+  "generatedAt": "2026-09-25T22:24:36Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22863,6 +22863,58 @@
       "upc": "705464161235",
       "tracks": 9,
       "releaseDate": "2019-03-08"
+    },
+    "3e64129a-8c52-80fc-8c25-d7d1b43be94a": {
+      "source": "https://album.link/rmdtsgsb8xwrt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6eeKizc9CeW6V08RUUqKXp",
+        "pandora": "https://www.pandora.com/AL:14175702",
+        "deezer": "https://www.deezer.com/album/307539087",
+        "amazonMusic": "https://music.amazon.com/albums/B09WZQGBL4",
+        "tidal": "https://listen.tidal.com/album/223371097",
+        "napster": "https://play.napster.com/album/alb.657710038",
+        "boomplay": "https://www.boomplay.com/albums/43714009",
+        "anghami": "https://play.anghami.com/album/1027261425?refer=linktree",
+        "bandcamp": "https://gileadmedia.bandcamp.com/album/rlyr",
+        "amazonStore": "https://amazon.com/dp/B09WZQGBL4"
+      },
+      "upc": "634457100985",
+      "tracks": 5,
+      "releaseDate": "2022-05-13"
+    },
+    "3e64129a-8c52-80f7-b042-d78e7b1c4124": {
+      "source": "https://album.link/sq6qdgrzkpgvd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2CrXGj9HK2tbhH19rnnzKo",
+        "pandora": "https://www.pandora.com/AL:14133931",
+        "deezer": "https://www.deezer.com/album/306725077",
+        "amazonMusic": "https://music.amazon.com/albums/B09WSN9FM7",
+        "tidal": "https://listen.tidal.com/album/222961931",
+        "napster": "https://play.napster.com/album/alb.657087523",
+        "boomplay": "https://www.boomplay.com/albums/36045672",
+        "anghami": "https://play.anghami.com/album/1027178848?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B09WSN9FM7"
+      },
+      "upc": "196626574084",
+      "tracks": 12,
+      "releaseDate": "2022-04-22"
+    },
+    "3e64129a-8c52-8071-bd4d-fba07782d125": {
+      "source": "https://album.link/cnq6jdg9tpmpr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7e8NmkbJcgEUHSDfnhb3Ic",
+        "pandora": "https://www.pandora.com/AL:12052492",
+        "deezer": "https://www.deezer.com/album/284592552",
+        "amazonMusic": "https://music.amazon.com/albums/B09PLKZ1VX",
+        "tidal": "https://listen.tidal.com/album/211036625",
+        "napster": "https://play.napster.com/album/alb.636670623",
+        "anghami": "https://play.anghami.com/album/1025041209?refer=linktree",
+        "bandcamp": "https://periodicarecords.bandcamp.com/album/deviant-disco",
+        "amazonStore": "https://amazon.com/dp/B09PLKZ1VX"
+      },
+      "upc": "8050519218542",
+      "tracks": 5,
+      "releaseDate": "2022-01-28"
     }
   }
 }

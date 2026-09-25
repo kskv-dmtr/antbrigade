@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-25T13:51:42Z",
+  "generatedAt": "2026-09-25T18:39:50Z",
   "counts": {
-    "albums": 1427,
-    "artists": 1200,
-    "labels": 749,
-    "videos": 107
+    "albums": 1433,
+    "artists": 1204,
+    "labels": 750,
+    "videos": 108
   },
   "albums": [
     {
@@ -30621,6 +30621,38 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-8093-b918-f6d93ec812c0",
+      "slug": "valgur-armaggedon",
+      "artist": "Valgur",
+      "album": "Armaggedon",
+      "url": "https://album.link/mbks2bt8jr29n",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A27fd3d83-1768-4093-becd-df13bac880a1%3Aa3381913928_10.jpg?table=block&id=3e64129a-8c52-8093-b918-f6d93ec812c0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Progressive Pop",
+        "Indietronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-07-26",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-809c-8aa2-e829a8ec8b79"
+      ],
+      "artists": [
+        "Valgur"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-8034-9dac-d346647aa821"
+      ],
+      "labels": [
+        "Buendia Records"
+      ]
+    },
+    {
       "id": "5b47f2c2-5fd0-4374-ac74-48f897a1e32a",
       "slug": "huw-marc-bennett-days-like-now",
       "artist": "Huw Marc Bennett",
@@ -31362,6 +31394,37 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-80e0-b98f-ec9ced165326",
+      "slug": "durand-jones-wait-til-i-get-over",
+      "artist": "Durand Jones",
+      "album": "Wait Til I Get Over",
+      "url": "https://album.link/m0xfrsvw4brxz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A598668a2-6447-47b4-a79c-d42a7355f86f%3Aa0262718076_10.jpg?table=block&id=3e64129a-8c52-80e0-b98f-ec9ced165326&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-05-05",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-8055-8aa1-c56177132430"
+      ],
+      "artists": [
+        "Durand Jones"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8022-abd2-d0c412936e59"
+      ],
+      "labels": [
+        "Dead Oceans"
       ]
     },
     {
@@ -33011,6 +33074,38 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-8029-9e2f-ea1152b74682",
+      "slug": "randells-singles-b-sides-unreleased-vol-1",
+      "artist": "Randells",
+      "album": "Singles, B-Sides, Unreleased, Vol. 1",
+      "url": "https://album.link/9f6c67hbqpwg2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adec4904d-6df0-453b-b249-5422275dc1aa%3Aa3306384744_10_(1).jpg?table=block&id=3e64129a-8c52-8029-9e2f-ea1152b74682&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Pop Punk",
+        "Punk Rock",
+        "Bubblegum Punk"
+      ],
+      "types": [
+        "Compilation"
+      ],
+      "released": "2022-12-16",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80df-9fe9-f96e30a54522"
+      ],
+      "artists": [
+        "Randells"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "7e693028-f26f-4015-b97b-dad60e77237b",
       "slug": "the-nylon-brothers-lofi-sause",
       "artist": "The Nylon Brothers",
@@ -33231,6 +33326,38 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-8066-810d-c87e97d3514c",
+      "slug": "str4ta-str4tasfear",
+      "artist": "STR4TA",
+      "album": "STR4TASFEAR",
+      "url": "https://album.link/6dpwcv5238jzw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Afc1b6337-1aba-4d32-8326-db21b57829b7%3Aa0005691274_10.jpg?table=block&id=3e64129a-8c52-8066-810d-c87e97d3514c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Jazz-Funk",
+        "Smooth Jazz",
+        "Synth Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-11-11",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d24129a-8c52-8009-a8c2-f0ecfaa39510"
+      ],
+      "artists": [
+        "STR4TA"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8085-8030-c1434e2e4b4d"
+      ],
+      "labels": [
+        "Brownswood Recordings"
+      ]
+    },
+    {
       "id": "3bd4129a-8c52-8055-b539-e1eda047aa56",
       "slug": "daniel-avery-ultra-truth",
       "artist": "Daniel Avery",
@@ -33384,6 +33511,38 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8084-a1a8-f93eabfd4b25",
+      "slug": "drugdealer-hiding-in-plain-sight",
+      "artist": "Drugdealer",
+      "album": "Hiding in Plain Sight",
+      "url": "https://album.link/jbf0zkddqrn08",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A36c0a1c1-d629-4e8a-ad5a-f6b1e9226ccc%3Aa0808211766_10.jpg?table=block&id=3e64129a-8c52-8084-a1a8-f93eabfd4b25&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Soft Rock",
+        "Psychedelic Pop",
+        "Yacht Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-10-28",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80b4-acc8-c908c5cfb58c"
+      ],
+      "artists": [
+        "Drugdealer"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80b3-8352-c7955cb7fa54"
+      ],
+      "labels": [
+        "Mexican Summer"
       ]
     },
     {
@@ -42524,6 +42683,38 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-80e4-b49e-e575b2c21f6d",
+      "slug": "valgur-zapandu",
+      "artist": "Valgur",
+      "album": "Zapandú",
+      "url": "https://album.link/pjp0cj6v5zrxf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A21d1d675-1ab8-46f8-97a9-7f035ef4b72c%3A1200x1200bf-60_(2).jpg?table=block&id=3e64129a-8c52-80e4-b49e-e575b2c21f6d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Synthpop",
+        "Indietronica",
+        "Progressive Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2019-03-08",
+      "year": 2019,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-809c-8aa2-e829a8ec8b79"
+      ],
+      "artists": [
+        "Valgur"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-8034-9dac-d346647aa821"
+      ],
+      "labels": [
+        "Buendia Records"
+      ]
+    },
+    {
       "id": "3dc4129a-8c52-80e4-8632-eda7dd5a7825",
       "slug": "durand-jones-the-indications-american-love-call",
       "artist": "Durand Jones & The Indications",
@@ -51148,6 +51339,28 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-80b4-acc8-c908c5cfb58c",
+      "slug": "drugdealer",
+      "name": "Drugdealer",
+      "country": "US",
+      "bandcamp": "https://drugdealerband.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-8084-a1a8-f93eabfd4b25"
+      ],
+      "genres": [
+        "Soft Rock",
+        "Psychedelic Pop",
+        "Yacht Rock"
+      ],
+      "labelIds": [
+        "2484129a-8c52-80b3-8352-c7955cb7fa54"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24f4129a-8c52-804a-b996-d1acd268fe19",
       "slug": "drunk-mums",
       "name": "Drunk Mums",
@@ -51228,6 +51441,27 @@
       ],
       "labelIds": [
         "2484129a-8c52-805b-880b-d1c3af60ba95"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e64129a-8c52-8055-8aa1-c56177132430",
+      "slug": "durand-jones",
+      "name": "Durand Jones",
+      "country": "US",
+      "bandcamp": "https://durandjones.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-80e0-b98f-ec9ced165326"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "Smooth Soul"
+      ],
+      "labelIds": [
+        "2434129a-8c52-8022-abd2-d0c412936e59"
       ],
       "videoIds": [],
       "akaIds": []
@@ -63140,6 +63374,28 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-80df-9fe9-f96e30a54522",
+      "slug": "randells",
+      "name": "Randells",
+      "country": "SE",
+      "bandcamp": "https://randellstheband.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-8029-9e2f-ea1152b74682"
+      ],
+      "genres": [
+        "Pop Punk",
+        "Punk Rock",
+        "Bubblegum Punk"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3db4129a-8c52-8008-bd5b-c4f5cbb914cf",
       "slug": "ranil",
       "name": "Ranil",
@@ -66164,10 +66420,13 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e64129a-8c52-8066-810d-c87e97d3514c",
         "3d24129a-8c52-8082-bc26-c928adf20ab2"
       ],
       "genres": [
         "Jazz-Funk",
+        "Smooth Jazz",
+        "Synth Funk",
         "Jazz Fusion"
       ],
       "labelIds": [
@@ -69674,6 +69933,31 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-809c-8aa2-e829a8ec8b79",
+      "slug": "valgur",
+      "name": "Valgur",
+      "country": "MX",
+      "bandcamp": "https://valgurband.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@valgur786",
+      "albumIds": [
+        "3e64129a-8c52-8093-b918-f6d93ec812c0",
+        "3e64129a-8c52-80e4-b49e-e575b2c21f6d"
+      ],
+      "genres": [
+        "Synthpop",
+        "Progressive Pop",
+        "Indietronica"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-8034-9dac-d346647aa821"
+      ],
+      "videoIds": [
+        "3e64129a-8c52-80c8-bfe1-d7e7efb7627f"
+      ],
+      "akaIds": []
+    },
+    {
       "id": "3d44129a-8c52-80c6-9770-d5e6a96e6bc3",
       "slug": "vanishing-twin",
       "name": "Vanishing Twin",
@@ -72888,6 +73172,7 @@
         "2b94129a-8c52-8076-a67e-ffa417a63a52",
         "22d4129a-8c52-805e-8781-c39a9f58b4ae",
         "a2f2559a-ecbb-4053-9d35-0eb77b4836a8",
+        "3e64129a-8c52-8066-810d-c87e97d3514c",
         "3d74129a-8c52-805c-8d9f-c58f81f25d15",
         "3d24129a-8c52-8082-bc26-c928adf20ab2",
         "3d44129a-8c52-80b1-b3ca-fcde4b35d52a"
@@ -72896,8 +73181,8 @@
         "2b94129a-8c52-80b7-8ac8-e58e2494e9f4",
         "2504129a-8c52-80b0-bf90-d7cc616534dc",
         "2514129a-8c52-80d3-825b-f1ae9f5bbc1b",
-        "3d74129a-8c52-8080-91bd-fe7e92f3a013",
         "3d24129a-8c52-8009-a8c2-f0ecfaa39510",
+        "3d74129a-8c52-8080-91bd-fe7e92f3a013",
         "3d44129a-8c52-807b-9a9a-ec9877a6985c"
       ]
     },
@@ -72914,6 +73199,22 @@
       ],
       "artistIds": [
         "27d4129a-8c52-8052-8947-c7b823c6b07c"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8034-9dac-d346647aa821",
+      "slug": "buendia-records",
+      "name": "Buendia Records",
+      "country": "MX",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-8093-b918-f6d93ec812c0",
+        "3e64129a-8c52-80e4-b49e-e575b2c21f6d"
+      ],
+      "artistIds": [
+        "3e64129a-8c52-809c-8aa2-e829a8ec8b79"
       ]
     },
     {
@@ -73983,6 +74284,7 @@
         "d1f8f0c0-940d-48c7-b346-52903f2613c7",
         "4a81bf5b-0f55-4bf6-857e-12bfabba6bf1",
         "54d2749c-617d-48af-8ca1-83a8f06b65aa",
+        "3e64129a-8c52-80e0-b98f-ec9ced165326",
         "3db4129a-8c52-80e7-9001-eb12f4c7426c",
         "5e8a1076-5502-44f7-a1c4-56ac067a5b32",
         "3d34129a-8c52-806d-8e83-f14478dfedaa",
@@ -73992,7 +74294,8 @@
         "2414129a-8c52-803f-84bf-e1d9f7fb7397",
         "2404129a-8c52-800a-826f-dd385decf385",
         "2504129a-8c52-808d-830d-e728519fd865",
-        "2504129a-8c52-80bf-a971-fdbdd67732a4"
+        "2504129a-8c52-80bf-a971-fdbdd67732a4",
+        "3e64129a-8c52-8055-8aa1-c56177132430"
       ]
     },
     {
@@ -78108,6 +78411,7 @@
         "3e54129a-8c52-804c-9fc4-e161649c9f1c",
         "2894129a-8c52-8082-8275-d219df595fa4",
         "62cf3839-264f-4a2a-ac0c-d9c253fd77c3",
+        "3e64129a-8c52-8084-a1a8-f93eabfd4b25",
         "3e54129a-8c52-80e7-839e-cdf1c983be27"
       ],
       "artistIds": [
@@ -78115,7 +78419,8 @@
         "37b4129a-8c52-8039-9da3-f1f2ade5e7d8",
         "3e54129a-8c52-80a4-a935-c08b103e176d",
         "2894129a-8c52-8058-8fb8-f13cf032d6d7",
-        "2484129a-8c52-803f-b15c-f017e17c93d2"
+        "2484129a-8c52-803f-b15c-f017e17c93d2",
+        "3e64129a-8c52-80b4-acc8-c908c5cfb58c"
       ]
     },
     {
@@ -79103,6 +79408,7 @@
         "d3f1ffb6-0f3a-43aa-9182-7e0784db407f",
         "3f8c9ebf-d2f2-4d52-95c6-9e4bd4bdfc6d",
         "a373a5d7-56e6-4dc2-8b20-1168a83f9f88",
+        "3e64129a-8c52-8029-9e2f-ea1152b74682",
         "07031ee4-e62f-466a-b6b9-dea1c933edac",
         "6f07ece7-8971-4b10-a822-163f0facb645",
         "3d0b5e01-ff9e-42b3-b4d4-e1a4f7afc4a9",
@@ -79219,6 +79525,7 @@
         "2524129a-8c52-80e1-8076-f1ab0e2b3454",
         "2504129a-8c52-809c-abf9-de696977b7e0",
         "2524129a-8c52-8001-ae50-db7e6b4e9915",
+        "3e64129a-8c52-80df-9fe9-f96e30a54522",
         "24f4129a-8c52-805e-a500-c4d2c68cc389",
         "2514129a-8c52-80a6-a5a9-f3b459c54060",
         "2524129a-8c52-80ac-8df6-e43091d38cda",
@@ -85193,6 +85500,19 @@
         "2514129a-8c52-8031-8512-d6d8bae5b210"
       ],
       "slug": "tycho-time-to-run"
+    },
+    {
+      "id": "3e64129a-8c52-80c8-bfe1-d7e7efb7627f",
+      "title": "Valgur | Joyas",
+      "url": "https://youtu.be/DOZFB1bp2jM?si=dlTq_Q2CiBxYSNH7",
+      "kind": "Official Video",
+      "released": "2022-09-08",
+      "year": 2022,
+      "origYear": null,
+      "artistIds": [
+        "3e64129a-8c52-809c-8aa2-e829a8ec8b79"
+      ],
+      "slug": "valgur-joyas"
     },
     {
       "id": "36d4129a-8c52-8061-8052-f97ccc411dba",

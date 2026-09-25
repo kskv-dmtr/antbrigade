@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T13:52:04Z",
+  "generatedAt": "2026-09-25T18:40:28Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22765,6 +22765,104 @@
       "upc": "4062548139846",
       "tracks": 12,
       "releaseDate": "2026-06-19"
+    },
+    "3e64129a-8c52-8093-b918-f6d93ec812c0": {
+      "source": "https://album.link/mbks2bt8jr29n",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3vNQ0IvQiiMVZFP6GHlL1i",
+        "pandora": "https://www.pandora.com/AL:25456935",
+        "deezer": "https://www.deezer.com/album/463873155",
+        "amazonMusic": "https://music.amazon.com/albums/B0GTXH41HG",
+        "tidal": "https://listen.tidal.com/album/510181575",
+        "napster": "https://play.napster.com/album/alb.3211690096094935",
+        "yandex": "https://music.yandex.ru/album/26712839",
+        "boomplay": "https://www.boomplay.com/albums/74064648",
+        "anghami": "https://play.anghami.com/album/1041772335?refer=linktree",
+        "amazonStore": "https://amazon.com/dp/B0GTXH41HG"
+      },
+      "upc": "197338590256",
+      "tracks": 9,
+      "releaseDate": "2023-07-26"
+    },
+    "3e64129a-8c52-80e0-b98f-ec9ced165326": {
+      "source": "https://album.link/m0xfrsvw4brxz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3t5PKVYlbYXIiLIRDPPkp4",
+        "pandora": "https://www.pandora.com/AL:21147408",
+        "deezer": "https://www.deezer.com/album/400891147",
+        "amazonMusic": "https://music.amazon.com/albums/B0BT548ZR8",
+        "tidal": "https://listen.tidal.com/album/273584760",
+        "napster": "https://play.napster.com/album/alb.769632315",
+        "anghami": "https://play.anghami.com/album/1038951288?refer=linktree",
+        "bandcamp": "https://durandjones.bandcamp.com/album/wait-til-i-get-over",
+        "amazonStore": "https://amazon.com/dp/B0BT548ZR8"
+      },
+      "upc": "656605158068",
+      "tracks": 12,
+      "releaseDate": "2023-05-05"
+    },
+    "3e64129a-8c52-8029-9e2f-ea1152b74682": {
+      "source": "https://album.link/9f6c67hbqpwg2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5bscLLKN8pNJ5Xa6k49eWh",
+        "pandora": "https://www.pandora.com/AL:30943921",
+        "tidal": "https://listen.tidal.com/album/340932125"
+      },
+      "upc": "8721056560226",
+      "tracks": 19,
+      "releaseDate": "2022-12-16"
+    },
+    "3e64129a-8c52-8066-810d-c87e97d3514c": {
+      "source": "https://album.link/6dpwcv5238jzw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2CSRlL4oubFZsnNxQoaR6p",
+        "pandora": "https://www.pandora.com/AL:17582252",
+        "deezer": "https://www.deezer.com/album/357257097",
+        "amazonMusic": "https://music.amazon.com/albums/B0BD53T3KK",
+        "tidal": "https://listen.tidal.com/album/248875038",
+        "napster": "https://play.napster.com/album/alb.691702878",
+        "boomplay": "https://www.boomplay.com/albums/53037777",
+        "anghami": "https://play.anghami.com/album/1033525423?refer=linktree",
+        "bandcamp": "https://str4ta.bandcamp.com/album/str4tasfear",
+        "amazonStore": "https://amazon.com/dp/B0BD53T3KK"
+      },
+      "upc": "5060180325404",
+      "tracks": 15,
+      "releaseDate": "2022-11-11"
+    },
+    "3e64129a-8c52-8084-a1a8-f93eabfd4b25": {
+      "source": "https://album.link/jbf0zkddqrn08",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3tNWFiq09LavrJA0s108QE",
+        "pandora": "https://www.pandora.com/AL:15625265",
+        "deezer": "https://www.deezer.com/album/661029261",
+        "amazonMusic": "https://music.amazon.com/albums/B0DL53PY4F",
+        "tidal": "https://listen.tidal.com/album/396077672",
+        "napster": "https://play.napster.com/album/alb.672454468",
+        "boomplay": "https://www.boomplay.com/albums/101664232",
+        "bandcamp": "https://drugdealerband.bandcamp.com/album/hiding-in-plain-sight",
+        "amazonStore": "https://amazon.com/dp/B0DL53PY4F"
+      },
+      "upc": "184923129267",
+      "tracks": 9,
+      "releaseDate": "2022-10-28"
+    },
+    "3e64129a-8c52-80e4-b49e-e575b2c21f6d": {
+      "source": "https://album.link/pjp0cj6v5zrxf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7peyVHwdincY9AkNJv0VY0",
+        "pandora": "https://www.pandora.com/AL:2106902",
+        "deezer": "https://www.deezer.com/album/543130982",
+        "amazonMusic": "https://music.amazon.com/albums/B0CTWL72K3",
+        "tidal": "https://listen.tidal.com/album/343478073",
+        "boomplay": "https://www.boomplay.com/albums/8634022",
+        "anghami": "https://play.anghami.com/album/1048460206?refer=linktree",
+        "bandcamp": "https://valgurband.bandcamp.com/album/zapand",
+        "amazonStore": "https://amazon.com/dp/B0CTWL72K3"
+      },
+      "upc": "705464161235",
+      "tracks": 9,
+      "releaseDate": "2019-03-08"
     }
   }
 }

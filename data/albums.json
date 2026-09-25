@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-24T22:53:27Z",
+  "generatedAt": "2026-09-25T13:51:42Z",
   "counts": {
-    "albums": 1424,
-    "artists": 1197,
-    "labels": 748,
-    "videos": 105
+    "albums": 1427,
+    "artists": 1200,
+    "labels": 749,
+    "videos": 107
   },
   "albums": [
     {
@@ -37,6 +37,68 @@
       ],
       "labels": [
         "Fat Possum Records"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8002-b890-f6849da84094",
+      "slug": "the-sick-man-of-europe-the-intermittent-signal",
+      "artist": "The Sick Man of Europe",
+      "album": "The Intermittent Signal",
+      "url": "https://album.link/kjjsvczbsrg4x",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A21baa9db-3a7f-4b88-8b6c-312dc142183a%3Aa1126478092_10.jpg?table=block&id=3e64129a-8c52-8002-b890-f6849da84094&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Post-Punk",
+        "Minimal Wave"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-25",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80c6-a6a5-ce332178472b"
+      ],
+      "artists": [
+        "The Sick Man of Europe"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8068-a754-c4b6bf9eaa04"
+      ],
+      "labels": [
+        "The Leaf Label"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8085-8cae-fb8bb61f7d18",
+      "slug": "giortensia-il-tamigi-a-parigi",
+      "artist": "Giortensia",
+      "album": "Il Tamigi a Parigi",
+      "url": "https://album.link/gdx3rzgq4f5ct",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A73ed9a61-04c4-4125-ace0-8e09f3456e7f%3Aa1435995905_10.jpg?table=block&id=3e64129a-8c52-8085-8cae-fb8bb61f7d18&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Minimal Synth",
+        "Post-Punk"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-09-23",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80d0-90a1-c0f4daa0f416"
+      ],
+      "artists": [
+        "Giortensia"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80af-8a35-cb2972b02208"
+      ],
+      "labels": [
+        "Stone Pixels"
       ]
     },
     {
@@ -2077,6 +2139,37 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-803f-9f74-f8f0317be5f3",
+      "slug": "fluke-the-second-bite",
+      "artist": "Fluke",
+      "album": "The Second Bite",
+      "url": "https://album.link/gm7dntmb3pvg8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A473f4e2d-3576-436d-a9ba-a5f0078226d0%3Aa3676773696_10.jpg?table=block&id=3e64129a-8c52-803f-9f74-f8f0317be5f3&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Progressive House",
+        "Techno"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-06-19",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-80b8-9449-d3ee6ed89b13"
+      ],
+      "artists": [
+        "Fluke"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-80d1-9cb3-ca7c2c9580d7"
+      ],
+      "labels": [
+        "Surface"
       ]
     },
     {
@@ -52578,6 +52671,27 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-80b8-9449-d3ee6ed89b13",
+      "slug": "fluke",
+      "name": "Fluke",
+      "country": "GB",
+      "bandcamp": "https://fluke6.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-803f-9f74-f8f0317be5f3"
+      ],
+      "genres": [
+        "Progressive House",
+        "Techno"
+      ],
+      "labelIds": [
+        "3e64129a-8c52-80d1-9cb3-ca7c2c9580d7"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3214129a-8c52-808d-b4d6-c5754cff39c9",
       "slug": "flying-lotus",
       "name": "Flying Lotus",
@@ -53528,6 +53642,29 @@
         "2494129a-8c52-800f-a012-e43d8d5242f6"
       ],
       "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e64129a-8c52-80d0-90a1-c0f4daa0f416",
+      "slug": "giortensia",
+      "name": "Giortensia",
+      "country": "IT",
+      "bandcamp": "https://giortensia.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@Giortensia",
+      "albumIds": [
+        "3e64129a-8c52-8085-8cae-fb8bb61f7d18"
+      ],
+      "genres": [
+        "Minimal Synth",
+        "Post-Punk"
+      ],
+      "labelIds": [
+        "2504129a-8c52-80af-8a35-cb2972b02208"
+      ],
+      "videoIds": [
+        "3e64129a-8c52-80e1-8c23-f68477c7a2d8"
+      ],
       "akaIds": []
     },
     {
@@ -68090,6 +68227,29 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-80c6-a6a5-ce332178472b",
+      "slug": "the-sick-man-of-europe",
+      "name": "The Sick Man of Europe",
+      "country": "GB",
+      "bandcamp": "https://thesickmanofeurope.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@TheSickManofEuropeMusik",
+      "albumIds": [
+        "3e64129a-8c52-8002-b890-f6849da84094"
+      ],
+      "genres": [
+        "Post-Punk",
+        "Minimal Wave"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8068-a754-c4b6bf9eaa04"
+      ],
+      "videoIds": [
+        "3e64129a-8c52-8030-9feb-c5c7093b6c51"
+      ],
+      "akaIds": []
+    },
+    {
       "id": "2514129a-8c52-806a-9413-d19b23f3d0c6",
       "slug": "the-sleeveens",
       "name": "The Sleeveens",
@@ -81942,11 +82102,13 @@
       "country": "CH",
       "bandcamp": "https://stonepixels.bandcamp.com/",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@StonePixelsRecords",
       "albumIds": [
+        "3e64129a-8c52-8085-8cae-fb8bb61f7d18",
         "8389e071-7e19-40af-bf6b-0db2f40af087"
       ],
       "artistIds": [
+        "3e64129a-8c52-80d0-90a1-c0f4daa0f416",
         "2504129a-8c52-80cd-b20c-d52638aa492a"
       ]
     },
@@ -82173,6 +82335,21 @@
       ]
     },
     {
+      "id": "3e64129a-8c52-80d1-9cb3-ca7c2c9580d7",
+      "slug": "surface",
+      "name": "Surface",
+      "country": "GB",
+      "bandcamp": "https://surfacerecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-803f-9f74-f8f0317be5f3"
+      ],
+      "artistIds": [
+        "3e64129a-8c52-80b8-9449-d3ee6ed89b13"
+      ]
+    },
+    {
       "id": "24e4129a-8c52-80a1-ba37-fdf1c5952a9a",
       "slug": "surfin-ki-records",
       "name": "Surfin' Ki Records",
@@ -82327,10 +82504,12 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e64129a-8c52-8002-b890-f6849da84094",
         "3024129a-8c52-8097-9d23-c77eec4cac0b",
         "1c34129a-8c52-801e-9e31-c29f2ae8ec00"
       ],
       "artistIds": [
+        "3e64129a-8c52-80c6-a6a5-ce332178472b",
         "3024129a-8c52-8044-85e7-f47b8d6ccba8",
         "24a4129a-8c52-8015-bf91-e526112e844f"
       ]
@@ -84203,6 +84382,19 @@
       "slug": "ginger-root-there-was-a-time"
     },
     {
+      "id": "3e64129a-8c52-80e1-8c23-f68477c7a2d8",
+      "title": "Giortensia | Dottor Burro",
+      "url": "https://youtu.be/Ri2gTdyyd-M?si=fWg-QMn3_Y2xYdxG",
+      "kind": "Official Video",
+      "released": "2026-09-23",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "3e64129a-8c52-80d0-90a1-c0f4daa0f416"
+      ],
+      "slug": "giortensia-dottor-burro"
+    },
+    {
       "id": "3bd4129a-8c52-80d1-b850-c1ab02aa74a9",
       "title": "Glass Beams | Mahal EP (Full Live Performance)",
       "url": "https://youtu.be/hGQu4_fan8Q?si=ntAYLq3rYzGrecvS",
@@ -84843,6 +85035,19 @@
         "2484129a-8c52-80aa-a88f-d8d0f31a1f16"
       ],
       "slug": "the-bouncing-souls-ten-stories-high"
+    },
+    {
+      "id": "3e64129a-8c52-8030-9feb-c5c7093b6c51",
+      "title": "The Sick Man of Europe | Apathy",
+      "url": "https://youtu.be/MFmZM7AMEUE?si=lPpMJ_0r-x6c2J_4",
+      "kind": "Official Video",
+      "released": "2026-09-25",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "3e64129a-8c52-80c6-a6a5-ce332178472b"
+      ],
+      "slug": "the-sick-man-of-europe-apathy"
     },
     {
       "id": "3c54129a-8c52-8020-8568-e04189b20c5e",

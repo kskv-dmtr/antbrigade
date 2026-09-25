@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T22:53:47Z",
+  "generatedAt": "2026-09-25T13:52:04Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22726,6 +22726,45 @@
       "upc": "4018939488628",
       "tracks": 14,
       "releaseDate": "2021-07-23"
+    },
+    "3e64129a-8c52-8002-b890-f6849da84094": {
+      "source": "https://album.link/kjjsvczbsrg4x",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5vjNxRzFr88hQckQdEpkrq",
+        "pandora": "https://www.pandora.com/AL:67740743",
+        "amazonMusic": "https://music.amazon.com/albums/B0H6STL2B2",
+        "tidal": "https://listen.tidal.com/album/537665483",
+        "amazonStore": "https://amazon.com/dp/B0H6STL2B2"
+      },
+      "upc": "843190014293",
+      "tracks": 8,
+      "releaseDate": "2026-09-25"
+    },
+    "3e64129a-8c52-8085-8cae-fb8bb61f7d18": {
+      "source": "https://album.link/gdx3rzgq4f5ct",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5rD7uyZoN6oBq0megX25Cx",
+        "pandora": "https://www.pandora.com/AL:69408362",
+        "amazonMusic": "https://music.amazon.com/albums/B0HHRCYJDL",
+        "tidal": "https://listen.tidal.com/album/557437103",
+        "amazonStore": "https://amazon.com/dp/B0HHRCYJDL"
+      },
+      "upc": "885288442496",
+      "tracks": 6,
+      "releaseDate": "2026-09-23"
+    },
+    "3e64129a-8c52-803f-9f74-f8f0317be5f3": {
+      "source": "https://album.link/gm7dntmb3pvg8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1FR6XSPGV9R2kdiy7FkrIs",
+        "pandora": "https://www.pandora.com/AL:66409838",
+        "amazonMusic": "https://music.amazon.com/albums/B0H1JBRKTF",
+        "tidal": "https://listen.tidal.com/album/523901998",
+        "amazonStore": "https://amazon.com/dp/B0H1JBRKTF"
+      },
+      "upc": "4062548139846",
+      "tracks": 12,
+      "releaseDate": "2026-06-19"
     }
   }
 }

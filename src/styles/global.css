@@ -4044,7 +4044,9 @@ html:not([data-js]) .more { display: none; }
    автополей по горизонтали он ужимается по содержимому и встаёт посередине.
    Замер: 843 в ширину при кадре 1425, отступ слева 291. */
 .foot {
-  border-top: 1px solid var(--line);
+  /* Черта над подвалом — мягкой линией, как разделительные черты по сайту
+     (25 сентября 2026, просьба владельца). */
+  border-top: 1px solid var(--line-soft);
   margin-top: 3.75rem;
   padding: 0 var(--pad);
 }
@@ -6668,7 +6670,8 @@ html:not([data-js]) .more { display: none; }
     margin-inline: calc(16px - var(--pad));
     padding: 0.875rem 0;
     color: var(--fg-dim);
-    border-top: 1px solid var(--line);
+    /* И черта над строкой клавиш — тоже мягкая. */
+    border-top: 1px solid var(--line-soft);
 
     /* С прописной первой буквы, а не капителью: «Keyboard Shortcuts»,
        «Filters», «Enter» — как теги и подписи находок (20 сентября 2026,

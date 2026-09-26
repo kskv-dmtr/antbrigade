@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T22:24:36Z",
+  "generatedAt": "2026-09-26T01:37:09Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -22915,6 +22915,21 @@
       "upc": "8050519218542",
       "tracks": 5,
       "releaseDate": "2022-01-28"
+    },
+    "3e64129a-8c52-8098-a9ae-c5ea56b8a68e": {
+      "source": "https://album.link/bvwmtj5s8xg89",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7oHnC51NyNeukxe8l0Z9Qy",
+        "pandora": "https://www.pandora.com/AL:60917747",
+        "amazonMusic": "https://music.amazon.com/albums/B0GLQW83DP",
+        "tidal": "https://listen.tidal.com/album/496285642",
+        "yandex": "https://music.yandex.ru/album/40550021",
+        "bandcamp": "https://blacksweat.bandcamp.com/album/non-basta",
+        "amazonStore": "https://amazon.com/dp/B0GLQW83DP"
+      },
+      "upc": "3618027589438",
+      "tracks": 9,
+      "releaseDate": "2026-04-10"
     }
   }
 }

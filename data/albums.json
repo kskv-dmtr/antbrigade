@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-25T22:24:15Z",
+  "generatedAt": "2026-09-26T01:36:57Z",
   "counts": {
-    "albums": 1436,
-    "artists": 1206,
+    "albums": 1437,
+    "artists": 1207,
     "labels": 752,
     "videos": 108
   },
@@ -4514,6 +4514,36 @@
       ],
       "labels": [
         "popop"
+      ]
+    },
+    {
+      "id": "3e64129a-8c52-8098-a9ae-c5ea56b8a68e",
+      "slug": "cucoma-combo-non-basta",
+      "artist": "Cucoma Combo",
+      "album": "Non Basta",
+      "url": "https://album.link/bvwmtj5s8xg89",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A5b2abb27-4367-4a6f-b83b-a18dca2a6679%3Aa1343073569_10.jpg?table=block&id=3e64129a-8c52-8098-a9ae-c5ea56b8a68e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "genres": [
+        "Afrobeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-04-10",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e64129a-8c52-8022-a857-e2c8faa0d8a4"
+      ],
+      "artists": [
+        "Cucoma Combo"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-80a2-bd30-e78f975ff0c5"
+      ],
+      "labels": [
+        "Black Sweat Records"
       ]
     },
     {
@@ -45410,7 +45440,7 @@
       "slug": "abentis",
       "name": "abentis",
       "country": "JP",
-      "bandcamp": null,
+      "bandcamp": "https://abentis.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -45523,7 +45553,7 @@
       "slug": "adrenalin-o-d",
       "name": "Adrenalin O.D.",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://adrenalinod.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -46626,7 +46656,7 @@
       "slug": "aura",
       "name": "Aura",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://aurahawaii.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -47198,7 +47228,7 @@
       "slug": "beat-bronco-organ-trio",
       "name": "Beat Bronco Organ Trio",
       "country": "ES",
-      "bandcamp": null,
+      "bandcamp": "https://beatbroncoorgantrio.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -48966,7 +48996,7 @@
       "slug": "chat-pile",
       "name": "Chat Pile",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://chatpile.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [],
@@ -49645,7 +49675,7 @@
       "slug": "cobra-skulls",
       "name": "Cobra Skulls",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://cobraskulls.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [],
@@ -50092,6 +50122,26 @@
       "akaIds": []
     },
     {
+      "id": "3e64129a-8c52-8022-a857-e2c8faa0d8a4",
+      "slug": "cucoma-combo",
+      "name": "Cucoma Combo",
+      "country": "IT",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "albumIds": [
+        "3e64129a-8c52-8098-a9ae-c5ea56b8a68e"
+      ],
+      "genres": [
+        "Afrobeat"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-80a2-bd30-e78f975ff0c5"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3cf4129a-8c52-80e5-b650-d1dddc46abeb",
       "slug": "cuir",
       "name": "Cuir",
@@ -50386,9 +50436,9 @@
       "slug": "dance-with-the-dead",
       "name": "Dance with the Dead",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://dancewiththedead.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/dancewiththedead",
       "albumIds": [],
       "genres": [],
       "labelIds": [],
@@ -52153,7 +52203,7 @@
       "slug": "erick-the-architect",
       "name": "Erick the Architect",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://erickthearchitect.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [],
@@ -52280,7 +52330,7 @@
       "slug": "evil-army",
       "name": "Evil Army",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://evil-army.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -52868,7 +52918,7 @@
       "slug": "fishmans",
       "name": "Fishmans",
       "country": "JP",
-      "bandcamp": null,
+      "bandcamp": "https://fishmans.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -53288,7 +53338,7 @@
       "slug": "francois-the-atlas-mountains",
       "name": "Frànçois & The Atlas Mountains",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://francoisandtheatlasmountains.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -53735,7 +53785,7 @@
       "slug": "gaudi",
       "name": "Gaudi",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://gaudimusic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -53778,7 +53828,7 @@
       "slug": "gavin-rossdale",
       "name": "Gavin Rossdale",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://gavinrossdale.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [],
@@ -53834,7 +53884,7 @@
       "slug": "gelli-haha",
       "name": "Gelli Haha",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://gellihaha.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -53858,7 +53908,7 @@
       "slug": "gerry-read",
       "name": "Gerry Read",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://gerryread.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54022,7 +54072,7 @@
       "slug": "girls-of-the-internet",
       "name": "Girls of the Internet",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://girlsoftheinternet.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54137,7 +54187,7 @@
       "slug": "gnome",
       "name": "Gnome",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://gnome.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54159,7 +54209,7 @@
       "slug": "go-hawaii",
       "name": "Go Hawaii",
       "country": "IT",
-      "bandcamp": null,
+      "bandcamp": "https://gohawaii.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54181,7 +54231,7 @@
       "slug": "go-kurosawa",
       "name": "Go Kurosawa",
       "country": "JP",
-      "bandcamp": null,
+      "bandcamp": "https://gokurosawa.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54226,7 +54276,7 @@
       "slug": "golden-mean",
       "name": "Golden Mean",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://golden-mean.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54247,7 +54297,7 @@
       "slug": "good-flying-birds",
       "name": "Good Flying Birds",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://goodflyingbirds.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54268,7 +54318,7 @@
       "slug": "goodbye-blue-monday",
       "name": "Goodbye Blue Monday",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://goodbye-blue-monday-1.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54334,7 +54384,7 @@
       "slug": "great-grandpa",
       "name": "Great Grandpa",
       "country": "US",
-      "bandcamp": null,
+      "bandcamp": "https://greatgrandpa.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54356,7 +54406,7 @@
       "slug": "greg-foat",
       "name": "Greg Foat",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://gregfoat.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54378,7 +54428,7 @@
       "slug": "gros-enfant-mort",
       "name": "Gros Enfant Mort",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://grosenfantmort.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54399,7 +54449,7 @@
       "slug": "gruff-rhys",
       "name": "Gruff Rhys",
       "country": "GB",
-      "bandcamp": null,
+      "bandcamp": "https://gruffrhys.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54484,7 +54534,7 @@
       "slug": "gurriers",
       "name": "Gurriers",
       "country": "IE",
-      "bandcamp": null,
+      "bandcamp": "https://gurriersdub.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54505,7 +54555,7 @@
       "slug": "gut-health",
       "name": "Gut Health",
       "country": "AU",
-      "bandcamp": null,
+      "bandcamp": "https://guthealthband.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54574,7 +54624,7 @@
       "slug": "hamburg-spinners",
       "name": "Hamburg Spinners",
       "country": "DE",
-      "bandcamp": null,
+      "bandcamp": "https://hamburgspinners.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -54595,7 +54645,7 @@
       "slug": "hammok",
       "name": "Hammok",
       "country": "NO",
-      "bandcamp": null,
+      "bandcamp": "https://hammok.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
@@ -72982,9 +73032,11 @@
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [
+        "3e64129a-8c52-8098-a9ae-c5ea56b8a68e",
         "c6417d9c-a65c-4087-b290-d77a3a485c2d"
       ],
       "artistIds": [
+        "3e64129a-8c52-8022-a857-e2c8faa0d8a4",
         "2414129a-8c52-8070-8b78-f085f777207b"
       ]
     },
@@ -75938,8 +75990,8 @@
       "id": "3e64129a-8c52-8009-80a0-ca03c6c3ad3e",
       "slug": "gilead-media",
       "name": "Gilead Media",
-      "country": null,
-      "bandcamp": null,
+      "country": "US",
+      "bandcamp": "https://gileadmedia.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "albumIds": [

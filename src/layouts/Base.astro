@@ -481,7 +481,6 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     <div class="keys mono mono--sm">
       <span class="keys__title">Keyboard Shortcuts</span>
       <span class="keys__list">
-        <span class="keys__item">Navigate <kbd class="search__kbd">↑</kbd><kbd class="search__kbd">↓</kbd></span>
         <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
         {shortcuts === 'info' && (
           <span class="keys__item">Info <kbd class="search__kbd">I</kbd></span>
@@ -500,6 +499,7 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
         {/* Случайный релиз из всей базы — последней подсказкой, на всех
             страницах (23 сентября 2026, просьба владельца). */}
         <span class="keys__item">Random Release <kbd class="search__kbd search__kbd--word">Shift</kbd><kbd class="search__kbd">R</kbd></span>
+        <span class="keys__item">Random Video <kbd class="search__kbd search__kbd--word">Shift</kbd><kbd class="search__kbd">V</kbd></span>
       </span>
     </div>
   </footer>
@@ -554,37 +554,40 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
     сверить();
     узкий.addEventListener('change', сверить);
 
-    /* Shift+R — случайный релиз из всей базы, с любой страницы
-       (23 сентября 2026, просьба владельца). Список берём из того же
-       указателя, что и поиск: /search.json, записи рода «r». Запрашиваем по
-       нажатию, а не заранее — на большинстве страниц он не понадобится, а
-       весит треть мегабайта; браузер его кэширует, и второе нажатие уже не
-       ходит в сеть.
+    /* Shift+R — случайный релиз, Shift+V — случайный клип; с любой страницы
+       (23 и 26 сентября 2026, просьба владельца). Списки берём из того же
+       указателя, что и поиск: /search.json, записи рода «r» и «v».
+       Запрашиваем по нажатию, а не заранее — на большинстве страниц он не
+       понадобится, а весит треть мегабайта; браузер его кэширует, и второе
+       нажатие уже не ходит в сеть.
 
-       По коду клавиши, а не по букве (в русской раскладке — «К»), и только с
-       Shift: без него R на главной и на промахе листает Lucky Finds. Ctrl и
-       Cmd не трогаем — Ctrl+Shift+R перезагружает без кэша. Пока набирают
-       текст, сочетание не срабатывает. */
-    let релизы = null;
+       По коду клавиши, а не по букве (в русской раскладке на их месте «К» и
+       «М»), и только с Shift: без него R на главной и на промахе листает
+       Lucky Finds. Ctrl и Cmd не трогаем — Ctrl+Shift+R перезагружает без
+       кэша. Пока набирают текст, сочетание не срабатывает. */
+    const списки = { r: null, v: null };
+
     addEventListener('keydown', async (e) => {
-      if (e.code !== 'KeyR' || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+      const род = e.code === 'KeyR' ? 'r' : e.code === 'KeyV' ? 'v' : null;
+      if (!род || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
       const el = document.activeElement;
       if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
       e.preventDefault();
 
-      if (!релизы) {
+      if (!списки[род]) {
         try {
           const ответ = await fetch('/search.json');
           const { записи } = await ответ.json();
-          релизы = записи.filter((з) => з[0] === 'r').map((з) => з[2]);
+          for (const к of ['r', 'v']) списки[к] = записи.filter((з) => з[0] === к).map((з) => з[2]);
         } catch (err) {
           // Сеть подвела — нажатие просто ничего не делает.
-          релизы = null;
+          списки[род] = null;
           return;
         }
       }
-      if (!релизы.length) return;
-      location.href = релизы[Math.floor(Math.random() * релизы.length)];
+      const адреса = списки[род];
+      if (!адреса || !адреса.length) return;
+      location.href = адреса[Math.floor(Math.random() * адреса.length)];
     });
 
     /* Клавиша I сворачивает и разворачивает блок Info на страницах

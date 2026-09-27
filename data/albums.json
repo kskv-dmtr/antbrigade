@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-27T18:27:36Z",
+  "generatedAt": "2026-09-27T20:02:27Z",
   "counts": {
-    "albums": 1450,
-    "artists": 1215,
-    "labels": 754,
+    "albums": 1453,
+    "artists": 1217,
+    "labels": 755,
     "videos": 108
   },
   "albums": [
@@ -21247,9 +21247,8 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Abaabfb1e-9b7e-45fe-8eb3-f3bccb4f6c33%3Aphoto_2025-08-15_18-26-43.jpg?table=block&id=1194129a-8c52-802d-8af0-d0d9ee0ed938&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "edition": null,
       "genres": [
-        "Soul",
         "Neo-Soul",
-        "R'n'B"
+        "Smooth Soul"
       ],
       "types": [
         "Album"
@@ -32678,6 +32677,38 @@
       ]
     },
     {
+      "id": "3e84129a-8c52-8026-a58b-d4631024cf54",
+      "slug": "whatitdo-archive-group-palace-of-a-thousand-sounds",
+      "artist": "Whatitdo Archive Group",
+      "album": "Palace of a Thousand Sounds",
+      "url": "https://album.link/r6xkjp5xrj434",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae918eae1-885f-49de-8465-ca08fa180915%3Aa3023762446_10.jpg?table=block&id=3e84129a-8c52-8026-a58b-d4631024cf54&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Cinematic Soul",
+        "Funk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-05-05",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d24129a-8c52-804d-a6e0-dccc7afd1227"
+      ],
+      "artists": [
+        "Whatitdo Archive Group"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "labels": [
+        "Record Kicks"
+      ]
+    },
+    {
       "id": "4a4ce791-ae0d-4dd0-b8d4-b2f3ac307296",
       "slug": "avalon-emerson-the-charm",
       "artist": "Avalon Emerson",
@@ -36262,6 +36293,38 @@
       ]
     },
     {
+      "id": "3e84129a-8c52-8006-941e-d30f8a004520",
+      "slug": "rotten-mind-unflavored",
+      "artist": "Rotten Mind",
+      "album": "Unflavored",
+      "url": "https://album.link/23kcxhkswgnjm",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7fe3a2ee-0f98-4c33-bb10-0c5125df8ded%3Aa3057708154_10.jpg?table=block&id=3e84129a-8c52-8006-941e-d30f8a004520&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Punk Rock",
+        "Post-Punk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-03-18",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e84129a-8c52-8051-b7e5-e33b520d2821"
+      ],
+      "artists": [
+        "Rotten Mind"
+      ],
+      "labelIds": [
+        "3e84129a-8c52-809b-85f0-fa1effd0a8ca"
+      ],
+      "labels": [
+        "Lövely Records"
+      ]
+    },
+    {
       "id": "3d14129a-8c52-805e-a859-c9ec14f08386",
       "slug": "wander-home",
       "artist": "Wander",
@@ -39153,6 +39216,38 @@
       ],
       "labels": [
         "Cool, Nice."
+      ]
+    },
+    {
+      "id": "3e84129a-8c52-80e3-bce4-f5c7e4a4a0b0",
+      "slug": "anchorsong-mirage",
+      "artist": "Anchorsong",
+      "album": "Mirage",
+      "url": "https://album.link/k44jsnqb2nffs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8a0c82cb-1997-408a-a49a-b22553fa6f9f%3Aa3864360061_10.jpg?table=block&id=3e84129a-8c52-80e3-bce4-f5c7e4a4a0b0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Downtempo",
+        "Ambient House"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-05-21",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e84129a-8c52-8002-afba-c3fafa2ffedb"
+      ],
+      "artists": [
+        "Anchorsong"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
+      ],
+      "labels": [
+        "Tru Thoughts Recordings"
       ]
     },
     {
@@ -48018,6 +48113,28 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e84129a-8c52-8002-afba-c3fafa2ffedb",
+      "slug": "anchorsong",
+      "name": "Anchorsong",
+      "country": "JP",
+      "bandcamp": "https://anchorsong.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e84129a-8c52-80e3-bce4-f5c7e4a4a0b0"
+      ],
+      "genres": [
+        "Downtempo",
+        "Ambient House"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80b5-816b-c3e6f1b973e6"
       ],
       "videoIds": [],
       "akaIds": []
@@ -60750,9 +60867,8 @@
         "1194129a-8c52-802d-8af0-d0d9ee0ed938"
       ],
       "genres": [
-        "Soul",
         "Neo-Soul",
-        "R'n'B"
+        "Smooth Soul"
       ],
       "labelIds": [
         "2504129a-8c52-8019-8832-e4ce3b0e8d69"
@@ -67131,6 +67247,28 @@
       ],
       "labelIds": [
         "2504129a-8c52-80b1-9280-e0a822d8e98b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e84129a-8c52-8051-b7e5-e33b520d2821",
+      "slug": "rotten-mind",
+      "name": "Rotten Mind",
+      "country": "SE",
+      "bandcamp": "https://rottenmind-official.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e84129a-8c52-8006-941e-d30f8a004520"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Post-Punk"
+      ],
+      "labelIds": [
+        "3e84129a-8c52-809b-85f0-fa1effd0a8ca"
       ],
       "videoIds": [],
       "akaIds": []
@@ -74023,6 +74161,7 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3e84129a-8c52-8026-a58b-d4631024cf54",
         "3d24129a-8c52-8053-bc95-fef3d8493129"
       ],
       "genres": [
@@ -77347,7 +77486,7 @@
       "bandcamp": null,
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://www.columbiarecords.com/",
       "albumIds": [
         "1194129a-8c52-802d-8af0-d0d9ee0ed938"
       ],
@@ -81895,6 +82034,22 @@
       ]
     },
     {
+      "id": "3e84129a-8c52-809b-85f0-fa1effd0a8ca",
+      "slug": "lovely-records",
+      "name": "Lövely Records",
+      "country": "SE",
+      "bandcamp": "https://lovelyrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e84129a-8c52-8006-941e-d30f8a004520"
+      ],
+      "artistIds": [
+        "3e84129a-8c52-8051-b7e5-e33b520d2821"
+      ]
+    },
+    {
       "id": "3da4129a-8c52-8045-83b3-e015149c6aa5",
       "slug": "lovemonk",
       "name": "Lovemonk",
@@ -84955,10 +85110,11 @@
       "bandcamp": "https://recordkicks.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://recordkicks.com/",
       "albumIds": [
         "1274129a-8c52-80d3-ad97-c95838079c7a",
         "81a99f6f-36e8-44ea-b025-8311a1765979",
+        "3e84129a-8c52-8026-a58b-d4631024cf54",
         "af3f144a-a677-4a9c-9517-25b192645772",
         "3d54129a-8c52-803b-acbb-e113d5226bb6",
         "3d24129a-8c52-8053-bc95-fef3d8493129"
@@ -84967,9 +85123,9 @@
         "24a4129a-8c52-80eb-9990-da60a745bb8b",
         "2524129a-8c52-809b-8e94-c0c0a267d91f",
         "2524129a-8c52-80c5-9f02-e97888bd8274",
+        "3d24129a-8c52-804d-a6e0-dccc7afd1227",
         "2524129a-8c52-8043-a12b-d1f6cb12e9ee",
-        "3d54129a-8c52-8065-9aeb-f3d081fabbae",
-        "3d24129a-8c52-804d-a6e0-dccc7afd1227"
+        "3d54129a-8c52-8065-9aeb-f3d081fabbae"
       ]
     },
     {
@@ -87480,13 +87636,14 @@
       "bandcamp": "https://tru-thoughts.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://tru-thoughts.co.uk/",
       "albumIds": [
         "3104129a-8c52-8078-869b-d440ac20c617",
         "2664129a-8c52-8056-a76e-eb43ef492297",
         "cc75744c-6671-4db9-8bdf-487423d10089",
         "3d54129a-8c52-80d8-9b03-d872e13cc2f9",
         "3da4129a-8c52-80a9-a604-d6303753b59e",
+        "3e84129a-8c52-80e3-bce4-f5c7e4a4a0b0",
         "3df4129a-8c52-80b8-ba99-f306aa6457f4"
       ],
       "artistIds": [
@@ -87495,7 +87652,8 @@
         "24f4129a-8c52-8051-8577-f8f08711cd36",
         "3d54129a-8c52-8058-865d-c83a7fe422c4",
         "3d54129a-8c52-80a1-aa0c-f5a65f969ab6",
-        "3da4129a-8c52-80bf-b03b-d2f5234f3a92"
+        "3da4129a-8c52-80bf-b03b-d2f5234f3a92",
+        "3e84129a-8c52-8002-afba-c3fafa2ffedb"
       ]
     },
     {

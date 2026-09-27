@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T18:27:45Z",
+  "generatedAt": "2026-09-27T20:02:52Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23147,6 +23147,61 @@
       "upc": "781676733125",
       "tracks": 15,
       "releaseDate": "2018-03-30"
+    },
+    "3e84129a-8c52-8026-a58b-d4631024cf54": {
+      "source": "https://album.link/r6xkjp5xrj434",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/36VKyFIoXHXwBdhAPNnJFu",
+        "pandora": "https://www.pandora.com/AL:22144131",
+        "deezer": "https://www.deezer.com/album/773589571",
+        "amazonMusic": "https://music.amazon.com/albums/B0FDBK8XQ7",
+        "tidal": "https://listen.tidal.com/album/442426596",
+        "napster": "https://play.napster.com/album/alb.741741364",
+        "boomplay": "https://www.boomplay.com/albums/66020790",
+        "anghami": "https://play.anghami.com/album/1038269816?refer=linktree",
+        "bandcamp": "https://whatitdoarchivegroup.bandcamp.com/album/palace-of-a-thousand-sounds",
+        "amazonStore": "https://amazon.com/dp/B0FDBK8XQ7"
+      },
+      "upc": "5050580794634",
+      "tracks": 13,
+      "releaseDate": "2023-05-05"
+    },
+    "3e84129a-8c52-8006-941e-d30f8a004520": {
+      "source": "https://album.link/23kcxhkswgnjm",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/16yRjYeWsanqXrOj1sz9rq",
+        "pandora": "https://www.pandora.com/AL:11155287",
+        "deezer": "https://www.deezer.com/album/266377262",
+        "amazonMusic": "https://music.amazon.com/albums/B09JQHX11G",
+        "tidal": "https://listen.tidal.com/album/201585116",
+        "napster": "https://play.napster.com/album/alb.619386578",
+        "boomplay": "https://www.boomplay.com/albums/33462256",
+        "anghami": "https://play.anghami.com/album/1023307482?refer=linktree",
+        "bandcamp": "https://rottenmind-official.bandcamp.com/album/unflavored",
+        "amazonStore": "https://amazon.com/dp/B09JQHX11G"
+      },
+      "upc": "7340148113433",
+      "tracks": 12,
+      "releaseDate": "2022-03-18"
+    },
+    "3e84129a-8c52-80e3-bce4-f5c7e4a4a0b0": {
+      "source": "https://album.link/k44jsnqb2nffs",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/79FqblYi4tC5KdylOaDBew",
+        "pandora": "https://www.pandora.com/AL:8195809",
+        "deezer": "https://www.deezer.com/album/206860602",
+        "amazonMusic": "https://music.amazon.com/albums/B08WHDRJ5C",
+        "tidal": "https://listen.tidal.com/album/173305907",
+        "napster": "https://play.napster.com/album/alb.559903151",
+        "yandex": "https://music.yandex.ru/album/13841541",
+        "boomplay": "https://www.boomplay.com/albums/21315209",
+        "anghami": "https://play.anghami.com/album/1018924685?refer=linktree",
+        "bandcamp": "https://anchorsong.bandcamp.com/album/mirage",
+        "amazonStore": "https://amazon.com/dp/B08WHDRJ5C"
+      },
+      "upc": "5060609663742",
+      "tracks": 10,
+      "releaseDate": "2021-05-21"
     }
   }
 }

@@ -54,7 +54,7 @@ const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
 // Ключи свойств в схемах коллекций. Получены из схемы, не менять.
 const P  = { label: '=\\[V', date: 'PNct', artist: 'Y\\kC',
              url: ']]HZ', genre: 'yEPm', type: '}j]w', origDate: 'IEKZ',
-             playlists: 'Hfn}' };
+             playlists: 'Hfn}', edition: 'TLzA' };
 
 /* Имени подборки в коде больше нет: страница /playlists строит разделы по
    тому, что лежит в колонке Playlists, и знать наперёд, как их зовут, ей
@@ -397,7 +397,8 @@ async function main() {
      Так у «Maison Belissimo» (Bruno Belissimo) после удаления варианта
      остался жанр «шеф» и попал на сайт — и в релиз, и в исполнителя. Тот же
      род сирот, что под старым ключом даты — см. PV выше. */
-  const жанры = optionsOf(await schemaOf(ALBUMS), P.genre);
+  const схемаРелизов = await schemaOf(ALBUMS);
+  const жанры = optionsOf(схемаРелизов, P.genre);
   const сироты = new Map();
   const живые = (list, album) => {
     if (!жанры) return list;
@@ -406,6 +407,16 @@ async function main() {
       сироты.set(g, [...(сироты.get(g) ?? []), album]);
       return false;
     });
+  };
+
+  /* Издание — «Deluxe Edition» и подобное, колонка Edition с 27 сентября
+     2026. Колонка списком, и сироты в ней заводятся так же, как в жанрах:
+     удалённый вариант из строк сам не уходит. Поэтому сверяем со списком
+     вариантов и молча отбрасываем то, чего в нём уже нет. */
+  const издания = optionsOf(схемаРелизов, P.edition);
+  const живоеИздание = (значение) => {
+    if (!значение) return null;
+    return издания && !издания.has(значение) ? null : значение;
   };
 
   const store = new Map();
@@ -547,6 +558,7 @@ async function main() {
       album,
       url: plainText(prop(props, P.url)),
       cover: coverUrl(v),
+      edition: живоеИздание(plainText(prop(props, P.edition))),
       genres: живые(splitList(plainText(prop(props, P.genre))), album),
       types: splitList(plainText(prop(props, P.type))),
       released,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T12:49:20Z",
+  "generatedAt": "2026-09-27T18:27:45Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23128,6 +23128,25 @@
       "upc": "5060899077007",
       "tracks": 5,
       "releaseDate": "2021-08-27"
+    },
+    "3e84129a-8c52-80c9-9842-e7a5f9741b29": {
+      "source": "https://album.link/whz68zrgzqxpg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6gIH3xszxUV2AHFTpHBm8a",
+        "pandora": "https://www.pandora.com/AL:1246590",
+        "deezer": "https://www.deezer.com/album/56077932",
+        "amazonMusic": "https://music.amazon.com/albums/B079GFHDF3",
+        "tidal": "https://listen.tidal.com/album/84054225",
+        "napster": "https://play.napster.com/album/alb.298615132",
+        "yandex": "https://music.yandex.ru/album/5015701",
+        "boomplay": "https://www.boomplay.com/albums/9686301",
+        "anghami": "https://play.anghami.com/album/3771829?refer=linktree",
+        "bandcamp": "https://zekeband.bandcamp.com/album/hellbender",
+        "amazonStore": "https://amazon.com/dp/B079GFHDF3"
+      },
+      "upc": "781676733125",
+      "tracks": 15,
+      "releaseDate": "2018-03-30"
     }
   }
 }

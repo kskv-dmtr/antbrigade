@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-27T12:48:16Z",
+  "generatedAt": "2026-09-27T18:27:36Z",
   "counts": {
-    "albums": 1449,
-    "artists": 1214,
+    "albums": 1450,
+    "artists": 1215,
     "labels": 754,
     "videos": 108
   },
@@ -45398,6 +45398,38 @@
       ]
     },
     {
+      "id": "3e84129a-8c52-80c9-9842-e7a5f9741b29",
+      "slug": "zeke-hellbender",
+      "artist": "Zeke",
+      "album": "Hellbender",
+      "url": "https://album.link/whz68zrgzqxpg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aeb05ce61-4990-4823-8f1b-f8a6de43ef7c%3Aa2465364664_10.jpg?table=block&id=3e84129a-8c52-80c9-9842-e7a5f9741b29&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Hardcore Punk",
+        "Punk'n'Roll"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-03-30",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e84129a-8c52-8041-bc9c-d232ad7f5fd6"
+      ],
+      "artists": [
+        "Zeke"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "labels": [
+        "Relapse Records"
+      ]
+    },
+    {
       "id": "3d84129a-8c52-8040-a055-e9a9a96422c8",
       "slug": "the-maghreban-01deas",
       "artist": "The Maghreban",
@@ -74764,6 +74796,28 @@
       "akaIds": []
     },
     {
+      "id": "3e84129a-8c52-8041-bc9c-d232ad7f5fd6",
+      "slug": "zeke",
+      "name": "Zeke",
+      "country": "US",
+      "bandcamp": "https://zekeband.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e84129a-8c52-80c9-9842-e7a5f9741b29"
+      ],
+      "genres": [
+        "Hardcore Punk",
+        "Punk'n'Roll"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8004-b48e-d6c9b8c826f5"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3d04129a-8c52-807b-a625-f002835fd46c",
       "slug": "zenana",
       "name": "Zenana",
@@ -84979,7 +85033,7 @@
       "bandcamp": "https://relapserecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@relapserecords",
-      "website": null,
+      "website": "https://www.relapse.com/",
       "albumIds": [
         "3b64129a-8c52-80be-9d66-f3892cd8d367",
         "3944129a-8c52-80e5-8a03-f8bdaf8b6f96",
@@ -84989,7 +85043,8 @@
         "10f4129a-8c52-808f-9443-ff1c4020a364",
         "45821483-e654-4b63-9283-6bf781ab3c32",
         "584828cd-6332-4ac0-833e-5cbc86692a3a",
-        "24772b18-8565-47c0-b190-53df4e56cb7d"
+        "24772b18-8565-47c0-b190-53df4e56cb7d",
+        "3e84129a-8c52-80c9-9842-e7a5f9741b29"
       ],
       "artistIds": [
         "3b64129a-8c52-8090-9389-ee3930c03cbe",
@@ -85000,7 +85055,8 @@
         "2514129a-8c52-8014-abba-d2d14f022079",
         "2504129a-8c52-80ea-9bf7-ca48f273aee9",
         "2514129a-8c52-808e-95b0-ea9060f84b0e",
-        "2514129a-8c52-803d-a508-c3aa9d1e29f0"
+        "2514129a-8c52-803d-a508-c3aa9d1e29f0",
+        "3e84129a-8c52-8041-bc9c-d232ad7f5fd6"
       ]
     },
     {

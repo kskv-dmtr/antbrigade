@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-27T10:14:11Z",
+  "generatedAt": "2026-09-27T10:50:03Z",
   "counts": {
     "albums": 1439,
     "artists": 1207,
@@ -23699,9 +23699,9 @@
       "url": "https://album.link/hrfpz9dbvsnfk",
       "cover": "https://antbrigade.notion.site/image/attachment%3Abcfdf896-b779-499e-a6e2-81894e4735be%3Aa3261904416_10.jpg?table=block&id=2364129a-8c52-804a-98a1-fd5188429770&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "genres": [
-        "Instrumental",
         "Neo-Psychedelia",
-        "American Folk Music"
+        "American Folk Music",
+        "Americana"
       ],
       "types": [
         "Album"
@@ -45486,7 +45486,7 @@
       "bandcamp": "https://aaronfrazermusic.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@aaronfrazerofficial",
-      "website": null,
+      "website": "https://aaronfrazermusic.com/",
       "albumIds": [
         "d1f8f0c0-940d-48c7-b346-52903f2613c7",
         "5e8a1076-5502-44f7-a1c4-56ac067a5b32"
@@ -55328,7 +55328,6 @@
         "American Folk Music",
         "Ambient Americana",
         "Americana",
-        "Instrumental",
         "Neo-Psychedelia"
       ],
       "labelIds": [
@@ -59061,7 +59060,7 @@
       "bandcamp": "https://lianaflores.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://www.lianaflores.com/",
       "albumIds": [
         "3d14129a-8c52-800d-b2ef-e86b3b310a4e"
       ],
@@ -63037,7 +63036,7 @@
       "bandcamp": "https://patrickholland.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@PatrickHollandofficial",
-      "website": null,
+      "website": "https://hollandpatrick.com/",
       "albumIds": [
         "3de4129a-8c52-8051-9d00-ed1642ae3ff8",
         "3cf4129a-8c52-80e8-b1be-cbe5999d0145"
@@ -73399,7 +73398,7 @@
       "bandcamp": "https://albertsfavourites.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://www.albertsfavourites.com/",
       "albumIds": [
         "31e4129a-8c52-80fa-b9f0-e312bedcc98c",
         "3cd4129a-8c52-80ce-8b61-e332a50937ab",
@@ -74276,7 +74275,7 @@
       "bandcamp": "https://bigcrownrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://bigcrownrecords.com/",
       "albumIds": [
         "3674129a-8c52-80cb-9e82-f71b209488d1",
         "3404129a-8c52-8087-bd3f-ef961e25f616",
@@ -77488,7 +77487,7 @@
       "bandcamp": "https://ghostly.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@GhostlyInternational",
-      "website": null,
+      "website": "https://ghostly.com/",
       "albumIds": [
         "3c74129a-8c52-8095-a809-f207bd6a3cbe",
         "1d54129a-8c52-80eb-beba-fb902a1ef9d4",
@@ -79966,7 +79965,7 @@
       "bandcamp": null,
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@maddecent",
-      "website": null,
+      "website": "https://maddecent.com/",
       "albumIds": [
         "52f7e4ca-1416-4d94-aee9-fc2035866caf",
         "bace706f-ce66-4cfc-97b9-997366d1ed22"
@@ -80306,7 +80305,7 @@
       "bandcamp": "https://metronrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://metronrecords.com/",
       "albumIds": [
         "f9ae495e-ee8f-4b05-8c59-1f83b8ae78de"
       ],
@@ -82514,7 +82513,7 @@
       "bandcamp": "https://popopmusic.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@popoplabel",
-      "website": null,
+      "website": "https://www.popopmusic.com/",
       "albumIds": [
         "3484129a-8c52-8032-a41a-e3c3d9e9685a",
         "28f4129a-8c52-8034-880d-e178c6e424a9",
@@ -83565,7 +83564,7 @@
       "bandcamp": "https://sargenthouse.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@sargenthouse/videos",
-      "website": null,
+      "website": "https://www.sargenthouse.com/",
       "albumIds": [
         "3cd4129a-8c52-8086-9b81-fa226e9d52a5",
         "37a4129a-8c52-800f-8f4e-f38b1f649c04",
@@ -85956,7 +85955,7 @@
       "bandcamp": "https://warprecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@warprecords",
-      "website": null,
+      "website": "https://warp.net/",
       "albumIds": [
         "3ae4129a-8c52-8061-a18f-d976199c95dd",
         "3e24129a-8c52-80b4-b8d8-c67371eddb1f",
@@ -86184,7 +86183,7 @@
       "bandcamp": "https://wondercoreisland.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://www.wondercoreisland.com/",
       "albumIds": [
         "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
         "3da4129a-8c52-80d7-ae2e-c84e5eb737d7"

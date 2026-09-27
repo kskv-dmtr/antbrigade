@@ -36,7 +36,7 @@ const genres = [...genreCounts.entries()]
 
 /* Подпись по числу ссылок: одна — «Link:», две и больше — «Links:»
    (22 сентября 2026, просьба владельца), как «Label:» / «Labels:». */
-const linkCount = [label.bandcamp, label.bandcamp2, label.youtube].filter(Boolean).length;
+const linkCount = [label.website, label.bandcamp, label.bandcamp2, label.youtube].filter(Boolean).length;
 ---
 <Base
   title={`${label.name} · ant brigade`}
@@ -97,11 +97,11 @@ const linkCount = [label.bandcamp, label.bandcamp2, label.youtube].filter(Boolea
           </dl>
         )}
 
-        {(label.bandcamp || label.bandcamp2 || label.youtube) && (
+        {(label.website || label.bandcamp || label.bandcamp2 || label.youtube) && (
           <dl class="item__facts">
             <div class="item__fact">
               <dt>{linkCount > 1 ? 'Links:' : 'Link:'}</dt>
-              <dd><ProfileLinks bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
+              <dd><ProfileLinks website={label.website} bandcamp={label.bandcamp} bandcamp2={label.bandcamp2} youtube={label.youtube} /></dd>
             </div>
           </dl>
         )}

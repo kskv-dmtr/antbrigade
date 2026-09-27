@@ -20,9 +20,13 @@ const PAGE_CAP   = 900;   // за один запрос Notion отдаёт ма
 const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
                   view:       'a705673c-7ed4-4892-87c4-56efc3c496cf' };
 // bandcamp — ключ необязательного свойства со ссылкой, у каждой базы свой
-/* Ключей website здесь больше нет: колонку убрали из обеих баз 5 сентября
-   2026. Были '=Mzn' у артистов и 'H>J[' у лейблов — на случай, если
-   вернут. Ссылки стояли у трёх артистов и девяти лейблов. */
+/* website — колонка «Website» в обеих справочных базах. Её убирали
+   5 сентября 2026 и завели заново 27 сентября. Ключи у новой колонки свои:
+   Notion выдаёт их случайно, прежние '=Mzn' и 'H>J[' достались удалённой.
+   Под теми ключами в строках так и лежат осиротевшие адреса — три у
+   артистов, девять у лейблов; в интерфейсе Notion их не видно, и сами
+   собой в новую колонку они не вернутся, их вводят руками. Читать сироты
+   нельзя: строку, где адрес нарочно стёрли, они воскресили бы. */
 /* aka — связь «Also Known As» внутри той же базы: псевдонимы и другие имена
    одного человека или состава. Заведена 13 сентября 2026. */
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
@@ -30,6 +34,7 @@ const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   bandcamp:   'XmmI',
                   bandcamp2:  'T^U~',
                   youtube:    'drlg',
+                  website:    'QiQ@',
                   aka:        'rupg' };
 /* Колонок Bandcamp по две — «Bandcamp [1]» и «Bandcamp [2]». У лейбла вторая
    заведена 6 сентября 2026 — у части лейблов страниц на площадке две, как у
@@ -41,7 +46,8 @@ const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
                   bandcamp2:  ']Ze:',
-                  youtube:    'imKP' };
+                  youtube:    'imKP',
+                  website:    'k>s}' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
 
@@ -345,6 +351,7 @@ async function directory(source, label) {
     const bandcamp  = source.bandcamp  ? plainText(prop(v.properties, source.bandcamp))  : '';
     const bandcamp2 = source.bandcamp2 ? plainText(prop(v.properties, source.bandcamp2)) : '';
     const youtube   = source.youtube   ? plainText(prop(v.properties, source.youtube))   : '';
+    const website   = source.website   ? plainText(prop(v.properties, source.website))   : '';
     const akaIds    = source.aka       ? relationIds(prop(v.properties, source.aka))   : [];
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
@@ -354,7 +361,8 @@ async function directory(source, label) {
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
       bandcamp2: bandcamp2 || null,
-      youtube: youtube || null
+      youtube: youtube || null,
+      website: website || null
     });
   }
 
@@ -627,6 +635,7 @@ async function main() {
       bandcamp: a.bandcamp,
       bandcamp2: a.bandcamp2,
       youtube: a.youtube,
+      website: a.website,
       albumIds,
       genres: uniqueFrom(albumIds, 'genres'),
       labelIds: uniqueFrom(albumIds, 'labelIds'),
@@ -645,6 +654,7 @@ async function main() {
       bandcamp: l.bandcamp,
       bandcamp2: l.bandcamp2,
       youtube: l.youtube,
+      website: l.website,
       albumIds,
       artistIds: uniqueFrom(albumIds, 'artistIds')
     };

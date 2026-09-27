@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-27T12:26:32Z",
+  "generatedAt": "2026-09-27T12:48:16Z",
   "counts": {
-    "albums": 1448,
-    "artists": 1213,
+    "albums": 1449,
+    "artists": 1214,
     "labels": 754,
     "videos": 108
   },
@@ -32932,6 +32932,39 @@
       ],
       "labels": [
         "XXIM Records"
+      ]
+    },
+    {
+      "id": "3e84129a-8c52-80c2-a432-e59d495c5f08",
+      "slug": "telex-looking-for-saint-tropez",
+      "artist": "Telex",
+      "album": "Looking for Saint-Tropez",
+      "url": "https://album.link/nhxnpxk9sxsgn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad4078d23-040e-4e52-a427-a523c8d3ff33%3Aa3286291420_10.jpg?table=block&id=3e84129a-8c52-80c2-a432-e59d495c5f08&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": "Remastered",
+      "genres": [
+        "Synthpop",
+        "Electro-Disco",
+        "Progressive Electronic"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-04-14",
+      "year": 2023,
+      "origYear": "1979",
+      "playlists": [],
+      "artistIds": [
+        "3e84129a-8c52-802a-9715-cf6209ace857"
+      ],
+      "artists": [
+        "Telex"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80b4-b3bb-f78324221e96"
+      ],
+      "labels": [
+        "Mute"
       ]
     },
     {
@@ -70140,6 +70173,29 @@
       "akaIds": []
     },
     {
+      "id": "3e84129a-8c52-802a-9715-cf6209ace857",
+      "slug": "telex",
+      "name": "Telex",
+      "country": "BE",
+      "bandcamp": "https://thisistelex.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e84129a-8c52-80c2-a432-e59d495c5f08"
+      ],
+      "genres": [
+        "Synthpop",
+        "Electro-Disco",
+        "Progressive Electronic"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80b4-b3bb-f78324221e96"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2564129a-8c52-809e-a399-e3e08521cd3c",
       "slug": "telula",
       "name": "Telula",
@@ -82714,15 +82770,17 @@
       "bandcamp": "https://muterecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": "https://www.youtube.com/@themutechannel",
-      "website": null,
+      "website": "https://mute.com/",
       "albumIds": [
         "1be4129a-8c52-8009-bd7e-e33e5cea9539",
         "5a4037a5-d5a5-410b-b57b-2096a560d4b7",
+        "3e84129a-8c52-80c2-a432-e59d495c5f08",
         "54e3dc2b-fdbc-46dd-b734-d3bc310272c0"
       ],
       "artistIds": [
         "24a4129a-8c52-800e-97ed-ea34eccf72bc",
         "24f4129a-8c52-8047-9849-f6b094be2124",
+        "3e84129a-8c52-802a-9715-cf6209ace857",
         "2504129a-8c52-80f6-892c-ec86b72349a6"
       ]
     },

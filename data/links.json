@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T22:15:13Z",
+  "generatedAt": "2026-09-28T12:29:33Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23217,6 +23217,34 @@
       "upc": "5056556174332",
       "tracks": 2,
       "releaseDate": "2026-03-13"
+    },
+    "3e94129a-8c52-80e2-8bf5-fdabbd94dc93": {
+      "source": "https://album.link/cvnhvm6m5qrdd",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2DtAm3khT9GqoYOJCM9vas",
+        "pandora": "https://www.pandora.com/AL:67426870",
+        "amazonMusic": "https://music.amazon.com/albums/B0HJ6T5R27",
+        "tidal": "https://listen.tidal.com/album/534046922",
+        "boomplay": "https://www.boomplay.com/albums/140019631",
+        "bandcamp": "https://haruomihosono.bandcamp.com/album/yours-sincerely",
+        "amazonStore": "https://amazon.com/dp/B0HJ6T5R27"
+      },
+      "upc": "804297849904",
+      "tracks": 10,
+      "releaseDate": "2026-09-11"
+    },
+    "3e94129a-8c52-802c-bc8c-f216cc4bcb5e": {
+      "source": "https://album.link/wrszz7rdwhcv8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2u9You8FK196oeaE3cVnBF",
+        "pandora": "https://www.pandora.com/AL:18263679",
+        "amazonMusic": "https://music.amazon.com/albums/B0BG96PG9G",
+        "tidal": "https://listen.tidal.com/album/250181935",
+        "amazonStore": "https://amazon.com/dp/B0BG96PG9G"
+      },
+      "upc": "0731628580703",
+      "tracks": 6,
+      "releaseDate": "2022-10-17"
     }
   }
 }

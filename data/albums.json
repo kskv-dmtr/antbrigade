@@ -1,9 +1,9 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-28T09:34:55Z",
+  "generatedAt": "2026-09-28T12:29:17Z",
   "counts": {
-    "albums": 1454,
-    "artists": 1218,
+    "albums": 1456,
+    "artists": 1220,
     "labels": 755,
     "videos": 110
   },
@@ -429,6 +429,39 @@
       ],
       "labels": [
         "Melodic Records"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-80e2-8bf5-fdabbd94dc93",
+      "slug": "haruomi-hosono-yours-sincerely",
+      "artist": "Haruomi Hosono",
+      "album": "Yours Sincerely",
+      "url": "https://album.link/cvnhvm6m5qrdd",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab63e7c5c-afee-4704-a977-529b2b90e9ba%3Aa3915825901_10.jpg?table=block&id=3e94129a-8c52-80e2-8bf5-fdabbd94dc93&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Ambient",
+        "Ambient Pop",
+        "Lounge"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-11",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-8055-a8ac-e9788e5aeef6"
+      ],
+      "artists": [
+        "Haruomi Hosono"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "labels": [
+        "Ghostly International"
       ]
     },
     {
@@ -35033,6 +35066,43 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-802c-bc8c-f216cc4bcb5e",
+      "slug": "the-zenmenn-john-moods-hidden-gem",
+      "artist": "The Zenmenn / John Moods",
+      "album": "Hidden Gem",
+      "url": "https://album.link/wrszz7rdwhcv8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0bc7a624-1095-475a-95a6-c9548b747ea5%3Aa1679754927_10.jpg?table=block&id=3e94129a-8c52-802c-bc8c-f216cc4bcb5e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "New Age",
+        "Soft Rock",
+        "Yacht Rock",
+        "Ambient Pop"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2022-10-17",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3b84129a-8c52-8048-b65a-fdc7e5e673f1",
+        "3e94129a-8c52-8046-9b62-c438a81641c2"
+      ],
+      "artists": [
+        "The Zenmenn",
+        "John Moods"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
+      ],
+      "labels": [
+        "Music From Memory"
+      ]
+    },
+    {
       "id": "0e6365df-e315-4c88-acc7-076a85bce47f",
       "slug": "brigade-hard-times-soft-music",
       "artist": "Brigade",
@@ -57147,6 +57217,29 @@
       "akaIds": []
     },
     {
+      "id": "3e94129a-8c52-8055-a8ac-e9788e5aeef6",
+      "slug": "haruomi-hosono",
+      "name": "Haruomi Hosono",
+      "country": "JP",
+      "bandcamp": "https://haruomihosono.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-80e2-8bf5-fdabbd94dc93"
+      ],
+      "genres": [
+        "Ambient",
+        "Ambient Pop",
+        "Lounge"
+      ],
+      "labelIds": [
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3e84129a-8c52-8022-9d19-d0e3e1b8aad2",
       "slug": "hatihati",
       "name": "HATIHATI",
@@ -58988,6 +59081,30 @@
       ],
       "labelIds": [
         "2494129a-8c52-8092-9fb7-fe240ad21a1a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e94129a-8c52-8046-9b62-c438a81641c2",
+      "slug": "john-moods",
+      "name": "John Moods",
+      "country": "DE",
+      "bandcamp": "https://johnmoods.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-802c-bc8c-f216cc4bcb5e"
+      ],
+      "genres": [
+        "New Age",
+        "Soft Rock",
+        "Yacht Rock",
+        "Ambient Pop"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8057-8e62-c43f8fbb2f88"
       ],
       "videoIds": [],
       "akaIds": []
@@ -72197,15 +72314,19 @@
       "country": "DE",
       "bandcamp": null,
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@thezenmenn6864",
       "website": null,
       "albumIds": [
+        "3e94129a-8c52-802c-bc8c-f216cc4bcb5e",
         "3b84129a-8c52-809a-be36-cd8cb4b143c9"
       ],
       "genres": [
+        "New Age",
+        "Soft Rock",
+        "Yacht Rock",
+        "Ambient Pop",
         "Exotica",
         "Smooth Jazz",
-        "New Age",
         "Art Pop"
       ],
       "labelIds": [
@@ -79688,6 +79809,7 @@
       "youtube": "https://www.youtube.com/@GhostlyInternational",
       "website": "https://ghostly.com/",
       "albumIds": [
+        "3e94129a-8c52-80e2-8bf5-fdabbd94dc93",
         "3c74129a-8c52-8095-a809-f207bd6a3cbe",
         "1d54129a-8c52-80eb-beba-fb902a1ef9d4",
         "12a4129a-8c52-80c6-98bd-eb4f88841288",
@@ -79703,6 +79825,7 @@
         "3db4129a-8c52-80b8-9479-e0b3611ee070"
       ],
       "artistIds": [
+        "3e94129a-8c52-8055-a8ac-e9788e5aeef6",
         "3c74129a-8c52-80ef-8510-dea04b18cc04",
         "2494129a-8c52-806a-8979-f2c1e2ea7fec",
         "2494129a-8c52-80fc-8bf6-e3246aea9eeb",
@@ -83002,10 +83125,11 @@
       "bandcamp": "https://music-from-memory.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://www.musicfrommemory.com/",
       "albumIds": [
         "32f4129a-8c52-80cc-9baa-e0213b383a89",
         "f730e5dc-5065-40fc-92dc-989df83ef50a",
+        "3e94129a-8c52-802c-bc8c-f216cc4bcb5e",
         "3b84129a-8c52-809a-be36-cd8cb4b143c9",
         "3d74129a-8c52-8045-84af-d31906495899"
       ],
@@ -83013,6 +83137,7 @@
         "32f4129a-8c52-80b7-8f80-c162b0c0cad7",
         "24a4129a-8c52-8016-9c11-e4831dfb97e4",
         "3b84129a-8c52-8048-b65a-fdc7e5e673f1",
+        "3e94129a-8c52-8046-9b62-c438a81641c2",
         "3d74129a-8c52-803e-aa07-f1c125a2e0b4"
       ]
     },

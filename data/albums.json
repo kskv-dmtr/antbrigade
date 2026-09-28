@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-28T15:00:46Z",
+  "generatedAt": "2026-09-28T21:04:57Z",
   "counts": {
-    "albums": 1466,
-    "artists": 1228,
-    "labels": 760,
+    "albums": 1478,
+    "artists": 1235,
+    "labels": 765,
     "videos": 110
   },
   "albums": [
@@ -70,6 +70,39 @@
       ],
       "labels": [
         "Stones Throw Records"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-800a-85d9-e14834476a5b",
+      "slug": "dungen-vidrig-var",
+      "artist": "Dungen",
+      "album": "Vidrig Vår",
+      "url": "https://album.link/wjt3wc53nppzg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ae4bcd167-1795-4c36-9f91-eb7568bed554%3Aab67616d0000b2737cadac4808ea80397f3a94c4.jpg?table=block&id=3e94129a-8c52-800a-85d9-e14834476a5b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Pop",
+        "Baroque Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-25",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-80e6-affa-c1f0ed101796"
+      ],
+      "artists": [
+        "Dungen"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-8050-a446-d97b9e0ebe9a"
+      ],
+      "labels": [
+        "Skolhaus"
       ]
     },
     {
@@ -31696,8 +31729,8 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Ab78f8486-49cc-4f63-9c08-b00ddd30c994%3Aa0027257860_10.jpg?table=block&id=17a8a90b-067e-4b84-948f-5b5cdb6693ff&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "edition": null,
       "genres": [
-        "Jazz",
-        "Jazz Fusion"
+        "Jazz Fusion",
+        "Nu Jazz"
       ],
       "types": [
         "Album"
@@ -33002,6 +33035,39 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-809f-a5c4-ec0aeda8cbd8",
+      "slug": "pearl-the-oysters-coast-2-coast",
+      "artist": "Pearl & The Oysters",
+      "album": "Coast 2 Coast",
+      "url": "https://album.link/pkmckkkjxbd9k",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A216ea109-1576-4f9a-9d5d-7d828eac27a6%3Aa1372672954_10.jpg?table=block&id=3e94129a-8c52-809f-a5c4-ec0aeda8cbd8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Psychedelic Pop",
+        "City Pop",
+        "Exotica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-04-21",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2434129a-8c52-8013-b879-daddf61fdb34"
+      ],
+      "artists": [
+        "Pearl & The Oysters"
+      ],
+      "labelIds": [
+        "2444129a-8c52-8014-88cc-c0144285751a"
+      ],
+      "labels": [
+        "Stones Throw Records"
+      ]
+    },
+    {
       "id": "3e84129a-8c52-80b8-b6b0-f67f14581f1c",
       "slug": "svaneborg-kardyb-over-tage",
       "artist": "Svaneborg Kardyb",
@@ -33257,6 +33323,38 @@
       ],
       "labels": [
         "Guerilla Asso"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-80a1-946b-e1c9d1a0a4f5",
+      "slug": "oracle-sisters-hydranism",
+      "artist": "Oracle Sisters",
+      "album": "Hydranism",
+      "url": "https://album.link/xhvvxtw5prbwh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab07660ac-08f8-4ab5-8fc0-05e65f258000%3Aa0130622387_10.jpg?table=block&id=3e94129a-8c52-80a1-946b-e1c9d1a0a4f5&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Psychedelic Pop",
+        "Indie Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-04-07",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-802d-b42c-efc54adbfaaf"
+      ],
+      "artists": [
+        "Oracle Sisters"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-8035-8338-cae1acc24325"
+      ],
+      "labels": [
+        "22TWENTY"
       ]
     },
     {
@@ -33644,6 +33742,45 @@
       ],
       "labels": [
         "Mute"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-80a2-aa00-fcf02f65ac59",
+      "slug": "mark-de-clive-lowe-shigeto-melanie-charles-hotel-san-claudio",
+      "artist": "Mark de Clive-Lowe / Shigeto / Melanie Charles",
+      "album": "Hotel San Claudio",
+      "url": "https://album.link/89jgdnhk2bx8t",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa9a0fec4-834c-4048-93b0-b2d14594e6a3%3Aa0603162154_10.jpg?table=block&id=3e94129a-8c52-80a2-aa00-fcf02f65ac59&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Jazz Fusion",
+        "Acid Jazz",
+        "Neo-Soul",
+        "Synth Funk"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2023-03-24",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-80ed-b2be-cf239d004509",
+        "2494129a-8c52-80fc-8bf6-e3246aea9eeb",
+        "3e94129a-8c52-80e5-8fa5-eea2dae3555d"
+      ],
+      "artists": [
+        "Mark de Clive-Lowe",
+        "Shigeto",
+        "Melanie Charles"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-80a9-b1af-cad5d30786f8"
+      ],
+      "labels": [
+        "Soul Bank Music"
       ]
     },
     {
@@ -35755,6 +35892,39 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-80f3-b51b-f6a64814dd09",
+      "slug": "franc-moody-into-the-ether",
+      "artist": "Franc Moody",
+      "album": "Into the Ether",
+      "url": "https://album.link/skq53n57j4jwr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0c2b6165-1246-45bf-9f98-529e8bb24b26%3A1200x1200bf-60.jpg?table=block&id=3e94129a-8c52-80f3-b51b-f6a64814dd09&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu-Disco",
+        "Indie Pop",
+        "Funktronica"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-09-02",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d94129a-8c52-80b5-a331-ff0cfc5c233e"
+      ],
+      "artists": [
+        "Franc Moody"
+      ],
+      "labelIds": [
+        "3d94129a-8c52-80b6-a747-cfe58188cbf7"
+      ],
+      "labels": [
+        "Juicebox Recordings"
+      ]
+    },
+    {
       "id": "2534129a-8c52-8094-914c-c583c05adab1",
       "slug": "telenova-stained-glass-love",
       "artist": "Telenova",
@@ -36404,6 +36574,38 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-8078-8c9e-f55c857b1ea3",
+      "slug": "kikagaku-moyo-kumoyo-island",
+      "artist": "Kikagaku Moyo",
+      "album": "Kumoyo Island",
+      "url": "https://album.link/7cfst90jm22qn",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af88fa5cd-9b6a-457a-954f-c40cdceea536%3Aa0810188384_10.jpg?table=block&id=3e94129a-8c52-8078-8c9e-f55c857b1ea3&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Psychedelic Rock",
+        "Psychedelic Folk"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-06",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-8039-a570-da0d095946d0"
+      ],
+      "artists": [
+        "Kikagaku Moyo"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80d2-98a1-d4f718ffd533"
+      ],
+      "labels": [
+        "Guruguru Brain"
+      ]
+    },
+    {
       "id": "3cd4129a-8c52-80b1-b14e-ed72ee3ec037",
       "slug": "biznaga-bremen-no-existe",
       "artist": "Biznaga",
@@ -36530,6 +36732,38 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-802d-b7a7-e8399cf79c3f",
+      "slug": "high-pulp-pursuit-of-ends",
+      "artist": "High Pulp",
+      "album": "Pursuit of Ends",
+      "url": "https://album.link/3df9jn8zcmdgs",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A554e7110-59fd-4375-aae0-9e4e4b2a9dd7%3Aa2973261384_10.jpg?table=block&id=3e94129a-8c52-802d-b7a7-e8399cf79c3f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-04-15",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2524129a-8c52-8030-88f6-fcdfc869266c"
+      ],
+      "artists": [
+        "High Pulp"
+      ],
+      "labelIds": [
+        "2474129a-8c52-8074-b77a-dcc08eef834e"
+      ],
+      "labels": [
+        "Anti- Records"
+      ]
+    },
+    {
       "id": "ae7dbc6c-d3ce-41e5-af28-6ccbd8bf106e",
       "slug": "whatever-the-weather-whatever-the-weather",
       "artist": "Whatever The Weather",
@@ -36626,6 +36860,38 @@
       ],
       "labels": [
         "Merge Records"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-8057-955f-faf6aa9ed055",
+      "slug": "neue-grafik-ensemble-foulden-road-part-ii",
+      "artist": "Neue Grafik Ensemble",
+      "album": "Foulden Road Part II",
+      "url": "https://album.link/nxtpwc07cd292",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A20d3eedd-f343-4aac-b4f5-c9a6ed44c781%3Aa2714323779_10.jpg?table=block&id=3e94129a-8c52-8057-955f-faf6aa9ed055&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu Jazz",
+        "Instrumental Hip-Hop"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2022-03-25",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-80c4-a9c3-d6f6ebc63fc0"
+      ],
+      "artists": [
+        "Neue Grafik Ensemble"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-809a-b1cd-e8625dd27daf"
+      ],
+      "labels": [
+        "Total Refreshment Records"
       ]
     },
     {
@@ -36756,6 +37022,38 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-80fc-9041-cfbb3105cbf3",
+      "slug": "balthvs-cause-effect",
+      "artist": "BALTHVS",
+      "album": "Cause & Effect",
+      "url": "https://album.link/rvw6gkgqjhc8t",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A8929e5f1-494a-4327-a338-fb75c933283b%3Aa0619835525_10.jpg?table=block&id=3e94129a-8c52-80fc-9041-cfbb3105cbf3&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-03-04",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2484129a-8c52-80c8-9e8e-f370340af860"
+      ],
+      "artists": [
+        "BALTHVS"
+      ],
+      "labelIds": [
+        "2484129a-8c52-8087-a6ff-da52b2b85550"
+      ],
+      "labels": [
+        "Cubensis Records"
+      ]
+    },
+    {
       "id": "0be23842-0d79-4950-abd4-cca2b4b5e5c8",
       "slug": "midnight-let-there-be-witchery",
       "artist": "Midnight",
@@ -36848,6 +37146,70 @@
       ],
       "labels": [
         "Sahel Sounds"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-8045-9fd1-d9fb91ff4989",
+      "slug": "tour-maubourg-woodfloor-dubs",
+      "artist": "Tour-Maubourg",
+      "album": "Woodfloor Dubs",
+      "url": "https://album.link/hvgj0jknm6rpf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A80ecad45-e39d-4c54-b400-d245fe43d9ae%3Aa2210492727_10.jpg?table=block&id=3e94129a-8c52-8045-9fd1-d9fb91ff4989&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Deep House"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2022-02-18",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3354129a-8c52-806f-b298-ff87dac3d380"
+      ],
+      "artists": [
+        "Tour-Maubourg"
+      ],
+      "labelIds": [
+        "3854129a-8c52-80e4-9ed5-cbc6f9cd3340"
+      ],
+      "labels": [
+        "Shall Not Fade"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-8061-964b-e8d54a93854a",
+      "slug": "los-bitchos-let-the-festivities-begin",
+      "artist": "Los Bitchos",
+      "album": "Let the Festivities Begin!",
+      "url": "https://album.link/f6x5rj23f8sqt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aa934cc6d-e754-481a-afc2-4a8155d14ffe%3Aa3008148864_10.jpg?table=block&id=3e94129a-8c52-8061-964b-e8d54a93854a&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Neo-Psychedelia",
+        "Cumbia",
+        "Surf Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-02-04",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24f4129a-8c52-80de-ba69-f43b6a41ec4a"
+      ],
+      "artists": [
+        "Los Bitchos"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
+      ],
+      "labels": [
+        "City Slang"
       ]
     },
     {
@@ -42883,6 +43245,38 @@
       ],
       "labels": [
         "Black Acre Records"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-8099-ac9e-c6eeb529c12b",
+      "slug": "the-architect-une-plage-sur-la-lune",
+      "artist": "The Architect",
+      "album": "Une Plage Sur la Lune",
+      "url": "https://album.link/5zmgfkwcc2hw2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abb9c4805-57a5-400e-a9db-ff03bf9ed9fa%3Aa0729993083_10.jpg?table=block&id=3e94129a-8c52-8099-ac9e-c6eeb529c12b&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Abstract Hip-Hop",
+        "Jazzy Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-06-12",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e94129a-8c52-80ba-94c2-c51bd5df7556"
+      ],
+      "artists": [
+        "The Architect"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-800e-848f-f5284ddcc065"
+      ],
+      "labels": [
+        "X-Ray Production"
       ]
     },
     {
@@ -49496,11 +49890,13 @@
       "albumIds": [
         "0505b721-816c-4941-bbc0-46a89c8e65fb",
         "f9e4c167-0588-4b65-88b3-9712c5918739",
+        "3e94129a-8c52-80fc-9041-cfbb3105cbf3",
         "3db4129a-8c52-80a5-995d-e3e51c54ffbd"
       ],
       "genres": [
         "Funk",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Psychedelic Pop"
       ],
       "labelIds": [
         "24f4129a-8c52-8068-9792-c9eb666a66d9",
@@ -54359,6 +54755,29 @@
       "akaIds": []
     },
     {
+      "id": "3e94129a-8c52-80e6-affa-c1f0ed101796",
+      "slug": "dungen",
+      "name": "Dungen",
+      "country": "SE",
+      "bandcamp": "https://dungen.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://dungen-music.com/",
+      "albumIds": [
+        "3e94129a-8c52-800a-85d9-e14834476a5b"
+      ],
+      "genres": [
+        "Neo-Psychedelia",
+        "Psychedelic Pop",
+        "Baroque Pop"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-8050-a446-d97b9e0ebe9a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3db4129a-8c52-804b-b105-c983385539c1",
       "slug": "duo-brothers",
       "name": "Duo Brothers",
@@ -56168,11 +56587,13 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3e94129a-8c52-80f3-b51b-f6a64814dd09",
         "3d94129a-8c52-800f-9b76-ddab34b63d57"
       ],
       "genres": [
         "Nu-Disco",
         "Indie Pop",
+        "Funktronica",
         "Synthpop"
       ],
       "labelIds": [
@@ -57899,10 +58320,10 @@
       "website": null,
       "albumIds": [
         "17a8a90b-067e-4b84-948f-5b5cdb6693ff",
+        "3e94129a-8c52-802d-b7a7-e8399cf79c3f",
         "3d54129a-8c52-80cb-b737-e7737cd29daf"
       ],
       "genres": [
-        "Jazz",
         "Jazz Fusion",
         "Nu Jazz"
       ],
@@ -60346,6 +60767,28 @@
       "akaIds": []
     },
     {
+      "id": "3e94129a-8c52-8039-a570-da0d095946d0",
+      "slug": "kikagaku-moyo",
+      "name": "Kikagaku Moyo",
+      "country": "JP",
+      "bandcamp": "https://kikagakumoyoggb.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-8078-8c9e-f55c857b1ea3"
+      ],
+      "genres": [
+        "Psychedelic Rock",
+        "Psychedelic Folk"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80d2-98a1-d4f718ffd533"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3db4129a-8c52-809c-ab1d-d03a684b1563",
       "slug": "kiki-gyan",
       "name": "Kiki Gyan",
@@ -61933,12 +62376,14 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "ec69dd71-5f14-4160-a7f9-057abb7b7413"
+        "ec69dd71-5f14-4160-a7f9-057abb7b7413",
+        "3e94129a-8c52-8061-964b-e8d54a93854a"
       ],
       "genres": [
         "Cumbia",
         "Instrumental",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "Surf Rock"
       ],
       "labelIds": [
         "24f4129a-8c52-80a1-88ab-db0ebcea8e4d"
@@ -62732,6 +63177,30 @@
       "akaIds": []
     },
     {
+      "id": "3e94129a-8c52-80ed-b2be-cf239d004509",
+      "slug": "mark-de-clive-lowe",
+      "name": "Mark de Clive-Lowe",
+      "country": "NZ",
+      "bandcamp": "https://markdeclivelowe.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-80a2-aa00-fcf02f65ac59"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Acid Jazz",
+        "Neo-Soul",
+        "Synth Funk"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-80a9-b1af-cad5d30786f8"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2f84129a-8c52-808e-8aea-f2de50524915",
       "slug": "marta-del-grandi",
       "name": "Marta Del Grandi",
@@ -63166,6 +63635,30 @@
       ],
       "labelIds": [
         "3494129a-8c52-80e1-921b-d2cdf2b96640"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e94129a-8c52-80e5-8fa5-eea2dae3555d",
+      "slug": "melanie-charles",
+      "name": "Melanie Charles",
+      "country": "US",
+      "bandcamp": "https://melaniecharles.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-80a2-aa00-fcf02f65ac59"
+      ],
+      "genres": [
+        "Jazz Fusion",
+        "Acid Jazz",
+        "Neo-Soul",
+        "Synth Funk"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-80a9-b1af-cad5d30786f8"
       ],
       "videoIds": [],
       "akaIds": []
@@ -64372,7 +64865,33 @@
         "24a4129a-8c52-803e-8014-f5b45e0d69b1"
       ],
       "videoIds": [],
-      "akaIds": []
+      "akaIds": [
+        "3e94129a-8c52-80c4-a9c3-d6f6ebc63fc0"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-80c4-a9c3-d6f6ebc63fc0",
+      "slug": "neue-grafik-ensemble",
+      "name": "Neue Grafik Ensemble",
+      "country": "FR",
+      "bandcamp": "https://neuegrafik.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-8057-955f-faf6aa9ed055"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Instrumental Hip-Hop"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-809a-b1cd-e8625dd27daf"
+      ],
+      "videoIds": [],
+      "akaIds": [
+        "25a4129a-8c52-8077-8401-f64246cace7c"
+      ]
     },
     {
       "id": "2504129a-8c52-80ed-b5ad-fe1f3b9d0fb7",
@@ -65069,6 +65588,28 @@
       "akaIds": []
     },
     {
+      "id": "3e94129a-8c52-802d-b42c-efc54adbfaaf",
+      "slug": "oracle-sisters",
+      "name": "Oracle Sisters",
+      "country": "FR",
+      "bandcamp": "https://oraclesisters.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://www.oraclesisters.com/",
+      "albumIds": [
+        "3e94129a-8c52-80a1-946b-e1c9d1a0a4f5"
+      ],
+      "genres": [
+        "Psychedelic Pop",
+        "Indie Pop"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-8035-8338-cae1acc24325"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-8032-bc8e-fd1c9173c69a",
       "slug": "orchestre-tout-puissant-marcel-duchamp",
       "name": "Orchestre Tout Puissant Marcel Duchamp",
@@ -65760,12 +66301,15 @@
       "website": null,
       "albumIds": [
         "3914129a-8c52-80e6-b3d2-ddf2259a9530",
-        "10c4129a-8c52-80e9-9f7c-d4889f724a05"
+        "10c4129a-8c52-80e9-9f7c-d4889f724a05",
+        "3e94129a-8c52-809f-a5c4-ec0aeda8cbd8"
       ],
       "genres": [
         "Indie Pop",
         "Psychedelic Pop",
-        "Neo-Psychedelia"
+        "Neo-Psychedelia",
+        "City Pop",
+        "Exotica"
       ],
       "labelIds": [
         "2444129a-8c52-8014-88cc-c0144285751a"
@@ -68872,6 +69416,7 @@
       "website": null,
       "albumIds": [
         "12a4129a-8c52-80c6-98bd-eb4f88841288",
+        "3e94129a-8c52-80a2-aa00-fcf02f65ac59",
         "3db4129a-8c52-80b8-9479-e0b3611ee070"
       ],
       "genres": [
@@ -68879,12 +69424,16 @@
         "Acid House",
         "Neo-Soul",
         "Jazzy Hip-Hop",
+        "Jazz Fusion",
+        "Acid Jazz",
+        "Synth Funk",
         "Deep House",
         "Glitch Hop",
         "Nu Jazz"
       ],
       "labelIds": [
-        "2444129a-8c52-808d-bac2-ee2f428fb4bc"
+        "2444129a-8c52-808d-bac2-ee2f428fb4bc",
+        "3e94129a-8c52-80a9-b1af-cad5d30786f8"
       ],
       "videoIds": [],
       "akaIds": []
@@ -71167,6 +71716,28 @@
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3e94129a-8c52-80ba-94c2-c51bd5df7556",
+      "slug": "the-architect",
+      "name": "The Architect",
+      "country": "FR",
+      "bandcamp": "https://thearchitectone.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-8099-ac9e-c6eeb529c12b"
+      ],
+      "genres": [
+        "Abstract Hip-Hop",
+        "Jazzy Hip-Hop"
+      ],
+      "labelIds": [
+        "3e94129a-8c52-800e-848f-f5284ddcc065"
       ],
       "videoIds": [],
       "akaIds": []
@@ -73489,14 +74060,16 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3354129a-8c52-80b1-ba66-c2a7fe2d8540"
+        "3354129a-8c52-80b1-ba66-c2a7fe2d8540",
+        "3e94129a-8c52-8045-9fd1-d9fb91ff4989"
       ],
       "genres": [
         "Deep House",
         "Jazzy House"
       ],
       "labelIds": [
-        "2444129a-8c52-808e-a32e-ce3b469ff8ac"
+        "2444129a-8c52-808e-a32e-ce3b469ff8ac",
+        "3854129a-8c52-80e4-9ed5-cbc6f9cd3340"
       ],
       "videoIds": [],
       "akaIds": []
@@ -76002,6 +76575,22 @@
       ]
     },
     {
+      "id": "3e94129a-8c52-8035-8338-cae1acc24325",
+      "slug": "22twenty",
+      "name": "22TWENTY",
+      "country": "US",
+      "bandcamp": "https://22twenty.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://www.22twentyclub.com/",
+      "albumIds": [
+        "3e94129a-8c52-80a1-946b-e1c9d1a0a4f5"
+      ],
+      "artistIds": [
+        "3e94129a-8c52-802d-b42c-efc54adbfaaf"
+      ]
+    },
+    {
       "id": "3d64129a-8c52-8048-b717-f09ca71ca83c",
       "slug": "2mr",
       "name": "2MR",
@@ -76442,6 +77031,7 @@
         "2e14129a-8c52-80a7-b109-f9ad89b9f574",
         "17a8a90b-067e-4b84-948f-5b5cdb6693ff",
         "74c7049c-a7ad-4e4f-9249-42882e976288",
+        "3e94129a-8c52-802d-b7a7-e8399cf79c3f",
         "19c4129a-8c52-8092-b61e-c8635a25808d",
         "3d74129a-8c52-8002-913b-e260cc2515e3",
         "3dc4129a-8c52-803f-8db7-e6b65bb87022",
@@ -77995,6 +78585,7 @@
         "1154129a-8c52-800d-8b87-e9007efdb301",
         "ec69dd71-5f14-4160-a7f9-057abb7b7413",
         "8db38305-53df-49ab-822c-887de89fb706",
+        "3e94129a-8c52-8061-964b-e8d54a93854a",
         "3d24129a-8c52-8011-96dc-d9f07d5ae793",
         "3dc4129a-8c52-802e-9477-da6c6c0b27c2",
         "3d54129a-8c52-80ee-ac90-f6c304188c0a"
@@ -78485,6 +79076,7 @@
       "website": null,
       "albumIds": [
         "f9e4c167-0588-4b65-88b3-9712c5918739",
+        "3e94129a-8c52-80fc-9041-cfbb3105cbf3",
         "3db4129a-8c52-80a5-995d-e3e51c54ffbd"
       ],
       "artistIds": [
@@ -80669,12 +81261,14 @@
       "albumIds": [
         "2684129a-8c52-80c8-a805-e55ed07091d3",
         "59523f98-4bb4-4bbf-bc04-e9902172a3a6",
-        "7c63a660-5a1e-4d5d-8b3c-6d4d028b7d1e"
+        "7c63a660-5a1e-4d5d-8b3c-6d4d028b7d1e",
+        "3e94129a-8c52-8078-8c9e-f55c857b1ea3"
       ],
       "artistIds": [
         "2684129a-8c52-80f4-8b9f-f252db84780d",
         "24a4129a-8c52-8005-ae09-fcce349f6dad",
-        "2504129a-8c52-800a-b793-c6996ed2ccf5"
+        "2504129a-8c52-800a-b793-c6996ed2ccf5",
+        "3e94129a-8c52-8039-a570-da0d095946d0"
       ]
     },
     {
@@ -81863,6 +82457,7 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3e94129a-8c52-80f3-b51b-f6a64814dd09",
         "3d94129a-8c52-800f-9b76-ddab34b63d57"
       ],
       "artistIds": [
@@ -86778,10 +87373,12 @@
       "website": null,
       "albumIds": [
         "3854129a-8c52-80ef-9d06-f49b0fe64f87",
+        "3e94129a-8c52-8045-9fd1-d9fb91ff4989",
         "3d64129a-8c52-8051-8572-ee10275dfaca"
       ],
       "artistIds": [
-        "2504129a-8c52-804e-88f4-ce5819e39e45"
+        "2504129a-8c52-804e-88f4-ce5819e39e45",
+        "3354129a-8c52-806f-b298-ff87dac3d380"
       ]
     },
     {
@@ -86896,6 +87493,22 @@
       ],
       "artistIds": [
         "2494129a-8c52-801a-b31f-c6a10e88b4ef"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-8050-a446-d97b9e0ebe9a",
+      "slug": "skolhaus",
+      "name": "Skolhaus",
+      "country": "SE",
+      "bandcamp": "https://skolhaus.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://www.skolhaus.com/",
+      "albumIds": [
+        "3e94129a-8c52-800a-85d9-e14834476a5b"
+      ],
+      "artistIds": [
+        "3e94129a-8c52-80e6-affa-c1f0ed101796"
       ]
     },
     {
@@ -87126,6 +87739,24 @@
       ],
       "artistIds": [
         "2504129a-8c52-80e4-9aaa-f7a293d15cf7"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-80a9-b1af-cad5d30786f8",
+      "slug": "soul-bank-music",
+      "name": "Soul Bank Music",
+      "country": "GB",
+      "bandcamp": "https://soulbankmusic.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-80a2-aa00-fcf02f65ac59"
+      ],
+      "artistIds": [
+        "3e94129a-8c52-80ed-b2be-cf239d004509",
+        "2494129a-8c52-80fc-8bf6-e3246aea9eeb",
+        "3e94129a-8c52-80e5-8fa5-eea2dae3555d"
       ]
     },
     {
@@ -87529,6 +88160,7 @@
         "a34f0120-4547-494d-a4a5-0d574b910212",
         "99819fb7-ac5f-4c92-8841-4dc224175724",
         "98f3ef0b-d6d2-4480-a9d9-8a8ff89a4c24",
+        "3e94129a-8c52-809f-a5c4-ec0aeda8cbd8",
         "2534129a-8c52-8046-8e24-e9d131ffb2ca",
         "3d54129a-8c52-801c-be35-d86669478134",
         "3da4129a-8c52-8024-b3e0-c9e5ce1a71bd",
@@ -88243,6 +88875,22 @@
       ],
       "artistIds": [
         "3014129a-8c52-80e3-8626-d2ce713b1353"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-809a-b1cd-e8625dd27daf",
+      "slug": "total-refreshment-records",
+      "name": "Total Refreshment Records",
+      "country": "GB",
+      "bandcamp": "https://totalrefreshmentrecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-8057-955f-faf6aa9ed055"
+      ],
+      "artistIds": [
+        "3e94129a-8c52-80c4-a9c3-d6f6ebc63fc0"
       ]
     },
     {
@@ -89242,6 +89890,22 @@
       ],
       "artistIds": [
         "3d54129a-8c52-805b-be3d-f68b5212a2a5"
+      ]
+    },
+    {
+      "id": "3e94129a-8c52-800e-848f-f5284ddcc065",
+      "slug": "x-ray-production",
+      "name": "X-Ray Production",
+      "country": "US",
+      "bandcamp": "https://x-rayproduction.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3e94129a-8c52-8099-ac9e-c6eeb529c12b"
+      ],
+      "artistIds": [
+        "3e94129a-8c52-80ba-94c2-c51bd5df7556"
       ]
     },
     {

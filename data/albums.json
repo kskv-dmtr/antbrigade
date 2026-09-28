@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-28T00:52:24Z",
+  "generatedAt": "2026-09-28T09:34:55Z",
   "counts": {
     "albums": 1454,
     "artists": 1218,
@@ -5825,6 +5825,39 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3e84129a-8c52-8015-9e72-eb77814baf20",
+      "slug": "hatihati-whip-it-head",
+      "artist": "HATIHATI",
+      "album": "Whip It / Head",
+      "url": "https://album.link/d3w4jkgx5q7tt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aee428457-bc80-4f0b-a4cb-bcfdf6b09b2e%3Aa3578839592_10.jpg?table=block&id=3e84129a-8c52-8015-9e72-eb77814baf20&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Alternative Dance",
+        "Tech House",
+        "Techno"
+      ],
+      "types": [
+        "Single"
+      ],
+      "released": "2026-03-13",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3e84129a-8c52-8022-9d19-d0e3e1b8aad2"
+      ],
+      "artists": [
+        "HATIHATI"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8080-9b9b-efb2b4dc157d"
+      ],
+      "labels": [
+        "Deewee"
       ]
     },
     {
@@ -33701,39 +33734,6 @@
       ],
       "labels": [
         "Not on Label"
-      ]
-    },
-    {
-      "id": "3e84129a-8c52-8015-9e72-eb77814baf20",
-      "slug": "hatihati-whip-it-head",
-      "artist": "HATIHATI",
-      "album": "Whip It / Head",
-      "url": "https://album.link/d3w4jkgx5q7tt",
-      "cover": "https://antbrigade.notion.site/image/attachment%3Aee428457-bc80-4f0b-a4cb-bcfdf6b09b2e%3Aa3578839592_10.jpg?table=block&id=3e84129a-8c52-8015-9e72-eb77814baf20&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
-      "edition": null,
-      "genres": [
-        "Alternative Dance",
-        "Tech House",
-        "Techno"
-      ],
-      "types": [
-        "Single"
-      ],
-      "released": "2023-03-13",
-      "year": 2023,
-      "origYear": null,
-      "playlists": [],
-      "artistIds": [
-        "3e84129a-8c52-8022-9d19-d0e3e1b8aad2"
-      ],
-      "artists": [
-        "HATIHATI"
-      ],
-      "labelIds": [
-        "2494129a-8c52-8080-9b9b-efb2b4dc157d"
-      ],
-      "labels": [
-        "Deewee"
       ]
     },
     {
@@ -78180,20 +78180,20 @@
       "youtube": null,
       "website": "https://deew.ee/",
       "albumIds": [
+        "3e84129a-8c52-8015-9e72-eb77814baf20",
         "2da4129a-8c52-80d3-afd1-eb5094af7274",
         "2e74129a-8c52-801c-b6c5-c0a22c084efc",
         "1aa4129a-8c52-800d-8910-d01c9fec6d30",
         "4f2a5330-5f93-4682-a219-37d17ce1c394",
-        "3e84129a-8c52-8015-9e72-eb77814baf20",
         "3e84129a-8c52-8098-992d-f368486245d0",
         "26eca379-5783-4be3-88d2-b52a28eda9b6"
       ],
       "artistIds": [
+        "3e84129a-8c52-8022-9d19-d0e3e1b8aad2",
         "2da4129a-8c52-8088-859f-c970eb1e7227",
         "2e74129a-8c52-801f-aa73-e3372182a95c",
         "2494129a-8c52-802f-9ee5-f88fe3ebb138",
         "24f4129a-8c52-8011-81c6-edbb4d6fe9ad",
-        "3e84129a-8c52-8022-9d19-d0e3e1b8aad2",
         "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },

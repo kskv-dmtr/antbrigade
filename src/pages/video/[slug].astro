@@ -140,7 +140,10 @@ const releases = [...new Map(
               и «11, 2026» (18 сентября 2026, просьба владельца). */}
           {(вид || dateText || origText) && (
           <p class="item__meta">
-            {[вид, dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
+            {/* Вид ролика неразрывен: «Official Video» не должен ломаться
+                посреди себя (28 сентября 2026, просьба владельца). */}
+            {[вид && <span class="nb">{вид}</span>,
+              dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
               <>{i > 0 && ' · '}{часть}</>
             ))}
             {origText && <span class="item__faint"> · originally {origText}</span>}
@@ -176,7 +179,7 @@ const releases = [...new Map(
           релиза (21 сентября 2026, просьба владельца). */}
       <PageBar as="h2" title="More Videos" count={rest.length} />
       <ul class="tiles tiles--auto">
-        {rest.map((v) => <VideoCard video={v} showType />)}
+        {rest.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>
   )}
@@ -191,7 +194,7 @@ const releases = [...new Map(
           принадлежат тому же исполнителю, а у дуэта сюда попадают и сольные
           работы каждого. */}
       <ul class="tiles tiles--auto">
-        {releases.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} showType />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
       </ul>
     </section>
   )}

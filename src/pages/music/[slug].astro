@@ -169,7 +169,10 @@ const clips = [...new Map(
               дата никуда не ведут. Дата неразрывная: переносится целиком, а
               не рвётся на «September» и «11, 2026» (18 сентября 2026). */}
           <p class="item__meta">
-            {[вид, dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
+            {/* Каждый тип неразрывен: «Official Video» не должен ломаться
+                посреди себя (28 сентября 2026, просьба владельца). */}
+            {[...album.types.map((t) => <span class="nb">{t}</span>),
+              dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
               <>{i > 0 && ' · '}{часть}</>
             ))}
             {/* Год оригинала — уточнением в той же строке, приглушённым:
@@ -264,7 +267,7 @@ const clips = [...new Map(
           Тип релиза — рядом с годом, «Album · 2024», как в дискографии на
           странице исполнителя (21 сентября 2026, просьба владельца). */}
       <ul class="tiles tiles--auto">
-        {more.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} showType />)}
+        {more.map((a) => <AlbumCard album={a} showArtist={artists.length > 1} />)}
       </ul>
     </section>
   )}
@@ -282,7 +285,7 @@ const clips = [...new Map(
           Рядом с годом — вид клипа, «Official Video · 2024», как во всех
           разделах страниц релиза и клипа (21 сентября 2026). */}
       <ul class="tiles tiles--auto">
-        {clips.map((v) => <VideoCard video={v} showType />)}
+        {clips.map((v) => <VideoCard video={v} />)}
       </ul>
     </section>
   )}

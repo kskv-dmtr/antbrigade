@@ -35,14 +35,13 @@ const { album } = Astro.props;
   {/* Порядок как у плитки (19 сентября 2026, просьба владельца): сверху
       название, под ним исполнитель и год через точку моноширинным; справа
       типы — каждый в своей рамке, как род находки в поиске. */}
-  {/* Рамка стоит в разметке перед названием: она обтекается справа, а
-      обтекание считается от того места, где рамка встретилась. Стой она
-      после названия — сжималась бы последняя строка, а не первая. */}
+  {/* Рамки с типом в строке больше нет (28 сентября 2026, просьба
+      владельца): тип ушёл в подпись под названием и стоит там первым, перед
+      именем исполнителя. Рамкой он стоял с 19 сентября. */}
   <span class="row__line">
-    <span class="row__meta row__types">{album.types.map((t) => <span class="row__type">{t}</span>)}</span>
     <span class="row__title">{album.album}</span>
   </span>
   <span class="row__line">
-    <span class="row__sub">{[artistLine(album), album.year].filter(Boolean).join(' · ')}</span>
+    <span class="row__sub">{[album.types.join(' · '), artistLine(album), album.year].filter(Boolean).join(' · ')}</span>
   </span>
 </a>

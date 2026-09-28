@@ -2556,22 +2556,13 @@ main > .head--page:first-child { border-top: 0; }
   letter-spacing: -0.01em;
 }
 
-/* Род находки — в рамке цвета линий, моноширинным прописными. Не
-   переносится и не жмётся: он и есть ответ на вопрос «что нашлось». */
-/* Род и подпись — с прописной первой буквы, не капителью (20 сентября 2026,
-   просьба владельца): слова приходят готовыми — «Album», «Official Video»,
-   «1 Album · 1 EP». */
-.found__type {
-  float: right;
-  margin-left: 0.75rem;
-  padding: 0.1875rem 0.375rem;
-  font-family: var(--mono);
-  font-size: max(11px, 0.6875rem);
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-  color: var(--fg-muted);
-  border: 1px solid var(--line);
-}
+/* Рода в рамке справа у находки больше нет (28 сентября 2026, просьба
+   владельца): он ушёл в подпись и стоит там первым — «Album · Joshua Idehen ·
+   2026», «Artist · 2 Albums». Рамкой он стоял с 19 сентября 2026; правила
+   .found__type достаются из истории файла.
+
+   Подпись — с прописной первой буквы, не капителью (20 сентября 2026,
+   просьба владельца): слова приходят готовыми. */
 .found__sub {
   overflow-wrap: anywhere;
   font-family: var(--mono);
@@ -2587,8 +2578,8 @@ main > .head--page:first-child { border-top: 0; }
 }
 .found[data-active],
 .found:active { background: color-mix(in srgb, var(--fg) 6%, transparent); }
-.found[data-active] .found__type,
-.found:active .found__type { color: var(--fg); border-color: var(--fg-muted); }
+.found[data-active] .found__sub,
+.found:active .found__sub { color: var(--fg-muted); }
 
 .filters {
   display: flex;
@@ -6480,7 +6471,19 @@ html:not([data-js]) .more { display: none; }
 .row--release .row__line { display: contents; }
 .row--release .row__title,
 .row--release .row__sub { display: block; }
-.row--release .row__sub { margin-top: 0.25rem; }
+/* Между названием и подписью — мягкая черта во всю ширину записи
+   (28 сентября 2026, просьба владельца). Та же линия, что делит записи,
+   и просветы вокруг неё те же 8: строка получается из двух ярусов —
+   имя собственное сверху, выходные данные снизу.
+
+   Черта проходит и под рамкой типа: та стоит против первой строки и вниз
+   не свисает — обтекание сжимает строки, а коробку подписи нет, и линия
+   идёт от края до края. */
+.row--release .row__sub {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line-soft);
+}
 .row--release .row__types {
   float: right;
   /* Просвет до названия — тот же 1rem, что был между колонками. */

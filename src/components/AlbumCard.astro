@@ -12,15 +12,20 @@ import { coverSrc, coverSrcSet, artistLine } from '../lib/db.js';
    <div> — второй <li> внутри первого разметку сломал бы. */
 
 // всё лишнее (data-* для фильтров) пробрасывается на обёртку как есть
-const { album, showArtist = true, showType = false, as: Wrapper = 'li', class: extra, ...rest } = Astro.props;
+const { album, showArtist = true, as: Wrapper = 'li', class: extra, ...rest } = Astro.props;
 const meta = [album.types.join(' · '), album.year].filter(Boolean).join(' · ');
 
-/* Под обложкой сперва название, под ним исполнитель и год через точку —
-   моноширинным (19 сентября 2026, просьба владельца; до того исполнитель
-   стоял над названием). На странице исполнителя его имя не повторяем, а
-   вместо него стоит тип релиза — showType (20 сентября 2026, просьба
-   владельца). */
-const sub = [showArtist && artistLine(album), showType && album.types.join(' · '), album.year]
+/* Под обложкой сперва название, под ним подпись моноширинным (19 сентября
+   2026, просьба владельца; до того исполнитель стоял над названием).
+
+   Порядок в подписи — тип, исполнитель, год (28 сентября 2026, просьба
+   владельца): тип теперь стоит в ней всегда, а не только там, где имя
+   исполнителя не показывается. Рамкой он стоял в строках списка и в поиске с
+   19 сентября и в тот же день 28-го убран — тип читается в общем ряду, как
+   год.
+
+   На странице исполнителя имя не повторяем — showArtist. */
+const sub = [album.types.join(' · '), showArtist && artistLine(album), album.year]
   .filter(Boolean).join(' · ');
 ---
 <Wrapper class:list={['tile', extra]} {...rest}>

@@ -319,8 +319,17 @@ export function artistLine(album) {
 const РОДЫ = ['Album', 'EP', 'Single', 'Compilation', 'Collaboration',
               'Official Video', 'Official Visualizer', 'Live Performance'];
 
+/* Число и род держатся вместе неразрывным пробелом, и внутри рода тоже: «3
+   Official Videos» переносится целиком или не переносится вовсе (28 сентября
+   2026, просьба владельца). Иначе строка рвалась между числом и родом — «2»
+   в конце одной строки, «Albums» в начале следующей, — и число читалось само
+   по себе.
+
+   Пробел, а не разметка: та же строка уходит в указатель поиска и ставится
+   там текстом, где никаких span нет. Рвать строку остаётся где было — по
+   точке между родами. */
 export function typeParts(albumIds = [], videoIds = []) {
-  return typePairs(albumIds, videoIds).map(([род, n]) => `${n} ${род}`);
+  return typePairs(albumIds, videoIds).map(([род, n]) => `${n} ${род}`.replace(/ /g, ' '));
 }
 
 /* Та же опись парами [род во множественном числе, число] — для карточки

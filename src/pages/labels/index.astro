@@ -123,13 +123,14 @@ let выведено = 0;
               {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/labels/${l.slug}`}>
-                {/* Страна — названием в рамке, как тип релиза на /music (20 сентября
-                    2026). Без страны в базе один — «Not on Label», и у него в
-                    рамке Worldwide: это не лейбл, а его отсутствие.
+                {/* Страна — первой в подписи под именем, перед счётом
+                    (28 сентября 2026, просьба владельца), как у исполнителей.
+                    Рамкой справа она стояла с 20 сентября.
 
-                    В разметке рамка стоит перед именем: её обтекают справа. */}
-                <span class="row__line"><span class="row__meta row__types"><span class="row__type">{l.country ? countryName(l.country) : 'Worldwide'}</span></span><span class="row__title">{l.name}</span></span>
-                <span class="row__line"><span class="row__sub">{typeLine(l.albumIds)}</span></span>
+                    Без страны в базе один — «Not on Label», и у него стоит
+                    Worldwide: это не лейбл, а его отсутствие. */}
+                <span class="row__line"><span class="row__title">{l.name}</span></span>
+                <span class="row__line"><span class="row__sub">{[l.country ? countryName(l.country) : 'Worldwide', typeLine(l.albumIds)].filter(Boolean).join(' · ')}</span></span>
               </a>
             </div>
 

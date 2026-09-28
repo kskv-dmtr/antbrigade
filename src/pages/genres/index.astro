@@ -134,11 +134,12 @@ let выведено = 0;
               {/* Строка — как на Music и Video (20 сентября 2026, просьба владельца):
                   сверху имя, под ним счёт через точку моноширинным 13. */}
               <a class="row row--release row--name" href={`/genres/${genre.slug}`}>
-                {/* Число исполнителей — в рамке, как страна у исполнителей и
-                    лейблов (20 сентября 2026, просьба владельца). В разметке
-                    рамка стоит перед именем: её обтекают справа. */}
-                <span class="row__line"><span class="row__meta row__types"><span class="row__type">{исполнителей(genre.albumIds)}</span></span><span class="row__title">{genre.name}</span></span>
-                <span class="row__line"><span class="row__sub">{typeLine(genre.albumIds)}</span></span>
+                {/* Счёт исполнителей — первым в подписи под именем, перед
+                    счётом релизов (28 сентября 2026, просьба владельца), там
+                    же, где страна у исполнителей и лейблов. Рамкой справа он
+                    стоял с 20 сентября. */}
+                <span class="row__line"><span class="row__title">{genre.name}</span></span>
+                <span class="row__line"><span class="row__sub">{[исполнителей(genre.albumIds), typeLine(genre.albumIds)].filter(Boolean).join(' · ')}</span></span>
               </a>
             </div>
 

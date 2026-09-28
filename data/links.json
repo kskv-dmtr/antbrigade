@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T12:29:33Z",
+  "generatedAt": "2026-09-28T15:01:47Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23245,6 +23245,170 @@
       "upc": "0731628580703",
       "tracks": 6,
       "releaseDate": "2022-10-17"
+    },
+    "3e94129a-8c52-80d5-a908-d95b119222cb": {
+      "source": "https://album.link/dtc40bs5qz4tn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0qnPF8Sh3L9DIutZZDpRLI",
+        "pandora": "https://www.pandora.com/AL:57299466",
+        "amazonMusic": "https://music.amazon.com/albums/B0G1ZDCR3Z",
+        "tidal": "https://listen.tidal.com/album/478456274",
+        "boomplay": "https://www.boomplay.com/albums/126029846",
+        "bandcamp": "https://apparat-music.bandcamp.com/album/a-hum-of-maybe",
+        "amazonStore": "https://amazon.com/dp/B0G1ZDCR3Z"
+      },
+      "upc": "5400863201890",
+      "tracks": 11,
+      "releaseDate": "2026-02-20"
+    },
+    "3e94129a-8c52-80bb-ad57-c32839206c04": {
+      "source": "https://album.link/vvdwktxqtnk6p",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4Ydrk9QepPQyCRLLueQQ4h",
+        "pandora": "https://www.pandora.com/AL:21330059",
+        "deezer": "https://www.deezer.com/album/363627107",
+        "amazonMusic": "https://music.amazon.com/albums/B0BHHRH85C",
+        "tidal": "https://listen.tidal.com/album/252513133",
+        "napster": "https://play.napster.com/album/alb.743136656",
+        "boomplay": "https://www.boomplay.com/albums/56170796",
+        "anghami": "https://play.anghami.com/album/1032611089?refer=linktree",
+        "bandcamp": "https://civicivic.bandcamp.com/album/taken-by-force",
+        "amazonStore": "https://amazon.com/dp/B0BHHRH85C"
+      },
+      "upc": "0880882537357",
+      "tracks": 11,
+      "releaseDate": "2023-02-10"
+    },
+    "3e94129a-8c52-8078-94df-e3412dc66352": {
+      "source": "https://album.link/kppmcw2rgcpdn",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/37X1bn4HDw09U3ENpDT0fK",
+        "pandora": "https://www.pandora.com/AL:12177138",
+        "deezer": "https://www.deezer.com/album/498404611",
+        "amazonMusic": "https://music.amazon.com/albums/B0CKTRW4KG",
+        "tidal": "https://listen.tidal.com/album/320942030",
+        "napster": "https://play.napster.com/album/alb.638724576",
+        "yandex": "https://music.yandex.ru/album/20589987",
+        "boomplay": "https://www.boomplay.com/albums/38672603",
+        "anghami": "https://play.anghami.com/album/1025287315?refer=linktree",
+        "bandcamp": "https://golftrip.bandcamp.com/album/tranquility-float",
+        "amazonStore": "https://amazon.com/dp/B0CKTRW4KG"
+      },
+      "upc": "0196626174253",
+      "tracks": 6,
+      "releaseDate": "2022-12-09"
+    },
+    "3e94129a-8c52-8007-bebb-f7a105f9c56f": {
+      "source": "https://album.link/5nfnwsvgqbwpx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7az32vLN5YAag3GzuBA5qI",
+        "pandora": "https://www.pandora.com/AL:22754753",
+        "amazonMusic": "https://music.amazon.com/albums/B0BZZZX6PJ",
+        "tidal": "https://listen.tidal.com/album/286267113",
+        "amazonStore": "https://amazon.com/dp/B0BZZZX6PJ"
+      },
+      "upc": "019771408434",
+      "tracks": 12,
+      "releaseDate": "2023-03-30"
+    },
+    "3e94129a-8c52-80d4-84c6-f07b38cc507f": {
+      "source": "https://album.link/t8xz7v0sscpbt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4ucgZPaQKKrpReAxlprKA8",
+        "pandora": "https://www.pandora.com/AL:18113007",
+        "deezer": "https://www.deezer.com/album/356500327",
+        "amazonMusic": "https://music.amazon.com/albums/B0FX5N37BY",
+        "tidal": "https://listen.tidal.com/album/468490594",
+        "yandex": "https://music.yandex.ru/album/23532265",
+        "boomplay": "https://www.boomplay.com/albums/54851531",
+        "anghami": "https://play.anghami.com/album/1031989774?refer=linktree",
+        "bandcamp": "https://ybulbul.bandcamp.com/album/not-one-not-two",
+        "amazonStore": "https://amazon.com/dp/B0FX5N37BY"
+      },
+      "upc": "4250101446177",
+      "tracks": 10,
+      "releaseDate": "2022-11-25"
+    },
+    "3e94129a-8c52-80d4-9bf8-eddff4e244e9": {
+      "source": "https://album.link/kwdnhsq5knvs3",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0b2mjVkArk8GFHkJ5tA5ts",
+        "pandora": "https://www.pandora.com/AL:18738423",
+        "amazonMusic": "https://music.amazon.com/albums/B0G5958YFJ",
+        "tidal": "https://listen.tidal.com/album/443607505",
+        "amazonStore": "https://amazon.com/dp/B0G5958YFJ"
+      },
+      "upc": "197186937197",
+      "tracks": 5,
+      "releaseDate": "2022-10-26"
+    },
+    "3e94129a-8c52-80a0-8868-e887d2b1b029": {
+      "source": "https://album.link/kbshsdfbgnctp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/40NGheuMqGj1nrk5yR0KnI",
+        "pandora": "https://www.pandora.com/AL:14174184",
+        "deezer": "https://www.deezer.com/album/594168932",
+        "amazonMusic": "https://music.amazon.com/albums/B0B2W38325",
+        "tidal": "https://listen.tidal.com/album/366317125",
+        "napster": "https://play.napster.com/album/alb.657655555",
+        "boomplay": "https://www.boomplay.com/albums/43709887",
+        "anghami": "https://play.anghami.com/album/1053326415?refer=linktree",
+        "bandcamp": "https://asianmanrecords.bandcamp.com/album/one-step-forward-two-steps-back",
+        "amazonStore": "https://amazon.com/dp/B0B2W38325"
+      },
+      "upc": "612851037397",
+      "tracks": 12,
+      "releaseDate": "2022-05-27"
+    },
+    "3e94129a-8c52-80e3-85dd-f80ff4e25cde": {
+      "source": "https://album.link/chhccpp2tcwz9",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3xAIjrk5sUi8ELOMk8ZLD5",
+        "pandora": "https://www.pandora.com/AL:11863790",
+        "deezer": "https://www.deezer.com/album/820033351",
+        "amazonMusic": "https://music.amazon.com/albums/B0FQM4WS4Y",
+        "tidal": "https://listen.tidal.com/album/459854847",
+        "napster": "https://play.napster.com/album/alb.633494856",
+        "yandex": "https://music.yandex.ru/album/20051176",
+        "boomplay": "https://www.boomplay.com/albums/36845144",
+        "anghami": "https://play.anghami.com/album/1024666522?refer=linktree",
+        "bandcamp": "https://ibibiosoundmachine.bandcamp.com/album/electricity-2",
+        "amazonStore": "https://amazon.com/dp/B0FQM4WS4Y"
+      },
+      "upc": "617308099157",
+      "tracks": 12,
+      "releaseDate": "2022-03-25"
+    },
+    "3e94129a-8c52-80c5-9107-f0829da73613": {
+      "source": "https://album.link/cv7r9tt0cdbpx",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7CrQDntlruI4Tb2yRiDpQZ",
+        "pandora": "https://www.pandora.com/AL:3911580",
+        "deezer": "https://www.deezer.com/album/118588982",
+        "amazonMusic": "https://music.amazon.com/albums/B081DT9B97",
+        "tidal": "https://listen.tidal.com/album/122295573",
+        "napster": "https://play.napster.com/album/alb.421805804",
+        "yandex": "https://music.yandex.ru/album/9181790",
+        "boomplay": "https://www.boomplay.com/albums/13448664",
+        "anghami": "https://play.anghami.com/album/1009248893?refer=linktree",
+        "bandcamp": "https://couplermusic.bandcamp.com/album/gifts-from-the-ebb-tide",
+        "amazonStore": "https://amazon.com/dp/B081DT9B97"
+      },
+      "upc": "194491607494",
+      "tracks": 4,
+      "releaseDate": "2017-11-17"
+    },
+    "3e94129a-8c52-805f-a462-e3012ea00f7e": {
+      "source": "https://album.link/6qj3dd3kq4svb",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2HWGMB49Mys8vx4nhGLlrT",
+        "amazonMusic": "https://music.amazon.com/albums/B00CXN4WDS",
+        "bandcamp": "https://lifeleone.bandcamp.com/album/comes-crashing-in",
+        "amazonStore": "https://amazon.com/dp/B00CXN4WDS"
+      },
+      "upc": "859709977256",
+      "tracks": 6,
+      "releaseDate": "2013-07-02"
     }
   }
 }

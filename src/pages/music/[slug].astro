@@ -175,10 +175,16 @@ const clips = [...new Map(
               dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
               <>{i > 0 && ' · '}{часть}</>
             ))}
-            {/* Год оригинала — уточнением в той же строке, приглушённым:
-                это одна и та же справка о выпуске. */}
-            {origText && <span class="item__faint"> · originally {origText}</span>}
           </p>
+
+          {/* Год оригинала — своей строкой под типом и датой, с подписью
+              «Original Release:» (28 сентября 2026, просьба владельца).
+              Уточнением в той же строке — « · originally 1989» — он стоял с
+              5 сентября: строка тогда читалась одним перечнем, где оговорка
+              терялась между типом и датой. */}
+          {origText && (
+            <p class="item__meta item__faint">Original Release: {origText}</p>
+          )}
         </div>
 
         {/* Справка строками под чертой: Edition:, Genres:, Labels:, Links: —

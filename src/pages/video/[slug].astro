@@ -138,7 +138,7 @@ const releases = [...new Map(
 
           {/* Дата неразрывная: переносится целиком, а не рвётся на «September»
               и «11, 2026» (18 сентября 2026, просьба владельца). */}
-          {(вид || dateText || origText) && (
+          {(вид || dateText) && (
           <p class="item__meta">
             {/* Вид ролика неразрывен: «Official Video» не должен ломаться
                 посреди себя (28 сентября 2026, просьба владельца). */}
@@ -146,8 +146,13 @@ const releases = [...new Map(
               dateText && <span class="nb">{dateText}</span>].filter(Boolean).map((часть, i) => (
               <>{i > 0 && ' · '}{часть}</>
             ))}
-            {origText && <span class="item__faint"> · originally {origText}</span>}
           </p>
+          )}
+
+          {/* Год оригинала — своей строкой под видом и датой, как у релиза
+              (28 сентября 2026, просьба владельца). */}
+          {origText && (
+            <p class="item__meta item__faint">Original Release: {origText}</p>
           )}
         </div>
 

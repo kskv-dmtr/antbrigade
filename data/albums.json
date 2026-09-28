@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-27T22:15:04Z",
+  "generatedAt": "2026-09-28T00:52:24Z",
   "counts": {
     "albums": 1454,
     "artists": 1218,
     "labels": 755,
-    "videos": 108
+    "videos": 110
   },
   "albums": [
     {
@@ -65370,7 +65370,7 @@
       "country": "GB",
       "bandcamp": "https://pestcontroluk.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@PestControlThrash",
       "website": null,
       "albumIds": [
         "8e68bc81-6693-4fdd-ac1a-6c7867a4d577",
@@ -65386,7 +65386,10 @@
         "2434129a-8c52-80c6-94b5-c189d8b7405b",
         "3b74129a-8c52-802f-8eae-c62e2c4313a5"
       ],
-      "videoIds": [],
+      "videoIds": [
+        "3e84129a-8c52-8036-81f6-ea968aae5bb0",
+        "3e84129a-8c52-8085-831b-d0ae0308d5a3"
+      ],
       "akaIds": []
     },
     {
@@ -89578,6 +89581,32 @@
         "24b4129a-8c52-801e-a852-cd618201c873"
       ],
       "slug": "omar-souleyman-ya-bnayya"
+    },
+    {
+      "id": "3e84129a-8c52-8036-81f6-ea968aae5bb0",
+      "title": "Pest Control | Enjoy the Show",
+      "url": "https://youtu.be/PSFgC2q5K9w?si=3AGNFd0tfkVt8VnD",
+      "kind": "Official Video",
+      "released": "2023-08-11",
+      "year": 2023,
+      "origYear": null,
+      "artistIds": [
+        "2434129a-8c52-80d0-9c2c-e023721f32bb"
+      ],
+      "slug": "pest-control-enjoy-the-show"
+    },
+    {
+      "id": "3e84129a-8c52-8085-831b-d0ae0308d5a3",
+      "title": "Pest Control | Year of the Past",
+      "url": "https://youtu.be/ClBmMl_6S2M?si=Zd9iG9hbc-vaUXb9",
+      "kind": "Official Video",
+      "released": "2024-10-18",
+      "year": 2024,
+      "origYear": null,
+      "artistIds": [
+        "2434129a-8c52-80d0-9c2c-e023721f32bb"
+      ],
+      "slug": "pest-control-year-of-the-past"
     },
     {
       "id": "3144129a-8c52-80a9-a08d-dfcfdeaad66f",

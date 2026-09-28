@@ -67,6 +67,7 @@
      на телефоне: до того каждое правило называло свой max() — сорок шесть
      мест, и сдвигать их порознь значило бы разъехаться при первой же
      правке. На широком экране значения те же, что были. */
+  --text-md: max(20px, 1.25rem);
   --text-sm: max(14px, 0.875rem);
   --text-xs: max(13px, 0.8125rem);
 
@@ -1041,7 +1042,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--fg-muted);
 }
 .tile__title {
-  font-size: max(20px, 1.25rem);
+  font-size: var(--text-md);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -1328,7 +1329,7 @@ a { color: inherit; text-decoration: none; }
    с ним выворачивается при наведении. */
 .row__artist { font-size: max(16px, 1rem); }
 .row__title {
-  font-size: max(20px, 1.25rem);
+  font-size: var(--text-md);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -3411,7 +3412,7 @@ select option { background: var(--option-bg); color: var(--fg); }
    там несколько часов того же дня. «Also known as:» — прежняя. */
 .info .item__fact dt {
   font-family: var(--font);
-  font-size: max(20px, 1.25rem);
+  font-size: var(--text-md);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -4285,6 +4286,11 @@ html:not([data-js]) .more { display: none; }
        Экран узкий, и та же справка занимала в нём заметно больше места,
        чем на широком, где её сжимает множитель. Крупное — заголовки, имена
        на плитках и карточках — не трогаем: оно и держит страницу. */
+    /* Средняя ступень — 18 вместо 20 (28 сентября 2026, просьба
+       владельца): имена на плитках и карточках, название в строке списка,
+       подписи в блоке Info. Логотип под неё не подпадает — у него свой
+       кегль, и владелец просил его не трогать. */
+    --text-md: 18px;
     --text-sm: 13px;
     --text-xs: 12px;
 
@@ -4878,45 +4884,12 @@ html:not([data-js]) .more { display: none; }
   .nav__foot p { margin: 0; }
   .nav__foot p + p { margin-top: 20px; }
 
-  /* Шапка на телефоне уезжает вверх при прокрутке вниз и возвращается при
-     прокрутке вверх — по образцу dsgners.ru.
-
-     Ход — 0,32 секунды с мягким замедлением к концу (ease-out cubic), в обе
-     стороны. Первые часы 18 сентября 2026 стоял ход образца, 0,15 с ease-out:
-     владелец попросил плавнее.
-
-     Уводим ровно на свой рост — столько же проходит и липкая полоса раздела
-     (её top едет от --head-h к нулю тем же ходом), и линия шапки с верхом
-     полосы движутся вместе. До 18 сентября 2026 шапка уходила ещё на
-     полрема сверху — 71 против 63 у полосы, — и в начале хода между ними
-     открывалась щель до восьми пикселей, сквозь которую было видно страницу.
-
-     В покое transform — none, а не нулевой сдвиг: любой transform делает
-     шапку рамкой для fixed-потомков, и меню со слоем поиска меряли бы себя
-     от неё, а не от экрана. */
-  [data-js] .masthead { transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1); }
-  [data-js] .masthead[data-away] { transform: translateY(calc(-1 * var(--lift, 100%))); }
-
-  /* С 19 сентября 2026 прилипшие под шапкой полосы — заголовок раздела и
-     строка отборов — уходят и возвращаются вместе с ней, одним куском:
-     тот же сдвиг (--lift — рост шапки и полос), тот же ход. Состояния
-     ставит скрипт в Base.astro атрибутом data-lift на <html>. До того
-     полосы переставлялись по top, скачком, и возвращение выходило
-     дёрганым (замечание владельца). */
-  [data-js][data-lift] .head--sticky[data-stuck],
-  [data-js][data-lift] .filters-row[data-stuck] {
-    transform: translateY(calc(-1 * var(--lift)));
-  }
-  [data-js][data-lift='moving'] .head--sticky[data-stuck],
-  [data-js][data-lift='moving'] .filters-row[data-stuck],
-  [data-js][data-lift='show'] .head--sticky[data-stuck],
-  [data-js][data-lift='show'] .filters-row[data-stuck] {
-    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1);
-  }
-  [data-js][data-lift='settled'] .head--sticky[data-stuck],
-  [data-js][data-lift='settled'] .filters-row[data-stuck],
-  [data-js][data-lift='show'] .head--sticky[data-stuck],
-  [data-js][data-lift='show'] .filters-row[data-stuck] { transform: none; }
+  /* Шапка на телефоне стоит всегда: с 18 сентября 2026 она уезжала вверх
+     при прокрутке вниз и возвращалась при прокрутке вверх, по образцу
+     dsgners.ru, а 28 сентября владелец попросил убрать — вместе с ней
+     уезжали и прилипшие под ней полосы, и на короткой прокрутке в обе
+     стороны страница дёргалась. Вместе с правилами ушёл и ход у шапки:
+     двигать её больше нечем. */
 
   /* Строка отборов на телефоне липнет под заголовком раздела, как на
      широком экране (19 сентября 2026): заголовок здесь ростом --bar-h. */
@@ -4958,10 +4931,14 @@ html:not([data-js]) .more { display: none; }
     padding: 0.8125rem 0;
     border-bottom: 1px solid var(--line-soft);
   }
-  [data-js] .masthead .nav a:last-child { border-bottom: 0; }
-  /* Под последним разделом (Playlists) черта есть — с 19 сентября 2026,
-     просьба владельца: список разделов кончается чертой, как список
-     отборов, а низ с каналами стоит отдельно. */
+  /* Черта под каждым пунктом, включая последний в группе: список разделов
+     кончается чертой, как список отборов, а низ с каналами стоит отдельно
+     (19 сентября 2026, просьба владельца).
+
+     Правила «у последнего черты нет» здесь стояло до 28 сентября 2026, и
+     оно било мимо: пункты разложены по двум группам, и :last-child ловил не
+     конец списка, а конец первой группы — черта пропадала между Playlists и
+     Artists, посреди меню. */
 
   /* Выворотка по нажатию — только у строчного пункта в шапке. Здесь пункт
      во всю ширину этажа, и залитая полоса читалась бы выбранным разделом,
@@ -4970,14 +4947,13 @@ html:not([data-js]) .more { display: none; }
   /* Текущий раздел и здесь отмечен цветом; яркая линейка под ним читалась бы
      разделителем другого веса, а не отметкой. */
   [data-js] .masthead .nav a[aria-current='page'] { border-bottom-color: var(--line-soft); }
-  [data-js] .masthead .nav a:last-child[aria-current='page'] { border-bottom-color: transparent; }
 
   /* Заголовок раздела на телефоне мельче: при 22 «Latest Releases» не
      влезал в свою половину полосы и переносился на две строки уже на 375.
      При 20 встаёт в строку. На 320 всё равно перенесётся, и это допустимо:
      половина там 160, длинное название в неё не уложить никаким кеглем, не
      жертвуя размером совсем. */
-  .display--md { font-size: 1.25rem; }
+  .display--md { font-size: var(--text-md); }
 
   /* Подвал в столбик: две колонки по краям на 375 px не расходятся.
 
@@ -5135,10 +5111,12 @@ html:not([data-js]) .more { display: none; }
     padding: 0;
     border-left: 0;
   }
+  /* Черты между блоками нет (28 сентября 2026, просьба владельца): на
+     телефоне блоки и так идут один под другим, а подпись каждого сама
+     начинает свой. Просвет между ними остаётся прежний. */
   .info > :has(.item__fact) ~ :has(.item__fact) {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
-    border-top: 1px solid var(--line-soft);
   }
   .info .item__fact {
     display: flex;
@@ -6167,7 +6145,7 @@ html:not([data-js]) .more { display: none; }
 /* Имя — тем же кеглем, что название релиза в плитке: карточки стоят в одной
    решётке, и разнобой в именах читался бы разной важностью. */
 .brief__name {
-  font-size: max(20px, 1.25rem);
+  font-size: var(--text-md);
   font-weight: 600;
   line-height: 1.2;
   min-width: 0;

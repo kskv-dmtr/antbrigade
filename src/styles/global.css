@@ -6471,19 +6471,7 @@ html:not([data-js]) .more { display: none; }
 .row--release .row__line { display: contents; }
 .row--release .row__title,
 .row--release .row__sub { display: block; }
-/* Между названием и подписью — мягкая черта во всю ширину записи
-   (28 сентября 2026, просьба владельца). Та же линия, что делит записи,
-   и просветы вокруг неё те же 8: строка получается из двух ярусов —
-   имя собственное сверху, выходные данные снизу.
-
-   Черта проходит и под рамкой типа: та стоит против первой строки и вниз
-   не свисает — обтекание сжимает строки, а коробку подписи нет, и линия
-   идёт от края до края. */
-.row--release .row__sub {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--line-soft);
-}
+.row--release .row__sub { margin-top: 0.25rem; }
 .row--release .row__types {
   float: right;
   /* Просвет до названия — тот же 1rem, что был между колонками. */

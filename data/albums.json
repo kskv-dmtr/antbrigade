@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-28T21:04:57Z",
+  "generatedAt": "2026-09-29T10:29:58Z",
   "counts": {
-    "albums": 1478,
-    "artists": 1235,
-    "labels": 765,
+    "albums": 1491,
+    "artists": 1240,
+    "labels": 767,
     "videos": 110
   },
   "albums": [
@@ -13696,6 +13696,38 @@
       ],
       "labels": [
         "Strut"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-809f-84ba-c33655ddedcd",
+      "slug": "inhuman-condition-mind-trap",
+      "artist": "Inhuman Condition",
+      "album": "Mind Trap",
+      "url": "https://album.link/4f27jjd6xc47w",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A872d587f-4fdc-4ba2-8452-46d23bc8e85a%3Aa3073779038_10.jpg?table=block&id=3ea4129a-8c52-809f-84ba-c33655ddedcd&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Death Metal",
+        "Thrash Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-06-27",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-80fc-94a9-e9a541bd598d"
+      ],
+      "artists": [
+        "Inhuman Condition"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
       ]
     },
     {
@@ -33003,6 +33035,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8070-badd-cae5f741d026",
+      "slug": "brutal-youth-rebuilding-year",
+      "artist": "Brutal Youth",
+      "album": "Rebuilding Year",
+      "url": "https://album.link/tm0sphdxdk88j",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aeabcd048-8ab9-4aba-91b8-dc902346c448%3Aa1329653482_10.jpg?table=block&id=3ea4129a-8c52-8070-badd-cae5f741d026&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Punk Rock",
+        "Melodic Hardcore"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-04-21",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-8010-a4f6-c61c4165f177"
+      ],
+      "artists": [
+        "Brutal Youth"
+      ],
+      "labelIds": [
+        "2514129a-8c52-80d0-9997-d70a46aa1a26"
+      ],
+      "labels": [
+        "Stomp Records"
+      ]
+    },
+    {
       "id": "3784129a-8c52-804c-9a50-e1d3acd4b5f2",
       "slug": "margarita-witch-cult-margarita-witch-cult",
       "artist": "Margarita Witch Cult",
@@ -34296,6 +34360,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8025-8261-e989cd13b7a2",
+      "slug": "the-dahmers-ghouls-in-the-garage",
+      "artist": "The Dahmers",
+      "album": "Ghouls in the Garage",
+      "url": "https://album.link/kmx9wh2fjvv47",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A490be842-2f85-4095-8f02-402aabf0e352%3Aa3958047606_10.jpg?table=block&id=3ea4129a-8c52-8025-8261-e989cd13b7a2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Horror Punk",
+        "Garage Punk"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2023-02-17",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3064129a-8c52-80c6-9abe-d55fb75ac582"
+      ],
+      "artists": [
+        "The Dahmers"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "labels": [
+        "Not on Label"
+      ]
+    },
+    {
       "id": "a373a5d7-56e6-4dc2-8b20-1168a83f9f88",
       "slug": "close-counters-soulacoasta-ii",
       "artist": "Close Counters",
@@ -34780,6 +34876,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8088-88d6-f2c67c39bc35",
+      "slug": "white-lung-premonition",
+      "artist": "White Lung",
+      "album": "Premonition",
+      "url": "https://album.link/qkrnw4vkcnrff",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ab82ae637-9d41-4cdc-971f-5ac6ed31e0b6%3Aa2561940469_10.jpg?table=block&id=3ea4129a-8c52-8088-88d6-f2c67c39bc35&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Punk Rock",
+        "Alternative Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-12-02",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-8019-9968-d6f96845f736"
+      ],
+      "artists": [
+        "White Lung"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80d9-b7ef-ea0ae0140d5b"
+      ],
+      "labels": [
+        "Domino Recording Company"
+      ]
+    },
+    {
       "id": "3e94129a-8c52-8007-bebb-f7a105f9c56f",
       "slug": "real-tears-whipped-dreams",
       "artist": "Real Tears",
@@ -35072,6 +35200,39 @@
       ],
       "labels": [
         "Phantasy Sound"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-8044-a470-c724bf41a00d",
+      "slug": "ezra-collective-where-i-m-meant-to-be",
+      "artist": "Ezra Collective",
+      "album": "Where I’m Meant to Be",
+      "url": "https://album.link/h3s8q2gwrcddf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A03a8f42c-509c-4b5e-a334-bbe460448851%3Aa3419495817_10.jpg?table=block&id=3ea4129a-8c52-8044-a470-c724bf41a00d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Jazz Fusion",
+        "Jazz-Funk",
+        "Afrobeat"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-11-04",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80eb-8861-d13bd2a5df24"
+      ],
+      "artists": [
+        "Ezra Collective"
+      ],
+      "labelIds": [
+        "24e4129a-8c52-80d3-a42d-c3286447684a"
+      ],
+      "labels": [
+        "Partisan Records"
       ]
     },
     {
@@ -35990,6 +36151,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-800c-96b3-c901b27f3ae8",
+      "slug": "jitwam-third",
+      "artist": "Jitwam",
+      "album": "Third",
+      "url": "https://album.link/fn2hv4mzcsb44",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3b98cf0f-d695-43a9-898c-cac5e52e2bc6%3Aa3386540136_10.jpg?table=block&id=3ea4129a-8c52-800c-96b3-c901b27f3ae8&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Neo-Soul",
+        "Contemporary R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-07-22",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24d4129a-8c52-8091-affd-c55a11dd4cb9"
+      ],
+      "artists": [
+        "Jitwam"
+      ],
+      "labelIds": [
+        "3ea4129a-8c52-8047-92b3-deb20a88a476"
+      ],
+      "labels": [
+        "Roya"
+      ]
+    },
+    {
       "id": "6f07ece7-8971-4b10-a822-163f0facb645",
       "slug": "prowl-the-forgotten-realms",
       "artist": "Prowl",
@@ -36574,6 +36767,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8075-9cb7-c52c33875f7d",
+      "slug": "gnome-king",
+      "artist": "Gnome",
+      "album": "King",
+      "url": "https://album.link/4wwgm4kgbn8jh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A3171e953-1ae3-46ef-9ad7-c68e73480530%3Aa1493437084_10.jpg?table=block&id=3ea4129a-8c52-8075-9cb7-c52c33875f7d&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Stoner Rock",
+        "Stoner Metal"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-06",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-8047-bca8-ed2ad39a3a6e"
+      ],
+      "artists": [
+        "Gnome"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8064-afab-d19d76a15c08"
+      ],
+      "labels": [
+        "Polderrecords"
+      ]
+    },
+    {
       "id": "3e94129a-8c52-8078-8c9e-f55c857b1ea3",
       "slug": "kikagaku-moyo-kumoyo-island",
       "artist": "Kikagaku Moyo",
@@ -37051,6 +37276,42 @@
       ],
       "labels": [
         "Cubensis Records"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-801f-a490-fd39cff5ec03",
+      "slug": "charlotte-adigery-bolis-pupul-topical-dancer",
+      "artist": "Charlotte Adigéry / Bolis Pupul",
+      "album": "Topical Dancer",
+      "url": "https://album.link/bwpztdrzsmh3r",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A0a8d674a-8186-44ef-a5b6-d858332c54c7%3Aa1903846197_10.jpg?table=block&id=3ea4129a-8c52-801f-a490-fd39cff5ec03&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Art Pop",
+        "Tech House",
+        "Minimal Synth"
+      ],
+      "types": [
+        "Album",
+        "Collaboration"
+      ],
+      "released": "2022-03-04",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-804d-9d76-e58e36103a1d",
+        "24f4129a-8c52-8011-81c6-edbb4d6fe9ad"
+      ],
+      "artists": [
+        "Charlotte Adigéry",
+        "Bolis Pupul"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8080-9b9b-efb2b4dc157d"
+      ],
+      "labels": [
+        "Deewee"
       ]
     },
     {
@@ -37597,6 +37858,39 @@
       ],
       "labels": [
         "Anti- Records"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-80b7-a431-f92c7512cd34",
+      "slug": "felbm-elements-of-nature",
+      "artist": "Felbm",
+      "album": "Elements of Nature",
+      "url": "https://album.link/0jc4v2ndpwnpb",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac68c0f23-a91d-462f-8b3d-dd545bed6a82%3Aa3339810263_10.jpg?table=block&id=3ea4129a-8c52-80b7-a431-f92c7512cd34&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Ambient",
+        "New Age",
+        "Post-Minimalism"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-11-05",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2ca4129a-8c52-805c-a3af-fbf9c4feb096"
+      ],
+      "artists": [
+        "Felbm"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
+      ],
+      "labels": [
+        "Soundway Records"
       ]
     },
     {
@@ -38347,6 +38641,38 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8060-99a2-d36e6f5c3c23",
+      "slug": "isla-de-caras-una-caricia",
+      "artist": "Isla de Caras",
+      "album": "Una Caricia",
+      "url": "https://album.link/zm8npnwkrr6b8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A671a0727-df7a-4346-bdaa-f10cd6291546%3Ada336bd4beb13ef532d9a921bd846d3b.1000x1000x1.png?table=block&id=3ea4129a-8c52-8060-99a2-d36e6f5c3c23&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Indie Pop",
+        "Hypnagogic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-09-10",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2504129a-8c52-80b9-9197-d97de86432fb"
+      ],
+      "artists": [
+        "Isla de Caras"
+      ],
+      "labelIds": [
+        "3ea4129a-8c52-8007-87cd-fba5331e58a9"
+      ],
+      "labels": [
+        "Costa Futuro"
+      ]
+    },
+    {
       "id": "3b34129a-8c52-806c-990c-fb09b3b99b2e",
       "slug": "jolly-mare-epsilon",
       "artist": "Jolly Mare",
@@ -39066,6 +39392,37 @@
       "labels": [
         "Mr Bongo",
         "Pepper Records"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-800a-a08c-f4ba4fa2f31c",
+      "slug": "maladroit-steven-island",
+      "artist": "Maladroit",
+      "album": "Steven Island",
+      "url": "https://album.link/psj28m7wzdn9x",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Aaa67a9b9-3db0-424c-8dbe-dcdd0d584688%3Aa2256755972_10.jpg?table=block&id=3ea4129a-8c52-800a-a08c-f4ba4fa2f31c&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Punk Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2021-07-23",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2424129a-8c52-80ab-bb89-c261c7561370"
+      ],
+      "artists": [
+        "Maladroit"
+      ],
+      "labelIds": [
+        "2524129a-8c52-80cb-a60f-d5db7176000e"
+      ],
+      "labels": [
+        "Guerilla Asso"
       ]
     },
     {
@@ -41886,6 +42243,37 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-80b3-a85e-e4f1756af311",
+      "slug": "the-far-east-new-york-is-for-lovers",
+      "artist": "The Far East",
+      "album": "New York is for Lovers",
+      "url": "https://album.link/vdffz0wxt9dbt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A551ac021-741d-4a2c-be1b-b9dd73638be1%3Aa3800811633_10.jpg?table=block&id=3ea4129a-8c52-80b3-a85e-e4f1756af311&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Lovers Rock"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2020-12-18",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-80a7-97b6-df99bbca08c0"
+      ],
+      "artists": [
+        "The Far East"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80dd-99f3-db0643d16710"
+      ],
+      "labels": [
+        "Names You Can Trust"
+      ]
+    },
+    {
       "id": "3db4129a-8c52-800e-9f89-d993fed1b787",
       "slug": "hamburg-spinners-skorpion-im-stiefel",
       "artist": "Hamburg Spinners",
@@ -43920,6 +44308,39 @@
       ],
       "labels": [
         "Not on Label"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-803c-a528-f13dbd1a1239",
+      "slug": "ko-shin-moon-leila-nova",
+      "artist": "Ko Shin Moon",
+      "album": "Leïla Nova",
+      "url": "https://album.link/gtgtmdg7gm5ds",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A52303b84-ee74-4f11-bb23-889881b3a13d%3Aa2690194069_10.jpg?table=block&id=3ea4129a-8c52-803c-a528-f13dbd1a1239&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Anatolian Rock",
+        "Turkish Pop",
+        "Dabke"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2020-03-27",
+      "year": 2020,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2954129a-8c52-8035-afbe-c0d3be65bea0"
+      ],
+      "artists": [
+        "Ko Shin Moon"
+      ],
+      "labelIds": [
+        "2954129a-8c52-808c-98e8-d1d40b72b427"
+      ],
+      "labels": [
+        "Total Totem"
       ]
     },
     {
@@ -50927,12 +51348,16 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "4f2a5330-5f93-4682-a219-37d17ce1c394"
+        "4f2a5330-5f93-4682-a219-37d17ce1c394",
+        "3ea4129a-8c52-801f-a490-fd39cff5ec03"
       ],
       "genres": [
         "Electronic",
         "House",
-        "Techno"
+        "Techno",
+        "Art Pop",
+        "Tech House",
+        "Minimal Synth"
       ],
       "labelIds": [
         "2494129a-8c52-8080-9b9b-efb2b4dc157d"
@@ -51372,6 +51797,28 @@
       ],
       "labelIds": [
         "3df4129a-8c52-80e7-9d80-f3b5a28fb779"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ea4129a-8c52-8010-a4f6-c61c4165f177",
+      "slug": "brutal-youth",
+      "name": "Brutal Youth",
+      "country": "CA",
+      "bandcamp": "https://brutalyouth.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-8070-badd-cae5f741d026"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Melodic Hardcore"
+      ],
+      "labelIds": [
+        "2514129a-8c52-80d0-9997-d70a46aa1a26"
       ],
       "videoIds": [],
       "akaIds": []
@@ -51986,6 +52433,29 @@
       ],
       "labelIds": [
         "2484129a-8c52-80b7-82f2-dbaef7be8b87"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ea4129a-8c52-804d-9d76-e58e36103a1d",
+      "slug": "charlotte-adigery",
+      "name": "Charlotte Adigéry",
+      "country": "FR",
+      "bandcamp": "https://charlotteandbolis.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-801f-a490-fd39cff5ec03"
+      ],
+      "genres": [
+        "Art Pop",
+        "Tech House",
+        "Minimal Synth"
+      ],
+      "labelIds": [
+        "2494129a-8c52-8080-9b9b-efb2b4dc157d"
       ],
       "videoIds": [],
       "akaIds": []
@@ -55649,7 +56119,8 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "10d4129a-8c52-80b5-9268-c22b991beefa"
+        "10d4129a-8c52-80b5-9268-c22b991beefa",
+        "3ea4129a-8c52-8044-a470-c724bf41a00d"
       ],
       "genres": [
         "Jazz",
@@ -56052,14 +56523,17 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "2ca4129a-8c52-8020-b187-f07a05998313"
+        "2ca4129a-8c52-8020-b187-f07a05998313",
+        "3ea4129a-8c52-80b7-a431-f92c7512cd34"
       ],
       "genres": [
         "Ambient",
-        "Post-Minimalism"
+        "Post-Minimalism",
+        "New Age"
       ],
       "labelIds": [
-        "2ca4129a-8c52-80cb-b0b6-ce3b60a09447"
+        "2ca4129a-8c52-80cb-b0b6-ce3b60a09447",
+        "24a4129a-8c52-8043-a0e9-ebc281641b70"
       ],
       "videoIds": [],
       "akaIds": []
@@ -57500,12 +57974,14 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3df29676-620a-48bb-b935-246e7449e183"
+        "3df29676-620a-48bb-b935-246e7449e183",
+        "3ea4129a-8c52-8075-9cb7-c52c33875f7d"
       ],
       "genres": [
         "Stoner Rock",
         "Hard Rock",
-        "Progressive Rock"
+        "Progressive Rock",
+        "Stoner Metal"
       ],
       "labelIds": [
         "2504129a-8c52-8064-afab-d19d76a15c08"
@@ -58895,6 +59371,28 @@
       "akaIds": []
     },
     {
+      "id": "3ea4129a-8c52-80fc-94a9-e9a541bd598d",
+      "slug": "inhuman-condition",
+      "name": "Inhuman Condition",
+      "country": "US",
+      "bandcamp": "https://inhumancondition.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-809f-84ba-c33655ddedcd"
+      ],
+      "genres": [
+        "Death Metal",
+        "Thrash Metal"
+      ],
+      "labelIds": [
+        "2434129a-8c52-80c6-94b5-c189d8b7405b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2ad4129a-8c52-8002-a0e8-c02d87c13937",
       "slug": "insecure-men",
       "name": "Insecure Men",
@@ -59114,15 +59612,18 @@
       "website": null,
       "albumIds": [
         "bb36210e-eba2-405e-a0df-bb73b07142a0",
+        "3ea4129a-8c52-8060-99a2-d36e6f5c3c23",
         "3d34129a-8c52-800f-bae3-fddaa48e488a"
       ],
       "genres": [
         "Indie Pop",
+        "Hypnagogic Pop",
         "Bedroom Pop",
         "Sophisti-Pop"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3ea4129a-8c52-8007-87cd-fba5331e58a9",
         "3d34129a-8c52-80e0-9c09-c4d017b77edd"
       ],
       "videoIds": [],
@@ -59716,16 +60217,19 @@
       "website": null,
       "albumIds": [
         "24d4129a-8c52-8020-8c9d-cb244b61e67a",
+        "3ea4129a-8c52-800c-96b3-c901b27f3ae8",
         "3df4129a-8c52-8034-bb05-d1ea44935ccf"
       ],
       "genres": [
         "Neo-Soul",
         "Psychedelic Soul",
         "House",
+        "Contemporary R'n'B",
         "Neo-Psychedelia"
       ],
       "labelIds": [
         "2434129a-8c52-80c6-94b5-c189d8b7405b",
+        "3ea4129a-8c52-8047-92b3-deb20a88a476",
         "3df4129a-8c52-80d9-8e4d-c77021e295b0"
       ],
       "videoIds": [],
@@ -61019,12 +61523,14 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "2954129a-8c52-80db-9253-fc945e1925fa"
+        "2954129a-8c52-80db-9253-fc945e1925fa",
+        "3ea4129a-8c52-803c-a528-f13dbd1a1239"
       ],
       "genres": [
         "Anatolian Rock",
         "Psychedelic Rock",
-        "Turkish Pop"
+        "Turkish Pop",
+        "Dabke"
       ],
       "labelIds": [
         "2954129a-8c52-808c-98e8-d1d40b72b427"
@@ -62914,7 +63420,8 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "85e58e07-228c-4ce9-b048-a6929edc6b6c"
+        "85e58e07-228c-4ce9-b048-a6929edc6b6c",
+        "3ea4129a-8c52-800a-a08c-f4ba4fa2f31c"
       ],
       "genres": [
         "Punk Rock"
@@ -72177,7 +72684,8 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3064129a-8c52-8008-93e3-d8d9f41d3766"
+        "3064129a-8c52-8008-93e3-d8d9f41d3766",
+        "3ea4129a-8c52-8025-8261-e989cd13b7a2"
       ],
       "genres": [
         "Horror Punk",
@@ -72342,6 +72850,27 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80ab-bc10-e508949aaa7e"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ea4129a-8c52-80a7-97b6-df99bbca08c0",
+      "slug": "the-far-east",
+      "name": "The Far East",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-80b3-a85e-e4f1756af311"
+      ],
+      "genres": [
+        "Lovers Rock"
+      ],
+      "labelIds": [
+        "3d54129a-8c52-80dd-99f3-db0643d16710"
       ],
       "videoIds": [],
       "akaIds": []
@@ -75416,6 +75945,28 @@
       ],
       "labelIds": [
         "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ea4129a-8c52-8019-9968-d6f96845f736",
+      "slug": "white-lung",
+      "name": "White Lung",
+      "country": "CA",
+      "bandcamp": "https://whitelung.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-8088-88d6-f2c67c39bc35"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Alternative Rock"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80d9-b7ef-ea0ae0140d5b"
       ],
       "videoIds": [],
       "akaIds": []
@@ -78966,6 +79517,22 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8007-87cd-fba5331e58a9",
+      "slug": "costa-futuro",
+      "name": "Costa Futuro",
+      "country": "ES",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://costa-futuro.com/",
+      "albumIds": [
+        "3ea4129a-8c52-8060-99a2-d36e6f5c3c23"
+      ],
+      "artistIds": [
+        "2504129a-8c52-80b9-9197-d97de86432fb"
+      ]
+    },
+    {
       "id": "2524129a-8c52-8031-af12-cf2d7f54302a",
       "slug": "counter-records",
       "name": "Counter Records",
@@ -79431,6 +79998,7 @@
         "2e74129a-8c52-801c-b6c5-c0a22c084efc",
         "1aa4129a-8c52-800d-8910-d01c9fec6d30",
         "4f2a5330-5f93-4682-a219-37d17ce1c394",
+        "3ea4129a-8c52-801f-a490-fd39cff5ec03",
         "3e84129a-8c52-8098-992d-f368486245d0",
         "26eca379-5783-4be3-88d2-b52a28eda9b6"
       ],
@@ -79440,6 +80008,7 @@
         "2e74129a-8c52-801f-aa73-e3372182a95c",
         "2494129a-8c52-802f-9ee5-f88fe3ebb138",
         "24f4129a-8c52-8011-81c6-edbb4d6fe9ad",
+        "3ea4129a-8c52-804d-9d76-e58e36103a1d",
         "24e4129a-8c52-8076-995a-f0732e8c76e2"
       ]
     },
@@ -79797,12 +80366,14 @@
       "albumIds": [
         "29d4129a-8c52-8081-8023-cea9aae8d67b",
         "1cc4129a-8c52-8038-8eeb-c1a8738c9b56",
-        "cb800661-6e2c-4043-801b-1d3594acf257"
+        "cb800661-6e2c-4043-801b-1d3594acf257",
+        "3ea4129a-8c52-8088-88d6-f2c67c39bc35"
       ],
       "artistIds": [
         "29d4129a-8c52-8070-8396-ce0494f047f4",
         "24a4129a-8c52-80a4-b43e-f1564fed0f53",
-        "2444129a-8c52-80ea-abe6-d09d491453c2"
+        "2444129a-8c52-80ea-abe6-d09d491453c2",
+        "3ea4129a-8c52-8019-9968-d6f96845f736"
       ]
     },
     {
@@ -81222,12 +81793,13 @@
       "slug": "guerilla-asso",
       "name": "Guerilla Asso",
       "country": "FR",
-      "bandcamp": null,
+      "bandcamp": "https://guerillaasso.bandcamp.com/music",
       "bandcamp2": null,
       "youtube": null,
       "website": null,
       "albumIds": [
-        "85e58e07-228c-4ce9-b048-a6929edc6b6c"
+        "85e58e07-228c-4ce9-b048-a6929edc6b6c",
+        "3ea4129a-8c52-800a-a08c-f4ba4fa2f31c"
       ],
       "artistIds": [
         "2424129a-8c52-80ab-bb89-c261c7561370"
@@ -84418,10 +84990,12 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3d54129a-8c52-803a-87fc-d184f1dfeedb"
+        "3d54129a-8c52-803a-87fc-d184f1dfeedb",
+        "3ea4129a-8c52-80b3-a85e-e4f1756af311"
       ],
       "artistIds": [
-        "3d54129a-8c52-8020-89e1-cb33c16fd17a"
+        "3d54129a-8c52-8020-89e1-cb33c16fd17a",
+        "3ea4129a-8c52-80a7-97b6-df99bbca08c0"
       ]
     },
     {
@@ -84825,6 +85399,7 @@
         "24d4129a-8c52-80bd-be5a-c898c9f7e6a0",
         "23e4129a-8c52-8076-9992-f64d168afdc8",
         "23f4129a-8c52-80f4-a406-c55d85ab6f0b",
+        "3ea4129a-8c52-809f-84ba-c33655ddedcd",
         "2c84129a-8c52-809a-ad7e-f5a9eec6c706",
         "2164129a-8c52-80f2-a948-dfe50918c2a6",
         "2094129a-8c52-8004-b5e3-eb09f3dd442a",
@@ -84890,6 +85465,7 @@
         "a0852638-ee0f-4dfa-a52b-77cba11cfd9a",
         "d3f1ffb6-0f3a-43aa-9182-7e0784db407f",
         "3f8c9ebf-d2f2-4d52-95c6-9e4bd4bdfc6d",
+        "3ea4129a-8c52-8025-8261-e989cd13b7a2",
         "a373a5d7-56e6-4dc2-8b20-1168a83f9f88",
         "3e64129a-8c52-8029-9e2f-ea1152b74682",
         "07031ee4-e62f-466a-b6b9-dea1c933edac",
@@ -84948,6 +85524,7 @@
         "24d4129a-8c52-803c-9c88-f5c771e85cb7",
         "2434129a-8c52-80e0-afab-cd4282815107",
         "2404129a-8c52-8035-a990-db8919c35959",
+        "3ea4129a-8c52-80fc-94a9-e9a541bd598d",
         "2c84129a-8c52-801c-8122-f0394f2bb79d",
         "2414129a-8c52-80b3-a2f6-ee548319b500",
         "2444129a-8c52-807b-a7df-ff6a95ff852e",
@@ -85457,7 +86034,8 @@
         "3864129a-8c52-8052-8db4-f01a1860a2cb",
         "10d4129a-8c52-80b5-9268-c22b991beefa",
         "08cb24fb-fe1b-4a37-9930-2f0a4e836bbc",
-        "b53adadf-4e51-4295-8bea-e156671d1d52"
+        "b53adadf-4e51-4295-8bea-e156671d1d52",
+        "3ea4129a-8c52-8044-a470-c724bf41a00d"
       ],
       "artistIds": [
         "3864129a-8c52-8029-b97f-e76d80869ae6",
@@ -85973,12 +86551,13 @@
       "slug": "polderrecords",
       "name": "Polderrecords",
       "country": "BE",
-      "bandcamp": null,
+      "bandcamp": "https://polderrecords.bandcamp.com/",
       "bandcamp2": null,
       "youtube": null,
-      "website": null,
+      "website": "https://polderrecords.be/",
       "albumIds": [
-        "3df29676-620a-48bb-b935-246e7449e183"
+        "3df29676-620a-48bb-b935-246e7449e183",
+        "3ea4129a-8c52-8075-9cb7-c52c33875f7d"
       ],
       "artistIds": [
         "2504129a-8c52-8047-bca8-ed2ad39a3a6e"
@@ -86939,6 +87518,22 @@
       ]
     },
     {
+      "id": "3ea4129a-8c52-8047-92b3-deb20a88a476",
+      "slug": "roya",
+      "name": "Roya",
+      "country": "GB",
+      "bandcamp": "https://royarecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-800c-96b3-c901b27f3ae8"
+      ],
+      "artistIds": [
+        "24d4129a-8c52-8091-affd-c55a11dd4cb9"
+      ]
+    },
+    {
       "id": "3d44129a-8c52-8056-b781-e87a2b488a19",
       "slug": "royal-mountain-records",
       "name": "Royal Mountain Records",
@@ -87857,6 +88452,7 @@
         "3be4129a-8c52-80cf-a767-ebbf7937068b",
         "c3c7b8a3-9fe7-4dee-b681-0dffd201d5f5",
         "3d54129a-8c52-8008-9bea-d4a9fbce6046",
+        "3ea4129a-8c52-80b7-a431-f92c7512cd34",
         "3da4129a-8c52-8096-a359-c3bfcab739e5",
         "3d34129a-8c52-808a-a5e3-f9f5e1756283",
         "3de4129a-8c52-805e-add8-f8451c280f0d",
@@ -87870,6 +88466,7 @@
         "24a4129a-8c52-80d4-a292-e8177907de63",
         "2504129a-8c52-80ef-9572-ca292af6944c",
         "2524129a-8c52-8006-a734-c559c7e081ea",
+        "2ca4129a-8c52-805c-a3af-fbf9c4feb096",
         "2494129a-8c52-8033-90f8-cdea31e793d0",
         "3db4129a-8c52-809c-ab1d-d03a684b1563"
       ]
@@ -88114,11 +88711,13 @@
       "albumIds": [
         "3c94129a-8c52-80b6-ade5-fce1766d6081",
         "a7f33ebe-e8e3-4540-966d-83ec090d0848",
-        "d149d51e-fd0b-4103-a428-e741b559d48e"
+        "d149d51e-fd0b-4103-a428-e741b559d48e",
+        "3ea4129a-8c52-8070-badd-cae5f741d026"
       ],
       "artistIds": [
         "2524129a-8c52-8013-900d-d54062fa89db",
-        "2514129a-8c52-800f-8b31-c05fbab3f1b6"
+        "2514129a-8c52-800f-8b31-c05fbab3f1b6",
+        "3ea4129a-8c52-8010-a4f6-c61c4165f177"
       ]
     },
     {
@@ -88903,7 +89502,8 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "2954129a-8c52-80db-9253-fc945e1925fa"
+        "2954129a-8c52-80db-9253-fc945e1925fa",
+        "3ea4129a-8c52-803c-a528-f13dbd1a1239"
       ],
       "artistIds": [
         "2954129a-8c52-8035-afbe-c0d3be65bea0"

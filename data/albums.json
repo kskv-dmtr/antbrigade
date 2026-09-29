@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-29T10:29:58Z",
+  "generatedAt": "2026-09-29T20:51:00Z",
   "counts": {
-    "albums": 1491,
-    "artists": 1240,
-    "labels": 767,
+    "albums": 1492,
+    "artists": 1241,
+    "labels": 768,
     "videos": 110
   },
   "albums": [
@@ -136,6 +136,39 @@
       ],
       "labels": [
         "Easy Eye Sound"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-8065-91f8-dcb54f0286be",
+      "slug": "starcleaner-reunion-umbrella",
+      "artist": "Starcleaner Reunion",
+      "album": "Umbrella",
+      "url": "https://album.link/tjsmznxmc3pf8",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Abf9968b3-83e8-465a-b707-6b8b72af4da7%3Aa1155039327_10.jpg?table=block&id=3ea4129a-8c52-8065-91f8-dcb54f0286be&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Indie Pop",
+        "Dream Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-25",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ea4129a-8c52-80d8-8d3b-f3b338d28fbb",
+        "3ea4129a-8c52-80af-b38f-ea402471152b"
+      ],
+      "artists": [
+        "Starcleaner Reunion"
+      ],
+      "labelIds": [
+        "3ea4129a-8c52-80d4-b3ad-e40610439d62"
+      ],
+      "labels": [
+        "Take Care Records"
       ]
     },
     {
@@ -71169,6 +71202,28 @@
       "akaIds": []
     },
     {
+      "id": "3ea4129a-8c52-80d8-8d3b-f3b338d28fbb",
+      "slug": "starcleaner-reunion",
+      "name": "Starcleaner Reunion",
+      "country": "US",
+      "bandcamp": "https://starcleanerreunion.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-8065-91f8-dcb54f0286be"
+      ],
+      "genres": [
+        "Indie Pop",
+        "Dream Pop"
+      ],
+      "labelIds": [
+        "3ea4129a-8c52-80d4-b3ad-e40610439d62"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24a4129a-8c52-8088-84a6-dd5f7e5ea1f1",
       "slug": "staticlone",
       "name": "Staticlone",
@@ -89003,6 +89058,23 @@
       ],
       "artistIds": [
         "24e4129a-8c52-8055-92fb-cf157186eea3"
+      ]
+    },
+    {
+      "id": "3ea4129a-8c52-80d4-b3ad-e40610439d62",
+      "slug": "take-care-records",
+      "name": "Take Care Records",
+      "country": "US",
+      "bandcamp": "https://takecarerecords.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ea4129a-8c52-8065-91f8-dcb54f0286be"
+      ],
+      "artistIds": [
+        "3ea4129a-8c52-80d8-8d3b-f3b338d28fbb",
+        "3ea4129a-8c52-80af-b38f-ea402471152b"
       ]
     },
     {

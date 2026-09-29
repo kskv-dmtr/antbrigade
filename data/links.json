@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T10:31:14Z",
+  "generatedAt": "2026-09-29T20:51:14Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23829,6 +23829,19 @@
       "upc": "3617056041108",
       "tracks": 10,
       "releaseDate": "2020-03-27"
+    },
+    "3ea4129a-8c52-8065-91f8-dcb54f0286be": {
+      "source": "https://album.link/tjsmznxmc3pf8",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7czxyUfML5Ma88C0Wjgvkq",
+        "pandora": "https://www.pandora.com/AL:67349891",
+        "tidal": "https://listen.tidal.com/album/533025519",
+        "boomplay": "https://www.boomplay.com/albums/133467160",
+        "bandcamp": "https://starcleanerreunion.bandcamp.com/album/umbrella"
+      },
+      "upc": "827175039761",
+      "tracks": 11,
+      "releaseDate": "2026-09-25"
     }
   }
 }

@@ -190,8 +190,13 @@ const aka = artistsOf(artist.akaIds ?? []);
     <section class="section">
       <PageBar as="h2" title="Releases" count={releases.length} />
       {/* Первые 48, дальше по кнопке — как на Music. */}
+      {/* Имена в подписи — только у совместных работ, где исполнителей двое и
+          больше (30 сентября 2026, просьба владельца): там важно, с кем
+          сделано, и хозяин страницы стоит в перечне вместе с остальными. У
+          сольного релиза подпись прежняя — тип и год: имя владельца страницы
+          повторять незачем, оно в заголовке. */}
       <TilesMore count={releases.length}>
-        {releases.map((a) => <AlbumCard album={a} showArtist={false} />)}
+        {releases.map((a) => <AlbumCard album={a} showArtist={(a.artistIds?.length ?? 0) > 1} />)}
       </TilesMore>
     </section>
   )}
@@ -199,8 +204,9 @@ const aka = artistsOf(artist.akaIds ?? []);
   {clipsSorted.length > 0 && (
     <section class="section">
       <PageBar as="h2" title="Videos" count={clipsSorted.length} />
+      {/* Имена — по тому же правилу, что у релизов выше. */}
       <TilesMore count={clipsSorted.length}>
-        {clipsSorted.map((v) => <VideoCard video={v} />)}
+        {clipsSorted.map((v) => <VideoCard video={v} showArtist={(v.artistIds?.length ?? 0) > 1} />)}
       </TilesMore>
     </section>
   )}

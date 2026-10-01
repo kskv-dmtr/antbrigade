@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-01T06:01:05Z",
+  "generatedAt": "2026-10-01T19:34:20Z",
   "counts": {
     "albums": 1493,
     "artists": 1242,
@@ -26,7 +26,9 @@
       "released": "2026-09-25",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "September '26"
+      ],
       "artistIds": [
         "3cb4129a-8c52-80c8-b478-fca9935731a1"
       ],
@@ -353,7 +355,9 @@
       "released": "2026-09-18",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "September '26"
+      ],
       "artistIds": [
         "3364129a-8c52-80c9-ba0f-e07b1ea4c368"
       ],
@@ -580,7 +584,9 @@
       "released": "2026-09-10",
       "year": 2026,
       "origYear": null,
-      "playlists": [],
+      "playlists": [
+        "September '26"
+      ],
       "artistIds": [
         "3d74129a-8c52-80c7-b00c-d54859c5dc38"
       ],

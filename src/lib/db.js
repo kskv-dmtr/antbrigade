@@ -197,7 +197,7 @@ const МЕСЯЦЫ = ['january', 'february', 'march', 'april', 'may', 'june',
                 'july', 'august', 'september', 'october', 'november', 'december'];
 
 function месяцПодборки(name) {
-  const разбор = /^([a-z]+)s*['’]?(d{2})$/i.exec(String(name).trim());
+  const разбор = /^([a-z]+)\s*['’]?(\d{2})$/i.exec(String(name).trim());
   if (!разбор) return null;
   const месяц = МЕСЯЦЫ.indexOf(разбор[1].toLowerCase());
   if (месяц < 0) return null;

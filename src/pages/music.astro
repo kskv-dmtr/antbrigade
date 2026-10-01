@@ -46,6 +46,16 @@ for (const a of albums) {
   for (const g of a.genres) genreCounts.set(g, (genreCounts.get(g) || 0) + 1);
 }
 const genres = [...genreCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+/* Отбор по лейблу — с 1 октября 2026, просьба владельца. Список строится
+   так же, как жанровый: сперва те, у кого записей больше, при равном счёте
+   по алфавиту. Лейблов в базе под восемь сотен, и порядок по величине ставит
+   вперёд те, ради которых отбором чаще всего и пользуются. */
+const labelCounts = new Map();
+for (const a of albums) {
+  for (const l of a.labels ?? []) labelCounts.set(l, (labelCounts.get(l) || 0) + 1);
+}
+const labels = [...labelCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 const yearCounts = new Map();
 for (const a of albums) if (a.year) yearCounts.set(a.year, (yearCounts.get(a.year) || 0) + 1);
 const years = [...yearCounts.keys()].sort((a, b) => b - a);
@@ -105,6 +115,13 @@ const PAGE = 48;
                    items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
     </FilterCell>
 
+    {/* Лейбл — за жанром (1 октября 2026, просьба владельца): сперва о чём
+        музыка, потом кто издал, потом когда. */}
+    <FilterCell name="Label:">
+      <MultiSelect id="label" label="Label" allLabel="All" manyLabel="Chosen" axis="label"
+                   items={labels.map(([l, n]) => ({ value: l, label: l, count: n }))} />
+    </FilterCell>
+
     <FilterCell name="Year:">
       <MultiSelect id="year" label="Year" allLabel="All" manyLabel="Chosen" axis="year"
                    items={years.map((y) => ({ value: String(y), label: String(y), count: yearCounts.get(y) }))} />
@@ -147,6 +164,7 @@ const PAGE = 48;
         class="release"
         data-over={i >= PAGE ? '' : undefined}
         data-genres={a.genres.join('|')}
+        data-labels={(a.labels ?? []).join('|')}
         data-types={a.types.join('|')}
         data-year={a.year ?? ''}
         data-released={a.released ?? ''}
@@ -171,13 +189,14 @@ const PAGE = 48;
   const counter = document.getElementById('counter');
   const typeEl  = document.getElementById('type');
   const genreEl = document.getElementById('genre');
+  const labelEl = document.getElementById('label');
   const yearEl  = document.getElementById('year');
   const sortEl  = document.getElementById('sort');
   const more    = document.getElementById('more');
 
   const total = cards.length;
   const PAGE  = Number(more.dataset.page) || 50;
-  const state = { types: [], genres: [], years: [], sort: 'new' };
+  const state = { types: [], genres: [], labels: [], years: [], sort: 'new' };
 
   // Порядок с сервера — «сначала новые»; запоминаем его как исходный.
   const initialOrder = cards.slice();
@@ -211,6 +230,9 @@ const PAGE = 48;
        пересечение трёх выбранных почти всегда пусто. */
     if (skip !== 'genres' && state.genres.length &&
         !state.genres.some((g) => d.genres.split('|').includes(g))) return false;
+    /* У релиза бывает и два лейбла — отбор тот же, «любой из отмеченных». */
+    if (skip !== 'labels' && state.labels.length &&
+        !state.labels.some((l) => (d.labels || '').split('|').includes(l))) return false;
     if (skip !== 'years' && state.years.length && !state.years.includes(d.year)) return false;
     return true;
   }
@@ -224,6 +246,7 @@ const PAGE = 48;
   function recount() {
     const byType  = new Map();
     const byGenre = new Map();
+    const byLabel = new Map();
     const byYear  = new Map();
 
     for (const el of cards) {
@@ -238,6 +261,11 @@ const PAGE = 48;
           if (name) byGenre.set(name, (byGenre.get(name) || 0) + 1);
         }
       }
+      if (passes(d, 'labels')) {
+        for (const name of (d.labels || '').split('|')) {
+          if (name) byLabel.set(name, (byLabel.get(name) || 0) + 1);
+        }
+      }
       if (passes(d, 'years') && d.year) {
         byYear.set(d.year, (byYear.get(d.year) || 0) + 1);
       }
@@ -245,6 +273,7 @@ const PAGE = 48;
 
     paint(typeEl, { type: byType });
     paint(genreEl, { genre: byGenre });
+    paint(labelEl, { label: byLabel });
     paint(yearEl, { year: byYear });
   }
 
@@ -343,6 +372,7 @@ const PAGE = 48;
 
   typeEl.addEventListener('change',  () => { state.types  = marked(typeEl, 'type');   rewind(); apply(); });
   genreEl.addEventListener('change', () => { state.genres = marked(genreEl, 'genre'); rewind(); apply(); });
+  labelEl.addEventListener('change', () => { state.labels = marked(labelEl, 'label'); rewind(); apply(); });
   yearEl.addEventListener('change',  () => { state.years  = marked(yearEl, 'year');   rewind(); apply(); });
   sortEl.addEventListener('change',  () => {
     state.sort = sortEl.value;

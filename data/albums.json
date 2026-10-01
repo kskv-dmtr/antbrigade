@@ -1,13 +1,50 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-01T19:34:20Z",
+  "generatedAt": "2026-10-01T23:55:04Z",
   "counts": {
-    "albums": 1493,
-    "artists": 1242,
-    "labels": 769,
-    "videos": 110
+    "albums": 1494,
+    "artists": 1243,
+    "labels": 770,
+    "videos": 112
   },
   "albums": [
+    {
+      "id": "3ec4129a-8c52-8001-aa68-d7db4f3a25fa",
+      "slug": "the-sweet-enoughs-another-helping-of-the-sweet-enoughs",
+      "artist": "The Sweet Enoughs",
+      "album": "Another Helping of The Sweet Enoughs",
+      "url": "https://album.link/kwfc6nj4vwqtw",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A738d46cf-23af-4d97-a3a8-aef08ce40f92%3Aa3515114122_10.jpg?table=block&id=3ec4129a-8c52-8001-aa68-d7db4f3a25fa&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Easy Listening",
+        "Exotica",
+        "Lounge"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-10-02",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [
+        "October '26"
+      ],
+      "artistIds": [
+        "3cf4129a-8c52-803c-9e10-e57693c793c8"
+      ],
+      "artists": [
+        "The Sweet Enoughs"
+      ],
+      "labelIds": [
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd",
+        "3ec4129a-8c52-8014-848a-ce355b57ca1b"
+      ],
+      "labels": [
+        "Wondercore Island",
+        "Main Arm Records"
+      ]
+    },
     {
       "id": "3e54129a-8c52-808a-b06f-e211443c7a81",
       "slug": "adult-dvd-adult-dvd",
@@ -44133,7 +44170,6 @@
       "edition": null,
       "genres": [
         "Easy Listening",
-        "Ambient",
         "Lounge",
         "Exotica"
       ],
@@ -57863,6 +57899,7 @@
       ],
       "videoIds": [
         "3e04129a-8c52-8030-9a63-de02d8d1d7f0",
+        "3ec4129a-8c52-80e0-a51a-d72ae39b57b6",
         "24f4129a-8c52-8000-b752-da7ccfa2a09b"
       ],
       "akaIds": []
@@ -73911,16 +73948,17 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3ec4129a-8c52-8001-aa68-d7db4f3a25fa",
         "3cf4129a-8c52-8062-9dc8-eda9f46784fd"
       ],
       "genres": [
         "Easy Listening",
-        "Ambient",
-        "Lounge",
-        "Exotica"
+        "Exotica",
+        "Lounge"
       ],
       "labelIds": [
-        "3cf4129a-8c52-8022-bb88-e1d587754ffd"
+        "3cf4129a-8c52-8022-bb88-e1d587754ffd",
+        "3ec4129a-8c52-8014-848a-ce355b57ca1b"
       ],
       "videoIds": [],
       "akaIds": []
@@ -75739,6 +75777,23 @@
         "3d14129a-8c52-80a7-8025-d1c73d51e6c2"
       ],
       "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ec4129a-8c52-80e2-a616-d133983cff1d",
+      "slug": "waqwaq-kingdom",
+      "name": "WaqWaq Kingdom",
+      "country": "JP",
+      "bandcamp": "https://waqwaqkingdom.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@waqwaqkingdom8720",
+      "website": "https://waqwaqkingdom.com/",
+      "albumIds": [],
+      "genres": [],
+      "labelIds": [],
+      "videoIds": [
+        "3ec4129a-8c52-80cb-a572-d5a332aa598b"
+      ],
       "akaIds": []
     },
     {
@@ -84219,6 +84274,22 @@
       ]
     },
     {
+      "id": "3ec4129a-8c52-8014-848a-ce355b57ca1b",
+      "slug": "main-arm-records",
+      "name": "Main Arm Records",
+      "country": "AU",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://mainarmrecords.com/",
+      "albumIds": [
+        "3ec4129a-8c52-8001-aa68-d7db4f3a25fa"
+      ],
+      "artistIds": [
+        "3cf4129a-8c52-803c-9e10-e57693c793c8"
+      ]
+    },
+    {
       "id": "2524129a-8c52-8060-b087-dd0e3c58cfe3",
       "slug": "mais-um",
       "name": "Mais Um",
@@ -90557,6 +90628,7 @@
       "youtube": null,
       "website": "https://www.wondercoreisland.com/",
       "albumIds": [
+        "3ec4129a-8c52-8001-aa68-d7db4f3a25fa",
         "3cf4129a-8c52-8062-9dc8-eda9f46784fd",
         "3da4129a-8c52-80d7-ae2e-c84e5eb737d7"
       ],
@@ -91314,6 +91386,19 @@
         "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
       ],
       "slug": "ginger-root-nisemono"
+    },
+    {
+      "id": "3ec4129a-8c52-80e0-a51a-d72ae39b57b6",
+      "title": "Ginger Root | Only You",
+      "url": "https://youtu.be/bU-KrPu8_F4?si=rWosdzc0tOfPKHqe",
+      "kind": "Official Video",
+      "released": "2024-08-14",
+      "year": 2024,
+      "origYear": null,
+      "artistIds": [
+        "24b4129a-8c52-8031-8a4b-fd19633c5e2c"
+      ],
+      "slug": "ginger-root-only-you"
     },
     {
       "id": "24f4129a-8c52-8000-b752-da7ccfa2a09b",
@@ -92179,6 +92264,19 @@
         "3e64129a-8c52-809c-8aa2-e829a8ec8b79"
       ],
       "slug": "valgur-joyas"
+    },
+    {
+      "id": "3ec4129a-8c52-80cb-a572-d5a332aa598b",
+      "title": "WaqWaq Kingdom | Hado",
+      "url": "https://youtu.be/0-8v4Xl8rN0?si=DRmtgVA_c5C9wycs",
+      "kind": "Official Video",
+      "released": "2024-08-15",
+      "year": 2024,
+      "origYear": null,
+      "artistIds": [
+        "3ec4129a-8c52-80e2-a616-d133983cff1d"
+      ],
+      "slug": "waqwaq-kingdom-hado"
     },
     {
       "id": "36d4129a-8c52-8061-8052-f97ccc411dba",

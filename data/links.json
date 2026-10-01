@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T06:01:17Z",
+  "generatedAt": "2026-10-01T23:55:16Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23856,6 +23856,17 @@
       "upc": "3760053849229",
       "tracks": 4,
       "releaseDate": "2026-09-08"
+    },
+    "3ec4129a-8c52-8001-aa68-d7db4f3a25fa": {
+      "source": "https://album.link/kwfc6nj4vwqtw",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0rieEm0qYxDcnSpxR8ObHT",
+        "pandora": "https://www.pandora.com/AL:69840735",
+        "tidal": "https://listen.tidal.com/album/564647081"
+      },
+      "upc": "9332727138805",
+      "tracks": 10,
+      "releaseDate": "2026-10-02"
     }
   }
 }

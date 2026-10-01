@@ -84,11 +84,20 @@ const more = [...new Map(
 const clips = [...new Map(
   artists.flatMap((a) => videosOf(a.videoIds)).map((v) => [v.id, v])
 ).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
+/* Соседи по каталогу для клавиш N и P (1 октября 2026, просьба владельца).
+   Порядок тот же, в котором релизы идут на /music: выгрузка отдаёт albums уже
+   от свежих к старым, и список показывает их как есть. У первого и последнего
+   релиза сосед с одной стороны пуст. */
+const место = albums.findIndex((a) => a.slug === album.slug);
+const пред = место > 0 ? `/music/${albums[место - 1].slug}` : undefined;
+const след = место >= 0 && место < albums.length - 1 ? `/music/${albums[место + 1].slug}` : undefined;
 ---
 <Base
   title={`${title} · ant brigade`}
   description={`${title}${album.year ? `, ${album.year}` : ''}. ${album.genres.join(', ')}.`}
   image={coverSrc(album, 800)}
+  prev={пред}
+  next={след}
 >
   {/* Релиз стоит на той же решётке, что каталог: обложка занимает два
       первых столбца, а справа от неё ячейка с именем и справкой во всю

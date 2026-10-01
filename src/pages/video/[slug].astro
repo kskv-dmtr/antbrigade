@@ -18,7 +18,7 @@ import VideoCard from '../../components/VideoCard.astro';
    полосу поперёк первого экрана. Достать их можно из истории. */
 import PageBar from '../../components/PageBar.astro';
 import Icon from '../../components/Icon.astro';
-import { videos, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
+import { videos, videoOrder, artistsOf, videosOf, albumsOf, thumbSrc, videoTitle, formatDate } from '../../lib/db.js';
 
 /* Номер записи в базе — тот, что стоит в полосе заголовка справа. Считается
    на сборке: порядковое место в том же перечне, из которого собираются все
@@ -72,11 +72,18 @@ const rest = [...new Map(
 const releases = [...new Map(
   artists.flatMap((a) => albumsOf(a.albumIds)).map((a) => [a.id, a])
 ).values()].sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''));
+/* Соседи по каталогу для клавиш N и P (1 октября 2026, просьба владельца).
+   Порядок — videoOrder, тот же, которым клипы идут на /video. */
+const место = videoOrder.findIndex((v) => v.slug === video.slug);
+const пред = место > 0 ? `/video/${videoOrder[место - 1].slug}` : undefined;
+const след = место >= 0 && место < videoOrder.length - 1 ? `/video/${videoOrder[место + 1].slug}` : undefined;
 ---
 <Base
   title={`${title} · ant brigade`}
   description={`${artists.map((a) => a.name).join(' · ')} — ${title}${video.kind ? `. ${video.kind}.` : '.'}`}
   image={thumb}
+  prev={пред}
+  next={след}
 >
   {/* Клип стоит на той же решётке и в том же блоке, что релиз: кадр в двух
       первых столбцах, справа ячейка с именем и справкой во всю оставшуюся

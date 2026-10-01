@@ -26,9 +26,13 @@ import grotesk from '@fontsource-variable/space-grotesk/files/space-grotesk-lati
    2026). «random» на главной и на странице промаха: там работает клавиша
    R, «Dig again» (22 сентября 2026). Везде ещё — только то, что работает на любой странице:
    ходьба по находкам, поиск и открытие. */
+/* prev и next — адреса соседних записей каталога; по ним ходят клавиши P и
+   N на страницах релиза и клипа (1 октября 2026, просьба владельца). У первой
+   и последней записи сосед с одной стороны пуст: подсказки там нет, как нет и
+   хода. */
 const {
   title, description, activeSection, cardTitle, image, noindex,
-  shortcuts = 'basic'
+  shortcuts = 'basic', prev, next
 } = Astro.props;
 
 /* Разделы сайта: макет рисовал Video и Info, но страниц под них нет, а
@@ -487,6 +491,11 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       <span class="keys__title">Keyboard Shortcuts</span>
       <span class="keys__list">
         <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
+        {/* Соседи по каталогу — сразу за поиском (1 октября 2026, просьба
+            владельца). Порядок тот же, что в списке: N уводит к следующей
+            записи, P к предыдущей. */}
+        {next && <span class="keys__item">Next <kbd class="search__kbd">N</kbd></span>}
+        {prev && <span class="keys__item">Previous <kbd class="search__kbd">P</kbd></span>}
         {shortcuts === 'info' && (
           <span class="keys__item">Info <kbd class="search__kbd">I</kbd></span>
         )}
@@ -508,6 +517,27 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       </span>
     </div>
   </footer>
+
+  {(prev || next) && (
+  <script is:inline define:vars={{ prev, next }}>
+    /* Ходьба по соседям: N — следующая запись каталога, P — предыдущая.
+       Порядок тот же, что на /music и /video, адреса посчитаны на сборке.
+
+       Разбор как у прочих клавиш: не мешаем набору текста, пропускаем
+       сочетания с модификаторами (Cmd+N открывает окно) и смотрим на e.code —
+       тогда клавиша работает и в русской раскладке. При открытом меню или
+       поиске молчим: там свои клавиши. */
+    addEventListener('keydown', (e) => {
+      const куда = e.code === 'KeyN' ? next : e.code === 'KeyP' ? prev : null;
+      if (!куда || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || e.repeat) return;
+      const el = document.activeElement;
+      if (el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))) return;
+      if (document.querySelector('.masthead[data-open], .masthead[data-search]')) return;
+      e.preventDefault();
+      location.href = куда;
+    });
+  </script>
+  )}
 
   <script>
     /* Пока открыты меню, панель поиска, шторка отбора или шторка

@@ -291,6 +291,17 @@ export function videoArtists(video) {
   return artistsOf(video?.artistIds).map((a) => a.name).join(' · ');
 }
 
+/* Порядок клипов, каким его показывает /video: от свежих к старым, дальше по
+   имени и названию — чтобы у клипов одной даты он был устойчивым, а не
+   зависел от порядка в выгрузке. Назван одним местом: по нему идёт и сам
+   список, и ходьба по соседям клавишами N и P на странице клипа (1 октября
+   2026). У релизов такого порядка заводить не нужно — он уже в выгрузке, и
+   /music отдаёт albums как есть. */
+export const videoOrder = videos.slice().sort((a, b) =>
+  (b.released ?? '').localeCompare(a.released ?? '') ||
+  videoArtists(a).localeCompare(videoArtists(b)) ||
+  videoTitle(a).localeCompare(videoTitle(b)));
+
 export function artistLine(album) {
   /* Отбрасываем имена, целиком входящие в другое имя из той же связки.
      В Notion у «Durand Jones & The Indications» проставлены и группа, и сам

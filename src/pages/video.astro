@@ -8,7 +8,7 @@ import FilterBar from '../components/FilterBar.astro';
 import FilterCell from '../components/FilterCell.astro';
 import ViewSwitch from '../components/ViewSwitch.astro';
 import MultiSelect from '../components/MultiSelect.astro';
-import { videos, videoTitle, videoArtists } from '../lib/db.js';
+import { videos, videoOrder, videoTitle, videoArtists } from '../lib/db.js';
 
 /* Клипы были разбросаны по страницам артистов, и увидеть их все было негде.
    Здесь они собраны в один список — тем же устройством, что релизы: строка
@@ -54,15 +54,10 @@ const kinds = [...new Set(videos.map((v) => v.kind).filter(Boolean))]
   .map((value) => ({ value, label: KIND_LABELS.get(value.toLowerCase()) ?? value }));
 
 /* Порядок с сервера — от свежих к старым, как на Music: с ним страница
-   открывается, к нему возвращает Reset, и он же остаётся без скрипта.
-   Дальше по имени и названию — чтобы у клипов одной даты порядок был
-   устойчивым, а не зависел от порядка в выгрузке. */
-const list = videos
-  .slice()
-  .sort((a, b) =>
-    (b.released ?? '').localeCompare(a.released ?? '') ||
-    videoArtists(a).localeCompare(videoArtists(b)) ||
-    videoTitle(a).localeCompare(videoTitle(b)));
+   открывается, к нему возвращает Reset, и он же остаётся без скрипта. Сам
+   порядок назван в db.js (videoOrder): по нему же ходят клавиши N и P на
+   странице клипа, и расходиться им нельзя. */
+const list = videoOrder;
 
 /* Сколько записей показывать сразу и сколько добавлять по нажатию. Сорок
    восемь, а не полсотни: число делится и на четыре столбца решётки, и на

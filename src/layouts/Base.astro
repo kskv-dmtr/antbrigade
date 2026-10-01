@@ -492,10 +492,13 @@ const cardHeading = cardTitle ?? title.replace(/\s·\sant brigade$/, '');
       <span class="keys__list">
         <span class="keys__item">Search <kbd class="search__kbd">/</kbd></span>
         {/* Соседи по каталогу — сразу за поиском (1 октября 2026, просьба
-            владельца). Порядок тот же, что в списке: N уводит к следующей
-            записи, P к предыдущей. */}
-        {next && <span class="keys__item">Next <kbd class="search__kbd">N</kbd></span>}
+            владельца). Previous впереди Next: подсказки идут в том же
+            порядке, в каком записи стоят в списке, — назад и вперёд, как
+            стрелки. У первой записи остаётся одна подсказка, Next, у
+            последней — одна Previous: с той стороны соседа нет, и клавиша
+            молчит. */}
         {prev && <span class="keys__item">Previous <kbd class="search__kbd">P</kbd></span>}
+        {next && <span class="keys__item">Next <kbd class="search__kbd">N</kbd></span>}
         {shortcuts === 'info' && (
           <span class="keys__item">Info <kbd class="search__kbd">I</kbd></span>
         )}

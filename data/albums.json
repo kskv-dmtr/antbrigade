@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-09-29T20:51:00Z",
+  "generatedAt": "2026-10-01T06:01:05Z",
   "counts": {
-    "albums": 1492,
-    "artists": 1241,
-    "labels": 768,
+    "albums": 1493,
+    "artists": 1242,
+    "labels": 769,
     "videos": 110
   },
   "albums": [
@@ -592,6 +592,38 @@
       ],
       "labels": [
         "Lesser Known Records"
+      ]
+    },
+    {
+      "id": "3ec4129a-8c52-8050-b23c-daaf90c490e9",
+      "slug": "struck-a-nerve-execution-protocol",
+      "artist": "Struck a Nerve",
+      "album": "Execution Protocol",
+      "url": "https://album.link/k4b5zztbh8ztj",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A2fc75f52-4567-4ce7-95c0-ff5dc71492cd%3Aab67616d0000b273f7df7b054e0d8dbf024261de.jpg?table=block&id=3ec4129a-8c52-8050-b23c-daaf90c490e9&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-09-08",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ec4129a-8c52-8063-8ac2-eed2fd6175d7"
+      ],
+      "artists": [
+        "Struck a Nerve"
+      ],
+      "labelIds": [
+        "3ec4129a-8c52-8064-8a0d-f0c1386b0482"
+      ],
+      "labels": [
+        "Listenable Records"
       ]
     },
     {
@@ -71453,6 +71485,28 @@
       "akaIds": []
     },
     {
+      "id": "3ec4129a-8c52-8063-8ac2-eed2fd6175d7",
+      "slug": "struck-a-nerve",
+      "name": "Struck a Nerve",
+      "country": "GB",
+      "bandcamp": "https://struckanerve.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ec4129a-8c52-8050-b23c-daaf90c490e9"
+      ],
+      "genres": [
+        "Crossover Thrash",
+        "Thrash Metal"
+      ],
+      "labelIds": [
+        "3ec4129a-8c52-8064-8a0d-f0c1386b0482"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "37f4129a-8c52-80c2-8df0-e129efd28274",
       "slug": "subsonic-eye",
       "name": "Subsonic Eye",
@@ -83874,6 +83928,22 @@
       ],
       "artistIds": [
         "3de4129a-8c52-801f-a754-c3286546f768"
+      ]
+    },
+    {
+      "id": "3ec4129a-8c52-8064-8a0d-f0c1386b0482",
+      "slug": "listenable-records",
+      "name": "Listenable Records",
+      "country": "FR",
+      "bandcamp": "https://listenable-records.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ec4129a-8c52-8050-b23c-daaf90c490e9"
+      ],
+      "artistIds": [
+        "3ec4129a-8c52-8063-8ac2-eed2fd6175d7"
       ]
     },
     {

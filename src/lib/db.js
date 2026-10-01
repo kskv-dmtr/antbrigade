@@ -184,9 +184,34 @@ for (const list of playlistIndex.values()) {
   list.count = list.albums.length;
 }
 
-export const playlists = [...playlistIndex.values()].sort(
-  (a, b) => b.count - a.count || a.name.localeCompare(b.name)
-);
+/* Месяц в названии подборки: «July '26», «April '26». Отсюда берётся порядок
+   на /playlists — от свежих к старым (2 октября 2026, просьба владельца).
+   Прежде подборки шли от большой к малой, и порядок держался на числах: у
+   июля четыре релиза, у апреля один. Стоило апрелю набрать пятый — и он встал
+   бы впереди июля, хотя подборки месячные и читаются как лента.
+
+   Разбираем английские названия месяцев и две цифры года; год — 2000-е, в
+   каталоге другого и нет. Подборка без месяца в имени («Favorites» и
+   подобные) идёт после месячных, в прежнем порядке — от большой к малой. */
+const МЕСЯЦЫ = ['january', 'february', 'march', 'april', 'may', 'june',
+                'july', 'august', 'september', 'october', 'november', 'december'];
+
+function месяцПодборки(name) {
+  const разбор = /^([a-z]+)s*['’]?(d{2})$/i.exec(String(name).trim());
+  if (!разбор) return null;
+  const месяц = МЕСЯЦЫ.indexOf(разбор[1].toLowerCase());
+  if (месяц < 0) return null;
+  return (2000 + Number(разбор[2])) * 12 + месяц;
+}
+
+export const playlists = [...playlistIndex.values()].sort((a, b) => {
+  const ма = месяцПодборки(a.name);
+  const мб = месяцПодборки(b.name);
+  if (ма !== null && мб !== null) return мб - ма;
+  if (ма !== null) return -1;
+  if (мб !== null) return 1;
+  return b.count - a.count || a.name.localeCompare(b.name);
+});
 
 export const playlistBySlug = new Map(playlists.map((p) => [p.slug, p]));
 

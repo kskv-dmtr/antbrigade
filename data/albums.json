@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-02T05:43:30Z",
+  "generatedAt": "2026-10-02T10:39:24Z",
   "counts": {
     "albums": 1494,
     "artists": 1243,
@@ -4633,7 +4633,7 @@
     {
       "id": "3514129a-8c52-80bf-b5d1-c259981e68cf",
       "slug": "tokyo-shoegazer-remains",
-      "artist": "東京酒吐座(Tokyo Shoegazer)",
+      "artist": "Tokyo Shoegazer(東京酒吐座)",
       "album": "Remains",
       "url": "https://album.link/8hkvdmm3k2rgj",
       "cover": "https://antbrigade.notion.site/image/attachment%3Acd9a4d46-2b60-485d-b666-26357c5e498d%3Aa3222316279_10.jpg?table=block&id=3514129a-8c52-80bf-b5d1-c259981e68cf&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
@@ -4654,7 +4654,7 @@
         "3514129a-8c52-80e5-8d5e-d406da581028"
       ],
       "artists": [
-        "東京酒吐座(Tokyo Shoegazer)"
+        "Tokyo Shoegazer (東京酒吐座)"
       ],
       "labelIds": [
         "3514129a-8c52-80fa-9cab-c8f85acf23bd"
@@ -12768,7 +12768,7 @@
     {
       "id": "24b4129a-8c52-80f2-b0e9-e4d30f89ab45",
       "slug": "sunset-rollercoaster-quit-quietly",
-      "artist": "落日飛車 Sunset Rollercoaster",
+      "artist": "Sunset Rollercoaster (落日飛車)",
       "album": "QUIT QUIETLY",
       "url": "https://album.link/xqmgwqgt5gkkh",
       "cover": "https://antbrigade.notion.site/image/attachment%3Af549a9bd-bf6b-4714-9e92-bd13d4396c7d%3A5021732943903-cover-zoom.jpg?table=block&id=24b4129a-8c52-80f2-b0e9-e4d30f89ab45&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
@@ -12788,7 +12788,7 @@
         "24b4129a-8c52-80cd-825d-dab2b96110d0"
       ],
       "artists": [
-        "落日飛車 Sunset Rollercoaster"
+        "Sunset Rollercoaster (落日飛車)"
       ],
       "labelIds": [
         "24b4129a-8c52-8081-ba6a-de22998430a9"
@@ -71689,6 +71689,30 @@
       "akaIds": []
     },
     {
+      "id": "24b4129a-8c52-80cd-825d-dab2b96110d0",
+      "slug": "sunset-rollercoaster",
+      "name": "Sunset Rollercoaster (落日飛車)",
+      "country": "TW",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": "https://www.youtube.com/@SunsetRollercoaster",
+      "website": null,
+      "albumIds": [
+        "24b4129a-8c52-80f2-b0e9-e4d30f89ab45"
+      ],
+      "genres": [
+        "Indie Pop",
+        "Soft Rock"
+      ],
+      "labelIds": [
+        "24b4129a-8c52-8081-ba6a-de22998430a9"
+      ],
+      "videoIds": [
+        "3d74129a-8c52-809f-90bf-c3dbcdf2db0f"
+      ],
+      "akaIds": []
+    },
+    {
       "id": "24f4129a-8c52-8034-b5f8-c86b33e20d27",
       "slug": "surely-shirley",
       "name": "Surely Shirley",
@@ -74435,6 +74459,29 @@
       "akaIds": []
     },
     {
+      "id": "3514129a-8c52-80e5-8d5e-d406da581028",
+      "slug": "tokyo-shoegazer",
+      "name": "Tokyo Shoegazer (東京酒吐座)",
+      "country": "JP",
+      "bandcamp": "https://tokyoshoegazer.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3514129a-8c52-80bf-b5d1-c259981e68cf"
+      ],
+      "genres": [
+        "Shoegaze",
+        "Noise Rock",
+        "Post-Rock"
+      ],
+      "labelIds": [
+        "3514129a-8c52-80fa-9cab-c8f85acf23bd"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2514129a-8c52-8059-a6a1-db3f210c547a",
       "slug": "tom-misch",
       "name": "Tom Misch",
@@ -77130,53 +77177,6 @@
       "videoIds": [
         "1187dc03-b79b-486e-9a70-8e93836f6048",
         "3b44129a-8c52-80b4-88cc-c0d473cb25cc"
-      ],
-      "akaIds": []
-    },
-    {
-      "id": "3514129a-8c52-80e5-8d5e-d406da581028",
-      "slug": "tokyo-shoegazer",
-      "name": "東京酒吐座(Tokyo Shoegazer)",
-      "country": "JP",
-      "bandcamp": "https://tokyoshoegazer.bandcamp.com/music",
-      "bandcamp2": null,
-      "youtube": null,
-      "website": null,
-      "albumIds": [
-        "3514129a-8c52-80bf-b5d1-c259981e68cf"
-      ],
-      "genres": [
-        "Shoegaze",
-        "Noise Rock",
-        "Post-Rock"
-      ],
-      "labelIds": [
-        "3514129a-8c52-80fa-9cab-c8f85acf23bd"
-      ],
-      "videoIds": [],
-      "akaIds": []
-    },
-    {
-      "id": "24b4129a-8c52-80cd-825d-dab2b96110d0",
-      "slug": "sunset-rollercoaster",
-      "name": "落日飛車 Sunset Rollercoaster",
-      "country": "TW",
-      "bandcamp": null,
-      "bandcamp2": null,
-      "youtube": "https://www.youtube.com/@SunsetRollercoaster",
-      "website": null,
-      "albumIds": [
-        "24b4129a-8c52-80f2-b0e9-e4d30f89ab45"
-      ],
-      "genres": [
-        "Indie Pop",
-        "Soft Rock"
-      ],
-      "labelIds": [
-        "24b4129a-8c52-8081-ba6a-de22998430a9"
-      ],
-      "videoIds": [
-        "3d74129a-8c52-809f-90bf-c3dbcdf2db0f"
       ],
       "akaIds": []
     }
@@ -92057,6 +92057,19 @@
       "slug": "suck-gravedigger"
     },
     {
+      "id": "3d74129a-8c52-809f-90bf-c3dbcdf2db0f",
+      "title": "Sunset Rollercoaster (落日飛車) | Believe U",
+      "url": "https://youtu.be/nXSGLcdlc24?si=MaFDJdXH82tpeEG4",
+      "kind": "Official Video",
+      "released": "2026-09-10",
+      "year": 2026,
+      "origYear": null,
+      "artistIds": [
+        "24b4129a-8c52-80cd-825d-dab2b96110d0"
+      ],
+      "slug": "sunset-rollercoaster-believe-u"
+    },
+    {
       "id": "1064129a-8c52-8067-816a-fd3e9d834025",
       "title": "Surely Shirley | Lavender Blues",
       "url": "https://youtu.be/bxqEcuKZAeQ?si=FSAxjzSEPlVrugI8",
@@ -92369,19 +92382,6 @@
         "24a4129a-8c52-8082-8335-e14604efa91e"
       ],
       "slug": "tella-up-and-away"
-    },
-    {
-      "id": "3d74129a-8c52-809f-90bf-c3dbcdf2db0f",
-      "title": "落日飛車 Sunset Rollercoaster | Believe U",
-      "url": "https://youtu.be/nXSGLcdlc24?si=MaFDJdXH82tpeEG4",
-      "kind": "Official Video",
-      "released": "2026-09-10",
-      "year": 2026,
-      "origYear": null,
-      "artistIds": [
-        "24b4129a-8c52-80cd-825d-dab2b96110d0"
-      ],
-      "slug": "sunset-rollercoaster-believe-u"
     }
   ]
 }

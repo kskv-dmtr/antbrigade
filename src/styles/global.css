@@ -2341,7 +2341,8 @@ main > .head--page:first-child { border-top: 0; }
 .masthead .theme-toggle { margin-left: 0; }
 
 /* Поля по краям оставлены под лупу слева и клавишу справа. */
-.search input {
+.search input,
+.multi__find-field {
   width: 100%;
 
   /* Поле по вертикали 8, а не 12: в одну строку с отборами и переключателем
@@ -2367,7 +2368,9 @@ main > .head--page:first-child { border-top: 0; }
    Свойство с приставкой и без: правило родом из WebKit, и в части браузеров
    действует только приставочное имя. */
 .search input::-webkit-search-cancel-button,
-.search input::-webkit-search-decoration {
+.search input::-webkit-search-decoration,
+.multi__find-field::-webkit-search-cancel-button,
+.multi__find-field::-webkit-search-decoration {
   -webkit-appearance: none;
   appearance: none;
   display: none;
@@ -2375,7 +2378,8 @@ main > .head--page:first-child { border-top: 0; }
 
 /* Подсказка в поле — «Search» как написано, с заглавной, без разрядки
    (21 сентября 2026, просьба владельца; до того прописными). */
-.search input::placeholder { color: var(--fg-dim); letter-spacing: 0; text-transform: none; }
+.search input::placeholder,
+.multi__find-field::placeholder { color: var(--fg-dim); letter-spacing: 0; text-transform: none; }
 
 /* Лупа слева, клавиша справа. pointer-events: none у обеих — чтобы клик по
    ним попадал в поле, а не в саму метку. */
@@ -2435,7 +2439,8 @@ main > .head--page:first-child { border-top: 0; }
 }
 .search__x { width: 0.6875rem; height: 0.6875rem; }
 
-[data-js] .search input:not(:placeholder-shown) ~ .search__clear { display: flex; }
+[data-js] .search input:not(:placeholder-shown) ~ .search__clear,
+[data-js] .multi__find-field:not(:placeholder-shown) ~ .multi__find-clear { display: flex; }
 .search input:not(:placeholder-shown) ~ .search__key { display: none; }
 
 @media (hover: hover) {
@@ -5473,30 +5478,26 @@ html:not([data-js]) .more { display: none; }
       content-visibility 0.28s allow-discrete;
   }
   [data-js] .filters-row__set .multi[open]::details-content { block-size: auto; }
+
+  /* Кому движение мешает — тому список раскрывается сразу: высота не
+     занижается вовсе, и ходу нечего вести. */
+  @media (prefers-reduced-motion: reduce) {
+    [data-js] .filters-row__set .multi::details-content {
+      block-size: auto;
+      transition: none;
+    }
+  }
 }
 
 /* Поле поиска над длинным списком — жанры и лейблы (3 октября 2026, просьба
    владельца). Набран моноширинным, как сами пункты; черта под ним — та же
    мягкая линия, что между пунктами. */
-.multi__find {
-  padding: 0.5rem var(--pad);
-  border-bottom: 1px solid var(--line-soft);
-}
-.multi__find-field {
-  width: 100%;
-  font-family: var(--mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  color: var(--fg);
-  background: none;
-  border: 0;
-}
-.multi__find-field:focus { outline: none; }
-.multi__find-field::placeholder { color: var(--fg-dim); }
-/* В шторке поле стоит строкой списка: те же поля по 16 и та же черта. */
+/* Коробка вокруг поля: отбивает его от первой строки списка. Своей черты у
+   неё нет — границу чертит само поле, как в панели поиска. */
+.multi__find { padding: 0.75rem var(--pad); }
 [data-js] .filters-row__set .multi__find {
   margin-inline: calc(var(--pad) * -1);
-  padding: 0.8125rem var(--pad);
+  padding: 0.75rem var(--pad);
 }
 /* Пункт, не подошедший под набранное. Признак свой, не hidden: тем заведует
    страница, пряча пункты с нулевым счётом. */
@@ -5931,6 +5932,33 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row[data-sheet] .filters-row__scrim { display: none; }
   [data-js] .filters-row__set .filters-row__head { height: var(--head-exact, var(--head-h)); }
   [data-js] .filters-row__set .filters-row__foot { margin-top: auto; }
+
+  /* Строки отбора делят между собой всю высоту экрана (3 октября 2026,
+     просьба владельца): шторка здесь во весь экран, и четыре строки по 53
+     оставляли под собой полтыщи пикселей пустоты, а Apply висел у низа сам
+     по себе. Теперь между ними ровно столько, сколько есть, и прокрутки в
+     покое нет.
+
+     Растут, но не жмутся (flex: 1 0 auto): раскрытый список выше экрана, и
+     сжимать под него соседние строки значило бы прятать их названия.
+     Тогда шторка прокручивается — иначе длинный список и не показать.
+
+     Содержимое строки встаёт по центру: выросшая строка с именем у верхнего
+     края читалась бы сдвинутой. У строки с раскрытым списком центровка
+     снимается — там имя стоит над списком. */
+  [data-js] .filters-row__set .filter {
+    flex: 1 1 auto;
+    /* Ниже обычной строки не жмётся: под Apply, который появляется с первым
+       отмеченным пунктом, место берётся из выросшей части, а не из самих
+       строк. */
+    min-height: var(--bar-h);
+    align-items: center;
+  }
+  [data-js] .filters-row__set .filter:has(.multi[open]),
+  [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) {
+    flex: 0 0 auto;
+    align-items: start;
+  }
 }
 
 /* Панель поиска на широком экране — по косой черте (19 сентября 2026,

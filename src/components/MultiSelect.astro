@@ -13,6 +13,8 @@
    только со скриптом — как и прежние списки. */
 
 
+import Icon from './Icon.astro';
+
 const {
   id,
   label,        // для screen reader: «Genre»
@@ -49,10 +51,21 @@ const блоки = [{ axis, items }];
   </summary>
 
   <div class="multi__panel">
+    {/* Поле набрано ровно как поисковая строка в панели поиска: та же
+        рамка, лупа слева, крестик сброса справа — чтобы два поля на сайте
+        не выглядели разными вещами (3 октября 2026, просьба владельца).
+        Поэтому и классы общие, search__*: правила у них одни. */}
     {search && (
       <div class="multi__find">
-        <input type="search" class="multi__find-field" placeholder="Search"
-               aria-label={`Search ${label}`} autocomplete="off" />
+        <div class="search__row">
+          <Icon name="magnifying-glass" class="search__icon" />
+          <input type="search" class="multi__find-field" placeholder="Search"
+                 aria-label={`Search ${label}`} autocomplete="off" spellcheck="false" />
+          <button type="button" class="search__clear multi__find-clear"
+                  aria-label={`Clear ${label} search`}>
+            <Icon name="x" class="search__x" />
+          </button>
+        </div>
       </div>
     )}
 
@@ -189,6 +202,16 @@ const блоки = [{ axis, items }];
         };
 
         поиск.addEventListener('input', отсеять);
+
+        /* Крестик сбрасывает набранное — как в панели поиска. Живёт он
+           внутри списка, и всплывший щелчок закрыл бы <details>: гасим. */
+        root.querySelector('.multi__find-clear')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          поиск.value = '';
+          отсеять();
+          поиск.focus();
+        });
         root.addEventListener('relabel', отсеять);
 
         /* Закрыли список — набранное стирается: раскрыв его снова, человек

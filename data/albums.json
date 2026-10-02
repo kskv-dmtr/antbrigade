@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-02T12:41:31Z",
+  "generatedAt": "2026-10-02T13:08:36Z",
   "counts": {
-    "albums": 1497,
-    "artists": 1245,
-    "labels": 771,
+    "albums": 1502,
+    "artists": 1250,
+    "labels": 772,
     "videos": 113
   },
   "albums": [
@@ -2146,6 +2146,39 @@
       ],
       "labels": [
         "Candy-O Records"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-80db-bbf9-cb74ac55f032",
+      "slug": "smirk-speculative-fiction",
+      "artist": "Smirk",
+      "album": "Speculative Fiction",
+      "url": "https://album.link/mpctrxvr59sp4",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A6ba7146a-4d9b-476b-949c-8769d57bbfea%3Aa2028926568_10.jpg?table=block&id=3ed4129a-8c52-80db-bbf9-cb74ac55f032&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Garage Punk",
+        "Post-Punk",
+        "Power Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-07-03",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8087-bca7-ecf13907ae2e"
+      ],
+      "artists": [
+        "Smirk"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-80ad-9c86-c585846314d9"
+      ],
+      "labels": [
+        "Smoking Room"
       ]
     },
     {
@@ -23047,6 +23080,40 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-8005-ace2-cc6d4c7b66ad",
+      "slug": "magdalena-bay-imaginal-disk",
+      "artist": "Magdalena Bay",
+      "album": "Imaginal Disk",
+      "url": "https://album.link/9wv7vdhbmw2jp",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A18f8f37e-051d-4a8b-8a90-0a16591def15%3Aa3108453833_10.jpg?table=block&id=3ed4129a-8c52-8005-ace2-cc6d4c7b66ad&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Synthpop",
+        "Neo-Psychedelia",
+        "Indietronica",
+        "Alternative Dance"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2024-08-23",
+      "year": 2024,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-80ca-9a05-f20ce28b760c"
+      ],
+      "artists": [
+        "Magdalena Bay"
+      ],
+      "labelIds": [
+        "3054129a-8c52-8075-af9d-d5fc965f2f14"
+      ],
+      "labels": [
+        "Mom+Pop"
+      ]
+    },
+    {
       "id": "cbfc4bf9-0352-48f1-a767-4fa76ed59a47",
       "slug": "the-softies-the-bed-i-made",
       "artist": "The Softies",
@@ -35570,6 +35637,39 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-8024-8480-ccc79ea57978",
+      "slug": "the-mauskovic-dance-band-bukaroo-bank",
+      "artist": "The Mauskovic Dance Band",
+      "album": "Bukaroo Bank",
+      "url": "https://album.link/m08mr7bsgc9kf",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A81a5b14b-c109-4da4-9b7a-85f946557b8a%3Aa4266416417_10.jpg?table=block&id=3ed4129a-8c52-8024-8480-ccc79ea57978&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Mutant Disco",
+        "No Wave",
+        "Dub"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-10-28",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8090-8f21-eefb1d9e9db9"
+      ],
+      "artists": [
+        "The Mauskovic Dance Band"
+      ],
+      "labelIds": [
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+      ],
+      "labels": [
+        "Les Disques Bongo Joe"
+      ]
+    },
+    {
       "id": "3e94129a-8c52-80d4-9bf8-eddff4e244e9",
       "slug": "nathan-melja-outtakes-from-2017-2022",
       "artist": "Nathan Melja",
@@ -37257,6 +37357,37 @@
       ],
       "labels": [
         "Bigamo"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-8065-a57c-c4a7a0649a67",
+      "slug": "don-leisure-shaboo-strikes-back",
+      "artist": "Don Leisure",
+      "album": "Shaboo Strikes Back",
+      "url": "https://album.link/0gqrqbpbzdbnq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A76b3f827-25db-4c7f-b611-c94f88ef57c2%3Aa4005921473_10.jpg?table=block&id=3ed4129a-8c52-8065-a57c-c4a7a0649a67&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-03-25",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-80db-ac5e-f6140e9e41d4"
+      ],
+      "artists": [
+        "Don Leisure"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
+      ],
+      "labels": [
+        "First Word Records"
       ]
     },
     {
@@ -47044,6 +47175,39 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-80c2-a2da-e9db4e76a714",
+      "slug": "u-s-girls-in-a-poem-unlimited",
+      "artist": "U.S. Girls",
+      "album": "In a Poem Unlimited",
+      "url": "https://album.link/s6sjfvnjrwk42",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9986210d-61ce-42d7-b056-a0419209a4cd%3Aa2774145854_10.jpg?table=block&id=3ed4129a-8c52-80c2-a2da-e9db4e76a714&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Art Pop",
+        "Neo-Psychedelia",
+        "Psychedelic Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2018-02-16",
+      "year": 2018,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8019-905b-f5486d899f1e"
+      ],
+      "artists": [
+        "U.S. Girls"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8072-a441-e05f226d572d"
+      ],
+      "labels": [
+        "4AD Records"
+      ]
+    },
+    {
       "id": "3d34129a-8c52-80d1-836d-f886e7030ecb",
       "slug": "basa-basa-homowo",
       "artist": "Basa Basa",
@@ -55173,6 +55337,27 @@
         "2494129a-8c52-800b-92dc-e0c48b04def1",
         "24f4129a-8c52-80c9-b27d-cd2357c4e1b7",
         "3b24129a-8c52-809b-a09f-c5a43dfb575d"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ed4129a-8c52-80db-ac5e-f6140e9e41d4",
+      "slug": "don-leisure",
+      "name": "Don Leisure",
+      "country": "GB",
+      "bandcamp": "https://donleisure.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-8065-a57c-c4a7a0649a67"
+      ],
+      "genres": [
+        "Instrumental Hip-Hop"
+      ],
+      "labelIds": [
+        "2de4129a-8c52-801f-a765-e8116f3d0189"
       ],
       "videoIds": [],
       "akaIds": []
@@ -63531,6 +63716,30 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-80ca-9a05-f20ce28b760c",
+      "slug": "magdalena-bay",
+      "name": "Magdalena Bay",
+      "country": "US",
+      "bandcamp": "https://magdalenabay.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-8005-ace2-cc6d4c7b66ad"
+      ],
+      "genres": [
+        "Synthpop",
+        "Neo-Psychedelia",
+        "Indietronica",
+        "Alternative Dance"
+      ],
+      "labelIds": [
+        "3054129a-8c52-8075-af9d-d5fc965f2f14"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2504129a-8c52-8049-801b-fa839798e5d6",
       "slug": "magic-in-threes",
       "name": "Magic In Threes",
@@ -70532,6 +70741,29 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-8087-bca7-ecf13907ae2e",
+      "slug": "smirk",
+      "name": "Smirk",
+      "country": "US",
+      "bandcamp": "https://smirk1.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80db-bbf9-cb74ac55f032"
+      ],
+      "genres": [
+        "Garage Punk",
+        "Post-Punk",
+        "Power Pop"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-80ad-9c86-c585846314d9"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "24f4129a-8c52-80c6-9c57-fff4c89e5c46",
       "slug": "sml",
       "name": "SML",
@@ -73450,6 +73682,29 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-8090-8f21-eefb1d9e9db9",
+      "slug": "the-mauskovic-dance-band",
+      "name": "The Mauskovic Dance Band",
+      "country": "NL",
+      "bandcamp": "https://themauskovicdanceband.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-8024-8480-ccc79ea57978"
+      ],
+      "genres": [
+        "Mutant Disco",
+        "No Wave",
+        "Dub"
+      ],
+      "labelIds": [
+        "2484129a-8c52-802a-8143-cdf34ee2a02a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3ad4129a-8c52-80d6-9b05-fe55e3d622c6",
       "slug": "the-menzingers",
       "name": "The Menzingers",
@@ -75266,6 +75521,29 @@
       ],
       "labelIds": [
         "3b54129a-8c52-8014-898d-d1fb2fc34cd6"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ed4129a-8c52-8019-905b-f5486d899f1e",
+      "slug": "u-s-girls",
+      "name": "U.S. Girls",
+      "country": "US",
+      "bandcamp": "https://usgirls.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80c2-a2da-e9db4e76a714"
+      ],
+      "genres": [
+        "Art Pop",
+        "Neo-Psychedelia",
+        "Psychedelic Pop"
+      ],
+      "labelIds": [
+        "2504129a-8c52-8072-a441-e05f226d572d"
       ],
       "videoIds": [],
       "akaIds": []
@@ -77518,12 +77796,14 @@
       "albumIds": [
         "37c4129a-8c52-8031-a05a-d37a87d2be82",
         "04d10031-7bcf-400e-9f91-e6b2ea6922ff",
-        "3df4129a-8c52-80f4-8e9c-d7d735f931e1"
+        "3df4129a-8c52-80f4-8e9c-d7d735f931e1",
+        "3ed4129a-8c52-80c2-a2da-e9db4e76a714"
       ],
       "artistIds": [
         "24a4129a-8c52-8056-9f0a-e627d3933971",
         "2504129a-8c52-8032-ab7b-dbadf4248593",
-        "24a4129a-8c52-80eb-8657-c40d16537f6d"
+        "24a4129a-8c52-80eb-8657-c40d16537f6d",
+        "3ed4129a-8c52-8019-905b-f5486d899f1e"
       ]
     },
     {
@@ -81424,12 +81704,14 @@
       "website": null,
       "albumIds": [
         "2de4129a-8c52-805e-b5d7-c621d04676d0",
+        "3ed4129a-8c52-8065-a57c-c4a7a0649a67",
         "3db4129a-8c52-8054-8895-f335d0741507",
         "3db4129a-8c52-8036-afde-ec0a868c3ca4",
         "3de4129a-8c52-80fc-994c-e03761b8ad70"
       ],
       "artistIds": [
         "2de4129a-8c52-80ae-a5ed-d5379f9aa32a",
+        "3ed4129a-8c52-80db-ac5e-f6140e9e41d4",
         "3db4129a-8c52-80d1-a889-fa2971364664",
         "3db4129a-8c52-80da-b193-e4eb56ed3b82",
         "3b04129a-8c52-80f1-8763-f59fe2f9c51d"
@@ -84061,6 +84343,7 @@
         "8efa65f4-09df-4006-8089-2869aee41410",
         "1164129a-8c52-8088-b6e3-f4cb42cdcafd",
         "2144129a-8c52-8039-8c65-f7d4a1f2fa65",
+        "3ed4129a-8c52-8024-8480-ccc79ea57978",
         "3d54129a-8c52-8066-b36d-c0eb37568d9c",
         "3d44129a-8c52-80c7-9687-da7f32d44da0",
         "3d24129a-8c52-8085-89e4-cdc5ca4c29de"
@@ -84071,6 +84354,7 @@
         "24a4129a-8c52-8032-bc8e-fd1c9173c69a",
         "24f4129a-8c52-80c4-b1d8-cffe7bd29def",
         "24a4129a-8c52-80a0-9283-e00355c89095",
+        "3ed4129a-8c52-8090-8f21-eefb1d9e9db9",
         "2494129a-8c52-803f-b9f0-f187678e0388",
         "2414129a-8c52-8012-9a94-e8afd5875a12"
       ]
@@ -84965,10 +85249,12 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3054129a-8c52-80bd-b3de-f3592f1f551a"
+        "3054129a-8c52-80bd-b3de-f3592f1f551a",
+        "3ed4129a-8c52-8005-ace2-cc6d4c7b66ad"
       ],
       "artistIds": [
-        "3054129a-8c52-8049-aa59-d1832a0cb782"
+        "3054129a-8c52-8049-aa59-d1832a0cb782",
+        "3ed4129a-8c52-80ca-9a05-f20ce28b760c"
       ]
     },
     {
@@ -88522,6 +88808,22 @@
       "artistIds": [
         "2494129a-8c52-807e-b417-ca6e78386393",
         "2414129a-8c52-80ff-8814-ca87285f34c6"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-80ad-9c86-c585846314d9",
+      "slug": "smoking-room",
+      "name": "Smoking Room",
+      "country": "US",
+      "bandcamp": "https://smokingroom-label.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80db-bbf9-cb74ac55f032"
+      ],
+      "artistIds": [
+        "3ed4129a-8c52-8087-bca7-ecf13907ae2e"
       ]
     },
     {

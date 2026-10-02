@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T12:41:54Z",
+  "generatedAt": "2026-10-02T13:09:05Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23920,6 +23920,97 @@
       "upc": "634457087620",
       "tracks": 10,
       "releaseDate": "2022-05-20"
+    },
+    "3ed4129a-8c52-80db-bbf9-cb74ac55f032": {
+      "source": "https://album.link/mpctrxvr59sp4",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4ZVCYsAC1ZFul7K6YrJuJX",
+        "pandora": "https://www.pandora.com/AL:67754230",
+        "amazonMusic": "https://music.amazon.com/albums/B0H6TRQ8WD",
+        "tidal": "https://listen.tidal.com/album/537925603",
+        "yandex": "https://music.yandex.ru/album/42840317",
+        "boomplay": "https://www.boomplay.com/albums/134806369",
+        "amazonStore": "https://amazon.com/dp/B0H6TRQ8WD"
+      },
+      "upc": "859741362584",
+      "tracks": 13,
+      "releaseDate": "2026-07-03"
+    },
+    "3ed4129a-8c52-8005-ace2-cc6d4c7b66ad": {
+      "source": "https://album.link/9wv7vdhbmw2jp",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2Htq1sHgmdGffojIBM6Q1s",
+        "pandora": "https://www.pandora.com/AL:38215193",
+        "deezer": "https://www.deezer.com/album/796709881",
+        "amazonMusic": "https://music.amazon.com/albums/B0GTS914P5",
+        "tidal": "https://listen.tidal.com/album/381984572",
+        "napster": "https://play.napster.com/album/alb.6091724368069037",
+        "yandex": "https://music.yandex.ru/album/41315858",
+        "boomplay": "https://www.boomplay.com/albums/96646416",
+        "anghami": "https://play.anghami.com/album/1057029041?refer=linktree",
+        "bandcamp": "https://magdalenabay.bandcamp.com/album/imaginal-disk",
+        "amazonStore": "https://amazon.com/dp/B0GTS914P5"
+      },
+      "upc": "810090095448",
+      "tracks": 15,
+      "releaseDate": "2024-08-23"
+    },
+    "3ed4129a-8c52-8024-8480-ccc79ea57978": {
+      "source": "https://album.link/m08mr7bsgc9kf",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0NoIIuC5m8RJ850vbW66VF",
+        "pandora": "https://www.pandora.com/AL:16811529",
+        "deezer": "https://www.deezer.com/album/338070787",
+        "amazonMusic": "https://music.amazon.com/albums/B0B79WL1NZ",
+        "tidal": "https://listen.tidal.com/album/238939528",
+        "napster": "https://play.napster.com/album/alb.684891057",
+        "yandex": "https://music.yandex.ru/album/23036344",
+        "boomplay": "https://www.boomplay.com/albums/51177853",
+        "anghami": "https://play.anghami.com/album/1030378932?refer=linktree",
+        "bandcamp": "https://themauskovicdanceband.bandcamp.com/album/bukaroo-bank",
+        "amazonStore": "https://amazon.com/dp/B0B79WL1NZ"
+      },
+      "upc": "4062548052343",
+      "tracks": 12,
+      "releaseDate": "2022-10-28"
+    },
+    "3ed4129a-8c52-8065-a57c-c4a7a0649a67": {
+      "source": "https://album.link/0gqrqbpbzdbnq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4P7g1DGDvxe8q25w2NTjlY",
+        "pandora": "https://www.pandora.com/AL:13209868",
+        "deezer": "https://www.deezer.com/album/295263842",
+        "amazonMusic": "https://music.amazon.com/albums/B09SDMTK3Q",
+        "tidal": "https://listen.tidal.com/album/216506742",
+        "napster": "https://play.napster.com/album/alb.645986742",
+        "yandex": "https://music.yandex.ru/album/21313716",
+        "boomplay": "https://www.boomplay.com/albums/40681364",
+        "anghami": "https://play.anghami.com/album/1026445951?refer=linktree",
+        "bandcamp": "https://donleisure.bandcamp.com/album/shaboo-strikes-back",
+        "amazonStore": "https://amazon.com/dp/B09SDMTK3Q"
+      },
+      "upc": "5050580767027",
+      "tracks": 25,
+      "releaseDate": "2022-03-25"
+    },
+    "3ed4129a-8c52-80c2-a2da-e9db4e76a714": {
+      "source": "https://album.link/s6sjfvnjrwk42",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7nfBuiJV9zINwn2U4vrglR",
+        "pandora": "https://www.pandora.com/AL:1232101",
+        "deezer": "https://www.deezer.com/album/56233622",
+        "amazonMusic": "https://music.amazon.com/albums/B0778SHQ3M",
+        "tidal": "https://listen.tidal.com/album/84151753",
+        "napster": "https://play.napster.com/album/alb.298967765",
+        "yandex": "https://music.yandex.ru/album/5021737",
+        "boomplay": "https://www.boomplay.com/albums/20629948",
+        "anghami": "https://play.anghami.com/album/3782656?refer=linktree",
+        "bandcamp": "https://usgirls.bandcamp.com/album/in-a-poem-unlimited",
+        "amazonStore": "https://amazon.com/dp/B0778SHQ3M"
+      },
+      "upc": "191400004658",
+      "tracks": 11,
+      "releaseDate": "2018-02-16"
     }
   }
 }

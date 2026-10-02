@@ -111,14 +111,14 @@ const PAGE = 48;
     </FilterCell>
 
     <FilterCell name="Genre:">
-      <MultiSelect id="genre" label="Genre" allLabel="All" manyLabel="Chosen" axis="genre"
+      <MultiSelect id="genre" label="Genre" allLabel="All" manyLabel="Chosen" axis="genre" search
                    items={genres.map(([g, n]) => ({ value: g, label: g, count: n }))} />
     </FilterCell>
 
     {/* Лейбл — за жанром (1 октября 2026, просьба владельца): сперва о чём
         музыка, потом кто издал, потом когда. */}
     <FilterCell name="Label:">
-      <MultiSelect id="label" label="Label" allLabel="All" manyLabel="Chosen" axis="label"
+      <MultiSelect id="label" label="Label" allLabel="All" manyLabel="Chosen" axis="label" search
                    items={labels.map(([l, n]) => ({ value: l, label: l, count: n }))} />
     </FilterCell>
 

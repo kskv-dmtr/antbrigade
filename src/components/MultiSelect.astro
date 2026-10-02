@@ -19,7 +19,11 @@ const {
   allLabel,     // подпись, когда не выбрано ничего: «All genres»
   manyLabel,    // подпись, когда выбрано несколько: «Genres»
   items = [],   // [{ value, label, count }]
-  axis          // имя оси отбора: страница читает его с флажка
+  axis,         // имя оси отбора: страница читает его с флажка
+  /* Поле поиска над списком — у длинных отборов: жанров три сотни, лейблов
+     под восемь (3 октября 2026, просьба владельца). У коротких — тип, год —
+     искать нечего, и поле только отняло бы строку. */
+  search = false
 } = Astro.props;
 
 /* Обёртка .multi__group осталась от панели, в которой 5 сентября 2026
@@ -45,6 +49,13 @@ const блоки = [{ axis, items }];
   </summary>
 
   <div class="multi__panel">
+    {search && (
+      <div class="multi__find">
+        <input type="search" class="multi__find-field" placeholder="Search"
+               aria-label={`Search ${label}`} autocomplete="off" />
+      </div>
+    )}
+
     <div class="multi__list">
       {блоки.map((блок) => (
         <div class="multi__group">
@@ -155,6 +166,40 @@ const блоки = [{ axis, items }];
          выбранного пункта и должна за ними успевать. */
       root.addEventListener('relabel', () => label(root));
 
+      /* Поиск по списку: прячем пункты, в имени которых нет набранного.
+         Прячем своим признаком, а не hidden: hidden заведует страница — им
+         она убирает пункты с нулевым счётом, — и два хозяина у одного
+         свойства разошлись бы на первом же пересчёте.
+
+         Пересчёт счётчиков кончается событием relabel, и отбор по набранному
+         накладываем заново: страница к этому времени успела вернуть пункты,
+         которые поиск уже спрятал. */
+      const поиск = root.querySelector('.multi__find-field');
+      if (поиск) {
+        const отсеять = () => {
+          const запрос = поиск.value.trim().toLowerCase();
+          let видно = 0;
+          for (const item of root.querySelectorAll('.multi__item')) {
+            const имя = item.querySelector('.multi__name').textContent.toLowerCase();
+            const подходит = !запрос || имя.includes(запрос);
+            item.toggleAttribute('data-nomatch', !подходит);
+            if (подходит && !item.hidden) видно++;
+          }
+          root.querySelector('.multi__none').hidden = видно > 0;
+        };
+
+        поиск.addEventListener('input', отсеять);
+        root.addEventListener('relabel', отсеять);
+
+        /* Закрыли список — набранное стирается: раскрыв его снова, человек
+           ждёт весь список, а не остаток прошлого поиска. */
+        root.addEventListener('toggle', () => {
+          if (root.open || !поиск.value) return;
+          поиск.value = '';
+          отсеять();
+        });
+      }
+
       root.querySelector('.multi__clear').addEventListener('click', (e) => {
         /* Крестик живёт внутри <summary>, а щелчок по summary раскрывает
            блок. Отменяем и не пускаем событие дальше: нажали на сброс, а не
@@ -171,7 +216,17 @@ const блоки = [{ axis, items }];
     // Щелчок мимо закрывает: у <details> своего такого поведения нет.
     document.addEventListener('click', (e) => {
       for (const root of blocks) {
-        if (root.open && !root.contains(e.target)) root.open = false;
+        if (!root.open || root.contains(e.target)) continue;
+
+        /* В раскрытой шторке не закрываем (3 октября 2026, просьба
+           владельца). Там отборы стоят столбцом, а не выпадают поверх
+           страницы: щелчок по пустому месту шторки ничего не выбирает и
+           сворачивать раскрытый список не должен. Закрыть его есть чем — тем
+           же заголовком отбора, Escape или соседним отбором, который
+           раскрывают следующим. */
+        if (root.closest('.filters-row__set') && document.querySelector('.filters-row[data-sheet]')) continue;
+
+        root.open = false;
       }
     });
 

@@ -1,11 +1,11 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-01T23:55:04Z",
+  "generatedAt": "2026-10-02T05:43:30Z",
   "counts": {
     "albums": 1494,
     "artists": 1243,
     "labels": 770,
-    "videos": 112
+    "videos": 113
   },
   "albums": [
     {
@@ -49396,6 +49396,7 @@
         "24a4129a-8c52-80a7-a210-ee7ff567e1b6"
       ],
       "videoIds": [
+        "3ed4129a-8c52-8012-9774-fa13aa1fb7b6",
         "3bd4129a-8c52-8052-9b2e-c7c23adbdb74"
       ],
       "akaIds": []
@@ -90993,6 +90994,19 @@
         "2434129a-8c52-8040-a206-f275114bb194"
       ],
       "slug": "alvilda-angoisse"
+    },
+    {
+      "id": "3ed4129a-8c52-8012-9774-fa13aa1fb7b6",
+      "title": "Amyl & The Sniffers | Big Dreams",
+      "url": "https://youtu.be/ipZSqcFA0Z0?si=9TJxCxL9tbF-guXj",
+      "kind": "Official Video",
+      "released": "2024-09-25",
+      "year": 2024,
+      "origYear": null,
+      "artistIds": [
+        "24a4129a-8c52-80c1-9676-f010bbf73862"
+      ],
+      "slug": "amyl-the-sniffers-big-dreams"
     },
     {
       "id": "3bd4129a-8c52-8052-9b2e-c7c23adbdb74",

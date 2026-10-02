@@ -5524,23 +5524,23 @@ html:not([data-js]) .more { display: none; }
    шторкой — отсюда overscroll-behavior. */
 [data-js] .filters-row__set .filter:has(.multi[open]),
 [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) {
-  flex: 1 1 auto;
+  /* Растёт по содержимому и сжимается только когда места не хватает: у
+     короткого списка (пять типов) строка кончается последним пунктом, и
+     следующий отбор идёт сразу за ним, без пустоты (3 октября 2026, просьба
+     владельца). Длинный список упирается в остаток шторки и дальше листается
+     внутри строки. */
+  flex: 0 1 auto;
   min-height: 0;
   align-items: start;
 
-  /* Поля строки меняются местами с полями шторки: строка раздвигается до её
-     краёв своими отрицательными полями и возвращает те же 16 изнутри. Так
-     список, который нарочно выходит за поля (он растянут во всю ширину
-     шторки), остаётся внутри коробки строки — иначе он торчал бы вбок, и
-     прокрутка по вертикали тащила бы за собой горизонтальную. */
-  margin-inline: calc(var(--pad) * -1);
-  padding-inline: var(--pad);
-
-  /* Прокрутка только вниз. overflow-x: hidden здесь обязателен: у коробки с
-     одной прокручиваемой стороной вторая сама становится прокручиваемой, и
-     внизу шторки появлялась горизонтальная полоса (3 октября 2026, замечание
-     владельца). */
-  overflow-x: hidden;
+  /* Прокрутка только вниз. По горизонтали именно clip, а не hidden: у коробки
+     с одной прокручиваемой стороной вторая сама становится прокручиваемой, и
+     внизу шторки появлялась горизонтальная полоса. Запас в поле кадра
+     (overflow-clip-margin) оставляет списку выйти за поля строки — он
+     растянут во всю ширину шторки, и обрезать его по полям значило бы
+     укоротить черты под пунктами. */
+  overflow-x: clip;
+  overflow-clip-margin: var(--pad);
   overflow-y: auto;
   overscroll-behavior: contain;
 
@@ -5548,6 +5548,68 @@ html:not([data-js]) .more { display: none; }
      поперёк списка, чертя лишнюю вертикаль. Прокрутка при этом работает:
      и колесом, и пальцем, и с клавиатуры. */
   scrollbar-width: none;
+}
+
+/* Имя отбора, его кнопка и поле поиска стоят на месте, пока листаются пункты
+   (3 октября 2026, просьба владельца): уезжая вверх вместе со списком, они
+   оставляли человека без ответа на вопрос, что он сейчас листает и где
+   набирать.
+
+   Поле строки сверху переносим на сами заголовки: прилипают они к верхнему
+   краю прокрутки, а поле строки — это полоса над ним, сквозь которую
+   проезжали бы пункты.
+
+   Подложка нужна всем троим: под ними едут пункты. Одной их подложки, впрочем,
+   мало — щели между ними закрывает полоса ниже. */
+[data-js] .filters-row__set .filter:has(.multi[open]),
+[data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) {
+  padding-top: 0;
+}
+[data-js] .filters-row__set .filter:has(.multi[open]) .filter__name,
+[data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) .filter__name,
+[data-js] .filters-row__set .filter:has(.multi[open]) .multi__button {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-top: calc((var(--bar-h) - 2.125rem) / 2);
+  background: var(--bg);
+}
+/* Кнопка добирает рост до имени слева: своего в ней 24px, а поле поиска
+   прилипает под именем — между ними оставался просвет, и в нём было видно
+   едущие пункты. */
+[data-js] .filters-row__set .filter:has(.multi[open]) .multi__button {
+  min-height: calc(2.125rem + (var(--bar-h) - 2.125rem) / 2);
+}
+
+/* Сплошная подложка под именем и кнопкой: своей подложки каждому из них мало.
+   Между колонками лежит просвет в 16, по краям строки пункты вылезают за её
+   поля — и в эти щели было видно, как едут пункты. Полоса липнет так же, как
+   они, и уходит под них по z-index.
+
+   Кладём её явно в первую клетку на обе колонки, а имя и список — рядом, тоже
+   явно: иначе раскладка сочтёт первый ряд занятым и снесёт их во второй. */
+[data-js] .filters-row__set .filter:has(.multi[open])::before {
+  content: '';
+  grid-area: 1 / 1 / 2 / -1;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: calc(2.125rem + (var(--bar-h) - 2.125rem) / 2);
+  margin-inline: calc(var(--pad) * -1);
+  background: var(--bg);
+}
+[data-js] .filters-row__set .filter:has(.multi[open]) .filter__name {
+  grid-area: 1 / 1 / 2 / 2;
+}
+[data-js] .filters-row__set .filter:has(.multi[open]) .multi {
+  grid-area: 1 / 2 / 2 / 3;
+}
+[data-js] .filters-row__set .filter:has(.multi[open]) .multi__find {
+  position: sticky;
+  top: calc(2.125rem + (var(--bar-h) - 2.125rem) / 2);
+  z-index: 1;
+  background: var(--bg);
 }
 [data-js] .filters-row__set .filter:has(.multi[open])::-webkit-scrollbar,
 [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden]))::-webkit-scrollbar {

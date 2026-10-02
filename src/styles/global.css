@@ -5952,6 +5952,28 @@ html:not([data-js]) .more { display: none; }
     min-height: var(--bar-h);
     align-items: center;
   }
+
+  /* Раскрытая строка забирает весь остаток и прокручивается сама: так все
+     отборы остаются на экране — раскрыв Genre, видно и Label, и Year
+     (3 октября 2026, просьба владельца).
+
+     Прокрутка именно у строки, а не у списка внутри: между ними стоит
+     ::details-content, коробка, в которую браузер складывает содержимое
+     <details>, и высотой она не управляется — ни flex, ни block-size, ни
+     проценты на ней не действуют (проверено). Цепочка высот до списка
+     поэтому не строится, а строка — обычный флекс-элемент, и ей довольно
+     min-height: 0.
+
+     Докрутив список до края, человек не должен утащить за ним страницу под
+     шторкой — отсюда overscroll-behavior. */
+  [data-js] .filters-row__set .filter:has(.multi[open]),
+  [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden])) {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-items: start;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
 /* Панель поиска на широком экране — по косой черте (19 сентября 2026,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T13:09:05Z",
+  "generatedAt": "2026-10-02T23:00:23Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -24011,6 +24011,72 @@
       "upc": "191400004658",
       "tracks": 11,
       "releaseDate": "2018-02-16"
+    },
+    "3ed4129a-8c52-8021-ba53-dfed03b73219": {
+      "source": "https://album.link/7njxjmmbfp9g2",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2vgsOwnFTQyJRbLLnt3xEJ",
+        "amazonMusic": "https://music.amazon.com/albums/B0HDS3DNVJ",
+        "tidal": "https://listen.tidal.com/album/551159537",
+        "boomplay": "https://www.boomplay.com/albums/137730218",
+        "amazonStore": "https://amazon.com/dp/B0HDS3DNVJ"
+      },
+      "upc": "881839271546",
+      "tracks": 11,
+      "releaseDate": "2026-10-02"
+    },
+    "3ed4129a-8c52-8072-8650-c23d3fe0986f": {
+      "source": "https://album.link/c3sq5dsmznkcr",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/7et0k98AUmArEuVwnpn2fR",
+        "pandora": "https://www.pandora.com/AL:20682131",
+        "deezer": "https://www.deezer.com/album/773577531",
+        "amazonMusic": "https://music.amazon.com/albums/B0FDBHJW2L",
+        "tidal": "https://listen.tidal.com/album/442426538",
+        "napster": "https://play.napster.com/album/alb.717891922",
+        "boomplay": "https://www.boomplay.com/albums/60183362",
+        "anghami": "https://play.anghami.com/album/1070320644?refer=linktree",
+        "bandcamp": "https://alexisevans.bandcamp.com/album/yours-truly",
+        "amazonStore": "https://amazon.com/dp/B0FDBHJW2L"
+      },
+      "upc": "5050580791633",
+      "tracks": 12,
+      "releaseDate": "2023-02-03"
+    },
+    "3ed4129a-8c52-800e-8d76-c7b42ab7bd02": {
+      "source": "https://album.link/vkhws6d4swmdg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/4UYc1NrDWoMpPV68It9Obh",
+        "pandora": "https://www.pandora.com/AL:11080054",
+        "deezer": "https://www.deezer.com/album/265131332",
+        "amazonMusic": "https://music.amazon.com/albums/B09JC9ZX5B",
+        "tidal": "https://listen.tidal.com/album/201094284",
+        "napster": "https://play.napster.com/album/alb.618461237",
+        "bandcamp": "https://music.musicofthemoon.com/album/come-see",
+        "amazonStore": "https://amazon.com/dp/B09JC9ZX5B"
+      },
+      "upc": "8790001340817",
+      "tracks": 11,
+      "releaseDate": "2022-05-18"
+    },
+    "3ed4129a-8c52-8090-b29a-ce66e056c459": {
+      "source": "https://album.link/hxkvgnmwdfwbq",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5R4MKy2TupcljTY07AcAWv",
+        "pandora": "https://www.pandora.com/AL:12403273",
+        "deezer": "https://www.deezer.com/album/290074382",
+        "amazonMusic": "https://music.amazon.com/albums/B09R2CFY35",
+        "tidal": "https://listen.tidal.com/album/213749657",
+        "napster": "https://play.napster.com/album/alb.641554876",
+        "yandex": "https://music.yandex.ru/album/20853471",
+        "boomplay": "https://www.boomplay.com/albums/39425957",
+        "anghami": "https://play.anghami.com/album/1026575704?refer=linktree",
+        "bandcamp": "https://harveysutherland.bandcamp.com/album/boy",
+        "amazonStore": "https://amazon.com/dp/B09R2CFY35"
+      },
+      "upc": "3616843978252",
+      "tracks": 10,
+      "releaseDate": "2022-04-29"
     }
   }
 }

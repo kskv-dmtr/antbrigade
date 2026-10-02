@@ -1,13 +1,45 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-02T13:08:36Z",
+  "generatedAt": "2026-10-02T22:59:55Z",
   "counts": {
-    "albums": 1502,
-    "artists": 1250,
-    "labels": 772,
+    "albums": 1506,
+    "artists": 1253,
+    "labels": 774,
     "videos": 113
   },
   "albums": [
+    {
+      "id": "3ed4129a-8c52-8021-ba53-dfed03b73219",
+      "slug": "john-roseboro-va-va-voom",
+      "artist": "John Roseboro",
+      "album": "Va Va Voom",
+      "url": "https://album.link/7njxjmmbfp9g2",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A65c93619-5af4-4f01-9a14-ebd3dc087a1b%3Aa2345876138_10.jpg?table=block&id=3ed4129a-8c52-8021-ba53-dfed03b73219&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Indie Folk",
+        "Bossa Nova"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-10-02",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "24a4129a-8c52-802b-a567-e7a8ca138ec5"
+      ],
+      "artists": [
+        "John Roseboro"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80a7-a36f-f6bbcf55ae4f"
+      ],
+      "labels": [
+        "Public Confession Art House"
+      ]
+    },
     {
       "id": "3ec4129a-8c52-8001-aa68-d7db4f3a25fa",
       "slug": "the-sweet-enoughs-another-helping-of-the-sweet-enoughs",
@@ -34696,6 +34728,38 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-8072-8650-c23d3fe0986f",
+      "slug": "alexis-evans-yours-truly",
+      "artist": "Alexis Evans",
+      "album": "Yours Truly",
+      "url": "https://album.link/c3sq5dsmznkcr",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad5f0f9d7-6ba4-4312-b6f2-0d91e1450311%3Aa2413774777_10.jpg?table=block&id=3ed4129a-8c52-8072-8650-c23d3fe0986f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Neo-Soul",
+        "R'n'B"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-02-03",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8069-a34c-c0bd2d134d32"
+      ],
+      "artists": [
+        "Alexis Evans"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "labels": [
+        "Record Kicks"
+      ]
+    },
+    {
       "id": "2524129a-8c52-802b-9ae3-ee0488b1b553",
       "slug": "dina-ogon-oas",
       "artist": "Dina Ögon",
@@ -36944,6 +37008,39 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-800e-8d76-c7b42ab7bd02",
+      "slug": "m-o-o-n-come-see",
+      "artist": "M.O.O.N.",
+      "album": "Come! See!!",
+      "url": "https://album.link/vkhws6d4swmdg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ac7f8abe0-8919-470a-899e-740abb0edd53%3Aa3331913147_10.jpg?table=block&id=3ed4129a-8c52-800e-8d76-c7b42ab7bd02&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Deep House",
+        "Outsider House",
+        "Downtempo"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-18",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8033-853c-f77677073d8e"
+      ],
+      "artists": [
+        "M.O.O.N."
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-801c-afa2-f9c6de72c9cb"
+      ],
+      "labels": [
+        "M.O.O.N. Holdings"
+      ]
+    },
+    {
       "id": "8369e90b-521b-4256-8496-8aa618d87c6c",
       "slug": "pkew-pkew-pkew-open-bar",
       "artist": "Pkew Pkew Pkew",
@@ -37134,6 +37231,39 @@
       ],
       "labels": [
         "Guruguru Brain"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-8090-b29a-ce66e056c459",
+      "slug": "harvey-sutherland-boy",
+      "artist": "Harvey Sutherland",
+      "album": "Boy",
+      "url": "https://album.link/hxkvgnmwdfwbq",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ad5437263-f0f5-412a-aca6-4912038afd9f%3Aa3582800648_10.jpg?table=block&id=3ed4129a-8c52-8090-b29a-ce66e056c459&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Synth Funk",
+        "Electro-Disco",
+        "Nu-Disco"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-04-29",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-8032-b621-dca689a3cab3"
+      ],
+      "artists": [
+        "Harvey Sutherland"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-8090-95e2-f1d0bbe924d6"
+      ],
+      "labels": [
+        "House Anxiety"
       ]
     },
     {
@@ -49411,6 +49541,28 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-8069-a34c-c0bd2d134d32",
+      "slug": "alexis-evans",
+      "name": "Alexis Evans",
+      "country": "FR",
+      "bandcamp": "https://alexisevans.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-8072-8650-c23d3fe0986f"
+      ],
+      "genres": [
+        "Neo-Soul",
+        "R'n'B"
+      ],
+      "labelIds": [
+        "24a4129a-8c52-80bb-9ad8-d84e263d1c7b"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2474129a-8c52-8000-b950-dea1eb9a269f",
       "slug": "alfa-mist",
       "name": "Alfa Mist",
@@ -58955,6 +59107,29 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-8032-b621-dca689a3cab3",
+      "slug": "harvey-sutherland",
+      "name": "Harvey Sutherland",
+      "country": "AU",
+      "bandcamp": "https://harveysutherland.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://harveysuther.land/",
+      "albumIds": [
+        "3ed4129a-8c52-8090-b29a-ce66e056c459"
+      ],
+      "genres": [
+        "Synth Funk",
+        "Electro-Disco",
+        "Nu-Disco"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-8090-95e2-f1d0bbe924d6"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3e84129a-8c52-8022-9d19-d0e3e1b8aad2",
       "slug": "hatihati",
       "name": "HATIHATI",
@@ -60863,9 +61038,10 @@
       "country": "US",
       "bandcamp": "https://johnroseboro.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
-      "website": null,
+      "youtube": "https://www.youtube.com/@john.roseboro",
+      "website": "https://johnroseboro.com/",
       "albumIds": [
+        "3ed4129a-8c52-8021-ba53-dfed03b73219",
         "55556cc2-2c55-4d8f-9734-101e90a4bb59"
       ],
       "genres": [
@@ -63625,6 +63801,29 @@
       ],
       "labelIds": [
         "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ed4129a-8c52-8033-853c-f77677073d8e",
+      "slug": "m-o-o-n",
+      "name": "M.O.O.N.",
+      "country": "US",
+      "bandcamp": "https://m-o-o-n.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-800e-8d76-c7b42ab7bd02"
+      ],
+      "genres": [
+        "Deep House",
+        "Outsider House",
+        "Downtempo"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-801c-afa2-f9c6de72c9cb"
       ],
       "videoIds": [],
       "akaIds": []
@@ -82903,6 +83102,22 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-8090-95e2-f1d0bbe924d6",
+      "slug": "house-anxiety",
+      "name": "House Anxiety",
+      "country": "GB",
+      "bandcamp": "https://houseanxiety.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://www.houseanxiety.co.uk/",
+      "albumIds": [
+        "3ed4129a-8c52-8090-b29a-ce66e056c459"
+      ],
+      "artistIds": [
+        "3ed4129a-8c52-8032-b621-dca689a3cab3"
+      ]
+    },
+    {
       "id": "2ee4129a-8c52-80c1-b929-d1a557c57fe2",
       "slug": "house-of-mythology",
       "name": "House of Mythology",
@@ -84636,6 +84851,22 @@
       ],
       "artistIds": [
         "24a4129a-8c52-801a-9d58-de788393c15d"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-801c-afa2-f9c6de72c9cb",
+      "slug": "m-o-o-n-holdings",
+      "name": "M.O.O.N. Holdings",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-800e-8d76-c7b42ab7bd02"
+      ],
+      "artistIds": [
+        "3ed4129a-8c52-8033-853c-f77677073d8e"
       ]
     },
     {
@@ -87420,6 +87651,7 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3ed4129a-8c52-8021-ba53-dfed03b73219",
         "55556cc2-2c55-4d8f-9734-101e90a4bb59"
       ],
       "artistIds": [
@@ -87701,6 +87933,7 @@
         "1274129a-8c52-80d3-ad97-c95838079c7a",
         "81a99f6f-36e8-44ea-b025-8311a1765979",
         "3e84129a-8c52-8026-a58b-d4631024cf54",
+        "3ed4129a-8c52-8072-8650-c23d3fe0986f",
         "af3f144a-a677-4a9c-9517-25b192645772",
         "3d54129a-8c52-803b-acbb-e113d5226bb6",
         "3d24129a-8c52-8053-bc95-fef3d8493129"
@@ -87710,6 +87943,7 @@
         "2524129a-8c52-809b-8e94-c0c0a267d91f",
         "2524129a-8c52-80c5-9f02-e97888bd8274",
         "3d24129a-8c52-804d-a6e0-dccc7afd1227",
+        "3ed4129a-8c52-8069-a34c-c0bd2d134d32",
         "2524129a-8c52-8043-a12b-d1f6cb12e9ee",
         "3d54129a-8c52-8065-9aeb-f3d081fabbae"
       ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T23:55:16Z",
+  "generatedAt": "2026-10-02T12:41:54Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -23867,6 +23867,59 @@
       "upc": "9332727138805",
       "tracks": 10,
       "releaseDate": "2026-10-02"
+    },
+    "3ed4129a-8c52-8002-a68d-ecd466d65bb6": {
+      "source": "https://album.link/xttt5ttp8vgcg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/25yATwW2H0b7V3LZmcmH6e",
+        "pandora": "https://www.pandora.com/AL:63534474",
+        "amazonMusic": "https://music.amazon.com/albums/B0GT74N5BY",
+        "tidal": "https://listen.tidal.com/album/508569149",
+        "yandex": "https://music.yandex.ru/album/41238324",
+        "boomplay": "https://www.boomplay.com/albums/128049767",
+        "amazonStore": "https://amazon.com/dp/B0GT74N5BY"
+      },
+      "upc": "823375071174",
+      "tracks": 5,
+      "releaseDate": "2026-06-19"
+    },
+    "3ed4129a-8c52-80bb-aa47-f0e85b000102": {
+      "source": "https://album.link/tdspv0rsfhb4z",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/3f7gSaLxech6fbv2XZK2iQ",
+        "pandora": "https://www.pandora.com/AL:19925028",
+        "deezer": "https://www.deezer.com/album/383746157",
+        "amazonMusic": "https://music.amazon.com/albums/B0GNDV6DZY",
+        "tidal": "https://listen.tidal.com/album/498933357",
+        "napster": "https://play.napster.com/album/alb.726480233",
+        "yandex": "https://music.yandex.ru/album/24277814",
+        "boomplay": "https://www.boomplay.com/albums/59830145",
+        "anghami": "https://play.anghami.com/album/1034306411?refer=linktree",
+        "bandcamp": "https://vulfpeck.bandcamp.com/album/schvitz",
+        "amazonStore": "https://amazon.com/dp/B0GNDV6DZY"
+      },
+      "upc": "859768253858",
+      "tracks": 10,
+      "releaseDate": "2022-12-30"
+    },
+    "3ed4129a-8c52-80ac-a126-d82c46af30d0": {
+      "source": "https://album.link/xhqzg79dczgzg",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6xCiTaBETJXjbRP68e7g0P",
+        "pandora": "https://www.pandora.com/AL:11636130",
+        "deezer": "https://www.deezer.com/album/281599821",
+        "amazonMusic": "https://music.amazon.com/albums/B09NVFGK39",
+        "tidal": "https://listen.tidal.com/album/209813264",
+        "napster": "https://play.napster.com/album/alb.634509094",
+        "yandex": "https://music.yandex.ru/album/20124671",
+        "boomplay": "https://www.boomplay.com/albums/37227565",
+        "anghami": "https://play.anghami.com/album/1024753969?refer=linktree",
+        "bandcamp": "https://bandcola.bandcamp.com/album/deep-in-view",
+        "amazonStore": "https://amazon.com/dp/B09NVFGK39"
+      },
+      "upc": "634457087620",
+      "tracks": 10,
+      "releaseDate": "2022-05-20"
     }
   }
 }

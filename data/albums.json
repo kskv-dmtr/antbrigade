@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-02T10:39:24Z",
+  "generatedAt": "2026-10-02T12:41:31Z",
   "counts": {
-    "albums": 1494,
-    "artists": 1243,
-    "labels": 770,
+    "albums": 1497,
+    "artists": 1245,
+    "labels": 771,
     "videos": 113
   },
   "albums": [
@@ -2413,6 +2413,38 @@
       ],
       "labels": [
         "Third Man Records"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-8002-a68d-ecd466d65bb6",
+      "slug": "blue-earth-sound-the-st-louis-sessions",
+      "artist": "Blue Earth Sound",
+      "album": "The St. Louis Sessions",
+      "url": "https://album.link/xttt5ttp8vgcg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A7e167c4b-ba50-4cdc-9f6b-302c15680a88%3Aa2263652347_10.jpg?table=block&id=3ed4129a-8c52-8002-a68d-ecd466d65bb6&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu Jazz",
+        "Soul Jazz"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2026-06-19",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "2894129a-8c52-80d7-a3d3-cf8d088ad296"
+      ],
+      "artists": [
+        "Blue Earth Sound"
+      ],
+      "labelIds": [
+        "24f4129a-8c52-80c9-b27d-cd2357c4e1b7"
+      ],
+      "labels": [
+        "DeepMatter Records"
       ]
     },
     {
@@ -11660,8 +11692,9 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3A6acd1f86-02f2-48d2-b3cd-bd6eb2d993e0%3Aa1889767235_10.jpg?table=block&id=2894129a-8c52-8045-900d-ee572a0d425f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "edition": null,
       "genres": [
-        "Jazz",
-        "Cinematic Soul"
+        "Cinematic Soul",
+        "Nu Jazz",
+        "Jazz-Funk"
       ],
       "types": [
         "Album"
@@ -11677,10 +11710,10 @@
         "Blue Earth Sound"
       ],
       "labelIds": [
-        "2894129a-8c52-804d-a4f8-e003e13f52d3"
+        "24f4129a-8c52-80c9-b27d-cd2357c4e1b7"
       ],
       "labels": [
-        "Root Records"
+        "DeepMatter Records"
       ]
     },
     {
@@ -34820,6 +34853,38 @@
       ]
     },
     {
+      "id": "3ed4129a-8c52-80bb-aa47-f0e85b000102",
+      "slug": "vulfpeck-schvitz",
+      "artist": "Vulfpeck",
+      "album": "Schvitz",
+      "url": "https://album.link/tdspv0rsfhb4z",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A44b7cd1a-8c7d-41b6-b080-7337faa6c663%3Aa1098066046_10.jpg?table=block&id=3ed4129a-8c52-80bb-aa47-f0e85b000102&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Pop Soul",
+        "Jazz Pop"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-12-30",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-80ce-b482-f3f336abba97"
+      ],
+      "artists": [
+        "Vulfpeck"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-80d9-8dcb-ce7f1a2f32bd"
+      ],
+      "labels": [
+        "Vulf Records"
+      ]
+    },
+    {
       "id": "56b0b89a-74f2-4af1-86ca-76a967592c4a",
       "slug": "la-elite-nuevo-punk",
       "artist": "LA ÉLITE",
@@ -36709,6 +36774,39 @@
       ],
       "labels": [
         "Asian Man Records"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-80ac-a126-d82c46af30d0",
+      "slug": "cola-deep-in-view",
+      "artist": "Cola",
+      "album": "Deep in View",
+      "url": "https://album.link/xhqzg79dczgzg",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Adc1d0859-5d3b-476d-909c-a8add692f543%3Aa3650618678_10.jpg?table=block&id=3ed4129a-8c52-80ac-a126-d82c46af30d0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Post-Punk",
+        "Art Punk",
+        "Indie Rock"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-05-20",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ed4129a-8c52-802d-afac-df12f4fb5fb0"
+      ],
+      "artists": [
+        "Cola"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-806a-ab4d-ee30b6585f22"
+      ],
+      "labels": [
+        "Fire Talk"
       ]
     },
     {
@@ -51179,14 +51277,17 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3ed4129a-8c52-8002-a68d-ecd466d65bb6",
         "2894129a-8c52-8045-900d-ee572a0d425f"
       ],
       "genres": [
-        "Jazz",
-        "Cinematic Soul"
+        "Nu Jazz",
+        "Soul Jazz",
+        "Cinematic Soul",
+        "Jazz-Funk"
       ],
       "labelIds": [
-        "2894129a-8c52-804d-a4f8-e003e13f52d3"
+        "24f4129a-8c52-80c9-b27d-cd2357c4e1b7"
       ],
       "videoIds": [
         "2894129a-8c52-8067-a0b1-c059d649a1b0"
@@ -53365,6 +53466,29 @@
       ],
       "labelIds": [
         "24f4129a-8c52-80be-a4db-cdb104704584"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ed4129a-8c52-802d-afac-df12f4fb5fb0",
+      "slug": "cola",
+      "name": "Cola",
+      "country": "CA",
+      "bandcamp": "https://bandcola.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80ac-a126-d82c46af30d0"
+      ],
+      "genres": [
+        "Post-Punk",
+        "Art Punk",
+        "Indie Rock"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-806a-ab4d-ee30b6585f22"
       ],
       "videoIds": [],
       "akaIds": []
@@ -75740,6 +75864,28 @@
       "akaIds": []
     },
     {
+      "id": "3ed4129a-8c52-80ce-b482-f3f336abba97",
+      "slug": "vulfpeck",
+      "name": "Vulfpeck",
+      "country": "US",
+      "bandcamp": "https://vulfpeck.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80bb-aa47-f0e85b000102"
+      ],
+      "genres": [
+        "Pop Soul",
+        "Jazz Pop"
+      ],
+      "labelIds": [
+        "3ed4129a-8c52-80d9-8dcb-ce7f1a2f32bd"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "2524129a-8c52-802c-9d08-c799849553e3",
       "slug": "waaju",
       "name": "Waaju",
@@ -80146,10 +80292,13 @@
       "youtube": null,
       "website": null,
       "albumIds": [
+        "3ed4129a-8c52-8002-a68d-ecd466d65bb6",
+        "2894129a-8c52-8045-900d-ee572a0d425f",
         "24f4129a-8c52-8059-a876-fe21ea42a37b",
         "f0a2a751-3add-4232-88a5-db544484306a"
       ],
       "artistIds": [
+        "2894129a-8c52-80d7-a3d3-cf8d088ad296",
         "24f4129a-8c52-80b0-ae0f-fd2ddfe3ff1c",
         "2494129a-8c52-808a-b73c-e4d4aed979e2"
       ]
@@ -81214,6 +81363,22 @@
         "2f84129a-8c52-808e-8aea-f2de50524915",
         "24a4129a-8c52-804a-97d6-d79bd1e48241",
         "3d44129a-8c52-80c6-9770-d5e6a96e6bc3"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-806a-ab4d-ee30b6585f22",
+      "slug": "fire-talk",
+      "name": "Fire Talk",
+      "country": "US",
+      "bandcamp": "https://firetalk.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80ac-a126-d82c46af30d0"
+      ],
+      "artistIds": [
+        "3ed4129a-8c52-802d-afac-df12f4fb5fb0"
       ]
     },
     {
@@ -87673,22 +87838,6 @@
       ]
     },
     {
-      "id": "2894129a-8c52-804d-a4f8-e003e13f52d3",
-      "slug": "root-records",
-      "name": "Root Records",
-      "country": "GB",
-      "bandcamp": null,
-      "bandcamp2": null,
-      "youtube": null,
-      "website": null,
-      "albumIds": [
-        "2894129a-8c52-8045-900d-ee572a0d425f"
-      ],
-      "artistIds": [
-        "2894129a-8c52-80d7-a3d3-cf8d088ad296"
-      ]
-    },
-    {
       "id": "24a4129a-8c52-80a7-a210-ee7ff567e1b6",
       "slug": "rough-trade-records",
       "name": "Rough Trade Records",
@@ -90307,6 +90456,22 @@
       ],
       "artistIds": [
         "3df4129a-8c52-8066-aa48-e4401baba6fb"
+      ]
+    },
+    {
+      "id": "3ed4129a-8c52-80d9-8dcb-ce7f1a2f32bd",
+      "slug": "vulf-records",
+      "name": "Vulf Records",
+      "country": "US",
+      "bandcamp": "https://vulf.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ed4129a-8c52-80bb-aa47-f0e85b000102"
+      ],
+      "artistIds": [
+        "3ed4129a-8c52-80ce-b482-f3f336abba97"
       ]
     },
     {

@@ -56,6 +56,14 @@ const labels = [...labelCounts.entries()]
       (с 22 сентября 2026). */}
   <div class="lead">
     <h1 class="item__title"><WholeWords text={genre.name} /></h1>
+
+    {/* Род записи строкой под именем — тем же набором и отступом, что «Also
+        known as» у исполнителя (3 октября 2026, просьба владельца). */}
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Genre</dt>
+      </div>
+    </dl>
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не

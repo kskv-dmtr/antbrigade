@@ -54,6 +54,13 @@ const linkCount = [label.bandcamp, label.bandcamp2, label.youtube, label.website
   <div class="lead">
     <h1 class="item__title"><WholeWords text={label.name} /></h1>
 
+    {/* Род записи строкой под именем — тем же набором и отступом, что «Also
+        known as» у исполнителя (3 октября 2026, просьба владельца). */}
+    <dl class="item__facts">
+      <div class="item__fact">
+        <dt>Label</dt>
+      </div>
+    </dl>
   </div>
 
   {/* Полоса «Info» сворачивает блок под собой. Родное <details>, а не

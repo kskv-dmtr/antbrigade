@@ -5941,12 +5941,14 @@ html:not([data-js]) .more { display: none; }
 
 /* ------------------------------------ сортировка и отборы на телефоне
 
-   С вечера 19 сентября 2026 (просьба владельца) на телефоне справа в полосе
-   два значка: сортировка (arrows-down-up) и отборы (sliders-horizontal),
-   без слов; за значком отборов — счётчик «[N]». Сортировка открывает снизу
-   шторку «Sort by», отборы — экран целиком, как меню и поиск. На широком
-   экране значков и шторки сортировки нет: там сортировка — списком в
-   полосе, отборы — словом «Filters» и панелью справа. */
+   С 4 октября 2026 (просьба владельца) на телефоне отборы названы словом
+   «Filters» со счётчиком, как на широком экране, а значок сортировки стоит
+   не в полосе отборов, а в полосе раздела над ней — за счётчиком записей.
+   Значок отборов и счётчик при нём, стоявшие здесь с 19 сентября, сняты.
+
+   Сортировка открывает снизу шторку «Sort by», отборы — экран целиком, как
+   меню и поиск. На широком экране значка сортировки и её шторки нет: там
+   сортировка — списком в полосе, отборы — тем же словом «Filters». */
 .filters-row__sort,
 .filters-row__sorter,
 .filters-row__icon,
@@ -5964,38 +5966,46 @@ html:not([data-js]) .more { display: none; }
   [data-js] .filters-row { column-gap: 0; }
   [data-js] .filters-row > .filter { display: none; }
 
-  [data-js] .filters-row__sort {
+  /* Слово «Filters» со счётчиком — как на широком экране; значок при нём
+     больше не выводится. Слово прижато к правому краю: значка сортировки,
+     который держал его там своим полем, в полосе больше нет. */
+  [data-js] .filters-row__toggle {
+    margin-left: auto;
+    padding: 0 var(--pad) 0 0.75rem;
+  }
+
+  /* Значок сортировки — в полосе раздела, за счётчиком (его переставляет
+     туда скрипт FilterBar). Высоту берёт от полосы, поля не нужны: просвет
+     до счётчика задан самой полосой.
+
+     Где счётчика нет — на /artists, /labels, /genres полоса названа одним
+     словом, — знак сам уходит вправо, к черте: иначе он вставал бы вплотную
+     к названию, будто часть его. */
+  [data-js] .head__lead .filters-row__sort {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: calc(var(--filters-h) - 1px);
-    margin-left: auto;
-    padding: 0 0.75rem;
+    align-self: stretch;
+    margin: 0 0 0 auto;
+    padding: 0;
     color: var(--fg-muted);
     background: none;
     border: 0;
     cursor: pointer;
   }
-  [data-js] .filters-row__sort[hidden] { display: none; }
-  [data-js] .filters-row__toggle { padding: 0 var(--pad) 0 0.75rem; }
-  [data-js] .filters-row__sort:not([hidden]) + .filters-row__toggle { margin-left: 0; }
-  [data-js] .filters-row__toggle .filters-row__label { display: none; }
-  [data-js] .filters-row__icon {
+  [data-js] .head__lead .counter + .filters-row__sort { margin-left: 0; }
+  [data-js] .head__lead .filters-row__sort[hidden] { display: none; }
+  [data-js] .head__lead .filters-row__sort .filters-row__icon {
     display: block;
     width: 1.25rem;
     height: 1.25rem;
   }
-  [data-js] .filters-row__count--icon {
-    display: inline;
-    margin-left: 0.25rem;
-    white-space: pre;
-  }
-  [data-js] .filters-row__count--icon:empty { display: none; }
 
-  /* Открытое — основным цветом, как выбранный вид. */
-  [data-js] .filters-row[data-sort] .filters-row__sort,
+  /* Открытое — основным цветом, как выбранный вид. Шторку сортировки знак
+     отмечает сам: полосы отборов рядом с ним больше нет, и признак берём с
+     его же aria-expanded. */
+  [data-js] .head__lead .filters-row__sort[aria-expanded='true'],
   [data-js] .filters-row[data-sheet] .filters-row__toggle { color: var(--fg); }
-  [data-js] .filters-row__sort:active,
+  [data-js] .head__lead .filters-row__sort:active,
   [data-js] .filters-row__toggle:active { color: var(--fg); }
 
   /* Шторка «Sort by» — снизу, ходом шапки, как стояла шторка отборов до

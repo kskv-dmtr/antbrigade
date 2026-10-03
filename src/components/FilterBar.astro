@@ -62,6 +62,16 @@ import ViewSwitch from './ViewSwitch.astro';
         <Icon name="x" class="filters-row__close-x" />
       </button>
     </div>
+    {/* Выбранное — первой строкой шторки, чипсами с крестиком (4 октября
+        2026, просьба владельца). Строка отвечает на вопрос «что сейчас
+        включено» одним взглядом: сами отборы ниже показывают только счётчик,
+        а имена отмеченного стоят здесь. Пока не выбрано ничего, строки нет.
+        Чипсы расставляет скрипт ниже по образцу из <template>. */}
+    <div class="filter filters-row__chosen" hidden>
+      <span class="filter__name">Chosen:</span>
+      <div class="chips"></div>
+    </div>
+
     <slot />
 
     {/* Кнопка внизу шторки (18 сентября 2026, просьба владельца). Отборы
@@ -73,7 +83,7 @@ import ViewSwitch from './ViewSwitch.astro';
         сортировку не трогает — она не отбор. */}
     <div class="filters-row__foot">
       <button type="button" class="filters-row__apply">Apply</button>
-      <button type="button" class="filters-row__reset-all">Reset all</button>
+      <button type="button" class="filters-row__reset-all">Reset</button>
     </div>
   </div>
 
@@ -91,6 +101,8 @@ import ViewSwitch from './ViewSwitch.astro';
   {/* Галочка для меню сортировки на широком экране — его пункты собирает
       скрипт, а значок берём отсюда. */}
   <template class="filters-row__check"><Icon name="check" class="filters-row__menu-check" /></template>
+  {/* Образец чипсы для строки Chosen: подпись и крестик, снимающий выбор. */}
+  <template class="filters-row__chip"><button type="button" class="chip"><span class="chip__text"></span><Icon name="x" class="chip__x" /></button></template>
   {/* Переключатель вида на телефоне стоит в самой полосе, справа, а в шторке
       его нет: выбирают вид взглядом, и прятать его за кнопку незачем. */}
   <span class="filters-row__view"><ViewSwitch /></span>
@@ -327,8 +339,38 @@ import ViewSwitch from './ViewSwitch.astro';
       }
     };
 
-    /* Отборов с выбором два и больше — рядом с Apply встаёт Reset all. */
-    const выбраноВНескольких = () => набор.querySelectorAll('details.multi[data-chosen]').length >= 2;
+    /* Reset встаёт рядом с Apply после первого же выбора (4 октября 2026,
+       просьба владельца; до того — «Reset all» и только когда отмечено в двух
+       отборах и больше). Сбрасывать бывает нужно и один отбор: своего сброса
+       у строки отбора больше нет. */
+    const естьВыбор = () => Boolean(набор.querySelector('.multi input:checked'));
+
+    /* Чипсы выбранного. Строим заново на каждую смену отбора: пунктов
+       отмечено немного, а следить за тем, какой именно изменился, значило бы
+       держать вторую копию состояния. Крестик снимает флажок и шлёт то же
+       событие change, что и сам список, — страница пересчитывает отбор своим
+       обычным путём. */
+    const строкаВыбора = набор.querySelector('.filters-row__chosen');
+    const местоЧипсов  = строкаВыбора?.querySelector('.chips');
+    const образецЧипсы = полоса.querySelector('.filters-row__chip');
+
+    const чипсы = () => {
+      if (!строкаВыбора || !местоЧипсов || !образецЧипсы) return;
+      const отмечено = [...набор.querySelectorAll('.multi input:checked')];
+      местоЧипсов.textContent = '';
+      for (const флажок of отмечено) {
+        const пункт = флажок.closest('.multi__item');
+        const чип = образецЧипсы.content.firstElementChild.cloneNode(true);
+        чип.querySelector('.chip__text').textContent = пункт.querySelector('.multi__name').textContent;
+        чип.setAttribute('aria-label', `Remove ${пункт.querySelector('.multi__name').textContent}`);
+        чип.addEventListener('click', () => {
+          флажок.checked = false;
+          флажок.closest('.multi').dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        местоЧипсов.append(чип);
+      }
+      строкаВыбора.hidden = отмечено.length === 0;
+    };
 
     полоса.querySelector('.filters-row__reset-all')?.addEventListener('click', () => {
       for (const список of набор.querySelectorAll('details.multi')) {
@@ -341,7 +383,8 @@ import ViewSwitch from './ViewSwitch.astro';
 
     const отметить = () => {
       полоса.toggleAttribute('data-dirty', выбрано());
-      полоса.toggleAttribute('data-several', выбраноВНескольких());
+      полоса.toggleAttribute('data-chosen', естьВыбор());
+      чипсы();
       счёт();
       // Появился или пропал Apply — места под раскрытый список стало иначе.
       уместить();

@@ -2164,17 +2164,14 @@ main > .head--page:first-child { border-top: 0; }
   padding-right: calc(var(--chevron) + 0.5rem);
 }
 
-/* Как только что-то выбрано, на месте треугольника встаёт крестик сброса, а
-   он вчетверо шире: квадрат 22 против девяти. Поле справа считаем от него,
-   иначе подпись наезжала бы на крестик — на пять пикселей, проверено.
-   Просвет тот же, восемь. */
-.filter .multi[data-chosen] .multi__button { padding-right: 0; }
 .filter .select__chevron { right: 0; }
 
 /* Подписи отборов со списком — Type:, Genre:, Year:, у указателей Letters: —
-   как написаны, с заглавной, 14 (21 сентября 2026, просьба владельца).
-   Sort by: и View: остаются как были. */
-.filter:has(> .multi) > .filter__name {
+   как написаны, с заглавной, 14 (21 сентября 2026, просьба владельца). Так же
+   набрана и подпись Chosen: над чипсами (4 октября 2026): она стоит в том же
+   столбце, что и они. Sort by: и View: остаются как были. */
+.filter:has(> .multi) > .filter__name,
+.filters-row__chosen > .filter__name {
   font-size: var(--text-sm);
   letter-spacing: 0;
   text-transform: none;
@@ -2805,47 +2802,16 @@ select option { background: var(--option-bg); color: var(--fg); }
 /* Пока отбор пуст — шеврон, как у обычного списка. Как только что-то
    выбрано, на его месте встаёт крестик, и он же сбрасывает. Оба знака в
    одном углу и одновременно не показываются. */
-.multi[data-chosen] .select__chevron { display: none; }
+/* Треугольник виден всегда: прятать его при выборе перестали 4 октября 2026
+   (просьба владельца) — на его месте стоял сброс, а сброс переехал к чипсам
+   и вниз шторки. */
 
-/* Квадрат с рамкой — тот же приём, что у подсказки клавиши в поиске:
-   ширина и высота равны, знак по центру. Поля кнопки под него не меняются,
-   поэтому подпись при появлении крестика не дёргается: шеврон кончался в 22
-   пикселях от правого края, квадрат кончается в 30, а место под подпись
-   отмерено на 38. */
-/* Сброс — словом Reset с подчёркиванием, как ссылки на жанры и лейблы (с
-   19 сентября 2026, просьба владельца; до того — крестик в квадрате 22 с
-   рамкой). Стоит в строке сразу за подписью выбранного, а не в углу поверх
-   поля: слово шире квадрата, и места под треугольник ему мало. Не
-   сжимается — ужимается подпись слева, многоточием. */
-.multi__clear {
-  flex: none;
-  margin-left: 0.5rem;
-  padding: 0.125rem 0;
+/* Своего сброса у строки отбора нет с 4 октября 2026: крестик стоит у чипсы
+   в строке Chosen, а всё разом снимает Reset внизу шторки. Прежде здесь было
+   слово Reset с подчёркиванием (19 сентября 2026), а до него крестик в
+   квадрате.
 
-  /* Поля и волос не должны растить кнопку: без отрицательных полей она
-     выходила на 4 выше соседних отборов (замер на 1440 — 28 против 24). */
-  margin-top: -0.125rem;
-  margin-bottom: calc(-0.125rem - 1px);
-  font: inherit;
-
-  /* Reset — кнопка, и набран как все кнопки: прописными, 13, с разрядкой,
-     хотя подпись списка рядом с 21 сентября 2026 с заглавной в 14 (просьба
-     владельца). */
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: inherit;
-  color: var(--fg-muted);
-  background: none;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  cursor: pointer;
-}
-@media (hover: hover) {
-  .multi__clear:hover { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
-}
-.multi__clear:active { background: var(--ink); color: var(--ink-fg); border-bottom-color: transparent; }
-/* Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
+   Пока что-то выбрано, кнопка держится выделенной: иначе после закрытия
    панели по одной подписи «Genres [3]» не видно, что отбор включён. */
 .multi[data-chosen] .multi__button { color: var(--fg); }
 
@@ -5688,13 +5654,70 @@ html:not([data-js]) .more { display: none; }
    вставал Apply: две черты шли подряд. Черты над блоком Apply нет с 24
    сентября, и подряд идти нечему, а пропажа черты под Year при раскрытом
    жанре читалась поломкой (замечание владельца). */
-/* Reset all — только когда выбрано в двух отборах и больше (атрибут
-   data-several ставит скрипт FilterBar). Через полосу — ради веса: общее
-   правило кнопок ниже задаёт display: flex и иначе перебивало бы. */
-.filters-row:not([data-several]) .filters-row__reset-all { display: none; }
+/* Чипсы выбранного — строка Chosen первой в шторке (4 октября 2026, просьба
+   владельца). Имя пункта как в списке, с заглавной, и крестик за ним:
+   нажатие снимает выбор. Рамка та же, что у кнопок внизу шторки, — это
+   кнопка, и ведёт она себя как кнопка: по наведению и нажатию выворачивается
+   в чёрное.
 
-/* Reset all набрана так же, как Apply: это пара равных кнопок; Apply слева,
-   Reset all справа. */
+   Чипсы переносятся по строкам: выбранных бывает и десяток, а ширина шторки
+   своя. */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: start;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2.125rem;
+  padding: 0.25rem 0.5rem;
+  font-family: var(--mono);
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: var(--fg);
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.chip__x {
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--fg-muted);
+}
+@media (hover: hover) {
+  .chip:hover,
+  .chip:hover .chip__x {
+    color: var(--ink-fg);
+  }
+  .chip:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+}
+.chip:active,
+.chip:active .chip__x {
+  color: var(--ink-fg);
+}
+.chip:active {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* Reset — после первого же выбора (атрибут data-chosen ставит скрипт
+   FilterBar; до 4 октября 2026 кнопка звалась «Reset all» и появлялась, лишь
+   когда отмечено в двух отборах и больше). Через полосу — ради веса: общее
+   правило кнопок ниже задаёт display: flex и иначе перебивало бы. */
+.filters-row:not([data-chosen]) .filters-row__reset-all { display: none; }
+
+/* Reset набрана так же, как Apply: это пара равных кнопок; Apply слева,
+   Reset справа. */
 .filters-row__apply,
 .filters-row__reset-all {
   display: flex;
@@ -5727,13 +5750,6 @@ html:not([data-js]) .more { display: none; }
     color: var(--hot-fg);
     border-color: var(--hot);
   }
-  /* Reset у отбора — тоже с жеребьёвкой цвета (21 сентября 2026, просьба
-     владельца). Волос под словом прячем, как при прежней выворотке. */
-  .multi__clear[data-hot]:hover {
-    background: var(--hot);
-    color: var(--hot-fg);
-    border-bottom-color: transparent;
-  }
 }
 @media (hover: none) {
   .filters-row__apply[data-hot]:active,
@@ -5741,11 +5757,6 @@ html:not([data-js]) .more { display: none; }
     background: var(--hot);
     color: var(--hot-fg);
     border-color: var(--hot);
-  }
-  .multi__clear[data-hot]:active {
-    background: var(--hot);
-    color: var(--hot-fg);
-    border-bottom-color: transparent;
   }
 }
 

@@ -38,16 +38,13 @@ const блоки = [{ axis, items }];
   <summary class="multi__button" aria-label={label}>
     <span class="multi__label">{allLabel}</span>
 
-    {/* Треугольник и крестик занимают одно место и меняются: пока не
-        выбрано ничего — треугольник, как у обычного списка; как только
-        выбрано — крестик, и он же сбрасывает отбор. Отдельной кнопки сброса
-        поэтому нет: она стояла бы рядом с тем же действием.
-
-        С 19 сентября 2026 (просьба владельца) сброс — словом Reset с
-        подчёркиванием, как ссылки, а не крестиком в квадрате: стоит в строке
-        сразу за подписью выбранного. */}
+    {/* Треугольник стоит всегда — и когда выбрано, и когда нет (4 октября
+        2026, просьба владельца): строка отбора показывает счётчик и
+        указатель, не меняясь в составе. Прежде на месте треугольника при
+        выборе вставало слово Reset (19 сентября 2026), а до него крестик;
+        сброс теперь живёт в двух местах сразу — крестиком у чипсы в строке
+        Chosen и кнопкой Reset внизу шторки. */}
     <span class="select__chevron" aria-hidden="true"></span>
-    <button type="button" class="multi__clear" aria-label={`Reset ${label}`} hidden>Reset</button>
   </summary>
 
   <div class="multi__panel">
@@ -105,28 +102,21 @@ const блоки = [{ axis, items }];
     const chosen = (root) =>
       [...root.querySelectorAll('input:checked')];
 
-    /* Подпись на кнопке: ничего не выбрано — «All», один пункт — его
-       собственное имя, несколько — только счётчик, «[3]». Число вместо
-       перечисления потому, что кнопка узкая и три названия в неё всё равно не
-       влезут. Слово перед счётчиком («Chosen [3]») убрано 18 сентября 2026 по
-       просьбе владельца: data-many в разметке остался, но не выводится. */
+    /* Подпись на кнопке: ничего не выбрано — «All», выбрано — счётчик,
+       «[1]», «[3]» (4 октября 2026, просьба владельца). Имя выбранного
+       пункта в подписи стояло до этого дня; теперь имена видны целиком в
+       строке Chosen, чипсами, и повторять их в строке отбора незачем —
+       строка говорит, сколько в ней отмечено, а указатель зовёт раскрыть.
+       data-many в разметке остался от подписи «Chosen [3]», снятой 18
+       сентября 2026, и не выводится. */
     function label(root) {
       const marked = chosen(root);
       const text = root.querySelector('.multi__label');
-      if (marked.length === 0)      text.textContent = root.dataset.all;
-      else if (marked.length === 1) {
-        const item = marked[0].closest('.multi__item');
-        text.textContent = `${item.querySelector('.multi__name').textContent} ${item.querySelector('.multi__count').textContent}`;
-      }
-      else                          text.textContent = `[${marked.length}]`;
-
-      /* Крестик появляется вместо шеврона; сам шеврон прячет CSS по этому
-         же признаку. */
-      root.querySelector('.multi__clear').hidden = marked.length === 0;
+      text.textContent = marked.length === 0 ? root.dataset.all : `[${marked.length}]`;
 
       /* Атрибут именно удаляем, а не ставим пустым: data-chosen="" в
          разметке остаётся, и селектор [data-chosen] срабатывает на нём —
-         шеврон прятался бы и когда не выбрано ничего. */
+         строка держалась бы выделенной и когда не выбрано ничего. */
       if (marked.length) root.dataset.chosen = 'yes';
       else delete root.dataset.chosen;
     }
@@ -223,17 +213,6 @@ const блоки = [{ axis, items }];
         });
       }
 
-      root.querySelector('.multi__clear').addEventListener('click', (e) => {
-        /* Крестик живёт внутри <summary>, а щелчок по summary раскрывает
-           блок. Отменяем и не пускаем событие дальше: нажали на сброс, а не
-           на кнопку. */
-        e.preventDefault();
-        e.stopPropagation();
-
-        for (const box of chosen(root)) box.checked = false;
-        label(root);
-        root.dispatchEvent(new Event('change', { bubbles: true }));
-      });
     }
 
     // Щелчок мимо закрывает: у <details> своего такого поведения нет.

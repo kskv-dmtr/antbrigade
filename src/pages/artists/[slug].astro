@@ -110,6 +110,39 @@ const memberOf = artistsOf(artist.memberOfIds ?? []);
           </dd>
         )}
       </div>
+
+      {/* Участники и составы — строками там же, под именем, а не столбцами в
+          Info (3 октября 2026, просьба владельца): это такая же связь между
+          именами, как «Also known as», и читаться она должна рядом с ней, а
+          не в справке о релизах. Подписи встают в ту же колонку, значения — в
+          ту же вторую, ссылками через точку. Строки нет, когда связи нет. */}
+      {members.length > 0 && (
+        <div class="item__fact">
+          <dt>{members.length > 1 ? 'Members:' : 'Member:'}</dt>
+          <dd>
+            {members.map((m, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
+
+      {memberOf.length > 0 && (
+        <div class="item__fact">
+          <dt>Member of:</dt>
+          <dd>
+            {memberOf.map((m, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
     </dl>
   </div>
 
@@ -189,41 +222,6 @@ const memberOf = artistsOf(artist.memberOfIds ?? []);
           </dl>
         )}
 
-        {/* Участники и составы — последними столбцами, ссылками на их
-            страницы через точку, как лейблы и жанры рядом (3 октября 2026,
-            просьба владельца). Столбца нет, когда связи нет: пустых столбцов
-            в Info не бывает. */}
-        {members.length > 0 && (
-          <dl class="item__facts">
-            <div class="item__fact">
-              <dt>{members.length > 1 ? 'Members:' : 'Member:'}</dt>
-              <dd>
-                {members.map((m, i) => (
-                  <>
-                    {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
-                  </>
-                ))}
-              </dd>
-            </div>
-          </dl>
-        )}
-
-        {memberOf.length > 0 && (
-          <dl class="item__facts">
-            <div class="item__fact">
-              <dt>Member of:</dt>
-              <dd>
-                {memberOf.map((m, i) => (
-                  <>
-                    {i > 0 && <span class="sep"> · </span>}
-                    <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
-                  </>
-                ))}
-              </dd>
-            </div>
-          </dl>
-        )}
       </div>
     </details>
   </section>

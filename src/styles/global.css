@@ -3228,6 +3228,12 @@ select option { background: var(--option-bg); color: var(--fg); }
   padding: var(--fact-pad) 0;
   line-height: var(--fact-lh);
 }
+/* Колонки назначены явно, а не отданы автораскладке: строк под именем стало
+   несколько (3 октября 2026 — род записи, другие имена, участники, составы),
+   и у строки без значения автораскладка сажала подпись следующей строки в
+   пустую вторую клетку — «Artist» и «Members:» вставали в один ряд. */
+.lead .item__fact dt { grid-column: 1; }
+.lead .item__fact dd { grid-column: 2; }
 .lead .item__facts { padding-top: 0.5rem; }
 .lead:has(.item__facts) { padding-bottom: 0.5rem; }
 
@@ -3441,14 +3447,6 @@ select option { background: var(--option-bg); color: var(--fg); }
     bottom: calc((var(--page-bar-h) - var(--fact-lh)) / 2);
     width: 1px;
     background: var(--line-soft);
-  }
-  /* Блок, который начинает новый ряд, черты слева не получает: черта
-     разделяет соседей в ряду, а у края страницы она читалась бы случайной
-     вертикальной чёрточкой. Рядов стало больше одного 3 октября 2026 — с
-     появлением столбцов Members и Member of у исполнителя. Правило стоит
-     после общего и повторяет его :has, чтобы весу хватило. */
-  .info--narrow-first > :nth-child(4n + 1):has(.item__fact)::before {
-    content: none;
   }
 }
 

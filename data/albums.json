@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-03T14:21:57Z",
+  "generatedAt": "2026-10-03T14:42:07Z",
   "counts": {
     "albums": 1512,
     "artists": 1258,
@@ -23970,9 +23970,9 @@
       "cover": "https://antbrigade.notion.site/image/attachment%3Aa1b7f179-2065-4713-8c9b-737df60d9940%3Aphoto_2025-08-04_03-06-50.jpg?table=block&id=2ec6958f-8649-49db-a439-398e84235343&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
       "edition": null,
       "genres": [
-        "Jazz",
         "Contemporary Jazz",
-        "Electronic"
+        "Nu Jazz",
+        "Chamber Jazz"
       ],
       "types": [
         "Album"
@@ -62000,9 +62000,9 @@
         "2ec6958f-8649-49db-a439-398e84235343"
       ],
       "genres": [
-        "Jazz",
         "Contemporary Jazz",
-        "Electronic"
+        "Nu Jazz",
+        "Chamber Jazz"
       ],
       "labelIds": [
         "2444129a-8c52-8005-b74c-c0b34a570bed"

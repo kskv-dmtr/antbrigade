@@ -28,14 +28,22 @@ const ALBUMS  = { collection: '34c2f3cb-ea8e-4b53-904a-f8905700fb68',
    собой в новую колонку они не вернутся, их вводят руками. Читать сироты
    нельзя: строку, где адрес нарочно стёрли, они воскресили бы. */
 /* aka — связь «Also Known As» внутри той же базы: псевдонимы и другие имена
-   одного человека или состава. Заведена 13 сентября 2026. */
+   одного человека или состава. Заведена 13 сентября 2026.
+
+   members и memberOf — «Members» и «Member of», две стороны одной связи
+   внутри той же базы: у состава перечислены участники, у участника — составы.
+   Заведены 3 октября 2026. Notion держит обе стороны сам, но читаем мы обе и
+   достраиваем встречную: связь, проставленная только с одной стороны, должна
+   работать с обеих — то же правило, что у «Also Known As». */
 const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
                   view:       '2404129a-8c52-80e5-9e5b-000c523112d0',
                   bandcamp:   'XmmI',
                   bandcamp2:  'T^U~',
                   youtube:    'drlg',
                   website:    'QiQ@',
-                  aka:        'rupg' };
+                  aka:        'rupg',
+                  members:    ';uI[',
+                  memberOf:   'wQrw' };
 /* Колонок Bandcamp по две — «Bandcamp [1]» и «Bandcamp [2]». У лейбла вторая
    заведена 6 сентября 2026 — у части лейблов страниц на площадке две, как у
    XL Recordings: xlrecordings и xlrecordingsuk. У артиста — 15 сентября
@@ -353,10 +361,14 @@ async function directory(source, label) {
     const youtube   = source.youtube   ? plainText(prop(v.properties, source.youtube))   : '';
     const website   = source.website   ? plainText(prop(v.properties, source.website))   : '';
     const akaIds    = source.aka       ? relationIds(prop(v.properties, source.aka))   : [];
+    const memberIds   = source.members  ? relationIds(prop(v.properties, source.members))  : [];
+    const memberOfIds = source.memberOf ? relationIds(prop(v.properties, source.memberOf)) : [];
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       akaIds,
+      memberIds,
+      memberOfIds,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
@@ -637,6 +649,34 @@ async function main() {
   const akaOf = (id) => [...(aka.get(id) ?? [])]
     .sort((x, y) => byName(artistsDir.get(x), artistsDir.get(y)));
 
+  /* Участники и составы — связь направленная, в отличие от других имён: у
+     состава в «Members» участники, у участника в «Member of» составы. Обе
+     стороны собираем вместе и достраиваем встречную: Notion свои две колонки
+     держит в паре сам, но проставить связь могут и руками с одной стороны —
+     тогда вторая сторона о ней не узнала бы.
+
+     Ссылка на себя и на запись, которой нет в справочнике, отбрасывается —
+     как у других имён. */
+  const участники = new Map();
+  const составы   = new Map();
+  const вписать = (карта, ключ, значение) => {
+    if (ключ === значение || !artistsDir.has(ключ) || !artistsDir.has(значение)) return;
+    if (!карта.has(ключ)) карта.set(ключ, new Set());
+    карта.get(ключ).add(значение);
+  };
+  for (const a of artistsDir.values()) {
+    for (const id of a.memberIds) {
+      вписать(участники, a.id, id);
+      вписать(составы, id, a.id);
+    }
+    for (const id of a.memberOfIds) {
+      вписать(составы, a.id, id);
+      вписать(участники, id, a.id);
+    }
+  }
+  const изКарты = (карта, id) => [...(карта.get(id) ?? [])]
+    .sort((x, y) => byName(artistsDir.get(x), artistsDir.get(y)));
+
   const artists = [...artistsDir.values()].sort(byName).map((a) => {
     const albumIds = byArtist.get(a.id) ?? [];
     return {
@@ -652,7 +692,9 @@ async function main() {
       genres: uniqueFrom(albumIds, 'genres'),
       labelIds: uniqueFrom(albumIds, 'labelIds'),
       videoIds: videosByArtist.get(a.id) ?? [],
-      akaIds: akaOf(a.id)
+      akaIds: akaOf(a.id),
+      memberIds: изКарты(участники, a.id),
+      memberOfIds: изКарты(составы, a.id)
     };
   });
 
@@ -711,6 +753,8 @@ async function main() {
   console.log(`    без альбомов:        ${count(artists, (a) => !a.albumIds.length)}`);
   console.log(`    с клипами:           ${count(artists, (a) => a.videoIds.length)}`);
   console.log(`    с другими именами:   ${count(artists, (a) => a.akaIds.length)}`);
+  console.log(`    с участниками:       ${count(artists, (a) => a.memberIds.length)}`);
+  console.log(`    в составах:          ${count(artists, (a) => a.memberOfIds.length)}`);
   console.log(`  лейблов:               ${labels.length}`);
   console.log(`  клипов:                ${videos.length}`);
   console.log(`  пропущено альбомов:    ${skipped} (без названия)`);

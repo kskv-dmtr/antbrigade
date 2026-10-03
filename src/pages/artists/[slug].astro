@@ -49,6 +49,15 @@ const linkCount = [artist.bandcamp, artist.bandcamp2, artist.youtube, artist.web
    Через ?? []: пока выгрузка с новым полем не доехала до данных, у записей
    его просто нет, и страница не должна от этого падать на сборке. */
 const aka = artistsOf(artist.akaIds ?? []);
+
+/* Участники состава и составы, в которых состоит исполнитель, — связи
+   «Members» и «Member of» в Notion, с 3 октября 2026. Направление здесь уже
+   разобрано выгрузкой: она же достраивает встречную сторону.
+
+   Через ?? [] по той же причине, что и другие имена: пока выгрузка с новыми
+   полями не доехала до данных, у записей их просто нет. */
+const members  = artistsOf(artist.memberIds ?? []);
+const memberOf = artistsOf(artist.memberOfIds ?? []);
 ---
 <Base
   title={`${artist.name} · ant brigade`}
@@ -173,6 +182,42 @@ const aka = artistsOf(artist.akaIds ?? []);
                   <>
                     {i > 0 && <span class="sep"> · </span>}
                     <a href={`/labels/${l.slug}`}><WholeWords text={l.name} /></a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          </dl>
+        )}
+
+        {/* Участники и составы — последними столбцами, ссылками на их
+            страницы через точку, как лейблы и жанры рядом (3 октября 2026,
+            просьба владельца). Столбца нет, когда связи нет: пустых столбцов
+            в Info не бывает. */}
+        {members.length > 0 && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>{members.length > 1 ? 'Members:' : 'Member:'}</dt>
+              <dd>
+                {members.map((m, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          </dl>
+        )}
+
+        {memberOf.length > 0 && (
+          <dl class="item__facts">
+            <div class="item__fact">
+              <dt>Member of:</dt>
+              <dd>
+                {memberOf.map((m, i) => (
+                  <>
+                    {i > 0 && <span class="sep"> · </span>}
+                    <a href={`/artists/${m.slug}`}><WholeWords text={m.name} /></a>
                   </>
                 ))}
               </dd>

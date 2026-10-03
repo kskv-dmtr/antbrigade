@@ -5597,9 +5597,21 @@ html:not([data-js]) .more { display: none; }
   position: sticky;
   top: 0;
   z-index: 1;
-  height: calc(2.125rem + (var(--bar-h) - 2.125rem) / 2);
+
+  /* Полоса ростом с закрытую строку без пары пикселей — ровно до черты над
+     списком: поле заголовка, сама кнопка в 2rem и поле под ней. */
+  height: calc(var(--bar-h) - 0.125rem + 1px);
   margin-inline: calc(var(--pad) * -1);
   background: var(--bg);
+
+  /* Черта над списком стоит вместе с заголовком, а не уезжает с пунктами
+     (3 октября 2026, просьба владельца): отделять имя отбора от его списка
+     некому, если она уедет первой же строкой. С панели черту снимаем — здесь
+     её чертит полоса, и стоит она там же, где стояла, пиксель в пиксель. */
+  border-bottom: 1px solid var(--line-soft);
+}
+[data-js] .filters-row__set .filter:has(.multi[open]) .multi__panel {
+  border-top: 0;
 }
 [data-js] .filters-row__set .filter:has(.multi[open]) .filter__name {
   grid-area: 1 / 1 / 2 / 2;
@@ -5607,9 +5619,11 @@ html:not([data-js]) .more { display: none; }
 [data-js] .filters-row__set .filter:has(.multi[open]) .multi {
   grid-area: 1 / 2 / 2 / 3;
 }
+/* Поле поиска липнет под чертой — на своё же место: отступ прилипания равен
+   росту полосы, и при прокрутке поле не сдвигается ни на пиксель. */
 [data-js] .filters-row__set .filter:has(.multi[open]) .multi__find {
   position: sticky;
-  top: calc(2.125rem + (var(--bar-h) - 2.125rem) / 2);
+  top: calc(var(--bar-h) - 0.125rem + 1px);
   z-index: 1;
   background: var(--bg);
 }

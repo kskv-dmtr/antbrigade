@@ -11,7 +11,7 @@ import GenreLinks from '../../components/GenreLinks.astro';
 import PageBar from '../../components/PageBar.astro';
 import WholeWords from '../../components/WholeWords.astro';
 import Icon from '../../components/Icon.astro';
-import { labels, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
+import { labels, labelsOf, albumsOf, artistsOf, countryName, plural, coverSrc } from '../../lib/db.js';
 
 export function getStaticPaths() {
   return labels.map((label) => ({ params: { slug: label.slug }, props: { label } }));
@@ -20,6 +20,23 @@ export function getStaticPaths() {
 const { label } = Astro.props;
 const releases = albumsOf(label.albumIds);
 const roster   = artistsOf(label.artistIds);
+
+/* Подлейблы и старший лейбл — связи «Sublabels» и «Parent Label» в Notion, с
+   3 октября 2026, по образцу участников и составов у исполнителя. Встречную
+   сторону достраивает выгрузка.
+
+   Через ?? [] по той же причине, что и там: пока выгрузка с новыми полями не
+   доехала до данных, у записей их просто нет. */
+const sublabels = labelsOf(label.subIds ?? []);
+const parents   = labelsOf(label.parentIds ?? []);
+
+/* Части строки под именем — по порядку: подлейблы, потом старший лейбл.
+   Пустые не попадают, точки между оставшимися расставляются сами, как у
+   исполнителя. */
+const части = [
+  { подпись: sublabels.length > 1 ? 'Sublabels:' : 'Sublabel:', кто: sublabels },
+  { подпись: parents.length > 1 ? 'Parent Labels:' : 'Parent Label:', кто: parents }
+].filter((ч) => ч.кто.length > 0);
 
 /* Жанры лейбла — из его релизов: своего поля жанров у лейбла в Notion нет,
    да и не нужно, оно повторяло бы то же самое руками. Порядок по частоте:
@@ -54,11 +71,30 @@ const linkCount = [label.bandcamp, label.bandcamp2, label.youtube, label.website
   <div class="lead">
     <h1 class="item__title"><WholeWords text={label.name} /></h1>
 
-    {/* Род записи строкой под именем — тем же набором и отступом, что «Also
-        known as» у исполнителя (3 октября 2026, просьба владельца). */}
+    {/* Род записи строкой под именем, а за ним через точку связи с другими
+        лейблами — подлейблы и старший (3 октября 2026, просьба владельца).
+        Устроена строка так же, как у исполнителя: род в первой колонке
+        справки с точкой на конце, остальное во второй, ссылками через
+        точку. Связей нет — остаётся одно слово «Label». */}
     <dl class="item__facts">
       <div class="item__fact">
-        <dt>Label</dt>
+        <dt>{части.length > 0 ? 'Label ·' : 'Label'}</dt>
+        {части.length > 0 && (
+          <dd>
+            {части.map((часть, i) => (
+              <>
+                {i > 0 && <span class="sep"> · </span>}
+                {часть.подпись}{' '}
+                {часть.кто.map((x, j) => (
+                  <>
+                    {j > 0 && <span class="sep"> · </span>}
+                    <a href={`/labels/${x.slug}`}><WholeWords text={x.name} /></a>
+                  </>
+                ))}
+              </>
+            ))}
+          </dd>
+        )}
       </div>
     </dl>
   </div>

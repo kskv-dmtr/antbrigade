@@ -50,12 +50,17 @@ const ARTISTS = { collection: '2404129a-8c52-8081-a2ac-000b601ac278',
    2026, по той же причине: у проекта бывает страница состава и отдельная
    страница участника. Ключи у баз свои: XmmI и T^U~ у артистов, Wd@^ и ]Ze:
    у лейблов. */
+/* sublabels и parent — «Sublabels» и «Parent Label», пара связей внутри базы
+   лейблов, заведена 3 октября 2026 по образцу участников у артистов. Читаем
+   обе стороны и достраиваем встречную — по той же причине. */
 const LABELS  = { collection: '2434129a-8c52-80b6-b09f-000b54c58818',
                   view:       '2434129a-8c52-8093-b25e-000c16690aea',
                   bandcamp:   'Wd@^',
                   bandcamp2:  ']Ze:',
                   youtube:    'imKP',
-                  website:    'k>s}' };
+                  website:    'k>s}',
+                  sublabels:  'JCQ:',
+                  parent:     'SFEI' };
 const VIDEOS  = { collection: '4f18cb0c-58c5-4133-a7f1-19b7404509b4',
                   view:       'c75789fc-bfcd-411b-8af0-ec90855f2459' };
 
@@ -363,12 +368,16 @@ async function directory(source, label) {
     const akaIds    = source.aka       ? relationIds(prop(v.properties, source.aka))   : [];
     const memberIds   = source.members  ? relationIds(prop(v.properties, source.members))  : [];
     const memberOfIds = source.memberOf ? relationIds(prop(v.properties, source.memberOf)) : [];
+    const subIds      = source.sublabels ? relationIds(prop(v.properties, source.sublabels)) : [];
+    const parentIds   = source.parent    ? relationIds(prop(v.properties, source.parent))    : [];
     if (bandcamp) withBandcamp++;
     dir.set(v.id, {
       id: v.id,
       akaIds,
       memberIds,
       memberOfIds,
+      subIds,
+      parentIds,
       name,
       country: countryCode(v.format?.page_icon),
       bandcamp: bandcamp || null,
@@ -657,25 +666,33 @@ async function main() {
 
      Ссылка на себя и на запись, которой нет в справочнике, отбрасывается —
      как у других имён. */
-  const участники = new Map();
-  const составы   = new Map();
-  const вписать = (карта, ключ, значение) => {
-    if (ключ === значение || !artistsDir.has(ключ) || !artistsDir.has(значение)) return;
-    if (!карта.has(ключ)) карта.set(ключ, new Set());
-    карта.get(ключ).add(значение);
+  const направленная = (dir, прямое, обратное) => {
+    const вперёд = new Map();
+    const назад  = new Map();
+    const вписать = (карта, ключ, значение) => {
+      if (ключ === значение || !dir.has(ключ) || !dir.has(значение)) return;
+      if (!карта.has(ключ)) карта.set(ключ, new Set());
+      карта.get(ключ).add(значение);
+    };
+    for (const запись of dir.values()) {
+      for (const id of запись[прямое]) {
+        вписать(вперёд, запись.id, id);
+        вписать(назад, id, запись.id);
+      }
+      for (const id of запись[обратное]) {
+        вписать(назад, запись.id, id);
+        вписать(вперёд, id, запись.id);
+      }
+    }
+    const изКарты = (карта) => (id) => [...(карта.get(id) ?? [])]
+      .sort((x, y) => byName(dir.get(x), dir.get(y)));
+    return [изКарты(вперёд), изКарты(назад)];
   };
-  for (const a of artistsDir.values()) {
-    for (const id of a.memberIds) {
-      вписать(участники, a.id, id);
-      вписать(составы, id, a.id);
-    }
-    for (const id of a.memberOfIds) {
-      вписать(составы, a.id, id);
-      вписать(участники, id, a.id);
-    }
-  }
-  const изКарты = (карта, id) => [...(карта.get(id) ?? [])]
-    .sort((x, y) => byName(artistsDir.get(x), artistsDir.get(y)));
+  const [участникиOf, составыOf] = направленная(artistsDir, 'memberIds', 'memberOfIds');
+
+  /* У лейблов та же пара: «Sublabels» и «Parent Label» (3 октября 2026,
+     просьба владельца). Правило разбора общее — та же функция. */
+  const [подлейблыOf, старшиеOf] = направленная(labelsDir, 'subIds', 'parentIds');
 
   const artists = [...artistsDir.values()].sort(byName).map((a) => {
     const albumIds = byArtist.get(a.id) ?? [];
@@ -693,8 +710,8 @@ async function main() {
       labelIds: uniqueFrom(albumIds, 'labelIds'),
       videoIds: videosByArtist.get(a.id) ?? [],
       akaIds: akaOf(a.id),
-      memberIds: изКарты(участники, a.id),
-      memberOfIds: изКарты(составы, a.id)
+      memberIds: участникиOf(a.id),
+      memberOfIds: составыOf(a.id)
     };
   });
 
@@ -710,7 +727,9 @@ async function main() {
       youtube: l.youtube,
       website: l.website,
       albumIds,
-      artistIds: uniqueFrom(albumIds, 'artistIds')
+      artistIds: uniqueFrom(albumIds, 'artistIds'),
+      subIds: подлейблыOf(l.id),
+      parentIds: старшиеOf(l.id)
     };
   });
 
@@ -756,6 +775,8 @@ async function main() {
   console.log(`    с участниками:       ${count(artists, (a) => a.memberIds.length)}`);
   console.log(`    в составах:          ${count(artists, (a) => a.memberOfIds.length)}`);
   console.log(`  лейблов:               ${labels.length}`);
+  console.log(`    с подлейблами:       ${count(labels, (l) => l.subIds.length)}`);
+  console.log(`    при старшем лейбле:  ${count(labels, (l) => l.parentIds.length)}`);
   console.log(`  клипов:                ${videos.length}`);
   console.log(`  пропущено альбомов:    ${skipped} (без названия)`);
   if (!жанры) console.log('  жанры: схемы колонки Genre в ответе нет, сверка пропущена');

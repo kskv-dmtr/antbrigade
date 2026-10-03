@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-03T16:55:56Z",
+  "generatedAt": "2026-10-03T17:58:59Z",
   "counts": {
-    "albums": 1512,
-    "artists": 1258,
-    "labels": 779,
+    "albums": 1513,
+    "artists": 1259,
+    "labels": 781,
     "videos": 113
   },
   "albums": [
@@ -14907,6 +14907,40 @@
       ],
       "labels": [
         "ATO Records"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-80a1-b641-ca9e4222a5b2",
+      "slug": "distance-le-decor",
+      "artist": "Distance",
+      "album": "Le Décor",
+      "url": "https://album.link/f6drg25gmgxq7",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A368c06e4-07d9-4d37-a03e-26c5ab21b57c%3Aa3093289811_10.jpg?table=block&id=3ee4129a-8c52-80a1-b641-ca9e4222a5b2&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Punk Rock",
+        "Power Pop"
+      ],
+      "types": [
+        "EP"
+      ],
+      "released": "2025-05-30",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-8091-9554-d65a264c0fe6"
+      ],
+      "artists": [
+        "Distance"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-80ef-a219-db89df97272a",
+        "3ee4129a-8c52-807c-97b0-d8fa7af44c1d"
+      ],
+      "labels": [
+        "Sabotage Records",
+        "Dans Le Vide"
       ]
     },
     {
@@ -56125,6 +56159,31 @@
       "memberOfIds": []
     },
     {
+      "id": "3ee4129a-8c52-8091-9554-d65a264c0fe6",
+      "slug": "distance",
+      "name": "Distance",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-80a1-b641-ca9e4222a5b2"
+      ],
+      "genres": [
+        "Punk Rock",
+        "Power Pop"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-80ef-a219-db89df97272a",
+        "3ee4129a-8c52-807c-97b0-d8fa7af44c1d"
+      ],
+      "videoIds": [],
+      "akaIds": [],
+      "memberIds": [],
+      "memberOfIds": []
+    },
+    {
       "id": "3de4129a-8c52-80d8-bc4f-d691e5d498b8",
       "slug": "dizzy-k",
       "name": "Dizzy K.",
@@ -83839,6 +83898,24 @@
       "parentIds": []
     },
     {
+      "id": "3ee4129a-8c52-807c-97b0-d8fa7af44c1d",
+      "slug": "dans-le-vide",
+      "name": "Dans Le Vide",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://danslevide.fr/",
+      "albumIds": [
+        "3ee4129a-8c52-80a1-b641-ca9e4222a5b2"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-8091-9554-d65a264c0fe6"
+      ],
+      "subIds": [],
+      "parentIds": []
+    },
+    {
       "id": "2504129a-8c52-80eb-8df6-e3a43ad40f12",
       "slug": "daptone-records",
       "name": "Daptone Records",
@@ -92633,6 +92710,24 @@
       "parentIds": []
     },
     {
+      "id": "3ee4129a-8c52-80ef-a219-db89df97272a",
+      "slug": "sabotage-records",
+      "name": "Sabotage Records",
+      "country": "DE",
+      "bandcamp": "https://sabotagerecords.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-80a1-b641-ca9e4222a5b2"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-8091-9554-d65a264c0fe6"
+      ],
+      "subIds": [],
+      "parentIds": []
+    },
+    {
       "id": "24a4129a-8c52-80db-94a2-e2d91763d1be",
       "slug": "sacred-bones-records",
       "name": "Sacred Bones Records",
@@ -97456,7 +97551,6 @@
       "year": 2023,
       "origYear": null,
       "artistIds": [
-        "3c84129a-8c52-8089-adcc-ee79cb8b5106",
         "2514129a-8c52-8031-8512-d6d8bae5b210"
       ],
       "slug": "tycho-time-to-run"

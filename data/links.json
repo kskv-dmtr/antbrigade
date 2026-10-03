@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T14:22:31Z",
+  "generatedAt": "2026-10-03T17:59:12Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -24176,6 +24176,20 @@
       "upc": "7332181106589",
       "tracks": 12,
       "releaseDate": "2021-01-08"
+    },
+    "3ee4129a-8c52-80a1-b641-ca9e4222a5b2": {
+      "source": "https://album.link/f6drg25gmgxq7",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5Plg1nWaJGKgIK87ytBsOO",
+        "amazonMusic": "https://music.amazon.com/albums/B0F8QX4TZ7",
+        "tidal": "https://listen.tidal.com/album/436202416",
+        "yandex": "https://music.yandex.ru/album/36669328",
+        "bandcamp": "https://distance-bdx.bandcamp.com/album/le-d-cor",
+        "amazonStore": "https://amazon.com/dp/B0F8QX4TZ7"
+      },
+      "upc": "3617395999405",
+      "tracks": 6,
+      "releaseDate": "2025-05-30"
     }
   }
 }

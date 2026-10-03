@@ -5620,12 +5620,22 @@ html:not([data-js]) .more { display: none; }
   grid-area: 1 / 2 / 2 / 3;
 }
 /* Поле поиска липнет под чертой — на своё же место: отступ прилипания равен
-   росту полосы, и при прокрутке поле не сдвигается ни на пиксель. */
+   росту полосы, и при прокрутке поле не сдвигается ни на пиксель.
+
+   Где есть поле поиска, черту чертит оно само, а у полосы она снимается: поле
+   стоит вплотную к нижней границе полосы и своей непрозрачной подложкой её
+   закрывало — у Genre и Label черта пропала совсем, тогда как у Type и Year
+   осталась на месте (3 октября 2026, замечание владельца). Поле липкое, так
+   что черта на нём стоит так же неподвижно, как стояла бы на полосе. */
 [data-js] .filters-row__set .filter:has(.multi[open]) .multi__find {
   position: sticky;
   top: calc(var(--bar-h) - 0.125rem + 1px);
   z-index: 1;
   background: var(--bg);
+  border-top: 1px solid var(--line-soft);
+}
+[data-js] .filters-row__set .filter:has(.multi[open]):has(.multi__find)::before {
+  border-bottom: 0;
 }
 [data-js] .filters-row__set .filter:has(.multi[open])::-webkit-scrollbar,
 [data-js] .filters-row__set .filter:has(.filters-row__pick:not([hidden]))::-webkit-scrollbar {

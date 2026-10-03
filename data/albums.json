@@ -1,6 +1,6 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-03T16:31:43Z",
+  "generatedAt": "2026-10-03T16:47:38Z",
   "counts": {
     "albums": 1512,
     "artists": 1258,
@@ -51649,7 +51649,9 @@
       "videoIds": [],
       "akaIds": [],
       "memberIds": [],
-      "memberOfIds": []
+      "memberOfIds": [
+        "2684129a-8c52-8027-ae82-c6433869c52c"
+      ]
     },
     {
       "id": "3c54129a-8c52-802a-8d71-ede070ab10f3",
@@ -55115,7 +55117,9 @@
       ],
       "videoIds": [],
       "akaIds": [],
-      "memberIds": [],
+      "memberIds": [
+        "3b34129a-8c52-8008-95fd-d41fa64ae30f"
+      ],
       "memberOfIds": []
     },
     {

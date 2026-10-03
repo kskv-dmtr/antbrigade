@@ -1,10 +1,10 @@
 {
   "source": "https://antbrigade.notion.site",
-  "generatedAt": "2026-10-03T02:01:35Z",
+  "generatedAt": "2026-10-03T14:21:57Z",
   "counts": {
-    "albums": 1506,
-    "artists": 1253,
-    "labels": 774,
+    "albums": 1512,
+    "artists": 1258,
+    "labels": 779,
     "videos": 113
   },
   "albums": [
@@ -75,6 +75,38 @@
       "labels": [
         "Wondercore Island",
         "Main Arm Records"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-8030-a286-c447917c5807",
+      "slug": "benjamin-adamson-holding-space",
+      "artist": "Benjamin Adamson",
+      "album": "Holding Space",
+      "url": "https://album.link/znsfvpjhpv4ww",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A9c6a4832-3bb9-4ded-b01f-a5743253a1ba%3Aab67616d0000b27378d296cf8c8ac2fb71248771.jpg?table=block&id=3ee4129a-8c52-8030-a286-c447917c5807&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Contemporary Jazz",
+        "Spiritual Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2026-09-30",
+      "year": 2026,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-807b-8542-ec8d4dd7ae3e"
+      ],
+      "artists": [
+        "Benjamin Adamson"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-8013-87c4-f077648cf61d"
+      ],
+      "labels": [
+        "Madd Galaxy Records"
       ]
     },
     {
@@ -17931,6 +17963,38 @@
       ]
     },
     {
+      "id": "3ee4129a-8c52-8069-ac2c-f15667dc4e6f",
+      "slug": "arat-kilo-danama",
+      "artist": "Arat Kilo",
+      "album": "Danama",
+      "url": "https://album.link/c62qdtrws8krk",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A81bdfa5e-ead0-4bcc-b917-1d98723bb01b%3Aa3749106631_10.jpg?table=block&id=3ee4129a-8c52-8069-ac2c-f15667dc4e6f&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Afro-Funk",
+        "Ethio-Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2025-03-07",
+      "year": 2025,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-801a-9291-c7d3b4a07861"
+      ],
+      "artists": [
+        "Arat Kilo"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-80cd-8ba8-e9750f4f5693"
+      ],
+      "labels": [
+        "Accords Croisés"
+      ]
+    },
+    {
       "id": "1b34129a-8c52-805a-b09f-fe907d530978",
       "slug": "c-a-r-valonia",
       "artist": "C.A.R.",
@@ -34215,6 +34279,37 @@
       ]
     },
     {
+      "id": "3ee4129a-8c52-8018-84cb-c6fbf59a8f9e",
+      "slug": "lupaganggang-dopamine-overdose",
+      "artist": "LũpḁGangGang",
+      "album": "Dopamine Overdose",
+      "url": "https://album.link/mt9gshhhprnfh",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Ace3ed042-4fbe-4ef9-847c-2524eee811e3%3Aa3801794680_10.jpg?table=block&id=3ee4129a-8c52-8018-84cb-c6fbf59a8f9e&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2023-03-17",
+      "year": 2023,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-802a-9ea2-e11143d42b31"
+      ],
+      "artists": [
+        "LũpḁGangGang"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "labels": [
+        "Sdban Records"
+      ]
+    },
+    {
       "id": "a0852638-ee0f-4dfa-a52b-77cba11cfd9a",
       "slug": "goodbye-blue-monday-let-s-go-goodbye-blue-monday-by-goodbye",
       "artist": "Goodbye Blue Monday",
@@ -35800,6 +35895,38 @@
       ]
     },
     {
+      "id": "3ee4129a-8c52-8009-a6d2-f7f8bb62c932",
+      "slug": "dego-love-was-never-your-goal",
+      "artist": "Dego",
+      "album": "Love Was Never Your Goal",
+      "url": "https://album.link/hgdtpc9f3j2zc",
+      "cover": "https://antbrigade.notion.site/image/attachment%3A4855f38b-7826-4fe2-a3d3-87388d002e7e%3Aa2364897091_10.jpg?table=block&id=3ee4129a-8c52-8009-a6d2-f7f8bb62c932&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu Jazz",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-10-21",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-8033-a9c4-e8cac1f81ffb"
+      ],
+      "artists": [
+        "Dego"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-8038-af79-f629d88f7aeb"
+      ],
+      "labels": [
+        "2000black"
+      ]
+    },
+    {
       "id": "3e84129a-8c52-8068-8694-f4254fa6239b",
       "slug": "god-alone-etc",
       "artist": "God Alone.",
@@ -36159,6 +36286,40 @@
       ],
       "labels": [
         "Karma Chief Records"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-80cc-a554-e0be296701b0",
+      "slug": "rudi-creswick-different-forms",
+      "artist": "Rudi Creswick",
+      "album": "Different Forms",
+      "url": "https://album.link/p2jq4vdv4ccwt",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Acd643497-e086-4095-bc61-84485ff53958%3Aa3884898879_10.jpg?table=block&id=3ee4129a-8c52-80cc-a554-e0be296701b0&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Contemporary R'n'B",
+        "Neo-Soul"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2022-09-30",
+      "year": 2022,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3ee4129a-8c52-80f9-b0b2-d92b04f623a2"
+      ],
+      "artists": [
+        "Rudi Creswick"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-807f-8bcf-ee3a083ac670"
+      ],
+      "labels": [
+        "Sekito"
       ]
     },
     {
@@ -42709,6 +42870,38 @@
       "labels": [
         "Dead Oceans",
         "Easy Eye Sound"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-807d-b39c-ec280c10f345",
+      "slug": "stimulator-jones-la-mano",
+      "artist": "Stimulator Jones",
+      "album": "La Mano",
+      "url": "https://album.link/vxvxd9km8kbxz",
+      "cover": "https://antbrigade.notion.site/image/attachment%3Af6914bac-f88a-422f-a7ee-3ff4da273a00%3Aa3600103987_10.jpg?table=block&id=3ee4129a-8c52-807d-b39c-ec280c10f345&spaceId=1e3c4611-6308-45b6-9689-17bda8d4252b&width=400&cache=v2",
+      "edition": null,
+      "genres": [
+        "Jazz Fusion",
+        "Smooth Jazz"
+      ],
+      "types": [
+        "Album"
+      ],
+      "released": "2021-01-08",
+      "year": 2021,
+      "origYear": null,
+      "playlists": [],
+      "artistIds": [
+        "3d54129a-8c52-8004-99bb-e966d894a4e8"
+      ],
+      "artists": [
+        "Stimulator Jones"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-80f5-9f7c-c73f2f808369"
+      ],
+      "labels": [
+        "Mutual Intentions"
       ]
     },
     {
@@ -50236,6 +50429,28 @@
       "akaIds": []
     },
     {
+      "id": "3ee4129a-8c52-801a-9291-c7d3b4a07861",
+      "slug": "arat-kilo",
+      "name": "Arat Kilo",
+      "country": "FR",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8069-ac2c-f15667dc4e6f"
+      ],
+      "genres": [
+        "Afro-Funk",
+        "Ethio-Jazz"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-80cd-8ba8-e9750f4f5693"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3d24129a-8c52-80c1-b180-e8e16defc12d",
       "slug": "arca",
       "name": "Arca",
@@ -51255,6 +51470,28 @@
       ],
       "labelIds": [
         "24a4129a-8c52-8016-8a65-ced9968d381a"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
+      "id": "3ee4129a-8c52-807b-8542-ec8d4dd7ae3e",
+      "slug": "benjamin-adamson",
+      "name": "Benjamin Adamson",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": "https://www.benjaminadamson.com/",
+      "albumIds": [
+        "3ee4129a-8c52-8030-a286-c447917c5807"
+      ],
+      "genres": [
+        "Contemporary Jazz",
+        "Spiritual Jazz"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-8013-87c4-f077648cf61d"
       ],
       "videoIds": [],
       "akaIds": []
@@ -54979,6 +55216,28 @@
         "3e54129a-8c52-8037-9822-c61ac7e5fb86",
         "3b94129a-8c52-804f-97d7-fcc0f7eea16d"
       ],
+      "akaIds": []
+    },
+    {
+      "id": "3ee4129a-8c52-8033-a9c4-e8cac1f81ffb",
+      "slug": "dego",
+      "name": "Dego",
+      "country": "GB",
+      "bandcamp": "https://dego.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8009-a6d2-f7f8bb62c932"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-8038-af79-f629d88f7aeb"
+      ],
+      "videoIds": [],
       "akaIds": []
     },
     {
@@ -63719,6 +63978,27 @@
       "akaIds": []
     },
     {
+      "id": "3ee4129a-8c52-802a-9ea2-e11143d42b31",
+      "slug": "lupaganggang",
+      "name": "LũpḁGangGang",
+      "country": "BE",
+      "bandcamp": "https://lupaganggang.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8018-84cb-c6fbf59a8f9e"
+      ],
+      "genres": [
+        "Jazz Fusion"
+      ],
+      "labelIds": [
+        "2444129a-8c52-80db-a429-df4e6a0e0164"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3cc4129a-8c52-808c-820c-f3f3e68a7a03",
       "slug": "lush-life",
       "name": "Lush Life",
@@ -69660,6 +69940,30 @@
       "akaIds": []
     },
     {
+      "id": "3ee4129a-8c52-80f9-b0b2-d92b04f623a2",
+      "slug": "rudi-creswick",
+      "name": "Rudi Creswick",
+      "country": "GB",
+      "bandcamp": "https://rudicreswick.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-80cc-a554-e0be296701b0"
+      ],
+      "genres": [
+        "Nu Jazz",
+        "Jazz Fusion",
+        "Contemporary R'n'B",
+        "Neo-Soul"
+      ],
+      "labelIds": [
+        "3ee4129a-8c52-807f-8bcf-ee3a083ac670"
+      ],
+      "videoIds": [],
+      "akaIds": []
+    },
+    {
       "id": "3cd4129a-8c52-802e-82bb-cd2c94b1863a",
       "slug": "rupa",
       "name": "Rupa",
@@ -72026,13 +72330,17 @@
       "youtube": null,
       "website": null,
       "albumIds": [
-        "3d54129a-8c52-801c-be35-d86669478134"
+        "3d54129a-8c52-801c-be35-d86669478134",
+        "3ee4129a-8c52-807d-b39c-ec280c10f345"
       ],
       "genres": [
-        "Instrumental Hip-Hop"
+        "Instrumental Hip-Hop",
+        "Jazz Fusion",
+        "Smooth Jazz"
       ],
       "labelIds": [
-        "2444129a-8c52-8014-88cc-c0144285751a"
+        "2444129a-8c52-8014-88cc-c0144285751a",
+        "3ee4129a-8c52-80f5-9f7c-c73f2f808369"
       ],
       "videoIds": [],
       "akaIds": []
@@ -72276,7 +72584,7 @@
       "country": "AU",
       "bandcamp": "https://surelyshirley.bandcamp.com/music",
       "bandcamp2": null,
-      "youtube": null,
+      "youtube": "https://www.youtube.com/@surelyshirleymusic",
       "website": null,
       "albumIds": [
         "2b34129a-8c52-80e4-b050-fc4065b82028",
@@ -77922,6 +78230,22 @@
       ]
     },
     {
+      "id": "3ee4129a-8c52-8038-af79-f629d88f7aeb",
+      "slug": "2000black",
+      "name": "2000black",
+      "country": "GB",
+      "bandcamp": "https://2000black.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8009-a6d2-f7f8bb62c932"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-8033-a9c4-e8cac1f81ffb"
+      ]
+    },
+    {
       "id": "3e94129a-8c52-8035-8338-cae1acc24325",
       "slug": "22twenty",
       "name": "22TWENTY",
@@ -78053,6 +78377,22 @@
       ],
       "artistIds": [
         "24e4129a-8c52-801b-aa8c-f0c61a0f78fa"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-80cd-8ba8-e9750f4f5693",
+      "slug": "accords-croises",
+      "name": "Accords Croisés",
+      "country": "FR",
+      "bandcamp": "https://accordscroises.bandcamp.com/music",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8069-ac2c-f15667dc4e6f"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-801a-9291-c7d3b4a07861"
       ]
     },
     {
@@ -84922,6 +85262,22 @@
       ]
     },
     {
+      "id": "3ee4129a-8c52-8013-87c4-f077648cf61d",
+      "slug": "madd-galaxy-records",
+      "name": "Madd Galaxy Records",
+      "country": "US",
+      "bandcamp": null,
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-8030-a286-c447917c5807"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-807b-8542-ec8d4dd7ae3e"
+      ]
+    },
+    {
       "id": "3444129a-8c52-80b6-bd1a-d3919abd3b90",
       "slug": "magic-hollow",
       "name": "Magic Hollow",
@@ -85785,6 +86141,22 @@
         "24f4129a-8c52-8047-9849-f6b094be2124",
         "3e84129a-8c52-802a-9715-cf6209ace857",
         "2504129a-8c52-80f6-892c-ec86b72349a6"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-80f5-9f7c-c73f2f808369",
+      "slug": "mutual-intentions",
+      "name": "Mutual Intentions",
+      "country": "NO",
+      "bandcamp": "https://mutualintentions.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-807d-b39c-ec280c10f345"
+      ],
+      "artistIds": [
+        "3d54129a-8c52-8004-99bb-e966d894a4e8"
       ]
     },
     {
@@ -88648,6 +89020,7 @@
         "20d4129a-8c52-8091-9498-d46c43482d4d",
         "2769c417-15ca-4923-aa55-26b07a7525ed",
         "13d220a9-1fbd-4dc2-a2b3-fe8f68ec791f",
+        "3ee4129a-8c52-8018-84cb-c6fbf59a8f9e",
         "487091ad-df98-497b-a247-aa7b6526d6ae",
         "3db4129a-8c52-8041-bf02-c85ad8ba6073",
         "3dc4129a-8c52-803f-8fe4-dd9099b0cb55"
@@ -88659,6 +89032,7 @@
         "2444129a-8c52-8013-8b19-c0c5caec3998",
         "2504129a-8c52-8063-b4ad-ec1c07a03c78",
         "24f4129a-8c52-80dc-9666-e0c68038beb0",
+        "3ee4129a-8c52-802a-9ea2-e11143d42b31",
         "3db4129a-8c52-8037-a1d0-f313d9e8710a",
         "3db4129a-8c52-80ce-b38f-dfefd3e25f8b",
         "3db4129a-8c52-80b5-b340-f08ffbcb9d84",
@@ -88763,6 +89137,22 @@
       ],
       "artistIds": [
         "3a54129a-8c52-8029-90f9-e08ffb22b0db"
+      ]
+    },
+    {
+      "id": "3ee4129a-8c52-807f-8bcf-ee3a083ac670",
+      "slug": "sekito",
+      "name": "Sekito",
+      "country": "GB",
+      "bandcamp": "https://sekito.bandcamp.com/",
+      "bandcamp2": null,
+      "youtube": null,
+      "website": null,
+      "albumIds": [
+        "3ee4129a-8c52-80cc-a554-e0be296701b0"
+      ],
+      "artistIds": [
+        "3ee4129a-8c52-80f9-b0b2-d92b04f623a2"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T23:00:23Z",
+  "generatedAt": "2026-10-03T14:22:31Z",
   "links": {
     "3af4129a-8c52-8054-bea4-c05c8252c5f8": {
       "source": "https://album.link/rcq5sknvzc4dn",
@@ -24077,6 +24077,105 @@
       "upc": "3616843978252",
       "tracks": 10,
       "releaseDate": "2022-04-29"
+    },
+    "3ee4129a-8c52-8030-a286-c447917c5807": {
+      "source": "https://album.link/znsfvpjhpv4ww",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6CgyEtg4jaqOKE2g5MyzPj",
+        "pandora": "https://www.pandora.com/AL:69949546",
+        "amazonMusic": "https://music.amazon.com/albums/B0H4M7FC9R",
+        "tidal": "https://listen.tidal.com/album/532003756",
+        "boomplay": "https://www.boomplay.com/albums/133214119",
+        "amazonStore": "https://amazon.com/dp/B0H4M7FC9R"
+      },
+      "upc": "883306797047",
+      "tracks": 5,
+      "releaseDate": "2026-09-30"
+    },
+    "3ee4129a-8c52-8069-ac2c-f15667dc4e6f": {
+      "source": "https://album.link/c62qdtrws8krk",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/5I1iDJY2j7NjMIZd50AnCq",
+        "pandora": "https://www.pandora.com/AL:43684014",
+        "deezer": "https://www.deezer.com/album/698276411",
+        "amazonMusic": "https://music.amazon.com/albums/B0DT5VRGJZ",
+        "yandex": "https://music.yandex.ru/album/35018554",
+        "anghami": "https://play.anghami.com/album/1063326966?refer=linktree",
+        "bandcamp": "https://accordscroises.bandcamp.com/album/danama",
+        "amazonStore": "https://amazon.com/dp/B0DT5VRGJZ"
+      },
+      "upc": "3617668799053",
+      "tracks": 12,
+      "releaseDate": "2025-03-07"
+    },
+    "3ee4129a-8c52-8018-84cb-c6fbf59a8f9e": {
+      "source": "https://album.link/mt9gshhhprnfh",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/6ZalNPvkWelPjhB4NaV5RL",
+        "pandora": "https://www.pandora.com/AL:22048134",
+        "deezer": "https://www.deezer.com/album/393823557",
+        "amazonMusic": "https://music.amazon.com/albums/B0BXDCS5SP",
+        "tidal": "https://listen.tidal.com/album/279833623",
+        "napster": "https://play.napster.com/album/alb.750248983",
+        "yandex": "https://music.yandex.ru/album/24555560",
+        "boomplay": "https://www.boomplay.com/albums/61993082",
+        "anghami": "https://play.anghami.com/album/1038025793?refer=linktree",
+        "bandcamp": "https://lupaganggang.bandcamp.com/album/dopamine-overdose",
+        "amazonStore": "https://amazon.com/dp/B0BXDCS5SP"
+      },
+      "upc": "5414165137511",
+      "tracks": 9,
+      "releaseDate": "2023-03-17"
+    },
+    "3ee4129a-8c52-8009-a6d2-f7f8bb62c932": {
+      "source": "https://album.link/hgdtpc9f3j2zc",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/0WcW8h6KSLpgpv0IQ4CfGp",
+        "pandora": "https://www.pandora.com/AL:18591994",
+        "deezer": "https://www.deezer.com/album/364572517",
+        "amazonMusic": "https://music.amazon.com/albums/B0BHPS9LSN",
+        "tidal": "https://listen.tidal.com/album/253213838",
+        "napster": "https://play.napster.com/album/alb.708970382",
+        "boomplay": "https://www.boomplay.com/albums/56340956",
+        "anghami": "https://play.anghami.com/album/1032691088?refer=linktree",
+        "bandcamp": "https://dego.bandcamp.com/album/love-was-never-your-goal",
+        "amazonStore": "https://amazon.com/dp/B0BHPS9LSN"
+      },
+      "upc": "5050580792234",
+      "tracks": 9,
+      "releaseDate": "2022-10-21"
+    },
+    "3ee4129a-8c52-80cc-a554-e0be296701b0": {
+      "source": "https://album.link/p2jq4vdv4ccwt",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/2mZlNsOYjfEkFb6caWLkPK",
+        "deezer": "https://www.deezer.com/album/327708397",
+        "amazonMusic": "https://music.amazon.com/albums/B0B46DWFPY",
+        "tidal": "https://listen.tidal.com/album/233806957",
+        "napster": "https://play.napster.com/album/alb.675477013",
+        "yandex": "https://music.yandex.ru/album/22771377",
+        "boomplay": "https://www.boomplay.com/albums/48736407",
+        "anghami": "https://play.anghami.com/album/1029249679?refer=linktree",
+        "bandcamp": "https://rudicreswick.bandcamp.com/album/different-forms",
+        "amazonStore": "https://amazon.com/dp/B0B46DWFPY"
+      },
+      "upc": "3616848126887",
+      "tracks": 8,
+      "releaseDate": "2022-09-30"
+    },
+    "3ee4129a-8c52-807d-b39c-ec280c10f345": {
+      "source": "https://album.link/vxvxd9km8kbxz",
+      "platforms": {
+        "spotify": "https://open.spotify.com/album/1pGNQlanOisIGzqruA1PAE",
+        "deezer": "https://www.deezer.com/album/194061692",
+        "amazonMusic": "https://music.amazon.com/albums/B09SQJC43R",
+        "tidal": "https://listen.tidal.com/album/217169509",
+        "napster": "https://play.napster.com/album/alb.542072487",
+        "amazonStore": "https://amazon.com/dp/B09SQJC43R"
+      },
+      "upc": "7332181106589",
+      "tracks": 12,
+      "releaseDate": "2021-01-08"
     }
   }
 }

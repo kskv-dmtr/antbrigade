@@ -2167,11 +2167,9 @@ main > .head--page:first-child { border-top: 0; }
 .filter .select__chevron { right: 0; }
 
 /* Подписи отборов со списком — Type:, Genre:, Year:, у указателей Letters: —
-   как написаны, с заглавной, 14 (21 сентября 2026, просьба владельца). Так же
-   набрана и подпись Chosen: над чипсами (4 октября 2026): она стоит в том же
-   столбце, что и они. Sort by: и View: остаются как были. */
-.filter:has(> .multi) > .filter__name,
-.filters-row__chosen > .filter__name {
+   как написаны, с заглавной, 14 (21 сентября 2026, просьба владельца).
+   Sort by: и View: остаются как были. */
+.filter:has(> .multi) > .filter__name {
   font-size: var(--text-sm);
   letter-spacing: 0;
   text-transform: none;
@@ -5662,6 +5660,10 @@ html:not([data-js]) .more { display: none; }
 
    Чипсы переносятся по строкам: выбранных бывает и десяток, а ширина шторки
    своя. */
+/* Строка выбранного — без подписи, поэтому чипсы занимают обе колонки
+   строки: иначе первая, пустая, съедала бы просвет слева (4 октября 2026,
+   просьба владельца — слово «Chosen:» снято). */
+.filters-row__chosen .chips { grid-column: 1 / -1; }
 .chips {
   display: flex;
   flex-wrap: wrap;
